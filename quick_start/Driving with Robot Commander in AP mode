@@ -1,0 +1,9 @@
+How to drive with a Smartphone or workstation using Robot Commander in AP mode
+
+1. Turn the robot on.
+2. If you haven't, install the Robot Commander app on your Android phone.  (link)
+3. DAllow least 3 minutes after turning the robot on. On the phone, in Settings/WiFi, connect to the UbiquityRobotics network.  The password is robotseverywhere. 
+4. Start the Robot Commander app.
+5. Enter the address "ws://10.42.0.1:9090" in the space to the left of the Connect button.
+6. Press the Connect button. You will hear "Connected" and the button will now read "Disconnect".
+7. Press any of the arrow buttons; the robot will move that way until you release the button.
