@@ -1,0 +1,80 @@
+---
+layout: post
+title:  "Autonomous Driving"
+date:   2015-02-01 13:46:15
+answerrostag: "autonomous"
+track: [main]
+---
+
+Now let’s dive into the power of ROS. With ROS we have the ability to move TurtleBot (or any other robot) from one place to another while avoiding both static and dynamic obstacles all with a few lines of code.
+
+***NOTE:** Make sure you have [created your map]({{ site.url }}{% post_url 2015-02-01-11 %}) prior to starting this tutorial.*
+
+Stop everything from the previous tutorials on both the TurtleBot and the workstation. On TurtleBot run:
+
+{% highlight sh %}
+roslaunch turtlebot_bringup minimal.launch
+roslaunch turtlebot_navigation amcl_demo.launch map_file:=/tmp/my_map.yaml
+{% endhighlight %}
+
+If you see `odom received!` you’re good to go.
+
+### Troubleshooting
+
+If you receive a warning that starts with: `Waiting on transform...`, try restarting `minimal.launch` and then restarting `amcl_demo.lauch`.  You may need to try restarting a few times. Also, turning off the Kobuki base and turning it back on may help.
+
+With everything running successfully on TurtleBot, go to the workstation and run:
+
+{% highlight sh %}
+roslaunch turtlebot_rviz_launchers view_navigation.launch --screen
+{% endhighlight %}
+
+**RViz** should open showing your map. TurtleBot isn’t capable of estimating its pose on startup, though it can do this after you initialize its pose.
+
+Select “2D Pose Estimate” then click and hold on the location where TurtleBot is on the map. An arrow will appear under the mouse pointer while you are holding the mouse button – use this to estimate its orientation.
+
+After setting the estimated pose, select “2D Nav Goal” and click the location where you want TurtleBot to go. You can also specify a goal orientation using the same technique we used with “2D Pose Estimate”.
+
+TurtleBot should now be driving around autonomously based on your goals. Try specifying a goal and walking in front of it to see how it reacts to dynamic obstacles.
+
+{% include youtube.html youtubeid="iGZPWjddans" youtubetitle="Autonomous Navigation" %}
+
+{% include youtube.html youtubeid="ocGi069nyt4" youtubetitle="Autonomous Results" %}
+
+##TurtleBot Docking Station: Autonomous Charging
+
+It’s probably not too surprising to hear that TurtleBot [knows when its battery is getting low]({{ site.url }}{% post_url 2015-02-01-16 %}), and with the docking station it can autonomously charge itself.
+
+Make sure the docking station is plugged in (so the red light is on) and against a wall, otherwise TurtleBot may push the station around while trying to charge. Close all terminals on TurtleBot and the workstation.
+
+Place TurtleBot anywhere in line of sight up to 3 meters from the docking station. From there it can autonomously dock using its [three IR receivers](http://wiki.ros.org/kobuki/Tutorials/Testing%20Automatic%20Docking).
+
+On TurtleBot run:
+
+{% highlight sh %}
+roslaunch turtlebot_bringup minimal.launch
+{% endhighlight %}
+
+On the workstation run:
+
+{% highlight sh %}
+roslaunch kobuki_auto_docking minimal.launch --screen
+{% endhighlight %}
+
+Then in a different terminal run:
+
+{% highlight sh %}
+roslaunch kobuki_auto_docking activate.launch --screen
+{% endhighlight %}
+
+Note that TurtleBot may rotate a full 360 degrees to determine the ideal path to the docking station. Often it will first drive perpendicular to the station so it can calculate the ideal path.
+
+[Learn more about how this works](http://wiki.ros.org/kobuki/Tutorials/Testing%20Automatic%20Docking).
+
+{% include youtube.html youtubeid="GYoF5XFVEJg" youtubetitle="Automatic Docking (Autonomous Charging)" %}
+{% include youtube.html youtubeid="qJvxQ5k0oRg" youtubetitle="Automatic Docking Results" %}
+
+## Learn more at wiki.ros.org
+
+* [Autonomous Navigation of a Known Map with TurtleBot](http://wiki.ros.org/turtlebot_navigation/Tutorials/Autonomously%20navigate%20in%20a%20known%20map)
+* [Automatic Docking](http://wiki.ros.org/kobuki/Tutorials/Testing%20Automatic%20Docking)

@@ -1,0 +1,71 @@
+---
+layout: post
+title:  "Installing the Chrome Browser Extension"
+date:   2015-02-01 13:46:21
+answerrostag: "chrome_extension"
+track: [coffeebot]
+---
+
+We might love ordering coffee from the terminal, but we suspect your customers won’t. Give them the CoffeeBot Chrome Extension so they can order in style.
+
+Here’s the goal:
+
+{% include youtube.html youtubeid="XP7ZG5fi-gE" youtubetitle="Browser Extension Results" %}
+
+## Install Chrome
+
+On the workstation:
+
+Install Chrome by [downloading it](http://www.google.com/chrome/) then opening the Ubuntu Software Center. (Search for “google-chrome-stable” and install.)
+
+{% include youtube.html youtubeid="_q6zpcZlQZQ" youtubetitle="Install Chrome on Ubuntu" %}
+
+Still on the workstation:
+
+1. Open Chrome.
+2. Go to Settings > More Tools > Extensions.
+3. Check “Developer Mode” checkbox at the top of the page.
+
+{% include youtube.html youtubeid="xJ7vPsNGsWg" youtubetitle="Enable Chrome Extension Developer Mode" %}
+
+## Clone and Modify the Extension
+
+In a terminal, clone the browser extension’s repository:
+
+{% highlight sh %}
+mkdir ~/coffeebot_chrome_ext
+cd ~/coffebot_chrome_ext
+git clone https://github.com/markwsilliman/turtlebot-chrome-extension
+{% endhighlight %}
+
+{% include youtube.html youtubeid="XUaY0Pc6rh0" youtubetitle="Clone Chrome Browser Extension Repo" %}
+
+Modify the Public DNS variable:
+
+{% highlight sh %}
+cd ~/coffebot_chrome_ext/turtlebot-chrome-extension/js
+gedit popup.js
+{% endhighlight %}
+
+Modify this line to your ec2 instance’s [public dns that was created previously]({{ site.url }}{% post_url 2015-02-01-20 %}):
+
+{% highlight sh %}
+myDomain = "http://ec2-.....";
+{% endhighlight %}
+
+Save and close.
+
+## Install the Extension
+
+Back in Chrome:
+
+1. Go to Settings > More Tools > Extensions.
+2. Press the “Load unpacked extension…” button.
+3. Select the turtlebot-chrome-extension folder and “open”.
+4. You should now have a coffee cup on the top/right of your browser.
+
+{% include youtube.html youtubeid="a9sQMWgivDc" youtubetitle="Load Unpacked Extension" %}
+
+Once we’ve finished the demo, you can order coffee right from the browser!
+
+***TIP:** You can share the modified browser extension folder with all of your customers and have them install it using the above instructions. (This works on Mac, PC and anything that can install Chrome.)*

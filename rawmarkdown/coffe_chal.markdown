@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Pending Challenges"
+date:   2015-02-01 13:46:28
+answerrostag: "pending_challenges"
+track: [coffeebot]
+---
+
+[We need your help]({{ site.url }}/about/)! Though the netbook and Kobuki batteries will autonomously charge and could theoretically run indefinitely, the Keurig is *not* powered by the base. In our demo the customer must plug in the Keurig to use it. Powering the Keurig plus a few other features would make our demo a full-fledged CoffeeBot!
+
+- **Power the Keurig:** Due to Keurig’s 1000-1500 watt requirements, the customer must plug in the Keurig when it arrives at their desk. Finding a way to power it via a separate battery charged by the docking station would be a fantastic update.
+- **Automatic Water Refills:** A 3D printed top for TurtleBot that would allow the Keurig to refill its water reservoir automatically would be awesome.
+- **Water Level Monitoring:** While one could estimate water usage based on the number of stops, a water level sensor would be ideal.

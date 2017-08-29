@@ -1,0 +1,82 @@
+---
+layout: post
+title:  "Running the Final Script"
+date:   2015-02-01 13:46:25
+answerrostag: "run_script"
+track: [coffeebot]
+---
+
+## You're Ready to Deliver Coffee
+
+{% include youtube.html youtubeid="ni49uYq4cF4" youtubetitle="Final Demo" %}
+
+On TurtleBot, open a terminal and run:
+
+{% highlight sh %}
+roslaunch turtlebot_bringup minimal.launch
+roslaunch turtlebot_navigation amcl_demo.launch map_file:=/tmp/my_map.yaml
+{% endhighlight %}
+
+***TIP:** [How do I create a map?]({{ site.url }}{% post_url 2015-02-01-11 %})*
+
+On the workstation, open a terminal and run:
+
+{% highlight sh %}
+roslaunch kobuki_auto_docking coffeebot.launch
+roslaunch turtlebot_rviz_launchers view_navigation.launch --screen
+{% endhighlight %}
+
+***TIP:** `coffebot.launch` was created in a [previous tutorial]({{ site.url }}{% post_url 2015-02-01-23 %}).*
+
+## Set TurtleBot’s Initial Pose
+
+RViz should open showing your map. TurtleBot isn’t reliably capable of estimating its pose on startup (though it can estimate it after you initialize its pose).
+
+#### Select “2D Pose Estimate”
+
+Click and hold on the location where the TurtleBot is on the map.  An arrow will appear while you are holding. Use this to estimate its orientation.
+
+## Run the final script on your workstation
+
+By now you’ve [cloned the repository]({{ site.url }}{% post_url 2015-02-01-10 %}) and [updated **coffee_bot.py** settings]({{ site.url }}{% post_url 2015-02-01-22 %}).
+
+{% highlight sh %}
+cd ~/helloworld
+python coffee_bot.py
+{% endhighlight %}
+
+## Initial Results
+
+After TurtleBot checks five times if anyone needs coffee, it will return to the docking station to charge while waiting for another request.
+
+***NOTE:** Once it starts the docking procedure, TurtleBot will complete it prior to checking for coffee again.*
+
+{% include youtube.html youtubeid="yS-06NDjgII" youtubetitle="coffee_bot.py" %}
+
+## Open the Web App
+
+You’ve already installed [the web app]({{ site.url }}{% post_url 2015-02-01-24 %}) and/or [browser extension]({{ site.url }}{% post_url 2015-02-01-21 %}) and specified valid X and Y coordinates. Go ahead and open one of them. Press “order”. After a couple of seconds, TurtleBot should head towards the coordinates you specified in the app/extension!
+
+{% include youtube.html youtubeid="yIY3ZzgvVEE" youtubetitle="CoffeeBot Results" %}
+
+After TurtleBot arrives it will wait until the customer presses B0. Since there isn’t a way ([yet!]({{ site.url }}{% post_url 2015-02-01-27 %})) for TurtleBot to know when the customer is finished brewing coffee, B0 is a way for the customer to say “I’m finished, you can go elsewhere”.
+
+After B0 is pressed, TurtleBot will check if there are other pending coffee requests. If no additional requests exist, it will return to the docking station.
+
+## Troubleshooting
+
+To view a dump of the last 100 coffee requests go to:
+
+{% highlight sh %}
+http://[your_public_dns]/turtlebot-server/coffee_queue.php?printqueue
+{% endhighlight %}
+
+***TIP:** A “status” value of 0 is pending, 1 is success and 2 is failed.*
+
+If you specified an invalid X and Y coordinate (i.e. a pose that TurtleBot could never reach), you can manually remove it by finding its ID in the `printqueue` (above) and then passing that value to the update call:
+
+{% highlight sh %}
+http://[your_public_dns]/turtlebot-server/coffee_queue.php?update&id=[ID_OF_INVALID_REQUEST]&status=failed
+{% endhighlight %}
+
+***TIP:** If you load a new map file you’ll very likely need to update everyone’s coordinates.*
