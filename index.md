@@ -4,7 +4,7 @@
 ## Quick Start
 
 1.	Unboxing, putting in batteries and charging them.
-2.	How to drive with [optional logitech controller](https://google.com) 
+2.	[How to drive with optional logitech controller](https://google.com) 
 3.	How to drive with a Smartphone or workstation using Robot Commander in AP mode
 4.	How to drive with a laptop using keyboard Teleoperation in AP mode
 5.	How to set up cameras and sensors
