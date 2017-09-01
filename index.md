@@ -1,12 +1,10 @@
 # Getting Started Guide For Magni
 
 
-[link to googele](https://www.google.com)
-
 ## Quick Start
 
 1.	Unboxing, putting in batteries and charging them.
-2.	[How to drive with optional logitech controller] (https://github.com/UbiquityRobotics/learn.ubiquityrobotics.com/blob/master/quick_start/Driving%20with%20Robot%20Commander%20in%20AP%20mode)
+2.	How to drive with [optional logitech controller] (https://github.com/UbiquityRobotics/learn.ubiquityrobotics.com/blob/master/quick_start/Driving%20with%20Robot%20Commander%20in%20AP%20mode)
 3.	How to drive with a Smartphone or workstation using Robot Commander in AP mode
 4.	How to drive with a laptop using keyboard Teleoperation in AP mode
 5.	How to set up cameras and sensors
