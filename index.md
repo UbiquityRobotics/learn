@@ -1,5 +1,8 @@
 # Getting Started Guide For Magni
 
+
+[link to googele](https://www.google.com)
+
 ## Quick Start
 
 1.	Unboxing, putting in batteries and charging them.
