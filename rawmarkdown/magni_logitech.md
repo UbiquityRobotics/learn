@@ -6,7 +6,7 @@ date:   2015-02-01 13:46:09
 answerrostag: "logitech"
 track: [main]
 ---
-
+# Using the Optional Logitech Controller
 
 For a standard Magni equipped with a Raspberry Pi 3 
 you need a laptop or some way to open a terminal session 
