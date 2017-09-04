@@ -1,4 +1,4 @@
-How to drive with a Smartphone or workstation using Robot Commander in AP mode
+#How to drive with a Smartphone or workstation using Robot Commander in AP mode
 
 1. Turn the robot on.
 2. If you haven't, install the Robot Commander app on your Android phone.  (link)
@@ -14,7 +14,7 @@ How to drive with a Smartphone or workstation using Robot Commander in AP mode
 
 <div class="image-wrapper">
     
-<img src="/learn.UbiquityRobotics.com/assets/Robot_Commander.png" />
+<img src="/assets/Robot_Commander.png" />
    
 <p class="image-caption">Robot Commander</p>
     
