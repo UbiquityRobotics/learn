@@ -17,5 +17,9 @@
 <img src="assets/Robot_Commander.png" />
    
 <p class="image-caption">Robot Commander</p>
+
+![2useful image]({{ site.url }}/assets/image.png)
+
+![3useful image](/assets/image.png)
     
 </div>
