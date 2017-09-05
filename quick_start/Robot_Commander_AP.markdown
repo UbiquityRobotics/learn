@@ -1,3 +1,8 @@
+---
+layout: default
+title:  "How to control the robot using Robot Commander"
+permalink: robot_commander
+---
 # How to drive with a Smartphone or workstation using Robot Commander in AP mode
 
 1. Turn the robot on.
