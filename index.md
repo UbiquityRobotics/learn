@@ -5,7 +5,8 @@
 1.	Unboxing, putting in batteries and charging them.
 2.	How to drive with optional logitech controller
 3.	[How to drive with a Smartphone or workstation using Robot Commander in AP mode](/learn/Robot_Commander_AP.markdown)
-3.	[How to drive with a Smartphone or workstation using Robot Commander in AP mode](robotcommander) 
+3.	[How to drive with a Smartphone or workstation using Robot Commander in AP mode](robotcommander)
+
 <a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>
 4.	How to drive with a laptop using keyboard Teleoperation in AP mode
 5.	How to set up cameras and sensors
