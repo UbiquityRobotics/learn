@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "How to control the robot using Robot Commander"
 permalink: robotcommander
 ---
