@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "How to control the robot using Robot Commander"
+permalink: robotcommander
+date:   2015-02-01 13:46:13
+answerrostag: "test_kinect"
+track: [main]
+---
+
 # How to drive with a Smartphone or workstation using Robot Commander in AP mode
 
 1. Turn the robot on.
