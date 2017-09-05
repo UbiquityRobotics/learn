@@ -12,7 +12,7 @@ Through software packages like the [Robot Operating System (ROS)](http://www.ros
 **The goal of this article series is to get web, mobile, and maker developers programming with ROS via the Ubiquity Robotics development platforms.** We hope you will see the amazing possibilities and opportunities, dive in and never look back.
 
 ## What are the Ubiquity Development Platforms and What Do they Do?
-{% include image_onrightoftext.html img="/assets/MagniLoki2.jpg" width="225" %}
+<!---{% include image_onrightoftext.html img="/assets/MagniLoki2.jpg" width="225" %}-->
 
 Magni and Loki are hardware platforms and mobile bases. When powered by ROS software, these platforms can handle vision, localization, communication and mobility. Magni is the heavy weight platform capable of moving payloads as high as 100kg, Loki is smaller but is great for desktop development. They can autonomously move anything on top of it to wherever that item needs to go, avoiding obstacles along the way. This may not seem terribly exciting at first glance, but consider two things:
 
@@ -33,7 +33,9 @@ Given that Magni and Loki are mobile bases that can autonomously move around an 
 
 We decided to have Magni perform the *critical* task of making coffee available on-demand for our coworkers without needing to leave the comfort of their desks.
 
+<!---  no junk links pls
 After mounting a Keurig coffee maker and K-cup holder on top of Magni, we allowed any person in our office to request coffee via [web app]({{ site.url }}{% post_url 2015-02-01-24 %}) or a [Google Chrome extension]({{ site.url }}{% post_url 2015-02-01-21 %}) on their computer. When a user asked for coffee, Magni autonomously traveled to the requested desk and waited. The co-worker then [plugged in the Keurig]({{ site.url }}{% post_url 2015-02-01-27 %}) and made their coffee. When our co-worker was finished they pressed a button on the back of Magni and it went to the next desk or, if no one was waiting, it went back to its charging station to await the next needed caffeine fix.
+-->
 
 ## Start Dreaming Beyond These Demos!
 
