@@ -4,6 +4,8 @@
 
 ## Quick Start
 
+Things you can do with your robot right out of the box.
+
 1.	Unboxing, putting in batteries and charging them.
 2.	[How to drive with optional logitech controller](logitech)
 3.	[How to drive with a Smartphone or workstation using Robot Commander in AP mode](robot_commander)
@@ -12,7 +14,7 @@
 -->
 4.	How to drive with a laptop using keyboard Teleoperation in AP mode
 5.	How to set up cameras and sensors
-6.	How to make follow me work with a fiducial
+6.	How to make Follow Me work with a fiducial
 	
 ##	Doing More With Your Robot
 7.	Setting up your local workstation with ROS and driving the robot with RViz using AP mode
