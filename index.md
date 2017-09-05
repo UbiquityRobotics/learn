@@ -3,7 +3,7 @@
 ## Quick Start
 
 1.	Unboxing, putting in batteries and charging them.
-2.	How to drive with optional logitech controller
+2.	[How to drive with optional logitech controller](logitech)
 3.	[How to drive with a Smartphone or workstation using Robot Commander in AP mode](robot_commander)
 <!--- this also works
 <a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>
