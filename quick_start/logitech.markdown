@@ -3,14 +3,14 @@ layout: default
 title:  "Using the Optional Logitech Controller"
 permalink: logitech
 ---
-
+# Using the Optional Logitech Controller
 
 For a standard Magni equipped with a Raspberry Pi 3 
 you need a laptop or some way to open a terminal session 
-to the Rpi controlling the robot. If the proper software 
+to the RPi controlling the robot. If the proper software 
 is installed, and the Logitech controller dongle is 
-installed on the Rpi, here are the commands needed to 
-start the controller. After powering up the robot (Rpi 
+installed on the RPi, here are the commands needed to 
+start the controller. After powering up the robot (RPi 
 power light is on and red). Assuming the robot is 
 networked locally, or if you are using the default IP 
 address (see connecting to your robot for the first 
