@@ -1,2 +1,2 @@
 # learn
-Tutorials for using ubiquity's robots, particularly Magni
+Tutorials for ubiquity's robots, particularly Magni
