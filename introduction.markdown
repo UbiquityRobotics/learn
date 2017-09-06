@@ -9,8 +9,8 @@ Practical and accessible robotics is upon us, ready to move from government and 
 
 Through software packages like the 
 
-<!---[Robot Operating System--ROS](http://www.ros.org/),
--->
+[Robot Operating System--ROS](http://www.ros.org/),
+
 
 the intense research and expertise of engineers, computer scientists and more get distilled into ready-to-use development environments and function calls. Year by year, the barriers to entry come down and as web, mobile and maker developers transition into the field, the walls come down even faster.
 
