@@ -7,12 +7,7 @@ answerrostag: "introduction"
 
 Practical and accessible robotics is upon us, ready to move from government and institutional labs to individual development spaces like the home, office, or garage. Like the personal computer revolution in the late 70’s and early 80’s, robots are ready for the first great generation of amateur developers to take the foundation work of robotics pioneers to undreamed-of places. Perhaps you are one of these.
 
-Through software packages like the 
-
-[Robot Operating System--ROS](http://www.ros.org/),
-
-
-the intense research and expertise of engineers, computer scientists and more get distilled into ready-to-use development environments and function calls. Year by year, the barriers to entry come down and as web, mobile and maker developers transition into the field, the walls come down even faster.
+With software packages like the [Robot Operating System--ROS](http://www.ros.org/), the intense research and expertise of engineers, computer scientists and more get distilled into ready-to-use development environments and function calls. Year by year, the barriers to entry come down and as web, mobile and maker developers transition into the field, the walls come down even faster.
 
 **The goal of this article series is to get web, mobile, and maker developers programming with ROS via the Ubiquity Robotics development platforms.** We hope you will see the amazing possibilities and opportunities, dive in and never look back.
 
