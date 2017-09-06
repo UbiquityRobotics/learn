@@ -33,7 +33,7 @@ Things you can do with your robot right out of the box.
 18.	Button Events
 19.	What to Read Next
 	
-##	CoffeeBot Challenge
+##	[CoffeeBot Challenge](ix_coffeebot)
 20.	Determining Coordinates of Customers
 21.	Configure CoffeeBot’s Web Server
 22.	Installing the Chrome Browser Extension
