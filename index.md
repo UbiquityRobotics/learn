@@ -1,6 +1,6 @@
-# Getting Started Guide For Magni
+# Getting Started Guide -- Magni
 
-[Introduction](introduction)
+## [Introduction](introduction)
 
 ## Quick Start
 
