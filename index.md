@@ -34,7 +34,7 @@ Things you can do with your robot right out of the box.
 19.	What to Read Next
 	
 ##	[CoffeeBot Challenge](ix_coffeebot)
-20.	Determining Coordinates of Customers
+20.	Determining the Coordinates of Customers
 21.	Configure CoffeeBot’s Web Server
 22.	Installing the Chrome Browser Extension
 23.	Configuring the Final Script
