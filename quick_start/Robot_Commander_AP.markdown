@@ -28,15 +28,16 @@ Continue with #6 below.
 1. Turn the robot on.
 2. Bring up the Chrome browser on your workstation.
 3. Allow at least 3 minutes after turning the robot on. In your workstation, connect to the UbiquityRobot network.  The password is robotseverywhere. 
-4. Enter the address "https://10.42.0.1/speechcommands.html in the address bar of the Chrome browser, and press the enter key.
+4. Enter the address "https://10.42.0.1/speechcommands.html" in the address bar of the Chrome browser, and press the enter key.
 5. If the browser gives you any warnings regarding a lack of security, disregard them.
 Continue with #6 below.
 
 6. Press or click the Connect button. You will hear "Connected" and the button will now read "Disconnect".
-## Using Robot Commander:
+
+## Using Robot Commander
 * Press any arrow to move the robot. To keep the robot moving, keep pressing or clicking.
 * Tap the Microphone to use speech.
 * Say, "forward", "back", or other commands. There is a list of commands in the menu in the top right corner of the screen. The forward and back and the rotation commands allow you to say how far, for example "forward 3 feet" or "back 5 meters", or "rotate right 90 degrees".
-* In environments where there is a lot of competing speech, you can turn on the "wake word" feature, in Settings. When it is on, all commands must be prefaced by the wake word, "robot".
+* Where there is a lot of competing speech, you can turn on the "wake word" feature, in Settings. When it is on, all commands must be prefaced by the wake word, "robot".
 
 
