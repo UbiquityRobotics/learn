@@ -1,3 +1,7 @@
+---
+layout: default
+permalink: ix_coffeebot
+---
 # Getting Started Guide -- Magni
 
 ##	CoffeeBot Challenge
