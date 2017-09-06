@@ -18,9 +18,9 @@ the intense research and expertise of engineers, computer scientists and more ge
 
 ## What are the Ubiquity Development Platforms and What Do they Do?
 
-<!---
-{% include image_onrightoftext.html img="/assets/MagniLoki2.jpg" width="225" %}
--->
+
+ include image_onrightoftext.html "/assets/MagniLoki2.jpg" width="225" 
+
 
 Magni and Loki are hardware platforms and mobile bases. When powered by ROS software, these platforms can handle vision, localization, communication and mobility. Magni is the heavy weight platform capable of moving payloads as high as 100kg, Loki is smaller but is great for desktop development. They can autonomously move anything on top of it to wherever that item needs to go, avoiding obstacles along the way. This may not seem terribly exciting at first glance, but consider two things:
 
@@ -34,10 +34,6 @@ Regardless of whether you support the all-in-one or modular/interoperable design
 
 ## What is ROS?
 
-<!---
-From the [ros.org](http://www.ros.org) website:
---->
-
 > The Robot Operating System (ROS) is a flexible framework for writing robot software. It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms.
 
 ## What Will We Do with Magni and Loki?
@@ -46,9 +42,7 @@ Given that Magni and Loki are mobile bases that can autonomously move around an 
 
 We decided to have Magni perform the *critical* task of making coffee available on-demand for our coworkers without needing to leave the comfort of their desks.
 
-<!---  no junk links pls
-After mounting a Keurig coffee maker and K-cup holder on top of Magni, we allowed any person in our office to request coffee via [web app]({{ site.url }}{% post_url 2015-02-01-24 %}) or a [Google Chrome extension]({{ site.url }}{% post_url 2015-02-01-21 %}) on their computer. When a user asked for coffee, Magni autonomously traveled to the requested desk and waited. The co-worker then [plugged in the Keurig]({{ site.url }}{% post_url 2015-02-01-27 %}) and made their coffee. When our co-worker was finished they pressed a button on the back of Magni and it went to the next desk or, if no one was waiting, it went back to its charging station to await the next needed caffeine fix.
--->
+## coffee maker paragraph removed because of too many links.  Must be rewritten.
 
 ## Start Dreaming Beyond These Demos!
 
