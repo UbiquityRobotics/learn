@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Getting Started Guide -- Magni
 
 ## [Introduction](introduction)
