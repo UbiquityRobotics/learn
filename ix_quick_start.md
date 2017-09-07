@@ -1,3 +1,7 @@
+---
+layout: default
+permalink: ix_quick_start
+---
 # Getting Started Guide -- Magni
 
 ## Quick Start

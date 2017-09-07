@@ -1,3 +1,7 @@
+---
+layout: default
+permalink: ix_programming
+---
 # Getting Started Guide -- Magni
 
 ##	Programming Your Robot

@@ -2,7 +2,7 @@
 
 ## [Introduction](introduction)
 
-## Quick Start
+## [Quick Start](ix_quick_start)
 
 Things you can do with your robot right out of the box.
 
@@ -15,15 +15,15 @@ Things you can do with your robot right out of the box.
 4.	How to drive with a laptop using keyboard Teleoperation in AP mode
 5.	How to set up cameras and sensors
 6.	How to make Follow Me work with a fiducial
-	
-##	Doing More With Your Robot
+
+##	[Doing More With Your Robot](ix_doing_more)
 7.	Setting up your local workstation with ROS and driving the robot with RViz using AP mode
 8.	How to connect to your robot with your network and drive it around  (AF Draft) Setting Up Networking
 9.	Setting up fiducials so you can make waypoints and qualified motion (like "forward 1 meter") work
 10.	Trying out the Sensor Package (e.g. silver sensor package, gold sensor package)
 11.	How to control the robot using Robot Commander over the network (AF & JL Draft)
-	
-##	Programming Your Robot
+
+##	[Programming Your Robot](ix_programming)
 12.	Writing Your First Script
 13.	Creating a Map
 14.	Autonomous Driving
@@ -32,7 +32,7 @@ Things you can do with your robot right out of the box.
 17.	Monitor Magni Battery Status
 18.	Button Events
 19.	What to Read Next
-	
+
 ##	[CoffeeBot Challenge](ix_coffeebot)
 20.	Determining the Coordinates of Customers
 21.	Configure CoffeeBot’s Web Server
@@ -43,8 +43,8 @@ Things you can do with your robot right out of the box.
 26.	Running the Final Script
 27.	Setting Optimal Angles for Customers
 28.	Pending Challenges
-	
-##	Learning with Magni in Simulation
+
+##	[Learning with Magni in Simulation](ix_simulation1)
 29.	We Want You to Learn Magni in Simulation!
 30.	Software Installation
 31.	Testing the TurtleBot Simulation
@@ -57,8 +57,8 @@ Things you can do with your robot right out of the box.
 38.	Going Forward and Avoiding Obstacles Using Code
 39.	Going to a Specific Location on Your Map Using Code
 40.	What to Read Next
-	
-##	Challenge in Simulation
+
+##	[Challenge in Simulation](ix_simulation2)
 41.	Introduction
 42.	Taking a Photo
 43.	Taking a Photo Using Code

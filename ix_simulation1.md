@@ -1,3 +1,7 @@
+---
+layout: default
+permalink: ix_simulation1
+---
 # Getting Started Guide -- Magni
 
 ##	Learning with Magni in Simulation

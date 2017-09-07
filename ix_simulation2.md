@@ -1,3 +1,7 @@
+---
+layout: default
+permalink: ix_simulation2
+---
 # Getting Started Guide -- Magni
 
 ##	Challenge in Simulation
