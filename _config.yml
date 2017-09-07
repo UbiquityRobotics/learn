@@ -12,5 +12,4 @@ twitter_username:
 markdown: kramdown
 permalink: pretty
 
-#gems:
-#- jekyll-sitemap
+theme: jekyll-theme-primer
