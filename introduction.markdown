@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "We Want You to Learn Magni (and Robotics)!"
 permalink: introduction
 answerrostag: "introduction"
