@@ -1,14 +1,11 @@
----
-layout: default
----
 
-# Getting Started Guide -- Magni
+# Getting Started Guide --- Magni
 
 ## [Introduction](introduction)
 
 ## [Quick Start](ix_quick_start)
 
-Things you can do with your robot right out of the box.
+#### Things you can do with your robot right out of the box.
 
 ##	[Doing More With Your Robot](ix_doing_more)
 
