@@ -1,8 +1,3 @@
----
-title:  "We Want You to Learn Magni (and Robotics)!"
-permalink: introduction
-answerrostag: "introduction"
----
 # Introduction: Learning ROS via Ubiquity Robotics' Magni Developers Platform
 
 Practical and accessible robotics is upon us, ready to move from government and institutional labs to individual development spaces like the home, office, or garage. Like the personal computer revolution in the late 70’s and early 80’s, robots are ready for the first great generation of amateur developers to take the foundation work of robotics pioneers to undreamed-of places. Perhaps you are one of these.
