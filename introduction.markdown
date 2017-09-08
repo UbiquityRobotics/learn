@@ -8,15 +8,13 @@ With software packages like the Robot Operating System (ROS), the intense resear
 
 ## What are the Ubiquity Development Platforms and What Do they Do?
 
-
- include image_onrightoftext.html "/assets/MagniLoki2.jpg" width="225" 
-
-
+> ![Magni/Loki](assets/MagniLoki2.jpg)
+ 
 Magni and Loki are hardware platforms and mobile bases. When powered by ROS software, these platforms can handle vision, localization, communication and mobility. Magni is the heavy weight platform capable of moving payloads as high as 100kg, Loki is smaller but is great for desktop development. They can autonomously move anything on top of it to wherever that item needs to go, avoiding obstacles along the way. This may not seem terribly exciting at first glance, but consider two things:
 
 1. A mobile base is the heart of a modular/interoperability model of robotics. Without a shared base, parts such as robotic arms, sensors, and other tools could not find or get to their location. Even at their desired location, each would require an independent “brain” to know what to do, which would in turn require interpretation between each of the components.
 
-<!---
+<!--
 2. The [Kiva robot system](http://www.kivasystems.com/), which is similar to a Magni, was purchased by Amazon for $775 million to manage products in their massive warehouses.
 -->
 
@@ -24,7 +22,7 @@ Regardless of whether you support the all-in-one or modular/interoperable design
 
 ## What is ROS?
 
-> The Robot Operating System (ROS) is a flexible framework for writing robot software. It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms.
+The Robot Operating System (ROS) is a flexible framework for writing robot software. It is a collection of tools, libraries, and conventions that aim to simplify the task of creating complex and robust robot behavior across a wide variety of robotic platforms.
 
 ## What Will We Do with Magni and Loki?
 
@@ -32,7 +30,7 @@ Given that Magni and Loki are mobile bases that can autonomously move around an 
 
 We decided to have Magni perform the *critical* task of making coffee available on-demand for our coworkers without needing to leave the comfort of their desks.
 
-## coffee maker paragraph removed because of its bad links.  Must be rewritten.
+<!-- coffee maker paragraph removed because of its bad links.  Must be rewritten. -->
 
 ## Start Dreaming Beyond These Demos!
 
