@@ -2,15 +2,15 @@
 layout: default
 permalink: ix_quick_start
 ---
-# Getting Started Guide -- Magni
-
 ## Quick Start
 
 Things you can do with your robot right out of the box.
 
+The robot has its own network (called an access point) that enables you to do several interesting things without needing to connect to your local network.
+
 1.	Unboxing, putting in batteries and charging them.
 2.	[How to drive with optional logitech controller](logitech)
-3.	[How to drive with a Smartphone or workstation using Robot Commander in AP mode](robot_commander)
+3.	[How to drive using Robot Commander on a smartphone or workstation](robot_commander)
 <!--- this also works
 <a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>
 -->
