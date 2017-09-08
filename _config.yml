@@ -13,4 +13,4 @@ markdown: kramdown
 permalink: pretty
 
 
-theme: jekyll-theme-slate
+theme: jekyll-theme-cayman
