@@ -79,14 +79,14 @@ once teleop is launched the following screen appears:
 
 
 Reading from the keyboard and Publishing to Twist!
----------------------------
+
 Moving around:
 u i o
 j k l
 m , .
 
 For Holonomic mode (strafing), hold down the shift key:
----------------------------
+
 U I O
 J K L
 M < >
