@@ -57,7 +57,7 @@ Some formatting guidelines are listed immediately below:
   Pictures are saved with a suffix of `.jpg`.  Screen snapshots are saved with
   as suffix of `.png`.  The Markdown syntax for an image is:
 
-  >        `\![Alterative Text][URL]`
+  >        \![Alterative Text][URL]
 
   Please put something in alternative text to describe the image.  URL's
   should always use relative syntax.  Most of the images are colocated in
