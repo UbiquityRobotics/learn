@@ -1,4 +1,9 @@
-#Driving your Robot with a Keyboard.
+---
+layout: default
+title:  "Driving a Magni with a keyboard"
+permalink: Keyboard Teleop
+---
+# Driving a Robot with a Keyboard
 
 For a standard Magni equiped with a Raspberry Pi 3 you need a laptop or some way to open a terminal session to the Rpi controlling the robot. If the proper software is installed, You can drive the robot from a remote terminal. Power up the robot (Rpi power light is on and red). Assuming the robot is networked locally, or if you are using the default IP address (see connecting to your robot for the first time.)
 
