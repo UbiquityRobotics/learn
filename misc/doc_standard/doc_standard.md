@@ -1,3 +1,5 @@
+<!-- Locked by waynegramlich on 2017Sep9 to do initial development. -->
+
 # Ubiquity Robotics Documentation Standard
 
 This document describes the Ubutity Robotics documentation formating
@@ -8,7 +10,7 @@ and writing standards.
 In general, the documentation is written in standard
 [Markdown](https://daringfireball.net/projects/markdown/syntax)
 format.  Period.
-
+t
 ### Formatting Extensions
 
 The current intention is to seriously consider using
@@ -146,6 +148,10 @@ writing style.  The list of writing style recommendations is listted below:
 
     * YYYYMMMDD is date where YYYY is the year, MMM is a three character
       month (e.g. "Sep",  "May", ...) and DD is the day.
+      
+    * REASON is a very short reason why the page is locked.
+    
+  {locking needs a bit more explanation.}
 
 ## Conclusion
 
