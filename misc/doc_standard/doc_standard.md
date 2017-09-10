@@ -2,15 +2,18 @@
 
 # Ubiquity Robotics Documentation Standard
 
-This document describes the Ubutity Robotics documentation formating
-and writing standards.
+This document describes the Ubiquity Robotics documentation formatting
+and writing standards.  At this point in time, this is a proposal that
+can be discussed and changed.  This document is broken into sections
+on 1) formatting extensions, 2) formatting guidelines, 3) writing style,
+and finishing off with 4) the documentation workflow.
 
-## Formating Standards
+## Formatting Standards
 
 In general, the documentation is written in standard
-[Markdown](https://daringfireball.net/projects/markdown/syntax)
-format.  Period.
-t
+[Markdown format](https://daringfireball.net/projects/markdown/syntax).
+Period.
+
 ### Formatting Extensions
 
 The current intention is to seriously consider using
@@ -22,14 +25,13 @@ Github Pages uses
 [Jekyll](https://jekyllrb.com/docs/home/).
 We may decide to incorporate some Jekyll features into the UR formatting
 standards.  Only use Markdown and Jeykll features that have been
-agreed upon and incorporated into this document.  Please see the
-lists below.
+agreed upon and incorporated into this document.  Please see the lists below.
 
 #### Acceptable GitHub Markdown Extensions
 
 There are currently no agreed upon Github Markdown extensions.
 
-#### Acceptable Jekyll Extentions
+#### Acceptable Jekyll Extensions
 
 There are currently no agreed upon Jekyll extensions.
 
@@ -43,14 +45,14 @@ Some formatting guidelines are listed immediately below:
   with the page are colocated in the directory in the that has the markdown page.
   This means when the page is no longer needed, the entire directory can be deleted.
 
-* Dirctory Names:
+* Directory Names:
   If the directory is named `foo`, the markdown file should be need `foo.md`.
   Directory names should somewhat descriptive without getting overly long.
   For now directory names should be somewhere be 10 to 25 characters long.
   This is a guideline rather than a hard and fast rule.  Do not label directories
-  with chapter numbers (e.g. `chapter1`, `chapter2`, et.c)
+  with chapter numbers (e.g. `chapter1`, `chapter2`, etc.)
   Directory names should be all lower case with underscores ('_') between words.
-  Long words like "documenatation" and "miscellaneous" can be sorted down to
+  Long words like "documentation" and "miscellaneous" can be sorted down to
   "doc" and "misc", respectively.  Do not do do vowel removal.  Thus, shortening
   "documentation"  and "miscellaneous" down to "dcmnttn" and "mscllns" is not
   acceptable.
@@ -59,7 +61,7 @@ Some formatting guidelines are listed immediately below:
   Pictures are saved with a suffix of `.jpg`.  Screen snapshots are saved with
   as suffix of `.png`.  The Markdown syntax for an image is:
 
-  >        \![Alterative Text][URL]
+  >        \![Alternative Text][URL]
 
   Please put something in alternative text to describe the image.  URL's
   should always use relative syntax.  Most of the images are colocated in
@@ -88,19 +90,47 @@ Some formatting guidelines are listed immediately below:
   so that there is line wrapping is quite acceptable.  The arbitrary buffer
   width of 100 characters is assumed for line chopping.  Links and image
 
+* Description Lists:
+  [HTML description lists](https://www.w3schools.com/tags/tag_dl.asp) are not
+  supported by Markdown.  We improvise around the lack of functionality by using
+  lists as show below:
+
+  >        * Description Word or Phrase:
+  >          First paragraph of description...
+  >          ...
+  >          N'th paragraph of description...
+
+  This list uses this style of description lists.
+
+* Table of Contents:
+  Sometimes a page is just a list of links to other pages.  The format for this 
+  show below:
+
+  >        {overview paragraphs}
+  >
+  >        * [Short Description1](Relative URL1):
+  >          Longer description.
+  >        
+  >          ...
+  >        
+  >        * [Short DescriptionN](Relative URLn):
+  >          Longer description.
+  >
+  >        {optional conclusion paragraphs}
+
 ## Writing Style
 
-Documentation is easier for the customer to read if everybody uses similar
-writing style.  The list of writing style recommendations is listted below:
+Documentation is easier for the customer to read if everybody uses a similar
+writing style.  The list of writing style recommendations is listed below:
 
 * Tense:
   The dominate tense to use is the present tense.  Only use the past tense
-  to document depricated features.  Only use future tense infrequently, and
+  to document deprecated features.  Only use future tense infrequently, and
   then only to describe features that have not been implemented and are not
   likely to be implemented soon.
 
   If you are documenting a feature that has not been implemented yet, but will
-  be implemented relatively soon, please write the documenation in the present
+  be implemented relatively soon, please write the documentation in the present
   tense.  Some sort of marker is needed to flag documented features that have
   not been implemented yet.  For now, just use `Not Implemented:` at the
   beginning of each paragraph or section that is not implemented.
@@ -116,7 +146,10 @@ writing style.  The list of writing style recommendations is listted below:
   text later in the page, should use the term "below".  The term "immediately below"
   means that the text shows up within a paragraph or two.  The term "much further below"
   means that the text shows up many paragraphs below.  Do not fall into the trap
-  using past/future tense to 
+  using past/future tense instead of present tense.  Do not say "This *was* explained
+  earlier in this document" or "This will be explained later in this document."  Always
+  use present tense "As explained above ..." and "The code snippet immediately below
+  shows how to ..."
 
 * Robot Names:
   Only use specific robot names when talking about a feature that is specific
@@ -130,15 +163,26 @@ writing style.  The list of writing style recommendations is listted below:
   a parenthetical expansion of the phase with the appropriate letters capitalizes.
   You may use the UR (Ubiquity Robotics) without having to do the expansion.
 
+* No Mystery:
+  Writing technical documentation is not like writing the great American novel.
+  In particular, the customer should not be left wondering where the documentation
+  is going.  A strategy of providing a brief preview, followed by the details, and
+  finishing with a conclusion is both simple and effective.
+
+* Use Lists and Tables:
+  Use lists and tables to organize information.  Currently, Markdown supports lists
+  pretty well.  Tables currently have to be done using HTML tags.
+
 ## Documentation Workflow
 
-* Typographical and Gramatical Errors:
+* Typographical and Grammatical Errors:
   Members of the UR team should fix these immediately on the GitHub site.
   Use the comment "Fixed some typos" to mark these.
 
 * Locking:
   When somebody is going to do a massive reedit of a page, you should "lock"
-  the page with a comment of the following form:
+  the page to discourage people from mucking with the page.  Locking is performed
+  with a comment of the following form:
 
   >        \<!-- Locked by USER_NAME on YYYYMMMDD for REASON. -->
 
@@ -151,8 +195,6 @@ writing style.  The list of writing style recommendations is listted below:
       
     * REASON is a very short reason why the page is locked.
     
-  {locking needs a bit more explanation.}
-
 ## Conclusion
 
 {conclusion goes here.}
