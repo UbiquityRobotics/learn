@@ -98,16 +98,16 @@ Please perform the following steps:
 
      Run the following command from a shell:
 
-        lsb_release -d -s
+         lsb_release -d -s
 
      and you will get something that looks like:
 
-        Ubuntu 16.04.2 LTS
+         Ubuntu 16.04.2 LTS
 
      In this instance you would check off:
 
-        [X] Linux Distro: [X] Ubuntu, [ ] Fedora, [ ] Other
- 	    Ubuntu Version: [X] 16.04, [ ] 16.10, [ ] 17.04, [ ] 17.10, [ ] Other
+         [X] Linux Distro: [X] Ubuntu, [ ] Fedora, [ ] Other
+ 	     Ubuntu Version: [X] 16.04, [ ] 16.10, [ ] 17.04, [ ] 17.10, [ ] Other
 
      Just for your information, `LTS` stands for Long Term Support.
 
@@ -126,18 +126,18 @@ Please perform the following steps:
 
      Run the following command from a shell:
 
-        uname -p
+         uname -p
 
      and you will get something that looks like:
 
-        x86_64
+         x86_64
 
      In this instance you would check off:
 
-        [X] Linux Distro: [X] Ubuntu, [ ] Fedora, [ ] Other
-            Processor: [ ] 64-bit x86, [ ] 32-bit x86, [ ] PowerPC, [ ] ARM, [ ] Other
+         [X] Linux Distro: [X] Ubuntu, [ ] Fedora, [ ] Other
+             Processor: [ ] 64-bit x86, [ ] 32-bit x86, [ ] PowerPC, [ ] ARM, [ ] Other
 
-        Processor: [X] 64-bit x86, [ ] 32-bit x86, [ ] PowerPC, [ ] ARM, [ ] Other
+         Processor: [X] 64-bit x86, [ ] 32-bit x86, [ ] PowerPC, [ ] ARM, [ ] Other
 
    Please note that ROS only runs on 64-bit x86 at this point in time.  If you do
    not have a 64 bit x86 processor architecture you can stop now.
@@ -145,14 +145,14 @@ Please perform the following steps:
 4. If you have previously installed some virtualization software on your operating
    system, please check off the appropriate box below:
 
-       Virtualization Software Installed: [ ] None, [ ] VirtualBox, [ ] Other
+        Virtualization Software Installed: [ ] None, [ ] VirtualBox, [ ] Other
 
    If you do not know if any virtualization software is installed,
    please check off `[X] None`.
 
 5. Now determine how much available disk space you have:
 
-       Available Disk Space: ___ GB
+        Available Disk Space: ___ GB
 
    Depending upon your operating system, you can determine the available disk space
    as follows:

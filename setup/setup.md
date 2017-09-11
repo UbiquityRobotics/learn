@@ -12,7 +12,7 @@ the box containing your robot.  These tasks are:
 * [Order the Missing Stuff](order_stuff/order_stuff.md):
   The items that are missing from your site survey need to be ordered.
 
-* [Installing Virtualization Software](install_virtualization):
+* [Installing Virtualization Software](install_virtualization/install_virtualization.md):
   *{ more here }*
 
 * [Laptop ROS Installation](installing_ros/laptop_ros_install.md):
