@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Driving a Magni with a keyboard"
-permalink: Keyboard Teleop
+permalink: keyboard_teleop
 ---
 # Driving a Robot with a Keyboard
 
