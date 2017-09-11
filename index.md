@@ -1,25 +1,24 @@
+# Ubiquity Robotics User Manual
 
-# Getting Started Guide --- Magni
+* [Introduction](introduction)
 
-## [Introduction](introduction)
+* [Setup](setup/setup.md):
+  There are a number of tasks that should be done before your first robot shows up.
+  These tasks involve installing ROS (Robot Operating System), ordering some
+  additional stuff (e.g. batteries, network cables, etc.), and figuring out
+  networking issues.
 
-## [Quick Start](ix_quick_start)
+* [Quick Start](ix_quick_start):
+  Things you can do with your robot right out of the box.
 
-#### Things you can do with your robot right out of the box.
+* [Doing More With Your Robot](ix_doing_more)
 
-##	[Doing More With Your Robot](ix_doing_more)
+* [Programming Your Robot](ix_programming)
 
+* [CoffeeBot Challenge](ix_coffeebot)
 
-##	[Programming Your Robot](ix_programming)
+* [Learning with Magni in Simulation](ix_simulation1)
 
+* [Challenge in Simulation](ix_simulation2)
 
-##	[CoffeeBot Challenge](ix_coffeebot)
-
-
-##	[Learning with Magni in Simulation](ix_simulation1)
-
-
-##	[Challenge in Simulation](ix_simulation2)
-
-
-##      [Miscellaneous](misc/misc.md)
+* [Miscellaneous](misc/misc.md)
