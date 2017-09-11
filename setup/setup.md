@@ -3,7 +3,7 @@
 There are a number of tasks that need to be performed **before** you open
 the box containing your robot.  These tasks are:
 
-* [Site Survey](site_survery/site_survey.md):
+* [Site Survey](site_survey/site_survey.md):
   You need to identify the various components that you already have versus
   what is needed.  This involves identifying what operating system your
   laptop is running, determining some information about your WiFi access
