@@ -22,6 +22,9 @@ The steps involved are:
 
 With no further adeau, you can get started now.
 
+*{ waynegramlich @ 2017Sep10 : [?.?] (#?) Test issue/defect report:
+Here is some random test.}*
+
 ## Is Virtualization Software Needed
 
 For this document, we partition native operating systems into ones
