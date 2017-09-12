@@ -60,7 +60,7 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 to see if the topics are correct for a magni, rostopic list should show:
 
-`
+'
 /cmd_vel
 /joint_states
 /left_error
@@ -73,7 +73,7 @@ to see if the topics are correct for a magni, rostopic list should show:
 /tf_static
 /ubiquity_velocity_controller/cmd_vel
 /ubiquity_velocity_controller/odom
-`
+'
 
 once teleop is launched the following screen appears:
 
