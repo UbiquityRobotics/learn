@@ -8,7 +8,7 @@
   additional stuff (e.g. batteries, network cables, etc.), and figuring out
   networking issues.
 
-* [Quick Start](ix_quick_start):
+* [Quick Start](ix_quick_start.md):
   Things you can do with your robot right out of the box.
 
 * [Doing More With Your Robot](ix_doing_more)

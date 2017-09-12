@@ -120,7 +120,7 @@ windows can be clicked through
    After VirtualBox has started you should see window that sort of looks like what
    is shown below:
 
-   ![vb_start.png](install_images/vb_start.png)
+   ![vb_start.png](vb_start.png)
 
    Please click on the `[New]` icon/button to start creating a virtual machine.
 
@@ -128,7 +128,7 @@ windows can be clicked through
 
    Next you will get the "Name and operating system" window as below:
 
-   ![vb_name_os](install_images/vb_name_os.png)
+   ![vb_name_os](vb_name_os.png)
 
    Please enter "UR_SDE_16.04" as the `Name`, select "Linux" as the `Type`,
    make sure the `Version` is set to "Ubuntu (64-bit)".
@@ -139,7 +139,7 @@ windows can be clicked through
 
    When you get the "Memory size" window, it should look as follows:
 
-   ![vb_memory_size](install_images/vb_memory_size.png)
+   ![vb_memory_size](vb_memory_size.png)
 
    Make sure that it says 1024MB and then click on the `[Next>]` button.
 
@@ -147,7 +147,7 @@ windows can be clicked through
 
    When you get the "Hard disk" window, it should look as follows:
 
-   ![vb_hard_disk](install_images/vb_hard_disk.png)
+   ![vb_hard_disk](vb_hard_disk.png)
 
    Make sure that "Create a virtual hard disk now" is selected and click on the
    `[Next>]` button.
@@ -156,7 +156,7 @@ windows can be clicked through
 
    When you get the "Hard disk file type" window, it should look as follows:
 
-   ![vb_hard_disk_file_type](install_images/vb_hard_disk_file_type.png)
+   ![vb_hard_disk_file_type](vb_hard_disk_file_type.png)
 
    Please make sure that `VDI (VirtualBox Disk Image)` is selected and click on the
    `[Next>]` button.
@@ -165,7 +165,7 @@ windows can be clicked through
 
    When you get the "Storage on physical disk" window, it should look as follows:
 
-   ![vb_storage](install_images/vb_storage.png)
+   ![vb_storage](vb_storage.png)
 
    Please make sure that `Dynamically allocated` is selected and click on the
    `[Next>]` button.
@@ -174,7 +174,7 @@ windows can be clicked through
 
    When you get the "File location and size" window, it should look as follows:
 
-   ![vb_file_size](install_images/vb_file_size.png)
+   ![vb_file_size](vb_file_size.png)
 
    Please leave the location set to "UR_SDE_16.04" and adjust the file size to
    be greater than 30GB.  Please note that the slide bar is non-linear as you
@@ -186,7 +186,7 @@ windows can be clicked through
 
    After the virtual machine is created, the VirtualBox window should look as follows:
 
-   ![vb_done](install_images/vb_done.png)
+   ![vb_done](vb_done.png)
 
 You have successfully created a new virtual machine.  The next task is to load
 a version of ubuntu 16.04 into the virtual machine.
@@ -216,11 +216,11 @@ virtual machine.
    To start the virtual machine, bring up virtual box just double click
    on the icon that says `UR_SDE_16.04`:
 
-   ![vb_done](install_images/vb_done.png)
+   ![vb_done](vb_done.png)
 
    In short order, you should see window that looks as follows:
 
-   ![lubuntu_disk_select](install_images/lubuntu_disk_select.png)
+   ![lubuntu_disk_select](lubuntu_disk_select.png)
 
    The key thing here is to use the file chooser to specify the file that
    you just downloaded (i.e. `lubuntu-16.04-desktop-amd64.iso`)
@@ -234,14 +234,14 @@ virtual machine.
 
    Relatively quickly, you will see the screen below:
 
-   ![lubuntu_start](install_images/lubuntu_start.png)
+   ![lubuntu_start](lubuntu_start.png)
 
    This screen has a 30 second time-out on it.  Just let it time-out
    without touching your keyboard or mouse.
 
    After the time out the next major screen you will see looks as follows:
 
-   ![lubuntu_mounted](install_images/lubuntu_mounted.png)
+   ![lubuntu_mounted](lubuntu_mounted.png)
 
    At this point in time, your virtual machine is running lubuntu 16.04.  However,
    lubuntu has not yet been installed.  The actual installation steps come next.
@@ -252,7 +252,7 @@ virtual machine.
    One is labeled `Trash` and the other is labeled `Install`.  Please double click
    on the `Install` icon.  When you do this you will get the following screen:
 
-   ![lubuntu_welcome](install_images/lubuntu_welcome.png)
+   ![lubuntu_welcome](lubuntu_welcome.png)
 
    Please click on the `[Continue]` button to start the install process.
 
@@ -260,7 +260,7 @@ virtual machine.
 
    The next screen is the prepare screen and it looks as follows:
 
-   ![lubuntu_prepare](install_images/lubuntu_prepare.png)
+   ![lubuntu_prepare](lubuntu_prepare.png)
 
    Please do *NOT* check off either `Download updates while installing Lubuntu` or
    `Install third-party software for graphics and WiFi hardware, Flash, MP3 and other media`.
@@ -272,7 +272,7 @@ virtual machine.
 
    The next screen you will see looks as follows:
 
-   ![lubuntu_installation_type](install_images/lubuntu_installation_type.png)
+   ![lubuntu_installation_type](lubuntu_installation_type.png)
 
    Be sure select `Erase disk and install Lubuntu`.  Yes, the warning is scary
    sounding, but in fact the only disk that will be effected is the virtual
@@ -282,7 +282,7 @@ virtual machine.
 
    You will immediately get the next screen:
 
-   ![lubuntu_installation_type2](install_images/lubuntu_installation_type2.png)
+   ![lubuntu_installation_type2](lubuntu_installation_type2.png)
 
    Please click on the `[Continue]`.
 
@@ -290,7 +290,7 @@ virtual machine.
 
    You should get a time zone selection screen that looks as follows:
 
-   ![lubuntu_time_zone](install_images/lubuntu_time_zone.png)
+   ![lubuntu_time_zone](lubuntu_time_zone.png)
 
    Please select the time zone that make the most sense for your
    geographic location.
@@ -302,7 +302,7 @@ virtual machine.
 
    Next, you should get a keyboard selection screen that looks as follows:
 
-   ![lubuntu_keyboard](install_images/lubuntu_keyboard.png)
+   ![lubuntu_keyboard](lubuntu_keyboard.png)
 
    Please select the keyboard that matches the keyboard you actually have.
    If in doubt, please leave it set to `English`.
@@ -313,7 +313,7 @@ virtual machine.
 
    Next you should get an initial account screen that looks as follows:
 
-   ![lubuntu_account](install_images/lubuntu_account.png)
+   ![lubuntu_account](lubuntu_account.png)
 
    Please type in an account name of your choosing (the example shows `alice`)
    into the `Your Name:` field.
@@ -332,7 +332,7 @@ virtual machine.
     As lubuntu is installed you will see a screen that looks similar to
     what is shown below.
 
-    ![lubuntu_install](install_images/lubuntu_install.png)
+    ![lubuntu_install](lubuntu_install.png)
 
     It will take a while to install everything, so just lean back and enjoy
     the slide show.
@@ -341,14 +341,14 @@ virtual machine.
 
     After everything is installed you will get a restart window that looks as follows:
 
-    ![lubuntu_restart](install_images/lubuntu_restart.png)
+    ![lubuntu_restart](lubuntu_restart.png)
 
     Please click on the `[Restart Now]` button.
 
     Very quickly your virtual machine should shrink its display to be small and
     and look as follows:
 
-    ![lubuntu_restart](install_images/lubuntu_restart.png)
+    ![lubuntu_restart](lubuntu_restart.png)
 
     If this screen, does not disappear in 5 to 10 seconds, it will be necessary
     to do a some simple extra steps to finish shutting down the virtual machine.
@@ -357,22 +357,22 @@ virtual machine.
     With your mouse over the the icon, please right click your mouse button
     to get the following  pull down menu:
 
-    ![lubuntu_machine_menu](install_images/lubuntu_machine_menu.png)
+    ![lubuntu_machine_menu](lubuntu_machine_menu.png)
 
     Select the `Close>` menu and you should see a further pull right menu
     that looks as follows:
 
-    ![lubuntu_power_off_menu](install_images/lubuntu_power_off_menu.png)
+    ![lubuntu_power_off_menu](lubuntu_power_off_menu.png)
 
     Please select the `Power Off` menu.  Next, you will get a window that looks as follows:
 
-    ![lubuntu_power_off_window](install_images/lubuntu_power_off_window.png)
+    ![lubuntu_power_off_window](lubuntu_power_off_window.png)
 
     Please click on the `[Power Off]` button to finish powering the virtual machine.
 
 Your VirtualBox window should now look as follows:
 
-![vb_done](install_images/vb_done.png)
+![vb_done](vb_done.png)
 
 Congratulations, you have just successfully installed lubuntu 16.04 into your
 `UR_SDE_16.04` virtual machine for VirtualBox.
@@ -389,7 +389,7 @@ virtual window size, etc.
    VirtualBox window.  After a small delay you should get the following
    login window:
 
-   ![lubuntu_login](install_images/lubuntu_login.png)
+   ![lubuntu_login](lubuntu_login.png)
 
    Please type in the account name and password that previously supplied
    when you installed Lubuntu 16.04.  Now you can click on the `[Login In]`
@@ -397,7 +397,7 @@ virtual window size, etc.
 
    After you log in, you will get the following rather plain window:
 
-   ![lubuntu_logged_in](install_images/lubuntu_logged_in.png)
+   ![lubuntu_logged_in](lubuntu_logged_in.png)
 
 2. Insert Guest Additions CD
 
@@ -406,11 +406,11 @@ virtual window size, etc.
    pull down menu and selecting `Insert Guest Additions CD Image...` from
    the menu shown below:
 
-   ![lubuntu_insert_guest_cd](install_images/lubuntu_insert_guest_cd.png)
+   ![lubuntu_insert_guest_cd](lubuntu_insert_guest_cd.png)
 
    After you do that, you will get a display that looks as follows:
    
-   ![lubuntu_guest_cd_inserted](install_images/lubuntu_guest_cd_inserted.png)
+   ![lubuntu_guest_cd_inserted](lubuntu_guest_cd_inserted.png)
 
    Since the file manager is not needed, please click on the `[Cancel]` button
    to make it go away.
@@ -426,7 +426,7 @@ virtual window size, etc.
    This keyboard judo is abbreviated as Ctrl-Atl-T.  After you done these
    keyboard gymnastics you will git the following screen:
 
-   ![lubuntu_terminal](install_images/lubuntu_terminal.png)
+   ![lubuntu_terminal](lubuntu_terminal.png)
 
    Once the terminal window comes up, move the mouse pointer inside the
    terminal window and click the left mouse button to make sure that
@@ -442,7 +442,7 @@ virtual window size, etc.
    After you type the command above, you will prompted for a password.
    Please type in the password you used to login with.
 
-   ![lubuntu_terminal1](install_images/lubuntu_terminal1.png)
+   ![lubuntu_terminal1](lubuntu_terminal1.png)
 
    This command will grind away for a little while and then stop.
 
@@ -456,7 +456,7 @@ virtual window size, etc.
    It will cause the VirtualBox guest additions to be installed.  You may be asked
    to type in a password again.
 
-   ![lubuntu_teriminal1](install_images/lubuntu_terminal1.png)
+   ![lubuntu_teriminal1](lubuntu_terminal1.png)
 
    Again, the compute will grind away for a little while and the it will stop.
    At this point, the guest extensions are installed.
@@ -467,7 +467,7 @@ virtual window size, etc.
    move your mouse curse to the lower right corner and   click on the power button
    icon.  This will pop a window that looks as follows:
 
-   ![lubuntu_shutdown](install_images/lubuntu_shutdown.png)
+   ![lubuntu_shutdown](lubuntu_shutdown.png)
 
    Please select the `[Shutdown]` button to force a log out and virtual machine
    shut down.

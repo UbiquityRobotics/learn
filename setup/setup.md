@@ -13,9 +13,10 @@ the box containing your robot.  These tasks are:
   The items that are missing from your site survey need to be ordered.
 
 * [Installing Virtualization Software](install_virtualization/install_virtualization.md):
-  *{ more here }*
+  Since most people are running Windows and MacOS, some sort of virtualization
+  software is needed.  Many
 
-* [Laptop ROS Installation](installing_ros/laptop_ros_install.md):
+* [ROS Installation](installing_ros/installing_ros.md):
   *{ more here }*
 
 * [Network Configuration](network_configuration/network_configuration.md):

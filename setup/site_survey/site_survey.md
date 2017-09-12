@@ -197,12 +197,12 @@ run ROS and control the robot.  The next section looks as shown below:
     Raspberry Pi:
       [ ] Raspberry Pi: [ ] Raspberry Pi3, [ ] Other, [ ] None
       [ ] Raspberry Pi Camera: [ ] Version 1, [ ] Version 2, [ ] 3rd Party
-          MicroSD Card: [ ] <8GB, [ ] 8GB, [ ] 16 GB, [ ] 32GB, [ ] >32GB
+      [ ] MicroSD Card: [ ] <8GB, [ ] 8GB, [ ] 16 GB, [ ] 32GB, [ ] >32GB
           MicroSD Card Speed: [ ] class 10, [ ] UHS 1, [ ] UHS 2, [ ] UHS 3
       [ ] HDMI display: [ ] Plugged into desktop, [ ] Unused [ ] Unavailable
       [ ] USB Keyboard: [ ] Plugged into desktop, [ ] Unused [ ] Unavailable
       [ ] USB Mouse:    [ ] Plugged into desktop, [ ] Unused [ ] Unavailable
-      [ ] USB to MicroSD adapter
+      [ ] USB to MicroSD Adapter
 
 and identifies information your Raspberry Pi (if you have one.)
 
@@ -221,3 +221,112 @@ Please follow the following steps:
        [X] Raspberry Pi: [ ] Raspberry Pi3, [ ] Other, [ ] None
 
 2. Camera:
+   The Raspberry Pi camera comes in two versions.  We support the both versions.
+
+       [ ] Raspberry Pi Camera: [ ] Version 1, [ ] Version 2, [ ] 3rd Party
+
+   *{ waynegramlich: Do we actually support both versions? }*
+
+   An image of the Raspberry Pi Camera Version 2 is shown immediately below:
+
+   ![Raspberry Pi Camera Verision 2](raspi_camera_v2.jpg)
+
+   If your camera looks like the image above, check off as follows:
+
+       [X] Raspberry Pi Camera: [ ] Version 1, [X] Version 2, [ ] 3rd Party
+
+   If you do not have a Raspberry Pi Camera, we really recommend that you purchase one.
+
+3. The Raspberry Pi 3 operating system and ROS run off of a MicroSD card plugged
+   into the Raspberry Pi 3.  We recommend that you have a microSD card that has
+   a speed of at least speed class of 10 or greater.  The
+   [SD Association](https://www.sdcard.org/)
+   has a page that describes
+   [speed classes](https://www.sdcard.org/developers/overview/speed_class/).
+
+       [ ] MicroSD Card: [ ] <8GB, [ ] 8GB, [ ] 16 GB, [ ] 32GB, [ ] >32GB
+           MicroSD Card Speed: [ ] class 10, [ ] UHS 1, [ ] UHS 2, [ ] UHS 3
+
+   Only check this item off if you actually have a microSD card.  We need
+   a microSD card that is at least 8GB in size.  However, we recommend 16GB
+   just to be sure.
+
+4. The next section concerns whether or not you have access to an HDMI display,
+   USB keyboard and USB Mouse.  It turns out that the Raspberry Pi 3 is fully
+   capable of running as a stand alone computer with a graphical desk top.
+   This can only be done if you have all three of these devices are available.
+   The three lines from the survey are shown immediately below:
+
+       [ ] HDMI display: [ ] Plugged into desktop, [ ] Unused [ ] Unavailable
+       [ ] USB Keyboard: [ ] Plugged into desktop, [ ] Unused [ ] Unavailable
+       [ ] USB Mouse:    [ ] Plugged into desktop, [ ] Unused [ ] Unavailable
+
+   Only select `[X] Plugged into desktop`, if the device exists but is already
+   plugged into the desktop.  In this case, it is possible to temporarily
+   power down the desktop and "borrow" the display/keyboard/mouse.  Select
+   `[X] Unused` if the display/keyboard/mouse is available and not plugged
+   into anything.  Lastly, select `[ ] Unavailable` if the device is not
+   present at the site.
+
+5. The last issue concerns whether the site has a USB to MicroSD adapter.
+   This adapter is used to download a preconfigured Ubuntu Linux for the
+   Raspberry Pi down to the micorSD card.  Alas, this task is tricky because
+   not all USB to microSD card adapters work with all virtualization vendor
+   software.
+
+      [ ] USB to MicroSD Adapter
+
+   Please check `[X] USB to MicroSD Adapter` if you have such an adapter.
+   You will not know if you have adapter that works with your virtualization
+   vendor software until you try it out.
+
+## Networking
+
+Networking is actually quite a complicated subject.  When you are developing
+ROS based software for your robot, it necessary to have a wireless connection
+between you robot and the laptop/desktop that you develop software on.  The
+relevant portion of the survey is shown below:
+
+    Networking:
+      [ ] WiFi Available:
+          Bands: [ ] Single Band, [ ] Dual Band, [ ] Unknown
+          Access Control: [ ] WPA2 PSK, [ ] WPA2 Enterprise, [ ] Open Access, [ ] Other
+      [ ] Wired Network Available: [ ] Empty Available RJ45, [ ] Temporarily Available
+          DHCP Support: [ ] Yes, [ ] No
+      [ ] Extra Ethernet Cable
+
+To do this portion of the survey you basically need to have both a laptop *and*
+some sort of WiFi access point.  The term "WiFi access point" kind of a generic term.
+The less generic terms are "Wifi Router", "WiFi Cable Modem", "WiFi DSL Modem", etc.
+
+Now we can walk you through this portion of the site survey:
+
+1. It is really important to know the SSID (Service Set IDentifier) for the
+   WiFi access point.  This is the "name" of the WiFi device.  Each different
+   operating system has a different way of showing the list of available SSID's.
+
+   * Windows:
+     *{waynegramlich: not a clue }*
+
+   * MacOS:
+     *{waynegramlich: not a clue }*
+
+   * Linux:
+     For Linux, we can see what WiFi access points are available using a program
+     called `nmcli` (Network Manager Command Line Interface).  Please run
+
+         nmcli -c no -t -f ssid dev wifi
+
+     and it show something like:
+
+         yrlus4G
+         yrlus24
+         --
+         --
+         peekaboo
+         NETGEAR31
+         vinos
+
+     These are the list of available SSID's.  You need to identify the SSID that
+     you intend to use to connect to the network.
+

@@ -26,12 +26,12 @@
     Raspberry Pi:
       [ ] Raspberry Pi: [ ] Raspberry Pi3, [ ] Other, [ ] None
       [ ] Raspberry Pi Camera: [ ] Version 1, [ ] Version 2, [ ] 3rd Party
-          MicroSD Card: [ ] <8GB, [ ] 8GB, [ ] 16 GB, [ ] 32GB, [ ] >32GB
+      [ ] MicroSD Card: [ ] <8GB, [ ] 8GB, [ ] 16 GB, [ ] 32GB, [ ] >32GB
           MicroSD Card Speed: [ ] class 10, [ ] UHS 1, [ ] UHS 2, [ ] UHS 3
       [ ] HDMI display: [ ] Plugged into desktop, [ ] Unused [ ] Unavailable
       [ ] USB Keyboard: [ ] Plugged into desktop, [ ] Unused [ ] Unavailable
       [ ] USB Mouse:    [ ] Plugged into desktop, [ ] Unused [ ] Unavailable
-      [ ] USB to MicroSD adapter
+      [ ] USB to MicroSD Adapter
 
     Networking:
       [ ] WiFi Available:
