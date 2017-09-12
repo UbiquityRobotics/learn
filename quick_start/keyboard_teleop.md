@@ -60,20 +60,20 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 to see if the topics are correct for a magni, rostopic list should show:
 
-<pre>
-/cmd_vel
-/joint_states
-/left_error
-/motor_node/parameter_descriptions
-/motor_node/parameter_updates
-/right_error
-/rosout
-/rosout_agg
-/tf
-/tf_static
-/ubiquity_velocity_controller/cmd_vel
-/ubiquity_velocity_controller/odom
-</pre>
+
+	/cmd_vel
+	/joint_states
+	/left_error
+	/motor_node/parameter_descriptions
+	/motor_node/parameter_updates
+	/right_error
+	/rosout
+	/rosout_agg
+	/tf
+	/tf_static
+	/ubiquity_velocity_controller/cmd_vel
+	/ubiquity_velocity_controller/odom
+
 
 once teleop is launched the following screen appears:
 
