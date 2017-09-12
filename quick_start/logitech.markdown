@@ -128,7 +128,7 @@ If we were using keyboard teleop our keys would be arranged like this:
 
 ## Logitech Controller
 
-![Logitech Controller](https://ubiquityrobotics.github.io/learn.magni.com/assets/joystick.jpg)
+![Logitech Controller](https://ubiquityrobotics.github.io/learn/assets/joystick.jpg)
 
 <!--
 
