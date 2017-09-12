@@ -48,7 +48,7 @@ Some formatting guidelines are listed immediately below:
   "documentation"  and "miscellaneous" down to "dcmnttn" and "mscllns" is not
   allowed.
 
-* Directory Per Page:
+* Directory Per Page: ??? SOme pages are text only do chapters make more sense ?????
   Each Markdown document should be in its own directory.
   Since markdown provides a way to include images, almost all images associated
   with the page are colocated in the directory containing the markdown page.
