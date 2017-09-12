@@ -147,5 +147,5 @@ Other possible way to display an image
         <p class="image-caption">A Basic Multimeter</p>
     
 </div-->
-
+The Left joystick controls the direction and pseed of motion, the left button is the 'dead man' switch, and needs to be held down simulatanously with the joystick.  
 
