@@ -9,7 +9,8 @@ Robot Commander has two versions:  One for the Android phone, and one for a work
 
 <div class="image-wrapper">
     
-<img src="assets/Robot_Commander.png" />
+<img src="https://ubiquityrobotics.github.io/learn/assets/Robot_Commander.png" />
+
    
 <p class="image-caption">Robot Commander</p>
 
