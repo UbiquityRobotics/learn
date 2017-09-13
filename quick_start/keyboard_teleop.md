@@ -15,7 +15,7 @@ the robot responds by giving you its IP number.
 
 Then use the following command to login to the robot for example:
 
-ssh ubuntu@10.0.0.117
+    ssh ubuntu@10.0.0.117
 
 You may get asked to authorize your key, say yes.
 
@@ -23,39 +23,39 @@ You next should be prompted for your password, type it in and you’ll be logged
 
 upon success:
 
-Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.43-v7+ armv7l)
+    Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.43-v7+ armv7l)
+    
+    * Documentation: https://help.ubuntu.com
+    * Management: https://landscape.canonical.com
+    * Support: https://ubuntu.com/advantage
 
-* Documentation: https://help.ubuntu.com
-* Management: https://landscape.canonical.com
-* Support: https://ubuntu.com/advantage
+    1 package can be updated.
+    0 updates are security updates.
 
-1 package can be updated.
-0 updates are security updates.
-
-Last login: Sat May 6 15:57:19 2017 from 10.53.5.19
+    Last login: Sat May 6 15:57:19 2017 from 10.53.5.19
 
 If you have booted from our RPi image, the robot is already for accepting 
 commands. To check if this is true:
 
-rostopic list
+    rostopic list
 
 should show a list of topics. If you get an error message, you need to
 launch the robot base:
 
-roslaunch magni_bringup base.launch >/dev/null 2>&1 & 
+    roslaunch magni_bringup base.launch >/dev/null 2>&1 & 
 	(the /dev/null 2 >&2 & puts into background and stops output to screen)
 
 You can launch keyboard teleop directly on the robot:
 
 
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+    rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 
 or remotlely from a second terminal window on your laptop:
 
-export ROS_MASTER_URI=http://(robots IP number):11311
+    export ROS_MASTER_URI=http://(robots IP number):11311
 
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+    rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 
 to see if the topics are correct for a magni, rostopic list should show:
