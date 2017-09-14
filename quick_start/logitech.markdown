@@ -2,6 +2,7 @@
 layout: default
 title:  "Using the Optional Logitech Controller"
 permalink: logitech
+author: Alan Federman
 ---
 # Using the Optional Logitech Controller
 
