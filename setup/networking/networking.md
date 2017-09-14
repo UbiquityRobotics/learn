@@ -1,3 +1,9 @@
+---
+layout: default
+title:  "Connecting your Robot to a Network"
+permalink: networking
+author: Aan Federman
+---
 
 # Connecting your Robot to a Network
 
