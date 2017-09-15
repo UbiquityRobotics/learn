@@ -34,7 +34,7 @@ the strategies for running 64-bit Ubuntu Linux are:
 
 * Partition your disk to support multiple operating systems.  This is less extreme
   and is still pretty challenging.  If you go down this route you are on your own, 
-  if one partition fails, it is almost impossible to recver the entire system.
+  if one partition fails, it is almost impossible to recover the entire system.
 
 * Run virtualization software on your native operating system.  We recommend
   the virtualization strategy if you need to use the laptop for other purposes.
