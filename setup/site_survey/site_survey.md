@@ -28,8 +28,8 @@ running on your platform. If you already have a dedicated laptop, you are set, i
 the strategies for running 64-bit Ubuntu Linux are:
 
 * Replace Current OS with Linux:
-  You can simply replace Windows/MacOS/FreeBSD with Ubuntu Linux.  This is a pretty
-  this is the easiest way to proceed, but will make it impossible to use the laptop for 
+  You can simply replace Windows/MacOS/FreeBSD with Ubuntu Linux.  This is the 
+  easiest way to proceed, but will make it impossible to use the laptop for 
   other purposes.
 
 * Partition your disk to support multiple operating systems.  This is less extreme
