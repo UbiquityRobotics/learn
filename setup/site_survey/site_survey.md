@@ -24,20 +24,20 @@ That was easy.
 In order to develop code and run robot applications, your computer(s) must have
 ROS (Robot Operating System) running on it.  Since ROS only runs on a 64-bit
 Linux Ubuntu operating system, it will be necessary to get this version of Linux
-running on your platform.
-
-The strategies for running 64-bit Ubuntu Linux are:
+running on your platform. If you already have a dedicated laptop, you are set, if not
+the strategies for running 64-bit Ubuntu Linux are:
 
 * Replace Current OS with Linux:
   You can simply replace Windows/MacOS/FreeBSD with Ubuntu Linux.  This is a pretty
-  extreme solution that we do not recommend.  If you go down this route you are on
-  your own.
+  this is the easiest way to proceed, but will make it impossible to use the laptop for 
+  other purposes.
 
 * Partition your disk to support multiple operating systems.  This is less extreme
-  and is still pretty challenging.  If you go down this route you are on your own.
+  and is still pretty challenging.  If you go down this route you are on your own, 
+  if one partition fails, it is almost impossible to recver the entire system.
 
-* Run virtualization software on your native operating system.  We strongly recommend
-  the virtualization strategy.
+* Run virtualization software on your native operating system.  We recommend
+  the virtualization strategy if you need to use the laptop for other purposes.
 
 There are a significant number of virtualization vendors.  We provide a prebuilt
 virtual image that contains Ubuntu Linux 14.04, ROS, and all the Ubiquity Robotics
