@@ -19,8 +19,8 @@ the box containing your robot.  These tasks are:
 * [ROS Installation](installing_ros/installing_ros.md):
   *{ more here }*
 
-* [Network Configuration](network_configuration/network_configuration.md):
-  *{ more here }*
+* [Network Configuration](networking/networking.md):
+   { more here }*
 
 * [RasPi ROS Installation](raspi_ros_install/raspi_ros_install.md):
   *{ more here }*
