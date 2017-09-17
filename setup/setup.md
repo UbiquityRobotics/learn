@@ -17,7 +17,7 @@ the box containing your robot.  These tasks are:
   software is needed.  Many
 
 * [ROS Installation](installing_ros/installing_ros.md):
-  *{ more here }*
+  *{ Pointers to existing ROS installation instructions -  more here}*
 
 * [Network Configuration](networking/networking.md):
    { more here }*
