@@ -22,9 +22,9 @@ the box containing your robot.  These tasks are:
 * [Network Configuration](networking/networking.md):
    { more here }*
 
-* [RasPi ROS Installation](raspi_ros_install/raspi_ros_install.md):
+* [Downloading and Using the Ubiquity RaspberryPi Image](raspi_ros_install/raspi_ros_install.md):
   *{ more here }*
 
-* [RasPi Wifi Configuration](raspi_wifi_config/raspi_wifi_config.mk):
+* [RasberryPi Wifi Configuration](raspi_wifi_config/raspi_wifi_config.mk):
   *{ more here }*
 
