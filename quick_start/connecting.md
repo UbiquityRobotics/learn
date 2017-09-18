@@ -1,12 +1,14 @@
 ---
 layout: default
-title:  "Magni Bringing up on a Network"
+title:  "Magni Connecting in AP Mode"
 permalink: connecting
 ---
-# Connecting Magni for the First Time
+# Connecting to Magni in Access Point Mode 
 
 If you loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, 
 or have received a Magni with the Raspberry Pi already installed, the Robot should boot up in WiFi access point mode. This means you should be able to begin testing your robot immediately, and be able to attach it to an existing network.  If you have a logitech controller or a fiducial marker, you should be able to drive or guide your robot once it is turned on.  The robot will broadcast it’s SSID as ubiquityrobot####, and the password to connect is "robotseverywhere." FOr both Windows and a Linux GUI environmment click on the network bars icon to bring up the list of WiFi access points. Windows will require a SSH client like "Putty" to connect.
+
+Trouble shooting - if you can't find any WiFi called UbuityRobot####, go back to the unboxing instructions.
 
 Once connected I attempt to locate the robot by typing in a terminal window:
 
