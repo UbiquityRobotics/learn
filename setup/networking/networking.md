@@ -1,11 +1,68 @@
----
-layout: default
-title:  "Connecting your Robot to a Network"
-permalink: networking
-author: Aan Federman
----
-
 # Connecting your Robot to a Network
+
+*{ waynegramlich: introduction goes here. }
+
+This document has the following sections:
+* [Overview](#overview):
+
+* [Connecting to Raspberry Pi with Keyboard/Mouse/Display](#connecting-to-raspberry-pi-with-keyboard
+-mouse-display):
+
+* [Connecting to Raspberry Pi with Network Cable](#connecting-to-raspberry-pi-with-network-cable):
+
+* [Connecting to Raspberry via Robot Wifi Access Point](#connecting-to-raspberry-raspberry-pi-via-robot-wifi-access-point):
+
+* [Using PiFi to Configure Raspberry Pi Wifi](#using-pifi-to-configure-raspberry-pi-wifi):
+
+* [Changing the Robot Host Name](#changing-the-robot-host-name):
+
+* [Creating User Accounts](creating-user-accounts):
+
+* [Development Machine Networking](#development_machine_networking):
+
+* [Conclusion](#conclusion):
+
+
+## Overview
+
+*{ waynegramlich: overview goes here. }*
+
+
+## Connecting to Raspberry Pi with Keyboard/Mouse/Display
+
+*{ waynegramlich: fill in the details }*
+
+## Connecting to Raspberry Pi with Network Cable
+
+*{ waynegramlich: fill in the details }*
+
+## Connecting to Raspberry Raspberry Pi via Robot Wifi Access Point
+
+*{ waynegramlich: fill in the details }*
+
+## Using PiFi to Configure Raspberry Pi Wifi
+
+*{ waynegramlich: fill in the details }*
+
+## Changing the Robot Host Name
+
+*{ waynegramlich: fill in the details }*
+
+## Creating User Accounts
+
+*{ waynegramlich: fill in the details }*
+
+## Development Machine Networking
+
+*{ waynegramlich: Verify zeroconf works on development machine. }*
+
+## Conclusion
+
+*{ waynegramlich: fill in the details }*
+
+## Older Documentation
+
+{* waynegramlich:  The text below needs to be merged into the sections above. }*
 
 If you loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, 
 or have received a Magni with the Raspberry Pi already installed, the Robot should boot up in WiFi access point mode. This means you should be able to begin testing your robot immediately, and be able to attach it to an existing network.  If you have a logitech controller or a fiducial marker, you should be able to drive or guide your robot once it is turned on.  The robot will broadcast it’s SSID as ubiquityrobot, and the password to connect is “robotseverywhere”
