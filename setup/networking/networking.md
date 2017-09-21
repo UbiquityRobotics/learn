@@ -1,27 +1,50 @@
-# Connecting your Robot to a Network
+# Connecting Your Robot to a Wifi Network
 
-*{ waynegramlich: introduction goes here. }
+ROS (Robot Operating System) structures robot applications as set of
+cooperating processes called ROS Nodes.  These ROS nodes communicate
+with one another via standard internet communication standards.  One
+benefit of this communication architecture is that nodes can be run
+multiple different processors.  There is a rich selection of nodes that are
+primarily used for robot application development (e.g `rviz`, `rostopic`, etc.)
+that are run on a robot software development machine (e.g. a desktop or laptop
+computer.)  Since the robot is mobile, the only practical way for the
+robot to communicate with the development laptop/desktop is via internet
+Wifi communication standards. In this document, we describe the required
+steps for configuring your robot to connect to the internet via Wifi.
 
-This document has the following sections:
+This document is partitioned into the following sections:
+
 * [Overview](#overview):
+  This section provides an overview of the entire process of connecting your
+  robot to the internet via WiFi.
 
-* [Connecting to Raspberry Pi with Keyboard/Mouse/Display](#connecting-to-raspberry-pi-with-keyboard
-mousedisplay):
+* [Connecting to Raspberry Pi with Keyboard/Mouse/Display](#connecting-to-raspberry-pi-with-keyboardmousedisplay):
+  This section describes how to get to a shell prompt on the Raspberry Pi
+  using a USB keyboard, a USB mouse, and and HDMI display.
 
 * [Connecting to Raspberry Pi with Network Cable](#connecting-to-raspberry-pi-with-network-cable):
+  This section explains how to connect to your Raspberry Pi from your laptop/desktop
+  via standard hardware cable.
 
 * [Connecting to Raspberry via Robot Wifi Access Point](#connecting-to-raspberry-raspberry-pi-via-robot-wifi-access-point):
+  This section explains how to connect to your Raspberry Pi from your laptop
+  via the robot access point.
 
 * [Using PiFi to Configure Raspberry Pi Wifi](#using-pifi-to-configure-raspberry-pi-wifi):
+  This section explains how to run the `pifi` program to configure
+  the Wifi on the Raspberry Pi to access one or more WiFi access points.  
 
 * [Changing the Robot Host Name](#changing-the-robot-host-name):
+  This section explains how (and why) to change the robot host name.
 
 * [Creating User Accounts](creating-user-accounts):
+  This section explains how (and why) to add new user accounts to a robot.
 
 * [Development Machine Networking](#development_machine_networking):
+  This section explains how to connect your development laptop/desktop to your robot.
 
 * [Conclusion](#conclusion):
-
+  This section summarizes the performed steps and suggests what to do next.
 
 ## Overview
 
