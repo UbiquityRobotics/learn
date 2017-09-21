@@ -18,21 +18,21 @@ This document is partitioned into the following sections:
   This section provides an overview of the entire process of connecting your
   robot to the internet via WiFi.
 
-* [Connecting to Raspberry Pi with Keyboard/Mouse/Display](#connecting-to-raspberry-pi-with-keyboardmousedisplay):
-  This section describes how to get to a shell prompt on the Raspberry Pi
-  using a USB keyboard, a USB mouse, and and HDMI display.
+* [Connecting to the Robot Computer with a Keyboard, Mouse and Display](#connecting-to-robot-computer-with-keyboard-mouse-and-display):
+  This section describes how to get to a shell prompt on the the robot computer
+  using a USB keyboard, a USB mouse, and an HDMI display.
 
-* [Connecting to Raspberry Pi with Network Cable](#connecting-to-raspberry-pi-with-network-cable):
-  This section explains how to connect to your Raspberry Pi from your laptop/desktop
+* [Connecting to Robot Computer with Network Cable](#connecting-to-raspberry-pi-with-network-cable):
+  This section explains how to connect to your Robot Computer from your laptop/desktop
   via standard hardware cable.
 
-* [Connecting to Raspberry via Robot Wifi Access Point](#connecting-to-raspberry-raspberry-pi-via-robot-wifi-access-point):
-  This section explains how to connect to your Raspberry Pi from your laptop
+* [Connecting to Robot Computer via Robot Wifi Access Point](#connecting-to-robot-computer-via-robot-wifi-access-point):
+  This section explains how to connect to your Robot Computer from your laptop
   via the robot access point.
 
-* [Using PiFi to Configure Raspberry Pi Wifi](#using-pifi-to-configure-raspberry-pi-wifi):
+* [Using PiFi to Configure Robot Computer Wifi](#using-pifi-to-configure-raspberry-pi-wifi):
   This section explains how to run the `pifi` program to configure
-  the Wifi on the Raspberry Pi to access one or more WiFi access points.  
+  the Wifi on the Robot Computer to access one or more WiFi access points.  
 
 * [Changing the Robot Host Name](#changing-the-robot-host-name):
   This section explains how (and why) to change the robot host name.
@@ -48,22 +48,88 @@ This document is partitioned into the following sections:
 
 ## Overview
 
-*{ waynegramlich: overview goes here. }*
+<!-- Use the term robot computer instead of RasPi, so when we rush after the next
+     cool single board computer, we do not have to do a massive edit of this document.
+-->
 
+All UR (Ubiquity Robotics) robots run ROS on a robot computer that is currently
+a Raspberry Pi 3 single board computer.  The Robot Computer 3 is quad core
+processor with an associated WiFi module that can be used to establish a wireless
+internet connection.  This document describes the three basic steps required
+to initially configure the robot computer.  The three basic steps are:
 
-## Connecting to Raspberry Pi with Keyboard/Mouse/Display
+1. [Prepare Robot Computer for Initial Power Up](#prepare-robot-computer-for-initial-power-up]):
+   There is a small amount of work required before powering up the robot for the first time.
+ 
+2. [Get to a Shell Prompt on the Robot Computer](#get-to-a-shell-prompt-on-the-robot-computer]):
+   A term "shell prompt" refers getting to a textual command line interface
+   running on the computer.  We document three different ways to get to a robot computer
+   shell prompt along with the advantages and disadvantages of each different method.
+
+3. [Initial Robot Computer Configuration](#initial-robot-computer-configuration)
+   The robot computer is configured using robot compute shell prompt.
+   The three sub-tasks are to:
+
+   * configure Wifi using the `pifi` program.
+
+   * change the computer host name (and why.)
+
+   * create new user accounts (and why.)
+
+### Prepare Robot Computer for Initial Power Up:
 
 *{ waynegramlich: fill in the details }*
 
-## Connecting to Raspberry Pi with Network Cable
+### Get to a Shell Prompt on the Robot Computer:
+
+<--! Use a table to present the advantages/disadvantages. -->
+
+<Table Border="1" Summary="Advantages/disadvantages of Shell Prompt Methods">
+<Caption><Em>Advantages/Disadvantages of Robot Computer Shell Prompt Access Methods</Em></Caption>
+  <TR>
+    <TH>Method</TH>
+    <TH>Advantages</TH>
+    <TH>Disadvantages</TH>
+  </TR>
+  <TR>
+    <TH RowSpan="2">Computer/Mouse/Keyboard</TH>
+    <TD RowSpan="2">Most Reliable<TD>
+    <TD>Requires extra keyboard, mouse, and display</TD>
+  </TR>
+  <TR>
+    <TD>Robot needs to be opened</TD>
+  </TR>
+  <TR>
+    <TH RowSpan="1">Network Cable</TH>
+    <TD>Reliable</TD>
+    <TD>Requires Internet Cable</TD>
+  </TR>
+  <TR>
+    <TH RowSpan="1">Robot WiFiAccess Point</TH>
+    <TD>Least Reliable</TD>
+    <TD>Laptop only; no desktop</TD>
+  </TR>
+</Table>
 
 *{ waynegramlich: fill in the details }*
 
-## Connecting to Raspberry Raspberry Pi via Robot Wifi Access Point
+### Initial Robot Computer Configuration]
 
 *{ waynegramlich: fill in the details }*
 
-## Using PiFi to Configure Raspberry Pi Wifi
+## Connecting to Robot Computer with Keyboard/Mouse/Display
+
+*{ waynegramlich: fill in the details }*
+
+## Connecting to Robot Computer with Network Cable
+
+*{ waynegramlich: fill in the details }*
+
+## Connecting to Raspberry Robot Computer via Robot Wifi Access Point
+
+*{ waynegramlich: fill in the details }*
+
+## Using PiFi to Configure Robot Computer Wifi
 
 *{ waynegramlich: fill in the details }*
 
@@ -87,8 +153,8 @@ This document is partitioned into the following sections:
 
 {* waynegramlich:  The text below needs to be merged into the sections above. }*
 
-If you loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, 
-or have received a Magni with the Raspberry Pi already installed, the Robot should boot up in WiFi access point mode. This means you should be able to begin testing your robot immediately, and be able to attach it to an existing network.  If you have a logitech controller or a fiducial marker, you should be able to drive or guide your robot once it is turned on.  The robot will broadcast it’s SSID as ubiquityrobot, and the password to connect is “robotseverywhere”
+If you loaded the default Robot Computer 3 image from downloads.ubiquityrobotics.com, 
+or have received a Magni with the Robot Computer already installed, the Robot should boot up in WiFi access point mode. This means you should be able to begin testing your robot immediately, and be able to attach it to an existing network.  If you have a logitech controller or a fiducial marker, you should be able to drive or guide your robot once it is turned on.  The robot will broadcast it’s SSID as ubiquityrobot, and the password to connect is “robotseverywhere”
 
 Once connected I attempt to locate the robot by typing in a terminal window:
 
