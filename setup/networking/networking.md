@@ -6,7 +6,7 @@ This document has the following sections:
 * [Overview](#overview):
 
 * [Connecting to Raspberry Pi with Keyboard/Mouse/Display](#connecting-to-raspberry-pi-with-keyboard
--mouse-display):
+mousedisplay):
 
 * [Connecting to Raspberry Pi with Network Cable](#connecting-to-raspberry-pi-with-network-cable):
 
