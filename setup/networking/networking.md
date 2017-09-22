@@ -7,16 +7,25 @@ communication architecture is that nodes can be run more than one computer.
 ROS provides a rich selection of nodes to support for robot application development
 (e.g `rviz`, `rostopic`, etc.)  These robot application development nodes
 are run on a robot software development machine (e.g. a desktop or laptop
-computer.)  Since the robot is mobile, the only practical way for the
-robot to communicate with the robot application development laptop/desktop
-is via a WiFi wireless internet connection.   In this document, we describe
-the required steps for configuring your robot to connect to the internet via Wifi.
+computer.)  Since the robot is mobile, the only practical way to communicate
+between  the robot computer and he robot application development laptop/desktop
+computer is via a WiFi wireless internet connection.   In this document, we describe
+the required steps for configuring your robot computer to connect to the internet
+via Wifi.
 
 This document is partitioned into the following sections:
 
 * [Overview](#overview):
   This section provides an overview of the entire process of connecting your
   robot to the internet via WiFi.
+
+* [Prepare Your Robot Computer for Initial Power Up](prepare-your-robot-computer-for-initial-power-up):
+  This section discusses what you need to do before applying power to your
+  robot computer.
+
+* [Get to a Shell Prompt on the Robot Computer](get-to-a-shell-prompt-on-the-robot-computer):
+  This section describes three different ways get to a shell prompt (i.e command
+  line interface) on  the robot computer.
 
   *{ waynegramlich: Put other sections here }*
 
@@ -35,10 +44,11 @@ processor with an associated WiFi module that can be used to establish a wireles
 internet connection.  This document describes the three basic steps required
 to initially configure the robot computer.  The three basic steps are:
 
-1. [Prepare Robot Computer for Initial Power Up](#prepare-robot-computer-for-initial-power-up):
-   There is a small amount of work required before powering up the robot for the first time.
+1. [Prepare Your Robot Computer for Initial Power Up](#prepare-your-robot-computer-for-initial-power-up):
+   There is a small amount of work required before powering up a robot computer
+   for the first time.
 
-2. [Get to a Shell Prompt on the Robot Computer](#get-to-a-shell-prompt-on-the-robot-computer]):
+2. [Get to a Shell Prompt on the Robot Computer](#get-to-a-shell-prompt-on-the-robot-computer):
    A term "shell prompt" refers getting to a textual command line interface
    running on the computer.  We document three different ways to get to a robot computer
    shell prompt along with the advantages and disadvantages of each different method.
@@ -106,79 +116,292 @@ It is important to understand that you can power up a robot computer without
 actually having the robot.  You can start playing with ROS if you purchase robot
 computer separately from your robot purchase.
 
-### Get to a Shell Prompt on the Robot Computer:
+## Get to a Shell Prompt on the Robot Computer:
 
-*{ waynegramlich: The table below needs more work. }*
+There are three strategies of getting to a shell prompt on your robot computer:
 
+* [Keyboard/Mouse/Display Strategy](connecting-to-robot-computer-with-keyboardmousedisplay):
+  This method uses a USB keyboard, a USB mouse, and an HDMI display into the robot
+  computer.  This is considered the most reliable method, since the robot computer
+  tends to log progress information and error conditions to the display as it is
+  powering up.  To offset reliability there are the disadvantages of requiring
+  extra devices and having to plug all these devices into the robot computer before
+  power up.  None-the-less, if you have the devices, it is extremely likely that
+  you will successfully reach a shell prompt.
+
+* Internet Cable Strategy:
+  This method uses a physical internet cable to connect between your local
+  network and the robot computer.  Most people have spare internet cables lying
+  around.  The bigger issue is that not all people have an accessible internet
+  port.
+
+* Robot Access Point Strategy:
+  This method just requires a laptop.  There are more steps involved and if something
+  goes wrong during one of the steps, there is less feedback to let you know what
+  went wrong.  Despite the lack of feedback, when you take the robot on the road,
+  this is frequently the only configuration method available.
+
+The reliability/advantages/disadvantages are summarized in the table below:
 <--! Use a table to present the advantages/disadvantages. -->
+*{ waynegramlich: The table below needs more work. }*
+<Table Border="1" Summary="Reliability/Advantages/disadvantages of Shell Prompt Methods">
+  <Caption>
+    <Em>Reliability/Advantages/Disadvantages of Robot Computer Shell Prompt Access Strategies</Em>
+  </Caption>
 
-There are three strategies of getting to a shell prompt:
-
-* Keyboard/Mouse/Display:
-  This method uses a USB keyboard
-
-<Table Border="1" Summary="Advantages/disadvantages of Shell Prompt Methods">
-<Caption><Em>Advantages/Disadvantages of Robot Computer Shell Prompt Access Methods</Em></Caption>
   <TR>
-    <TH> Method </TH>
+    <TH> Strategy </TH>
+    <TH> Reliability </Th>
     <TH> Advantages </TH>
     <TH> Disadvantages </TH>
   </TR>
+
   <TR>
     <TH RowSpan="2"> Computer/Mouse/Keyboard </TH>
-    <TD> Most Reliable <TD>
+    <TD RowSpan="2"> High <TD>
+    <TD> </TD>
     <TD> Requires extra keyboard, mouse, and display </TD>
   </TR>
   <TR>
     <TD> Does not need desktop/laptop </TD>
     <TD> Robot needs to be opened </TD>
   </TR>
+
   <TR>
     <TH RowSpan="2"> Network Cable </TH>
-    <TD RowSpan="2"> Reliable </TD>
+    <TD RowSpan="2"> Medium </TD>
+    <TD>Small number of steps</TD>
     <TD> Requires Internet Cable </TD>
   </TR>
   <TR>
+    <TD> </TD>
     <TD> Requires Desktop/Laptop </TD>
   </TR>
+
   <TR>
-    <TH RowSpan="1"> Robot WiFi Access Point </TH>
-    <TD> Least Reliable </TD>
+    <TH> Robot WiFi Access Point </TH>
+    <TD> Low </TD>
+    <TD> No extra hardware required </TD>
     <TD> Laptop only; no desktop </TD>
   </TR>
 </Table>
 
-*{ waynegramlich: fill in the details }*
-
-### Initial Robot Computer Configuration]
-
-*{ waynegramlich: fill in the details }*
+The three sub-sections below go through the details of each strategy of achieving
+a viable shell prompt.
 
 ## Connecting to Robot Computer with Keyboard/Mouse/Display
 
-*{ waynegramlich: fill in the details }*
+The steps for ...
+
+1. HDMI Display:
+   Plug an HDMI display into the HDMI port of the robot computer.  Power the
+   HDMI display on.
+
+2. USB Keyboard:
+   Plug a keyboard into one of the 4 USB ports of the robot computer.
+
+3. USB Mouse:
+   Plug either wired mouse or a wireless mouse into one of the four robot
+   computer USB ports.
+
+4. Micro SD Card:
+   Insert the Micro SD card with URPi image on it into the Micro SD card slot on
+   the robot computer.  Note that this slot is on the under side of the robot computer.
+
+5. Power Up:
+   Before performing this step, be sure the previous 4 steps have been followed.
+   If the robot computer is plugged into a robot, just turn on the robot power.
+   Alternatively, you can plug a USB cable between a laptop/computer to the micro USB
+   connector on the robot computer.  There is no power on/off switch on the robot
+   computer, once you plug it in, it will power up.  You will know that power up
+   has occurred when the power LED lights up on the robot computer.
+
+6. Display Activity:
+   You should see some logging information show up on the display.  This means that
+   the URPi image is good and that the robot computer is booting up the Linux operating
+   system.  If you see no logging information, please power down the robot computer
+   by unplugging the USB cable from the step immediately above.
+
+7. Resizing File System:
+   After about a minute, a message that says that the file system is being resized
+   with show up on the display.  The file system resizing operation takes 5 to 10
+   minutes.  This operation occurs exactly once and does not need to be done again.
+   So relax and kill some time until this operation completes.  If the operation
+   has not completed in 15 minutes, some has gone wrong and you will probably have to
+   [install the URPi image](../urpi_install/urpi_install.md)
+   on the Micro SD card.  If it still does not work, consider getting a different
+   Micro SD card.
+
+   <!-- Note that the section below refers to these steps.  If any steps are added
+        or deleted, the section below will need to be updated.
+   -->
+
+8. Login Prompt:
+   The robot computer has successfully booted when you get a prompt that says:
+
+           ubuntu login:
+     
+   type the account name of `ubuntu` followed by the `[Enter]` key.  Note that the
+   account name must be in lower case.  If the characters are showing up in upper
+   case, please toggle the `[Caps Lock]` key and try again.
+
+9. Password Prompt:
+   The next prompt will be the password prompt that looks as follows:
+
+           password:
+
+   Type the password `robotseverywhere` in followed by the `[Enter]` key.
+   Like most passwords, the computer will will not echo the characters.
+   If you mistype either the account name or the password, you will get prompted
+   with `ubuntu login:` again.  If so, repeat the previous step and this one.
+
+10. Shell Prompt:
+    The shell prompt looks as follows:
+
+           ubuntu# 
+
+    where `ubuntu` is the computer host name and `#` means that you are logged in
+    in system administrator mode (i.e. Linux "root" mode).
+
+Upon reaching this point, you have achieved a successful shell prompt and can move
+onto the other configuration steps.
 
 ## Connecting to Robot Computer with Network Cable
 
-*{ waynegramlich: fill in the details }*
+1. Turn on Desktop/Laptop Computer:
+   Turn on your desktop or laptop computer and get yourself to a Linux shell prompt.
+   If you are running Linux under some virtualization software (e.g. VirtualBox),
+   you will have to start up the virtualization software bring up some sort of
+   shell window.
+
+2. Verify Zero Conf. is Up:
+   The phrase "zero conf." stands for zero-configuration networking.  We use
+   zero conf. to avoid having to ask you to type in really ugly internet addresses
+   like `10.0.12.34`.  Ugh!.  Instead we type in slightly less ugly internet
+   machine names like `ubuntu.local`.   So, please type in the following:
+
+           ping -c 5 `hostname`.local
+
+   This is very important, there are two single quotes on the keyboard --
+   the grave accent (`\``) and the regular single quote (`'`).  The command
+   above uses the grave accent (usually on the far upper left of the keyboard.)
+   You should get back a response that looks like:
+
+          PING HOSTNAME.local (IP_ADDRESS) 56(84) bytes of data.
+          64 bytes from 192.168.1.5: icmp_seq=1 ttl=64 time=0.028 ms
+          64 bytes from 192.168.1.5: icmp_seq=2 ttl=64 time=0.041 ms
+          64 bytes from 192.168.1.5: icmp_seq=3 ttl=64 time=0.044 ms
+
+   where `HOSTNAME` is the name of you Linux development machine hostname
+   and `IP_ADDRESS` is some sort of ugly internet address number like `10.0.12.34`.
+   By the way, `PING` is just the word "ping" in upper case.  Go figure.
+
+   If you get responses that look like `64 bytes from ...`, you have working
+   zero conf. working on your desktop/laptop computer.  If you get any other
+   kind of message (e.g `unknown host ...` or `Destination Host Unreachable`)
+   that means that zero conf. is not working and must be fixed before resuming.
+   If zero conf. is working, you can proceed to the next step.
+
+3. Micro SD Card:
+   Insert the Micro SD card with URPi image on it into the Micro SD card slot on
+   the robot computer.  Note that this slot is on the under side of the robot computer.
+
+4. Power Up:
+   Before performing this step, be sure the previous 4 steps have been followed.
+   If the robot computer is plugged into a robot, just turn on the robot power.
+   Alternatively, you can plug a USB cable between a laptop/computer to the micro USB
+   connector on the robot computer.  There is no power on/off switch on the robot
+   computer, once you plug it in, it will power up.  You will know that power up
+   has occurred when the power LED lights up on the robot computer.
+
+5. File System Resizing:
+   The very first time you boot your robot computer, the file system on the URPi
+   image will be resized.  This take 5 to 10 minutes.  There is no real way to
+   figure out when it is done other than to be patient.
+
+6. Verify Robot Computer Zero. Conf. is Working:
+   On your laptop/desktop computer, please run the following command:
+
+           ping -c 3 ubuntu.local
+
+   If you get back message that say `64 bytes from ...`, you have established
+   an internet connection between your laptop/desktop computer and the robot
+   computer.  If not, wait another 5 minutes and try again.  If it still fails,
+   something is wrong.  At this point we recommend that you abandon this strategy
+   and try the previous keyboard/mouse/display strategy.
+
+7. Login to Robot Computer with Secure Shell:
+   The `ssh` program sets up an encrypted connection between the desktop/laptop
+   computer and the robot computer.  Please run the following command:
+
+           ssh ubuntu@ubuntu.local
+
+   If things work, you should get a message of the form:
+
+           The authenticity of host 'HOSTNAME.local (#.#.#.#)' can't be established.
+           ECDSA key fingerprint is SHA256:pha1/FINGERPRINT.
+           Are you sure you want to continue connecting (yes/no)?
+
+   Where `HOSTNAME` is the host name of the desktop/laptop computer,  `#.#.#.#`
+   is an ugly internet address (e.g. `10.0.12.34`), ECDSA is an acronym
+   for Elliptic Curve Digital Signature Algorithm, SHA256 is the name
+   of a cryptographic digest algorithm, and FINGERPRINT is a bunch of
+   random looking characters.  Please, just type `yes` followed by the
+   `[Enter]` key.
+
+   Next, you get the following lovely message:
+
+           Warning: Permanently added 'HOSTNAME.local' (ECDSA) to the list of known hosts.
+           Warning: the ECDSA host key for 'onkyo.local' differs from the key for the IP address '#.#.#.#'
+           Offending key for IP in /home/USER/.ssh/known_hosts:58
+           Are you sure you want to continue connecting (yes/no)?
+
+   where `HOSTNAME`, `ECDSA` are as before, IP is short for Internet Protocol,
+   and USER the host/laptop user name.  Again, please just type `yes` followed
+   by the `[Enter]` key.
+
+   Next you should get something like:
+
+           ubuntu@ubuntu.local's password: 
+
+   Now, you type in `robotseverywhere` followed the `[Enter]` key.  Lastly,
+   you should get the following welcome message:
+
+           Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-96-generic x86_64)
+           
+           * Documentation:  https://help.ubuntu.com
+           * Management:     https://landscape.canonical.com
+           * Support:        https://ubuntu.com/advantage
+
+           N packages can be updated.
+           M updates are security updates.
+
+           ubuntu@ubuntu:~$ 
+
+    Do not worry about, the numbers N and M, they change all the time.
+
+If you get to this point you have successfully, gotten to a shell prompt on the
+robot computer and can proceed to the section on robot.
 
 ## Connecting to Raspberry Robot Computer via Robot Wifi Access Point
 
-*{ waynegramlich: fill in the details }*
+*{ waynegramlich: This section is going to be huge, since it must document
+   Windows, MacOS, and native Linux.  We may be able to merge the MacOS
+   and Linux sections by bringing up a shell tool for MacOS. }*
 
 ## Using PiFi to Configure Robot Computer Wifi
 
 *{ waynegramlich: fill in the details }*
 
-## Changing the Robot Host Name
+### Changing the Robot Host Name
 
 *{ waynegramlich: fill in the details }*
 
-## Creating User Accounts
+### Creating User Accounts
 
 *{ waynegramlich: fill in the details }*
 
-## Development Machine Networking
+### Development Machine Networking
 
 *{ waynegramlich: Verify zeroconf works on development machine. }*
 
