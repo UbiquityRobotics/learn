@@ -1,110 +1,116 @@
 ---
 layout: default
-title:  "Magni Bringing up on a Network"
+title:  "Connecting a Workstation to Magni for the First Time"
 permalink: connecting
 ---
-# Connecting Magni for the First Time
+# Connecting a Workstation to Magni for the First Time
 
-If you loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, 
-or have received a Magni with the Raspberry Pi already installed, the Robot should boot up in WiFi access point mode. This means you should be able to begin testing your robot immediately, and be able to attach it to an existing network.  If you have a logitech controller or a fiducial marker, you should be able to drive or guide your robot once it is turned on.  The robot will broadcast it’s SSID as ubiquityrobot, and the password to connect is “robotseverywhere”
+If you loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com,
+or have received a Magni with the Raspberry Pi already installed, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation imediately.  The SSID (network name) is ubiquityrobot, and the password to connect is “robotseverywhere”
 
-Once connected I attempt to locate the robot by typing in a terminal window:
+Connect your workstation to this network. If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus the VM will see whatever network your host system is connected to.  If you are not using VirtualBox, connect using your Workstation's facilities.
 
- ping ubiquityrobot.local   this may take a bit of time before it responds
+Connect your host system (that VirtualBox is running on) to the ubiquityrobot network.  Now your workstation (that is, the Ubuntu system running under VBox) is connected to the robot's network ubiquityrobot.
 
-Once it does it should display the robots IP number. I then ssh to it:
+Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (ctrl-alt-t). In that window, type
 
- ssh ubuntu@10.42.0.1
+```ssh ubuntu@ ubiquityrobot.local```
 
-(type password)
+You may see:
 
-  The authenticity of host '10.42.0.1 (10.42.0.1)' can't be established.
-  ECDSA key fingerprint is SHA256:sDDeGZzL8FPY3kMmvhwjPC9wH+mGsAxJL/dNXpoYnsc.
-  Are you sure you want to continue connecting (yes/no)? yes 
-  Failed to add the host to the list of known hosts (/home/alan/.ssh/known_hosts).
-  ubuntu@10.42.0.1's password: 
-  Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
+>The authenticity of host '10.42.0.1 (10.42.0.1)' can't be established.  
+    ECDSA key fingerprint is SHA256:sDDeGZzL8FPY3kMmvhwjPC9wH+mGsAxJL/dNXpoYnsc.  
+    Are you sure you want to continue connecting (yes/no)?
 
+Answer `yes`
+
+>Failed to add the host to the list of known hosts (/somepath/.ssh/known_hosts).
+
+You will be asked for the password, which initially is "ubuntu".
+
+```ubuntu@10.42.0.1's password:ubuntu```
+
+Finally,
+
+>Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
   * Documentation:  https://help.ubuntu.com
   * Management:     https://landscape.canonical.com
-  * Support:        https://ubuntu.com/advantage
+  * Support:        https://ubuntu.com/advantage  
+  0 packages can be updated.  
+  0 updates are security updates.  
+ Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143```
 
- 0 packages can be updated.
- 0 updates are security updates.
+(This robot has no real time clock, so disregard the date.)
 
- Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143
+Next, use pifi to list the nearby networks and to connect your robot to your local area network:
 
-(This robot has no real time clock, so the date is wrong)
+ ```ubuntu@ubiquityrobot:~$ pifi status```
 
-Next you should connect your robot to the local area network:
-
- ubuntu@ubiquityrobot:~$ pifi status
- Network Mangager reports AP mode support on B8:27:EB:2B:3F:6B
+ >Network Mangager reports AP mode support on B8:27:EB:2B:3F:6B  
  Device is currently acting as an Access Point
- ubuntu@ubiquityrobot:~$ pifi list seen
- DIRECT-447301B2
- fedland
- HP-Print-72-Officejet Pro 6830
- HOME-B805-2.4
- NETGEAR37
- SAVEEARTHGOGREEN
- Cricket
- xfinitywifi
- Meyberg
- xfinitywifi
-  ubuntu@ubiquityrobot:~$ pifi add fedland simbacat
-  Error writing to /var/lib/pifi/pending, make sure you are running with sudo
- (oops)
 
- ubuntu@ubiquityrobot:~$ sudo pifi add “ssid”  “passwd”
+ ```ubuntu@ubiquityrobot:~$ pifi list seen```
 
-If now sudo reboot should come up on “ssid” wifi
+>MyNetwork  
+Neighbor's network  
+Other Network
 
-to test. Ping ubiquityrobot.local
+```ubuntu@ubiquityrobot:~$ sudo pifi add “MyNetwork”  “password”```
 
- alan@anfrosbase:~$ ping ubiquityrobot.local
- PING ubiquityrobot.local (10.0.0.113) 56(84) bytes of data.
- 64 bytes from 10.0.0.113: icmp_seq=1 ttl=64 time=97.6 ms
- 64 bytes from 10.0.0.113: icmp_seq=2 ttl=64 time=5.70 ms
+Note: "sudo" is a linux command that allows administrative actions.  Linux will often ask you for your password ("ubuntu", if you haven't changed it) when you use it.
 
-so now ssh into 10.0.0.113
+Now reboot.
 
+```sudo reboot```
 
- alan@anfrosbase:~$ ssh ubuntu@10.0.0.113
- The authenticity of host '10.0.0.113 (10.0.0.113)' can't be established.
- ECDSA key fingerprint is SHA256:sDDeGZzL8FPY3kMmvhwjPC9wH+mGsAxJL/dNXpoYnsc.
- Are you sure you want to continue connecting (yes/no)? yes
- Failed to add the host to the list of known hosts (/home/alan/.ssh/known_hosts).
- ubuntu@10.0.0.113's password: 
- Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
+The robot will reboot and attach to the “ssid” wifi network. To test,
 
+```$ping ubiquityrobot.local```
+
+The ping result shows the network address of the robot:
+
+ >PING ubiquityrobot.local (10.0.0.113) 56(84) bytes of data.  
+ 64 bytes from 10.0.0.113: icmp_seq=1 ttl=64 time=97.6 ms  
+ 64 bytes from 10.0.0.113: icmp_seq=2 ttl=64 time=5.70 ms  
+
+Now ssh into 10.0.0.113
+
+ ```$ ssh ubuntu@10.0.0.113```
+
+As before:
+>The authenticity of host '10.0.0.113 (10.0.0.113)' can't be established.  
+ECDSA key fingerprint is SHA256:sDDeGZzL8FPY3kMmvhwjPC9wH+mGsAxJL/dNXpoYnsc.
+Are you sure you want to continue connecting (yes/no)?
+
+```yes```
+
+>Failed to add the host to the list of known hosts (/somepath/.ssh/known_hosts).
+ubuntu@10.0.0.113's password:
+
+ ```ubuntu```
+
+>Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
   * Documentation:  https://help.ubuntu.com
   * Management:     https://landscape.canonical.com
   * Support:        https://ubuntu.com/advantage
-
  22 packages can be updated.
  12 updates are security updates.
-
  Last login: Thu Feb 11 16:31:06 2016 from 10.42.0.143
 
-(check the date)
+Verify that Magni is running and you are connected:
 
- ubuntu@ubiquityrobot:~$ date
- Mon Aug 14 17:16:26 UTC 2017
+```rostopic list```
 
+If things are ok you should see a list of topics including /joy which means you can drive with a joystick.
 
-  Now we have the correct date  so I will update
+Now check the date.
 
- sudo apt-get update
- sudo apt-get upgrade
+```ubuntu@ubiquityrobot:~$ date```
+ >Mon Aug 14 17:16:26 UTC 2017
 
+Now that we have the correct date you can update the robot to get changes that have been made since the robot was manufactured.
+
+```sudo apt-get update```  
+```sudo apt-get upgrade```
 
 This should take some time, since it may have been a while since the original image was made.
-
-
-I then check to see if magni is running by typing:
-
-  rostopic list
-
-If things are ok you should see topics including the /joy  which means you can drive with a joystick.
-
