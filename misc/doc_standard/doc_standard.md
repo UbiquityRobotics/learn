@@ -29,10 +29,10 @@ Some formatting guidelines are listed immediately below:
   supported by Markdown.  We improvise around the lack of this functionality by
   using lists as shown immediately below:
 
-  >        * Description Word or Phrase:
-  >          First paragraph of description...
-  >          ...
-  >          N'th paragraph of description...
+          * Description Word or Phrase:
+            First paragraph of description...
+            ...
+            N'th paragraph of description...
 
   This list uses this style of description lists.
 
@@ -62,11 +62,30 @@ Some formatting guidelines are listed immediately below:
   be an obviously sharable image.  Some examples are `loki.jpg`, `magni.jpg`,
   `robots.jpg`, etc.
 
+* Heading Anchors:
+  Markdown generates an HTML link anchor for each document heading.  For example,
+  the following heading:
+
+          ## Using the Keyboard/Mouse/Dispay
+
+  will generate an HTML link anchor that looks as follows:
+
+          ## <a id="using-the-keyboardmousedisplay> class="anchor" href=#using-the-keyboardmousedisplay" ...>
+
+  The rules for generateing the `id` are:
+
+  * Preceeding and following white space is ignored.
+  * Upper case letter are converted to lower case.
+  * White space between words is conferted to a single hyphen (`-`)
+  * All other punctuation is deleted.
+  
+  Heading anchors are used to assemble an internal document table of contents (see below.)
+
 * Images:
   Pictures are saved with a suffix of `.jpg`.  Screen snapshots are saved with
   as suffix of `.png`.  The Markdown syntax for an image is:
 
-  >        \![Alternative Text][URL]
+          ![Alternative Text][URL]
 
   Please put something in alternative text to describe the image.  URL's
   should always use relative syntax.  Most of the images are colocated in
@@ -83,7 +102,7 @@ Some formatting guidelines are listed immediately below:
 * Links:
   The format for a link is:
 
-  >        ![Link Text](Link URL)
+          [Link Text](Link URL)
 
   Try to embed the link into a sentence.  Do not use the cheat of "click here"
   for link text.   If the URL is to a page local to the repository, use relative
@@ -93,17 +112,27 @@ Some formatting guidelines are listed immediately below:
   Sometimes a page is just a list of links to other pages.  The format for this 
   show below:
 
-  >        {overview paragraphs}
-  >
-  >        * [Short Description1](Relative URL1):
-  >          Longer description.
-  >        
-  >          ...
-  >        
-  >        * [Short DescriptionN](Relative URLn):
-  >          Longer description.
-  >
-  >        {optional conclusion paragraphs}
+          {overview paragraphs}
+  
+          * [Short Description1](Relative URL1):
+            Longer description.
+          
+            ...
+          
+          * [Short DescriptionN](Relative URLn):
+            Longer description.
+  
+          {optional conclusion paragraphs}
+
+  Sometimes a single page is sufficiently large that it needs its own table of contents.
+  That is done using heading anchors (see above.)  An example looks as follows:
+
+          This document is broken into the following sections:
+          
+          * [Overview](#overview): One line description of overview.
+	  * [Section 1](#section-1): One line description of section 1.
+	  * [Section N](#section-n): One line description of section N.
+          * [Conclusion](#conclusion): One line descrition of conclusion
 
 ## Approved Formatting Extensions
 

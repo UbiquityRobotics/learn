@@ -17,14 +17,14 @@ the box containing your robot.  These tasks are:
   software is needed.  Many
 
 * [ROS Installation](installing_ros/installing_ros.md):
+  *{ Pointers to existing ROS installation instructions -  more here}*
+
+* [Network Configuration](networking/networking.md):
+   { more here }*
+
+* [Downloading and Using the Ubiquity RaspberryPi Image](raspi_ros_install/raspi_ros_install.md):
   *{ more here }*
 
-* [Network Configuration](network_configuration/network_configuration.md):
-  *{ more here }*
-
-* [RasPi ROS Installation](raspi_ros_install/raspi_ros_install.md):
-  *{ more here }*
-
-* [RasPi Wifi Configuration](raspi_wifi_config/raspi_wifi_config.mk):
+* [RasberryPi Wifi Configuration](raspi_wifi_config/raspi_wifi_config.mk):
   *{ more here }*
 
