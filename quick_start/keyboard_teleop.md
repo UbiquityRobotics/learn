@@ -27,7 +27,8 @@ When teleop is launched the following screen appears:
 |  u | i  | o  |
 |  j | k  | l  |
 |  m | ,  | .  |
-For Holonomic mode (strafing), hold down the shift key:
+
+>For Holonomic mode (strafing), hold down the shift key:
 
 >| | | |
 |----|----|----|
