@@ -1,20 +1,20 @@
 ---
 layout: default
-title:  "Connecting a Workstation to Magni for the First Time"
+title:  "Connecting a Workstation for the First Time"
 permalink: connecting
 ---
-# Connecting a Workstation to Magni for the First Time
+# Connecting a Workstation for the First Time
 
 If you loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com,
 or have received a Magni with the Raspberry Pi already installed, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation immediately.  The SSID (network name) is ubiquityrobot, and the password to connect is “robotseverywhere”
 
-Connect your workstation to this network. If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus the VM will see whatever network your host system is connected to.  If you are not using VirtualBox, connect using your Workstation's facilities.
+If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus the VM will see whatever network your host system is connected to. Connect your host system (that VirtualBox is running on) to the ubiquityrobot network.  Now your workstation (that is, the Ubuntu system running under VBox) is connected to the robot's network ubiquityrobot.
 
-Connect your host system (that VirtualBox is running on) to the ubiquityrobot network.  Now your workstation (that is, the Ubuntu system running under VBox) is connected to the robot's network ubiquityrobot.
+If you are using a Linux system instead of VirtualBox, connect using your workstation's facilities.
 
 Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (ctrl-alt-t). In that window, type
 
-```ssh ubuntu@ ubiquityrobot.local```
+```ssh ubuntu@ubiquityrobot.local```
 
 You may see:
 
@@ -108,7 +108,7 @@ Now check the date.
 ```ubuntu@ubiquityrobot:~$ date```
  >Mon Aug 14 17:16:26 UTC 2017
 
-Now that we have the correct date you can update the robot to get changes that have been made since the robot was manufactured.
+Now that you have the correct date you can update the robot to get changes that have been made since the robot was manufactured.
 
 ```sudo apt-get update```  
 ```sudo apt-get upgrade```
