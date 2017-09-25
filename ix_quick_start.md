@@ -10,7 +10,7 @@ The robot has its own network (called an access point) that enables you to do se
 
 1.	Unboxing, putting in batteries and charging them.
 2.	[How to drive with optional logitech controller](logitech)
-3.	[How to drive using Robot Commander on a smartphone or workstation](robot_commander)
+3.	[Control the robot by voice using Robot Commander on an Android phone or workstation](robot_commander)
 <!--- this also works
 <a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>-->
 4.  [Connecting a Workstation to Magni for the First Time](connecting)
