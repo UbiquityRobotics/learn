@@ -8,7 +8,7 @@ Things you can do with your robot right out of the box.
 
 The robot has its own network (called an access point) that enables you to do several interesting things without needing to connect to your local network.
 
-1.	Unboxing, putting in batteries and charging them.
+1.	[Unboxing, putting in batteries and charging them](unboxing)
 2.	[How to drive with optional logitech controller](logitech)
 3.	[Control the robot by voice using Robot Commander on an Android phone or workstation](robot_commander)
 <!--- this also works
