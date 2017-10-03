@@ -10,4 +10,5 @@ The Magni comes almost ready to run with minimal assembly. Most will come with a
 
 Step 1 - open the box
 
-![Shipping Box](unb1.jpg)
+
+ ![Shipping Box](unb1.jpg)
