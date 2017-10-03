@@ -11,37 +11,37 @@ The Magni comes almost ready to run with minimal assembly. Most will come with a
 Step 1 - open the box
 
 
- ![Shipping Box](unb1.jpg)
+ ![Shipping Box](unb1.JPG)
  
  Inside the box you will find the battery cables, barckets for the cover plate, fasteners, and a cover plate.
  
- ![Components](unb2.jpg)
+ ![Components](unb2.JPG)
  
  After removing the robot, the coverplate is stored at the bottom of the shipping box.
  
- ![Cover plate](unb4.jpg)
+ ![Cover plate](unb4.JPG)
  
  The Raspberry Pi 3 + SD image card can be installed(Silver and Gold).
  
- ![RPi 3 installed](unb7.jpg)
+ ![RPi 3 installed](unb7.JPG)
  
  The front and back barackets can be installed using theThey Brackets require a 4mm hex (Allen wrench) We suggest an extra long (6 cm). The other included fasteners are 2mm hex and a small Phillips screw for Raspi Cam attachment
  
- ![Parts](unbparts.jpg)
+ ![Parts](unbparts.JPG)
  
  
 Rear Bracket
 
-![Rear](unb11.jpg)
+![Rear](unb11.JPG)
 
 Front Bracket with Camera
 
-![FB + cam](unbat cam.jpg)
+![FB + cam](unbat cam.JPG)
 
 The Motors are connected next
 
-![Motors to MC](unb5.jpg)
+![Motors to MC](unb5.JPG)
 
 Finally the batteries are connected. The red lead from battery 1 to positive, the black from ground to ground on battery 2, and the yellow to connect the negative ove battery 1 to the positive of battery 2.
 
-![Shipping Box](unb-bat.jpg)
+![Shipping Box](unb-bat.JPG)
