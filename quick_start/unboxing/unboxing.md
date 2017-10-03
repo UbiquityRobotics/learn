@@ -44,4 +44,6 @@ The Motors are connected next
 
 Finally the batteries are connected. The red lead from battery 1 to positive, the black from ground to ground on battery 2, and the yellow to connect the negative ove battery 1 to the positive of battery 2.
 
-![Shipping Box](unb-bat.JPG)
+![Final](unb-bat.JPG)
+
+A video of this process will be available at:  https://youtu.be/pF38kFOl0Ic
