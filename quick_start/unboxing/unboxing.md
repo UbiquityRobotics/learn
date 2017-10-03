@@ -36,7 +36,7 @@ Rear Bracket
 
 Front Bracket with Camera
 
-![FB + cam](unbat cam.JPG)
+![FB + cam](unbat_cam.JPG)
 
 The Motors are connected next
 
