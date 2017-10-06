@@ -1,3 +1,11 @@
+---
+layout: default
+title:  "Adding Hardware the MC Board"
+permalink: mc_board
+---
+
+# Adding Hardware - the Motor Controller Board
+
 We developed Magni for people who wanted to build their own robot for a variety of purposes. 
 As such, we wanted it to be easy to add powered accessories or sensors to our robot. The heart of Magni is 
 the Motor Controller board, which we refer to as the "MC"." While the MC's main purpose is to control
