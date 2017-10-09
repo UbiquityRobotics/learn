@@ -7,7 +7,7 @@ permalink: connecting
 
 In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.
 
-If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation immediately.  The SSID (network name) is ubiquityrobot, and the password to connect is “robotseverywhere”
+If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation immediately.  The SSID (network name) is `ubiquityrobot-XXXX` where XXXX is a number or perhaps missing, and the password to connect is `robotseverywhere`.
 
 If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus the VM will see whatever network your host system is connected to. Connect your host system (that VirtualBox is running on) to the ubiquityrobot network.  Now your workstation (that is, the Ubuntu system running under VBox) is connected to the robot's network ubiquityrobot.
 
@@ -41,7 +41,7 @@ Finally,
   0 updates are security updates.  
  Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143```
 
-This robot has no real time clock, so disregard the date.
+This robot's clock probably has no battery, so disregard the date.
 
 <!--
 Next, use pifi to list the nearby networks and to connect your robot to your local area network:

@@ -13,7 +13,7 @@ To drive the robot from the workstation, run the keyboard teleop program:
 
 Alternatively from a second terminal window on your workstation:
 
-    export ROS_MASTER_URI=http://(robots IP number):11311
+    export ROS_MASTER_URI=http://ubiquityrobot.local:11311
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 When teleop is launched the following screen appears:
@@ -61,13 +61,3 @@ Please note Holonomic mode does not apply to a Magni or Loki, as the robots are 
 | m | circle backwards left |
 | , | straight back |
 | . | circle backwards left |
-
-## DO WE WANT TO INCLUDE THE FOLLOWING?
-
-To stop the running programs you need to find out their process IDs (PIDs)
-
-ps -eaf|grep roslaunch
-
-ubuntu 5101 4504 1 08:48 pts/1 00:00:04 /usr/bin/python /opt/ros/kinetic/bin/roslaunch magni_bringup base.launch
-
-so pkill roslaunch would stop ROS.
