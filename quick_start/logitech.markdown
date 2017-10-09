@@ -11,8 +11,9 @@ with a Ubiquity Robotics SD card image is by default set up to work with a Logit
 If you booted up with a Ubiquity Roboitcs RPi image, and have the Logitech controller 
 dongle installed, the joystick should start to work in a couple of minutes.
 
+You can test this by using the Joystick and seeing if the robot responds to commands. For safety sake, put the robot up on blocks first.(SAFETY TIP).
 
-If nothing happens, check the troubleshooting section below
+If the wheels don't move, check the troubleshooting section below
 
 
 If we were using keyboard teleop our keys would be arranged like this:
@@ -55,6 +56,11 @@ Other possible way to display an image
     
 </div-->
 
+To operate the controller, hold down the deadman button and move the joystick. 
+
+Up - Forward, Down - Back, Left - rotate counter clockwise, Right - rotate clockwise
+
+The controller is set to be very slow. You can increase the speed by using the button below the deadman, this will increase the maximum speed by about 25%.  Moving the joytick to a position between full up and full right will move the robot in a curved path.
 
 
 
@@ -62,18 +68,14 @@ Other possible way to display an image
 
 If nothing happens, you'll need to go back to the unboxing section and check to see
 if the robot is gettting power, the MCB is working and you can connect to the robot via a network
-(see connecting to your robot for the first time.)
+(see connecting to your robot for the first time.) Check to see that your dongle is installed in the Raspberry Pi, there are fresh batteries in the Logitech Controller, and there is power going to both the Raspberry Pi and the Motors.
 
+Next, see if you can connect to your robot.
 
 	ping robotname.local
 
-
-
 the robot responds by giving you its IP number.
 
-If your Robot is equiped with a Raspberry Pi 3 Ubiquity image, the Joystick program should already be running.
-
-you can test this by using the Joystick and seeing if the robot responds to commands. For safety sake, put the robot up on blocks first.(SAFETY TIP).
 
 Then use the following command to login to the robot for example  from a laptop networked:
 
@@ -146,5 +148,5 @@ The folowing command
 	/ubiquity_velocity_controller/cmd_vel
 	/ubiquity_velocity_controller/odom
 
-Shows everything is running. You now can use the controller to drive the robot.
+Shows everything is running. You now should be able use the controller to drive the robot.
 
