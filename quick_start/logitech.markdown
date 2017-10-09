@@ -6,19 +6,18 @@ author: Alan Federman
 ---
 # Using the Optional Logitech Controller
 
-For a standard Magni equipped with a Raspberry Pi 3 
-you need a laptop or some way to open a terminal session 
-to the RPi controlling the robot. If you booted up with a 
-Ubiquity Roboitcs RPi image, and have the Logitech controller 
+A standard Silver or Gold Magni equipped with a Raspberry Pi 3 
+with a Ubiquity Robotics SD card image is by default set up to work with a Logitech Controller.
+If you booted up with a Ubiquity Roboitcs RPi image, and have the Logitech controller 
 dongle installed, the joystick should start to work in a couple of minutes.
 
 ### Trouble Shooting
 
-If nothing happens, you'll need to log on to the robot.
-(see connecting to your robot for the first 
-time.)
+If nothing happens, you'll need to go back to the unboxing section and check to see
+if the robot is gettting power, the MCB is working and you can connect to the robot via a network
+(see connecting to your robot for the first time.)
 
-Connect either by AP mode directly, or from your laptop.
+You may connect either by AP mode directly, or from your laptop.
 
 On the laptop open up a terminal window with ctrl-alt-t
 
