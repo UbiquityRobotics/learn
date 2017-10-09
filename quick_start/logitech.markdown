@@ -11,17 +11,59 @@ with a Ubiquity Robotics SD card image is by default set up to work with a Logit
 If you booted up with a Ubiquity Roboitcs RPi image, and have the Logitech controller 
 dongle installed, the joystick should start to work in a couple of minutes.
 
-### Trouble Shooting
+
+If nothing happens, check the troubleshooting section below
+
+
+If we were using keyboard teleop our keys would be arranged like this:
+
+
+	u i o
+	j k l
+	m , .
+
+
+	u circle left
+	i straight ahead
+	o circle right
+	j rotate counter clockwise	
+	k all stop
+	l rotate clockwise
+	m circle backwards left
+	, straight back
+	. circle backwards left
+
+## Logitech Controller
+
+![Logitech Controller](https://ubiquityrobotics.github.io/learn/assets/joystick.jpg)
+
+<!--
+
+Other possible way to display an image
+
+![1038 image](https://ubiquityrobotics.github.io/learn.magni.com/assets/joystick.jpg)-->
+
+<!--div class="image-wrapper">
+
+		1038 raw
+    
+        <img src="https://ubiquityrobotics.github.io/learn.magni.com/assets/imag1038.jpg?raw=true" />
+		
+		1038
+     
+        <p class="image-caption">A Basic Multimeter</p>
+    
+</div-->
+
+
+
+
+### Troubleshooting
 
 If nothing happens, you'll need to go back to the unboxing section and check to see
 if the robot is gettting power, the MCB is working and you can connect to the robot via a network
 (see connecting to your robot for the first time.)
 
-You may connect either by AP mode directly, or from your laptop.
-
-On the laptop open up a terminal window with ctrl-alt-t
-
-See if the robot is there:
 
 	ping robotname.local
 
@@ -32,8 +74,6 @@ the robot responds by giving you its IP number.
 If your Robot is equiped with a Raspberry Pi 3 Ubiquity image, the Joystick program should already be running.
 
 you can test this by using the Joystick and seeing if the robot responds to commands. For safety sake, put the robot up on blocks first.(SAFETY TIP).
-
-
 
 Then use the following command to login to the robot for example  from a laptop networked:
 
@@ -107,45 +147,4 @@ The folowing command
 	/ubiquity_velocity_controller/odom
 
 Shows everything is running. You now can use the controller to drive the robot.
-
-If we were using keyboard teleop our keys would be arranged like this:
-
-
-	u i o
-	j k l
-	m , .
-
-
-	u circle left
-	i straight ahead
-	o circle right
-	j rotate counter clockwise	
-	k all stop
-	l rotate clockwise
-	m circle backwards left
-	, straight back
-	. circle backwards left
-
-## Logitech Controller
-
-![Logitech Controller](https://ubiquityrobotics.github.io/learn/assets/joystick.jpg)
-
-<!--
-
-Other possible way to display an image
-
-![1038 image](https://ubiquityrobotics.github.io/learn.magni.com/assets/joystick.jpg)-->
-
-<!--div class="image-wrapper">
-
-		1038 raw
-    
-        <img src="https://ubiquityrobotics.github.io/learn.magni.com/assets/imag1038.jpg?raw=true" />
-		
-		1038
-     
-        <p class="image-caption">A Basic Multimeter</p>
-    
-</div-->
-
 
