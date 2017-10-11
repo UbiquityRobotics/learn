@@ -15,8 +15,8 @@ It is possible to intall the PI incorrectly which will result in a "fried Pi". B
 
 ![Fried Pi](loki_rpifatal.jpg)
 
-The Rpi 3 pulls over 3 amps, so besure you supply at least 2.5 amps (no camera) or 3 amps if you are using an Raspicam.
-using and USB accessories is not recommnded unless addional power is provided.
+The Rpi 3 pulls over 3 amps, so be sure you supply at least 2.5 amps (no camera) or 3 amps if you are using an Raspicam.
+using USB accessories is not recommnded unless addional power is provided.
 
 ![Loki Top View](loki_top1.jpg)
 
