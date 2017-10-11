@@ -31,16 +31,19 @@ robot are the best source of instructions.
 Assuming you can connect to the robot via ssh, you can test the robot by seeing if you can teleop.
 First determine if any nodes are running by typing:
 
-```rostopic list```
+``` rostopic list 
+```
 
 if not, you can start the base controller by:
 
 ```cd catkin_ws/src/ubiquity_launches/bin/
-./loki_base```
+./loki_base 
+```
 
 To drive the robot, ssh in a separate window and type:
 
-```rosrun teleop_twist_keyboard teleop_twist_keyboard.py```
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
 
 ## Rviz
 
@@ -48,8 +51,9 @@ To run Rviz on your laptop, you need to make sure your networking between the la
 
 On the robot make sure ROS_IP  and ROS_MASTER_URI are set to IP number, not localhost. on the laptop make sure the ROS_MASTER_URI matches the robot. The catkin_ws/src/ubiquity_launches files need to be installed on both systems.
 
-```cd ~/catkin_ws/src/ubiquity_launches/bin/
-./loki_rviz_sonar```
+``` cd ~/catkin_ws/src/ubiquity_launches/bin/
+./loki_rviz_sonar 
+```
 
 will bring up rviz and show any sonars if present.
 
