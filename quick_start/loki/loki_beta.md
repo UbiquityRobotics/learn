@@ -52,7 +52,8 @@ To run Rviz on your laptop, you need to make sure your networking between the la
 
 On the robot make sure ROS_IP  and ROS_MASTER_URI are set to IP number, not localhost. on the laptop make sure the ROS_MASTER_URI matches the robot. The catkin_ws/src/ubiquity_launches files need to be installed on both systems.
 
-``` cd ~/catkin_ws/src/ubiquity_launches/bin/
+```
+cd ~/catkin_ws/src/ubiquity_launches/bin/
 ./loki_rviz_sonar 
 ```
 
