@@ -31,7 +31,8 @@ robot are the best source of instructions.
 Assuming you can connect to the robot via ssh, you can test the robot by seeing if you can teleop.
 First determine if any nodes are running by typing:
 
-``` rostopic list 
+```
+rostopic list 
 ```
 
 if not, you can start the base controller by:
