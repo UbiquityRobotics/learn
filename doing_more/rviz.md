@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Ros "Commands"
+title: ROS Commands
 permalink: rviz
 ---
 
