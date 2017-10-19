@@ -42,11 +42,15 @@ Construction of the map is performed by the
 Simultaneous Localization and Mapping (SLAM) based on the fiducial transforms.
 The mapping part requires that more than one marker is visible in an image.
 In the diagram below, two fiducials, *fid1* and *fid2* are shown. If *fid1*
-is at a known pose in the world, *T<sub>map_fid1</sub> and we know the
+is at a known pose in the world, *T<sub>map_fid1</sub>* and we know the
 marker to camera transforms for both markers, we can compute the pose of
 *fid2* thus:
 
-*T<sub>map_fid2</sub> = T<sub>map_fid1</sub> * T<sub>cam_fid2</sub> * T<sub>fid1_cam</sub>*
+        *T<sub>map_fid2</sub> = T<sub>map_fid1</sub> * T<sub>cam_fid2</sub> *
+	T<sub>fid1_cam</sub>*
+
+In this way, the map is built up as more fiducial pairs are observed, however
+multiple observations are combined.
 
 ![Fiducial coordinate system](two_fiducials.png)
 
