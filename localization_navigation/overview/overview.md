@@ -34,6 +34,8 @@ The [ROS AMCL node](http://wiki.ros.org/amcl) is often used for this.
 
 ## Navigation
 
+[To be written]
+
 ## Obstacle Avoidance
 
 [To be written]
@@ -78,7 +80,7 @@ To address these shortcomings, we developed a localization system that
 uses the low-cost Raspberry Pi camera to estimated the robot's position
 from *fiducial markers* that are placed around the environment.
 
-See [Fiducial Based Localization](../fiducials/fiducials/md) for more
+See [Fiducial Based Localization](../fiducials/fiducials.md) for more
 details.
 
 ### Simple Navigation with move_basic
