@@ -46,7 +46,7 @@ is at a known pose in the world, *T<sub>map_fid1</sub>* and we know the
 marker to camera transforms for both markers, we can compute the pose of
 *fid2* thus:
 
-        *T<sub>map_fid2</sub> = T<sub>map_fid1</sub> * T<sub>cam_fid2</sub> * T<sub>fid1_cam</sub>*
+*T<sub>map_fid2</sub> = T<sub>map_fid1</sub> * T<sub>cam_fid2</sub> * T<sub>fid1_cam</sub>*
 
 In this way, the map is built up as more fiducial pairs are observed, however
 multiple observations are combined.
@@ -67,7 +67,7 @@ surface, such as a ceiling, where they will be viewed by the robot's camera.
 They need to be at a sufficient that more than one is visible at
 a time.
 
-## Running the software
+## Running the Software
 
 The following command launches the detection and SLAM nodes on the robot:
 
@@ -77,7 +77,7 @@ It should be run for the first time with at least one marker visible.
 A map (this is a file of fiducial poses) is created such that the current
 position of the robot is the origin.
 
-## Using rviz to monitor map creation
+## Using rviz to Monitor Map Creation
 
 The following command can be used on a laptop or desktop to run the
 [robot visualization tool](http://wiki.ros.org/rviz), rviz.
@@ -98,4 +98,3 @@ of the map is increased by having a high degree of connectivity between the
 fiducials.
 
 ![Visualizing with rviz](fiducial_rviz.png)
-
