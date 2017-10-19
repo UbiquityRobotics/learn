@@ -34,5 +34,5 @@ T<sub>fid_cam</sub>
 
 ## Using rviz to monitor map creation
 
-
+![Visualizing with rviz](fiducial_rviz.png)
 
