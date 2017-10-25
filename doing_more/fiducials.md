@@ -21,8 +21,6 @@ is done by using the rogobot's camera.  The characteristics of the images of the
 
 ![Fiducial coordinate system](fiducial.png)
 
-*T<sub>map_fid2</sub> = T<sub>map_fid1</sub> * T<sub>cam_fid2</sub> * T<sub>fid1_cam</sub>*
-
 
 ![Fiducial coordinate system](two_fiducials.png)
 
