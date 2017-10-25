@@ -11,18 +11,8 @@ Robotics robot base, using the supplied Raspberry Pi camera.
 
 ## Basic Concept
 
-If you're eager to start localizing your robot, and don't wish to read about
-how fiducial localization works, you can skip reading this sub-section.
-
-The Ubiquity Robotics localization system uses a number of fiducial markers
-of known size.  Detection of the markers
-is done by using the rogobot's camera.  The characteristics of the images of the fiducials enable the robot to compute its location.
-
-
-![Fiducial coordinate system](fiducial.png)
-
-
-![Fiducial coordinate system](two_fiducials.png)
+The Ubiquity Robotics localization system uses a number of fiducial markers of known size (illustrated below).  Detection of the markers
+is done by using the robot's camera.  The characteristics of the images of the fiducial markers enable the robot to compute its location.
 
 ## Print Some Fiducials
 
