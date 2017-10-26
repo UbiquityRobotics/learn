@@ -14,6 +14,8 @@ Robotics robot base, using the supplied Raspberry Pi camera.
 The Ubiquity Robotics localization system uses a number of fiducial markers of known size (illustrated below).  Detection of the markers
 is done by using the robot's camera.  The characteristics of the images of the fiducial markers enable the robot to compute its location.
 
+![Fiducial Markers](two_fiducials.png)
+
 ## Print Some Fiducials
 
 A PDF file containing a range of fiducial markers can be generated with a
