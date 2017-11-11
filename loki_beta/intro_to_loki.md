@@ -47,7 +47,6 @@ To start the base node:
 
 
 ```cd /catkin-ws/src/ubiquity-launches/bin
-
 ./loki_base```
 
 
