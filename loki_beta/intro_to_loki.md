@@ -1,16 +1,16 @@
-Loki Beta Testers Documentation.
+##Loki Beta Testers Documentation.
 
-	Starting the Loki
+#Starting the Loki
 
-Depending on the type of battery supplied, the Loki will be turned on via the power swithc or jumper. Some of the 5v LiPo battery packs do not sense the switch, and need to be powered on manually. When the Loki turns on both the Rpi red LED and all the Loki LEDs should light. If firmware is working the LEDs should blink when you turn the wheels. The wheels should be able to turn freely.
+Depending on the type of battery supplied, the Loki will be turned on via the power switch or jumper. Some of the 5v LiPo battery packs do not sense the switch, and need to be powered on manually. When the Loki turns on both the Rpi red LED and all the Loki LEDs should light. If firmware is working the LEDs should blink when you turn the wheels. The wheels should be able to turn freely.
 
-	Connecting to the Loki.
+#Connecting to the Loki.
 
 When the Loki boots in a new environment, it will attempt to connect to know WiFi networks. If it can’t find any known networks it will open up a WiFi access point in a couple of minutes. To connect to the access point use your network icon and Search for “UbiquityRobot####” the “####” are the last two unique hexadecimal digit of the WiFi hardware MAC address.  The password it “robotseverywhere”  The robots IP number is 10.42.0.1.
 
 To logon to the robot:
 
-```	ssh ubuntu@10.42.0.1```
+```ssh ubuntu@10.42.0.1`````
 
 (password = “ubuntu”)
 
@@ -29,7 +29,7 @@ You then should be able to ssh into your robot.
 
 To test robot operation you can use minicom:
 
-	```sudo minicom (-D /dev/ttyAMA0)```
+```sudo minicom (-D /dev/ttyAMA0)```
 
   e <cr>  shows encoders
 
@@ -41,15 +41,15 @@ m 0 0 <cr>      full stop.
 To start the base node:
 
 
-	```cd /catkin-ws/src/ubiquity-launches/bin
+```cd /catkin-ws/src/ubiquity-launches/bin
 
-	./loki_base```
+./loki_base```
 
 
 You then can launch teleop-twist-keyboard either locally or on a remote by
 
-	```export ROS_MASTER_URI=http://’robot ip number’ :11311
-	rosrun teleop-twist-keyboard teleop-twist-keyboard.py```
+```export ROS_MASTER_URI=http://’robot ip number’ :11311
+rosrun teleop-twist-keyboard teleop-twist-keyboard.py```
 
 and drive the robot.
 
