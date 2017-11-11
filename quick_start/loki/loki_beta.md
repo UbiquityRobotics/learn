@@ -26,7 +26,44 @@ Up to 16 sonar sensors can optionally be installed for obstacle avoidance. These
 Also, we haven't finished the final SD card image for Loki, so for now the networking and connecting sections for our Magni
 robot are the best source of instructions.
 
-## Boot up
+
+## Starting the Loki
+
+Depending on the type of battery supplied, the Loki will be turned on via the power switch or jumper. Some of the 5v LiPo battery packs do not sense the switch, and need to be powered on manually. When the Loki turns on both the Rpi red LED and all the Loki LEDs should light. If firmware is working the LEDs should blink when you turn the wheels. The wheels should be able to turn freely.
+
+## Connecting to the Loki.
+
+When the Loki boots in a new environment, it will attempt to connect to know WiFi networks. If it can’t find any known networks it will open up a WiFi access point in a couple of minutes. To connect to the access point use your network icon and Search for “UbiquityRobot####” the “####” are the last two unique hexadecimal digit of the WiFi hardware MAC address.  The password it “robotseverywhere”  The robots IP number is 10.42.0.1.
+
+To logon to the robot:
+
+```ssh ubuntu@10.42.0.1`````
+
+(password = “ubuntu”)
+
+You can use the robot in Access Point mode, or you can connect to your local area network via the 
+following commands:
+
+```pifi list seen```
+
+```sudo pifi add  ssid  password```   (Where ssid password or for the LAN)
+
+Then reboot, and discover the new network IP number of your robot either by looking at your LAN’s connected 
+devices list, or  trying to ping ubiquityrobot####@local.
+
+You then should be able to ssh into your robot.
+
+
+To test robot operation you can use minicom:
+
+```sudo minicom (-D /dev/ttyAMA0)```
+
+  e <cr>  shows encoders
+
+m 100 100  <cr>   both wheels forward
+
+m 0 0 <cr>      full stop.
+
 
 Assuming you can connect to the robot via ssh, you can test the robot by seeing if you can teleop.
 First determine if any nodes are running by typing:
@@ -37,14 +74,23 @@ rostopic list
 
 if not, you can start the base controller by:
 
-```cd catkin_ws/src/ubiquity_launches/bin/
+```cd catkin_ws/src/ubiquity_launches/bin/```
+
+You then can launch teleop-twist-keyboard either locally or on a remote by
+
+```export ROS_MASTER_URI=http://’robot ip number’ :11311
+rosrun teleop-twist-keyboard teleop-twist-keyboard.py```
+
+and drive the robot.
+
+
+Time stamps are important in ros if you are working in access point mode the robot and laptop clocks will not be in sync. 
+The folowing script(or one liner) will fix this:
+
+#!/bin/sh
+ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )`
 ./loki_base 
 ```
-
-To drive the robot, ssh in a separate window and type:
-
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py
-
 
 ## Rviz
 
@@ -66,4 +112,9 @@ If you've gotten this far, pour yourself an adult beverage, do your victory danc
 
 You now can start experimenting with writng your own scripts, or working with published tutorials to improve your mastery. Perhaps even work on some HBRC challenges. All Beta testers are encoraged to submit code changes and comments to the Github.
 
-Thanks for being a Beta Loki tester.
+Thanks for being a Beta Loki tester
+
+
+
+
+
