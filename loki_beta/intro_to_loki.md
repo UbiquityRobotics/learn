@@ -1,10 +1,10 @@
-##Loki Beta Testers Documentation.
+###Loki Beta Testers Documentation.
 
-#Starting the Loki
+    Starting the Loki
 
 Depending on the type of battery supplied, the Loki will be turned on via the power switch or jumper. Some of the 5v LiPo battery packs do not sense the switch, and need to be powered on manually. When the Loki turns on both the Rpi red LED and all the Loki LEDs should light. If firmware is working the LEDs should blink when you turn the wheels. The wheels should be able to turn freely.
 
-#Connecting to the Loki.
+    Connecting to the Loki.
 
 When the Loki boots in a new environment, it will attempt to connect to know WiFi networks. If it can’t find any known networks it will open up a WiFi access point in a couple of minutes. To connect to the access point use your network icon and Search for “UbiquityRobot####” the “####” are the last two unique hexadecimal digit of the WiFi hardware MAC address.  The password it “robotseverywhere”  The robots IP number is 10.42.0.1.
 
