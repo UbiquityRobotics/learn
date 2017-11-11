@@ -29,7 +29,7 @@ robot are the best source of instructions.
 
 ## Starting the Loki
 
-Depending on the type of battery supplied, the Loki will be turned on via the power switch or jumper. Some of the 5v LiPo battery packs do not sense the switch, and need to be powered on manually. When the Loki turns on both the Rpi red LED and all the Loki LEDs should light. If firmware is working the LEDs should blink when you turn the wheels. The wheels should be able to turn freely.
+Depending on the type of battery supplied, the Loki will be turned on via the power switch or jumper. (Note: some of the 5v LiPo battery packs do not sense the switch, and need to be powered on manually.) When the Loki turns on both the RPi red LED and all the Loki LEDs should light. If firmware is working the LEDs should blink when you turn the wheels. The wheels should be able to turn freely.
 
 ## Connecting to the Loki.
 
@@ -37,12 +37,20 @@ When the Loki boots in a new environment, it will attempt to connect to know WiF
 
 To logon to the robot:
 
-```ssh ubuntu@10.42.0.1`````
+```ssh ubuntu@10.42.0.1```
 
 (password = “ubuntu”)
 
 You can use the robot in Access Point mode, or you can connect to your local area network via the 
 following commands:
+
+(Useful hint:  It helps to always use IP numbers instead of names in ROS.  I do this by including the following lines in my .bashrc Ubuntu startup script:
+
+source ~/catkin_ws/devel/setup.bash
+ip="$(hostname -I|cut -d ' ' -f 1)"
+export ROS_IP=$ip
+
+## Connecting to a Local Area WiFi Network on the Robot
 
 ```pifi list seen```
 
