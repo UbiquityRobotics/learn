@@ -5,9 +5,9 @@ permalink: connect_network
 ---
 # Connecting the Robot to Your Network
 
-Connect your workstation to the robot as described in [Connecting a Workstation for the First Time](connecting).
+Connect your workstation to the robot as described in [Connecting a Workstation for the First Time](connecting).  If you haven't done this step yet, the robot is connected to its own network, which is called ubiquityrobot, and your workstation is connected to that. We assume you have ssh'ed into the robot.
 
-Next, you will use pifi to list the nearby networks and to connect your robot to your local area network:
+Use pifi to list the nearby networks:
 
  ```ubuntu@ubiquityrobot:~$ pifi status```
 
@@ -23,13 +23,17 @@ Other Network
 ```ubuntu@ubiquityrobot:~$ sudo pifi add “MyNetwork”  “password”```
 
 Note: "sudo" is a linux command that allows administrative actions.  
-Linux will often ask you for your password ("ubuntu", if you haven't changed it) when you use it.
+Linux will often ask you for your password (it's "ubuntu", if you haven't changed it) when you use it.
 
 Now reboot the robot.
 
 ```sudo reboot```
 
-The robot will reboot and attach to the “MyNetwork” wifi network. To test,
+The robot will reboot and attach to the “MyNetwork” wifi network. But your workstation is not connected to “MyNetwork”, because we left it on ubiquityrobot.  So attach your workstation to "MyNetwork".
+
+If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, close VirtualBox, change the host network attachment, then start VirtualBox and then the workstation again.
+
+To test,
 
 ```$ping ubiquityrobot.local```
 
@@ -67,10 +71,10 @@ Verify that the robot is running and you are connected:
 
 ```rostopic list```
 
-If things are ok you should see a list of topics including /joy which means you can drive with a joystick.
+You should see a list of topics including /joy which means you can drive with a joystick.
 
 At this point you can drive the robot from your workstation's
-keyboard, just as in the section above called [Driving a Magni with a keyboard](keyboard_teleop).
+keyboard, just as in the Quick Start section called [Driving a Magni with a keyboard](keyboard_teleop).
 
 There is some housekeeping that you can perform at this point, to keep your robot up to date.  Begin by checking the date.
 
