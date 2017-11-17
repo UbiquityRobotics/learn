@@ -7,13 +7,21 @@ permalink: connecting
 
 In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.
 
-If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation immediately.  The SSID (network name) is `ubiquityrobot-XXXX` where XXXX is a number or perhaps missing, and the password to connect is `robotseverywhere`.
+#### The Network
 
-If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus the VM will see whatever network your host system is connected to. Connect your host system (that VirtualBox is running on) to the ubiquityrobot network.  Now your workstation (that is, the Ubuntu system running under VBox) is connected to the robot's network ubiquityrobot.
+If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobot-XXXX` where XXXX is a number or perhaps missing, and the password to connect is `robotseverywhere`.
 
-If you are using a Linux system instead of VirtualBox, connect using your workstation's facilities.
+#### Connecting a Virtual Machine
 
-Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (ctrl-alt-t). In that window, type
+If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus the VM will see whatever network your host system is connected to. If your workstation is running, shut it down,  and shut down the VirtualBox program. Connect your host system to the `ubiquityrobot-XXXX network`.  Now start VirtualBox and the workstation (that is, the Ubuntu system running under VBox); it will be connected to the robot's network `ubiquityrobot-XXXX`.
+
+#### Connecting a Linux Workstation
+
+If you are using a Linux system instead of VirtualBox, connect to the `ubiquityrobot-XXXX` network using the linux system's facilities.
+
+#### Connecting to the Robot and Logging In
+
+Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (ctrl-alt-t). In that window, log in by typing
 
 ```ssh ubuntu@ubiquityrobot###.local```
 
@@ -43,7 +51,7 @@ Finally,
 
 This robot's clock probably has no battery, so disregard the date. If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
 
-ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )` 
+ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )`
 
 
 <!--
