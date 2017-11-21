@@ -1,6 +1,6 @@
 # Ubiquity Robotics User Manual
 
-* [Introduction](introduction)
+* [Preface](introduction)
 
 * [Quick Start](ix_quick_start.md)
 

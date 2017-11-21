@@ -1,4 +1,4 @@
-# Introduction: Learning ROS via Ubiquity Robotics' Magni Developers Platform
+# Preface: Learning ROS via Ubiquity Robotics' Magni Developers Platform
 
 Practical and accessible robotics is upon us, ready to move from government and institutional labs to individual development spaces like the home, office, or garage. Like the personal computer revolution in the late 70’s and early 80’s, robots are ready for the first great generation of amateur developers to take the foundation work of robotics pioneers to undreamed-of places. Perhaps you are one of these.
 
@@ -9,7 +9,7 @@ With software packages like the Robot Operating System (ROS), the intense resear
 ## What are the Ubiquity Development Platforms and What Do they Do?
 
 > ![Magni/Loki](assets/MagniLoki2.jpg)
- 
+
 Magni and Loki are hardware platforms and mobile bases. When powered by ROS software, these platforms can handle vision, localization, communication and mobility. Magni is the heavy weight platform capable of moving payloads as high as 100kg, Loki is smaller but is great for desktop development. They can autonomously move anything on top of it to wherever that item needs to go, avoiding obstacles along the way. This may not seem terribly exciting at first glance, but consider two things:
 
 1. A mobile base is the heart of a modular/interoperability model of robotics. Without a shared base, parts such as robotic arms, sensors, and other tools could not find or get to their location. Even at their desired location, each would require an independent “brain” to know what to do, which would in turn require interpretation between each of the components.

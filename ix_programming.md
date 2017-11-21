@@ -6,12 +6,14 @@ permalink: ix_programming
 
 ##	Programming Your Robot
 
-This section should explain that these robots use ROS
+This section will be based on one or more of our demos, explaining how they are programmed, with reference to the code in the repo.
+
+Also we should explain that these robots use ROS
 refer to a couple of books,
 describe the UR components (move_basic,...)
 and wish the reader good luck
 
-###   NOT
+<!--
 
 12.	Writing Your First Script
 13.	Creating a Map
@@ -21,3 +23,4 @@ and wish the reader good luck
 17.	Monitor Magni Battery Status
 18.	Button Events
 19.	What to Read Next
+-->
