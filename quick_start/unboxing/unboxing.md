@@ -32,11 +32,9 @@ Step 1 - open the box
  
 Rear Bracket
 
-![Rear](camfront.JPG)
+![Rear](camfront.jpg)
 
 Front Bracket with Camera
-
-![FB + cam](unbat_cam.JPG)
 
 The Motors are connected next
 
