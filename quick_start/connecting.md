@@ -51,7 +51,7 @@ Finally,
 
 This robot's clock will have never sync'd with a time-server, so disregard the date. If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
 
-```ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )`
+```ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )```
 
 
 <!--
