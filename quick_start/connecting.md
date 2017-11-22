@@ -21,7 +21,7 @@ If you are using a Linux system instead of VirtualBox, connect to the `ubiquityr
 
 #### Connecting to the Robot and Logging In
 
-Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (ctrl-alt-t). In that window, log in by typing
+Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (ctrl-alt-t if you are using linux). In that window, log in by typing
 
 ```ssh ubuntu@ubiquityrobot###.local```
 
