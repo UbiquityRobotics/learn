@@ -13,11 +13,11 @@ If you have received a Magni with the Raspberry Pi already installed, or loaded 
 
 #### Connecting a Virtual Machine
 
-If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus the VM will see whatever network your host system is connected to. If your workstation is running, shut it down,  and shut down the VirtualBox program. Connect your host system to the `ubiquityrobot-XXXX network`.  Now start VirtualBox and the workstation (that is, the Ubuntu system running under VBox); it will be connected to the robot's network `ubiquityrobot-XXXX`.
+If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus the VM will see whatever network your host system is connected to. If your workstation is running, shut it down,  and shut down the VirtualBox program. Connect your host system to the `ubiquityrobotXXXX network`.  Now start VirtualBox and the workstation (that is, the Ubuntu system running under VBox); it will be connected to the robot's network `ubiquityrobotXXXX`.
 
 #### Connecting a Linux Workstation
 
-If you are using a Linux system instead of VirtualBox, connect to the `ubiquityrobot-XXXX` network using the linux system's facilities.
+If you are using a Linux system instead of VirtualBox, connect to the `ubiquityrobotXXXX` network using the linux system's facilities.
 
 #### Connecting to the Robot and Logging In
 
