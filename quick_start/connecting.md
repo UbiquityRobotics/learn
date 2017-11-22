@@ -23,7 +23,7 @@ If you are using a Linux system instead of VirtualBox, connect to the `ubiquityr
 
 Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (ctrl-alt-t if you are using linux). In that window, log in by typing
 
-```ssh ubuntu@ubiquityrobot###.local```
+```ssh ubuntu@ubiquityrobot.local```
 
 You may see:
 
@@ -49,9 +49,9 @@ Finally,
   0 updates are security updates.  
  Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143```
 
-This robot's clock probably has no battery, so disregard the date. If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
+This robot's clock will have never sync'd with a time-server, so disregard the date. If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
 
-ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )`
+```ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )`
 
 
 <!--
