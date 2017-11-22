@@ -9,7 +9,7 @@ In this manual it is assumed that your workstation, whether a laptop, desktop, o
 
 #### The Network
 
-If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobot-XXXX` where XXXX is a number or perhaps missing, and the password to connect is `robotseverywhere`.
+If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobotXXXX` where XXXX is a number letter combination the password to connect is `robotseverywhere`.
 
 #### Connecting a Virtual Machine
 
