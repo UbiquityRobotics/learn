@@ -22,7 +22,7 @@ Robot Commander has two versions:  One for the Android phone, and one for a work
 2. If you haven't, install the Robot Commander app on your Android phone. Download it on your phone at <https://play.google.com/store/apps/details?id=com.jrlandau.robotcmdr>.
 3. Allow at least 1 minute after turning the robot on to allow the robot to boot up. The robot will come up as its own WiFi network. So on the phone, if you go to Settings/WiFi, you should see a WiFi network that looks something like`ubiquityrobotWXYZ` connect to this network.  The password is `robotseverywhere`.
 4. Start the Robot Commander app.  On a workstation, fetch the Robot Commander page.
-5. Enter the address `10.42.0.1` in the space to the left of the Connect button.
+5. Enter the address `ws://10.42.0.1:9090` in the space to the left of the Connect button.
 Continue with #6 below.
 
 ## To use a workstation
