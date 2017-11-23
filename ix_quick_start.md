@@ -22,4 +22,4 @@ The Magni robot is strong, fast, and heavy.  Initially, run it on blocks with th
 4.  [Connecting a Workstation to Magni for the First Time](connecting)
 5.	[How to drive with a laptop using keyboard Teleoperation in AP mode](keyboard_teleop)
 6.	How to set up cameras and sensors
-7.	How to make Follow Me work with a fiducial
+7.	[How to make Follow Me work with a fiducial](fiducial_follow)
