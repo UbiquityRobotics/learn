@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Running Fiducial Follow"
-permalink: FiducialFollow
+permalink: fiducial_follow
 ---not written yet
 
 #Fiducial Follow
@@ -22,11 +22,11 @@ With fiducial follow running the robot knows how far away the marker is so as it
   - Not wave a marker at Magni from a long way away - start about 1.2 meters away
   - Keep the fiducial out of reach of children
 If you are not careful Magni can and will move suddenly and you may drive the robot in to something that you wish you had not - take care we want you to have fun*
-  
+
 ##  To make fiducial follow work:
-  
+
   Read the above warning and then download and print the following marker:
-  
+
 <insert link to marker 49>
 
 A paper marker works just fine, but for best results the marker should be kept square and perfectly flat. You can do this by mounting the marker on stiff cardboard or anything flat, but for best results we always mount our fiducials on foam core. Its available at most print shops. Please put the fiducial away and close all windows on your computer that have a fiducial on them before you do the next step.
@@ -48,6 +48,3 @@ This starts the processes that you need to make fiducial follow work.
 Then you can take the fiducial that you printed and put it in front of the robot. Usually the robot will move as soon as it detects an image of the fiducial. The robot can move back and forward. As you move the fiducial around the robot should follow you.
 
 If you move too fast or for some reason the robot looses sight of the fiducial then it will attempt to find the fiducial again, it will rotate around the room in an attempt to locate the position of the fiducial until it finally stops.
-
-
-
