@@ -2,7 +2,9 @@
 layout: default
 title:  "Running Fiducial Follow"
 permalink: fiducial_follow
----not written yet
+---
+
+not written yet
 
 #Fiducial Follow
 
