@@ -6,11 +6,11 @@ Once you have a working workstation you will want to make them work together
 
 Make sure you've changed the hostname
 
-'ssh ubuntu@ubiquityrobot.local
+`ssh ubuntu@ubiquityrobot.local`
 
-login with the the password
+login with the the password which is
 
-ubunutu
+`ubunutu`
 
 ##Change the hostname
 
