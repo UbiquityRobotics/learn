@@ -7,7 +7,7 @@ There are two methods to get a ROS workstation setup.
 1) Use our out of the box virtualization drive
 2) Install ROS on a native linux partition of your system
 
-ROS runs on ubunutu linux. However not everyone has ubuntu linux installed on  their machine, so we've created a virtual box image. This is a system that allows most any laptop or computer to temporarily pretend that it is a ubuntu linux machine, using virtualization techniques. Our image has a full install of ubuntu, ROS and ubiquity robotics' software as appropriate for a workstation. The good news is that its quick and easy to get started this way, the downside is that the process of virtualization saps compute performance from your system so things will not be as fast as if you are running natively. Usually using the virtualization system is a good way to quickly try out having a workstation before committing to set one up on your laptop. 
+ROS runs on ubunutu linux. However not everyone has ubuntu linux installed on  their machine, so we've created a virtual box image. This is a system that allows most any laptop or computer to temporarily pretend that it is a ubuntu linux machine, using virtualization techniques. Our image has a full install of ubuntu, ROS and ubiquity robotics' software as appropriate for a workstation. The good news is that its quick and easy to get started this way, the downside is that the process of virtualization saps compute performance from your system so things will not be as fast as if you are running natively. Usually using the virtualization system is a good way to quickly try out having a workstation before committing to set one up on your laptop.
 
 ## 1) Using our out of the box virtualization drive
 
