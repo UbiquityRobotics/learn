@@ -1,3 +1,9 @@
+---
+layout: default
+title:  "How to setup a ROS workstation"
+permalink: workstation_setup
+---
+
 # How to setup a ROS workstation
 
 A ROS workstation is a full setup of ROS (the Robot Operating System) on a desktop or laptop computer, that you can connect to your robot. ROS has a framework to share all the internal communication within the robot with a ROS workstation over your network. As such you can monitor internal robot activity, see what the robot is seeing, send commands and even offload data processing tasks from the robot on to more powerful computers. A ROS workstation is really helpful if you want to do anything beyond simply driving the robot around and getting it to do voice commands.
