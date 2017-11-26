@@ -23,7 +23,7 @@ To use our virtualization box setup you need to download it from:
 
 <Joe you need to change this link to make it "anyone with link can view">
 
-<Joe please add instructions for what to do with it once you've downloaded it>
+<Joe please add instructions for what to do with it once you've downloaded it. Ha!>
 
 ## 2) Install ROS on a native linux partition of your system
 
