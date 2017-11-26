@@ -1,7 +1,7 @@
 
-#Using Robot and Workstation Together 
+# Using Robot and Workstation Together 
 
-Once you have a working workstation you will want to make them work together
+Once you have a working workstation and a working robot you will want to make them work together
 
 
 Make sure you've changed the hostname
@@ -12,7 +12,7 @@ login with the the password which is
 
 `ubunutu`
 
-##Change the hostname
+## Change the hostname
 
 The very first thing you should do is change the hostname of your robot. While you can leave this as your default setup this is not recommended. To change this you edit a single file /etc/hostname that only contains the name of your robot computer on the network. You can change this using your favorite editor but its convienient (e.g. pico, nano, vi, vim).
 
@@ -35,7 +35,7 @@ run pifi <documented>
 
 connect to external 
 
-##Set environment variables on local workstation
+## Set environment variables on local workstation
 
 Now you need to go to your workstation and set environment variables. When you set up ROS it assumes that the computer that it is set up on is the robot. This is not what you want, you want 
 
@@ -50,7 +50,7 @@ Now you need to go to your workstation and set environment variables. When you s
 
 
 
-Alan's solution
+## An alternative method
 on the workstation you append to your ~/.bashrc
 
 `ip="$(hostname) -I|cut -d ' ' -f 1)"`
