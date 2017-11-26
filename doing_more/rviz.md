@@ -75,15 +75,16 @@ on the workstation you need to type on a command line
 
 
 
-##Now run RViz on the workstation
+## Running RViz on the workstation
 
-<blurb on what RViz is>
-  
-Now you type
+RViz is ROS's vizualization system and is very powerful. It allows you to vizualize practically any aspect of the robot's behavior. It can show the robot in space as well as graph practically any robot parameter. To make it work you need to type:
+
 
 `rviz`
 
-and rviz comes up and you can see your robot.
+RViz is highly configurable so its possible to save a previous configuration and reuse it again and again. 
+
+<insert some description of the configuration file, and how to make use of it and insert a link to a previously utilized configuration file>
 
 
 
