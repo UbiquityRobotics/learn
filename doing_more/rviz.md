@@ -14,11 +14,11 @@ login with the the password which is
 
 ## Change the hostname
 
-The very first thing you should do is change the hostname of your robot. While you can leave this as your default setup this is not recommended. To change this you edit a single file /etc/hostname that only contains the name of your robot computer on the network. You can change this using your favorite editor but its convienient (e.g. pico, nano, vi, vim).
+The very first thing you should do is change the hostname of your robot. While you can leave this as your default setup this is not recommended. To change this you edit a single file /etc/hostname that only contains the name of your robot computer on the network. You can change this using your favorite editor (e.g. pico, nano, vi, vim) but it is convienient to just do this by entering the following command line command:
 
 `sudo echo NEWHOSTNAME > /etc/hostname`
 
-The next step is to edit /etc/hosts to add two lines
+The next step is to edit the file /etc/hosts to add two lines that tell  again your computer what it is called. Again you can use your favorite editor to add the two lines but again it is convienient to just use the command line.
 
 ` echo "  128.0.0.1 NEWHOSTNAME" >> /etc/hosts `
 ` echo "  128.0.0.1 NEWHOSTNAME.local" >> /etc/hosts `
