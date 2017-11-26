@@ -23,6 +23,8 @@ The next step is to edit the file /etc/hosts to add two lines that tell  again y
 ` echo "  128.0.0.1 NEWHOSTNAME" >> /etc/hosts `
 ` echo "  128.0.0.1 NEWHOSTNAME.local" >> /etc/hosts `
 
+< We need to check to make sure 128.0.0.1 is correct for localhost>
+
 If you now reboot this will come up
 
 `sudo reboot`
