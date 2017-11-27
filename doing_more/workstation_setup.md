@@ -80,11 +80,13 @@ connect to external
 
 ## Set environment variables on the workstation
 
-* Now go to your workstation and set its environment variables. When you set up ROS it assumes that the computer that it is set up on is the robot. This is not what you want, you want
+* Now go to your workstation and set its environment variables. When you set up ROS it assumes that the computer that it is set up on is the robot. Clearly if you are using the computer to see what is happening on the computer that is on the robot this is not what you want. The fixup is to tell the computer on which ROS is running which computer is the one that holds the master robot functions. You do this by setting an environment variable with the following command:
 
   `export ROS_MASTER_URI=http://NEWHOSTNAME.local:11311`
 
-source ~./bashrc
+You then need to sync this environment variable with the system that you are running. The way to do this is to type the command.
+
+  `source ~./bashrc `
 
 ### An alternative method
 
