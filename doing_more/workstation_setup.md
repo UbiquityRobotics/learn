@@ -80,30 +80,40 @@ connect to external
 
 ## Set environment variables on the workstation
 
-Now you need to go to your workstation and set environment variables. When you set up ROS it assumes that the computer that it is set up on is the robot. This is not what you want, you want
+* Now go to your workstation and set its environment variables. When you set up ROS it assumes that the computer that it is set up on is the robot. This is not what you want, you want
 
-`export ROS_MASTER_URI=http://NEWHOSTNAME.local:11311`
+  `export ROS_MASTER_URI=http://NEWHOSTNAME.local:11311`
 
 source ~./bashrc
 
-An alternative method
+### An alternative method
 
-On the workstation you append to your ~/.bashrc
+* On the workstation you append to your ~/.bashrc
 
 `ip="$(hostname) -I|cut -d ' ' -f 1)" export ROS_IP=$ip`
 
 then type
 
-source ~/.bashrc
+  source ~/.bashrc
 
-on the robot you need to type
+* on the robot you need to type
 
-ip="$(hostname) -I|cut -d ' ' -f 1)" export ROS_IP=$ip export ROS_MASTER_URI=http://$ip:11311 then use ifconfig -a and this gives you a set of information in particular it will give you the IP address of the robot which you will use in a moment.
+  `ip="$(hostname) -I|cut -d ' ' -f 1)"`
 
-on the workstation, type
+  `export ROS_IP=$ip`
 
-`export ROS_MASTER_URI=http:// [ROBOT'S IP NUMBER]:11311`
+  `export ROS_MASTER_URI=http://$ip:11311`
 
- where you substitute [ROBOTS IP NUMBER] is the robots IP number
+* Then type
+
+  'ifconfig -a`
+
+ This gives you a set of information; in particular it will give you the IP address of the robot which you will use in a moment.
+
+ on the workstation, type
+
+ `export ROS_MASTER_URI=http:// [ROBOT'S IP ADDRESS]:11311`
+
+ where you substitute for [ROBOTS IP ADDRESS] the actual robots IP address.
 
 Now you should have a working local workstation that will enable you to do all kinds of cool things with your robot.
