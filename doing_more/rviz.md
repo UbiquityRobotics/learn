@@ -43,7 +43,7 @@ Now you need to go to your workstation and set environment variables. When you s
 
 `export ROS_MASTER_URI=http://NEWHOSTNAME.local:11311`
 
-`source ~./bashrc`
+`source ~/.bashrc`
 
 
 
