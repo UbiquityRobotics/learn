@@ -93,6 +93,8 @@ connect to external
 
   However, environment variables are not persistent!
 
+  You then need to sync this environment variable with the system that you are running. The way to do this is to type the command.
+
 #### Something is missing here !!!!!!!!!!!!!!!!
 source ~./bashrc
 
