@@ -34,7 +34,7 @@ Rear Bracket
 
 ![Rear](camfront.jpg)
 
-Front Bracket with Camera
+Front Bracket with Camera.  The power switches are system above the "U" in Ubiquity, and wheels above the "y'. The charging port is between the two switches. Switches light up when on.
 
 The Motors are connected next
 
