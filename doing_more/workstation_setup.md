@@ -47,7 +47,7 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
 
 * Once you've got a workstation with Ubuntu and ROS and assuming you are running a Magni you'll want to install the files that support Magni. Open a terminal window, login, and type:
 
-  `sudo apt install ROS-kinetic-magni-robot`
+  `sudo apt install ros-kinetic-magni-robot`
 
 * Before you go on, you should change the hostname of your robot, to distinguish your robot from others. Open a new terminal window, and log in to the robot with ssh:
 
