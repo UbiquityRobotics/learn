@@ -25,3 +25,17 @@ Then attach the cable to the Pi, the 'blue' part of the cable faces toward the U
  Then reinstall the Pi, making sure the pins are aligned correctly. (Mis-aligned pins will cause the Pi to fail!)
 
 
+![IR ](a4.jpg)
+
+![IR ](a5.jpg)
+
+![IR ](a6.jpg)
+
+![IR ](a7.jpg)
+
+![sonar ](a8.jpg)
+
+![sonar ](a9.jpg)
+![sonar ](a10.jpg)
+![sonar cable ](a11.jpg)
+![Cover](a12.jpg)
