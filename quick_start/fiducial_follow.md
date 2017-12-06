@@ -28,7 +28,7 @@ If you are not careful Magni can and will move suddenly and you may drive the ro
 
   Read the above warning and then download and print the following marker:
 
-<insert link to marker 49>
+[Marker 409](quick_start/409.pdf)
 
 A paper marker works just fine, but for best results the marker should be kept square and perfectly flat. You can do this by mounting the marker on stiff cardboard or anything flat. We always mount our fiducials on foam core. Its available at most print shops.
 
