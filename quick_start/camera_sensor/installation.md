@@ -45,6 +45,23 @@ Next, attach the circuit board for the IR cameras with 4 standoffs.
 The cables from the camera/IR LED wings are atached to the circuit board.
 
 ![sonar ](a9.jpg)
+
+The sonar sensors do not require the IR pakage to work, simply install the 4 standoff without the IR circuit board.
+
 ![sonar ](a10.jpg)
+
+The Sonar package is attached to the standoffs with 4 M3 Allen head screws.
+
 ![sonar cable ](a11.jpg)
+
+Last step is attache the 50 pin ribbon cable.
+
 ![Cover](a12.jpg)
+
+Lastly attach the cover plate with 6 M6 screws.  HOORAY!
+
+Note: on testing the camera.  If you find that fiducial follow or waypoint navigation isn't working, you need a quick way to test the camera.  if yu can open a ssh session to the robot, try the following command:
+
+raspistill -o test.jpg
+
+If you don't get an error message, you have a good camera. An error message indicates the camera is not being detected by the RPi, this is usually due to a poor cable connection or lees likely a bad camera.
