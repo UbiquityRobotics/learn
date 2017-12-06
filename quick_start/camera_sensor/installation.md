@@ -7,13 +7,13 @@ author: Alan Federman
 Camera and Sensor Installation.
 
 Depending on your version of Magni, you may have a different suite of sensors.Silver and Gold versions come with a Raspicam. the Raspicam is needed for fiducial follow, partybot and waypoint navigation. The Silver version comes with a sonar short 
-range obstacle avoidance system, and the Gold version inclused both the sonar and an IR long range obtacle avoidance package.
+range obstacle avoidance system, and the Gold version includes both the sonar and an IR long range obtacle avoidance package.
 
 Camera installation
 
 ![Camera in Bracket](a1.jpg)
 
-The easiest way to install the camera is to remove the the Pi, attache the camera to the mounting bracket, and thread the cable through the slot holding the camera.
+The easiest way to install the camera is to remove the the Pi, attach the camera to the mounting bracket, and thread the cable through the slot holding the camera.
 
 ![Camera Cable](a2.jpg)
 
@@ -58,10 +58,10 @@ Last step is attache the 50 pin ribbon cable.
 
 ![Cover](a12.jpg)
 
-Lastly attach the cover plate with 6 M6 screws.  HOORAY!
+Lastly attach the cover plate with 6 M6 screws.  You are done, hooray!
 
-Note: on testing the camera.  If you find that fiducial follow or waypoint navigation isn't working, you need a quick way to test the camera.  if yu can open a ssh session to the robot, try the following command:
+Note: on testing the camera.  If you find that fiducial follow or waypoint navigation aren't working, you need a quick way to test the camera.  if you can open a ssh session to the robot, try the following command:
 
 raspistill -o test.jpg
 
-If you don't get an error message, you have a good camera. An error message indicates the camera is not being detected by the RPi, this is usually due to a poor cable connection or lees likely a bad camera.
+If you don't get an error message, you have a good camera. An error message indicates the camera is not being detected by the RPi, this is usually due to a poor cable connection or less likely a bad camera.
