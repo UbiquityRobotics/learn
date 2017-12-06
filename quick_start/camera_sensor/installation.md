@@ -27,10 +27,15 @@ Then attach the cable to the Pi, the 'blue' part of the cable faces toward the U
 
 ![IR ](a4.jpg)
 
+To begin the sensor package installation, insert one end of the 50 pin ribbon cable into the Main controller board, the socket is above the Raspberry Pi. The next steps concern the Gold version IR sensor package.  If you donot have this sensor, skip these steps and continue to sonrar sensors.
+
 ![IR ](a5.jpg)
+
+Insert the ribbon cable on both the left and right IR cameras
 
 ![IR ](a6.jpg)
 
+The cmaeras are installed with thre M6 bolts.
 ![IR ](a7.jpg)
 
 ![sonar ](a8.jpg)
