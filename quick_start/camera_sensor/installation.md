@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Camera and Sensor Installation"
-permalink: unboxing
+permalink: camera_sensor
 author: Alan Federman
 ---
 Camera and Sensor Installation.
