@@ -35,10 +35,14 @@ Insert the ribbon cable on both the left and right IR cameras
 
 ![IR ](a6.jpg)
 
-The cmaeras are installed with thre M6 bolts.
+The cameras are installed with thre M6 bolts.
 ![IR ](a7.jpg)
 
-![sonar ](a8.jpg)
+Next, attach the circuit board for the IR cameras with 4 standoffs.
+
+![IR ](a8.jpg)
+
+The cables from the camera/IR LED wings are atached to the circuit board.
 
 ![sonar ](a9.jpg)
 ![sonar ](a10.jpg)
