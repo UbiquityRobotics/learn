@@ -4,12 +4,12 @@ title:  "Camera and Sensor Installation"
 permalink: camera_sensors
 author: Alan Federman
 ---
- *** Camera and Sensor Installation
+ ### Camera and Sensor Installation
 
 Depending on your version of Magni, you may have a different suite of sensors.Silver and Gold versions come with a Raspicam. the Raspicam is needed for fiducial follow, partybot and waypoint navigation. The Silver version comes with a sonar short
 range obstacle avoidance system, and the Gold version includes both the sonar and an IR long range obtacle avoidance package.
 
- ** Camera installation
+ ## Camera installation
 
 ![Camera in Bracket](a1.jpg)
 
@@ -27,7 +27,7 @@ Then attach the cable to the Pi, the 'blue' part of the cable faces toward the U
 
 ![IR ](a4.jpg)
 
- ** GOLD IR Long Range Sensors
+ ## GOLD IR Long Range Sensors
  
 To begin the sensor package installation, insert one end of the 50 pin ribbon cable into the Main controller board, the socket is above the Raspberry Pi. The next steps concern the Gold version IR sensor package.  If you do not have this sensor, skip these steps and continue to sonar sensors.
 
@@ -47,7 +47,7 @@ Next, attach the circuit board for the IR cameras with 4 standoffs.
 
 The cables from the camera/IR LED wings are atached to the circuit board.
 
- ** Sonar Sensors (SILVER)
+ ## Sonar Sensors (SILVER)
 
 ![sonar ](a9.jpg)
 
