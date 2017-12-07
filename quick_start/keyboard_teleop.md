@@ -5,15 +5,19 @@ permalink: keyboard_teleop
 ---
 # Driving a Robot with a Keyboard
 
-From your workstation, connect to your robot and log in. (see connecting to your robot for the first time).
+Connect to your robot and log in. (see connecting to your robot for the first time).
 
-To drive the robot from the workstation, run the keyboard teleop program:
+To drive the robot from an ssh window, check to see if the ROS magni_base program is running:
+ 
+    rostopic list 
+
+Next, run the keyboard teleop program:
 
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 This will run the program in the robot. Alternatively from a second terminal window on your workstation, you can run the program in the workstation and let it communicate with the robot:
 
-    export ROS_MASTER_URI=http://ubiquityrobot.local:11311
+    export ROS_MASTER_URI=http://ubiquityrobotXXXX.local:11311
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 When teleop is launched the following screen appears:
