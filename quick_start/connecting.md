@@ -9,11 +9,11 @@ In this manual it is assumed that your workstation, whether a laptop, desktop, o
 
 #### The Network
 
-If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobotXXXX` where XXXX is a number letter combination the password to connect is `robotseverywhere`.
+If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobotXXXX` where XXXX is a number letter combination; the password to connect is `robotseverywhere`.
 
 #### Connecting a Virtual Machine
 
-If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus the VM will see whatever network your host system is connected to. If your workstation is running, shut it down,  and shut down the VirtualBox program. Connect your host system to the `ubiquityrobotXXXX network`.  Now start VirtualBox and the workstation (that is, the Ubuntu system running under VBox); it will be connected to the robot's network `ubiquityrobotXXXX`.
+If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus, the VM will see whatever network your host system is connected to. If your workstation is running, shut it down, and shut down the VirtualBox program. Connect your host system to the `ubiquityrobotXXXX network`.  Now start VirtualBox and the workstation (that is, the Ubuntu system running under VBox); it will be connected to the robot's network `ubiquityrobotXXXX`.
 
 #### Connecting a Linux Workstation
 
@@ -128,3 +128,8 @@ Now that you have the correct date you can update the robot to get changes that 
 
 This should take some time, since it may have been a while since the original image was made.
 -->
+
+Occasionally, the update/upgrade fails to complete. Usually this is due to the presence of a 'lock' file. To fix this:
+
+sudo rm /var/lib/dpkg/lock
+
