@@ -4,12 +4,12 @@ title:  "Camera and Sensor Installation"
 permalink: camera_sensors
 author: Alan Federman
 ---
-Camera and Sensor Installation.
+ *** Camera and Sensor Installation
 
 Depending on your version of Magni, you may have a different suite of sensors.Silver and Gold versions come with a Raspicam. the Raspicam is needed for fiducial follow, partybot and waypoint navigation. The Silver version comes with a sonar short
 range obstacle avoidance system, and the Gold version includes both the sonar and an IR long range obtacle avoidance package.
 
-Camera installation
+ ** Camera installation
 
 ![Camera in Bracket](a1.jpg)
 
@@ -17,7 +17,7 @@ The easiest way to install the camera is to remove the the Pi, attach the camera
 
 ![Camera Cable](a2.jpg)
 
-Then attach the cable to the Pi, the 'blue' part of the cable faces toward the USB ports
+Then attach the cable to the Pi, the 'blue' part of the cable faces toward the USB ports.
 
 
  ![Camera Installed](a3.jpg)
@@ -27,15 +27,18 @@ Then attach the cable to the Pi, the 'blue' part of the cable faces toward the U
 
 ![IR ](a4.jpg)
 
-To begin the sensor package installation, insert one end of the 50 pin ribbon cable into the Main controller board, the socket is above the Raspberry Pi. The next steps concern the Gold version IR sensor package.  If you donot have this sensor, skip these steps and continue to sonrar sensors.
+ ** GOLD IR Long Range Sensors
+ 
+To begin the sensor package installation, insert one end of the 50 pin ribbon cable into the Main controller board, the socket is above the Raspberry Pi. The next steps concern the Gold version IR sensor package.  If you do not have this sensor, skip these steps and continue to sonar sensors.
 
 ![IR ](a5.jpg)
 
-Insert the ribbon cable on both the left and right IR cameras
+Insert the ribbon cable on both the left and right IR cameras.
 
 ![IR ](a6.jpg)
 
 The cameras are installed with thre M6 bolts.
+
 ![IR ](a7.jpg)
 
 Next, attach the circuit board for the IR cameras with 4 standoffs.
@@ -43,6 +46,8 @@ Next, attach the circuit board for the IR cameras with 4 standoffs.
 ![IR ](a8.jpg)
 
 The cables from the camera/IR LED wings are atached to the circuit board.
+
+ ** Sonar Sensors (SILVER)
 
 ![sonar ](a9.jpg)
 
@@ -64,4 +69,4 @@ Note: on testing the camera.  If you find that fiducial follow or waypoint navig
 
 raspistill -o test.jpg
 
-If you don't get an error message, you have a good camera. An error message indicates the camera is not being detected by the RPi, this is usually due to a poor cable connection or less likely a bad camera.
+If you don't get an error message, you have a good camera. An (mmal) error message indicates the camera is not being detected by the RPi, this is usually due to a poor cable connection or less likely a bad camera.
