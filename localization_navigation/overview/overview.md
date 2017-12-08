@@ -1,7 +1,7 @@
 
 # Autonomous Navigation
 
-In order to have a robot be able to respond to a command such as
+In order to have a robot respond to a command such as
 "go to the kitchen", we must address the following three requirements:
 
 * The current position of the robot must be known. This is referred to as
@@ -46,9 +46,9 @@ The intention is that you will be able to get something working, and can then
 choose to move on to use more sophisticated approaches.
 
 We did this for two reasons, first we observed that people new to robotics
-would struggle to configure tune navigation software. and second we wanted
+would struggle to configure tune navigation software; and second, we wanted
 to provide a low-cost robot base, so we avoided costly LIDAR sensors.
-Of course, you are free to add sensors to your robot base, if you so desire.
+Of course, you are free to add sensors to your robot, if you so desire.
 
 ### Fiducial-Based Localization
 
@@ -63,7 +63,7 @@ disadvantages:
   less accurate, particularly as the distance from the robot increases.
 
 * The AMCL approach requires initialization, which is typically done
-  by the user asserting a location using the
+  by the user making a map and asserting a location using the
   [rviz robot visualization tool](http://wiki.ros.org/rviz).
 
 * Unless an expensive high-range LIDAR sensor is used, it is difficult
