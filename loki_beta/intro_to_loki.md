@@ -46,11 +46,13 @@ m 0 0 <cr>      full stop.
 To start the base node:
 
 
-```cd /catkin-ws/src/ubiquity-launches/bin
-./loki_base```
+   ```cd /catkin-ws/src/ubiquity-launches/bin```
+
+    ```./loki_base```
 
 
-You then can launch teleop-twist-keyboard either locally or on a remote by
+You then can lau
+nch teleop-twist-keyboard either locally or on a remote by
 
 ```export ROS_MASTER_URI=http://’robot ip number’ :11311
 rosrun teleop-twist-keyboard teleop-twist-keyboard.py```
