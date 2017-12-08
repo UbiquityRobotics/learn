@@ -14,7 +14,7 @@ the box containing your robot.  These tasks are:
 
 * [Installing Virtualization Software](install_virtualization/install_virtualization.md):
   Since most people are running Windows and MacOS, some sort of virtualization
-  software is needed.  Many
+  software is needed.
 
 * [ROS Installation](installing_ros/installing_ros.md):
   *{ Pointers to existing ROS installation instructions -  more here}*
