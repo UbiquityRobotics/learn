@@ -6,11 +6,11 @@ permalink: ix_quick_start
 
 Things you can do with your robot right out of the box.
 
-The robot has its own network (called an access point) that enables you to do several interesting things without needing to connect to your local network.
+The robot has its own network (called an access point) that enables you to do several interesting things without needing to connect to your local network. However, in this mode, you will not be able to access the rest of the Internet.  
 
-### Warning
+<H3 style="color:red">Warning</H3>
 
-The Magni robot is strong, fast, and heavy.  Initially, run it on blocks with the wheels free, or on the floor where it can't hurt anyone or anything if it surprises you. NOT ON A TABLE TOP.
+The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or whatever you have to lift the wheels free of the floor, or or run it somewhere where it can't hurt anyone or anything if it surprises you. NOT ON A TABLE TOP.
 
 #### Quick Start
 
