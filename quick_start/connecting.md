@@ -5,9 +5,9 @@ permalink: connecting
 ---
 # Connecting a Workstation for the First Time
 
-In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.
-*{Wayne: Mention that `16.04` stands for `2016, April` and `LTS` stands for Long Term Support which means that
-the software is supported for 5 years.  We probably need to also mention that Windows and Mac platform need to
+In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" stands for "Long Term Support" which means that the software is supported for 5 years.
+
+*{Wayne:   We probably need to also mention that Windows and Mac platform need to
 run VirtualBox (or something that can run a `.vdi` file.  Also, it should be mentions, that most workstations
 do not have the ability to log into a WiFi access point. }*
 *{Wayne: This section chould be called WiFi configuration, or robot provisioning, or something other than connection. }*
@@ -58,11 +58,12 @@ Finally,
   0 updates are security updates.  
  Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143```
 
-This robot's clock will have never sync'd with a time-server, so disregard the date. If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
+This robot's clock will have never synchronized with a time-server, so disregard the date. If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
 
-```ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )```
-
-*{Wayne: This command should probably be `ssh ubuntu@ubiquityrobot.local sudo ...`. }*
+```
+ssh ubuntu@ubiquityrobot.local
+sudo -S date -s @`( date -u +"%s" )
+```
 
 *{Wayne: The pifi description needs to be enabled. *}
 
@@ -144,4 +145,3 @@ This should take some time, since it may have been a while since the original im
 Occasionally, the update/upgrade fails to complete. Usually this is due to the presence of a 'lock' file. To fix this:
 
         sudo rm /var/lib/dpkg/lock
-
