@@ -8,7 +8,7 @@
 
 Magni and Loki are hardware platforms and mobile bases. When powered by ROS software, these platforms can handle vision, localization, communication and mobility. Magni is the heavy weight platform capable of moving payloads as high as 100kg. It can autonomously move anything on top of it to wherever that item needs to go, avoiding obstacles along the way.
 
-Loki is great for the desktop environment. Its software compatibility with Magni saves money, time, and effort during the development phase.
+Loki is great for the desktop environment. Its software compatibility with Magni saves money, time, and effort during the development phase. *{Wayne: Loki currently does not have ledge detectors.  Loki really has no business on the desktop.  It is designed to live on the floor.}*
 
 A mobile base is the heart of a modular/interoperability model of robotics. Without a shared base, parts such as robotic arms, sensors, and other tools could not find or get to their location. Even at their desired location, each would require an independent “brain” to know what to do, which would in turn require interpretation between each of the components.
 
