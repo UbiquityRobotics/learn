@@ -6,6 +6,9 @@ permalink: robot_commander
 # How to drive with a Smartphone or workstation using Robot Commander in AP mode
 
 Robot Commander has two versions:  One for the Android phone, and one for a workstation.
+*{Wayne:  It is probably prudent to mention that iPhone's are not currently supported. }*
+*{Wayne: Somewhere we need to mention that the customer will not be able to access the rest
+of the web.  It is obvious to us, but not to the customer. }*
 
 <div class="image-wrapper">
 
@@ -21,17 +24,20 @@ Robot Commander has two versions:  One for the Android phone, and one for a work
 1. Turn the robot on.
 2. If you haven't, install the Robot Commander app on your Android phone. Download it on your phone at <https://play.google.com/store/apps/details?id=com.jrlandau.robotcmdr>.
 3. Allow at least 1 minute after turning the robot on to allow the robot to boot up. The robot will come up as its own WiFi network. So on the phone, if you go to Settings/WiFi, you should see a WiFi network that looks something like`ubiquityrobotWXYZ` connect to this network.  The password is `robotseverywhere`.
+{*Wayne: Mention that `WXYZ` corresponds to 4 hexadecimal digits. }*
 4. Start the Robot Commander app.  On a workstation, fetch the Robot Commander page.
+*{Wayne: Do not metion workstation here; it is discussed in the next section. }*
 5. Enter the address `ws://10.42.0.1:9090` in the space to the left of the Connect button.
 Continue with #6 below.
 
 ## To use a workstation
 1. Turn the robot on.
 2. Bring up the [Chrome browser](https://www.google.com/chrome/browser/desktop/index.html) on your workstation.
-3. Allow at least 3 minutes after turning the robot on. In your workstation, connect to the UbiquityRobot network.  The password is `robotseverywhere`.
+*{Wayne: We need to mention that they need to install Google Chrome on their workstation. }*
+3. Allow at least 3 minutes after turning the robot on. In your workstation, connect to the UbiquityRobot network.  The password is `robotseverywhere`.  *{Wayne: 'In your workstation...' => 'On your workstation...' ? }*
 4. Enter the address <https://10.42.0.1/speechcommands.html> in the address bar of the Chrome browser, and press the enter key.
 5. If the browser gives you any warnings regarding a lack of security, disregard them.
-Continue with #6 below.
+Continue with #6 below. *{Wayne: Delete this line? }*
 6. Press or click the `Connect` button. You will hear "Connected" and the button will now read "Disconnect".
 
 ## Using Robot Commander
@@ -57,3 +63,8 @@ Continue with #6 below.
 * list waypoints<br>
 * again, repeat<br>
 * help
+*{Wayne: I do not think you need to put `&gt;br&gt;` after every item in the list. }*
+
+*{Wayne: Add a brief section about shutting down robot commander and the robot. }*
+*{Wayne: Add a trouble shooting section? }*
+
