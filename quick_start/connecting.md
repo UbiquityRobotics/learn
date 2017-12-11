@@ -50,21 +50,19 @@ You will be asked for the password, which initially is "ubuntu".
 
 Finally,
 
-```
-Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
+
+>Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
   * Documentation:  https://help.ubuntu.com
   * Management:     https://landscape.canonical.com
   * Support:        https://ubuntu.com/advantage  
   0 packages can be updated.  
   0 updates are security updates.  
  Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143
- ```
-
+ 
 This robot's clock will have never synchronized with a time-server, so disregard the date. If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
 
 ```
-ssh ubuntu@ubiquityrobot.local
-sudo -S date -s @`( date -u +"%s" )`
+ssh ubuntu@ubiquityrobot.local sudo -S date -s @`( date -u +"%s" )`
 ```
 
 *{Wayne: The pifi description needs to be enabled. *}
@@ -142,7 +140,7 @@ Now that you have the correct date you can update the robot to get changes that 
 ```sudo apt-get upgrade```
 
 This should take some time, since it may have been a while since the original image was made.
--->
+
 
 Occasionally, the update/upgrade fails to complete. Usually this is due to the presence of a 'lock' file. To fix this:
 
