@@ -27,12 +27,12 @@ Step 1 - open the box
  
  ![Parts](unbparts.JPG)
  
-  In the small parts bags, you will find fastners and M6 and M3 Allen wrenches that fit the included fasteners. The additional sensors (Silver and Gold versions) are wrapped separately. (See the detailed section on camera and sensor installation.) ![camera_sensors](../camera_sensor/installation.md)
+  In the small parts bags, you will find fastners and M6 and M3 Allen wrenches that fit the included fasteners. The additional sensors (Silver and Gold versions) are wrapped separately. 
   
  
  ![RPi 3 installed](unb7.JPG)
  
- The front and back brackets can be installed using the brackets require a M6 hex (Allen wrench) We suggest an extra long (6 cm). The other included fasteners are M3 hex and a small Phillips screw for Raspi Cam attachment.
+ The front and back brackets can be installed using the brackets require a M6 hex (Allen wrench) We suggest an extra long (6 cm). The other included fasteners are M3 hex and a small Phillips screw for Raspi Cam attachment. ![See the detailed section on camera and sensor installation.](../camera_sensor/installation.md)
 
  
 Brackets
