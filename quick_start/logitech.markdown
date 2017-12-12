@@ -6,18 +6,13 @@ author: Alan Federman
 ---
 # Using the Optional Logitech Controller
 
-A standard Silver or Gold Magni equipped with a Raspberry Pi 3 with a Ubiquity Robotics SD card image is by default set up to work with a Logitech gamepad Controller. In particular the robot is tested to work with the logitech F710 controller that is widely available. It may work with other similar logitech gamepads although these are not officially supported.
+A standard Silver or Gold Magni equipped with a Raspberry Pi 3 with a Ubiquity Robotics SD card image is by default set up to work with a Logitech gamepad Controller out of the box without bothering to connect via laptop over a network. In particular the robot is tested to work with the logitech F710 controller that is widely available. It may work with other similar logitech gamepads although these are not officially supported.
 
-If you have such a controller plug the dongle in to any USB port on the Raspberry Pi 3 that is attached to the front of the robot. If you booted up with a Ubiquity Roboitcs RPi image, and have the Logitech controller dongle installed, the joystick should start to work in a couple of minutes.
-*{Wayne: There needs to be some mention that the Dongle is paired to the Logitech controller.  Does the customer
-have to do pairing before use? }*
+If you have such a controller plug the dongle in to any USB port on the Raspberry Pi 3 that is attached to the front of the robot. If you booted up with a Ubiquity Robotics RPi image, and have the Logitech controller USB dongle installed, the joystick should start to work in a couple of minutes. The Dongle is automatically paired to the Logitech controller it does not require separate software installation.
 
-You can test this by using the Joystick and seeing if the robot responds to commands. For safety sake, put the robot up on blocks first. (SAFETY TIP).
-*{Wayne: Where are the blocks?  Did we ship any?  What size are they?  How many?  Where do they go? }*
+You can test this by using the Joystick and seeing if the robot responds to commands. For safety sake, raise the robot's wheels above the floor first. (SAFETY TIP).
 
 If the wheels don't move, check the troubleshooting section further below.
-
-*{Wayne: Where is the power switch?  How do we know if the SLA batteries are charged? }*
 
 ## Logitech Controller
 
@@ -54,12 +49,11 @@ The controller is set to be very slow. You can increase the speed by using the b
 
 If nothing happens, you'll need to go back to the unboxing section and check to see
 if the robot is gettting power, the MCB is working and you can connect to the robot via a network
-(see connecting to your robot for the first time.) Check to see that your dongle is installed in the Raspberry Pi, there are fresh batteries in the Logitech Controller, and there is power going to both the Raspberry Pi and the Motors.
-*{Wayne: Most of what is described in the paragraph above is not actually mentioned in the unboxing section. }*
+(see connecting to your robot for the first time.) Check to see that your dongle is installed in the Raspberry Pi, there are fresh batteries in the Logitech Controller, and there is power going to both the Raspberry Pi and the Motors. 
 
-Next, see if you can connect to your robot.
+Next, see if you can connect to your robot using access point (AP) mode
 
-	ping robotname.local
+	ping 10.42.0.1
 
 *{Wayne: There is no prior discussion of how to connect a laptop to the robot access point.  The correct
 command is `ping ubuntu.local`.  Problems will occur if the user has changed the hostname. }*
@@ -72,7 +66,7 @@ to kill off the `ping` command. *}
 
 Then use the following command to login to the robot for example  from a laptop networked:
 
-	ssh ubuntu@10
+	ssh ubuntu@
 	
 or directly:
 
