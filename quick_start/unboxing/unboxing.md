@@ -27,7 +27,7 @@ Step 1 - open the box
  
  ![Parts](unbparts.JPG)
  
-  In the small parts bags, you will find fastners and M6 and M3 Allen wrenches that fit the included fasteners. The additional sensors (Silver and Gold versions) are wrapped separately. (See the detailed section on camera and sensor installation.) ![camera_sensors](../quick_start/camera_sensors/installation.md)
+  In the small parts bags, you will find fastners and M6 and M3 Allen wrenches that fit the included fasteners. The additional sensors (Silver and Gold versions) are wrapped separately. (See the detailed section on camera and sensor installation.) ![camera_sensors](../camera_sensor/installation.md)
   
  
  ![RPi 3 installed](unb7.JPG)
