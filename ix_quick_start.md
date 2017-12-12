@@ -6,7 +6,7 @@ permalink: ix_quick_start
 
 Things you can do with your robot right out of the box.
 
-The robot has its own network (called an access point) that enables you to do several interesting things without needing to connect to your local network. However, in this mode, you will not be able to access the rest of the Internet.  
+The robot has its own network (called an access point) that enables you to do several interesting things without needing to connect to your local network. However, in this mode, you will not be able to access the rest of the Internet.  For example, you should be able to drive the robot with our Android Robot commander application, or a certain controller pads. You also can connect directly to the robot from a workstation,to run ROS commands such as keyboard teleoperation.
 
 <H3 style="color:red">Warning</H3>
 
