@@ -27,10 +27,11 @@ This will launch the teleop program in the robot. The following screen will appe
 >Moving around:
 
 | | | |
-|----|----|----|
+|---|---|---|
 |  u | i  | o  |
 |  j | k  | l  |
 |  m | ,  | .  |
+
 The robot will respond to keystrokes as follows:
 
 | | |
