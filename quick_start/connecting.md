@@ -5,22 +5,23 @@ permalink: connecting
 ---
 # Connecting a Workstation for the First Time
 
-In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" stands for "Long Term Support" which means that the software is supported for 5 years.
+In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" stands for "Long Term Support" which means that the software is supported for 5 years.)
+It is also assumed that the workstation has WiFi capability.  Most laptops do, many desktops don't.
 
-*{Wayne:   We probably need to also mention that Windows and Mac platform need to
-run VirtualBox (or something that can run a `.vdi` file.  Also, it should be mentions, that most workstations
-do not have the ability to log into a WiFi access point. }*
+*{Wayne:   We probably need to also mention that Windows and Mac platform need torun VirtualBox (or something that can run a `.vdi` file.}*
+
 *{Wayne: This section chould be called WiFi configuration, or robot provisioning, or something other than connection. }*
+
 *{Wayne: A little more overview here would really help.  Explain that we need to configure and set up the robot WiFi. }*
 
 #### The Network
 
-If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobotXXXX` where XXXX is a number letter combination; the password to connect is `robotseverywhere`. *{Wayne: Many customers do not know what access point mode means. }*
+If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This is a WiFi mode which provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobotXXXX` where XXXX is a number letter combination; the password to connect is `robotseverywhere`.
 
 #### Connecting a Virtual Machine
 
-If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus, the VM will see whatever network your host system is connected to. If your workstation is running, shut it down, and shut down the VirtualBox program. Connect your host system to the `ubiquityrobotXXXX network`.  Now start VirtualBox and the workstation (that is, the Ubuntu system running under VBox); it will be connected to the robot's network `ubiquityrobotXXXX`.
-*{Wayne: This is pretty brief.  I'm not sure that you need to shut down VirtuaBox.  I think that all that is required is to use the standard WiFi connectivity for you Laptop.  Note, I use ther `laptop` instead of `workstation` because most desktops do not have the ability to log into a WiFi access point. }*
+If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus, the VM will see whatever network your host system is connected to. If your workstation is running, shut it down. Then connect your host system to the `ubiquityrobotXXXX network`.  Now start the workstation (that is, the Ubuntu system running under VBox); it will be connected to the robot's network `ubiquityrobotXXXX`.
+*{Wayne: This is pretty brief.  I think that all that is required is to use the standard WiFi connectivity for you Laptop.  Note, I use ther `laptop` instead of `workstation` because most desktops do not have the ability to log into a WiFi access point. }*
 
 #### Connecting a Linux Workstation
 
@@ -30,7 +31,7 @@ If you are using a Linux system instead of VirtualBox, connect to the `ubiquityr
 
 #### Connecting to the Robot and Logging In
 
-Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (ctrl-alt-t if you are using linux). In that window, log in by typing
+Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
 
 ```ssh ubuntu@ubiquityrobot.local```
 

@@ -8,8 +8,8 @@ permalink: keyboard_teleop
 Connect to your robot and log in. (see connecting to your robot for the first time).
 
 To drive the robot from an ssh window, check to see if the ROS magni_base program is running:
- 
-    rostopic list 
+
+    rostopic list
 
 Next, run the keyboard teleop program:
 
@@ -26,7 +26,7 @@ When teleop is launched the following screen appears:
 
 >Moving around:
 
->| | | |
+| | | |
 |----|----|----|
 |  u | i  | o  |
 |  j | k  | l  |
