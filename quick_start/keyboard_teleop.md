@@ -15,14 +15,12 @@ Next, run the keyboard teleop program:
 
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
-This will run the program in the robot.
-<!--Alternatively from a second terminal window on your workstation, you can run the program in the workstation and let it communicate with the robot:
+This will launch the teleop program in the robot. The following screen will appear:
 
+<!--Alternatively from a second terminal window on your workstation, you can run the program in the workstation and let it communicate with the robot:
     export ROS_MASTER_URI=http://ubiquityrobotXXXX.local:11311
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 -->    
-
-When teleop is launched the following screen appears:
 
 >Reading from the keyboard and Publishing to Twist!
 
