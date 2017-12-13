@@ -6,7 +6,8 @@ permalink: connecting
 # Connecting a Workstation for the First Time
 
 In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" stands for "Long Term Support" which means that the software is supported for 5 years.)
-It is also assumed that the workstation has WiFi capability.  Most laptops do, many desktops don't.
+
+The workstation **must** have WiFi capability.  Most laptops do, many desktops don't.
 
 *{Wayne:   We probably need to also mention that Windows and Mac platform need torun VirtualBox (or something that can run a `.vdi` file.}*
 
@@ -59,7 +60,7 @@ Finally,
   0 packages can be updated.  
   0 updates are security updates.  
  Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143
- 
+
 This robot's clock will have never synchronized with a time-server, so disregard the date. If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
 
 ```
