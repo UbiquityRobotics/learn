@@ -25,3 +25,5 @@ cmd_vel(geometry_msgs/Twist): Commands to move the robot.
 Subscriptions (i.e., input)
 
 fiducial_transforms:(fiducial_msgs/FiducialTransformArray)
+
+uses the fiducials package https://github.com/UbiquityRobotics/fiducials

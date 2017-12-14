@@ -31,7 +31,7 @@ Now reboot the robot.
 
 The robot will reboot and attach to the “MyNetwork” wifi network. But your workstation is not connected to “MyNetwork”, because we left it on ubiquityrobot.  So attach your workstation to "MyNetwork".
 
-If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, close VirtualBox, change the host network attachment, then start VirtualBox and then the workstation again.
+If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, change the host network attachment, then start the workstation again.
 
 To test,
 
@@ -42,6 +42,8 @@ The ping result shows the network address of the robot:
  >PING ubiquityrobot.local (10.0.0.113) 56(84) bytes of data.
  64 bytes from 10.0.0.113: icmp_seq=1 ttl=64 time=97.6 ms
  64 bytes from 10.0.0.113: icmp_seq=2 ttl=64 time=5.70 ms
+
+ Press control-c to stop the pinging'
 
 Now ssh into the robot.
 
