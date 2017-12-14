@@ -6,12 +6,14 @@ permalink: ix_programming
 
 ##	Programming Your Robot
 
-This section will be based on one or more of our demos, explaining how they are programmed, with reference to the code in the repo.
+This section will be based on one or more of our apps, explaining how they are programmed, with reference to the code in the repo.
 
 Also we should explain that these robots use ROS
 refer to a couple of books,
 describe the UR components (move_basic,...)
 and wish the reader good luck
+
+[The Fiducial Follow App](fiducial_follow_app)
 
 <!--
 
