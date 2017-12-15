@@ -1,10 +1,10 @@
 ---
 layout: default
-title:  "How to setup a ROS workstation"
+title:  "How to set up a ROS workstation"
 permalink: workstation_setup
 ---
 
-# How to setup a ROS workstation
+# How to set up a ROS workstation
 
 A ROS workstation is a full setup of ROS (the Robot Operating System) on a desktop or laptop computer, that you can connect to your robot. ROS shares all the internal communication within the robot with a ROS workstation over your network. Thus you can monitor internal robot activity, see what the robot is seeing, send commands and even offload data processing tasks from the robot on to more powerful computers. A ROS workstation is really helpful if you want to do anything beyond simply driving the robot around and getting it to do voice commands.
 
@@ -59,19 +59,19 @@ using the password which is
 
   To change the hostname you edit a single file /etc/hostname that only contains the name of your robot computer on the network. You can do this using your favorite editor (e.g. pico, nano, vi, vim) but it is convenient to just enter the following command to the robot:
 
-    `sudo echo NEWHOSTNAME > /etc/hostname`
+    `sudo bash -c "echo NEWHOSTNAME > /etc/hostname"`
 
 * The next step is to edit the file /etc/hosts on the robot to add two lines that again tell your computer what it is called. You can use your favorite editor to add the two lines but again you can just use the command line.
 
-  `echo " 128.0.0.1 NEWHOSTNAME" >> /etc/hosts`
+  `sudo bash -c "echo ' 128.0.0.1 NEWHOSTNAME" >> /etc/hosts'"`
 
-  `echo " 128.0.0.1 NEWHOSTNAME.local" >> /etc/hosts`
+  `sudo bash -c "echo ' 128.0.0.1 NEWHOSTNAME.local" >> /etc/hosts'"`
 
 * If you now reboot the robot the new hostname will be used
 
   `sudo reboot`
 
-  Now the robot will come up with the NEWHOSTNAME like this:
+  Now the robot can be addressed with the NEWHOSTNAME like this:
 
   `ssh ubuntu@NEWHOSTNAME.local`
 
