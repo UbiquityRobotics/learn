@@ -15,24 +15,9 @@ There are two methods to get a ROS workstation setup.
 
 ROS runs on Ubuntu Linux. However not everyone has Ubuntu Linux installed on their machine, so we've created a virtual machine (VM) as a VirtualBox image. This is a system that allows most any laptop or computer to pretend that it is a Ubuntu Linux machine. Our VM has a full install of Ubuntu, ROS and Ubiquity Robotics' software as appropriate for a workstation. The good news is that its quick and easy to get started this way. The downside is that the process of virtualization saps performance from your system so things will not be as fast as if you are running natively. On a fast system you may not notice this. In any event, the virtualization system is a good way to try out having a workstation before committing to set one up on your laptop.
 
-### 1) Using our out of the box virtual machine
+### 1) Using our out-of-the-box virtual machine
 
-Download the appropriate VirtualBox software from [the VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and install it.
-
-Download the [Ubiquity Robotics Virtual Machine](https://drive.google.com/drive/folders/0B1zeRbBVLXhzZ0Q1TkxtbUxIcEU) and save it in VirtualBox's folder for virtual machines.  On Windows this is \Users\<username>\VirtualBox VMs.
-
-Unzip the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vbox`, and double-click it.  This will cause VirtualBox to import the VM and open the VirtualBox Manager.
-
-Check the following parameters of the VM:
-
-  * System/Base Memory: at least 2048 MB, why not 4096?
-  * Display/Video Memory: at least 64 MB, why not 128?
-  * Storage: at least 25GB
-  * Network/Adapter 1: Bridged Adapter
-
-Start the VM. Your user ID is "ubuntu", and the password is "ubuntu".
-Your workstation is ready to use.
-
+This is covered in the section above, [Connecting a Workstation for the First Time](connecting).  ROS is already set up on this virtual machine.
 
 ### 2) Install ROS on a native Linux partition of your system
 
@@ -77,7 +62,7 @@ using the password which is
 
 ## Set environment variables on the workstation
 
-* Now go to your workstation terminal window and set its environment variables. When you set up ROS it assumes that the computer that it is set up on is the robot. This is not what you want, you want
+* Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
 
   `export ROS_MASTER_URI=http://NEWHOSTNAME.local:11311`
 

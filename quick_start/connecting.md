@@ -7,15 +7,33 @@ permalink: connecting
 
 In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" stands for "Long Term Support" which means that the software is supported for 5 years.)
 
-The workstation **must** have WiFi capability.  Most laptops do, many desktops don't.
+**The workstation must have WiFi capability.**  Most laptops do, many desktops don't.
 
-*{Wayne:   We probably need to also mention that Windows and Mac platform need torun VirtualBox (or something that can run a `.vdi` file.}*
+Not everyone has Ubuntu Linux installed on their machine, so we've created a virtual machine (VM) as a VirtualBox image. This is a system that allows most any computer to pretend that it is a Ubuntu Linux machine. Our VM has a full install of Ubuntu, ROS (Robot Operating System) and Ubiquity Robotics' workstation software. The good news is that its quick and easy to get started this way. The downside is that the process of virtualization saps performance from your system so things will not be as fast as if you are running natively. On a fast system you may not notice this. In any event, the virtualization system is a good way to try out having a workstation before committing to set one up on your laptop.
+
+### Using our out-of-the-box virtual machine workstation
+
+* Download the appropriate VirtualBox software from [the VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and install it.
+
+*  Download the [Ubiquity Robotics Virtual Machine](https://drive.google.com/drive/folders/0B1zeRbBVLXhzZ0Q1TkxtbUxIcEU) and save it in VirtualBox's folder for virtual machines.  On Windows this is \Users\<username>\VirtualBox VMs.
+
+* Unzip the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vbox`, and double-click it.  This will cause VirtualBox to import the Virtual Machine (the VM) and open the VirtualBox Manager.
+
+* Check the following parameters of the VM:
+
+  * System/Base Memory: at least 2048 MB, why not 4096?
+  * Display/Video Memory: at least 64 MB, why not 128?
+  * Storage: at least 25GB
+  * Network/Adapter 1: Bridged Adapter
+
+* Start the VM. Your user ID is "ubuntu", and the password is "ubuntu".
+Your workstation is ready to use.
 
 *{Wayne: This section chould be called WiFi configuration, or robot provisioning, or something other than connection. }*
 
-*{Wayne: A little more overview here would really help.  Explain that we need to configure and set up the robot WiFi. }*
+In a later section we will explain how to attach the robot to an existing WiFi network and how ROS can take advantage of that to control the robot.
 
-#### The Network
+#### The Network, out of the box
 
 If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This is a WiFi mode which provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobotXXXX` where XXXX is a number letter combination; the password to connect is `robotseverywhere`.
 
@@ -26,9 +44,7 @@ If you are running under VirtualBox, you will have installed this virtual machin
 
 #### Connecting a Linux Workstation
 
-If you are using a Linux system instead of VirtualBox, connect to the `ubiquityrobotXXXX` network using the linux system's facilities.
-*{Wayne: Perhaps use wording like, 'If you are running, Ubuntu 16.04LTS natively on your laptop...'  Notice that I say
-`laptop` and not workstation, since laptops have WiFi support and desktops tend not to. }*
+If you are running Ubuntu 16.04LTS natively, connect to the `ubiquityrobotXXXX` network using the Ubuntu system's facilities.
 
 #### Connecting to the Robot and Logging In
 
@@ -52,7 +68,6 @@ You will be asked for the password, which initially is "ubuntu".
 
 Finally,
 
-
 >Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
   * Documentation:  https://help.ubuntu.com
   * Management:     https://landscape.canonical.com
@@ -61,7 +76,11 @@ Finally,
   0 updates are security updates.  
  Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143
 
-This robot's clock will have never synchronized with a time-server, so disregard the date. If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
+<!--
+This robot's clock will never have synchronized with a time-server, so disregard the date.
+
+
+If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
 
 ```
 ssh ubuntu@ubiquityrobot.local sudo -S date -s @`( date -u +"%s" )`
@@ -69,7 +88,6 @@ ssh ubuntu@ubiquityrobot.local sudo -S date -s @`( date -u +"%s" )`
 
 *{Wayne: The pifi description needs to be enabled. *}
 
-<!--
 Next, use pifi to list the nearby networks and to connect your robot to your local area network:
 
  ```ubuntu@ubiquityrobot:~$ pifi status```
@@ -147,3 +165,5 @@ This should take some time, since it may have been a while since the original im
 Occasionally, the update/upgrade fails to complete. Usually this is due to the presence of a 'lock' file. To fix this:
 
         sudo rm /var/lib/dpkg/lock
+
+-->

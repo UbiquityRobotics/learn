@@ -15,11 +15,11 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 #### Quick Start
 
 1.	[Unboxing, putting in batteries and charging them](unboxing)
-2.	[How to drive with optional logitech controller](logitech)
+2.	[How to drive with optional Logitech controller](logitech)
 3.	[Control the robot by voice using Robot Commander on an Android phone](robot_commander)
 <!--- this also works
 <a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>-->
-4.  [Connecting a workstation to Magni for the First Time](connecting)
+4.  [Connecting a workstation for the First Time](connecting)
 5.	[Driving a robot with a Keyboard](keyboard_teleop)
 6.	[How to set up cameras and sensors](camera_sensors)
 7.	[How to make Follow Me work with a fiducial](fiducial_follow)
