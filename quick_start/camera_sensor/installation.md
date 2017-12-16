@@ -37,7 +37,7 @@ Insert the ribbon cable on both the left and right IR cameras.
 
 ![IR ](a6.jpg)
 
-The cameras are installed with thre M6 bolts.
+The cameras are installed with three M4 bolts.
 
 ![IR ](a7.jpg)
 
@@ -51,11 +51,11 @@ The cables from the camera/IR LED wings are atached to the circuit board.
 
 ![sonar ](a9.jpg)
 
-The sonar sensors do not require the IR pakage to work, simply install the 4 standoff without the IR circuit board.
+The sonar sensors do not require the IR pakage to work, simply install the 4 standoffs without the IR circuit board.
 
 ![sonar ](a10.jpg)
 
-The Sonar package is attached to the standoffs with 4 M3 Allen head screws.
+The Sonar package is attached to the standoffs with 4 M2 Allen head screws.
 
 ![sonar cable ](a11.jpg)
 
@@ -63,10 +63,10 @@ Last step is attache the 50 pin ribbon cable.
 
 ![Cover](a12.jpg)
 
-Lastly attach the cover plate with 6 M6 screws.  You are done, hooray!
+Lastly attach the cover plate with 6 M4 screws.  You are done, hooray!
 
 Note: on testing the camera.  If you find that fiducial follow or waypoint navigation aren't working, you need a quick way to test the camera.  if you can open a ssh session to the robot, try the following command:
 
 raspistill -o test.jpg
 
-If you don't get an error message, you have a good camera. An (mmal) error message indicates the camera is not being detected by the RPi, this is usually due to a poor cable connection or less likely a bad camera.
+If you don't get an error message, you have a good camera. An (mmal) error message indicates the camera is not being detected by the Raspberry Pi, this is usually due to a poor cable connection or less likely a bad camera. 
