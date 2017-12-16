@@ -8,7 +8,7 @@ permalink: loki_beta
 
 Loki is a ROS controlled differential drive robot designed for educational purposes by Ubiquity Robotics.
 As such, it has code that is in many cases identical to our general purpose Magni Platform. A program written to navigate a
-one meter square for Loki wil navigate an Identical one meter square for Magni
+one meter square for Loki wil navigate an Identical one meter square for Magni.
 
 To get started, one needs to attach a Raspberry Pi 3 with an SD card image supplied by Ubiquity Robotics.
 It is possible to intall the PI incorrectly which will result in a "fried Pi". Be careful!
@@ -44,7 +44,7 @@ To logon to the robot:
 You can use the robot in Access Point mode, or you can connect to your local area network via the 
 following commands:
 
-(Useful hint:  It helps to always use IP numbers instead of names in ROS.  I do this by including the following lines in my .bashrc Ubuntu startup script:
+(Useful hint:  Though almost all local networks support DHCP, rarely, it may not work. It helps to use IP numbers instead of names in ROS in these situations.  I do this by including the following lines in my .bashrc Ubuntu startup script:
 
 source ~/catkin_ws/devel/setup.bash
 ip="$(hostname -I|cut -d ' ' -f 1)"
