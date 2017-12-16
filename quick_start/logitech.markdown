@@ -49,14 +49,18 @@ The controller is set to be very slow. You can increase the speed by using the b
 
 If nothing happens, you'll need to go back to the unboxing section and check to see
 if the robot is gettting power, the MCB is working and you can connect to the robot via a network
-(see connecting to your robot for the first time.) Check to see that your dongle is installed in the Raspberry Pi, there are fresh batteries in the Logitech Controller, and there is power going to both the Raspberry Pi and the Motors. 
+(see connecting to your robot for the first time.) Check to see that your dongle is installed in the Raspberry Pi, there are fresh batteries in the Logitech Controller, and there is power going to both the Raspberry Pi and the motors. If the LEDs and the power switched are lit, you can additionally test to see if the wheels resist being turned.
 
-Next, see if you can connect to your robot using access point (AP) mode
+Next, see if you can connect to your robot using access point (AP) mode:
 
 	ping 10.42.0.1
+	
+(See the section on connecting to the robot.)
 
 *{Wayne: There is no prior discussion of how to connect a laptop to the robot access point.  The correct
-command is `ping ubuntu.local`.  Problems will occur if the user has changed the hostname. }*
+command is `ping ubuntu.local`.  Problems will occur if the user has changed the hostname.}*
+
+*{Alan: I disagree pinging to the Access Point implies the robot isn't networked yet }*
 
 the robot responds by giving you its IP number.
 
@@ -66,13 +70,14 @@ to kill off the `ping` command. *}
 
 Then use the following command to login to the robot for example  from a laptop networked:
 
-	ssh ubuntu@
+	ssh ubuntu@robotname.local     
+
+(note: robotname = ubiquityrobot initially, but may have changed if networked)
 	
 or directly:
 
 	ssh ubuntu@10.42.0.1
-	
-*{Wayne: The correct command is `ssh ubuntu@ubuntu.local` (I think.)  The password is `ubuntu` }*
+
 
 
 You may get asked to authorize your key, say `yes`.
