@@ -36,12 +36,11 @@ Other possible way to display an image
     
 </div-->
 
-To operate the controller, hold down the deadman button and move the joystick. 
+To operate the controller, hold down the deadman button (LB) and move the joystick. 
 
 Up - Forward, Down - Back, Left - rotate counter clockwise, Right - rotate clockwise
 
-The controller is set to be very slow. You can increase the speed by using the button below the deadman, this will increase the maximum speed by about 25%.  Moving the joytick to a position between full up and full right will move the robot in a curved path.
-*{Wayne: There should be a picture of the dead-man and the speed button. }*
+The controller is set to be very slow. You can increase the speed by using the (LT) button below the deadman, this will increase the maximum speed by about 25%.  Moving the joytick to a position between full up and full right will move the robot in a curved path.
 
 
 
@@ -57,27 +56,14 @@ Next, see if you can connect to your robot using access point (AP) mode:
 	
 (See the section on connecting to the robot.)
 
-*{Wayne: There is no prior discussion of how to connect a laptop to the robot access point.  The correct
-command is `ping ubuntu.local`.  Problems will occur if the user has changed the hostname.}*
-
-*{Alan: I disagree pinging to the Access Point implies the robot isn't networked yet }*
-
-the robot responds by giving you its IP number.
-
-*{Wayne: There should be an example of `ping` output.  The customer should also be told to type Control-C
-to kill off the `ping` command. *}
+the robot responds by giving you its IP number. Type Control-C
+to kill off the `ping` command.
 
 
 Then use the following command to login to the robot for example  from a laptop networked:
 
-	ssh ubuntu@robotname.local     
-
-(note: robotname = ubiquityrobot initially, but may have changed if networked)
-	
-or directly:
 
 	ssh ubuntu@10.42.0.1
-
 
 
 You may get asked to authorize your key, say `yes`.
@@ -97,7 +83,7 @@ upon success:
 	* Support: https://ubuntu.com/advantage
 
 
-	1 package can be updated.
+	0 package can be updated.
 
 	0 updates are security updates.
 
@@ -143,7 +129,5 @@ The folowing command
 	/ubiquity_velocity_controller/odom
 
 Shows everything is running. You now should be able use the controller to drive the robot.
-
-{Wayne: Trouble shooting sections are really valuable.  Good job. }*
 
 
