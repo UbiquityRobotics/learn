@@ -8,14 +8,14 @@ permalink: loki_beta
 
 Loki is a ROS controlled differential drive robot designed for educational purposes by Ubiquity Robotics.
 As such, it has code that is in many cases identical to our general purpose Magni Platform. A program written to navigate a
-one meter square for Loki wil navigate an Identical one meter square for Magni.
+one meter square for Loki wil navigate an identical one meter square for Magni. Loki is designed to be a fully capable ROS robot at the absolutely lowest price possible. It allows those with extremely limited budgets to learn how to program a real robot. Of course, there are some limitations. It is dificult to add sensors because of limited power. There are no cliff detectors, so running on a table exposes the robot to a fall. The soft rubber tires can make ugly scuff marks on smooth painted surfaces. Running on a 1M by 1M sheet of plywood or foam board is recommended.
 
 To get started, one needs to attach a Raspberry Pi 3 with an SD card image supplied by Ubiquity Robotics.
 It is possible to intall the PI incorrectly which will result in a "fried Pi". Be careful!
 
 ![Fried Pi](loki_rpifatal.jpg)
 
-The Rpi 3 pulls over 3 amps, so be sure you supply at least 2.5 amps (no camera) or 3 amps if you are using an Raspicam.
+The Rpi 3 pulls over 2 amps, so be sure you supply at least 2.5 amps (no camera) or 3 amps if you are using an Raspicam.
 using USB accessories is not recommnded unless addional power is provided.
 
 ![Loki Top View](loki_top1.jpg)
@@ -115,10 +115,11 @@ will bring up rviz and show any sonars if present.
 
 If you've gotten this far, pour yourself an adult beverage, do your victory dance, and be proud of yourself!
 
-
 ![Loki RVIZ](loki_rviz.jpg)
 
-You now can start experimenting with writng your own scripts, or working with published tutorials to improve your mastery. Perhaps even work on some HBRC challenges. All Beta testers are encoraged to submit code changes and comments to the Github.
+You now can start experimenting with writng your own scripts, or working with published tutorials to improve your mastery. Perhaps even work on some HBRC challenges. All Beta testers are encoraged to submit code changes and comments to the Github. We know a lot of work needs to be done on the code, particularly on the robot model.
+
+As a next step try running some ROS tutorials.  I have had some success runing the programs from Patrick Goebel's ROS by Example E-book. I believe the Indigo code is still available via Github at PiRobot(SP?).
 
 Thanks for being a Beta Loki tester
 
