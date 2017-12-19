@@ -11,12 +11,15 @@ As such, it has code that is in many cases identical to our general purpose Magn
 one meter square for Loki wil navigate an identical one meter square for Magni. Loki is designed to be a fully capable ROS robot at the absolutely lowest price possible. It allows those with extremely limited budgets to learn how to program a real robot. Of course, there are some limitations. It is dificult to add sensors because of limited power. There are no cliff detectors, so running on a table exposes the robot to a fall. The soft rubber tires can make ugly scuff marks on smooth painted surfaces. Running on a 1M by 1M sheet of plywood or foam board is recommended.
 
 To get started, one needs to attach a Raspberry Pi 3 with an SD card image supplied by Ubiquity Robotics.
-It is possible to intall the PI incorrectly which will result in a "fried Pi". Be careful!
+It is possible to intall the Pi incorrectly which will result in a "fried Pi". Be careful!
+
+*{Joe:  tell them exactly what they should avoid doing.  "Be careful" is not enough }*
 
 ![Fried Pi](loki_rpifatal.jpg)
 
 The Rpi 3 pulls over 2 amps, so be sure you supply at least 2.5 amps (no camera) or 3 amps if you are using an Raspicam.
-using USB accessories is not recommnded unless addional power is provided.
+using USB accessories is not recommnded unless addional 
+is provided.  {*Joe: How do you supply those amps?*}
 
 ![Loki Top View](loki_top1.jpg)
 
@@ -31,9 +34,11 @@ robot are the best source of instructions.
 
 Depending on the type of battery supplied, the Loki will be turned on via the power switch or jumper. (Note: some of the 5v LiPo battery packs do not sense the switch, and need to be powered on manually.) When the Loki turns on both the RPi red LED and all the Loki LEDs should light. If firmware is working the LEDs should blink when you turn the wheels. The wheels should be able to turn freely.
 
+*{Joe:  Why not refer to the connection instructions we already have?  Isn't it the same?  Having 2 asks for trouble, IMHO}*
+
 ## Connecting to the Loki.
 
-When the Loki boots in a new environment, it will attempt to connect to know WiFi networks. If it can’t find any known networks it will open up a WiFi access point in a couple of minutes. To connect to the access point use your network icon and Search for “UbiquityRobot####” the “####” are the last two unique hexadecimal digit of the WiFi hardware MAC address.  The password it “robotseverywhere”  The robots IP number is 10.42.0.1.
+When the Loki boots in a new environment, it will attempt to connect to known WiFi networks. If it can’t find any known networks it will open up a WiFi access point in a couple of minutes. To connect to the access point use your network icon and Search for “UbiquityRobot####” the “####” are the last two unique hexadecimal digit of the WiFi hardware MAC address.  The password it “robotseverywhere”  The robots IP number is 10.42.0.1.
 
 To logon to the robot:
 
