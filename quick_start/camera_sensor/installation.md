@@ -43,6 +43,9 @@ The cameras are installed with three M4 bolts.
 
 Next, attach the circuit board for the IR cameras with 4 standoffs.
 
+![standoff](standoff.jpg)
+
+The standoffs can be inserted by hand, no tools are required.
 ![IR ](a8.jpg)
 
 The cables from the camera/IR LED wings are atached to the circuit board.
