@@ -279,7 +279,7 @@ The basic workflow is:
 
 4. The reader quickly edits in a simple embedded 
 
-4. The reader submits a pull request.
+4. The reader submits their change as a pull request in the case of their documentation change having a code implication or if it simply needs review and discussion. The overwhelming majority of documentation changes, however should just be committed directly to the master branch. We can revert changes that proove unpopular.
 
 5. From this point forward, the standard GitHub issue tracking system takes over.
    
