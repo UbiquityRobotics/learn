@@ -12,6 +12,8 @@
 
 * [Programming Your Robot](ix_programming)
 
+  A look at some apps for the robot.
+
 * [Setup In Depth](setup/setup.md):
 
   Everything from ordering batteries and network cables to figuring out networking issues.
