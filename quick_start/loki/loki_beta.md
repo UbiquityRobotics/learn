@@ -17,8 +17,7 @@ It is possible to intall the Pi incorrectly which will result in a "fried Pi". B
 ![Fried Pi](loki_rpifatal.jpg)
 
 The Rpi 3 pulls over 2 amps, so be sure you supply at least 2.5 amps (no camera) or 3 amps if you are using an Raspicam.
-using USB accessories is not recommnded unless addional 
-is provided.  {*Joe: How do you supply those amps?*}
+using USB accessories is not recommnded unless addional power from a second battery is provided.  
 
 ![Loki Top View](loki_top1.jpg)
 
@@ -57,7 +56,7 @@ export ROS_IP=$ip
 ## Testing without a LAN
 
 It is possible to test basic operation of the robot without a network, but for running RVIZ, a network is needed.
-Keyboard teleop  and speech commands are available without a network, but it recommended you connect your robot to a network fisrt, so that you can run system updates and upgrades.
+Keyboard teleop  and speech commands are available without a network, but it recommended you connect your robot to a network first, so that you can run system updates and upgrades.
 
 
 ## Connecting to a Local Area WiFi Network on the Robot
