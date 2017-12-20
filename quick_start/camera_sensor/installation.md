@@ -4,12 +4,13 @@ title:  "Camera and Sensor Installation"
 permalink: camera_sensors
 author: Alan Federman
 ---
- # Camera and Sensor Installation
 
-Depending on your version of Magni, you may have a different suite of sensors. Silver and Gold versions come with a Raspberry Pi Camera. the Raspicam is needed for fiducial follow, partybot and waypoint navigation. The Silver version comes with a sonar short
+# Camera and Sensor Installation
+
+Depending on your version of Magni, you may have a different suite of sensors. Silver and Gold versions come with a Raspberry Pi Camera. The Raspicam is needed for fiducial follow, partybot and waypoint navigation. The Silver version comes with a sonar short
 range obstacle avoidance system, and the Gold version includes both the sonar and an IR long range obtacle avoidance package.
 
- ## Camera Installation
+## Camera Installation
 
 ![Camera in Bracket](a1.jpg)
 
