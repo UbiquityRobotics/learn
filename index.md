@@ -8,7 +8,7 @@
 
 * [Doing More With Your Robot](ix_doing_more)
 
-  Connecting your robot to your LAN
+  You can do even more after connecting your robot to your LAN
 
 * [Programming Your Robot](ix_programming)
 

@@ -6,11 +6,13 @@ author: Alan N. Federman
 ---
 # Driving a Robot with a Keyboard
 
-Connect to your robot and log in. (see connecting to your robot for the first time). If you are in AP mode you can use teleop by log on to the robot from a ssh window. First check to see if the ROS magni_base program is running:
+Connect to your robot and log in, following the instructions in [Connecting to your robot for the first time](connecting). Log in to the robot from an ssh window, as before.
+
+After logging in, check to see if the ROS magni_base program is running:
 
     rostopic list
 
-Next, start the keyboard teleop program:
+Next, start the keyboard teleop program.  In the ssh window, type:
 
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
@@ -69,9 +71,4 @@ currently:	speed 0.5	turn 1
 Please note Holonomic mode does not apply to a Magni or Loki, as the robots are differential drive.
 -->
 
-
-You can also run teleop-twist keyboard from your workstation, but you need to set the ROS_MASTER_URI.
-
-export ROS_MASTER_URI=http//:'robotname'.local:11311   
-
-(note if you are networked it is prefered to use the robot name instead of the robot's IP number.)
+You can also run teleop-twist keyboard with the program running in your workstation. To do this you must connect the robot to your local WiFi network, and set up ROS on the workstation.  These are discussed under [Doing More](ix_doing_more), below.
