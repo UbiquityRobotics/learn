@@ -28,7 +28,7 @@ Then attach the cable to the Pi, the 'blue' part of the cable faces toward the U
 
 ![IR ](a4.jpg)
 
- ## GOLD IR Long Range Sensors
+## GOLD IR Long Range Sensors
 
 To begin the sensor package installation, insert one end of the 50 pin ribbon cable into the Main controller board, the socket is above the Raspberry Pi. The next steps concern the Gold version IR sensor package.  If you do not have this sensor, skip these steps and continue to sonar sensors.
 
@@ -51,7 +51,7 @@ The standoffs can be inserted by hand, no tools are required.
 
 The cables from the camera/IR LED wings are atached to the circuit board.
 
- ## Sonar Sensors (SILVER)
+## Sonar Sensors (SILVER)
 
 ![sonar ](a9.jpg)
 
