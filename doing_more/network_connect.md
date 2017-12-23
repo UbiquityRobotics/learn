@@ -78,6 +78,18 @@ You should see a list of topics including /joy which means you can drive with a 
 At this point you can drive the robot from your workstation's
 keyboard, just as in the Quick Start section called [Driving a Magni with a keyboard](keyboard_teleop).
 
+# Changing the hostname
+
+  ```$ sudo pifi set-hostname loki227d
+Changing hostname from ubiquityrobot to loki227d```
+
+This is recommended. We suggest you keep the last two digits of the MAC address at the end of the robot's name to make it unique, but this is optional. You can chage the hostname to whatever you wish.
+
+
+to change your robot's name (hostname):
+
+
+
 There is some housekeeping that you can perform at this point, to keep your robot up to date.  Begin by checking the date.
 
 ```ubuntu@ubiquityrobot:~$ date```
