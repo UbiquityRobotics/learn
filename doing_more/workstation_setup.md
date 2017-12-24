@@ -42,15 +42,19 @@ using the password which is
 
   Note that you now have two terminal windows open on your workstation.  The first one has the workstation command line, but the second has the robot's command line, because you used `ssh` to connect it to the robot.
 
-  To change the hostname you edit a single file /etc/hostname that only contains the name of your robot computer on the network. You can do this using your favorite editor (e.g. pico, nano, vi, vim) but it is convenient to just enter the following command to the robot:
+  To change the hostname you can use pifi. Type the command:
 
-    `sudo bash -c "echo NEWHOSTNAME > /etc/hostname"`
+    `sudo pifi set-hostname NEWHOSTNAME`
 
-* The next step is to edit the file /etc/hosts on the robot to add two lines that again tell your computer what it is called. You can use your favorite editor to add the two lines but again you can just use the command line.
+<!--  edit a single file /etc/hostname that only contains the name of your robot computer on the network. You can do this using your favorite editor (e.g. pico, nano, vi, vim) but it is convenient to just enter the following command to the robot: -->
 
-  `sudo bash -c "echo ' 128.0.0.1 NEWHOSTNAME" >> /etc/hosts'"`
+<!--    `sudo bash -c "echo NEWHOSTNAME > /etc/hostname"`-->
 
-  `sudo bash -c "echo ' 128.0.0.1 NEWHOSTNAME.local" >> /etc/hosts'"`
+<!--* The next step is to edit the file /etc/hosts on the robot to add two lines that again tell your computer what it is called. You can use your favorite editor to add the two lines but again you can just use the command line.-->
+
+<!--`sudo bash -c "echo ' 128.0.0.1 NEWHOSTNAME" >> /etc/hosts'"`
+
+  `sudo bash -c "echo ' 128.0.0.1 NEWHOSTNAME.local" >> /etc/hosts'"`-->
 
 * If you now reboot the robot the new hostname will be used
 

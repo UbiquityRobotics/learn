@@ -18,7 +18,6 @@
 
   Everything from ordering batteries and network cables to figuring out networking issues.
 
-
 * [Miscellaneous](misc/misc.md)
 
 <!--
