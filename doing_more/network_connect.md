@@ -59,7 +59,7 @@ To test,
 
 The ping result shows the network address of the robot:
 
- >PING ubiquityrobot.local (10.0.0.113) 56(84) bytes of data.  
+ >PING NEWHOSTNAME.local (10.0.0.113) 56(84) bytes of data.  
  64 bytes from 10.0.0.113: icmp_seq=1 ttl=64 time=97.6 ms  
  64 bytes from 10.0.0.113: icmp_seq=2 ttl=64 time=5.70 ms  
 
