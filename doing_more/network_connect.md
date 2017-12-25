@@ -9,7 +9,7 @@ Connect your workstation to the robot as described in [Connecting a Workstation 
 
 Before you go on, you should change the hostname of your robot, to distinguish your robot from others. Open a new terminal window, and log in to the robot with ssh:
 
-ssh ubuntu@ubiquityrobot.local, using the password which is ubunutu.
+ssh ubuntu@ubiquityrobot.local, using the password which is "ubunutu".
 
 Note that you now have two terminal windows open on your workstation.  The first one has the workstation command line, but the second has the robot's command line, because you used `ssh` to connect it to the robot.
 
@@ -32,7 +32,7 @@ Use pifi to list the nearby networks:
 
  ubuntu@NEWHOSTNAME:~$ pifi status
 
- >Network Mangager reports AP mode support on B8:27:EB:2B:3F:6B
+ >Network Manager reports AP mode support on B8:27:EB:2B:3F:6B
  Device is currently acting as an Access Point
 
  ```ubuntu@NEWHOSTNAME:~$ pifi list seen```
@@ -41,7 +41,7 @@ Use pifi to list the nearby networks:
 Neighbor's network
 Other Network
 
-We want to switch to MyNetwork, and we have verified that it's present.  So:
+We want to switch to MyNetwork, and we have now verified that it's present.  So:
 
 ```ubuntu@NEWHOSTNAME:~$ sudo pifi add “MyNetwork”  “password”```
 
@@ -59,9 +59,9 @@ To test,
 
 The ping result shows the network address of the robot:
 
- >PING ubiquityrobot.local (10.0.0.113) 56(84) bytes of data.
- 64 bytes from 10.0.0.113: icmp_seq=1 ttl=64 time=97.6 ms
- 64 bytes from 10.0.0.113: icmp_seq=2 ttl=64 time=5.70 ms
+ >PING ubiquityrobot.local (10.0.0.113) 56(84) bytes of data.  
+ 64 bytes from 10.0.0.113: icmp_seq=1 ttl=64 time=97.6 ms  
+ 64 bytes from 10.0.0.113: icmp_seq=2 ttl=64 time=5.70 ms  
 
  Press control-c to stop the pinging'
 
