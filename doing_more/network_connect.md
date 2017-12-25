@@ -7,35 +7,55 @@ permalink: connect_network
 
 Connect your workstation to the robot as described in [Connecting a Workstation for the First Time](connecting).  If you haven't done this step yet, the robot is connected to its own network, which is called ubiquityrobot, and your workstation is connected to that. We assume you have ssh'ed into the robot.
 
+Before you go on, you should change the hostname of your robot, to distinguish your robot from others. Open a new terminal window, and log in to the robot with ssh:
+
+ssh ubuntu@ubiquityrobot.local, using the password which is ubunutu.
+
+Note that you now have two terminal windows open on your workstation.  The first one has the workstation command line, but the second has the robot's command line, because you used `ssh` to connect it to the robot.
+
+To change the hostname you can use pifi. Type the command:
+
+    sudo pifi set-hostname NEWHOSTNAME
+
+Note: "sudo" is a linux command that allows administrative actions.  
+Linux will often ask you for your password (it's "ubuntu", if you haven't changed it) when you use sudo.
+
+If you now reboot the robot the new hostname will be used
+
+    sudo reboot
+
+Now the robot can be addressed with the NEWHOSTNAME like this:
+
+    ssh ubuntu@NEWHOSTNAME.local
+
 Use pifi to list the nearby networks:
 
- ```ubuntu@ubiquityrobot:~$ pifi status```
+ ubuntu@NEWHOSTNAME:~$ pifi status
 
  >Network Mangager reports AP mode support on B8:27:EB:2B:3F:6B
  Device is currently acting as an Access Point
 
- ```ubuntu@ubiquityrobot:~$ pifi list seen```
+ ```ubuntu@NEWHOSTNAME:~$ pifi list seen```
 
 >MyNetwork
 Neighbor's network
 Other Network
 
-```ubuntu@ubiquityrobot:~$ sudo pifi add “MyNetwork”  “password”```
+We want to switch to MyNetwork, and we have verified that it's present.  So:
 
-Note: "sudo" is a linux command that allows administrative actions.  
-Linux will often ask you for your password (it's "ubuntu", if you haven't changed it) when you use it.
+```ubuntu@NEWHOSTNAME:~$ sudo pifi add “MyNetwork”  “password”```
 
 Now reboot the robot.
 
 ```sudo reboot```
 
-The robot will reboot and attach to the “MyNetwork” wifi network. But your workstation is not connected to “MyNetwork”, because we left it on ubiquityrobot.  So attach your workstation to "MyNetwork".
+The robot will reboot and try to attach to the “MyNetwork” wifi network. But your workstation is not connected to “MyNetwork”, because we left it on ubiquityrobot.  So attach your workstation to "MyNetwork".
 
 If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, change the host network attachment, then start the workstation again.
 
 To test,
 
-```$ping ubiquityrobot.local```
+```$ping NEWHOSTNAME.local```
 
 The ping result shows the network address of the robot:
 
@@ -47,19 +67,19 @@ The ping result shows the network address of the robot:
 
 Now ssh into the robot.
 
- ```$ ssh ubuntu@ubiquityrobot.local```
+ ```$ ssh ubuntu@NEWHOSTNAME.local```
 
 As before:
 >The authenticity of host '10.0.0.113 (10.0.0.113)' can't be established.
 ECDSA key fingerprint is SHA256:sDDeGZzL8FPY3kMmvhwjPC9wH+mGsAxJL/dNXpoYnsc.
 Are you sure you want to continue connecting (yes/no)?
 
-```yes```
+    yes
 
 >Failed to add the host to the list of known hosts (/somepath/.ssh/known_hosts).
 ubuntu@10.0.0.113's password:
 
- ```ubuntu```
+    ubuntu
 
 >Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
   * Documentation:  https://help.ubuntu.com
@@ -78,6 +98,7 @@ You should see a list of topics including /joy which means you can drive with a 
 At this point you can drive the robot from your workstation's
 keyboard, just as in the Quick Start section called [Driving a Magni with a keyboard](keyboard_teleop).
 
+<!--
 # Changing the hostname
 
   ```$ sudo pifi set-hostname loki227d
@@ -87,17 +108,18 @@ This is recommended. We suggest you keep the last two digits of the MAC address 
 
 
 to change your robot's name (hostname):
-
+-->
 
 
 There is some housekeeping that you can perform at this point, to keep your robot up to date.  Begin by checking the date.
 
-```ubuntu@ubiquityrobot:~$ date```
+```ubuntu@NEWHOSTNAME:~$ date```
  >Mon Aug 14 17:16:26 UTC 2017
 
 Now that you have the correct date you can update the robot to get changes that have been made since the robot was manufactured.
 
 ```sudo apt-get update```
+
 ```sudo apt-get upgrade```
 
 This may take some time, since it may have been a while since the original image was made.

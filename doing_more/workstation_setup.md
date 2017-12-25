@@ -34,36 +34,6 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
 
   `sudo apt install ros-kinetic-magni-robot`
 
-* Before you go on, you should change the hostname of your robot, to distinguish your robot from others. Open a new terminal window, and log in to the robot with ssh:
-
-  `ssh ubuntu@ubiquityrobot.local,`
-using the password which is
-  `ubunutu`.
-
-  Note that you now have two terminal windows open on your workstation.  The first one has the workstation command line, but the second has the robot's command line, because you used `ssh` to connect it to the robot.
-
-  To change the hostname you can use pifi. Type the command:
-
-    `sudo pifi set-hostname NEWHOSTNAME`
-
-<!--  edit a single file /etc/hostname that only contains the name of your robot computer on the network. You can do this using your favorite editor (e.g. pico, nano, vi, vim) but it is convenient to just enter the following command to the robot: -->
-
-<!--    `sudo bash -c "echo NEWHOSTNAME > /etc/hostname"`-->
-
-<!--* The next step is to edit the file /etc/hosts on the robot to add two lines that again tell your computer what it is called. You can use your favorite editor to add the two lines but again you can just use the command line.-->
-
-<!--`sudo bash -c "echo ' 128.0.0.1 NEWHOSTNAME" >> /etc/hosts'"`
-
-  `sudo bash -c "echo ' 128.0.0.1 NEWHOSTNAME.local" >> /etc/hosts'"`-->
-
-* If you now reboot the robot the new hostname will be used
-
-  `sudo reboot`
-
-  Now the robot can be addressed with the NEWHOSTNAME like this:
-
-  `ssh ubuntu@NEWHOSTNAME.local`
-
 ## Set environment variables on the workstation
 
 * Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
