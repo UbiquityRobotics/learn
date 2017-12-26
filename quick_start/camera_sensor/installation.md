@@ -74,3 +74,5 @@ Note: on testing the camera.  If you find that fiducial follow or waypoint navig
 raspistill -o test.jpg
 
 If you don't get an error message, you have a good camera. An (mmal) error message indicates the camera is not being detected by the Raspberry Pi, this is usually due to a poor cable connection or less likely a bad camera.
+
+<<[back](connecting)- - - - - - - - - - [next](fiducial_follow)>>

@@ -49,3 +49,5 @@ This starts the processes that you need to make fiducial follow work.
 Then you can take the fiducial that you printed and put it in front of the robot. Usually the robot will move as soon as it detects an image of the fiducial. The robot can move back and forward. As you move the fiducial around the robot should follow you.
 
 If you move too fast or for some reason the robot loses sight of the fiducial it will attempt to find the fiducial again. It will rotate around the room in an attempt to locate the position of the fiducial until it finally stops.
+
+<<[back](camera_sensors)- - - - - - - - - - [up](ix_quick_start)>>

@@ -60,3 +60,5 @@ Continue with #6 below.
 *{Wayne: Add a brief section about shutting down robot commander and the robot. }*
 
 *{Wayne: Add a trouble shooting section? }*
+
+<<[back](logitech)- - - - - - - - - - [next](connecting)>>

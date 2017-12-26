@@ -27,16 +27,16 @@ Other possible way to display an image
 <!--div class="image-wrapper">
 
 		1038 raw
-    
+
         <img src="https://ubiquityrobotics.github.io/learn.magni.com/assets/imag1038.jpg?raw=true" />
-		
+
 		1038
-     
+
         <p class="image-caption">A Basic Multimeter</p>
-    
+
 </div-->
 
-To operate the controller, hold down the deadman button (LB) and move the joystick. 
+To operate the controller, hold down the deadman button (LB) and move the joystick.
 
 Up - Forward, Down - Back, Left - rotate counter clockwise, Right - rotate clockwise
 
@@ -53,7 +53,7 @@ if the robot is gettting power, the MCB is working and you can connect to the ro
 Next, see if you can connect to your robot using access point (AP) mode:
 
 	ping 10.42.0.1
-	
+
 (See the section on connecting to the robot.)
 
 the robot responds by giving you its IP number. Type Control-C
@@ -99,7 +99,7 @@ If you see `/joy`  you are good to go!
 If you don't see any topics you need to launch the logitech on the robot:
 
 
-	roslaunch magni_bringup base.launch >/dev/null 2>&1 & 
+	roslaunch magni_bringup base.launch >/dev/null 2>&1 &
 
 (the `/dev/null 2 >&2 &` puts into background and stops output to screen)
 
@@ -130,4 +130,4 @@ The folowing command
 
 Shows everything is running. You now should be able use the controller to drive the robot.
 
-
+<<[back](unboxing)- - - - - - - - - - [next](robot_commander)>>
