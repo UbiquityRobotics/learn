@@ -124,4 +124,4 @@ Now that you have the correct date you can update the robot to get changes that 
 
 This may take some time, since it may have been a while since the original image was made.
 
-[back](ix_doing_more)  <div style="text-align: right"> [next](workstation_setup) </div> 
+<<[back](ix_doing_more)- - - - - - - - - - [next](workstation_setup)>>  
