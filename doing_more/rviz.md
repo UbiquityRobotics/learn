@@ -1,6 +1,7 @@
 ---
 layout: default
 title:  "Visualize with RViz"
+permalink: rviz
 ---
 
 # Visualize with rviz

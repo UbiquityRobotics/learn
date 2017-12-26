@@ -85,3 +85,5 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
  #### issue: persistence?
 
 Now the workstation setup is complete.
+
+<<[back](connect_network)- - - - - - - - - - [next](rviz)>>
