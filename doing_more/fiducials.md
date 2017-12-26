@@ -1,6 +1,9 @@
-
+---
+layout: default
+title:  "Fiducial-Based Localization"
+permalink: fiducials
+---
 # Fiducial-Based Localization
-
 
 This is one of the ways in which a robot's position in the `world` (localization) can
 be determined.  For a discussion of other approaches, see the

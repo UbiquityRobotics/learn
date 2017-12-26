@@ -15,3 +15,5 @@ To start rviz, type on the workstation command line:
 RViz is highly configurable so its possible to save a previous configuration and reuse it again and again.
 
 <insert some description of the configuration file, and how to make use of it and insert a link to a previously utilized configuration file>
+
+<<[back](connect_network)- - - - - - - - - - [next](fiducials)>>
