@@ -42,4 +42,4 @@ Continue with #6 below.
 * The voice command `go to alpha` will now cause the robot to go to the waypoint you established, and to face in the same direction it was when you set the waypoint.
 * You can remove a waypoint with the voice command `remove waypoint alpha`.
 
-<<[back](rviz)- - - - - - - - - - [next](sensors)>>
+<<[back](fiducials)- - - - - - - - - - [next](sensors)>>
