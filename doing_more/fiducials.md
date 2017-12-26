@@ -59,3 +59,5 @@ of the map is increased by having a high degree of connectivity between the
 fiducials.
 
 ![Visualizing with rviz](fiducial_rviz.png)
+
+<<[back](rviz)- - - - - - - - - - [next](sensors)>>
