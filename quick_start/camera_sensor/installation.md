@@ -75,4 +75,4 @@ raspistill -o test.jpg
 
 If you don't get an error message, you have a good camera. An (mmal) error message indicates the camera is not being detected by the Raspberry Pi, this is usually due to a poor cable connection or less likely a bad camera.
 
-<<[back](connecting)- - - - - - - - - - [next](fiducial_follow)>>
+<<[back](keyboard_teleop)- - - - - - - - - - [next](fiducial_follow)>>
