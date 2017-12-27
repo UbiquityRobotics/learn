@@ -4,9 +4,15 @@ title:  "How to set up a ROS workstation"
 permalink: workstation_setup
 ---
 
+*{ Wayne: There a bunch of repetition going on in each of these documents.  Having an overview/roadmap docuement
+   both reduce the repetition *and* reduce the overall confusion. )+
+
 # How to set up a ROS workstation
 
 A ROS workstation is a full setup of ROS (the Robot Operating System) on a desktop or laptop computer, that you can connect to your robot. ROS shares all the internal communication within the robot with a ROS workstation over your network. Thus you can monitor internal robot activity, see what the robot is seeing, send commands and even offload data processing tasks from the robot on to more powerful computers. A ROS workstation is really helpful if you want to do anything beyond simply driving the robot around and getting it to do voice commands.
+
+*{ Wayne: Perhaps reword this to say something like.  "A ROS workstation is needed if you are going to program
+   the robot to perform you robotic application." }*
 
 There are two methods to get a ROS workstation setup.
 
@@ -33,6 +39,8 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
 * Once you've got a workstation with Ubuntu and ROS and assuming you are running a Magni you'll want to install the files that support Magni. Open a terminal window, login, and type:
 
   `sudo apt install ros-kinetic-magni-robot`
+  
+  *{ Wayne: Isn't this already pre-installed? }*
 
 ## Set environment variables on the workstation
 
@@ -43,6 +51,8 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
   This sets the variable ROS_MASTER_URI to the address http://NEWHOSTNAME.local:11311. ROS on your workstation will use this to communicate with the ROS master node which is on the robot.
 
   However, environment variables are not persistent!
+  
+  *{ Wayne: Environement variables set by the `export ...` method are not persistent across system boots. }*
 
   To make this environment variable persistent, we append its setting to the file called`~/.bashrc, which runs when the Ubuntu shell (called bash) is started. Use an editor, or from the command line:
 
@@ -51,6 +61,8 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
   **Warning: Don't do this if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot.**
 
 ### An alternative method
+
+*{ Wayne: ***PLEASE*** delete this section.  We want the users to use `zeroconf` }*
 
 * On the workstation, append these two lines to your ~/.bashrc file
 
