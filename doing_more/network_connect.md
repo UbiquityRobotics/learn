@@ -21,26 +21,18 @@ Before you go on, you should change the hostname of your robot, to distinguish y
 
 ssh ubuntu@ubiquityrobot.local, using the password which is "ubuntu".
 
-Note that you now have two terminal windows open on your workstation.  The first one has the workstation command line, but the second has the robot's command line, because you used `ssh` to connect it to the robot.
-
-*{ Wayne: Where did the second terminal come from?  It does not seem like is necessary. }*
-
 To change the hostname you can use pifi. Type the command:
 
     sudo pifi set-hostname NEWHOSTNAME
 
 Note: "sudo" is a linux command that allows administrative actions.  
-Linux will often ask you for your password (it's "ubuntu", if you haven't changed it) when you use sudo.
-
-*{ Wayne: `sudo` stands for Super-User DO. }*
+Linux will often ask you for your password (it's "ubuntu", if you haven't changed it) when you use sudo (`sudo` stands for Super-User DO).
 
 If you now reboot the robot the new hostname will be used
 
     sudo reboot
 
 Now the robot can be addressed with the NEWHOSTNAME like this:
-
-*{ Wayne: Actually, I think it is NEWHOSTNAME_XXXX . Please verify. }*
 
     ssh ubuntu@NEWHOSTNAME.local
 
@@ -67,10 +59,7 @@ Now reboot the robot.
 
 ```sudo reboot```
 
-The robot will reboot and try to attach to the “MyNetwork” wifi network. But your workstation is not connected to “MyNetwork”, because we left it on ubiquityrobot.  So attach your workstation to "MyNetwork".
-
-*{ Wayne: When you rebooted the RasPi, the network connection to `NEWHOSTNAME_XXXX` went down.  You still have to
- connect to `MyNetwork` though. }*
+The robot will reboot and try to attach to the “MyNetwork” wifi network. But your workstation is not connected to “MyNetwork”, because we left it connected to ubiquityrobot.  So, on a Linux machine, connect your workstation to "MyNetwork".
 
 If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, change the host network attachment, then start the workstation again.
 
@@ -89,9 +78,9 @@ The ping result shows the network address of the robot:
  64 bytes from 10.0.0.113: icmp_seq=1 ttl=64 time=97.6 ms  
  64 bytes from 10.0.0.113: icmp_seq=2 ttl=64 time=5.70 ms  
 
- Press control-c to stop the pinging'
- 
-*{ Wayne: If something goes wrong here, the robot will come back up in Access Point mode. This should be mentions. }*
+ Press control-c to stop the pinging.
+
+If something goes wrong here, the robot will come back up in Access Point mode--that is, on the network named ubiquityrobot.  Reboot everything and start over.
 
 Now ssh into the robot.
 
@@ -122,13 +111,6 @@ Verify that the robot is running and you are connected:
 ```rostopic list```
 
 You should see a list of topics including /joy which means you can drive with a joystick.
-
-*{ Wayne: You need to specify where to type rostopic list }*
-
-At this point you can drive the robot from your workstation's
-keyboard, just as in the Quick Start section called [Driving a Magni with a keyboard](keyboard_teleop).
-
-*{ Wayne: The ROS_MASTER_URI environment variable needs to be set. }*
 
 <!--
 # Changing the hostname
