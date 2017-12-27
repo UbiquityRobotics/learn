@@ -6,18 +6,28 @@ permalink: connecting
 # Connecting a Workstation for the First Time
 
 In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" stands for "Long Term Support" which means that the software is supported for 5 years.)
+*{ Wayne: Apples and oranges.  A laptop/desktop is hardware.  A virtual machine is software. }*
 
 **The workstation must have WiFi capability.**  Most laptops do, many desktops don't.
 
 Not everyone has Ubuntu Linux installed on their machine, so we've created a virtual machine (VM) as a VirtualBox image. This is a system that allows most any computer to pretend that it is a Ubuntu Linux machine. Our VM has a full install of Ubuntu, ROS (Robot Operating System) and Ubiquity Robotics' workstation software. The good news is that its quick and easy to get started this way. The downside is that the process of virtualization saps performance from your system so things will not be as fast as if you are running natively. On a fast system you may not notice this. In any event, the virtualization system is a good way to try out having a workstation before committing to set one up on your laptop.
+*{ Wayne: Shouldn't we use .ova instead of .vdi ?  That way people can use other virtual
+   machine emulators to run the image. }*
+*{ Wayne: Virtual machine support of WiFi is spotty. }*
 
 ### Using our out-of-the-box virtual machine workstation
 
 * Download the appropriate VirtualBox software from [the VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and install it.
 
+  *{ Guest ext
+
 *  Download the [Ubiquity Robotics Virtual Machine](https://drive.google.com/drive/folders/0B1zeRbBVLXhzZ0Q1TkxtbUxIcEU) and save it in VirtualBox's folder for virtual machines.  On Windows this is \Users\<username>\VirtualBox VMs.
 
+   *{ Wayne: Add a link for MacOS. }*
+
 * Unzip the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vbox`, and double-click it.  This will cause VirtualBox to import the Virtual Machine (the VM) and open the VirtualBox Manager.
+
+  *{ Wayne: This is specific to Windows. }*
 
 * Check the following parameters of the VM:
 
@@ -76,7 +86,7 @@ Finally,
  Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143
 
 <!--
-This robot's clock will never have synchronized with a time-server, so disregard the date.
+This robot's clock will never have synchronized with a time-server, so disregard the date. -->
 
 
 If you can't connect to a network, but you want to run the robot, you should synchronize dates on both the laptop and robot:
@@ -85,7 +95,7 @@ If you can't connect to a network, but you want to run the robot, you should syn
 ssh ubuntu@ubiquityrobot.local sudo -S date -s @`( date -u +"%s" )`
 ```
 
-*{Wayne: The pifi description needs to be enabled. *}
+*{ Wayne: The pifi description needs to be enabled. }*
 
 Next, use pifi to list the nearby networks and to connect your robot to your local area network:
 
