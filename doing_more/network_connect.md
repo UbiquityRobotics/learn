@@ -3,15 +3,27 @@ layout: default
 title:  "Connecting the Robot to Your Network"
 permalink: connect_network
 ---
+
+*{ Wayne: We need to explain why "Connecting to a Workstation for the First Time" is different from
+what we are doing here.  There are many many things that can and will go wrong.  Conceptually, we need
+to explain what AP (Access Point) mode is and what its limitations are.  We also we need explain why
+using WiFi infrastructure mode is and why it is vastly preferable to AP mode. }*
+
+*{ Wayne: We need to explain what kind of Wifi network can be connected to.  In particular, we can connect
+to a WiFi network in PSK (Pre-Shared Key) infrastructure mode.  Furthermore, zeroconf needs to work.  That
+means that the access point needs to properly configured. }*
+
 # Connecting the Robot to Your Network
 
 Connect your workstation to the robot as described in [Connecting a Workstation for the First Time](connecting).  If you haven't done this step yet, the robot is connected to its own network, which is called ubiquityrobot, and your workstation is connected to that. We assume you have ssh'ed into the robot.
 
 Before you go on, you should change the hostname of your robot, to distinguish your robot from others. Open a new terminal window, and log in to the robot with ssh:
 
-ssh ubuntu@ubiquityrobot.local, using the password which is "ubunutu".
+ssh ubuntu@ubiquityrobot.local, using the password which is "ubuntu".
 
 Note that you now have two terminal windows open on your workstation.  The first one has the workstation command line, but the second has the robot's command line, because you used `ssh` to connect it to the robot.
+
+*{ Wayne: Where did the second terminal come from?  It does not seem like is necessary. }*
 
 To change the hostname you can use pifi. Type the command:
 
@@ -20,11 +32,15 @@ To change the hostname you can use pifi. Type the command:
 Note: "sudo" is a linux command that allows administrative actions.  
 Linux will often ask you for your password (it's "ubuntu", if you haven't changed it) when you use sudo.
 
+*{ Wayne: `sudo` stands for Super-User DO. }*
+
 If you now reboot the robot the new hostname will be used
 
     sudo reboot
 
 Now the robot can be addressed with the NEWHOSTNAME like this:
+
+*{ Wayne: Actually, I think it is NEWHOSTNAME_XXXX . Please verify. }*
 
     ssh ubuntu@NEWHOSTNAME.local
 
@@ -41,6 +57,8 @@ Use pifi to list the nearby networks:
 Neighbor's network
 Other Network
 
+*{ Wayne:
+
 We want to switch to MyNetwork, and we have now verified that it's present.  So:
 
 ```ubuntu@NEWHOSTNAME:~$ sudo pifi add “MyNetwork”  “password”```
@@ -51,7 +69,15 @@ Now reboot the robot.
 
 The robot will reboot and try to attach to the “MyNetwork” wifi network. But your workstation is not connected to “MyNetwork”, because we left it on ubiquityrobot.  So attach your workstation to "MyNetwork".
 
+*{ Wayne: When you rebooted the RasPi, the network connection to `NEWHOSTNAME_XXXX` went down.  You still have to
+ connect to `MyNetwork` though. }*
+
 If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, change the host network attachment, then start the workstation again.
+
+*{ Wayne: Lots of problems here.  The virtual machine does not need to be shut down, since it is bridged.  Just use the
+native OS.  The real problem is that there needs to be context that that there are three environments -- Native OS
+(usually Windows/MacOS), Linux running on workstation (usually Ubuntu 16.04LST running on VirtualBox), and a termininal
+emulator window that is connected to the robot. }*
 
 To test,
 
@@ -64,6 +90,8 @@ The ping result shows the network address of the robot:
  64 bytes from 10.0.0.113: icmp_seq=2 ttl=64 time=5.70 ms  
 
  Press control-c to stop the pinging'
+ 
+*{ Wayne: If something goes wrong here, the robot will come back up in Access Point mode. This should be mentions. }*
 
 Now ssh into the robot.
 
@@ -95,8 +123,12 @@ Verify that the robot is running and you are connected:
 
 You should see a list of topics including /joy which means you can drive with a joystick.
 
+*{ Wayne: You need to specify where to type rostopic list }*
+
 At this point you can drive the robot from your workstation's
 keyboard, just as in the Quick Start section called [Driving a Magni with a keyboard](keyboard_teleop).
+
+*{ Wayne: The ROS_MASTER_URI environment variable needs to be set. }*
 
 <!--
 # Changing the hostname
