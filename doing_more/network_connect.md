@@ -112,6 +112,9 @@ Verify that the robot is running and you are connected:
 
 You should see a list of topics including /joy which means you can drive with a joystick.
 
+At this point you can drive the robot from your workstation's
+keyboard, just as in the Quick Start section called [Driving a Magni with a keyboard](keyboard_teleop). But now, instead of running the teleop_twist_keyboard program in the robot, you can run it in the workstation, by starting it in the workstation's own terminal.  ROS will manage the communication between theworkstation and the robot.
+
 <!--
 # Changing the hostname
 
