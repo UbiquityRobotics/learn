@@ -53,7 +53,7 @@ Other Network
 
 We want to switch to MyNetwork, and we have now verified that it's present.  So:
 
-```ubuntu@NEWHOSTNAME:~$ sudo pifi add “MyNetwork”  “password”```
+```ubuntu@NEWHOSTNAME:~$ sudo pifi add MyNetwork password```
 
 Now reboot the robot.
 
