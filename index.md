@@ -1,3 +1,9 @@
+---
+layout: default
+title:  "Main Menu"
+permalink: main_menu
+---
+
 # Ubiquity Robotics User Manual
 
 * [Preface](introduction)

@@ -5,6 +5,8 @@ permalink: fiducials
 ---
 # Fiducial-Based Localization
 
+^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - - <<[back](rviz)- - - - - - - - - - [next](sensors)>>
+
 This is one of the ways in which a robot's position in the `world` (localization) can
 be determined.  For a discussion of other approaches, see the
 [Navigation and Localization Overview](../overview/overview.md).
