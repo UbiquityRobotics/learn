@@ -45,7 +45,6 @@ Use The following command on your workstation to run the
 [robot visualization tool](http://wiki.ros.org/rviz), rviz.
 #### [Link here to the tutorial where we explain ROS_MASTER_URI]???
 
-
 ```roslaunch fiducial_slam fiducial_rviz.launch```
 
 This will produce a display as shown below.  The bottom left pane shows the
