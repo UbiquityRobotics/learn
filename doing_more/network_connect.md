@@ -13,6 +13,8 @@ using WiFi infrastructure mode is and why it is vastly preferable to AP mode. }*
 to a WiFi network in PSK (Pre-Shared Key) infrastructure mode.  Furthermore, zeroconf needs to work.  That
 means that the access point needs to properly configured. }*
 
+^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - -
+
 # Connecting the Robot to Your Network
 
 Connect your workstation to the robot as described in [Connecting a Workstation for the First Time](connecting).  If you haven't done this step yet, the robot is connected to its own network, which is called ubiquityrobot, and your workstation is connected to that. We assume you have ssh'ed into the robot.

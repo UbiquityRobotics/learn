@@ -2,6 +2,8 @@
 layout: default
 title:  "Connecting a Workstation for the First Time"
 permalink: connecting
+
+^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - - 
 ---
 # Connecting a Workstation for the First Time
 
