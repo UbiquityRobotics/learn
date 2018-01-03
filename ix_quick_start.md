@@ -3,6 +3,7 @@ layout: default
 permalink: ix_quick_start
 ---
 ## Quick Start
+#### [&uarr;top](main_menu)
 
 Things you can do with your robot right out of the box.
 

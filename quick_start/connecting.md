@@ -3,7 +3,7 @@ layout: default
 title:  "Connecting a Workstation for the First Time"
 permalink: connecting
 
-^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - - 
+^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - -
 ---
 # Connecting a Workstation for the First Time
 
@@ -174,4 +174,4 @@ Occasionally, the update/upgrade fails to complete. Usually this is due to the p
 
 -->
 
-<<[back](robot_commander)- - - - - - - - - - [next](keyboard_teleop)>>
+#### &larr;[back](robot_commander)- - - - - - - - - - [next](keyboard_teleop)&rarr;

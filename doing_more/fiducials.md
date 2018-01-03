@@ -5,7 +5,7 @@ permalink: fiducials
 ---
 # Fiducial-Based Localization
 
-^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - - <<[back](rviz)- - - - - - - - - - [next](sensors)>>
+^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - - &larr;[back](rviz)- - - - - - - - - - [next](sensors)&rarr;
 
 This is one of the ways in which a robot's position in the `world` (localization) can
 be determined.  For a discussion of other approaches, see the
@@ -60,5 +60,4 @@ of the map is increased by having a high degree of connectivity between the
 fiducials.
 
 ![Visualizing with rviz](fiducial_rviz.png)
-
-<<[back](rviz)- - - - - - - - - - [next](sensors)>>
+#### &larr;[back](rviz)- - - - - - - - - - [next](sensors)&rarr;

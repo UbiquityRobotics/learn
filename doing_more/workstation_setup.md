@@ -56,4 +56,4 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
 
   **Warning: Don't do this if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot.**
 
-<<[back](connect_network)- - - - - - - - - - [next](rviz)>>
+#### &larr;[back](connect_network)- - - - - - - - - - [next](rviz)&rarr;

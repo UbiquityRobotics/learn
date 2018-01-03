@@ -61,4 +61,4 @@ Continue with #6 below.
 
 *{Wayne: Add a trouble shooting section? }*
 
-<<[back](logitech)- - - - - - - - - - [next](connecting)>>
+#### &larr;[back](logitech)- - - - - - - - - - [next](connecting)&rarr;
