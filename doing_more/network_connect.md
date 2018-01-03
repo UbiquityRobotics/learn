@@ -13,7 +13,7 @@ using WiFi infrastructure mode is and why it is vastly preferable to AP mode. }*
 to a WiFi network in PSK (Pre-Shared Key) infrastructure mode.  Furthermore, zeroconf needs to work.  That
 means that the access point needs to properly configured. }*
 
-^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - -
+#### &uarr;[top](main_menu) - - - &uarr;[up](ix_doing_more)
 
 # Connecting the Robot to Your Network
 

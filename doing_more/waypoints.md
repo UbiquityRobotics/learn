@@ -5,7 +5,7 @@ permalink: waypoints
 ---
 # Use Robot Commander over the network to go to waypoints
 
-^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - - 
+#### &uarr;[top](main_menu) - - - &uarr;[up](ix_doing_more) - - -
 
 Robot Commander has two versions:  One for the Android phone, and one for a workstation.
 

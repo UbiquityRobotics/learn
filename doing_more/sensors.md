@@ -3,7 +3,7 @@ layout: default
 title:  "Try out sensors"
 permalink: sensors
 ---
-^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - -
+#### &uarr;[top](main_menu) - - - &uarr;[up](ix_doing_more) - - -
 
 Try out the Sensor Package e.g. silver sensor package, gold sensor package
 
