@@ -2,9 +2,10 @@
 layout: default
 title:  "Connecting a Workstation for the First Time"
 permalink: connecting
+---
 
 ^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - -
----
+
 # Connecting a Workstation for the First Time
 
 In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" stands for "Long Term Support" which means that the software is supported for 5 years.)
