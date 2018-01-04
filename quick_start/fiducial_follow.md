@@ -6,6 +6,8 @@ permalink: fiducial_follow
 
 # Fiducial Follow
 
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start) 
+
 ## Introduction
 
 The Fiducial Follow system enables the robot to follow fiducial markers like this one:

@@ -4,7 +4,7 @@ title:  "Connecting a Workstation for the First Time"
 permalink: connecting
 ---
 
-^^[top](main_menu)^^ - - - ^[up](ix_doing_more)^ - - -
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start)
 
 # Connecting a Workstation for the First Time
 

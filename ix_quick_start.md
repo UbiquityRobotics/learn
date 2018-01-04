@@ -3,7 +3,7 @@ layout: default
 permalink: ix_quick_start
 ---
 ## Quick Start
-#### [&uarr;top](/learn/index.html)
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) 
 
 Things you can do with your robot right out of the box.
 

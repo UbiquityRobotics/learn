@@ -6,6 +6,8 @@ author: Alan Federman
 ---
 # Using the Optional Logitech Controller
 
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start) 
+
 A standard Silver or Gold Magni equipped with a Raspberry Pi 3 with a Ubiquity Robotics SD card image is by default set up to work with a Logitech gamepad Controller out of the box without bothering to connect via laptop over a network. In particular the robot is tested to work with the logitech F710 controller that is widely available. It may work with other similar logitech gamepads although these are not officially supported.
 
 If you have such a controller plug the dongle in to any USB port on the Raspberry Pi 3 that is attached to the front of the robot. If you booted up with a Ubiquity Robotics RPi image, and have the Logitech controller USB dongle installed, the joystick should start to work in a couple of minutes. The Dongle is automatically paired to the Logitech controller it does not require separate software installation.

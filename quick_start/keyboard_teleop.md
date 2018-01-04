@@ -6,6 +6,8 @@ author: Alan N. Federman
 ---
 # Driving a Robot with a Keyboard
 
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start) 
+
 Connect to your robot and log in, following the instructions in [Connecting to your robot for the first time](connecting). Log in to the robot from an ssh window, as before.
 
 After logging in, check to see if the ROS magni_base program is running:
