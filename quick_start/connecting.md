@@ -13,8 +13,7 @@ In this manual it is assumed that your workstation, whether a laptop, desktop, o
 
 Not everyone has Ubuntu Linux installed on their machine, so we've created a virtual machine (VM) as a VirtualBox image. This is a system that allows most any computer to pretend that it is a Ubuntu Linux machine. Our VM has a full install of Ubuntu, ROS (Robot Operating System) and Ubiquity Robotics' workstation software. The good news is that its quick and easy to get started this way. The downside is that the process of virtualization saps performance from your system so things will not be as fast as if you are running natively. On a fast system you may not notice this. In any event, the virtualization system is a good way to try out having a workstation before committing to set one up on your laptop.
 *{ Wayne: Shouldn't we use .ova instead of .vdi ?  That way people can use other virtual
-   machine emulators to run the image. }*
-*{ Wayne: Virtual machine support of WiFi is spotty. }*
+   machine emulators to run the image.  Note to Joe--try this, and document if possible }*
 
 ### Using our out-of-the-box virtual machine workstation
 
@@ -22,11 +21,11 @@ Not everyone has Ubuntu Linux installed on their machine, so we've created a vir
 
 *  Download the [Ubiquity Robotics Virtual Machine](https://drive.google.com/drive/folders/0B1zeRbBVLXhzZ0Q1TkxtbUxIcEU) and save it in VirtualBox's folder for virtual machines.  On Windows this is \Users\<username>\VirtualBox VMs.
 
-   *{ Wayne: Add a link for MacOS. }*
+   *{ Wayne: We need a link for MacOS. }*
 
 * On Windows, unzip the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vbox`, and double-click it.  This will cause VirtualBox to import the Virtual Machine (the VM) and open the VirtualBox Manager.
 
-  *{ Wayne: This is specific to Windows. }*
+On MacOS, to be written...
 
 * Check the following parameters of the VM:
 

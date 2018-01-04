@@ -59,6 +59,6 @@ Continue with #6 below.
 
 *{Wayne: Add a brief section about shutting down robot commander and the robot. }*
 
-*{Wayne: Add a trouble shooting section? }*
+*{Wayne: Add a trouble shooting section? See your network Administrator}*
 
 #### &larr;[back](logitech)- - - - - - - - - - [next](connecting)&rarr;

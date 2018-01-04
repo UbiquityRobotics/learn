@@ -11,7 +11,8 @@ using WiFi infrastructure mode is and why it is vastly preferable to AP mode. }*
 
 *{ Wayne: We need to explain what kind of Wifi network can be connected to.  In particular, we can connect
 to a WiFi network in PSK (Pre-Shared Key) infrastructure mode.  Furthermore, zeroconf needs to work.  That
-means that the access point needs to properly configured. }*
+means that the access point needs to properly configured.
+We need a writeup of this--don't have one now.}*
 
 #### &uarr;[top](main_menu) - - - &uarr;[up](ix_doing_more)
 
@@ -51,9 +52,7 @@ Use pifi to list the nearby networks:
 Neighbor's network
 Other Network
 
-*{ Wayne:
-
-We want to switch to MyNetwork, and we have now verified that it's present.  So:
+We want to switch to MyNetwork, and we have now verified that it's present.  So we can command:
 
 ```ubuntu@NEWHOSTNAME:~$ sudo pifi add MyNetwork password```
 
@@ -66,7 +65,11 @@ The robot will reboot and try to attach to the “MyNetwork” wifi network. But
 If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, change the host network attachment, then start the workstation again.
 
 *{ Wayne: Lots of problems here.  The virtual machine does not need to be shut down, since it is bridged.  Just use the
-native OS.  The real problem is that there needs to be context that that there are three environments -- Native OS
+native OS.  
+
+Joe: put in our intro
+
+The real problem is that there needs to be context that that there are three environments -- Native OS
 (usually Windows/MacOS), Linux running on workstation (usually Ubuntu 16.04LST running on VirtualBox), and a termininal
 emulator window that is connected to the robot. }*
 

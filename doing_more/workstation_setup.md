@@ -4,9 +4,6 @@ title:  "How to set up a ROS workstation"
 permalink: workstation_setup
 ---
 
-*{ Wayne: There a bunch of repetition going on in each of these documents.  Having an overview/roadmap docuement
-   both reduce the repetition *and* reduce the overall confusion. )+
-
 # How to set up a ROS workstation
 #### &uarr;[top](main_menu) - - - &uarr;[up](ix_doing_more) - - -
 
@@ -38,7 +35,9 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
 
   `sudo apt install ros-kinetic-magni-robot`
 
-  *{ Wayne: Isn't this already pre-installed? }*
+  *{ Wayne: Isn't this already pre-installed?
+  when you do this you must update both systems
+  cannnot do this in AP mode }*
 
 ## Set environment variables on the workstation
 

@@ -1,5 +1,6 @@
 # Installing Virtualization Software on the Host Computer
-
+*{Joe:  This is old text.
+}
 Unless your host computer is already natively running Ubuntu 16.04LTS
 you need to do some work to get Ubuntu 16.04 LTS running on your host
 computer.
@@ -70,7 +71,7 @@ and `RRRRRR` is the release.
   Ubiquity Robotics does not support this configuration.  It is recommended
   that you install the virtualization software so you can run 16.04 in
   the virtualization software.
-  
+
 ## Installing the VirtualBox Virtualization Software
 
 While there are multiple virtualization software systems out there,
@@ -89,7 +90,7 @@ should be read.
 
 * Please preread chapter 1 up to and including the section on extension packs.
 
-* Please preread appropriate section chapter 2 that corresponds to 
+* Please preread appropriate section chapter 2 that corresponds to
   which native operating system you are running.
 
 * Please skim through chapter 3 to see what sorts of things you need to
@@ -107,13 +108,13 @@ Now it is time to get started:
     https://www.virtualbox.org/wiki/Downloads
 
 * Install VirtualBox.  Instructions are at:
-    
+
     https://www.virtualbox.org/manual/ch02.html#install-linux-host
-	
+
 ## Create Virtual Machine
 
 Creating a virtual machine is actually pretty simple, most of the
-windows can be clicked through 
+windows can be clicked through
 
 1. Start VirtualBox.
 
@@ -206,7 +207,7 @@ virtual machine.
    The bottom line is you need download the correct lubuntu file an follow
    the remaining steps to get it installed into your virtual machine.
 
-   Using your web browser, please download the file 
+   Using your web browser, please download the file
    [`lubuntu-16.04-desktop-amd64.iso`](http://cdimage.ubuntu.com/lubuntu/releases/16.04/release/lubuntu-16.04-desktop-amd64.iso)
    and put it somewhere in your file system where you can find it.
    It is needed for the next step.
@@ -409,7 +410,7 @@ virtual window size, etc.
    ![lubuntu_insert_guest_cd](lubuntu_insert_guest_cd.png)
 
    After you do that, you will get a display that looks as follows:
-   
+
    ![lubuntu_guest_cd_inserted](lubuntu_guest_cd_inserted.png)
 
    Since the file manager is not needed, please click on the `[Cancel]` button
