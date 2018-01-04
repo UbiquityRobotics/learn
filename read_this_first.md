@@ -3,7 +3,7 @@ layout: default
 permalink: read_this_first
 ---
 ## Read This First
-#### [&uarr;top](main_menu)
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 ### Communications
 

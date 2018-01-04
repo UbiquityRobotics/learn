@@ -4,6 +4,8 @@ title:  "The Fiducial Follow App"
 permalink: fiducial_follow_app
 ---
 
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
+
 The fiducial_follow demo uses aruco_detect (a ROS node that is part of the Magni package) to detect fiducials in the image feed from a camera. If the target fiducial is detected, movement commands are issued to the robot to make it move towards the fiducial.
 
 ![](fiducial.png)
