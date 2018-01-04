@@ -1,7 +1,6 @@
 ---
 layout: default
 title:  "Main Menu"
-permalink: main_menu
 ---
 
 # Ubiquity Robotics Tutorials
