@@ -8,6 +8,8 @@ permalink: main_menu
 
 * [Preface](introduction)
 
+* [Read This First](read_this_first)
+
 * [Quick Start](ix_quick_start.md)
 
   Things you can do with your robot right out of the box.
