@@ -5,7 +5,7 @@ permalink: read_this_first
 ## Read This First
 #### [&uarr;top](main_menu)
 
-### communications
+### Communications
 
 As the robot is delivered it of course has no connection to your local network. Because of this, the robot has its own network (called an access point or AP) that enables you to connect to it directly, without connecting to your local network. For example, you should be able to drive the robot with our Android Robot commander app. You also can connect directly to the robot from a workstation, to run ROS commands such as keyboard teleoperation. However, in AP mode, the robot cannot access the rest of the Internet.
 
@@ -14,7 +14,7 @@ and is covered in a separate section.
 
 ### The Workstation
 
-You need a workstation to control the robot. In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" denotes "Long Term Support" which means 5 years.)
+You need a workstation to control the robot. In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" denotes "Long Term Support" which means 5 years.) Ubiquityrobotics supports only this release.
 
 **The workstation must have WiFi capability.**  Most laptops do, many desktops don't.
 
