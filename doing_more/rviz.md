@@ -19,3 +19,4 @@ RViz is highly configurable so its possible to save a previous configuration and
 <insert some description of the configuration file, and how to make use of it and insert a link to a previously utilized configuration file>
 
 #### &larr;[back](workstation_setup)- - - - - - - - - - [next](fiducials)&rarr;
+ 

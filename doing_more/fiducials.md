@@ -61,3 +61,4 @@ fiducials.
 
 ![Visualizing with rviz](fiducial_rviz.png)
 #### &larr;[back](rviz)- - - - - - - - - - [next](sensors)&rarr;
+ 

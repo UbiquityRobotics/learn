@@ -7,4 +7,4 @@ permalink: sensors
 
 Try out the Sensor Package e.g. silver sensor package, gold sensor package
 
-#### &larr;[back](waypoints)- - - - - - - - - - [up](ix_doing_more)&rarr;
+#### &larr;[back](waypoints)- - - - - - - - - - [up](ix_doing_more)&rarr; 

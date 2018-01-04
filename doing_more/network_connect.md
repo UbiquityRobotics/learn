@@ -50,7 +50,7 @@ Use pifi to list the nearby networks:
 Neighbor's network
 Other Network
 
-We want to switch to MyNetwork, and we have now verified that it's present.  So we can command:
+We want to switch to MyNetwork, and we have now verified that it's present. So we can command:
 
 ```ubuntu@NEWHOSTNAME:~$ sudo pifi add MyNetwork password```
 
