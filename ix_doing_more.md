@@ -4,7 +4,7 @@ permalink: ix_doing_more
 ---
 
 ##	Doing More With Your Robot
-#### [&uarr;top](main_menu) 
+#### [&uarr;top](/learn/index.html) 
 
 7.	[How to connect the robot with your network](doing_more/network_connect.md)
 8.  [How to set-up a workstation with ROS](doing_more/workstation_setup.md)
