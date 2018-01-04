@@ -4,7 +4,7 @@ title:  "Main Menu"
 permalink: main_menu
 ---
 
-# Ubiquity Robotics User Manual
+# Ubiquity Robotics Tutorials
 
 * [Preface](introduction)
 
