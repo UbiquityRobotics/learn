@@ -12,7 +12,7 @@ to a WiFi network in PSK (Pre-Shared Key) infrastructure mode.  Furthermore, zer
 means that the access point needs to properly configured.
 We need a writeup of this--don't have one now.}*
 
-#### &uarr;[top](main_menu) - - - &uarr;[up](ix_doing_more)
+#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_doing_more)
 
 # Connecting the Robot to Your Network
 
