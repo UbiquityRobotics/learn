@@ -49,7 +49,7 @@ The Motors are connected next. This should be done at the factory, If they are d
 Finally the batteries are connected. The red lead from battery 1 to positive, the black from ground to ground on battery 2, and the yellow to connect the negative of battery 1 to the positive of battery 2. There are cables for both spade type and screw type battery terminals. A 24 volt battery charger is included in the package (Photo not available). The recommended batteries are of the type specified by UB12xxx  where xxx specifies Amp Hours.  Commonly UB1250, UB1290, or UB12150 are used.
 Since it is unknown what size and shape the batteries will be it is the user's reponsiblity to see thay are secured in the chassis by the use of straps or packing material.
 
-*{Wayne: Somewhere there needs to be a discussion of what size batteries to use.  The spade connector sizes need
+*{TODO: Somewhere there needs to be a discussion of what size batteries to use.  The spade connector sizes need
 to be specified.  The user should be prepared for a current inrush spark? (not sure that this still occurs on initial battery insertion)  Is there a strap to hold the batteries down?  How is it installed? }*
 
 ![Final](unb-bat.JPG)

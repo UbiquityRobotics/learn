@@ -21,11 +21,11 @@ Not everyone has Ubuntu Linux installed on their machine, so we've created a vir
 
 *  Download the [Ubiquity Robotics Virtual Machine](https://drive.google.com/drive/folders/0B1zeRbBVLXhzZ0Q1TkxtbUxIcEU) and save it in VirtualBox's folder for virtual machines.  On Windows this is \Users\<username>\VirtualBox VMs.
 
-   *{ Wayne: We need a link for MacOS. }*
+   *{ TODO: We need a link and instructions for MacOS. }*
 
 * On Windows, unzip the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vbox`, and double-click it.  This will cause VirtualBox to import the Virtual Machine (the VM) and open the VirtualBox Manager.
 
-On MacOS, to be written...
+ *{ TODO:On MacOS, to be written...}
 
 * Check the following parameters of the VM:
 
@@ -36,8 +36,6 @@ On MacOS, to be written...
 
 * Start the VM. Your user ID is "ubuntu", and the password is "ubuntu".
 Your workstation is ready to use.
-
-*{Wayne: This section chould be called WiFi configuration, or robot provisioning, or something other than connection. }*
 
 In a later section we will explain how to attach the robot to an existing WiFi network and how ROS can take advantage of that to control the robot.
 

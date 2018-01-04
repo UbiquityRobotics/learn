@@ -14,7 +14,7 @@ and is covered in a separate section.
 
 ### The Workstation
 
-You need a workstation to control the robot. In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" denotes "Long Term Support" which means 5 years.) Ubiquityrobotics supports only this release.
+You need a workstation to control the robot. In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" denotes "Long Term Support" which means 5 years.)  Ubiquity Robotics supports only this release.
 
 **The workstation must have WiFi capability.**  Most laptops do, many desktops don't.
 

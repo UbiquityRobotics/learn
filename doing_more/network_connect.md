@@ -4,12 +4,10 @@ title:  "Connecting the Robot to Your Network"
 permalink: connect_network
 ---
 
-*{ Wayne: We need to explain why "Connecting to a Workstation for the First Time" is different from
-what we are doing here.  There are many many things that can and will go wrong.  Conceptually, we need
-to explain what AP (Access Point) mode is and what its limitations are.  We also we need explain why
-using WiFi infrastructure mode is and why it is vastly preferable to AP mode. }*
+*{ TODO: We need to explain why "Connecting to a Workstation for the First Time" is different from
+what we are doing here.  }*
 
-*{ Wayne: We need to explain what kind of Wifi network can be connected to.  In particular, we can connect
+*{ TODO: We need to explain what kind of Wifi network can be connected to.  In particular, we can connect
 to a WiFi network in PSK (Pre-Shared Key) infrastructure mode.  Furthermore, zeroconf needs to work.  That
 means that the access point needs to properly configured.
 We need a writeup of this--don't have one now.}*
@@ -64,14 +62,9 @@ The robot will reboot and try to attach to the “MyNetwork” wifi network. But
 
 If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, change the host network attachment, then start the workstation again.
 
-*{ Wayne: Lots of problems here.  The virtual machine does not need to be shut down, since it is bridged.  Just use the
+*{ TODO: The virtual machine does not need to be shut down, since it is bridged.  Just use the
 native OS.  
-
-Joe: put in our intro
-
-The real problem is that there needs to be context that that there are three environments -- Native OS
-(usually Windows/MacOS), Linux running on workstation (usually Ubuntu 16.04LST running on VirtualBox), and a termininal
-emulator window that is connected to the robot. }*
+}*
 
 To test,
 
