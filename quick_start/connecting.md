@@ -54,7 +54,9 @@ If you are running Ubuntu 16.04LTS natively, connect to the `ubiquityrobotXXXX` 
 Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
 
 ```ssh ubuntu@ubiquityrobot.local```
-
+ 
+ *{ Should we use name or 10.42.0.1 - seems to be inconsistent}
+ 
 You may see:
 
 >The authenticity of host '10.42.0.1 (10.42.0.1)' can't be established.  
