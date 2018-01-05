@@ -5,7 +5,7 @@ permalink: robot_commander
 ---
 # How to drive with a Smartphone or workstation using Robot Commander in AP mode
 
-#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start) 
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start)
 
 Robot Commander has two versions:  One for the Android phone, and one for a workstation. iPhone's are not currently supported.
 
@@ -59,6 +59,6 @@ Continue with #6 below.
 * again, repeat
 * help
 
-*{Wayne: Add a brief section about shutting down robot commander and the robot. }*
+When you are finished, you can shut down the robot, Robot Commander, or both.
 
 #### &larr;[back](logitech)- - - - - - - - - - [next](connecting)&rarr;

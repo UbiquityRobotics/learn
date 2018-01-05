@@ -4,14 +4,6 @@ title:  "Connecting the Robot to Your Network"
 permalink: connect_network
 ---
 
-*{ TODO: We need to explain why "Connecting to a Workstation for the First Time" is different from
-what we are doing here.  }*
-
-*{ TODO: We need to explain what kind of Wifi network can be connected to.  In particular, we can connect
-to a WiFi network in PSK (Pre-Shared Key) infrastructure mode.  Furthermore, zeroconf needs to work.  That
-means that the access point needs to properly configured.
-We need a writeup of this--don't have one now.}*
-
 #### &uarr;[top]( https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_doing_more)
 
 # Connecting the Robot to Your Network

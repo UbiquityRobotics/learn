@@ -31,13 +31,15 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
 
 ## Using Robot and Workstation Together
 
-* Once you've got a workstation with Ubuntu and ROS and assuming you are running a Magni you'll want to install the files that support Magni. Open a terminal window, login, and type:
+* Once you've got a workstation with Ubuntu and ROS, you should update the Ubiquity software. Because you have two ROS systems, you must keep them in sync. The instructions below assume you have a Magni.
+
+To update the workstation, open a terminal window, login, and type:
 
   `sudo apt install ros-kinetic-magni-robot`
 
-  *{ Wayne: Isn't this already pre-installed?
-  when you do this you must update both systems
-  cannnot do this in AP mode }*
+Then, in another terminal window, ssh into the robot and perform the update there:
+
+    `sudo apt install ros-kinetic-magni-robot`
 
 ## Set environment variables on the workstation
 

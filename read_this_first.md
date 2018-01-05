@@ -7,10 +7,12 @@ permalink: read_this_first
 
 ### Communications
 
-As the robot is delivered it of course has no connection to your local network. Because of this, the robot has its own network (called an access point or AP) that enables you to connect to it directly, without connecting to your local network. For example, you should be able to drive the robot with our Android Robot commander app. You also can connect directly to the robot from a workstation, to run ROS commands such as keyboard teleoperation. However, in AP mode, the robot cannot access the rest of the Internet.
+As the robot is delivered it of course has no connection to your local network. Because of this, the robot has its own network (called an access point or "AP mode") that enables you to [connect to it directly](connecting), without connecting to your local network. For example, you can drive the robot with our Android Robot Commander app. You can use AP mode to connect directly to the robot from a workstation, to run ROS commands such as keyboard teleoperation. However, in AP mode, the robot cannot access the Internet.
 
-Connecting to your local network is required for programming the robot,
-and is covered in a separate section.
+[Connecting to your local network](connect_network) is required for programming the robot.
+ After you have done this, with ROS set up on your workstation, you can issue ROS commands to execute on the workstation which then control the robot over your local network. This may improve performance if the workstation is more powerful than the robot.
+
+The local network must support [zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) and operate in in PSK (Pre-Shared Key) infrastructure mode.
 
 ### The Workstation
 
