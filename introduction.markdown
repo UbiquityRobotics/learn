@@ -52,7 +52,7 @@ you might need to either use the robot in AP mode (explained in tutorials 1-5 or
 
 **The workstation must have WiFi capability.**  Most laptops do, many desktops don't.
 
-You need a workstation to control the robot. In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS. <!--- ("16.04" stands for "2016, April" and "LTS" denotes "Long Term Support" which means 5 years.) ---> Ubiquity Robotics supports only this release because this is a mainstream release of the most popular Linux variant. ROS itself is written on top of Ubuntu Linux.
+You need a workstation to control the robot. In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS. Ubiquity Robotics supports only this release because this is a mainstream release of the most popular Linux variant. ROS itself is written on top of Ubuntu Linux and its really where ROS runs best.
 
 <!--- *{ Wayne: I think we need to describe what WiFi capability "means".  Maybe something like, the workstation needs
 the ability to connected to a WiFi access point, such as a small office/home office.  I'll let you wordsmith this. }*
