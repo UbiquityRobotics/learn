@@ -7,7 +7,7 @@ title:  "Main Menu"
 
 * [Preface](introduction)
 
-* [Read This First](read_this_first)
+<!---* [Read This First](read_this_first) removed this and put it in to the preface --->
 
 * [Quick Start](ix_quick_start.md)
 
