@@ -11,13 +11,22 @@ As the robot is delivered it of course has no connection to your local network. 
 
 [Connecting to your local network](connect_network) is required for programming the robot.
  After you have done this, with ROS set up on your workstation, you can issue ROS commands to execute on the workstation which then control the robot over your local network. This may improve performance if the workstation is more powerful than the robot.
-
-The local network must support [zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) and operate in in PSK (Pre-Shared Key) infrastructure mode.
+ 
+The local WiFi network must support zeroconf (the thing that allows you to find printers on your local WiFi network) and PSK (the thing that allows you to input a WiFi password). Almost all networks these days do, but if you suspect yours doesn't (for example if you can't find a WiFi connected device or you can't enter a WiFi password). Then 
+you might need to either use the robot in AP mode (explained in tutorials 1-5 or upgrade your router.
 
 *{Wayne: The wikipedia article on `zeroconf` is not very good.  I think it would be better to summarize the important
 feature of `zeroconf` which is that it allows a processor that is running the `zeroconf` protocols to access the
 robot and/or workstation using a name of the form `HOSTNAME.local`, where `HOSTNAME` is name specified by the
 robot software developer.  This is instead of using a numeric internet address that continually changes. }*
+
+[//]: # "The statement: local network must support zeroconf and operate in in PSK (Pre-Shared Key) infrastructure mode. isn't very helpful. Perhaps we should talk about this in terms of the implications as very few people are going to know the jargon or care about it. This doesn't get better by better explainations of what this is. 
+
+You might say something like: The local WiFi network must support zeroconf (the thing that allows you to find printers on your local WiFi network) and PSK (the thing that allows you to input a WiFi password). Almost all networks these days do, but if you suspect yours doesn't (for example if you can't find a WiFi connected device or you can't enter a WiFi password). Then 
+you might need to either use the robot in AP mode (explained in tutorials 1-5 or upgrade your router.
+
+It could be even better if there was a way to test to make sure your network had these capabilities
+"
 
 ### The Workstation
 
