@@ -20,7 +20,7 @@ feature of `zeroconf` which is that it allows a processor that is running the `z
 robot and/or workstation using a name of the form `HOSTNAME.local`, where `HOSTNAME` is name specified by the
 robot software developer.  This is instead of using a numeric internet address that continually changes. }*
 
-//   [//]: # "The statement: local network must support zeroconf and operate in in PSK (Pre-Shared Key) infrastructure mode. isn't very helpful. Perhaps we should talk about this in terms of the implications as very few people are going to know the jargon or care about it. This doesn't get better by better explainations of what this is. 
+[//]: # "The statement: local network must support zeroconf and operate in in PSK (Pre-Shared Key) infrastructure mode. isn't very helpful. Perhaps we should talk about this in terms of the implications as very few people are going to know the jargon or care about it. This doesn't get better by better explainations of what this is. 
 
 You might say something like: The local WiFi network must support zeroconf (the thing that allows you to find printers on your local WiFi network) and PSK (the thing that allows you to input a WiFi password). Almost all networks these days do, but if you suspect yours doesn't (for example if you can't find a WiFi connected device or you can't enter a WiFi password). Then 
 you might need to either use the robot in AP mode (explained in tutorials 1-5 or upgrade your router.
