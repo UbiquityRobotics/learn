@@ -54,8 +54,7 @@ The robot will reboot and try to attach to the “MyNetwork” wifi network. But
 
 If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, change the host network attachment, then start the workstation again.
 
-*{ TODO: The virtual machine does not need to be shut down, since it is bridged.  Just use the
-native OS.  
+<!-- *{ TODO: The virtual machine does not need to be shut down, since it is bridged.  Just use the native OS. --> 
 }*
 
 To test,

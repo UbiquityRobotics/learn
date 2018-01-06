@@ -10,8 +10,8 @@ permalink: connecting
 
 Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  Read more about this [here](read_this_first).
 
-*{ Wayne: Shouldn't we use .ova instead of .vdi ?  That way people can use other virtual
-   machine emulators to run the image.  Note to Joe--try this, and document if possible }*
+<!--*{ Wayne: Shouldn't we use .ova instead of .vdi ?  That way people can use other virtual
+   machine emulators to run the image.  Note to Joe--try this, and document if possible }*-->
 
 ### Using our out-of-the-box virtual machine workstation
 
@@ -19,11 +19,11 @@ Your workstation may be a Ubuntu Linux system of your own, or you can use our pr
 
 *  Download the [Ubiquity Robotics Virtual Machine](https://drive.google.com/drive/folders/0B1zeRbBVLXhzZ0Q1TkxtbUxIcEU) and save it in VirtualBox's folder for virtual machines.  On Windows this is \Users\<username>\VirtualBox VMs.
 
-   *{ TODO: We need a link and instructions for MacOS. }*
+  <!-- *{ TODO: We need a link and instructions for MacOS. }*-->
 
 * On Windows, unzip the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vbox`, and double-click it.  This will cause VirtualBox to import the Virtual Machine (the VM) and open the VirtualBox Manager.
 
- *{ TODO:On MacOS, to be written...}
+<!-- *{ TODO:On MacOS, to be written...}-->
 
 * Check the following parameters of the VM:
 
@@ -54,9 +54,9 @@ If you are running Ubuntu 16.04LTS natively, connect to the `ubiquityrobotXXXX` 
 Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
 
 ```ssh ubuntu@ubiquityrobot.local```
- 
+
  *{ Should we use name or 10.42.0.1 - seems to be inconsistent}
- 
+
 You may see:
 
 >The authenticity of host '10.42.0.1 (10.42.0.1)' can't be established.  
