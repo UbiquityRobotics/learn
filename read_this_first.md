@@ -16,7 +16,7 @@ The local network must support [zeroconf](https://en.wikipedia.org/wiki/Zero-con
 
 ### The Workstation
 
-You need a workstation to control the robot. In this manual it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" denotes "Long Term Support" which means 5 years.)  Ubiquity Robotics supports only this release.
+You need a workstation to control the robot. In these tutorials it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" denotes "Long Term Support" which means 5 years.)  Ubiquity Robotics supports only this release.
 
 **The workstation must have WiFi capability.**  That is, it must be able to connect wirelessly to a router or access point. Most laptops do, many desktops don't.
 
