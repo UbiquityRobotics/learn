@@ -22,11 +22,11 @@ You need a workstation to control the robot. In these tutorials it is assumed th
 
 Not everyone has Ubuntu Linux installed on their machine, so we've created a virtual machine (VM) as a downloadable VirtualBox image. This is a system that allows most any computer to pretend that it is a Ubuntu Linux machine. Our VM is preconfigured with Ubuntu, ROS (Robot Operating System) and Ubiquity Robotics' workstation software.
 
-Note that there will be two--or maybe three--simultaneously running systems involved in this configuration, all connected to the same keyboard:
+Note that there will be two--or maybe three--simultaneously running systems in this configuration, all sharing the same keyboard:
 * Robot OS--ROS under Ubuntu on the robot.
 * Workstation OS--ROS under Ubuntu 16.04 on the workstation hardware, OR
   * ROS under Ubuntu 16.04 in a VM under VirtualBox.
-*  Workstation Native OS--If you are using a VM, you will have Windows or MacOS hosting VirtualBox.
+* Workstation Native OS--If you are using a VM, you will have Windows or MacOS hosting VirtualBox.
 
 Be aware of this--it's easy to type a command into the wrong system.
 
