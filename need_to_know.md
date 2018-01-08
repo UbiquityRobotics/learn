@@ -2,7 +2,7 @@
 layout: default
 permalink: need_to_know
 ---
-## Read This First
+## What You Need To Know
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 ### Communications
