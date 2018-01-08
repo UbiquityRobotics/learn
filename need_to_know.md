@@ -1,6 +1,6 @@
 ---
 layout: default
-permalink: read_this_first
+permalink: need_to_know
 ---
 ## Read This First
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)

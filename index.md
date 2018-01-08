@@ -7,7 +7,7 @@ title:  "Main Menu"
 
 * [Preface](introduction)
 
-* [Read This First](read_this_first)
+* [What You Need To Know](need_to_know)
 
 * [Quick Start](ix_quick_start.md)
 
