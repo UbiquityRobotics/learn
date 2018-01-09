@@ -6,16 +6,21 @@ permalink: fiducial_follow_app
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-![Fiducial Markers](two_fiducials.png)
+## The Fiducial_Follow App
 
-The Ubiquity Robotics robots use a number of fiducial markers of known size (illustrated below).  The fiducial_follow demo uses aruco_detect (a ROS node that is part of the Magni package) to detect fiducials in the image feed from a camera.  The characteristics of the images of the fiducial markers enable the robot to compute its location.
+With this app, the robot will follow a given marker, keeping a certain distance from it as it moves and turns.
+
+The Ubiquity Robotics robots use a number of fiducial markers (aruco markers, illustrated below).  The fiducial_follow app takes advantage of aruco_detect (a ROS node that is part of the Magni package) to detect fiducials in the image feed from a camera.  The characteristics of the images of the fiducial markers enable the robot to compute its location.
 
 <img src="https://ubiquityrobotics.github.io/learn/assets/fiducial.png" />
 
-This is an aruco marker. Like a QR code, it contains an identifier encoded in the pattern of the marker.  With fiducial follow running the robot continuously searches its field of view for a specific aruco marker (number 49 by default). Because the marker is a pre-set size and has a pre-set orientation the robot can determine how far away it is and its own orientation!
+With navigation running aruco_detect continuously searches its field of view for aruco markers. When a marker is found a message is published with an array of all the markers that have been found.
 
+The fiducial_follow module subscribes to these messages.  However, it is interested in only one fiducial: the one it is following (aruco marker number 49 by default).
 
-If the target fiducial is detected, movement commands are issued to the robot to make it move towards the fiducial.
+If the target fiducial is found in the array, movement commands are issued to the robot to make it move towards the fiducial.
+
+The code for the fiducial_follow app may be found [here](https://github.com/UbiquityRobotics/demos/blob/master/fiducial_follow/nodes/follow.py).
 
 Parameters
 
