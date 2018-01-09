@@ -4,7 +4,7 @@ title:  "The Fiducial Follow App"
 permalink: fiducial_follow_app
 ---
 
-#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - -&uarr;[up](ix_programming)
 
 ## The Fiducial_Follow App
 
@@ -22,19 +22,19 @@ If the target marker is found in the array, movement commands are issued to the 
 
 The code for the fiducial_follow app may be found [here](https://github.com/UbiquityRobotics/demos/blob/master/fiducial_follow/nodes/follow.py).
 
-Parameters
-
-Nodes
+#### Nodes
 The single program follow.py
 
+#### Parameters
 target_fiducial: the fiducial we are following. The default is fid_49.
 
-Publications (i.e., output)
+#### Publications (i.e., output)
 
 cmd_vel(geometry_msgs/Twist): Commands to move the robot.
 
-Subscriptions (i.e., input)
+#### Subscriptions (i.e., input)
 
 fiducial_transforms:(fiducial_msgs/FiducialTransformArray)
 
+#### other
 uses the fiducials package https://github.com/UbiquityRobotics/fiducials
