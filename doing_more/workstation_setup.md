@@ -57,4 +57,13 @@ Then, in another terminal window, ssh into the robot and perform the update ther
 
   **Warning: Don't do this if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot.**
 
+  Verify that ROS is running and you are connected. On the workstation type:
+
+  ```rostopic list```
+
+  You should see a list of topics including /joy which means you can drive with a joystick.
+
+  At this point you can drive the robot from your workstation's
+  keyboard, just as in the Quick Start section called [Driving a Magni with a keyboard](keyboard_teleop). But now, instead of running the `teleop_twist_keyboard program` in the robot, you can run it in the workstation. The motion commands will be generated in the workstation rather than in the robot, and ROS will manage the communication between the two.
+  
 #### &larr;[back](connect_network)- - - - - - - - - - [next](rviz)&rarr;
