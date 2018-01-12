@@ -23,7 +23,7 @@ using USB accessories is not recommnded unless addional power from a second batt
 
 Make sure (For rev F boards) that the J2 and J5 (circled) jumpers are installed. The robot is powered by either a switch or a jumper. When activated, initially all the LEDS on the robot should go green. If you then turn the wheels, they should turn on and off. If this doesn't happen, the board needs to have its firmware re-installed.
 
-Up to 16 sonar sensors can optionally be installed for obstacle avoidance. These are not intended for gmapping. As of this writing, the optional raspicam is set to use ceiing mounted fiducial markers, and this may be changed for the final release.
+Up to 16 sonar sensors can optionally be installed for obstacle avoidance. These are not intended for gmapping. As of this writing, the optional raspicam is set to use ceiling mounted fiducial markers, and this may be changed for the final release.
 Also, we haven't finished the final SD card image for Loki, so for now the networking and connecting sections for our Magni
 robot are the best source of instructions.
 
