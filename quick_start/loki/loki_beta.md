@@ -40,6 +40,10 @@ When the Loki boots in a new environment, it will attempt to connect to known Wi
 
 To logon to the robot:
 
+```ssh ubuntu@ubiquityrobot.local```
+
+or if that doesn't work:
+
 ```ssh ubuntu@10.42.0.1```
 
 (password = “ubuntu”)
@@ -47,11 +51,10 @@ To logon to the robot:
 You can use the robot in Access Point mode, or you can connect to your local area network via the 
 following commands:
 
-(Useful hint:  Though almost all local networks support DHCP, rarely, it may not work. It helps to use IP numbers instead of names in ROS in these situations.  I do this by including the following lines in my .bashrc Ubuntu startup script:
+(Useful hint:  Though almost all local networks support DHCP, rarely, it may not work. In this case helps to use IP numbers instead of names.  Do this by including the following lines in my .bashrc Ubuntu startup script:
 
-source ~/catkin_ws/devel/setup.bash
-ip="$(hostname -I|cut -d ' ' -f 1)"
-export ROS_IP=$ip
+   ip="$(hostname -I|cut -d ' ' -f 1)"
+   export ROS_IP=$ip
 
 ## Testing without a LAN
 
