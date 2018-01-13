@@ -11,7 +11,8 @@ Set up as a standard Magni Image and then make the following changes:
 
 1. Attach to a network following the quickstart instructions.
 2. Run `sudo systemctl disable magni-base` to stop the Magni services from starting at boot.
-3. Add the github 'loki-base' file to /usr/sbin. `sudo wget https://raw.githubusercontent.com/UbiquityRobotics/learn/master/quick_start/loki/loki-base -O /usr/sbin/loki-base`
+3. Add the github 'loki-base' file to /usr/sbin. 
+`sudo wget https://raw.githubusercontent.com/UbiquityRobotics/learn/master/quick_start/loki/loki-base -O /usr/sbin/loki-base`
 4. Create a file `/etc/systemd/system/loki-base.service` with the following contents
 ```
 [Unit]
