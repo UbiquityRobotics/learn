@@ -5,27 +5,26 @@ permalink: loki_software
 ---
 
 ## How to build a Loki SD Image
-
-Since the release of the January image, Loki nodes are included, however since the documentation as of 01-12-2018 has not been updated, this documentation explains how to start the nodes.
-
 Sarting from a standard Ubiquity Magni Image:
 
 Set up as a standard Magni Image and then make the following changes:
 
 1. Attach to a network following the quickstart instructions.
-2. Via sftp  or 'get'  download the two *.tar.gz files located in the github 'loki' directory to catkin_ws/src
-   
-   wget https://raw.githubusercontent.com/UbiquityRobotics/learn/master/quick_start/loki/bus_server.tar.gz
-                                                                                        ubiquity_launches.tar.gz
-
-3. Expand via tar -xzf 
-
-      (or by gunzip   then  tar -xf
- 
-4. cd ~/catkin_ws  &  catkin_make
-5. Move the github 'loki-base' file to /usr/sbin
-6. Edit the /etc/systemd/system file magni-base file and change /usr/sbin/magni-base to /usr/sbin/loki-base
-7. sudo reboot
+2. Run `sudo systemctl disable magni-base` to stop the Magni services from starting at boot.
+3. Add the github 'loki-base' file to /usr/sbin. `sudo wget https://raw.githubusercontent.com/UbiquityRobotics/learn/master/quick_start/loki/loki-base -O /usr/sbin/loki-base`
+4. Create a file `/etc/systemd/system/loki-base.service` with the following contents
+```
+[Unit]
+After=NetworkManager.service time-sync.target
+[Service]
+Type=simple
+User=ubuntu
+ExecStart=/usr/sbin/loki-base
+[Install]
+WantedBy=multi-user.target
+```
+5. Run `sudo systemctl enable loki-base`
+6. sudo reboot
 
 If everything is correct,  rostopic list should show sonar topics being echoed.  keyboard teleop (either direct or 
 from a workstation, one ROS_MASTER_URI is exported should work.
