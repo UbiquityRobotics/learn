@@ -6,6 +6,8 @@ permalink: loki_beta
 
 ## Getting Started with Loki for Beta Testers
 
+### Note: since the release of the January SD card image, this documentation is no longer accurate. We are working to bring it up to date.
+
 Loki is a ROS controlled differential drive robot designed for educational purposes by Ubiquity Robotics.
 As such, it has code that is in many cases identical to our general purpose Magni Platform. A program written to navigate a
 one meter square for Loki wil navigate an identical one meter square for Magni. Loki is designed to be a fully capable ROS robot at the absolutely lowest price possible. It allows those with extremely limited budgets to learn how to program a real robot. Of course, there are some limitations. It is dificult to add sensors because of limited power. There are no cliff detectors, so running on a table exposes the robot to a fall. The soft rubber tires can make ugly scuff marks on smooth painted surfaces. Running on a 1M by 1M sheet of plywood or foam board is recommended.
