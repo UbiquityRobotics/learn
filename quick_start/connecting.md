@@ -8,7 +8,7 @@ permalink: connecting
 
 # Connecting a Workstation for the First Time
 
-Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  Read more about this [here](read_this_first).
+Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  Read more about this [here](need_to_know).
 
 <!--*{ Wayne: Shouldn't we use .ova instead of .vdi ?  That way people can use other virtual
    machine emulators to run the image.  Note to Joe--try this, and document if possible }*-->

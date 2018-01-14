@@ -11,8 +11,8 @@ A ROS workstation is a full setup of ROS (the Robot Operating System) on a deskt
 
 There are two methods to get a ROS workstation setup.
 
-1) Use our out of the box virtual machine
-2) Install ROS on a native Linux partition of your system
+1. Use our out of the box virtual machine
+2. Install ROS on a native Linux partition of your system
 
 ROS runs on Ubuntu Linux. However not everyone has Ubuntu Linux installed on their machine, so we've created a virtual machine (VM) as a VirtualBox image. This is a system that allows most any laptop or computer to pretend that it is a Ubuntu Linux machine. Our VM has a full install of Ubuntu, ROS and Ubiquity Robotics' software as appropriate for a workstation. The good news is that its quick and easy to get started this way. The downside is that the process of virtualization saps performance from your system so things will not be as fast as if you are running natively. On a fast system you may not notice this. In any event, the virtualization system is a good way to try out having a workstation before committing to set one up on your laptop.
 
@@ -65,5 +65,5 @@ Then, in another terminal window, ssh into the robot and perform the update ther
 
   At this point you can drive the robot from your workstation's
   keyboard, just as in the Quick Start section called [Driving a Magni with a keyboard](keyboard_teleop). But now, instead of running the `teleop_twist_keyboard program` in the robot, you can run it in the workstation. The motion commands will be generated in the workstation rather than in the robot, and ROS will manage the communication between the two.
-  
+
 #### &larr;[back](connect_network)- - - - - - - - - - [next](rviz)&rarr;
