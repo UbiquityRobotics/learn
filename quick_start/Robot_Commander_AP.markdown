@@ -59,6 +59,6 @@ Continue with #6 below.
 * again, repeat
 * help
 
-When you are finished, you can shut down the robot, Robot Commander, or both.
+When you are finished, you can shut down the robot, Robot Commander, or both. Please note that once you connect your robot to the local area network, you will need to use the networked assigned IP address to access.
 
 #### &larr;[back](logitech)- - - - - - - - - - [next](connecting)&rarr;
