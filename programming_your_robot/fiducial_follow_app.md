@@ -25,7 +25,7 @@ Now, this app is interested in only one fiducial marker: the one it is following
 
 If the target marker is found in the array, its coordinates are saved in the variables self.x and self.y and the variable self.got_fid is set True. This notifies the run procedure (search for "def run") that it has something to do--it's been looping at 20Hz ever since the program was started (search for node.run). But until now it has issued no commands to the robot.
 
-Now the run function, recognizing that the target marker has been found (self.got_fid is set True) calculate the amount of turning needed to move towards the fiducial and issues commands to the robot to make it move towards the fiducial. It does this by publishing a standard ROS dmessage (known as a Twist message) that specifies the velocity and direction to move. Publishing this message is done by the cmdPub function, which has been declared to be of type rospy.Publisher
+Now the run function, recognizing that the target marker has been found (self.got_fid is set True) calculates the direction needed to move towards the fiducial and issues the needed commands to the robot. It does this by publishing a standard ROS message (known as a Twist message) that specifies the velocity and direction to move. Publishing this message is done by the cmdPub function, which has been declared to be of type rospy.Publisher
 
 
 #### Nodes
