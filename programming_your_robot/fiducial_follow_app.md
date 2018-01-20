@@ -20,16 +20,19 @@ With navigation running aruco_detect continuously searches its field of view for
 
 The fiducial_follow module subscribes to these messages, using the rospy.Subscriber function.  In the code, you can see that this function takes arguments indicating the message type that will be received (FiducialTransformArray) and the function to be called (self.newTf).
 
-Now, this app is interested in only one fiducial marker: the one it is following (aruco marker number 49 by default).  So it is the job of the newTf routine to find the target marker. Nonetheless, it first publishes a transform for each fiducial, whether it is the target one or not. This causes rviz (assuming it is being used) to show the location of each of the markers.  The publication is invoked by calling self.br, which is a tf2_ros.TransformBroadcaster().
+Now, this app is interested in only one fiducial marker: the one it is following (aruco marker number 49 by default).  So it is the job of the newTf routine to find the target marker. Nonetheless, it first publishes a transform for each fiducial, whether it is the target one or not. This causes rviz (assuming it is being used) to show the location of each of the markers.  The publication is invoked by calling self.br, which is declared at initialization to be a tf2_ros.TransformBroadcaster().
 
 
-If the target marker is found in the array, movement commands are issued to the robot to make it move towards the fiducial.
+If the target marker is found in the array, its coordinates are saved in the variables self.x and self.y and the variable self.got_fid is set True. This notifies the run procedure (search for "def run") that it has something to do--it's been looping at 20Hz ever since the program was started (search for node.run). But until now it has issued no commands to the robot.
+
+Now the run function, recognizing that the target marker has been found (self.got_fid is set True) calculate the amount of turning needed to move towards the fiducial and issues commands to the robot to make it move towards the fiducial. It does this by publishing a standard ROS dmessage (known as a Twist message) that specifies the velocity and direction to move. Publishing this message is done by the cmdPub function, which has been declared to be of type rospy.Publisher
+
 
 #### Nodes
 The single program follow.py
 
 #### Parameters
-target_fiducial: the fiducial we are following. The default is fid_49.
+target_fiducial: the fiducial we are following. The default is fid_49. Numerous other parameters may be found in the initialization section. Search for "rospy.get_param" to find them.
 
 #### Publications (i.e., output)
 
@@ -39,5 +42,5 @@ cmd_vel(geometry_msgs/Twist): Commands to move the robot.
 
 fiducial_transforms:(fiducial_msgs/FiducialTransformArray)
 
-#### other
+#### Other
 uses the fiducials package https://github.com/UbiquityRobotics/fiducials
