@@ -34,4 +34,4 @@ Note that there will be two--or maybe three--simultaneously running systems in t
 
 Be aware of this--it's easy to type a command into the wrong system.
 
-Instructions for workstation setup are given in the sections below, as they are needed.
+Instructions for workstation setup are given in the sections below, as they are needed. We know you may be excited and want to start as soon as possible to get your projects underway. Since we provide software images for the Raspberry Pi 3 or a Virtual Box, it is possible to 'try before you buy.'  [Download Site](https://downloads.ubiquityrobotics.com/)
