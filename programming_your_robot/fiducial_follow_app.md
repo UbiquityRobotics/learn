@@ -39,7 +39,7 @@ Now the run function, recognizing that the target marker has been found (`self.g
     twist.angular.z = angSpeed
     twist.linear.x = linSpeedself.cmdPub.publish(twist)
 
-Publishing this message is done by the cmdPub function, which has been declared to be of type rospy.Publisher
+Publishing this message is done by the cmdPub function, which has been declared to be of type rospy.Publisher.
 
 
 #### Nodes
