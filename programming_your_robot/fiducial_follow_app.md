@@ -18,14 +18,28 @@ The app is written in Python. The code for the fiducial_follow app may be found 
 
 With navigation running aruco_detect continuously searches its field of view for aruco markers. When a marker is found a `fiducial_transforms` message is published with an array of transforms for all the markers that have been found.
 
-The fiducial_follow module subscribes to these messages, using the rospy.Subscriber function.  In the code, you can see that this function takes arguments indicating the message type that will be received (FiducialTransformArray) and the function to be called (self.newTf).
+The fiducial_follow module subscribes to these messages, using the rospy.Subscriber function.  
 
-Now, this app is interested in only one fiducial marker: the one it is following (aruco marker number 49 by default).  So it is the job of the newTf routine to find the target marker. Nonetheless, it first publishes a transform for each fiducial, whether it is the target one or not. This causes rviz (assuming it is being used) to show the location of each of the markers.  The publication is invoked by calling self.br, which is declared at initialization to be a tf2_ros.TransformBroadcaster().
+```rospy.Subscriber("/fiducial_transforms", FiducialTransformArray, self.newTf)```
 
+
+You can see that this function takes arguments indicating the message type that will be received `(FiducialTransformArray)` and the function to be called when a message is received `(self.newTf)`.
+
+Now, this app is interested in only one fiducial marker: the one it is following (aruco marker number 49 by default).  So it is the job of the newTf routine to find the target marker. Nonetheless, it first publishes a transform for each fiducial, whether it is the target one or not.
+
+    self.br.sendTransform(t)
+
+This causes rviz (assuming it is being used) to show the location of each of the markers. The function self.br is declared at initialization to be a tf2_ros.TransformBroadcaster().
 
 If the target marker is found in the array, its coordinates are saved in the variables self.x and self.y and the variable self.got_fid is set True. This notifies the run procedure (search for "def run") that it has something to do--it's been looping at 20Hz ever since the program was started (search for node.run). But until now it has issued no commands to the robot.
 
-Now the run function, recognizing that the target marker has been found (self.got_fid is set True) calculates the direction needed to move towards the fiducial and issues the needed commands to the robot. It does this by publishing a standard ROS message (known as a Twist message) that specifies the velocity and direction to move. Publishing this message is done by the cmdPub function, which has been declared to be of type rospy.Publisher
+Now the run function, recognizing that the target marker has been found (`self.got_fid` is True) calculates the direction needed to move towards the fiducial and issues the needed commands to the robot. It does this by publishing a standard ROS message (known as a Twist message) that specifies the velocity and direction to move.
+
+    twist = Twist()
+    twist.angular.z = angSpeed
+    twist.linear.x = linSpeedself.cmdPub.publish(twist)
+
+Publishing this message is done by the cmdPub function, which has been declared to be of type rospy.Publisher
 
 
 #### Nodes
