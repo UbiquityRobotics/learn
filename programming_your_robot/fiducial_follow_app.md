@@ -33,11 +33,13 @@ This causes rviz (assuming it is being used) to show the location of each of the
 
 If the target marker is found in the array, its coordinates are saved in the variables self.x and self.y and the variable self.got_fid is set True. This notifies the run procedure (search for "def run") that it has something to do--it's been looping at 20Hz ever since the program was started (search for node.run). But until now it has issued no commands to the robot.
 
-Now the run function, recognizing that the target marker has been found (`self.got_fid` is True) calculates the direction needed to move towards the fiducial and issues the needed commands to the robot. It does this by publishing a standard ROS message (known as a Twist message) that specifies the velocity and direction to move.
+Now the run function calculates the forward and turning speed needed (both may be zero) to move towards the marker and issues the needed commands to the robot. It does this by publishing a standard ROS message (known for some reason as a Twist message) that specifies the velocity and direction to move.
 
     twist = Twist()
     twist.angular.z = angSpeed
     twist.linear.x = linSpeedself.cmdPub.publish(twist)
+
+If both the twist parameters are zero, the robot will stop.
 
 Publishing this message is done by the cmdPub function, which has been declared to be of type rospy.Publisher.
 
