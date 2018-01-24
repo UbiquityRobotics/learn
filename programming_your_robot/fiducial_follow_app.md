@@ -43,6 +43,8 @@ If both the twist parameters are zero, the robot will stop.
 
 Publishing this message is done by the cmdPub function, which has been declared to be of type rospy.Publisher.
 
+<img src="https://ubiquityrobotics.github.io/learn/assets/rosgraph.svg" />
+
 
 #### Nodes
 The single program follow.py
