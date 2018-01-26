@@ -144,8 +144,10 @@ if it is working rostopic list looks like this:
 
 You then can launch teleop-twist-keyboard either locally or on a remote by
 
-```export ROS_MASTER_URI=http://’robot ip number’ :11311
-rosrun teleop-twist-keyboard teleop-twist-keyboard.py```
+```
+export ROS_MASTER_URI=http://’robot ip number’ :11311
+rosrun teleop-twist-keyboard teleop-twist-keyboard.py
+```
 
 and drive the robot.
 
@@ -154,7 +156,7 @@ Time stamps are important in ros if you are working in access point mode the rob
 The folowing script(or one liner) will fix this:
 ```
 #!/bin/sh
-ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )`
+ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )
 ./loki_base 
 ```
 
