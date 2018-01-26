@@ -106,8 +106,10 @@ Now you can start the base controller by:
  (January 13 or later distribution) or by
 
 
-```cd catkin_ws/src/ubiquity_launches/bin/
-   ./loki_base
+```
+cd catkin_ws/src/ubiquity_launches/bin/
+
+./loki_base
 ```
 Older distribution or if built in custom catkin_ws.
 
@@ -166,7 +168,7 @@ On the robot make sure ROS_IP  and ROS_MASTER_URI are set to IP number, not loca
 rosrun rviz rviz
 ```
 
-The loki.rviz  file can be downloaded from here:  [loki.rviz](loki.rviz)
+The loki.rviz  file can be downloaded from here: 
 
 
 will bring up rviz and show any sonars if present.
