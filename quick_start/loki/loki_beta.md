@@ -172,6 +172,7 @@ rosrun rviz rviz
 
 The loki.rviz  file can be downloaded from here: 
 
+wget https://raw.githubusercontent.com/UbiquityRobotics/learn/master/quick_start/loki/loki.rviz
 
 will bring up rviz and show any sonars if present.
 
