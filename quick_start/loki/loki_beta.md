@@ -94,23 +94,69 @@ First determine if any nodes are running by typing:
 rostopic list 
 ```
 
-if not, you can start the base controller by:
+Depending on your sd card release, rostopics may show the robot as being a magni (no sonar data). If this is the case,
+stop ROS by:
 
-```cd catkin_ws/src/ubiquity_launches/bin/```
+```pkill roslaunch```
+
+Now you can start the base controller by:
+
+```roslaunch loki_bringup base.launch >/dev/null 2>&1 ```
+ 
+ (January 13 or later distribution) or by
+
+
+```
+cd catkin_ws/src/ubiquity_launches/bin/
+
+./loki_base
+```
+Older distribution or if built in custom catkin_ws.
+
+if it is working rostopic list looks like this:
+
+```
+/bus_server/sensor/sonar_0
+/bus_server/sensor/sonar_1
+/bus_server/sensor/sonar_10
+/bus_server/sensor/sonar_11
+/bus_server/sensor/sonar_12
+/bus_server/sensor/sonar_13
+/bus_server/sensor/sonar_14
+/bus_server/sensor/sonar_15
+/bus_server/sensor/sonar_2
+/bus_server/sensor/sonar_3
+/bus_server/sensor/sonar_4
+/bus_server/sensor/sonar_5
+/bus_server/sensor/sonar_6
+/bus_server/sensor/sonar_7
+/bus_server/sensor/sonar_8
+/bus_server/sensor/sonar_9
+/cmd_vel
+/joint_states
+/odom
+/rosout
+/rosout_agg
+/tf
+/tf_static
+```
+
 
 You then can launch teleop-twist-keyboard either locally or on a remote by
 
-```export ROS_MASTER_URI=http://’robot ip number’ :11311
-rosrun teleop-twist-keyboard teleop-twist-keyboard.py```
+```
+export ROS_MASTER_URI=http://’robot ip number’ :11311
+rosrun teleop-twist-keyboard teleop-twist-keyboard.py
+```
 
 and drive the robot.
 
 
 Time stamps are important in ros if you are working in access point mode the robot and laptop clocks will not be in sync. 
 The folowing script(or one liner) will fix this:
-
+```
 #!/bin/sh
-ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )`
+ssh ubuntu@10.42.0.1 sudo -S date -s @`( date -u +"%s" )
 ./loki_base 
 ```
 
@@ -121,9 +167,12 @@ To run Rviz on your laptop, you need to make sure your networking between the la
 On the robot make sure ROS_IP  and ROS_MASTER_URI are set to IP number, not localhost. on the laptop make sure the ROS_MASTER_URI matches the robot. The catkin_ws/src/ubiquity_launches files need to be installed on both systems.
 
 ```
-cd ~/catkin_ws/src/ubiquity_launches/bin/
-./loki_rviz_sonar 
+rosrun rviz rviz
 ```
+
+The loki.rviz  file can be downloaded from here: 
+
+wget https://raw.githubusercontent.com/UbiquityRobotics/learn/master/quick_start/loki/loki.rviz
 
 will bring up rviz and show any sonars if present.
 

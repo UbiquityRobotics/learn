@@ -6,7 +6,7 @@ permalink: loki_software
 
 ## How to build a Loki SD Image
 
-Since the release of the January image, Loki nodes are included, however since the documentation as of 01-12-2018 has not been updated, this documentation explains how to start the nodes.
+Since the release of the January image, Loki nodes are included, however since the documentation as of 01-12-2018 has not been updated, this documentation explains how to start the nodes. Also the Virtual Box image does not have the loki nodes yet, so these instructions may still be valid for a non-Raspberry Pi system.
 
 Sarting from a standard Ubiquity Magni Image:
 
