@@ -9,6 +9,8 @@ title:  "Main Menu"
 
 * [What You Need To Know](need_to_know)
 
+* [Magni Key Parts](magni_key)
+
 * [Quick Start](ix_quick_start.md)
 
   Things you can do with your robot right out of the box.

@@ -6,7 +6,7 @@ author: Alan Federman
 ---
 ** Unboxing and Assembling a Magni Robot
 
-The Magni comes almost ready to run with minimal assembly. There are three different version of Magni: Bronze, Silver and Gold. Most will come with a Raspiberry Pi 3 computer and software image (Silver and Gold). The Bronze version will not come with the computer. 2 12v SLA (Sealed Lead Acid) batteries are purchased separately. Two AlLen wrenches (M3 and M6) will be included in the shipping box. In addition a small Phillips (cross point) screw driver may be needed for mounting the Raspberri Pi camera.
+The Magni comes almost ready to run with minimal assembly. There are three different version of Magni: Bronze, Silver and Gold. Most will come with a Raspiberry Pi 3 computer and software image (Silver and Gold). The Bronze version will not come with the computer. 2 12v SLA (Sealed Lead Acid) batteries are purchased separately. Two Allen wrenches (M3 and M6) will be included in the shipping box. In addition a small Phillips (cross point) screw driver may be needed for mounting the Raspberry Pi camera.
 
 
 Step 1 - open the box

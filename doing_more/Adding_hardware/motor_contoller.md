@@ -21,3 +21,7 @@ a USB to TTL dongle allows you to connect any Ubuntu computer.
 
 Recent additions include a way to attach a 'cliff' sensor, and a built-in self-test (BIST) routine to quickly 
 diagnose any issues.
+
+Magni uses brushless hub motors. each motor ahs three sets of magnetic coils that control the motor. In addition there are three maagetic sensors called "Hall Effect Sensors" that sense the position of the motor and hence the wheel. The MC can read the position of the motor and control its speed. It does this by changing the amount and direction of current on the power leads. The control is done via a PSOC (Programable Software on a Chip) various power transistors (MOSFETs) and other components.
+
+Specialy designed algorithyms allow Ubiquity Robotics to anaylze the HAll Effect Sensor data to get exceptionally accurate odometry data from our Magni robot. The MC and the custom designed wheels are designed specifically to work together, and can not be replaced by a similar item.

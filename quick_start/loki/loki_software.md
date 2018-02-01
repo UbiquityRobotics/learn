@@ -3,8 +3,6 @@ layout: default2.
 title:  "LOKI Beta software"
 permalink: loki_software
 ---
-
-## How to build a Loki SD Image
 Sarting from a standard Ubiquity Magni Image:
 
 Set up as a standard Magni Image and then make the following changes:
