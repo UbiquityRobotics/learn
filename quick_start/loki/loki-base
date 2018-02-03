@@ -29,7 +29,7 @@ log info "loki-base: Launching ROS_HOSTNAME=$ROS_HOSTNAME, ROS_IP=$ROS_IP, ROS_M
 # Punch it.
 export ROS_HOME=$(echo ~ubuntu)/.ros
 export ROS_LOG_DIR=$log_path
-roslaunch ubiquity_launches m_loki_base.launch robot_base:=loki
+roslaunch loki_demos teleop.launch
 PID=$!
 
 log info "loki-base: Started roslaunch as background process, PID $PID, ROS_LOG_DIR=$ROS_LOG_DIR"
