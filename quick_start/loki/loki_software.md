@@ -3,7 +3,7 @@ layout: default2.
 title:  "LOKI Beta software"
 permalink: loki_software
 ---
-Sarting from a standard Ubiquity Magni Image:
+Starting from a standard Ubiquity Magni Image:
 
 Set up as a standard Magni Image and then make the following changes:
 
