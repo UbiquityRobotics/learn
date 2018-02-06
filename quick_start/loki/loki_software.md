@@ -26,8 +26,8 @@ WantedBy=multi-user.target
 6. Run `sudo systemctl enable loki-base`
 7. sudo reboot
 
-If everything is correct,  rostopic list should show sonar topics being echoed.  keyboard teleop (either direct or 
-from a workstation, one ROS_MASTER_URI is exported should work.
+If everything is correct,  rostopic list should show sonar topics being echoed.  Keyboard teleop (either direct or 
+from a workstation, once ROS_MASTER_URI is exported on a workstation, RVIZ should work.
 
 To get speech to work, edit the magni-demos speech_commands launch file and remove the lines refering to magni_base  and teleop/
 
