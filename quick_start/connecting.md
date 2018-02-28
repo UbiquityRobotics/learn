@@ -81,4 +81,4 @@ Now you are connected and logged in.
 
 ```roslaunch simple_navigation.launch ```
 
-#### &larr;[back](robot_commander)- - - - - - - - - - [next](logitech)&rarr;
+#### &larr;[back](logitech)- - - - - - - - - - [next](robot_commander)&rarr;
