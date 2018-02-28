@@ -61,4 +61,4 @@ Continue with #6 below.
 
 When you are finished, you can shut down the robot, Robot Commander, or both.
 
-#### &larr;[back](keyboard_teleop)- - - - - - - - - - [next](connecting)&rarr;
+#### &larr;[back](connecting)- - - - - - - - - - [next](keyboard_teleop)&rarr;
