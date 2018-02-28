@@ -1,12 +1,12 @@
 ---
 layout: default
-title:  "Connecting a Workstation for the First Time"
+title:  "Connecting a Workstation and Starting the Robot"
 permalink: connecting
 ---
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start)
 
-# Connecting a Workstation for the First Time
+# Connecting a Workstation and Starting the Robot
 
 Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  Read more about this [here](need_to_know).
 
@@ -67,7 +67,7 @@ You will be asked for the password, which initially is "ubuntu".
 
 ```ubuntu@10.42.0.1's password:ubuntu```
 
-Finally,
+Now you are connected and logged in.
 
 >Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
   * Documentation:  https://help.ubuntu.com
@@ -77,5 +77,8 @@ Finally,
   0 updates are security updates.  
  Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143
 
+ Finally, start the robot's software by typing:
 
-#### &larr;[back](robot_commander)- - - - - - - - - - [next](keyboard_teleop)&rarr;
+```roslaunch simple_navigation.launch ```
+
+#### &larr;[back](robot_commander)- - - - - - - - - - [next](logitech)&rarr;

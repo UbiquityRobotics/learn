@@ -14,9 +14,14 @@ To start rviz, type on the workstation command line:
 
   `rviz`
 
+  On Magni, you can type:
+
+  ```roslaunch magni_viz view_nav.launch``` when navigation is running  
+  or  
+  ```roslaunch magni_viz view_robot.launch``` when it is not.
+
 RViz is highly configurable so its possible to save a previous configuration and reuse it again and again.
 
 <insert some description of the configuration file, and how to make use of it and insert a link to a previously utilized configuration file>
 
 #### &larr;[back](workstation_setup)- - - - - - - - - - [next](fiducials)&rarr;
- 
