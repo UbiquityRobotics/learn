@@ -79,6 +79,9 @@ Now you are connected and logged in.
 
  Finally, start the robot's software by typing:
 
-```roslaunch simple_navigation.launch ```
+```magni_demos simple_navigation.launch```  
+or  
+```loki_demos simple_navigation.launch```
+
 
 #### &larr;[back](logitech)- - - - - - - - - - [next](robot_commander)&rarr;
