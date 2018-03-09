@@ -13,9 +13,7 @@ If you have one of these (especially if you have a camera for it), there are num
 
 * You can install the Ubiquity software image. The image may be [downloaded](https://downloads.ubiquityrobotics.com/) from the Ubiquity Robotics web site.  Burn it to a mini SD card and boot it up on your Raspberry Pi.
 
-* You can install our virtual machine on your workstation,  
-
-* The workstation too can be [downloaded](https://downloads.ubiquityrobotics.com/) from the Ubiquity Robotics site. It has ROS already installed.
+* You can install our virtual machine on your workstation. It can be [downloaded](https://downloads.ubiquityrobotics.com/) from the Ubiquity Robotics site. It has ROS already installed.
 
 --or, if you have a machine running Ubuntu 16.04 --
 * You can set up ROS on your workstation.
