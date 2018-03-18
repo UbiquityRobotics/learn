@@ -13,7 +13,7 @@ robots.
 
 ## Nodes
 
-The various nodes used are listed below, in the form _package_ _node name_,
+The various nodes used are listed below, in the form _package_ followed, after a space, by _node name_,
 along with a brief description and a link to more detailed information.
 
 ### aruco\_detect aruco\_detect
