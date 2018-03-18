@@ -23,13 +23,15 @@ title:  "Main Menu"
 
   A look at some apps for the robot.
 
+* [Software Reference](software_reference/software_reference.md)
+<!--
+
 * [Setup In Depth](setup/setup.md):
 
   Everything from ordering batteries and network cables to figuring out networking issues.
 
 * [Miscellaneous](misc/misc.md)
 
-<!--
 * [CoffeeBot Challenge](ix_coffeebot)
 * [Learning with Magni in Simulation](ix_simulation1)
 * [Challenge in Simulation](ix_simulation2) -->

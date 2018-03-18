@@ -1,3 +1,10 @@
+---
+layout: default
+title:  "Software Reference"
+permalink: software_reference
+---
+
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 # Software Reference
 
@@ -44,7 +51,7 @@ objects in images from a camera and `move_basic` to move towards them.
 [Documentation](https://github.com/UbiquityRobotics/loki_base_node/blob/indigo/README.md)
 
 `bus_server.py` is the interface between ROS and the micro controller on
-Loki robots. It subscribes to motor commands and publishes odometry and 
+Loki robots. It subscribes to motor commands and publishes odometry and
 sonar range messages.
 
 ### fiducial\_follow follow.py
@@ -64,7 +71,7 @@ robot to follow a particular marker.
 [Documentation](http://wiki.ros.org/move_base)
 
 The `move_base` node provides a ROS interface for configuring, running,
-and interacting with the navigation stack on a robot. 
+and interacting with the navigation stack on a robot.
 
 ### move\_basic move\_basic
 
@@ -74,7 +81,7 @@ and interacting with the navigation stack on a robot.
 node. The plan for moving towards a goal consists of rotating to face it,
 driving straight towards it, and rotating again to achieve the final pose.
 
-### move\_demo move.py 
+### move\_demo move.py
 
 [Documentation](https://github.com/UbiquityRobotics/demos/blob/master/move_demo/README.md)
 
@@ -85,7 +92,7 @@ or move forwards or backwards.
 ### Robot\_Commander
 
 [Documentation](https://github.com/UbiquityRobotics/Robot_Commander/blob/master/README.md)
- 
+
 `Robot_Commander` is an Android app that allows control of a robot, including
 tele-operation and setting and navigating towards waypoints.  It interacts
 with ROS via `rosbridge_websocket`.  The interaction includes sending of
