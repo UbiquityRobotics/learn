@@ -14,7 +14,7 @@ range obstacle avoidance system, and the Gold version includes both the sonar an
 
 ![Camera in Bracket](a1.jpg)
 
-The easiest way to install the camera is to remove the the Pi, attach the camera to the mounting bracket, and thread the cable through the slot holding the camera.
+The easiest way to install the camera is to remove the the Pi, attach the camera to the mounting bracket, and thread the cable through the slot holding the camera. the camera is installed with the cable pointing down, the picture is incorrect.
 
 ![Camera Cable](a2.jpg)
 
