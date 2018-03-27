@@ -57,6 +57,8 @@ Continue with #6 below.
 * remove waypoint ____ (waypoint name)
 * list waypoints
 * again, repeat
+* find aeroplane, bicycle, bird, boat, bottle, bus, car, cat, chair, cow, diningtable, dog, horse, motorbike, person, pottedplant, sheep, sofa, train, tvmonitor
+* battery
 * help
 
 When you are finished, you can shut down the robot, Robot Commander, or both.
