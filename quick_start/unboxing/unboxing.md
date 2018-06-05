@@ -35,7 +35,7 @@ Step 1 - open the box
 
  ![RPi 3 installed](unb7.JPG)
 
- The front and back brackets can be installed using the brackets require a M6 hex (Allen wrench) We suggest an extra long (6 cm). The other included fasteners are M3 hex and a small Phillips screw for Raspi Cam attachment. ![See the detailed section on camera and sensor installation.](../camera_sensor/installation.md)
+ The front and back brackets can be installed using the brackets require a M4 hex Allen wrench. We suggest an extra long (6 cm). The other included fasteners are M3 hex(M2 wrench) and a small Phillips screw for Raspi Cam attachment. ![See the detailed section on camera and sensor installation.](../camera_sensor/installation.md)
 
 
 Brackets
