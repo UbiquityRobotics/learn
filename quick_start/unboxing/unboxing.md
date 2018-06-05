@@ -35,7 +35,7 @@ Step 1 - open the box
 
  ![RPi 3 installed](unb7.JPG)
 
- The front and back brackets can be installed using the brackets require a M4 hex Allen wrench. We suggest an extra long (6 cm). The other included fasteners are M3 hex(M2 wrench) and a small Phillips screw for Raspi Cam attachment. ![See the detailed section on camera and sensor installation.](https://ubiquityrobotics.github.io/learn/camera_sensor/installation.md)
+ The front and back brackets can be installed using the brackets require a M4 hex Allen wrench. We suggest an extra long (6 cm). The other included fasteners are M3 hex(M2 wrench) and a small Phillips screw for Raspi Cam attachment. [See the detailed section on camera and sensor installation.](ix_camera_sensor)
 
 
 Brackets
@@ -57,6 +57,6 @@ to be specified.  The user should be prepared for a current inrush spark? (not s
 
 ![Final](unb-bat.JPG)
 
-A video of this process is available at:  https://youtu.be/pF38kFOl0Ic
+A video of this process is available:  [Video](https://youtu.be/pF38kFOl0Ic)
 
 <<[back](ix_quick_start)- - - - - - - - - - [next](logitech)>>
