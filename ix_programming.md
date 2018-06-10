@@ -38,7 +38,7 @@ This code follows a fiducial marker. [Follow this link to learn how Fiducial Fol
 
 ### Good Luck!!
 
-If you have issues conisder posting your question to [forum.ubiquityrobotics.com](forum.ubiquityrobotics.com) other than that - we hope you have much success developing your applications with Magni.
+If you have issues conisder posting your question to [forum.ubiquityrobotics.com](https://forum.ubiquityrobotics.com/) other than that - we hope you have much success developing your applications with Magni.
 
 <!--
 12.	Writing Your First Script
