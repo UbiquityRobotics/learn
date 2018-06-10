@@ -17,7 +17,7 @@ Some of the texts that are widely acknowledged as excellent include:
 
 [Programming Robots with ROS](http://wiki.ros.org/Books/Programming_Robots_with_ROS) - Was written by many of the original developers of ROS
 
-[ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) - An online resource maintained by the open source robotics foundation
+[ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) - An online resource maintained by The Open Source Robotics Foundation
 
 ### Online lecture courses
 In addition there are a number of lecture series on ROS some that can be found online include:
