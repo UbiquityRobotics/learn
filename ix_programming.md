@@ -13,11 +13,11 @@ ROS has a wide user bases and there are lots of resources to learn how to progra
 
 Some of the texts that are widely acknowledged as excellent include:
 
-[A Gentle introduction to ROS](https://cse.sc.edu/~jokane/agitr/ ) - This is an excellent text that is provided free online 
+[A Gentle introduction to ROS](https://cse.sc.edu/~jokane/agitr/ ) - Free online textbook style guide
 
 [Programming Robots with ROS](http://wiki.ros.org/Books/Programming_Robots_with_ROS) - Was written by many of the original developers of ROS
 
-[ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) - A free online resource
+[ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) - An online resource maintained by the open source robotics foundation
 
 ### Online lecture courses
 In addition there are a number of lecture series on ROS some that can be found online include:
@@ -28,7 +28,7 @@ In addition there are a number of lecture series on ROS some that can be found o
 
 ### Starter Code
 
-For those of you who want to dive straight in to code - we've provided a couple of example projects they are a little more complicated than "hello world" but only a little, they also provide a lot of the basic infrastructure you need to create a starting point.
+For those of you who want to dive straight in to code - we've provided a couple of example projects. They also provide a lot of the basic infrastructure you need and create a starting point.
 
 [Move demo](https://github.com/UbiquityRobotics/demos/tree/master/move_demo) This code simply moves the robot. It includes all the bindings to external services that both navigate and drive the robot.
 
