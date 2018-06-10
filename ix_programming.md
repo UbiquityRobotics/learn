@@ -34,7 +34,7 @@ For those of you who want to dive straight in to code - we've provided a couple 
 
 [The Fiducial Follow App](https://github.com/UbiquityRobotics/demos/tree/master/fiducial_follow) This code follows a fiducial. It contains the bindings that are needed to do useful work with Fiducials.
 
-If you have issues conisder posting your question to [forum.ubiquityrobotics.com] other than that - we hope you have much success developing your applications with Magni.
+If you have issues conisder posting your question to [forum.ubiquityrobotics.com](forum.ubiquityrobotics.com) other than that - we hope you have much success developing your applications with Magni.
 
 <!--
 12.	Writing Your First Script
