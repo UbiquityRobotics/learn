@@ -32,7 +32,7 @@ For those of you who want to dive straight in to code - we've provided a couple 
 
 [Move demo](https://github.com/UbiquityRobotics/demos/tree/master/move_demo) This code simply moves the robot. It includes all the bindings to external services that both navigate and drive the robot.
 
-[The Fiducial Follow App](https://github.com/UbiquityRobotics/demos/tree/master/fiducial_follow) This code follows a fiducial. It contains the bindings that are needed to do useful work with Fiducials.
+[The Fiducial Follow App](https://github.com/UbiquityRobotics/demos/tree/master/fiducial_follow) This code follows a fiducial marker. It contains the bindings that are needed to do useful work with fiducials.
 
 If you have issues conisder posting your question to [forum.ubiquityrobotics.com](forum.ubiquityrobotics.com) other than that - we hope you have much success developing your applications with Magni.
 
