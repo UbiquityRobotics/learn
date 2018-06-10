@@ -36,7 +36,7 @@ This code follows a fiducial marker. [Follow this link to learn how Fiducial Fol
 ##### Move Demo
 [Move demo](https://github.com/UbiquityRobotics/demos/tree/master/move_demo) This code simply moves the robot. It includes all the bindings to external services that both navigate and drive the robot.
 
-## Good Luck!!
+### Good Luck!!
 
 If you have issues conisder posting your question to [forum.ubiquityrobotics.com](forum.ubiquityrobotics.com) other than that - we hope you have much success developing your applications with Magni.
 
