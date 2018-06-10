@@ -31,7 +31,7 @@ In addition there are a number of lecture series on ROS some that can be found o
 For those of you who want to dive straight in to code - we've provided a couple of example projects. They also provide a lot of the basic infrastructure you need and create a starting point.
 
 ##### Fiducial Follow
-This code follows a fiducial marker. [Follow this link to learn how Fiducial Follow works](fiducial_follow_app). The app itself contains the bindings that are needed to do useful work with fiducials. [Click here for The Fiducial Follow App code repository ](https://github.com/UbiquityRobotics/demos/tree/master/fiducial_follow) 
+[The Fiducial Follow App](fiducial_follow_app) This code follows a fiducial marker. [Follow this link to learn how Fiducial Follow works](fiducial_follow_app). The app itself contains the bindings that are needed to do useful work with fiducials. [Click here for The Fiducial Follow App code repository ](https://github.com/UbiquityRobotics/demos/tree/master/fiducial_follow) 
 
 ##### Move Demo
 [Move demo](https://github.com/UbiquityRobotics/demos/tree/master/move_demo) This code simply moves the robot. It includes all the bindings to external services that both navigate and drive the robot.
