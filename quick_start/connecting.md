@@ -4,7 +4,7 @@ title:  "Connecting a Workstation and Starting the Robot"
 permalink: connecting
 ---
 
-#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start)
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 # Connecting a Workstation and Starting the Robot
 

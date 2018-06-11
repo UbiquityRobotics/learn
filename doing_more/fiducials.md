@@ -5,7 +5,7 @@ permalink: fiducials
 ---
 # Fiducial-Based Localization
 
-#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_doing_more) - - - &larr;[back](rviz)- - - - - - - - - - [next](sensors)&rarr;
+#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)  - - - &larr;[back](rviz)- - - - - - - - - - [next](sensors)&rarr;
 
 This is one of the ways in which a robot's position in the `world` (localization) can
 be determined.  For a discussion of other approaches, see the
@@ -61,4 +61,3 @@ fiducials.
 
 ![Visualizing with rviz](fiducial_rviz.png)
 #### &larr;[back](rviz)- - - - - - - - - - [next](sensors)&rarr;
- 

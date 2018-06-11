@@ -6,7 +6,7 @@ permalink: fiducial_follow
 
 # Fiducial Follow
 
-#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start) 
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 ## Introduction
 

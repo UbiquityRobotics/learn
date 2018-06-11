@@ -4,7 +4,7 @@ title:  "If you don't have your robot yet"
 permalink: no_robot
 ---
 
-#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start)
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) 
 
 # If You Don't Have Your Robot Yet
 

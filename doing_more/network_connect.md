@@ -4,7 +4,7 @@ title:  "Connecting the Robot to Your Network"
 permalink: connect_network
 ---
 
-#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_doing_more)
+#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/) 
 
 # Connecting the Robot to Your Network
 

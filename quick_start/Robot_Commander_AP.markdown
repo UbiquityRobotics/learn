@@ -5,7 +5,7 @@ permalink: robot_commander
 ---
 # How to drive with a Smartphone or workstation using Robot Commander in AP mode
 
-#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - - &uarr;[up](ix_quick_start)
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) 
 
 Robot Commander has two versions:  One for the Android phone, and one for a workstation. iPhone's are not currently supported.
 
