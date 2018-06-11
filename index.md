@@ -19,15 +19,15 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 
 #### Quick Start
 
-0.  [If you don't have your robot yet](quick_start/no_robot)
-1.	[Unboxing, putting in batteries and charging them](quick_start/unboxing)
-2.	[How to drive with optional Logitech controller](quick_start/logitech)
-3.  [Connecting a workstation and Starting the Robot](quick_start/connecting)
-4.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/robot_commander)
+0.  [If you don't have your robot yet](quick_start/no_robot.md)
+1.	[Unboxing, putting in batteries and charging them](quick_start/unboxing/unboxing.md)
+2.	[How to drive with optional Logitech controller](quick_start/logitech.md)
+3.  [Connecting a workstation and Starting the Robot](quick_start/connecting.md)
+4.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/robot_commander.md)
 <!--- this also works
 <a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>-->
-5.	[Driving a robot with a Keyboard](quick_start/keyboard_teleop)
-6.	[How to set up cameras and sensors](quick_start/camera_sensors)
+5.	[Driving a robot with a Keyboard](quick_start/keyboard_teleop.md)
+6.	[How to set up cameras and sensors](quick_start/camera_sensors.md)
 7.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow)
 
 
@@ -48,7 +48,7 @@ This section features our demo apps, explaining how they are programmed, with re
 * ROS Tutorials
 * UR components (move_basic,...)
 
-[The Fiducial Follow App](fiducial_follow_app)
+[The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
 
 <!--
 12.	Writing Your First Script
