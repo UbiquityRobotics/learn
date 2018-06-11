@@ -1,9 +1,11 @@
 ---
 layout: default
 title:  "Main Menu"
+
+#### [&uarr;top](https://ubiquityrobotics.github.io/learn/)
 ---
 
-# Ubiquity Robotics Tutorials
+# Ubiquity Robotics Documentation
 
 * [Preface](introduction)
 
@@ -11,17 +13,52 @@ title:  "Main Menu"
 
 * [Magni Key Parts](magni_key)
 
-* [Quick Start](ix_quick_start.md)
+<H3 style="color:red">Warning</H3>
 
-  Things you can do with your robot right out of the box.
+The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or whatever you have to lift the wheels free of the floor, or run it somewhere where it can't hurt anyone or anything if it surprises you. NOT ON A TABLE TOP.
 
-* [Doing More With Your Robot](ix_doing_more)
+#### Quick Start
 
-  You can do even more after connecting your robot to your LAN
+0.  [If you don't have your robot yet](quick_start/no_robot)
+1.	[Unboxing, putting in batteries and charging them](quick_start/unboxing)
+2.	[How to drive with optional Logitech controller](quick_start/logitech)
+3.  [Connecting a workstation and Starting the Robot](quick_start/connecting)
+4.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/robot_commander)
+<!--- this also works
+<a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>-->
+5.	[Driving a robot with a Keyboard](quick_start/keyboard_teleop)
+6.	[How to set up cameras and sensors](quick_start/camera_sensors)
+7.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow)
 
-* [Programming Your Robot](ix_programming)
 
-  A look at some apps for the robot.
+####	Doing More With Your Robot
+
+1.	[How to connect the robot with your network](doing_more/network_connect.md)
+2.  [How to set-up a workstation with ROS](doing_more/workstation_setup.md)
+3.	[Visualize with rviz](doing_more/rviz)
+4.	[Set up fiducials so you can set waypoints and goals](doing_more/fiducials)
+5. [Use Robot Commander over the network to go to waypoints](doing_more/waypoints)
+6.	[Try out the Sensor Package e.g. silver sensor package, gold sensor package](doing_more/sensors)
+
+####	Programming Your Robot
+
+This section features our demo apps, explaining how they are programmed, with reference to the code in the repo.
+
+* References
+* ROS Tutorials
+* UR components (move_basic,...)
+
+[The Fiducial Follow App](fiducial_follow_app)
+
+<!--
+12.	Writing Your First Script
+13.	Creating a Map
+14.	Autonomous Driving
+15.	Going Forward and Avoiding Obstacles with Code
+16.	Going to a Specific Location on Your Map Using Code
+17.	Monitor Magni Battery Status
+18.	Button Events
+19.	What to Read Next
 
 * [Software Reference](software_reference/software_reference.md)
 
