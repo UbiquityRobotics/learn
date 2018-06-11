@@ -23,7 +23,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 1.	[Unboxing, putting in batteries and charging them](quick_start/unboxing/unboxing.md)
 2.	[How to drive with optional Logitech controller](quick_start/logitech.markdown)
 3.  [Connecting a workstation and Starting the Robot](quick_start/connecting.md)
-4.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/robot_commander_AP.markdown)
+4.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/Robot_Commander_AP.markdown)
 <!--- this also works
 <a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>-->
 5.	[Driving a robot with a Keyboard](quick_start/keyboard_teleop.md)
