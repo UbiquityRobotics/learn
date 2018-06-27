@@ -9,9 +9,9 @@ title:  "Main Menu"
 
 * [Preface](introduction)
 
-* [What You Need To Know](need_to_know)
+* [Requirements](need_to_know)
 
-* [Magni Key Parts](magni_key)
+* [Magni Controls](magni_key)
 
 <H3 style="color:red">Warning</H3>
 
