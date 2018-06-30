@@ -51,7 +51,7 @@ Now that you are on the robot's network, you can connect to the robot itself. On
 
 ```ssh ubuntu@ubiquityrobot.local```
 
- *{ Should we use name or 10.42.0.1 - seems to be inconsistent}
+ If you have trouble using ubiquityrobot.local, use the IP address, 10.42.0.1 instead. In some environments, this works better.
 
 You may see:
 
@@ -79,9 +79,7 @@ Now you are connected and logged in.
 
  Finally, start the robot's software by typing:
 
-```magni_demos simple_navigation.launch```  
-or  
-```loki_demos simple_navigation.launch```
+```roslaunch magni_demos simple_navigation.launch```  
 
 
 #### &larr;[back](logitech)- - - - - - - - - - [next](robot_commander)&rarr;

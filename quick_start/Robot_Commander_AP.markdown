@@ -5,7 +5,7 @@ permalink: robot_commander
 ---
 # How to drive with a Smartphone or workstation using Robot Commander in AP mode
 
-#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) 
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 Robot Commander has two versions:  One for the Android phone, and one for a workstation. iPhone's are not currently supported.
 
@@ -43,23 +43,25 @@ Continue with #6 below.
 
 ## Robot Commander Commands
 * forward, advance, keep going, go ahead, go straight, reverse, back, backward, go back, retreat<br>
-* forward/reverse etc., may be followed by meters/centimeters/feet
+* forward/reverse etc., may be followed by meters/centimeters/feet\*
 * turn right
 * turn left
-* rotate right (may add "n degrees")
-* rotate left (may add "n degrees")
+* rotate right (may add "n degrees")\*
+* rotate left (may add "n degrees")\*
 * turn around
 * stop, halt
 * faster, speed up
 * slower, slow down
-* (set) waypoint ____ (waypoint name)
-* go to ____ (waypoint name)
-* remove waypoint ____ (waypoint name)
-* list waypoints
+* (set) waypoint ____ (waypoint name)\*
+* go to ____ (waypoint name)\*
+* remove waypoint ____ (waypoint name)\*
+* list waypoints\*
 * again, repeat
 * find aeroplane, bicycle, bird, boat, bottle, bus, car, cat, chair, cow, diningtable, dog, horse, motorbike, person, pottedplant, sheep, sofa, train, tvmonitor
 * battery
 * help
+
+\* These commands require navigation to be operating. which we haven't covered yet!
 
 When you are finished, you can shut down the robot, Robot Commander, or both.
 
