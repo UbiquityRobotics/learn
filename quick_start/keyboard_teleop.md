@@ -70,7 +70,7 @@ e/c : increase/decrease only angular speed by 10%
 
 currently:	speed 0.5	turn 1
 
-Please note Holonomic mode does not apply to a Magni or Loki, as the robots are differential drive.
+Please note Holonomic mode does not apply to a Magni, as it uses differential drive.
 -->
 
 You can also run teleop-twist keyboard with the program running in your workstation. To do this you must connect the robot to your local WiFi network, and set up ROS on the workstation.  These are discussed under [Doing More](ix_doing_more), below.

@@ -34,7 +34,7 @@ Bluetooth Low Energy and publishes motor commands.
 
 [Documentation](http://wiki.ros.org/dnn_detect)
 
-`dnn_detect` is a node that detects objects in an image stream using a
+`dnn_detect` detects objects in an image stream using a
 Deep Neural Network. It publishes information about them, including their
 bounding box and object class name.
 
@@ -42,10 +42,11 @@ bounding box and object class name.
 
 [Documentation](https://github.com/UbiquityRobotics/demos/blob/master/dnn_rotate/README.md)
 
-`rotate.py` is demo node showing how to use actionlib and service calls
+`rotate.py` is a demo node showing how to use actionlib and service calls
 to interact with other nodes.  This node invokes `dnn_detect` to find
 objects in images from a camera and `move_basic` to move towards them.
 
+<!--
 ### loki\_base\_node bus\_server.py
 
 [Documentation](https://github.com/UbiquityRobotics/loki_base_node/blob/indigo/README.md)
@@ -53,12 +54,13 @@ objects in images from a camera and `move_basic` to move towards them.
 `bus_server.py` is the interface between ROS and the micro controller on
 Loki robots. It subscribes to motor commands and publishes odometry and
 sonar range messages.
+-->
 
 ### fiducial\_follow follow.py
 
 [Documentation](https://github.com/UbiquityRobotics/demos/blob/master/fiducial_follow/README.md)
 
-`follow.py` is node that receives the position of fiducial markers in
+`follow.py` receives the position of fiducial markers in
 an image stream from `aruco_detect` and issues motor commands for the
 robot to follow a particular marker.
 
@@ -66,19 +68,21 @@ robot to follow a particular marker.
 
 [Documentation](http://wiki.ros.org/fiducial_slam)
 
+Receives fiducial_poses from aruco_detect and combines them to build a map of fiducial locations and an estimate of the robot's pose
+
 ### move\_base move\_base
 
 [Documentation](http://wiki.ros.org/move_base)
 
-The `move_base` node provides a ROS interface for configuring, running,
+Provides a ROS interface for configuring, running,
 and interacting with the navigation stack on a robot.
 
 ### move\_basic move\_basic
 
 [Documentation](http://wiki.ros.org/move_basic)
 
-`move_basic` is a node that provides a simple arc-tangent planning navigation
-node. The plan for moving towards a goal consists of rotating to face it,
+`move_basic` provides a simple arc-tangent planning navigation
+function. The plan for moving towards a goal consists of rotating to face it,
 driving straight towards it, and rotating again to achieve the final pose.
 
 ### move\_demo move.py
@@ -102,7 +106,7 @@ motor commands, and requesting `move_basic` to navigate to a goal.
 
 [Documentation](https://github.com/UbiquityRobotics/raspicam_node/blob/indigo/README.md)
 
-`raspicam_node` is a node which captures images from the Raspberry Pi camera
+`raspicam_node` captures images from the Raspberry Pi camera
 and publishes them as a compressed image stream.
 
 ### rosbridge\_websocket rosbridge\_websocket
