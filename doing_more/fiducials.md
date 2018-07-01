@@ -7,9 +7,10 @@ permalink: fiducials
 
 #### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)  - - - &larr;[back](rviz)- - - - - - - - - - [next](sensors)&rarr;
 
-This is one of the ways in which a robot's position in the `world` (localization) can
+<!-- todo This is one of the ways in which a robot's position in the `world` (localization) can
 be determined.  For a discussion of other approaches, see the
 [Navigation and Localization Overview](../overview/overview.md).
+-->
 
 This document assumes that you are running the software on a Ubiquity
 Robotics robot base, using the supplied Raspberry Pi camera. It also assumes that you have a workstation with ROS installed, which is connected to a network in common with the robot. You will need a printer, too.
@@ -45,7 +46,7 @@ A map (this is a file of fiducial poses) is created such that the current positi
 
 Use The following command on your workstation to run the
 [robot visualization tool](http://wiki.ros.org/rviz), rviz.
-#### [Link here to the tutorial where we explain ROS_MASTER_URI]???
+<!-- todo #### [Link here to the tutorial where we explain ROS_MASTER_URI]??? -->
 
 ```roslaunch fiducial_slam fiducial_rviz.launch```
 
