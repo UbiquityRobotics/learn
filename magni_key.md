@@ -13,3 +13,5 @@ permalink: magni_key
 
 <img src="https://ubiquityrobotics.github.io/learn/assets/Magni_Front_View_2.jpg
 " />
+
+## [Motor Control Board Connector Pinout](Motor_Control_Board_Connector_Pinout_Document.pdf)

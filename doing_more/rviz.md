@@ -6,7 +6,7 @@ permalink: rviz
 
 # Visualize with rviz
 
-#### &uarr;[top](https://ubiquityrobotics.github.io/learn/) 
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 Rviz (ROS visualization) is a 3D visualizer for displaying sensor data and state information from ROS. It can show the robot in space as well as graph practically any robot parameter.
 
@@ -22,6 +22,6 @@ On Magni, you can type:
 
 RViz is highly configurable so its possible to savTo be done: n.
 
-<To be done: add a description of the configuration file, and how to make use of it, and insert a link to a previously utilized configuration file>
+<Todo: add a description of the configuration file, and how to make use of it, and insert a link to a previously utilized configuration file>
 
 #### &larr;[back](workstation_setup)- - - - - - - - - - [next](fiducials)&rarr;
