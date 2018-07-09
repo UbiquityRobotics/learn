@@ -6,7 +6,7 @@
 
 ## What is Magni and What Does it Do?
 
-> ![Magni/Loki](assets/MagniLoki2.jpg)
+> ![Magni/Loki](assets/Magni_best.png)
 
 Magni is a hardware platform in the form of a mobile base. When powered by ROS software, it can handle vision, localization, communication and mobility. Magni is a heavyweight platform capable of moving payloads up to 100kg. It can autonomously move anything on top of it to wherever that item needs to go, avoiding obstacles along the way.
 
