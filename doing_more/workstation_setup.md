@@ -5,7 +5,7 @@ permalink: workstation_setup
 ---
 
 # How to set up a ROS workstation
-#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/) 
+#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
 A ROS workstation is a full setup of ROS (the Robot Operating System) on a desktop or laptop computer, that you can connect to your robot. ROS shares all the internal communication within the robot with a ROS workstation over your network. Thus you can monitor internal robot activity, see what the robot is seeing, send commands and even offload data processing tasks from the robot on to more powerful computers. A ROS workstation is needed if you are going to program the robot to perform you robotic application.
 
@@ -31,7 +31,7 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
 
 ## Using Robot and Workstation Together
 
-* Once you've got a workstation with Ubuntu and ROS, you should update the Ubiquity software. Because you have two ROS systems, you must keep them in sync. The instructions below assume you have a Magni.
+* Once you've got a workstation with Ubuntu and ROS, you should update the Ubiquity software. Because you have two ROS systems, you must keep their versions in sync. 
 
 To update the workstation, open a terminal window, login, and type:
 
