@@ -9,6 +9,11 @@ permalink: need_to_know
 
 Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and custom software for the Magni platform. There are also utility programs that will enable you to connect to a local area network.
 
+[Communications](#Communications)
+[The Workstation](#The Workstation)
+[The Configuration File](#The Configuration File)
+[ROS Params](#ROS Params)
+
 ### Communications
 
 Of course, as the robot is delivered it has no connection to your local network. Because of this, the robot has its own network (called an access point or "AP mode") that enables you to [connect to it directly](connecting), without connecting to your local network. For example, you can drive the robot with our Android Robot Commander app. You can use AP mode to connect directly to the robot from a workstation, to run ROS commands such as keyboard teleoperation. However, in AP mode, the robot cannot access the Internet.
@@ -35,3 +40,23 @@ Note that there will be two--or maybe three--simultaneously running systems in t
 Be aware of this--it's easy to type a command into the wrong system.
 
 Instructions for workstation setup are given in the sections below, as they are needed. We know you may want to start as soon as possible to get your projects underway. Since we provide downloadable software images for the Raspberry Pi 3 and for Virtual Box, it is possible to 'try before you buy.'  [Download Site](https://downloads.ubiquityrobotics.com/)
+
+### The Configuration File
+
+The configuration file is used to tell the robot software what options are installed.  It is located at: ```/etc/ubiquity/robot.yaml```
+
+If sonars are installed, the config file should contain the line:
+```
+sonars: 'pi_sonar_v1'
+```
+to enable the sonars, and this to disable them:
+```
+sonars: None
+```
+
+<Todo: finish a description of the configuration file, and how to make use of it, and insert a link to a previously utilized configuration file>
+
+
+### ROS Params
+
+The parameter `ubiquity_robot_mode` specifies the level of capabilities available in the robot. Possible values are 'core', 'teleop', and 'navigation'. The launch file magni_bringup base.launch runs as part of the boot process and automatically sets the parameter to 'teleop'.  The launch file magni_demos simple_navigation.launch enables navigation, so the parameter is set to 'navigation'.
