@@ -63,7 +63,7 @@ Answer `yes`
 
 >Failed to add the host to the list of known hosts (/somepath/.ssh/known_hosts).
 
-You will be asked for the password, which initially is "ubuntu".
+Ignore that. You will be asked for the password, which initially is "ubuntu".
 
 ```ubuntu@10.42.0.1's password:ubuntu```
 
@@ -80,6 +80,8 @@ Now you are connected and logged in.
  Finally, start the robot's software by typing:
 
 ```roslaunch magni_demos simple_navigation.launch```  
+
+At this point you will be able to control the robot from the workstation keyboard or by using Robot Commander.
 
 
 #### &larr;[back](logitech)- - - - - - - - - - [next](robot_commander)&rarr;
