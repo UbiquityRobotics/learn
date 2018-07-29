@@ -39,7 +39,7 @@ Login to the robot from your workstation using ssh.  Then execute the following 
 
 ```roslaunch magni_nav aruco.launch```
 
-It should be run for the first time with at least one marker visible.
+It should be run for the first time with at least one marker visible to the robot's camera.
 A map (this is a file of fiducial poses) is created such that the current position of the robot is the origin.
 
 ## Using rviz to Monitor Map Creation
@@ -48,7 +48,7 @@ Use The following command on your workstation to run the
 [robot visualization tool](http://wiki.ros.org/rviz), rviz.
 <!-- todo #### [Link here to the tutorial where we explain ROS_MASTER_URI]??? -->
 
-```roslaunch fiducial_slam fiducial_rviz.launch```
+```roslaunch magni_viz view_nav.launch```
 
 This will produce a display as shown below.  The bottom left pane shows the
 current camera view.  This is useful for determining if the fiducial density
@@ -61,4 +61,4 @@ of the map is increased by having a high degree of connectivity between the
 fiducials.
 
 ![Visualizing with rviz](fiducial_rviz.png)
-#### &larr;[back](rviz)- - - - - - - - - - [next](sensors)&rarr;
+#### &larr;[back](rviz)- - - - - - - - - - [next](waypoints)&rarr;
