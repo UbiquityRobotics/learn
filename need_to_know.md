@@ -9,10 +9,10 @@ permalink: need_to_know
 
 Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and custom software for the Magni platform. There are also utility programs that will enable you to connect to a local area network.
 
-[Communications](#Communications)
-[The Workstation](#The Workstation)
-[The Configuration File](#The Configuration File)
-[ROS Params](#ROS Params)
+[Communications](#communications)  
+[The Workstation](#the-workstation)  
+[The Configuration File](#the-configuration-file)  
+[ROS Params](#ros-params)
 
 ### Communications
 
