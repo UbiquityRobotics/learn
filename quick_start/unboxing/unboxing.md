@@ -9,7 +9,7 @@ author: Alan Federman
 
 ## Unboxing and Assembling a Magni Robot
 
-The Magni comes almost ready to run with minimal assembly. There are three different version of Magni: Bronze, Silver and Gold. Most will come with a Raspiberry Pi 3 computer and software image (Silver and Gold). The Bronze version will not come with the computer. 2 12v SLA (Sealed Lead Acid) batteries are purchased separately. Two long Allen wrenches (M2 and M4) will be included in the shipping box. In addition a small Phillips (cross point) screw driver may be needed for mounting the Raspberry Pi camera.
+The Magni comes almost ready to run with minimal assembly. There are three different version of Magni: Bronze, Silver and Gold. Most will come with a Raspiberry Pi 3 computer and software image (Silver and Gold). The Bronze version will not come with the computer. 2 12v SLA (Sealed Lead Acid) batteries should be purchased separately. An allen wrench (for M6 bolts) will be included in the shipping box. In addition a small Phillips (cross point) screw driver may be needed for mounting the Raspberry Pi camera.
 
 
 Step 1 - open the box
@@ -26,16 +26,15 @@ Step 1 - open the box
 
  ![Cover plate](unb4.JPG)
 
- The Raspberry Pi 3 + SD image card can be installed(Silver and Gold). As of this update, it is believed the RPi 3 will be installed at the factory, but it is not known if the SD card with the operating system and robot software will be inserted.
-
+ The Raspberry Pi 3 + SD image card can be installed if you have your own image with your own software (Silver and Gold). However a default image may already have been installed in the factory.
  ![Parts](unbparts.JPG)
 
-  In the small parts bags, you will find fastners and M4 and M2 Allen wrenches that fit the included fasteners. The additional sensors (Silver and Gold versions) are wrapped separately.
+  In the small parts bags, you will find fastners and an M6 Allen wrench that fits the included fasteners. The additional sensors (Silver and Gold versions) are wrapped separately.
 
 
  ![RPi 3 installed](unb7.JPG)
 
- The front and back brackets can be installed using the brackets require a M4 hex Allen wrench. We suggest an extra long (6 cm). The other included fasteners are M3 hex(M2 wrench) and a small Phillips screw for Raspi Cam attachment. [See the detailed section on camera and sensor installation.](camera_sensors)
+ The front and back brackets can be installed using the brackets require a M6 hex Allen wrench. We suggest an extra long (6 cm). The other included fasteners are M3 hex(M2 wrench) and a small Phillips screw for Raspi Cam attachment. [See the detailed section on camera and sensor installation.](camera_sensors)
 
 
 Brackets
