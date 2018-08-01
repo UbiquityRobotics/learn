@@ -23,7 +23,7 @@ The robot ships by air worldwide. The batteries are not included in orded to kee
 
 1270 sized battery. Typical capacity 7AH - 10AH. The preferred and most common choice. Usually provides 7-8 hours of continuous use with a typical duty cycle. This size battery makes the robot still light enough to lift. 
 
-12350 size. Typical capacity - 35Ah usually much bigger (and heavier) than most applications demand - recommended only for those who must have extraordinary endurance - typicaly 24 hours or more of continuous use. This sized battery makes the robot difficult for most users to lift.
+12350 size. Typical capacity - 35Ah usually much bigger (and heavier) than most applications demand - recommended only for those who must have extraordinary endurance - typicaly 24 hours or more of continuous use. This sized battery makes the robot sufficiently heavy that it will be difficult for most users to lift.
 
 In all cases we recommend a non-spill-able, deep cycle, sealed lead acid battery of either a Gel type or AGM type - although the robot can accept any type of battery pack with a voltage in the range of 21V - 30V, the provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
 
