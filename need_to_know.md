@@ -9,10 +9,23 @@ permalink: need_to_know
 
 Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and custom software for the Magni platform. There are also utility programs that will enable you to connect to a local area network.
 
+[Batteries](#Batteries)
 [Communications](#communications)  
 [The Workstation](#the-workstation)  
 [The Configuration File](#the-configuration-file)  
 [ROS Params](#ros-params)
+
+### Batteries
+
+The robot ships by air world wide. Because batteries are difficult to ship worldwide but are easy to source locally the robot does not come with batteries included to keep shipping costs down. Also the robot will accept different battery sizes, so the user can select batteries depending on whether they prefer a long endurance but heavier robot or a short endurance but lighter robot. In short you need to find your own batteries to put in the robot and these are commonly available online (https://www.batterysharks.com/,  or in local stores that supply products for scooters, wheelchairs, uninterupped power supply systems or even automotive. The robot requires 2X 12V batteries and typically we recommend either:
+
+12350 size. Typical capacity - 35Ah usually much bigger (and heavier) than most applications demand - recommended only for those who must have extraordinary endurance - typicaly 24 hours or more of continuous use.
+
+1270 sized battery. Typical capacity 7AH - 10AH. The preferred and most common choice usually provides 7-8 hours of continuous use with a typical duty cycle. This size battery makes the robot light enough to pick up. 
+
+1250 or a 1255 sized battery. Typical capacity 4-6 AH capacities provides around 4 hours of endurance. Used when portability of the robot is at a premium - for example if you are travelling by air with the robot.
+
+In all cases we recommend a non-spill-able, deep cycle, sealed lead acid battery of either a Gel type or AGM type - although the robot can accept any type of battery pack with a voltage in the range of 21V - 30V, the provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
 
 ### Communications
 
