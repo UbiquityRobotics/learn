@@ -17,7 +17,7 @@ Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and cust
 
 ### Batteries
 
-The robot ships by air world wide. Because batteries are difficult to ship worldwide but are easy to source locally the robot does not come with batteries included to keep shipping costs down. Also the robot will accept different battery sizes, so the user can select batteries depending on whether they prefer a long endurance but heavier robot or a short endurance but lighter robot. In short you need to find your own batteries to put in the robot and these are commonly available online (https://www.batterysharks.com/,  or in local stores that supply products for scooters, wheelchairs, uninterupped power supply systems or even automotive. The robot requires 2X 12V batteries and typically we recommend either:
+The robot ships by air world wide. Because batteries are difficult to ship worldwide but are easy to source locally the robot does not come with batteries included to keep shipping costs down. Also the robot will accept different battery sizes, so the user can select batteries depending on whether they prefer a long endurance but heavier robot or a short endurance but lighter robot. In short you need to find your own batteries to put in the robot and these are commonly available online (https://www.batterysharks.com/) or in local stores that supply products for scooters, wheelchairs, uninterupped power supply systems or even automotive. The robot requires 2X 12V batteries and typically we recommend either:
 
 12350 size. Typical capacity - 35Ah usually much bigger (and heavier) than most applications demand - recommended only for those who must have extraordinary endurance - typicaly 24 hours or more of continuous use.
 
