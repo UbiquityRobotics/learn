@@ -9,10 +9,25 @@ permalink: need_to_know
 
 Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and custom software for the Magni platform. There are also utility programs that will enable you to connect to a local area network.
 
+[Batteries](#batteries) 
 [Communications](#communications)  
 [The Workstation](#the-workstation)  
 [The Configuration File](#the-configuration-file)  
 [ROS Params](#ros-params)
+
+### Batteries
+
+The robot ships by air worldwide. The batteries are not included in orded to keep shipping costs down, as they are are difficult to ship worldwide but are easy to source locally. Another advantage of this is that, as the robot accepts different battery sizes, the user can select batteries depending on whether they prefer a long-endurance heavier robot or a short- endurance lighter robot. In short you need to find your own batteries to put in the robot and these are commonly available online (https://www.batterysharks.com/) or in local stores that supply products for scooters, wheelchairs, uninterupped power supply systems or even automotive. The robot requires 2X 12V batteries and typically we recommend either:
+
+1250 or a 1255 sized battery. Typical capacity 4-6 Ah capacities provides around 4 hours of endurance. Used when portability of the robot is at a premium - for example if you are travelling by air with the robot.
+
+1270 sized battery. Typical capacity 7AH - 10 Ah. The preferred and most common choice. Usually provides 7-8 hours of continuous use with a typical duty cycle. This size battery makes the robot still light enough to lift. 
+
+12350 size. Typical capacity - 30-35 Ah usually much bigger (and heavier) than most applications demand - recommended only for those who must have extraordinary endurance - typicaly 24 hours or more of continuous use. This sized battery makes the robot sufficiently heavy that it will be difficult for most users to lift.
+
+In all cases we recommend a non-spill-able, deep cycle, sealed lead acid battery of either a Gel type or AGM type - although the robot can accept any type of battery pack with a voltage in the range of 21V - 30V, the provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
+
+
 
 ### Communications
 
