@@ -5,7 +5,7 @@ permalink: waypoints
 ---
 # Use Robot Commander over the network to go to waypoints
 
-#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/) 
+#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
 Robot Commander has two versions:  One for the Android phone, and one for a workstation.
 
@@ -27,12 +27,15 @@ Robot Commander has two versions:  One for the Android phone, and one for a work
 Continue with #6 below.
 
 ## To use a workstation
+Temporarily withdrawn.
+
+<!--
 1. Turn the robot on.
 2. Bring up the Chrome browser on your workstation.
 3. On the workstation, connect to the network (that is, the SSID) that you connected to in the section `Connecting the Robot to Your Network`, above.
 4. Enter the address "https://ubiquityrobot.local/speechcommands.html" in the address bar of the Chrome browser, and press the enter key.
 5. If the browser gives you any warnings regarding a lack of security, disregard them. The browser will load Robot Commander.
-6. Enter the address `ubiquityrobot.local` in the space to the left of the Connect button. Press or click the button. You will hear "Connected" and the button will now read "Disconnect".
+6. Enter the address `ubiquityrobot.local` in the space to the left of the Connect button. Press or click the button. You will hear "Connected" and the button will now read "Disconnect"-->
 
 ## Set a waypoint and go there
 * You can move the robot in the same way as you did in the Robot Commander section above.  To set waypoints you must have set up fiducial markers as in the section on fiducials above.

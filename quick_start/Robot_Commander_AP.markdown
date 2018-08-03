@@ -28,12 +28,16 @@ Robot Commander has two versions:  One for the Android phone, and one for a work
 Continue with #6 below.
 
 ## To use a workstation
+Temporarily withdrawn.  
+
+<!---
 1. Turn the robot on.
 2. Unless you've done it already, install the [Google Chrome browser](https://www.google.com/chrome/browser/desktop/index.html) on your workstation.  Bring up the browser.
 3. Allow at least 3 minutes after turning the robot on. On your workstation, connect to the UbiquityRobot network. The password is `robotseverywhere`.
 4. Enter the address <https://10.42.0.1/speechcommands.html> in the address bar of the Chrome browser, and press the enter key.
 5. If the browser gives you any warnings regarding a lack of security, disregard them.
-6. Press or click the `Connect` button. You will hear "Connected" and the button will now read "Disconnect".
+6. Press or click the `Connect` button. You will hear "Connected" and the button will now read "Disconnect".  
+-->
 
 ## Using Robot Commander
 * Press any arrow to move the robot. To keep the robot moving, keep pressing or clicking.
