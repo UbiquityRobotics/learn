@@ -65,8 +65,6 @@ Temporarily withdrawn.
 * battery
 * help
 
-\* These commands require navigation to be operating. which we haven't covered yet!
-
-When you are finished, you can shut down the robot, Robot Commander, or both.
+\* These commands require navigation to be operating. which was described in the section on connecting a workstation.
 
 #### &larr;[back](connecting)- - - - - - - - - - [next](keyboard_teleop)&rarr;

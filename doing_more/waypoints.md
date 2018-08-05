@@ -7,6 +7,10 @@ permalink: waypoints
 
 #### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
+If navigation is not running, launch it:
+
+```roslaunch magni_demos simple_navigation.launch```
+
 Robot Commander has two versions:  One for the Android phone, and one for a workstation.
 
 <div class="image-wrapper">
