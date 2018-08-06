@@ -20,10 +20,10 @@ On the workstation, you can type:
   or  
   ```roslaunch magni_viz view_robot.launch``` when it is not.
 
-[rviz](https://ubiquityrobotics.github.io/learn/assets/rviz_image.png)
+![rviz](https://ubiquityrobotics.github.io/learn/assets/rviz_image.png)
 
-Using rviz, you can move the robot:
-Click on "2D Nav Goal" in the menu bar.
+Using rviz, you can move the robot:  
+Click on "2D Nav Goal" in the menu bar.  
 Click again in the black screen area.  The robot will move some way.
 
 #### &larr;[back](workstation_setup)- - - - - - - - - - [next](fiducials)&rarr;
