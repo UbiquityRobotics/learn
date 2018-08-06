@@ -20,7 +20,6 @@ On the workstation, you can type:
   or  
   ```roslaunch magni_viz view_robot.launch``` when it is not.
 
-RViz is highly configurable so it's possible to...what?  To be done.
-
+![rviz](https://ubiquityrobotics.github.io/learn/assets/rviz_image.png)
 
 #### &larr;[back](workstation_setup)- - - - - - - - - - [next](fiducials)&rarr;
