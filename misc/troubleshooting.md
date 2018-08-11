@@ -54,7 +54,7 @@ computer and the master control board.
 
 ## Connecting
 
-In the following we assume that RC is connected to the robot.  By voice, command
+In the following we assume that RC is connected to the robot.  By voice, after connecting, command
 "battery".  You should get a response indicating the battery charge state. Now you know that the connection works.
 
 ## Operation
@@ -63,12 +63,12 @@ Open a window on your workstation and ssh into the robot. Type
 
     rostopic list
 
-This will list all the available topics on the robot one of
-which will be /cmd_vel.  If not the trouble is not with RC. Then type
+This will list all the available topics on the robot, one of
+which will be /cmd_vel.  If it doesn't, the trouble must be in the robot. Then type
 
     rostopic echo /cmd_vel
 
-Any messages on the /cmd_vel topic will now be shown on the screen.
+Any new messages on the /cmd_vel topic will now be shown on the screen.
 
 Now tap the forward arrow on the RC screen.  You should immediately see
 something like the following on the workstation screen:
@@ -80,7 +80,7 @@ something like the following on the workstation screen:
 
 If you do, the command is getting from RC to the robot, and if the robot does
 not move, there is a fault in the robot. In this case, ssh in to the robot in a
-second window and in the robot try teleop by typing
+second window. In the robot try teleop by typing
 
     rosrun teleop_twist_keyboard telelop_twist_keyboard.py
 
@@ -92,11 +92,10 @@ the robot alone.
 If you do not see the command echoed, note the command log on the RC screen.
 If the command is not logged there, RC has not understood the command
 and issued it.  If the command is logged and you know that the connection
-works, then the problem may be with RC,
-the connection between the Android phone and the robot or some
-other problem with your phone or with the network.
+works, then the RC has tried to transmit the command. The problem may be with RC, with
+the connection between the phone and the robot or with the phone or with the network.
 
-Sometimes if an Android phone is connect to a data plan then the
+Sometimes if an Android phone is connected to a data plan then the
 phone will try to direct packets from robot-commander to the
 internet rather than the robot. It may help to switch off
 your external data plan before trying to make robot commander work.
