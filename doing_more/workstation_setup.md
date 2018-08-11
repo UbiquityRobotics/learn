@@ -50,7 +50,7 @@ Then, in another terminal window, ssh into the robot and perform the update ther
 
   ROS on your workstation will use ROS_MASTER_URI to communicate with the ROS master node, which is on the robot. The setting of ROS_IP tells ROS the workstation IP address.  It may be that you can use NEWHOSTNAME.local instead of the address, but not all networks support it.
 
-  However, environement variables set by the `export ...` method are not persistent across system boots.
+  However, environment variables set by the `export ...` method are not persistent across system boots.
 
   To make this environment variable persistent, we append its setting to the file called`~/.bashrc, which runs when the Ubuntu shell (called bash) is started. Use an editor, or from the command line:
 
