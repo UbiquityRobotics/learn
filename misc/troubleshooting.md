@@ -2,7 +2,8 @@
 layout: default
 title:  "Troubleshooting"
 permalink: troubleshooting
----
+
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 # Troubleshooting
 ## The Battery
