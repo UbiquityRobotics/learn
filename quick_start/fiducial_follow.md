@@ -52,4 +52,4 @@ Then you can take the fiducial that you printed and put it in front of the robot
 
 If you move too fast or for some reason the robot loses sight of the fiducial it will attempt to find the fiducial again. It will rotate around the room in an attempt to locate the position of the fiducial until it finally stops.
 
-<<[back](camera_sensors)- - - - - - - - - - [up](ix_quick_start)>>
+<<[back](camera_sensors)- - - - - - - - - - [up](index.md)>>
