@@ -26,8 +26,9 @@ On the workstation, you can type:
 
 Using rviz, you can move the robot:  
 Click on "2D Nav Goal" in the menu bar.  
-Click again in the black screen area.  The robot will ......
+Click again in the black screen area and indicate what the robot is to do.
 
+Here is a video that shows this process in action.
 [rviz video](https://ubiquityrobotics.github.io/learn/assets/rviz_with_nav.mp4)
 
 #### &larr;[back](workstation_setup)- - - - - - - - - - [next](fiducials)&rarr;
