@@ -43,7 +43,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 
 ####	Programming Your Robot
 
-[Overview](programming_your_robot/overview)
+[Overview](programming_your_robot/overview.md)
 
 * References
 * ROS Tutorials
