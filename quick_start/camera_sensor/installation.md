@@ -67,7 +67,7 @@ Last step is attache the 50 pin ribbon cable.
 
 ![Cover](a12.jpg)
 
-Lastly attach the cover plate with 6 M4 screws.  You are done, hooray!
+Lastly attach the cover plate with 6 M6 screws using a M4 Allen wrench.  You are done, hooray!
 
 Note: on testing the camera.  If you find that fiducial follow or waypoint navigation aren't working, you need a quick way to test the camera.  if you can open a ssh session to the robot, try the following command:
 

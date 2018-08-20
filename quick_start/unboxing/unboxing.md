@@ -29,12 +29,12 @@ Step 1 - open the box
  The Raspberry Pi 3 + SD image card can be installed if you have your own image with your own software (Silver and Gold). However a default image may already have been installed in the factory.
  ![Parts](unbparts.JPG)
 
-  In the small parts bags, you will find fastners and an M6 Allen wrench that fits the included fasteners. The additional sensors (Silver and Gold versions) are wrapped separately.
+  In the small parts bags, you will find fastners and  M4 and M2 Allen wrench that fits the included fasteners. The additional sensors (Silver and Gold versions) are wrapped separately.
 
 
  ![RPi 3 installed](unb7.JPG)
 
- The front and back brackets can be installed using the brackets require a M6 hex Allen wrench. We suggest an extra long (6 cm). The other included fasteners are M3 hex(M2 wrench) and a small Phillips screw for Raspi Cam attachment. [See the detailed section on camera and sensor installation.](camera_sensors)
+ The front and back brackets can be installed using the brackets require a M4 hex Allen wrench. We suggest an extra long (6 cm). The other included fasteners are M3 (M2 hex wrench) and a small Phillips screwdriver for Raspi Cam attachment. [See the detailed section on camera and sensor installation.](camera_sensor)
 
 
 Brackets
