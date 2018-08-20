@@ -43,14 +43,13 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 
 ####	Programming Your Robot
 
-This section features our demo apps, explaining how they are programmed, with reference to the code in the repo.
+[Overview](programming_your_robot/overview)
 
 * References
 * ROS Tutorials
-* UR components (move_basic,...)
 
-[Overview](programming_your_robot/overview)
-[The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
+
+[The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md) provides a demo app, explaining how it is programmed, with reference to the code in the repo.
 
 <!--
 12.	Writing Your First Script
