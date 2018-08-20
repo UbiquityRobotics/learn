@@ -28,6 +28,6 @@ Using rviz, you can move the robot:
 Click on "2D Nav Goal" in the menu bar.  
 Click again in the black screen area.  The robot will ......
 
-![rviz](https://ubiquityrobotics.github.io/learn/assets/rviz with nav.mp4)
+![rviz](https://ubiquityrobotics.github.io/learn/assets/rviz_with_nav.mp4)
 
 #### &larr;[back](workstation_setup)- - - - - - - - - - [next](fiducials)&rarr;
