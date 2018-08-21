@@ -39,3 +39,37 @@ By using a combination of nodes it is possible to get the robot to adopt any one
 ### Launch Files
 
 The launch files bring up the robot with the software needed for different configurations.  They are described in [this GitHub repo](https://github.com/UbiquityRobotics/magni_robot/blob/indigo-devel/README.md).
+
+### Learning ROS
+
+ROS has a wide user base and there are lots of resources to learn how to program with it.
+#### ROS Texts
+
+Some of the texts that are widely acknowledged as excellent include:
+
+* A Gentle introduction to ROS - Free online textbook style guide
+
+* Programming Robots with ROS - Was written by many of the original developers of ROS
+
+* ROS Tutorials - An online resource maintained by The Open Source Robotics Foundation
+
+#### Online lecture courses
+
+In addition there are a number of lecture series on ROS some that can be found online include:
+
+* Programming for Robotics - ROS From ETH Zurich
+
+* Introduction to Robotics From Bar-Ilan University
+
+### Starter Code
+
+For those of you who want to dive straight in to code - we’ve provided a couple of example projects. They also provide a lot of the basic infrastructure you need and create a starting point.
+### Fiducial Follow
+
+This code follows a fiducial marker. Follow this link to learn how Fiducial Follow works. The app itself contains the bindings that are needed to do useful work with fiducials. Click here for The Fiducial Follow App code repository
+### Move Demo
+
+Move demo This code simply moves the robot. It includes all the bindings to external services that both navigate and drive the robot.
+### Good Luck!!
+
+If you have issues consider posting your question to forum.ubiquityrobotics.com. Other than that - we hope you have much success developing your applications with Magni.
