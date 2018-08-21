@@ -10,7 +10,7 @@ permalink: overview
 
 As many of you will know already, ROS operates with a set of nodes that are able to publish and/or subscribe to messages that are passed between the nodes by the core ROS process. The task of programming the robot to do something we want is the task of writing a node that subscribes to the data we want to use and publishes the action we want the robot to take.
 
-There are 3 types of node that we provide with our robots.
+In addition to the addition to the nodes that come with a standard ROS install there are 3 types of node that Ubiquity Robotics provides specifically with our robots.
 
 1) Infrastructure Nodes  - Nodes that enable the hardware on our robot to function. A little like a hardware driver. These either gather data from sensors on the robot and publish it (for example our raspicam node publishes photographic camera data), or they subscribe to topics that cause the robot to move.
 
