@@ -21,9 +21,9 @@ In addition to the addition to the nodes that come with a standard ROS install t
 Each of the nodes that Ubiquity Robotics has developed resides in a GitHub repository (listed below). A description of each of these nodes, the topics it subscribes to and publishes as well as installation instructions can be found there:
 
 ### Infrastructure Nodes  
-!https://github.com/UbiquityRobotics/ubiquity_motor    -Drives the motors
-!(https://github.com/UbiquityRobotics/raspicam_node)   -Drives the camera
-https://github.com/UbiquityRobotics/pi_sonar              -Drives the sonar array
+[ubiquity_motor -Drives the motors](https://github.com/UbiquityRobotics/ubiquity_motor)   
+[raspicam_node--Drives the camera](https://github.com/UbiquityRobotics/raspicam_node)  
+[pi_sonar--Drives the sonar array](https://github.com/UbiquityRobotics/pi_sonar)             
 https://github.com/UbiquityRobotics/bt_joystick            -Drives the included bluetooth joystick
 
 ### Capability Node
