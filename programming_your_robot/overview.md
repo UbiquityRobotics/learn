@@ -34,7 +34,7 @@ Each of the nodes that Ubiquity Robotics has developed resides in a GitHub repos
 ### Action Nodes
 [The set of demos that ubiquity robotics includes as a starting point for you to write your own programs](https://github.com/UbiquityRobotics/demos)   
 
-By using a combination of nodes it is possible to get the robot to adopt any one of a number of behaviors. Our demos are used to show how the robot can operate but also form an example or a starting point for you to write your own. To see how this can be done, see our [fiducial follow](programming_your_robot/fiducial_follow_app.md) program.
+By using a combination of nodes it is possible to get the robot to adopt any one of a number of behaviors. Our demos are used to show how the robot can operate but also form an example or a starting point for you to write your own. To see how this can be done, see our [fiducial follow](fiducial_follow_app) program.
 
 ### Launch Files
 
