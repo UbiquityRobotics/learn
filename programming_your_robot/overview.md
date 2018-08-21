@@ -24,15 +24,15 @@ Each of the nodes that Ubiquity Robotics has developed resides in a GitHub repos
 [ubiquity_motor -Drives the motors](https://github.com/UbiquityRobotics/ubiquity_motor)   
 [raspicam_node--Drives the camera](https://github.com/UbiquityRobotics/raspicam_node)  
 [pi_sonar--Drives the sonar array](https://github.com/UbiquityRobotics/pi_sonar)             
-https://github.com/UbiquityRobotics/bt_joystick            -Drives the included bluetooth joystick
+[bt_joystick--Drives the included bluetooth joystick](https://github.com/UbiquityRobotics/bt_joystick)  
 
 ### Capability Node
-https://github.com/UbiquityRobotics/fiducials               -Detects and publishes fiducial position
-https://github.com/UbiquityRobotics/move_basic        -Enables simple navigation
-https://github.com/UbiquityRobotics/dnn_detect           -Publishes what it sees on camera and where it is in the field of view
+[fiducials--Detects and publishes fiducial position](https://github.com/UbiquityRobotics/fiducials)    
+[move_basic--Enables simple navigation](https://github.com/UbiquityRobotics/move_basic)  
+[dnn_detect--Publishes what it sees on camera and where it is in the field of view](https://github.com/UbiquityRobotics/dnn_detect)
 
 ### Action Nodes
-https://github.com/UbiquityRobotics/demos    The set of demos that ubiquity robotics includes as a starting point for you to write your own programs.
+[The set of demos that ubiquity robotics includes as a starting point for you to write your own programs](https://github.com/UbiquityRobotics/demos)   
 
 By using a combination of nodes it is possible to get the robot to adopt any one of a number of behaviors. Our demos are used to show how the robot can operate but also form an example or a starting point for you to write your own. To see how this can be done, see our [fiducial follow](programming_your_robot/fiducial_follow_app.md) program.
 
