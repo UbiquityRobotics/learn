@@ -38,6 +38,4 @@ By using a combination of nodes it is possible to get the robot to adopt any one
 
 ### Launch Files
 
-The launch files bring up the robot with the software needed for different configurations.  They are described in the GitHub repo:
-
-https://github.com/UbiquityRobotics/magni_robot/blob/indigo-devel/README.md
+The launch files bring up the robot with the software needed for different configurations.  They are described in [this GitHub repo](https://github.com/UbiquityRobotics/magni_robot/blob/indigo-devel/README.md).
