@@ -35,3 +35,9 @@ https://github.com/UbiquityRobotics/dnn_detect         -Publishes what it sees o
 https://github.com/UbiquityRobotics/demos  The set of demos that ubiquity robotics includes as a starting point for you to write your own programs.
 
 By using a combination of nodes it is possible to get the robot to adopt any one of a number of behaviors. Our demos are used to show how the robot can operate but also form an example or a starting point for you to write your own. To see how this can be done, see our [fiducial follow](programming_your_robot/fiducial_follow_app.md) program.
+
+### Launch Files
+
+The launch files bring up the robot with the software needed for different configurations.  They are described in the GitHub repo:
+
+https://github.com/UbiquityRobotics/magni_robot/blob/indigo-devel/README.md
