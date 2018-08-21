@@ -22,7 +22,7 @@ Each of the nodes that Ubiquity Robotics has developed resides in a GitHub repos
 
 ### Infrastructure Nodes  
 https://github.com/UbiquityRobotics/ubiquity_motor    -Drives the motors
-(https://github.com/UbiquityRobotics/raspicam_node)   -Drivers the camera
+(https://github.com/UbiquityRobotics/raspicam_node)   -Drives the camera
 https://github.com/UbiquityRobotics/pi_sonar              -Drives the sonar array
 https://github.com/UbiquityRobotics/bt_joystick            -Drives the included bluetooth joystick
 
