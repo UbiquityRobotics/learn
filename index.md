@@ -50,7 +50,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 
 <!--
 12.	Writing Your First Script
-13.	Creating a Map
+13.	Creating a Map 
 14.	Autonomous Driving
 15.	Going Forward and Avoiding Obstacles with Code
 16.	Going to a Specific Location on Your Map Using Code
