@@ -66,7 +66,7 @@ In addition there are a number of lecture series on ROS some that can be found o
 For those of you who want to dive straight in to code - we’ve provided a couple of example projects. They also provide a lot of the basic infrastructure you need and create a starting point.
 ### Fiducial Follow
 
-This code follows a fiducial marker. Follow this link to learn how Fiducial Follow works. The app itself contains the bindings that are needed to do useful work with fiducials. Click here for The Fiducial Follow App code repository
+With this code the robot will follow a fiducial marker. If you attach the marker to your clothing the robot will follow you. The app itself contains the bindings that are needed to do useful work with fiducials. 
 ### Move Demo
 
 Move demo This code simply moves the robot. It includes all the bindings to external services that both navigate and drive the robot.
