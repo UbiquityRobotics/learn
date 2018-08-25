@@ -40,10 +40,6 @@ Log in to the robot as per the instructions in the section on [connecting](conne
 
 Once you are logged in to the robot type the following command:
 
-`sudo systemctl stop magni-base`
-
-This stops the robot processes that you may be running on the robot that you don't need. Then type:
-
 `roslaunch magni_demos fiducial_follow.launch`
 
 This starts the processes that you need to make fiducial follow work.
