@@ -5,6 +5,7 @@ permalink: sensors
 ---
 #### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
+<!--
 ### To build:
 
 cd ~/catkin_ws/src
@@ -22,13 +23,30 @@ sudo chmod 4755 ~/catkin_ws/devel/lib/pi_sonar/pi_sonar
 
 roslaunch pi_sonar pi_sonar.launch
 
+-->
+### To install sonars,
+
+`sudo apt update`  
+`sudo apt upgrade`  
+`sudo apt install ros-kinetic-pi-sonar``
+
+Then, to enable the sensors, edit the file `/etc/ubiquity/robot.yaml` so that
+
+`sonars: 'pi_sonar_v1'`
+is uncommented and `sonars: None` is commented.
+
+Like so:
+```
+# Robot Configuration
+#sonars: None
+sonars: 'pi_sonar_v1'
+```
 ### Operation
 
-The sonar node (https://github.com/UbiquityRobotics/ubiquity_sonar) publishes a sensor_msgs/Range message for each sonar reading.
-
-rviz can visualize these messages as cones.  There are launch files to do this in:  
+[The sonar node](https://github.com/UbiquityRobotics/ubiquity_sonar) publishes a `sensor_msgs/Range message` for each sonar reading.
+Rviz can visualize these messages as cones.  There are launch files to do this in:  
 https://github.com/UbiquityRobotics/magni_robot (the source package, not the binary packages)
 
-move_basic http://wiki.ros.org/move_basic uses these messages to determine proximity to obstacles.   publishes a 2D visualization of the sonar.
+The [move_basic node](http://wiki.ros.org/move_basic) uses these messages to determine proximity to obstacles.   publishes a 2D visualization of the sonar.
 <!-- todo complete this page! -->
 #### &larr;[back](waypoints)- - - - - - - - - - [up](ix_doing_more)&rarr;
