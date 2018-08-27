@@ -4,6 +4,8 @@ title:  "Tips and Tricks"
 permalink: tips
 ---
 
+#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
+
 I think it would be good for Joe to try these things and for example say you should see about X lines for the 'rosnode list' and Y lines for  'rostopic list' for example.
 
 Many of these are geared towards technical people who are working with the bot to develop things and need to stop and start nodes and so on but they are 'gold' for those people.
@@ -12,7 +14,7 @@ Suggest now that the 'pifi' line and change hostname items be way up as items 4 
 ## Tips and Tricks
 
 ### Sanity Checks
-* When magniis on, the wheels should have strong resistance to movement.  
+* When magni is on, the wheels should have strong resistance to movement.  
 
 * The command `sudo systemctl status magni-base`should show that the magni-base service is up and running
 
