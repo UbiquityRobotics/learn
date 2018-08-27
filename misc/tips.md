@@ -28,7 +28,7 @@ Change hostname: Edit /etc/hosts and also /etc/hostname to set a new machine nam
 
 ### Handy Tips for Developers
 
-* The important configuration file `base.yaml` is found at: ``/opt/ros/kinetic/share/magni_bringup/param/base.yaml`.
+* The important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`.
 
 * Disable/Enable magni startup:    sudo systemctl disable magni-base    OR stop it:  sudo systemctl stop magni-base.service
 
