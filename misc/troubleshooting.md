@@ -102,7 +102,7 @@ phone will try to direct packets from robot-commander to the
 internet rather than the robot. It may help to switch off
 your external data plan before trying to make robot commander work.
 
-#### Fiducial Follow
+### Fiducial Follow
 1) Check that the fiducial is the correct size; the thick dark square that is the exterior of the dark parts of the fiducial should be exactly 14.0 cm along each edge.
 
 2) Make sure that there is a white border around the big black box of the fiducial. The camera must see white around the black square--a 2 cm border is recommended. Our fiducial system generates pages correctly by default and has cut symbols on it that are workable.  
@@ -113,6 +113,10 @@ your external data plan before trying to make robot commander work.
 
 4) Make sure the camera is mounted at the correct location and that it is correctly oriented.
 
+![cam_situ](../assets/camera_in_magni.png)
+
+![cam_side](../assets/camera_side_view.png)
+
 Note: Please ignore the connection to the sonar board - this type of connection is particular to our engineering robots only
 
 5) Check that you have a charged button battery in the CR2032 battery holder on the back of the robot
@@ -121,7 +125,7 @@ Now we check the various pieces of software are correct
 
 6) Make sure you have the latest software by typing
 
-sudo apt update; sudo apt upgrade
+    `sudo apt update; sudo apt upgrade`
 
 Then run it again to verify that everything got upgraded correctly
 
@@ -129,62 +133,63 @@ Then run it again to verify that everything got upgraded correctly
 
 8) Now we check the robot model.
 
-run `rostopic echo /tf_static` and make sure the output looks like the following.
-transforms:
-  -
-    header:
-      seq: 0
-      stamp:
-        secs: 1535314941
-        nsecs: 653950257
-      frame_id: "base_link"
-    child_frame_id: "base_footprint"
-    transform:
-      translation:
-        x: 0.0
-        y: 0.0
-        z: -0.1
-      rotation:
-        x: 0.0
-        y: 0.0
-        z: 0.0
+run `rostopic echo /tf_static`. The output should look like the following.
+<div>
+transforms:  
+  -  
+  header:  
+      seq: 0  
+      stamp:  
+        secs: 1535314941  
+        nsecs: 653950257  
+      frame_id: "base_link"  
+    child_frame_id: "base_footprint"  
+    transform:  
+      translation:  
+        x: 0.0  
+        y: 0.0  
+        z: -0.1  
+      rotation:  
+        x: 0.0  
+        y: 0.0  
+        z: 0.0  
         w: 1.0
   -
-    header:
-      seq: 0
-      stamp:
-        secs: 1535314941
-        nsecs: 653983009
-      frame_id: "base_link"
-    child_frame_id: "raspicam"
-    transform:
-      translation:
-        x: 0.035
-        y: 0.085
-        z: 0.14
-      rotation:
-        x: 0.385136504193
-        y: 0.385099407014
-        z: 0.593001082056
+    header:  
+      seq: 0  
+      stamp:  
+        secs: 1535314941  
+        nsecs: 653983009  
+      frame_id: "base_link"  
+    child_frame_id: "raspicam"  
+    transform:  
+      translation:  
+        x: 0.035  
+        y: 0.085  
+        z: 0.14  
+      rotation:  
+        x: 0.385136504193  
+        y: 0.385099407014  
+        z: 0.593001082056  
         w: 0.593058206701
-
-
+</div>
 9) Launch the fiducial navigation software
 
-10) Launch RViz
+10) Launch rviz
 
 check the following features
-a)
-b)
-c)
-d)
-e)
-f)
-g)
+a)  
+b)  
+c)  
+d)  
+e)   
+f)  
+g)  
 
 11) Run htop to verify that there isn't anything that is taking up large numbers of CPU cycles or memory that isn't ROS related.
 
 12) Consider camera calibration. I wouldn't do this as the first step.  There is a link to the camera calibration tutorial from the documentation at http://wiki.ros.org/fiducials
+
 https://github.com/UbiquityRobotics/raspicam_node/#calibration
 
 13) If all of that is correct you should be able to see fiducials as desired and it should all work.
