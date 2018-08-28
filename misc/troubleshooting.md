@@ -129,9 +129,9 @@ Now we check the various pieces of software are correct
 
 Then run it again to verify that everything got upgraded correctly
 
-7) Reboot
+    `sudo reboot`
 
-8) Now we check the robot model.
+7) Now we check the robot model.
 
 run `rostopic echo /tf_static`. The output should look like the following.
 <div>
@@ -173,9 +173,9 @@ transforms:
         z: 0.593001082056  
         w: 0.593058206701
 </div>
-9) Launch the fiducial navigation software
+8) Launch the fiducial navigation software
 
-10) Launch rviz
+9) Launch rviz
 
 check the following features
 a)  
@@ -186,10 +186,10 @@ e)
 f)  
 g)  
 
-11) Run htop to verify that there isn't anything that is taking up large numbers of CPU cycles or memory that isn't ROS related.
+10) Run htop to verify that there isn't anything that is taking up large numbers of CPU cycles or memory that isn't ROS related.
 
-12) Consider camera calibration. I wouldn't do this as the first step.  There is a link to the camera calibration tutorial from the documentation at http://wiki.ros.org/fiducials
+11) Consider camera calibration. I wouldn't do this as the first step.  There is a link to the camera calibration tutorial from the documentation at http://wiki.ros.org/fiducials
 
 https://github.com/UbiquityRobotics/raspicam_node/#calibration
 
-13) If all of that is correct you should be able to see fiducials as desired and it should all work.
+12) If all of that is correct you should be able to see fiducials as desired and it should all work.
