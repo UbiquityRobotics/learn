@@ -18,7 +18,7 @@ Suggest now that the 'pifi' line and change hostname items be way up as items 4 
 
 * The command `sudo systemctl status magni-base`should show that the magni-base service is up and running
 
-* The command `rosnode list` should show motor_node and other nodes. The command `rostopic list` should show many ROS topics. or node is not up {todo)
+* The command `rosnode list` should show `motor_node` and other nodes. The command `rostopic list` should show many ROS topics, including `/battery` and `/cmd_vel`.
 
 * After the command `rosrun teleop_twist_keyboard teleop_twist_keyboard.py`, pressing the 'i' key should move the robot.
 
@@ -32,13 +32,16 @@ Instructions for joining your local area network are in the same place.
 * Disable/Enable magni startup:    sudo systemctl disable magni-base    OR stop it:  sudo systemctl stop magni-base.service
 
 * To find the firmware version:  
-    `sudo systemctl stop magni-base.service`  
-    `rosrun ubiquity_motor probe_robot -f`     
+    `sudo systemctl stop magni-base.service` **(why?)**  
+    `rosrun ubiquity_motor probe_robot -f`  
+    For other useful information use -h instead of -f.   
 
 *  Manually run magni services after a 'systemctl disable' line as earlier shown:    roslaunch magni_bringup base.launch
 
 * Tech Detail: launch file launched by the magni-base.service and launches /opt/ros/kinetic/share/magni_bringup/launch/base.launch
-        Launch does 'rosrun controller_manager spawner ubiquity_velocity_controller ubiquity_joint_publisher  see wiki.ros.org/controller_manager
+        Launch does 'rosrun controller_manager spawner ubiquity_velocity_controller ubiquity_joint_publisher  
+
+        see wiki.ros.org/controller_manager
          magni_demos teleop.launch in /opt/ros/kinetic/share/magni_teleop/launch
 
 * TechDetail: /opt/ros/kinetic/share/magni_* are all sorts of magni software and magni_demos/launch has ROS launch files
