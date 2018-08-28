@@ -177,7 +177,7 @@ transforms:
 
 9) Launch rviz
 
-check the following features
+check the following features  
 a)  
 b)  
 c)  
@@ -188,8 +188,6 @@ g)
 
 10) Run htop to verify that there isn't anything that is taking up large numbers of CPU cycles or memory that isn't ROS related.
 
-11) Consider camera calibration. I wouldn't do this as the first step.  There is a link to the camera calibration tutorial from the documentation at http://wiki.ros.org/fiducials
-
-https://github.com/UbiquityRobotics/raspicam_node/#calibration
+11) Camera calibration is not usually necessary as we provide a default camera calibration file that should work in most cases. However, even in mass produced cameras of the same type, there is always some camera to camera variation, that can only be eliminated through careful calibration. If there is aberrant behavior and all other sources of problems have been eliminated, or if you simply want the best possible accuracy and performance from your system then do camera calibration. A tutorial for camera calibration can be found at: https://github.com/UbiquityRobotics/raspicam_node/#calibration
 
 12) If all of that is correct you should be able to see fiducials as desired and it should all work.
