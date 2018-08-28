@@ -22,9 +22,8 @@ Suggest now that the 'pifi' line and change hostname items be way up as items 4 
 
 * After the command `rosrun teleop_twist_keyboard teleop_twist_keyboard.py`, pressing the 'i' key should move the robot.
 
-sudo pifi add <yourWifiSsid> <yourWifiPassword> ; sudo shutdown -r now
-
-Change hostname: Edit /etc/hosts and also /etc/hostname to set a new machine name.  BE SURE BOTH ARE SAME then reboot to make it active.
+* To change the robot's hostname (a must if you will ever have a second robot), see the instructions in [Connecting the Robot](connect_network).
+Instructions for joining your local area network are in the same place.
 
 ### Handy Tips for Developers
 
