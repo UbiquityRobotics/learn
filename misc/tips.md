@@ -29,7 +29,9 @@ Instructions for joining your local area network are in the same place.
 
 * The important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`.
 
-* To disable magni startup:    sudo systemctl disable magni-base    
+* To disable magni startup: `sudo systemctl disable magni-base` and reboot so magni-base will be inactive.
+
+    To get back to normal behavior you will need later a `sudo systemctl enable magni-base` and then a reboot.   
 
 * To find the firmware version: when the robot is idle,  
     `rosrun ubiquity_motor probe_robot -f`  
@@ -37,7 +39,9 @@ Instructions for joining your local area network are in the same place.
 
     If the robot is running a program, run  
     `sudo systemctl disable magni-base.service`  
-    and then reboot.  
+    and then reboot before trying the probe_robot command again.
+
+    To return the robot to normal startup you will then need to use   `sudo systemctl enable magni-base.service` and reboot again.  
 
 *  To run magni services after a 'systemctl disable' line as shown above:    `roslaunch magni_bringup base.launch`.
 
