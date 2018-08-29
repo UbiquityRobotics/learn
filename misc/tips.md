@@ -25,23 +25,24 @@ Suggest now that the 'pifi' line and change hostname items be way up as items 4 
 * To change the robot's hostname (a must if you will ever have a second robot), see the instructions in [Connecting the Robot](connect_network).
 Instructions for joining your local area network are in the same place.
 
-### Handy Tips for Developers
+### Handy Tips for Developers Only
 
 * The important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`.
 
-* Disable/Enable magni startup:    sudo systemctl disable magni-base    OR stop it:  sudo systemctl stop magni-base.service
+* To disable magni startup:    sudo systemctl disable magni-base    
 
-* To find the firmware version:  
-    `sudo systemctl stop magni-base.service` **(why?)**  
+* To find the firmware version: when the robot is idle,  
     `rosrun ubiquity_motor probe_robot -f`  
-    For other useful information use -h instead of -f.   
+    For even more fun try **-h** instead of **-f**.
 
-*  Manually run magni services after a 'systemctl disable' line as earlier shown:    roslaunch magni_bringup base.launch
+    If the robot is running a program, run  
+    `sudo systemctl disable magni-base.service`  
+    and then reboot.  
 
-* Tech Detail: launch file launched by the magni-base.service and launches /opt/ros/kinetic/share/magni_bringup/launch/base.launch
-        Launch does 'rosrun controller_manager spawner ubiquity_velocity_controller ubiquity_joint_publisher  
+*  To run magni services after a 'systemctl disable' line as shown above:    `roslaunch magni_bringup base.launch`.
 
-        see wiki.ros.org/controller_manager
-         magni_demos teleop.launch in /opt/ros/kinetic/share/magni_teleop/launch
+* The launch file used by the magni-base.service is `/opt/ros/kinetic/share/magni_bringup/launch/base.launch`.  
+This launch file does `rosrun controller_manager spawner ubiquity_velocity_controller ubiquity_joint_publisher`.  
+This invokes the ROS controller_manager; for more detail see `wiki.ros.org/controller_manager`.
 
-* TechDetail: /opt/ros/kinetic/share/magni_* are all sorts of magni software and magni_demos/launch has ROS launch files
+* Much magni software will be found in `/opt/ros/kinetic/share/magni_*`` In particular, magni_demos/launch has ROS launch files.
