@@ -7,6 +7,11 @@ permalink: troubleshooting
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 # Troubleshooting
+
+[Batteries](#the battery)  
+[Robot Commander](#robot commander)  
+[Fiducial Follow](#fiducial follow)  
+
 ### The Battery
 
 The quickest test: With Robot Commander connected to the robot,
