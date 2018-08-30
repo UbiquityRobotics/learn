@@ -180,9 +180,9 @@ transforms:
         z: 0.593001082056  
         w: 0.593058206701
 
-</div>
+<div>
 
-8) Launch the fiducial navigation software
+8) Launch the fiducial navigation software.
 
 9) Launch rviz
 
