@@ -140,7 +140,7 @@ Then run it again to verify that everything got upgraded correctly
 
 run `rostopic echo /tf_static`. The output should be similar to the following (though formatted differently).
 
-<div>
+<p>
 
 transforms:  
   -  
@@ -180,7 +180,7 @@ transforms:
         z: 0.593001082056  
         w: 0.593058206701
 
-<div>
+</p>
 
 8) Launch the fiducial navigation software.
 
