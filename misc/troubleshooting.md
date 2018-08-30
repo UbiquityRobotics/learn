@@ -8,7 +8,7 @@ permalink: troubleshooting
 
 # Troubleshooting
 
-[Batteries](#the-battery)  
+[The Battery](#the-battery)  
 [Robot Commander](#robot-commander)  
 [Fiducial Follow](#fiducial-follow)  
 
