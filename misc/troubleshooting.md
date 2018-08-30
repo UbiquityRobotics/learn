@@ -133,7 +133,7 @@ Then run it again to verify that everything got upgraded correctly
 
 7) Now we check the robot model.
 
-run `rostopic echo /tf_static`. The output should look like the following.
+run `rostopic echo /tf_static`. The output should be similar to the following (though formatted differently).
 
 <div>
 
