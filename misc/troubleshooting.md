@@ -136,12 +136,13 @@ Then run it again to verify that everything got upgraded correctly
 run `rostopic echo /tf_static`. The output should look like the following.
 
 <div>
+
 transforms:  
   -  
   header:  
       seq: 0  
       stamp:  
-        secs: 1535314941  
+        secs: 1535314942  
         nsecs: 653950257  
       frame_id: "base_link"  
     child_frame_id: "base_footprint"  
@@ -173,6 +174,7 @@ transforms:
         y: 0.385099407014  
         z: 0.593001082056  
         w: 0.593058206701
+
 </div>
 
 8) Launch the fiducial navigation software
