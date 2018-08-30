@@ -25,6 +25,11 @@ Suggest now that the 'pifi' line and change hostname items be way up as items 4 
 * To change the robot's hostname (a must if you will ever have a second robot), see the instructions in [Connecting the Robot](connect_network).
 Instructions for joining your local area network are in the same place.
 
+
+* To check the battery level type: `rostopic echo /battery`
+
+  This should show you various information about the battery. If the battery voltage is somewhere between 21-28V that would be normal. Obviously the lower the voltage the less charge the batteries have.
+
 ### Handy Tips for Developers Only
 
 * The important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`.
@@ -42,6 +47,10 @@ Instructions for joining your local area network are in the same place.
     and then reboot before trying the probe_robot command again.
 
     To return the robot to normal startup you will then need to use   `sudo systemctl enable magni-base.service` and reboot again.  
+
+    To find the version number of the most important ubiquity software type:
+
+    `dpkg-query --showformat='${Package}\t${Version}\n' --show ros-kinetic-magni-robot ros-kinetic-ubiquity-motor ros-kinetic-fiducials ros-kinetic-raspicam-node ros-kinetic-pi-sonar`
 
 *  To run magni services after a 'systemctl disable' line as shown above:    `roslaunch magni_bringup base.launch`.
 
