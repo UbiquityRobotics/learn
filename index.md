@@ -5,13 +5,13 @@ title:  "Main Menu"
 #### [&uarr;top](https://ubiquityrobotics.github.io/learn/)
 ---
 
-# Ubiquity Robotics Documentation
+## Ubiquity Robotics Documentation
 
-* [Preface](introduction)
-
-* [Requirements](need_to_know)
-
-* [Magni Controls](magni_key)
+* [Preface](introduction)  
+* [Requirements](need_to_know)  
+* [Magni Controls](magni_key)  
+* [Diagnostics](Diagnostics)
+* [Troubleshooting](misc/troubleshooting.md)
 
 <H3 style="color:red">Warning</H3>
 
@@ -29,7 +29,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 5.	[Driving a robot with a Keyboard](quick_start/keyboard_teleop.md)
 6.	[How to set up cameras and sensors](quick_start/camera_sensor/installation.md)
 7.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
-8.  [Troubleshooting](misc/troubleshooting.md)
+
 
 
 ####	Doing More With Your Robot
@@ -50,7 +50,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 
 <!--
 12.	Writing Your First Script
-13.	Creating a Map 
+13.	Creating a Map
 14.	Autonomous Driving
 15.	Going Forward and Avoiding Obstacles with Code
 16.	Going to a Specific Location on Your Map Using Code

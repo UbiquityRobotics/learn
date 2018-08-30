@@ -1,9 +1,8 @@
 ---
 layout: default
-title:  "Tips and Tricks"
-permalink: tips
+title:  "Diagnostics"
+permalink: diagnostics
 ---
-
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 <!--
 I think it would be good for Joe to try these things and for example say you should see about X lines for the 'rosnode list' and Y lines for  'rostopic list' for example.
