@@ -10,7 +10,7 @@ title:  "Main Menu"
 * [Preface](introduction)  
 * [Requirements](need_to_know)  
 * [Magni Controls](magni_key)  
-* [Diagnostics](Diagnostics)
+* [Diagnostics](misc/diagnostics.md)
 * [Troubleshooting](misc/troubleshooting.md)
 
 <H3 style="color:red">Warning</H3>
