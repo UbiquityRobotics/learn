@@ -134,6 +134,7 @@ Then run it again to verify that everything got upgraded correctly
 7) Now we check the robot model.
 
 run `rostopic echo /tf_static`. The output should look like the following.
+
 <div>
 transforms:  
   -  
@@ -173,6 +174,7 @@ transforms:
         z: 0.593001082056  
         w: 0.593058206701
 </div>
+
 8) Launch the fiducial navigation software
 
 9) Launch rviz
