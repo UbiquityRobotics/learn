@@ -4,13 +4,8 @@ title:  "Diagnostics"
 permalink: diagnostics
 ---
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
-<!--
-I think it would be good for Joe to try these things and for example say you should see about X lines for the 'rosnode list' and Y lines for  'rostopic list' for example.
 
-Many of these are geared towards technical people who are working with the bot to develop things and need to stop and start nodes and so on but they are 'gold' for those people.
-
-Suggest now that the 'pifi' line and change hostname items be way up as items 4 and 5 for example.  Then the 'technical ones' could be left off for now or put in as 'And for all the technical developers these are handy'.  -->
-## Tips and Tricks
+## Diagnostics
 
 ### Sanity Checks
 * When magni is on, the wheels should have strong resistance to movement.  
