@@ -24,9 +24,9 @@ Instructions for joining your local area network are in the same place.
 
   This should show you various information about the battery. If the battery voltage is somewhere between 21-28V that would be normal. Obviously the lower the voltage the less charge the batteries have.
 
-### Handy Tips for Developers Only
+### Handy Tips for Developers
 
-* The important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`.
+* The important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`. N.B. This file may be rewritten when the base is upgraded, as by apt=get.
 
 * To disable magni startup: `sudo systemctl disable magni-base` and reboot so magni-base will be inactive.
 
@@ -42,7 +42,7 @@ Instructions for joining your local area network are in the same place.
 
     To return the robot to normal startup you will then need to use   `sudo systemctl enable magni-base.service` and reboot again.  
 
-    To find the version number of the most important ubiquity software type:
+    To find the version number of the most important ubiquity software, type:
 
     `dpkg-query --showformat='${Package}\t${Version}\n' --show ros-kinetic-magni-robot ros-kinetic-ubiquity-motor ros-kinetic-fiducials ros-kinetic-raspicam-node ros-kinetic-pi-sonar`
 
