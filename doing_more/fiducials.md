@@ -29,6 +29,8 @@ A PDF file containing a range of fiducial markers can be generated on your works
 
 The *100* and *112* specify the starting and ending numerical IDs of the
 markers.  It is not important what these are (we recommend starting at 100), but it is important that each marker has a unique ID.  Print the PDF file to produce the fiducials.  
+## Check the Fiducials
+The fiducials must be printed accurately.  The image must be 14 cm by 14 cm, to within *half a millimeter*.  Depending on the printer settings, these dimensions may be off.  For instance, the printer may be trying to fill the page.  Measure with a good rule, and change the settings if necessary.  
 ## Mount the fiducials
 Affix the fiducials (in any order) to any convenient
 surface, such as a ceiling, where they will be viewed by the robot's camera.
