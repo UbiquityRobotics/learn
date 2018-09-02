@@ -11,7 +11,7 @@ permalink: troubleshooting
 [The Battery](#the-battery)  
 [Robot Commander](#robot-commander)  
 [Fiducial Follow](#fiducial-follow)  
-[Rviz](rviz-Troubleshooting)
+[Rviz](rviz-troubleshooting)
 
 ### The Battery
 
