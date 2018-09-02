@@ -10,7 +10,6 @@ title:  "Main Menu"
 * [Preface](introduction)  
 * [Requirements](need_to_know)  
 * [Magni Controls](magni_key)  
-* [Diagnostics](misc/diagnostics.md)
 * [Troubleshooting](misc/troubleshooting.md)
 
 <H3 style="color:red">Warning</H3>
@@ -43,8 +42,9 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 
 ####	Programming Your Robot
 
-1. [Overview](programming_your_robot/overview.md)  
-2. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
+1. [Overview](programming_your_robot/overview.md)
+2. [Diagnosticsand Other Matters](misc/diagnostics.md)
+3. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
 
 
 
