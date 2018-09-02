@@ -11,7 +11,7 @@ permalink: troubleshooting
 [The Battery](#the-battery)  
 [Robot Commander](#robot-commander)  
 [Fiducial Follow](#fiducial-follow)  
-[Rviz](rviz-troubleshooting)
+[Rviz](#rviz-troubleshooting)
 
 ### The Battery
 
@@ -202,6 +202,6 @@ g)
 
 12) If all of that is correct you should be able to see fiducials as desired and it should all work.
 
-### RViz Troubleshooting
+### Rviz Troubleshooting
 
 Some users have reported that, when running on a virtual machine workstation, it is necessary to turn off hardware acceleration.
