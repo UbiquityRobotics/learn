@@ -8,7 +8,8 @@ permalink: troubleshooting
 
 # Troubleshooting
 
-[The Battery](#the-battery)  
+[The Battery](#the-battery)
+[Magni Does Not Move](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)
 [Robot Commander](#robot-commander)  
 [Fiducial Follow](#fiducial-follow)  
 [Rviz](#rviz-troubleshooting)
@@ -109,98 +110,7 @@ internet rather than the robot. It may help to switch off
 your external data plan before trying to make robot commander work.
 
 ### Fiducial Follow
-1) Check that the fiducial is the correct size; the thick dark square that is the exterior of the dark parts of the fiducial should be exactly 14.0 cm along each edge.
-
-2) Make sure that there is a white border around the big black box of the fiducial. The camera must see white around the black square--a 2 cm border is recommended. Our fiducial system generates pages correctly by default and has cut symbols on it that are workable.  
-
-3) Make sure the module is flat against the PCB of the camera board and hasn’t been damaged - it should look like this:
-
-![camera](../assets/raspi_camera.png)
-
-4) Make sure the camera is mounted at the correct location and that it is correctly oriented.
-
-![cam_situ](../assets/camera_in_magni.png)
-
-![cam_side](../assets/camera_side_view.png)
-
-Note: Please ignore the connection to the sonar board - this type of connection is particular to our engineering robots only
-
-5) Check that you have a charged button battery in the CR2032 battery holder on the back of the robot
-
-Now we check the various pieces of software are correct
-
-6) Make sure you have the latest software by typing
-
-    `sudo apt update; sudo apt upgrade`
-
-Then run it again to verify that everything got upgraded correctly
-
-    `sudo reboot`
-
-7) Now we check the robot model.
-
-run `rostopic echo /tf_static`. The output should be similar to the following (though formatted differently).
-
-<p>
-
-transforms:  
-  -  
-  header:  
-      seq: 0  
-      stamp:  
-        secs: 1535314942  
-        nsecs: 653950257  
-      frame_id: "base_link"  
-    child_frame_id: "base_footprint"  
-    transform:  
-      translation:  
-        x: 0.0  
-        y: 0.0  
-        z: -0.1  
-      rotation:  
-        x: 0.0  
-        y: 0.0  
-        z: 0.0  
-        w: 1.0
-  -
-    header:  
-      seq: 0  
-      stamp:  
-        secs: 1535314941  
-        nsecs: 653983009  
-      frame_id: "base_link"  
-    child_frame_id: "raspicam"  
-    transform:  
-      translation:  
-        x: 0.035  
-        y: 0.085  
-        z: 0.14  
-      rotation:  
-        x: 0.385136504193  
-        y: 0.385099407014  
-        z: 0.593001082056  
-        w: 0.593058206701
-
-</p>
-
-8) Launch the fiducial navigation software.
-
-9) Launch rviz
-
-check the following features  
-a)  
-b)  
-c)  
-d)  
-e)   
-f)  
-g)  
-
-10) Run htop to verify that there isn't anything that is taking up large numbers of CPU cycles or memory that isn't ROS related.
-
-11) Camera calibration is not usually necessary as we provide a default camera calibration file that should work in most cases. However, even in mass produced cameras of the same type, there is always some camera to camera variation, that can only be eliminated through careful calibration. If there is aberrant behavior and all other sources of problems have been eliminated, or if you simply want the best possible accuracy and performance from your system then do camera calibration. A tutorial for camera calibration can be found at: https://github.com/UbiquityRobotics/raspicam_node/#calibration
-
-12) If all of that is correct you should be able to see fiducials as desired and it should all work.
+An excellent article is to be found [here]( https://forum.ubiquityrobotics.com/t/troubleshooting-procedure-for-fiducial-localization-problems/134).
 
 ### Rviz Troubleshooting
 
