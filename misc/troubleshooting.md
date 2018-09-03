@@ -8,10 +8,10 @@ permalink: troubleshooting
 
 # Troubleshooting
 
-[The Battery](#the-battery)
-[Magni Does Not Move](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)
+[The Battery](#the-battery)  
+[Fiducial Follow or Localization](https://forum.ubiquityrobotics.com/t/troubleshooting-procedure-for-fiducial-localization-problems/134)   
+[Magni Does Not Move](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
 [Robot Commander](#robot-commander)  
-[Fiducial Follow](#fiducial-follow)  
 [Rviz](#rviz-troubleshooting)
 
 ### The Battery
@@ -108,9 +108,6 @@ Sometimes if an Android phone is connected to a data plan then the
 phone will try to direct packets from robot-commander to the
 internet rather than the robot. It may help to switch off
 your external data plan before trying to make robot commander work.
-
-### Fiducial Follow
-An excellent article is to be found [here]( https://forum.ubiquityrobotics.com/t/troubleshooting-procedure-for-fiducial-localization-problems/134).
 
 ### Rviz Troubleshooting
 
