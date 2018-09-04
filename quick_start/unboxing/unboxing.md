@@ -9,10 +9,10 @@ author: Alan Federman
 
 ## Unboxing and Assembling a Magni Robot
 
-The Magni comes almost ready to run with minimal assembly. There are three different version of Magni: Bronze, Silver and Gold. Most will come with a Raspiberry Pi 3 computer and software image (Silver and Gold). The Bronze version will not come with the computer. 2 12v SLA (Sealed Lead Acid) batteries should be purchased separately. An allen wrench (for M6 bolts) will be included in the shipping box. In addition a small Phillips (cross point) screw driver may be needed for mounting the Raspberry Pi camera.
+The Magni comes almost ready to run with minimal assembly. There are three different version of Magni: Bronze, Silver and Gold. Silver and Gold comes with a Raspiberry Pi 3 computer and software image. The Bronze version does not come with a computer. Two 12v SLA (Sealed Lead Acid) batteries should be purchased separately. An allen wrench (for M6 bolts) will be included in the shipping box. In addition a small Phillips (cross point) screw driver may be needed for mounting the Raspberry Pi camera.
 
 
-Step 1 - open the box
+#### Step 1 - open the box
 
 
  ![Shipping Box](unb1.JPG)
@@ -37,13 +37,13 @@ Step 1 - open the box
  The front and back brackets can be installed using the brackets require a M4 hex Allen wrench. We suggest an extra long (6 cm). The other included fasteners are M3 (M2 hex wrench) and a small Phillips screwdriver for Raspi Cam attachment. [See the detailed section on camera and sensor installation.](camera_sensors)
 
 
-Brackets
+#### Brackets
 
 ![Front](camfront.jpg)
 
-Front Bracket with Camera.  The power switches are system above the "U" in Ubiquity, and wheels above the "y'. The charging port is between the two switches. Switches light up when on. The on position is with the switch extended out, the left (closest to the wheel, turns on the system power, and the right most switch enables power to the wheels. Both buttons should be lit. It is a major error to attempt to operate the robot with the power to the wheels off. Comands will be stored by the robot and then when power is enabled, the robot may move unexpectedly. Installing the camera is discussed separately.
+Front Bracket with Camera.  The power switches are system above the "U" in Ubiquity, and wheels above the "y'. The charging port is between the two switches. Switches light up when on. The on position is with the switch extended out, the left (closest to the wheel, turns on the system power, and the right most switch enables power to the wheels. Both buttons should be lit. It is a major error to attempt to operate the robot with the power to the wheels off. Commands will be stored by the robot and then when power is enabled, the robot may move unexpectedly. Installing the camera is discussed separately.
 
-The Motors are connected next. This should be done at the factory, If they are detached, there are arrows on the connectors that (-> <-) show the allignment. These connectors are sometimes hard to insert and separate, because hard to grip them.
+The Motors are connected next. This should be done at the factory, If they are detached, there are arrows on the connectors that (-> <-) show the alignment. These connectors are sometimes hard to insert and separate, because hard to grip them.
 
 
 ![Motors to MC](unb5.JPG)  
@@ -56,6 +56,11 @@ to be specified.  The user should be prepared for a current inrush spark? (not s
 
 ![Final](unb-bat.JPG)
 
-A video of this process is available:  [Video](https://youtu.be/pF38kFOl0Ic)
+#### The Real-Time Clock battery
+There is also a coin cell battery on the back of the circuit board, it is a CR2032.  This provides power to the real-time clock, which is essential.  If this battery is not installed, obtain one and install it. Insert the battery with the lettering side up.
+
+![Battery Holder](battery_holder.png)
+
+A video of the unboxing process is available:  [Video](https://youtu.be/pF38kFOl0Ic)
 
 <<[back](ix_quick_start)- - - - - - - - - - [next](logitech)>>
