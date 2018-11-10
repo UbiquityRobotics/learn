@@ -45,7 +45,7 @@ An Allen wrench (for M6 bolts) will be included in the shipping box. In addition
 
 ![Front](camfront.jpg)
 
-The Front Bracket with Camera is shown abovd.  The system power switch is above the "U" in Ubiquity, and the switch for the power to the wheels is above the "y'. The charging port is between the two switches. Switches light up when on. The ON position is with the switch extended out. Both buttons should be lit.
+The Front Bracket with Camera is shown above.  The system power switch is above the "U" in Ubiquity, and the switch for the power to the wheels is above the "y'. The charging port is between the two switches. Switches light up when on. The ON position is with the switch extended out. Both buttons should be lit.
 
 Do not attempt to operate the robot when the power to the wheels is off. Commands will be stored by the robot and then when power is enabled, the robot may move unexpectedly.
 
