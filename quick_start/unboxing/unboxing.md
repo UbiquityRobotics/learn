@@ -69,7 +69,7 @@ There is also a CR2032 coin cell battery on the back of the circuit board.  This
 
 ![Coin cell Holder](battery_holder.png)
 
-![Coin cell clip](BatteryClipinstallNote.jpg)
+![Coin cell clip](BatteryClipInstallNote.jpg)
 
 A video of the unboxing process is available:  [Video](https://youtu.be/pF38kFOl0Ic)
 
