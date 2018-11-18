@@ -34,7 +34,7 @@ Instructions for joining your local area network are in the same place.
 
 * To find the firmware version: when the robot is idle,  
     `rosrun ubiquity_motor probe_robot -f`  
-    For even more fun try **-h** instead of **-f**.
+    For even more fun try **-a** instead of **-f**.
 
     If the robot is running a program, run  
     `sudo systemctl disable magni-base.service`  
