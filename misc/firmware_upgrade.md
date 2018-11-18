@@ -30,8 +30,8 @@ After entering your email address, you should receive an access token.
 Enter this token to start the download and upgrade process.
 
 The process should take less than a minute, please make sure that power is
-not interuptted during this process. Otherwise your robot may be permanently 
-bricked.
+not interuptted during this process. Otherwise your robot may become 
+inoperable and require factory servicing.
 
 When done, reboot the robot with `sudo reboot`.
 
