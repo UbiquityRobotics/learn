@@ -53,3 +53,19 @@ This launch file does `rosrun controller_manager spawner ubiquity_velocity_contr
 This invokes the ROS controller_manager; for more detail see `wiki.ros.org/controller_manager`.
 
 * Much magni software will be found in `/opt/ros/kinetic/share/magni_*`` In particular, magni_demos/launch has ROS launch files.
+
+### Guidelines for Usage Of The I2C Bus
+#### The I2C devices Ubiquity Robotics reserves:
+Addresses given in 7-bit form so on the I2C bus they appear shifted up by 1 bit.
+
+* MCP7940 RTC 0x6F Realtime clock for Linux when no NTP can be contacted
+* PCF8574 IO Expander 0x20 IO Expander for Ubiquity Robotics usage on 5.x boards    
+* SSD1306 OLED Disp 0x3C Near future 8 line by 15 character small display on rev 5.x boards
+
+#### Tips and Guidelines For any I2C usage On the Magni Platform:
+The I2C is the main 3.3V Raspberry Pi I2C on pins 3 and 5 with Raspberry Pi as the master.
+The Rev 5.0 board has a 4-pin jack that brings out I2C and 3.3V with a ground.
+
+* Use the I2C ONLY from within a ROS node to avoid conflict on the I2C bus.
+* Keep the I2C lines to your device under 60mm from board to your device
+* Only use devices for short data accesses and space out your accesses by at least 50msec
