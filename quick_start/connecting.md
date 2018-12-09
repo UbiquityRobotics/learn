@@ -10,14 +10,14 @@ permalink: connecting
 
 Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  Read more about this [here](need_to_know).
 
-<!--*{ Wayne: Shouldn't we use .ova instead of .vdi ?  That way people can use other virtual
-   machine emulators to run the image.  Note to Joe--try this, and document if possible }*-->
+<!-- *{ Wayne: Shouldn't we use .ova instead of .vdi ?  That way people can use other virtual
+   machine emulators to run the image.  Note to Joe--try this, and document if possible } -->
 
 ### Using our out-of-the-box virtual machine workstation
 
 * Download the appropriate VirtualBox software from [the VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and install it.
 
-*  Download the [Ubiquity Robotics Virtual Machine](https://drive.google.com/drive/folders/0B1zeRbBVLXhzZ0Q1TkxtbUxIcEU) and save it in VirtualBox's folder for virtual machines.  On Windows this is \Users\<username>\VirtualBox VMs.
+*  Download the [Ubiquity Robotics Virtual Machine](https://downloads.ubiquityrobotics.com/vm.html) and save it in VirtualBox's folder for virtual machines.  On Windows this is \Users\<username>\VirtualBox VMs.
 
 * On Windows or MacOS, unzip (decompress) the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vbox`, and double-click it.  This will cause VirtualBox to import the Virtual Machine (the VM) and open the VirtualBox Manager.
 
