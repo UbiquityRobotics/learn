@@ -31,41 +31,70 @@ Once you have a working Ubuntu Linux installation you can install ROS. Refer to 
 
 ## Using Robot and Workstation Together
 
-* Once you've got a workstation with Ubuntu and ROS, you should update the Ubiquity software. Because you have two ROS systems, you must keep their versions in sync.
+On the workstation, we want to make sure that we have zeroconf networking enabled:
 
-To update the workstation, open a terminal window, login, and type:
+    sudo apt install libnss-mdns avahi-daemon avahi-utils
 
-  `sudo apt install ros-kinetic-magni-robot`
+Once you've got a workstation with Ubuntu and ROS, you should update the Ubiquity software. Because you have two ROS systems, you must keep their versions in sync.
+
+To update the workstation, open a terminal window:
+
+    sudo apt update
+    sudo apt upgrade
 
 Then, in another terminal window, ssh into the robot and perform the update there:
 
-    `sudo apt install ros-kinetic-magni-robot`
+    sudo apt update
+    sudo apt upgrade
 
 ## Set environment variables on the workstation
 
-* Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
+Test if zeroconf greatly simplifies connecting to the robot, but it doesn't work in every environment.
+On your workstation you should be able to ping the robot with `ping ROBOTNAME.local` where ROBOTNAME is the hostname of your robot.
 
-  `export ROS_MASTER_URI=http://<robot IP address>:11311`  
-  `export ROS_IP=http://<workstation IP address>`
+### If zeroconf works (the ping succeeds):
 
-  ROS on your workstation will use ROS_MASTER_URI to communicate with the ROS master node, which is on the robot. The setting of ROS_IP tells ROS the workstation IP address.  It may be that you can use NEWHOSTNAME.local instead of the address, but not all networks support it.
+Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
 
-  However, environment variables set by the `export ...` method are not persistent across system boots.
+    export ROS_MASTER_URI=http://ROBOTNAME.local:11311  
+    export ROS_HOSTNAME=$(hostname).local
 
-  To make this environment variable persistent, we append its setting to the file called`~/.bashrc, which runs when the Ubuntu shell (called bash) is started. Use an editor, or from the command line:
+Again replace ROBOTNAME with your robot's hostname.
 
-  `echo "export ROS_MASTER_URI=http://<robot IP address>:11311" >> ~/.bashrc`
-  `echo "export ROS_IP=http://<workstation IP address>"`
+However, environment variables set by the `export ...` method are not persistent across system boots.
 
-  **Warning: Don't do this if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot. Also watch out for changes in the IP addresses.**
+To make this environment variable persistent, we append its setting to the file called ~/.bashrc, which runs when the Ubuntu shell (called bash) is started. Use an editor, or from the command line: **Warning: Don't do this step if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot. Instead, set the environment variables manually for each terminal.**
+
+    echo "export ROS_MASTER_URI=http://ROBOTNAME.local:11311" >> ~/.bashrc
+    echo "export ROS_HOSTNAME=$(hostname).local" >> ~/.bashrc
+
+Again replace ROBOTNAME with your robot's hostname.
+
+### If zeroconf is not working (the ping fails):
+
+Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
+
+    export ROS_MASTER_URI=http://<robot_ip>:11311  
+    export ROS_IP=<workstation_ip>
+
+However, environment variables set by the `export ...` method are not persistent across system boots.
+
+To make this environment variable persistent, we append its setting to the file called ~/.bashrc, which runs when the Ubuntu shell (called bash) is started. Use an editor, or from the command line: **Warning: Don't do this step if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot. Instead, set the environment variables manually for each terminal.**
+
+    echo "export ROS_MASTER_URI=http://<robot_ip>:11311" >> ~/.bashrc
+    echo "export ROS_IP=<workstation_ip>" >> ~/.bashrc
+
+**Note, if you are using IP addresses instead of zeroconf, we highly recommend setting up static IP addresses, or DHCP static assignments**
+
+## Test the connection
 
   Verify that ROS is running and you are connected. On the workstation type:
 
-  ```rostopic list```
+    rostopic list
 
-  You should see a list of topics including /joy which means you can drive with a joystick.
+  You should see a list of topics including /cmd_vel which means you can drive the robot.
 
   At this point you can drive the robot from your workstation's
-  keyboard, just as in the Quick Start section called [Driving a Magni with a keyboard](keyboard_teleop). But now, instead of running the `teleop_twist_keyboard program` in the robot, you can run it in the workstation. The motion commands will be generated in the workstation rather than in the robot, and ROS will manage the communication between the two.
+  keyboard, just as in the Quick Start section called [Driving a Magni with a Keyboard](keyboard_teleop). But now, instead of running the `teleop_twist_keyboard` in the robot, you can run it in the workstation. The motion commands will be generated in the workstation rather than in the robot, and ROS will manage the communication between the two.
 
 #### &larr;[back](connect_network)- - - - - - - - - - [next](rviz)&rarr;
