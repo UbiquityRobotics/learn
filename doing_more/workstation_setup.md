@@ -72,7 +72,7 @@ Again replace ROBOTNAME with your robot's hostname.
 
 ### If zeroconf is not working (the ping fails):
 
-**Note, if you are using IP addresses instead of zeroconf, we highly recommend setting up static IP addresses, or DHCP static assignments**
+**Note, if you are using IP addresses instead of zeroconf, we highly recommend setting up static IP addresses or DHCP static assignments.**
 
 Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
 
