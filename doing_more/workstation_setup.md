@@ -72,6 +72,8 @@ Again replace ROBOTNAME with your robot's hostname.
 
 ### If zeroconf is not working (the ping fails):
 
+**Note, if you are using IP addresses instead of zeroconf, we highly recommend setting up static IP addresses, or DHCP static assignments**
+
 Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
 
     export ROS_MASTER_URI=http://<robot_ip>:11311  
@@ -84,7 +86,6 @@ To make this environment variable persistent, we append its setting to the file 
     echo "export ROS_MASTER_URI=http://<robot_ip>:11311" >> ~/.bashrc
     echo "export ROS_IP=<workstation_ip>" >> ~/.bashrc
 
-**Note, if you are using IP addresses instead of zeroconf, we highly recommend setting up static IP addresses, or DHCP static assignments**
 
 ## Test the connection
 
