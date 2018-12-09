@@ -40,7 +40,17 @@ By using a combination of nodes it is possible to get the robot to adopt any one
 
 The launch files bring up the robot with the software needed for different configurations.  They are described in [this GitHub repo](https://github.com/UbiquityRobotics/magni_robot/blob/indigo-devel/README.md).
 
-### Learning ROS
+## Joystick and Other Operating Point Defaults
+
+#### Modify The Logitech Joystick Default Parameters
+
+The Logitech F710 is an approved joystick controller for the Magni robot. The default scale for the joystick is 0 to 1.0. Output values can be found in the file /opt/ros/kinetic/share/magni_teleop/param/logitech.yaml. The values most commonly modified are these:
+
+* scale_linear     This value controls the maximum velocity the joystick will control for maximum forward or reverse joystick movement.
+
+* scale_angular    This value controls the maximum turning rate in radians per second.  Some users lower this for slower turning when the joystick is pushed all the way right or left.
+
+## Learning ROS
 
 ROS has a wide user base and there are lots of resources to learn how to program with it.
 #### ROS Texts
@@ -61,7 +71,7 @@ In addition there are a number of lecture series on ROS some that can be found o
 
 * Introduction to Robotics From Bar-Ilan University
 
-### Starter Code
+## Starter Code
 
 For those of you who want to dive straight in to code - we’ve provided a couple of example projects. They also provide a lot of the basic infrastructure you need and create a starting point.
 #### Fiducial Follow
