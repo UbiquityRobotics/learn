@@ -132,4 +132,12 @@ The folowing command
 
 Shows everything is running. You now should be able use the controller to drive the robot.
 
+#### Modify The Logitech Joystick Default Parameters
+
+The Logitech F710 is an approved joystick controller for the Magni robot. The default scale for the joystick is 0 to 1.0. Output values can be found in the file /opt/ros/kinetic/share/magni_teleop/param/logitech.yaml. The values most commonly modified are these:
+
+* scale_linear     This value controls the maximum velocity the joystick will control for maximum forward or reverse joystick movement.
+
+* scale_angular    This value controls the maximum turning rate in radians per second.  Some users lower this for slower turning when the joystick is pushed all the way right or left.
+
 <<[back](unboxing)- - - - - - - - - - [next](robot_commander)>>
