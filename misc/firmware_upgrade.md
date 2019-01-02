@@ -23,7 +23,7 @@ sudo systemctl stop magni-base
 Run the firmware upgrade utility:
 
 ```
-rosrun ubiquity_motor firmware_upgrade.py
+rosrun ubiquity_motor upgrade_firmware.py
 ```
 
 After entering your email address, you should receive an access token.
