@@ -48,5 +48,15 @@ Rviz can visualize these messages as cones.  There are launch files to do this i
 https://github.com/UbiquityRobotics/magni_robot (the source package, not the binary packages)
 
 The [move_basic node](http://wiki.ros.org/move_basic) uses these messages to determine proximity to obstacles.   publishes a 2D visualization of the sonar.
+
+| | |
+|---|---|
+|Topic|                Direction|
+|/pi_sonar/sonar_0|   Far right|
+|/pi_sonar/sonar_1|   45 degrees to the left|
+|/pi_sonar/sonar_2|   45 degrees to the right
+|/pi_sonar/sonar_3|   Front|
+|/pi_sonar/sonar_4|   Far left|  
+
 <!-- todo complete this page! -->
 #### &larr;[back](waypoints)- - - - - - - - - - [up](ix_doing_more)&rarr;
