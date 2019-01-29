@@ -13,7 +13,8 @@ Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and cust
 [Communications](#communications)  
 [The Workstation](#the-workstation)  
 [The Configuration File](#the-configuration-file)  
-[ROS Params](#ros-params)
+[ROS Params](#ros-params)  
+[Keeping Your Software Current](#keeping-your-software-current)
 
 ### Batteries
 
@@ -26,7 +27,6 @@ The robot ships by air worldwide. The batteries are not included in order to kee
 12350 size. Typical capacity - 30-35 Ah usually much bigger (and heavier) than most applications demand - recommended only for those who must have extraordinary endurance - typicaly 24 hours or more of continuous use. This sized battery makes the robot sufficiently heavy that it will be difficult for most users to lift.
 
 In all cases we recommend a non-spill-able, deep cycle, sealed lead acid battery of either a Gel type or AGM type - although the robot can accept any type of battery pack with a voltage in the range of 21V - 30V, the provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
-
 
 
 ### Communications
@@ -75,3 +75,16 @@ sonars: None
 ### ROS Params
 
 The parameter `ubiquity_robot_mode` specifies the level of capabilities available in the robot. Possible values are 'core', 'teleop', and 'navigation'. The launch file magni_bringup base.launch runs as part of the boot process and automatically sets the parameter to 'teleop'.  The launch file magni_demos simple_navigation.launch enables navigation, so the parameter is set to 'navigation'.
+
+### Keeping Your Software Current
+
+From time to time we update software for improvements and fixes.  The robot should be updated to stay up to date.
+
+On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing:
+
+```ssh ubuntu@ubiquityrobot.local```  
+(use the robot's name or IP address)
+
+```sudo apt-get update```
+
+```sudo apt-get upgrade```
