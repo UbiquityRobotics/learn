@@ -30,7 +30,6 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 7.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
 
 
-
 ####	Doing More With Your Robot
 
 1.	[How to connect the robot with your network](doing_more/network_connect.md)
@@ -39,6 +38,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 4.	[Set up fiducials so you can set waypoints and goals](doing_more/fiducials.md)
 5. [Use Robot Commander over the network to go to waypoints](doing_more/waypoints.md)
 6.	[Try out the Sensor Package e.g. silver sensor package, gold sensor package](doing_more/sensors.md)
+7. [Use 4 Raspberry Pi GPIO Lines for your own needs](doing_more/GPIO_lines.md)
 
 ####	Programming Your Robot
 

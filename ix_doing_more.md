@@ -12,4 +12,3 @@ permalink: ix_doing_more
 9.	[Set up fiducials to support waypoints](fiducials)
 10. [Use Robot Commander over the network to set and use waypoints](waypoints)
 11.	[Try out the Sensor Package e.g. silver sensor package](sensors)
-12. Use 4 Raspberry Pi GPIO Lines for your own needs
