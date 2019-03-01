@@ -26,17 +26,6 @@ by Magni.
 | 6  | 31 | Goes to P704 pin 2. Does a shutdown when grounded. This goes to a pushbutton on Sonar Board neqar 50 pin connector. |
 | 13 | 33 | Goes to P705 pin 2. Used for PiFi and goes to a pushbutton on the Sonar Board |
 
-#### GPIO PiPin Comment   
-5 29 Status LED on Sonar board
-
-25 22 Status LED on Sonar board.
-
-6 31 P704 pin 2 and also to push switch on the Sonar board next to the
-50 pin connector. Ground this to do a shutdown.
-
-13 33 P705 pin 2. This is for PiFi use and only monitored if PiFi is
-running. This goes to switch on Sonar board farther from 50 pin connector.
-
 To use these as GPIO you must edit /etc/pifi/pifi.conf:  
 * Change the line for status_led to be set to None like this  
 ```status_led: None```  
