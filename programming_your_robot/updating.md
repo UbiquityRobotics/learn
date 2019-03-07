@@ -27,7 +27,7 @@ On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In th
 ```ssh ubuntu@ubiquityrobot.local```
 (use the robot’s name or IP address)
 
-```sudo apt-get update```
+```sudo apt-get update```  
 ```sudo apt-get upgrade```
 
 This may take some time, since it may have been a while since the original image was made.
