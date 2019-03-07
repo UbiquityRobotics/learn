@@ -78,8 +78,9 @@ The parameter `ubiquity_robot_mode` specifies the level of capabilities availabl
 
 ### Keeping Your Software Current
 
-From time to time we update software for improvements and fixes.  The robot should be updated to stay up to date.
+From time to time we update software for improvements and fixes.  The robot should be updated to stay up to date. Upgrade information is found [here](programming_your_robot/updating).
 
+<!--
 On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing:
 
 ```ssh ubuntu@ubiquityrobot.local```  
@@ -87,4 +88,4 @@ On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In th
 
 ```sudo apt-get update```
 
-```sudo apt-get upgrade```
+```sudo apt-get upgrade```-->

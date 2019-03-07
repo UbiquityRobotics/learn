@@ -43,8 +43,9 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 ####	Programming Your Robot
 
 1. [Overview](programming_your_robot/overview.md)
-2. [Diagnostics and Other Matters](misc/diagnostics.md)
-3. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
+2. [Updating Software and Firmware](programming_your_robot/updating.md)
+3. [Diagnostics and Other Matters](misc/diagnostics.md)
+4. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
 
 
 
