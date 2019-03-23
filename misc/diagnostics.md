@@ -54,6 +54,10 @@ This invokes the ROS controller_manager; for more detail see `wiki.ros.org/contr
 
 * Much magni software will be found in `/opt/ros/kinetic/share/magni_*`` In particular, magni_demos/launch has ROS launch files.
 
+### Motor Controller Board Pinouts
+
+The pinouts for the many connectors on the main Motor Controller Board can be found [HERE](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf).
+
 ### Guidelines for Usage Of The I2C Bus
 #### The I2C devices Ubiquity Robotics reserves:
 Addresses given in 7-bit form so on the I2C bus they appear shifted up by 1 bit.
