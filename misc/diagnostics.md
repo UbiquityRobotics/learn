@@ -58,6 +58,10 @@ This invokes the ROS controller_manager; for more detail see `wiki.ros.org/contr
 
 The pinouts for the many connectors on the main Motor Controller Board can be found [HERE](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf).
 
+### Motor Controller Revisions
+
+A list of firmware and master controller board revisions can be found [HERE](https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Firmware_and_Hardware_Revisions.md).
+
 ### Guidelines for Usage Of The I2C Bus
 #### The I2C devices Ubiquity Robotics reserves:
 Addresses given in 7-bit form so on the I2C bus they appear shifted up by 1 bit.
