@@ -8,13 +8,13 @@ permalink: updating
 # Updating Software and Firmware
 
 From time to time Ubiquity Robotics will be updating
-either the full kernel image, the working software
+either the full Raspberry Pi image, the working software
 on the Raspberry Pi, or the firmware on the Motor Controller Board.
 
-#### Kernel Image Update
+#### Raspberry Pi Image Update
 
 To check or update the
-full kernel image, visit the [Ubiquity Robotics Download](https://downloads.ubiquityrobotics.com/pi.html) page.    Updating a full image will lead to loss of any customization you have done.  Never destroy your old card till you know you have everything on the new image.
+full Raspberry Pi image, visit the [Ubiquity Robotics Download](https://downloads.ubiquityrobotics.com/pi.html) page.    Updating a full image will lead to loss of any customization you have done.  Never destroy your old card till you know you have everything on the new image.
 
 
 #### Linux Host Software Update
