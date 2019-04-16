@@ -37,7 +37,13 @@ surface, such as a ceiling, where they will be viewed by the robot's camera.
 They need to be at a sufficient spacing so that more than one is visible at a time, if the robot is at least 6 feet away from the wall or ceiling holding the fiducials. Below you will see how to test that the spacing is OK.
 
 ## Running the Software
-Login to the robot from your workstation using ssh.  Then execute the following command on the robot to launch the detection and SLAM nodes:
+If your camera points straight up instead of forward, the file /etc/ubiquity/robot.yaml
+must be edited to change the default (which is "forward"). To do this, add the following 2 lines to /etc/ubiquity/robot.yaml.
+
+    raspicam:   
+        position: 'upward'
+
+Log in to the robot from your workstation using ssh.  Then execute the following command on the robot to launch the detection and SLAM nodes:
 
 ```roslaunch magni_nav aruco.launch```
 
