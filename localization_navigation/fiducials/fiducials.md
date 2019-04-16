@@ -69,6 +69,12 @@ a time.
 
 ## Running the Software
 
+If your camera points straight up instead of forward, the file /etc/ubiquity/robot.yaml
+must be edited to change the default (which is "forward"). To do this, add the following 2 lines to /etc/ubiquity/robot.yaml.
+
+    raspicam:   
+        position: 'upward'
+        
 The following command launches the detection and SLAM nodes on the robot:
 
 ```roslaunch magni_nav aruco.launch```
