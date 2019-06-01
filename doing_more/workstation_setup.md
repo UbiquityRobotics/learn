@@ -90,6 +90,25 @@ To make this environment variable persistent, we append its setting to the file 
     echo "export ROS_MASTER_URI=http://<robot_ip>:11311" >> ~/.bashrc
     echo "export ROS_IP=<workstation_ip>" >> ~/.bashrc
 
+### Synchronize Magni Time To The Workstation Time
+
+When using the robot as the master ROS node the workstation will need to use the same time as the robot or information on the ROS topics will not be recognized properly.  If your laptop and Magni are set properly you should be able to check the time on both at the same time and verify that they are the same.  The process below is to be used only if that fails,
+perhaps due to NTP config changes that have been done on your laptop or the Magni.
+
+The Magni robot uses chrony to synchronize time so it is best if your workstation also uses chrony although not a hard requirement it may
+avoid some issues.
+
+On a laptop that has chrony installed use these commands:             
+
+    sudo chronyc -a local stratum 10
+    sudo chronyc -a allow 0/0
+
+On a console to the Magni use these commands assuming your Magni has the laptop in /etc/hosts or some way to resolve the laptop name:
+
+    sudo systemctl stop magni-base
+    sudo chronyc -a add server <yourLaptopName> iburst
+    sudo chronyc -a burst 2/4
+    sudo systemctl start magni-base
 
 ## Test the connection
 
@@ -101,5 +120,7 @@ To make this environment variable persistent, we append its setting to the file 
 
   At this point you can drive the robot from your workstation's
   keyboard, just as in the Quick Start section called [Driving a Magni with a Keyboard](keyboard_teleop). But now, instead of running the `teleop_twist_keyboard` in the robot, you can run it in the workstation. The motion commands will be generated in the workstation rather than in the robot, and ROS will manage the communication between the two.
+
+
 
 #### &larr;[back](connect_network)- - - - - - - - - - [next](rviz)&rarr;

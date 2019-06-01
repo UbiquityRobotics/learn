@@ -33,7 +33,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 ####	Doing More With Your Robot
 
 1.	[How to connect the robot with your network](doing_more/network_connect.md)
-2.  [How to set-up a workstation with ROS](doing_more/workstation_setup.md)
+2.  [How to set-up a workstation with ROS and Synchronize Time](doing_more/workstation_setup.md)
 3.	[Visualize with rviz](doing_more/rviz.md)
 4.	[Set up fiducials so you can set waypoints and goals](doing_more/fiducials.md)
 5. [Use Robot Commander over the network to go to waypoints](doing_more/waypoints.md)
