@@ -103,7 +103,7 @@ On a laptop that has chrony installed use these commands:
     sudo chronyc -a local stratum 10
     sudo chronyc -a allow 0/0
 
-On a console to the Magni use these commands assuming your Magni has the laptop in /etc/hosts or some way to resolve the laptop name:
+On a console to the Magni use these commands:
 
     sudo systemctl stop magni-base
     sudo chronyc -a add server <yourLaptopName> iburst
