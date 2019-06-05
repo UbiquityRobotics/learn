@@ -16,20 +16,25 @@ some huge 'dump' of stuff
 
 
 ### Basic Movement Tests:
-   - 1st Test is Firmware Only test:  With no RasPi connected power up
+   - The first Test is Firmware Only test:  With no RasPi connected, power up the
 Motor controller with ESTOP not active.
      RESULT: No jump in motors and motors are in locked state strongly
-resisting movement
-   Next tests are full system
-   - Power up unit with ESTOP switch allowing power to motors AND/OR
+resisting movement.
+
+   - The next tests are full system. Power up unit with ESTOP switch allowing power to motors AND/OR
 ESTOP powering down motors then power up motors within 5 seconds
      RESULT: Wheels PID locked wheels to a stopped state with full
 resistance. (we did this in 5 sec to do so before motor node started up)
-   - Edit ros log with vi `roslaunch-logs`/rosout.log  and verify last
-'Firmware version' line in log is expected firmware version
+   - Edit ROS log with  
+   `vi roslaunch-logs`/rosout.log  
+
+   and verify that the last
+'Firmware version' line in the log is the expected firmware version.
    - Wait for motor node to be fully started which takes 20 seconds or
 so sometimes.
      RESULT: Wheels PID locked still and no jump in movements.
+
+<!--     
    - Using twist set to speed of 0.5 meters per second do following:
 (rosrun teleop_twist_keyboard teleop_twist_keyboard.py)
      - Do a rostopic echo /odom to a window. Verify Position X is 0.
@@ -39,6 +44,30 @@ Use the 'i' key to rotate wheels very nearly 1 full as you can get
 and hold 'i' which tries to move at 1 meter/sec.
        RESULT: 10 full turns should take 13 seconds if the Magni wheels
 are running at 1 meter per second
+-->
+### Keyboard Movement Tests:
+
+Enter keyboard movement using:
+
+    rosrun teleop_twist_keyboard teleop_twist_keyboard.py  
+Press the **z** key 6 times till speed is near 0.26.  Press the  **c**  key till turn is about 0.5 which is radians per second.
+
+Also as setup have a second window open and in that type:
+
+    rosrun tf tf_echo odom base_link  
+
+which will continue to update.
+Now we will do a few tests and make sure the robot can move forward 1 meter and could have room to rotate fully.
+
+   - In the teleop window press  the **i** letter for 4 seconds.   This should move the Magni about 1 meter forward.
+
+   - Look at the 'Translation' part of the tf window and the first of the 3 numbers is X and should be near 1.0  (or near it if not exactly 1 meter).
+
+   - Next press the   **,**  (comma) key for 4 seconds and the Magni should go backwards to near where it started and 'Translation' should be near to all zeros.
+
+   - Next press the  **j**  key so the Magni rotates 90 degrees to face left.  The tf window Rotation for line in (degree) should have 3rd number near 90 for 90 degrees to the left.  If it goes to far you can use  quick taps to  the  **l** key to inch it back to about 90.  We are just doing rough test.
+
+   - Press the  **l**  letter key and the Magni will rotate clockwise and in about 6 seconds will be around 90 degrees to the right.  The Rotation in RPY (degrees) third number should now be near -90 degrees IF the Magni is facing direct left.  Again, quick taps on  **j**  and **l** can do smaller rotations.
 
 ### ESTOP Testing:
 (Assumes rev 5.0 or later board. If not exception will be
