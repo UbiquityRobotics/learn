@@ -40,12 +40,13 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 6.	[Try out the Sensor Package e.g. silver sensor package, gold sensor package](doing_more/sensors.md)
 7. [Use 4 Raspberry Pi GPIO Lines for your own needs](doing_more/GPIO_lines.md)
 
-####	Programming Your Robot
+####	Verification and Programming Your Robot
 
 1. [Overview](programming_your_robot/overview.md)
 2. [Updating Software and Firmware](programming_your_robot/updating.md)
-3. [Diagnostics, Pinouts, Revisions and Other Matters](misc/diagnostics.md)
-4. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
+3. [Basic Verification Of Operation](verification)
+4. [Diagnostics, Pinouts, Revisions and Other Matters](misc/diagnostics.md)
+5. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
 
 
 

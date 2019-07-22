@@ -6,14 +6,20 @@ permalink: verification
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-### idea
-I'm thinking we setup a page that is sort of hidden and not linked yet
-on learn.
-Then we make this like we want it for this 1st pass and do a link to it
-after it seems ok.
-Forgive the formatting in raw text.   I have 3 sections so it is not just
-some huge 'dump' of stuff
+### Basic Sanity Tests To Verify Core Operation
 
+This page tells how to verify basic operation of the product.
+If the user has Magni Silver then the robot will have a few blue LEDs on top that will be helpful but not required to do these tests.
+
+### Wifi HotSpot Verification
+
+The robot when no LAN cable is attached by default prior to PiFi configuration to your WiFi network will supply a HotSpot for WiFi connection.
+If you have Magni Silver with Sonar board then as the robot is powered up the LED2 (right LED on Sonar board as seen from the front) will light with dim blue light.
+After 6 or so seconds that LED will turn off. After about 16 or so seconds if WiFi is able to come up LED2 will start to blink about once per second brightly indicating that the WiFi HotSpot is up.
+At this time if you have on your smartphone some sort of WiFi network scanner you will see a ubiquityrobotics WiFi with last 4 digits being a unique hex value.
+
+You will also see this HotSpot show up on your laptop and will be able to connect.  Read [HERE](https://learn.ubiquityrobotics.com/connecting) for details.
+Again, the goal of this page is just to verify operation and NOT to walk through other processes elsewhere on this Ubiquity Robotic 'Learn' set of pages.
 
 ### Basic Movement Tests:
    - The first Test is Firmware Only test:  With no RasPi connected, power up the
@@ -26,7 +32,7 @@ ESTOP powering down motors then power up motors within 5 seconds
      RESULT: Wheels PID locked wheels to a stopped state with full
 resistance. (we did this in 5 sec to do so before motor node started up)
    - Edit ROS log with  
-   `vi roslaunch-logs`/rosout.log  
+   `vi roslaunch-logs /rosout.log'  
 
    and verify that the last
 'Firmware version' line in the log is the expected firmware version.
@@ -74,7 +80,7 @@ Now we will do a few tests and make sure the robot can move forward 1 meter and 
 noted)
    - For any rev 5.0 board and current code the ROS topic
 /motor_power_active indicates if power is on or off.
-     The topic is not instantanious in response and can take a couple
+     The topic is not instantaneous in response and can take a couple
 seconds.  Note that ESTOP active means motor power off.
    - Press in to engage ESTOP with 0 cmd_vel OR non-zero cmd_vel. (keep
 ESTOP pressed)
@@ -108,12 +114,16 @@ ESTOP after a half second or so wheels nicely ramp to speed again.
 The robot is designed to return to zero speed if
 it looses touch with constant host velocity commands
    - Startup and run the robot on blocks perhaps at a given speed. Kill
-the motor node OR disconnect serial (if your system allows)
-     The motor node can be stopped and starting using:  sudo systemctl
-stop magni-base.service
-     RESULT: The robot will return to stopped state with wheels actively
-locked.
-   - Start or re-connect serial to the motor node using  sudo systemctl
-start  magni-base.service (takes 15 or more seconds to start)
-     RESULT: Robot should be operational after the motor node starts.
+the motor node OR disconnect serial (if your system allows).
+     The motor node can be stopped and starting using:
+
+     `sudo systemctl stop magni-base.service`
+
+RESULT: The robot will return to stopped state with wheels actively locked.
+   - Start or re-connect serial to the motor node using
+    
+   `sudo systemctl start  magni-base.service`
+
+RESULT: Robot should be operational after the motor node starts (takes 15 or more seconds to start).
+
 For re-connect of serial it will start back up in a second or less.
