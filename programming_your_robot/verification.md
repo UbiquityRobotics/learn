@@ -56,20 +56,23 @@ are running at 1 meter per second
 Enter keyboard movement using:
 
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py  
-Press the **z** key 6 times till speed is near 0.26.  Press the  **c**  key till turn is about 0.5 which is radians per second.
+
+  Press the  'z' key 6 times till the 'speed' value shows about 0.26 meters per second.
+    Press the 'c' key 6 times till the 'turn' value shows about 0.53
 
 Also as setup have a second window open and in that type:
 
-    rosrun tf tf_echo odom base_link  
-
+    rosrun tf tf_echo odom base_link
 which will continue to update.
 Now we will do a few tests and make sure the robot can move forward 1 meter and could have room to rotate fully.
 
-   - In the teleop window press  the **i** letter for 4 seconds.   This should move the Magni about 1 meter forward.
+   - In the teleop window press  the **i** letter  repeatedly every half second for 5 seconds.   This should move the Magni about 1 meter forward.
 
-   - Look at the 'Translation' part of the tf window and the first of the 3 numbers is X and should be near 1.0  (or near it if not exactly 1 meter).
+   - Look at the 'Translation' line in the second tf window and the first of the 3 numbers is X and should be near 1.0  (or near it if not exactly 1 meter).
 
-   - Next press the   **,**  (comma) key for 4 seconds and the Magni should go backwards to near where it started and 'Translation' should be near to all zeros.
+   - In the teleop window press the ',' (comma) key repeatedly every half second for 5 seconds. This should move the Magni about 1 meter straight back to where it started.
+
+   - Look at the ‘Translation’ line in the second tf window and the first of the 3 numbers is X and should have returned to near 0.0.
 
    - Next press the  **j**  key so the Magni rotates 90 degrees to face left.  The tf window Rotation for line in (degree) should have 3rd number near 90 for 90 degrees to the left.  If it goes to far you can use  quick taps to  the  **l** key to inch it back to about 90.  We are just doing rough test.
 
@@ -121,7 +124,7 @@ the motor node OR disconnect serial (if your system allows).
 
 RESULT: The robot will return to stopped state with wheels actively locked.
    - Start or re-connect serial to the motor node using
-    
+
    `sudo systemctl start  magni-base.service`
 
 RESULT: Robot should be operational after the motor node starts (takes 15 or more seconds to start).
