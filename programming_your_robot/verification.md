@@ -62,7 +62,8 @@ Enter keyboard movement using:
 
 Also as setup have a second window open and in that type:
 
-    rosrun tf tf_echo odom base_link
+    rosrun tf tf_echo odom base_link  
+    
 which will continue to update.
 Now we will do a few tests and make sure the robot can move forward 1 meter and could have room to rotate fully.
 
