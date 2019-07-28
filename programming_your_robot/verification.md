@@ -39,6 +39,7 @@ resistance. (we did this in 5 sec to do so before motor node started up) -->
 'Firmware version' line in the log is the expected firmware version.
    - Wait for motor node to be fully started which takes 20 seconds or
 so sometimes.
+
      RESULT: Wheels PID locked still and no jump in movements.
 
 <!--     
