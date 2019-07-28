@@ -26,11 +26,12 @@ You will also see this HotSpot show up on your laptop and will be able to connec
 
      RESULT: No jump in motors and motors are in the locked state strongly resisting movement.
 
+<!--
    - The next tests are full system. Power up unit with ESTOP switch allowing power to motors AND/OR
 ESTOP powering down motors then power up motors within 5 seconds.
 
  RESULT: Wheels PID locked wheels to a stopped state with full
-resistance. (we did this in 5 sec to do so before motor node started up)
+resistance. (we did this in 5 sec to do so before motor node started up) -->
    - Edit ROS log with  
    ``vi `roslaunch-logs`/rosout.log``  
 
