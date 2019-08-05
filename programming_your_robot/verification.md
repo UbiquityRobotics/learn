@@ -82,6 +82,19 @@ Now we will do a few tests and make sure the robot can move forward 1 meter and 
    - Next press the  **j**  key so the Magni rotates 90 degrees to face left.  The tf window Rotation for line in (degree) should have 3rd number near 90 for 90 degrees to the left.  If it goes too far you can use  quick taps to  the  **l** key to inch it back to about 90.
 
    - Press the  **l**  letter key and the Magni will rotate clockwise and in about 6 seconds will be around 90 degrees to the right.  The Rotation in RPY (degrees) third number should now be near -90 degrees IF the Magni is facing direct left.  Again, quick taps on  **j**  and **l** can do smaller rotations.
+   ### RaspiCam Camera Test:
+
+   There is a very simple way to test the RaspiCam camera on the robot.   This test will generate a jpeg still picture in about 6 seconds just to check the camera functionality.
+
+   ``raspistill -o testpicture.jpg``
+
+   To verify the camera is operating properly the testpicture.jpg file needs to be moved to your laptop or other computer that has a jpeg picture viewer.  If it is too difficult to move the picture using ftp or some other linux operation, the next best thing is to look at the file size. This can be done in the line below and the reply shows the 1543213 as the size in bytes for the jpeg image file.
+
+   ``ls -l testpicture.jpg`` 
+
+   ``-rw-rw-r-- 1 ubuntu ubuntu 1543213 Aug  4 08:18 testpicture.jpg``
+
+
 
 ### ESTOP Testing:
 (Assumes rev 5.0 or later board. If not exception will be
