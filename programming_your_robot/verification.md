@@ -53,7 +53,7 @@ and hold 'i' which tries to move at 1 meter/sec.
        RESULT: 10 full turns should take 13 seconds if the Magni wheels
 are running at 1 meter per second
 -->
-### Keyboard Movement Tests:
+### Distance and Low Speed Movement Tests:
 
 Enter keyboard movement using:
 
@@ -138,6 +138,22 @@ active and press ESTOP (wheels stop).  Release ESTOP in 3 sec
 
      RESULT: Even though joystick was active all the time, on release of
 ESTOP after a half second or so wheels nicely ramp to speed again.
+
+### Max Speed Limit Test:
+
+Here we look to verify the max speed limit value will cause the robot to not exceed the default 1 meter per second setting.  We will again use teleop_twist_keyboard so just keep it active OR start it like this if not running yet
+
+``rosrun teleop_twist_keyboard teleop_twist_keyboard.py``  
+
+Place the robot on 'blocks' for the front wheel so the drive wheels do not touch the floor. Normally we put a block of wood or a small stack of books under the front of the robot and it raises it up so the wheels do not touch the floor. Put a piece of tape on the outside of a wheel so while testing we can count revolutions to get the actual speed.
+
+YOU MUST HAVE THE ROBOT DRIVE WHEELS ELEVATED TO NOT TOUCH THE GROUND FOR THIS TEST!
+
+In the teleop window press the **k** key once to be in "stop" mode then press the **z** key several times until the "speed" value shows a value just under 1.0 meters per second.  If you go too far the **,** (comma) key backs the speed value down.
+
+In the teleop window press the **i** key repeatedly at a fast rate (3 or 4 times a second) and the wheels spin.
+
+Verify the speed is going at 1 meter per second by watching the wheels turn 10 times in about 14 seconds.  The wheels have a circumference of just near 0.64 meters.  This is not a scientific test, it is looking for things being far off of the expected speed.
 
 ### Deadman Timer Testing:
 
