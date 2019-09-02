@@ -20,7 +20,7 @@ used to drive LEDs that exist on the Magni ‘Sonar Board’ are controlled
 by Magni.
 
 | GPIO  | RasPi Pin | Default Magni Usage |
-| ------------- | ------------- |
+| ------------- |------------- | --------|
 | 5  | 29 | Status LED on the sonar board |
 | 25 | 22 | Status LED on the sonar board |
 | 6  | 31 | Goes to P704 pin 2. Does a shutdown when grounded. This goes to a pushbutton on Sonar Board neqar 50 pin connector. |
@@ -49,3 +49,20 @@ Pin 3 of those jacks is 3.3 volts if you need that for your sensors. Do
 not short this to ground!
 Pin 2 of P704 and P705 goes directly to Raspberry PI GPIO so do NOT
 connect to 5V because it is for 3.3Volt maximum input.
+
+### GPIO Lines Used For Sonar Board
+
+There are many other GPIO lines used for the sensor board shown the table below:
+
+| GPIO  | Pin | Comment |
+| ---------- | ------------- | ------ |
+| 20 | 38 Trig0 |   Sonar 0 Trigger |
+| 21 | 40 Echo0 |   Sonar 0 Echo    |
+| 12 | 32 Trig1 |   Sonar 1 Trigger|
+| 16 | 36 Echo1 |   Sonar 1 Echo|
+| 23 | 16 Trig2 |   Sonar 2 Trigger|
+| 24 | 18 Echo2 |   Sonar 2 Echo|
+ | 27 |13 Trig3 |   Sonar 3 Trigger|
+ | 22 |15 Echo3 |   Sonar 3 Echo|
+ | 19 |35 Trig4 |   Sonar 4 Trigger|
+ | 26 |37 Echo4 |   Sonar 4 Echo|
