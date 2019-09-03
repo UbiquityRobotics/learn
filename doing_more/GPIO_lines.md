@@ -56,13 +56,13 @@ There are many other GPIO lines used for the sensor board shown the table below:
 
 | GPIO  | Pin | Comment |
 | ---------- | ------------- | ------ |
-| 20 | 38 Trig0 |   Sonar 0 Trigger |
-| 21 | 40 Echo0 |   Sonar 0 Echo    |
-| 12 | 32 Trig1 |   Sonar 1 Trigger|
-| 16 | 36 Echo1 |   Sonar 1 Echo|
-| 23 | 16 Trig2 |   Sonar 2 Trigger|
-| 24 | 18 Echo2 |   Sonar 2 Echo|
- | 27 |13 Trig3 |   Sonar 3 Trigger|
- | 22 |15 Echo3 |   Sonar 3 Echo|
- | 19 |35 Trig4 |   Sonar 4 Trigger|
- | 26 |37 Echo4 |   Sonar 4 Echo|
+| 20 | 38  |   Sonar 0 Trigger |
+| 21 | 40  |   Sonar 0 Echo    |
+| 12 | 32  |   Sonar 1 Trigger|
+| 16 | 36  |   Sonar 1 Echo|
+| 23 | 16  |   Sonar 2 Trigger|
+| 24 | 18  |   Sonar 2 Echo|
+ | 27 |13  |   Sonar 3 Trigger|
+ | 22 |15  |   Sonar 3 Echo|
+ | 19 |35  |   Sonar 4 Trigger|
+ | 26 |37  |   Sonar 4 Echo|
