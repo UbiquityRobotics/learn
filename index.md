@@ -4,17 +4,16 @@ title:  "Main Menu"
 
 #### [&uarr;top](https://ubiquityrobotics.github.io/learn/)
 ---
-
 ## Ubiquity Robotics Documentation
-
-* [Preface](introduction)  
-* [Requirements](need_to_know)  
-* [Magni Controls](magni_key)  
-* [Troubleshooting](misc/troubleshooting.md)
 
 <H3 style="color:red">Warning</H3>
 
 The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or whatever you have to lift the wheels free of the floor, or run it somewhere where it can't hurt anyone or anything if it surprises you. NOT ON A TABLE TOP.
+#### On This Page
+1. [Preface](introduction)  
+2. [Requirements](need_to_know)  
+3. [Magni Controls](magni_key)  
+4. [Troubleshooting](misc/troubleshooting.md)
 
 #### Quick Start
 
