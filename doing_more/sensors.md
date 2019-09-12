@@ -28,9 +28,13 @@ roslaunch pi_sonar pi_sonar.launch
 
 `sudo apt update`  
 `sudo apt upgrade`  
-`sudo apt install ros-kinetic-pi-sonar``
+`sudo apt install ros-kinetic-pi-sonar`
 
-Then, to enable the sensors, edit the file `/etc/ubiquity/robot.yaml` so that
+Then, to enable the sensors, edit the file as root using
+
+    `sudo nano etc/ubiquity/robot.yaml`  
+
+  or some other editor of your choice, so that
 
 `sonars: 'pi_sonar_v1'`
 is uncommented and `sonars: None` is commented.
@@ -47,7 +51,7 @@ sonars: 'pi_sonar_v1'
 Rviz can visualize these messages as cones.  There are launch files to do this in:  
 https://github.com/UbiquityRobotics/magni_robot (the source package, not the binary packages)
 
-The [move_basic node](http://wiki.ros.org/move_basic) uses these messages to determine proximity to obstacles.   publishes a 2D visualization of the sonar.
+The [move_basic node](http://wiki.ros.org/move_basic) uses the messages published by the sonar node to determine proximity to obstacles. 
 
 | | |
 |---|---|
