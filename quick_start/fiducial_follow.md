@@ -38,7 +38,12 @@ Put the fiducial away and close all windows on your computer that have a fiducia
 
 Log in to the robot as per the instructions in the section on [connecting](connecting).
 
-Once you are logged in to the robot type the following command:
+Once you are logged in to the robot make sure the robot software is running by typing:
+
+`rostopic list`
+
+
+Then type the following command:
 
 `roslaunch magni_demos fiducial_follow.launch`
 
@@ -47,5 +52,11 @@ This starts the processes that you need to make fiducial follow work.
 Then you can take the fiducial that you printed and put it in front of the robot. Usually the robot will move as soon as it detects an image of the fiducial. The robot can move back and forward. As you move the fiducial around the robot should follow you.
 
 If you move too fast or for some reason the robot loses sight of the fiducial it will attempt to find the fiducial again. It will rotate around the room in an attempt to locate the position of the fiducial until it finally stops.
+
+Common problems are the camera not working. If this is the case check to see if the camera is working by running the command:
+
+`raspistill -o cam.jpg`
+
+If there are no errors the camera is working.
 
 <<[back](camera_sensors)- - - - - - - - - - [up](ix_quick_start)>>
