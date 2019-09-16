@@ -40,7 +40,22 @@ Log in to the robot as per the instructions in the section on [connecting](conne
 
 Once you are logged in to the robot make sure the robot software is running by typing:
 
-`rostopic list`
+`rosnode list`
+
+the result should look like this:
+
+`/controller_spawner
+/joint_state_publisher
+/joy_node
+/motor_node
+/robot_state_publisher
+/rosbridge_ws/rosapi
+/rosbridge_ws/rosbridge_websocket
+/rosbridge_wss/rosapi
+/rosbridge_wss/rosbridge_websocket
+/rosout
+/teleop_twist_joy
+/tf2_web_republisher`
 
 
 Then type the following command:
