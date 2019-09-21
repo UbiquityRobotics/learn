@@ -11,7 +11,7 @@ There are two versions of Magni. The Silver version
 comes with a sonar short range obstacle avoidance system, and the Gold
 version (not yet available) adds an IR long range obstacle avoidance
 package. Both versions come with a Raspberry Pi Camera. The camera is
-needed for fiducial follow, partybot and waypoint navigation.
+needed for fiducial follow, partybot and waypoint navigation, and other apps you may write.
 
 ## Sonar Board Cable And Camera Assembled
 The picture below shows the Raspberry Pi camera in the forward orientation
@@ -65,7 +65,7 @@ below. (Misaligned pins will cause permanent failure!)
 
 ![Magni Raspberry Pi Mounting](MagniRaspberryPiMounting.jpg)
 
-## Sonar Board Cable And Camera Assembled
+## Sonar Board Assembly
 Below is a picture showing the Raspberry Pi camera in the forward orientation
 and the cable to the Sonar board included with Magni Silver. This is a very
 popular configuration for Magni.
