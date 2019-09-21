@@ -7,72 +7,104 @@ author: Alan Federman
 
 # Camera and Sensor Installation
 
-Depending on your version of Magni, you may have a different suite of sensors. Silver and Gold versions come with a Raspberry Pi Camera. The Raspicam is needed for fiducial follow, partybot and waypoint navigation. The Silver version comes with a sonar short
-range obstacle avoidance system, and the Gold version includes both the sonar and an IR long range obtacle avoidance package.
+Camera and Sensor Installation
+Depending on your version of Magni, you may have a different suite of sensors.
+Silver and Gold versions come with a Raspberry Pi Camera. The camera is
+needed for fiducial follow, partybot and waypoint navigation. The Silver version
+comes with a sonar short range obstacle avoidance system, and the Gold
+version (not yet available) adds an IR long range obstacle avoidance
+package.
+
+## Sonar Board Cable And Camera Assembled
+The picture below shows the Raspberry Pi camera in the forward orientation
+and the cable to the Sonar board included with Magni Silver. This is a very
+popular configuration for Magni.
+
+![Magni Sonar To Mcb With Camera
+](MagniSonarToMcbWithCamera.jpg)
 
 ## Camera Installation
 
-![Camera in Bracket](a1.jpg)
+Camera Installation
+The Raspberry Pi camera can be mounted and configured to work in different
+orientations. From the start of the Magni robot there have been 2 popular
+orientations. The forward camera mounting points forward but also tilts
+up about 20 degrees. This enables Magni to view things in front
+such as fiducials in the Fiducial Follow application. When the robot is to be
+navigating in a space with fiducial patterns on the ceiling the upward mounting is used.
 
-The easiest way to install the camera is to remove the the Pi, attach the camera to the mounting bracket, and thread the cable through the slot holding the camera. the camera is installed with the cable pointing down, the picture is incorrect.
+![Magni Camera Forward And Upward Mounting](MagniCamera_ForwardAndUpwardMounting.jpg)
 
-![Camera Cable](a2.jpg)
+POWER MUST BE COMPLETELY OFF FOR THE CAMERA INSTALLATION
 
-Then attach the cable to the Pi, the 'blue' part of the cable faces toward the USB ports.
+Notice that in both orientations that the cable was routed through the slots in
+the metal bracket. The camera is screwed to fixed standoffs using M2 screws
+3 or 4mm in length. The white side of the flat cable is towards the top of the
+board and below there is a blue piece of tape on the cable. The cable must be
+inserted as shown in order to properly connect the camera.
 
+The Magni software must be configured to set usage of any camera mounting other than the forward configuration. If
+you for example use the upward facing camera you must before edit the
+`/etc/ubiquity/robot.yaml` file as root user to have a line for the raspicam
+orientation. The line would be as shown below and a reboot of the robot
+is required.
 
- ![Camera Installed](a3.jpg)
+`raspicam:{'position':'upward'}`
 
- Then reinstall the Pi, making sure the pins are aligned correctly. (Mis-aligned pins will cause the Pi to fail!)
+Take care when removing the pi to gently rock it back and forth after
+unscrewing it&#39;s screw that goes into a standoff on the main board. BE CAREFUL
+TO AVOID application of ANY PRESSURE to the very thin Micro SD card inserted
+in the right side of the Pi because it sticks out. It is very easy to break the SD
+card in this process if your fingers push on the SD card.
 
+Next attach the cable to the Pi; the ‘blue’ part of the cable faces toward the USB
+ports.
 
-![IR ](a4.jpg)
+![Raspberry Pi with Camera Cable](a2.jpg)
 
-## GOLD IR Long Range Sensors
+Next reinstall the Pi, making sure the pins are aligned correctly as in the picture
+below. (Misaligned pins will cause permanent failure!)
 
-To begin the sensor package installation, insert one end of the 50 pin ribbon cable into the Main controller board, the socket is above the Raspberry Pi. The next steps concern the Gold version IR sensor package.  If you do not have this sensor, skip these steps and continue to sonar sensors.
+![Magni Raspberry Pi Mounting](MagniRaspberryPiMounting.jpg)
 
-![IR ](a5.jpg)
+## Sonar Board Cable And Camera Assembled
+Below is a picture showing the Raspberry Pi camera in the forward orientation
+and the cable to the Sonar board included with Magni Silver. This is a very
+popular configuration for Magni.
 
-Insert the ribbon cable on both the left and right IR cameras.
+![Magni Sonar Board](MagniSonarBoard.jpg)
 
-![IR ](a6.jpg)
+The Sonar board is mounted to the chassis using 4 standoffs that screw into 4
+fixed 3mm standoffs on the chassis. This description will show the 2 standoffs
+on the right but two other standoffs on the left also at the 45 degree angle are
+used as well. The standoffs and the M3 screws are shown below for reference.
 
-The cameras are installed with three M4 bolts.
+![Magni Standoff Reference](MagniStandoffReference.jpg)
 
-![IR ](a7.jpg)
+The standoffs screw into the fixed nuts on the chassis. Here we show the 2 on
+the right.
 
-Next, attach the circuit board for the IR cameras with 4 standoffs.
+![Magni Sonar Board Standoffs](MagniSonarBoardStandoffs.jpg)
 
-![standoff](standoff.jpg)
+Below is shown the right side of the sonar board fully mounted using the M3
+standoffs and M3 screws from the top.
 
-The standoffs can be inserted by hand, no tools are required.
-![IR ](a8.jpg)
+![Magni Sonar Board Mounted On Standoffs](MagniSonarBoardMountedOnStandoffs.jpg)
 
-The cables from the camera/IR LED wings are atached to the circuit board.
+The ribbon cable is then inserted into the main Magni board as shown in the
+picture below where it will be plugged into the Sonar board as the final step.
 
-## Sonar Sensors (SILVER)
+![Magni Sonar Board Cable From Main Pc Ready](MagniSonarBoardCableFromMainPcReady.jpg)
 
-![sonar ](a9.jpg)
+Lastly attach the cover plate with 6 M6 screws using an M4 Allen wrench. You are
+done, hooray!
+## Testing the camera.
+If you find that fiducial follow or waypoint
+navigation aren’t working, you need a quick way to test the camera. if you can
+open an ssh session to the robot, try the following command:
 
-The sonar sensors do not require the IR pakage to work, simply install the 4 standoffs without the IR circuit board.
+`raspistill -o test.jpg`
 
-![sonar ](a10.jpg)
-
-The Sonar package is attached to the standoffs with 4 M2 Allen head screws.
-
-![sonar cable ](a11.jpg)
-
-Last step is attache the 50 pin ribbon cable.
-
-![Cover](a12.jpg)
-
-Lastly attach the cover plate with 6 M6 screws using a M4 Allen wrench.  You are done, hooray!
-
-Note: on testing the camera.  If you find that fiducial follow or waypoint navigation aren't working, you need a quick way to test the camera.  if you can open a ssh session to the robot, try the following command:
-
-raspistill -o test.jpg
-
-If you don't get an error message, you have a good camera. An (mmal) error message indicates the camera is not being detected by the Raspberry Pi, this is usually due to a poor cable connection or less likely a bad camera.
-
-<<[back](keyboard_teleop)- - - - - - - - - - [next](fiducial_follow)>>
+If you don’t get an error message, you have a good camera. An (mmal) error
+message indicates the camera is not being detected by the Raspberry Pi, this is
+usually due to a poor cable connection or less likely a bad camera.
