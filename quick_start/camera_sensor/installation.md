@@ -7,13 +7,11 @@ author: Alan Federman
 
 # Camera and Sensor Installation
 
-Camera and Sensor Installation
-Depending on your version of Magni, you may have a different suite of sensors.
-Silver and Gold versions come with a Raspberry Pi Camera. The camera is
-needed for fiducial follow, partybot and waypoint navigation. The Silver version
+There are two versions of Magni. The Silver version
 comes with a sonar short range obstacle avoidance system, and the Gold
 version (not yet available) adds an IR long range obstacle avoidance
-package.
+package. Both versions come with a Raspberry Pi Camera. The camera is
+needed for fiducial follow, partybot and waypoint navigation.
 
 ## Sonar Board Cable And Camera Assembled
 The picture below shows the Raspberry Pi camera in the forward orientation
@@ -100,7 +98,7 @@ Lastly attach the cover plate with 6 M6 screws using an M4 Allen wrench. You are
 done, hooray!
 ## Testing the camera.
 If you find that fiducial follow or waypoint
-navigation aren’t working, you need a quick way to test the camera. if you can
+navigation aren’t working, you need a quick way to test the camera. If you can
 open an ssh session to the robot, try the following command:
 
 `raspistill -o test.jpg`
