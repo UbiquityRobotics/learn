@@ -14,7 +14,7 @@ package. Both versions come with a Raspberry Pi Camera. The camera is
 needed for fiducial follow, partybot and waypoint navigation, and other apps you may write.
 
 ## Sonar Board Cable And Camera Assembled
-The picture below shows the Raspberry Pi camera in the forward orientation
+The picture below shows the Raspberry Pi camera in the **forward** orientation
 and the cable to the Sonar board included with Magni Silver. This is a very
 popular configuration for Magni.
 
@@ -26,10 +26,10 @@ popular configuration for Magni.
 Camera Installation
 The Raspberry Pi camera can be mounted and configured to work in different
 orientations. From the start of the Magni robot there have been 2 popular
-orientations. The forward camera mounting points forward but also tilts
+orientations. The **forward** camera mounting points forward but also tilts
 up about 20 degrees. This enables Magni to view things in front
 such as fiducials in the Fiducial Follow application. When the robot is to be
-navigating in a space with fiducial patterns on the ceiling the upward mounting is used.
+navigating in a space with fiducial patterns on the ceiling the **upward** mounting is used.
 
 ![Magni Camera Forward And Upward Mounting](MagniCamera_ForwardAndUpwardMounting.jpg)
 
@@ -41,8 +41,8 @@ the metal bracket. The camera is screwed to fixed standoffs using M2 screws
 board and below there is a blue piece of tape on the cable. The cable must be
 inserted as shown in order to properly connect the camera.
 
-The Magni software must be configured to set usage of any camera mounting other than the forward configuration. If
-you for example use the upward facing camera you must before edit the
+The Magni software must be configured to set usage of any camera mounting other than the **forward** configuration. If
+you for example use the **upward** facing camera you must before edit the
 `/etc/ubiquity/robot.yaml` file as root user to have a line for the raspicam
 orientation. The line would be as shown below and a reboot of the robot
 is required.
@@ -66,7 +66,7 @@ below. (Misaligned pins will cause permanent failure!)
 ![Magni Raspberry Pi Mounting](MagniRaspberryPiMounting.jpg)
 
 ## Sonar Board Assembly
-Below is a picture showing the Raspberry Pi camera in the forward orientation
+Below is a picture showing the Raspberry Pi camera in the **forward** orientation
 and the cable to the Sonar board included with Magni Silver. This is a very
 popular configuration for Magni.
 
