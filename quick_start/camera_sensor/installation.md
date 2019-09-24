@@ -13,12 +13,6 @@ version (not yet available) adds an IR long range obstacle avoidance
 package. Both versions come with a Raspberry Pi Camera. The camera is
 needed for fiducial follow, partybot and waypoint navigation, and other apps you may write.
 
-## Sonar Board Attachment To The Robot
-
-
-Below is a picture of the Sonar board included with Magni Silver configuration. This section will show how the Sonar Board is mounted on tall standoffs and a 50-pin ribbon cable is then attached. The sonar board is included in the large box for a Magni Silver but is not attached to the robot prior to shipment.  Be careful to avoid the need to often re-bend the sonars if they bump something because the pins can only be bent and re-bent a limited number of times.
-
-
 ## Sonar Board Cable And Camera Assembled
 The picture below shows the Raspberry Pi camera in the **forward** orientation
 and the cable to the Sonar board included with Magni Silver. This is a very
@@ -70,10 +64,9 @@ below. (Misaligned pins will cause permanent failure!)
 
 ![Magni Raspberry Pi Mounting](MagniRaspberryPiMounting.jpg)
 
-## Sonar Board Assembly
-Below is a picture showing the Raspberry Pi camera in the **forward** orientation
-and the cable to the Sonar board included with Magni Silver. This is a very
-popular configuration for Magni.
+## Sonar Board Attachment To The Robot
+
+Below is a picture of the Sonar board included with Magni Silver configuration. This section will show how the Sonar Board is mounted on tall standoffs and a 50-pin ribbon cable is then attached. The sonar board is included in the large box for a Magni Silver but is not attached to the robot prior to shipment.  Be careful to avoid the need to often re-bend the sonars if they bump something because the pins can only be bent and re-bent a limited number of times.
 
 ![Magni Sonar Board](MagniSonarBoard.jpg)
 
