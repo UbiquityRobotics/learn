@@ -34,10 +34,10 @@ all the way (one of the push buttons de-energizes the motor circuit
 as an emergency stop). Both blue and red LED on the PCB that has the
 switches should be illuminated.
 
-Check the 5 LEDs on the master control board
+Check the row of 5 LEDs on the master control board
 (the big PCB on the robot)
 that you can see on the front of the robot right above the switch
-PCB. All 5 should be illuminated. The top one should
+PCB. All 5 should be illuminated. The top one (or the rightmost one, on an older model) should
 blink briefly every 6 seconds. If you don’t see this behavior then
 email contact@ubiquityrobotics.com.
 
