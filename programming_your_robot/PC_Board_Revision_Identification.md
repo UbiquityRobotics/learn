@@ -10,11 +10,11 @@ version: 20191103
 
 ### Main Control Board Identification
 
-All of the Main Control Boards, also called MCB, have a version number on the top of the board that is printed along the left edge of the PC board on the top copper layer.   Because this version is prior to rev 5.2 very hard to read we will supply pictures to help with board version identification.
+All of the Main Control Boards, also called MCB, have a version number on the top of the board that is printed along the left edge of the PC board on the top copper layer.   Because prior to rev 5.2 the version number is very hard to read we will supply pictures to help with board version identification.
 
 Starting with revision 5.1 the rev was shown on the top silkscreen under the large text of Ubiquity Robotics.  This text is normally under the Raspberry Pi controller and so was hard to see.
 
-Starting with version 5.2 the large text for the board revision will be up to mid left of the board and also in bright white silkscreen.  So starting with version 5.2 identification will be quite easy.
+Starting with version 5.2 the large text for the board revision will be up to mid left of the board and printed in bright white silkscreen.  So starting with version 5.2 identification will be quite easy.
 
 A detailed list of MCB hardware changes as well as firmware revisions can be found [here](https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Firmware_and_Hardware_Revisions.md).
 
