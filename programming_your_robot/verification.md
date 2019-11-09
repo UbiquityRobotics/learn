@@ -59,29 +59,34 @@ Enter keyboard movement using:
 
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py  
 
-  Press the  'z' key 6 times till the 'speed' value shows about 0.26 meters per second.
-    Press the 'c' key 6 times till the 'turn' value shows about 0.53
+  Press the  'z' key 12 times until the 'speed' value shows about 0.14 meters per second;
+    the 'turn' value will show about 0.25
 
   At this point the robot will not move because when teleop is first entered it is in same state as if the 'k' was hit.
+
+We need a second window open that we will call the 'tf' window; in that window type:
 
 Also as setup have a second window open and in that type:
 
     rosrun tf tf_echo odom base_link  
 
-which will continue to update.
+This command will continually update the robot position. There will be one line that shows the translation and 3 values that are for X,Y,Z in meters.  The line will look like this:
+
+    Translation: [0.000, 0.000, 0.100]   at first where X and Y are 0.000.
+
 Now we will do a few tests and make sure the robot can move forward 1 meter and could have room to rotate fully.
 
-   - In the teleop window press  the **i** letter  repeatedly every half second for 5 seconds.   This should move the Magni about 1 meter forward.
+   - In the teleop window press  the **i** letter at a quick rate for 4 seconds.   This should move the Magni about 0.6 meters forward.
 
-   - Look at the 'Translation' line in the second tf window and the first of the 3 numbers is X and should be near 1.0  (or near it if not exactly 1 meter).
+   - Look at the 'Translation' line in the second tf window and the first of the 3 numbers is X and should be near 0.6 meters.
 
-   - In the teleop window press the ',' (comma) key repeatedly every half second for 5 seconds. This should move the Magni about 1 meter straight back to where it started.
+   - In the teleop window press the ',' (comma) key at a quick rate for 4 seconds. This should move the Magni about 0.6 meters straight back to where it started.
 
    - Look at the ‘Translation’ line in the second tf window and the first of the 3 numbers is X and should have returned to near 0.0.
 
-   - Next press the  **j**  key so the Magni rotates 90 degrees to face left.  The tf window Rotation for line in (degree) should have 3rd number near 90 for 90 degrees to the left.  If it goes too far you can use  quick taps to  the  **l** key to inch it back to about 90.
+   - Next press the j key at a quick rate for 6 seconds so the Magni rotates 90 degrees to face left. The tf window will have the 3rd line that says 'degrees' where at this rotation the 3rd number should be near 90 for 90 degrees to the left. If it goes too far you can use quick taps to the l key to inch it back to about 90.
 
-   - Press the  **l**  letter key and the Magni will rotate clockwise and in about 6 seconds will be around 90 degrees to the right.  The Rotation in RPY (degrees) third number should now be near -90 degrees IF the Magni is facing direct left.  Again, quick taps on  **j**  and **l** can do smaller rotations.
+   - Press the l letter key at a quick rate for 6 seconds and the Magni will rotate clockwise back to the starting point and will have the 3rd line that says 'degrees' now show the 3rd number to be near 0.
 
 ### RaspiCam Camera Test:
 
