@@ -33,7 +33,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 
 1.	[How to connect the robot with your network](doing_more/network_connect.md)
 2.  [How to set-up a workstation with ROS and Synchronize Time](doing_more/workstation_setup.md)
-3.	[Visualize with rviz](doing_more/rviz.md)
+3.	[Visualize With rviz](doing_more/rviz.md)
 4.	[Set up fiducials so you can set waypoints and goals](doing_more/fiducials.md)
 5. [Use Robot Commander over the network to go to waypoints](doing_more/waypoints.md)
 6.	[Try out the Sensor Package e.g. silver sensor package, gold sensor package](doing_more/sensors.md)
@@ -44,9 +44,10 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 1. [Overview](programming_your_robot/overview.md)
 2. [Updating Software and Firmware](programming_your_robot/updating.md)
 3. [Basic Verification Of Operation](verification)
-4. [Diagnostics, Pinouts and Other Matters](misc/diagnostics.md)
+4. [Diagnostics, Developer Tips and I2C](misc/diagnostics.md)
 5. [PC Board Revision Identification](PC_Board_RevId)
-6. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
+6. [Motor Controller Board Pinouts And Power Supply Ratings](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
+7. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
 
 
 

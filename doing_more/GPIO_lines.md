@@ -1,11 +1,21 @@
 
-# Use 4 Raspberry Pi GPIO Lines for your own needs
+# Raspberry Pi GPIO Lines In Use And Using Them For Your Own Needs
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 <!--  (TODO if you can do a table for
 the list of the 4 lines in text below that would help) -->
 
+There are many GPIO lines used for features of Magni that could also be re purposed for your own needs if that is required.     The most logical way to use these lines is use a custom 50-pin ribbon cable that would normally go to our Sonar board.  You could then make a custom board to attach to lines of this connector as long as you make sure the lines will not be used by the Magni software.
+
+The first 40 pins of P702, the 50 pin Sensor Board connector, are the same pin numbers as the Raspberry Pi 40 pins.  Pins shown in the tables below are therefore used on both of the large dual row connectors on the Motor Controller Board.
+
+This page explains the GPIO line usage and how to disable features if you need to use the lines yourself.   
+
+GPIO lines not listed on this page are available for your own usage without any configuration changes to the Magni
+
+
+## GPIO Lines Used For Status LED and Switches
 
 There are two GPIO inputs used for switches and two GPIO outputs used to
 drive LEDs on the Sonar Board.
@@ -48,11 +58,22 @@ is ground and short to pin 2 to ‘close’ or make that GPIO line low.
 Pin 3 of those jacks is 3.3 volts if you need that for your sensors. Do
 not short this to ground!
 Pin 2 of P704 and P705 goes directly to Raspberry PI GPIO so do NOT
-connect to 5V because it is for 3.3Volt maximum input.
+connect to 5V because it is for 3.3 volt maximum input.
 
-### GPIO Lines Used For Sonar Board
+## GPIO Lines Used For The Sonar Board
 
-There are many other GPIO lines used for the sensor board shown the table below:
+There are many other GPIO lines used for the sensor board.   If the sensor board is not in use you may ensure the configuration is not trying to use the Sonar board and then the GPIO lines would be available for your own use.   
+To use the lines you must disable the sensors. As root you will need to edit robot.yaml file.
+
+`sudo nano /etc/ubiquity/robot.yaml`  
+
+In the robot.yaml file be sure the sonars: line is set to  None as below and if you see something other than None you need to comment out that line as shown using pound sign.   Just to be clear:  IF you set sonars: to None the sonar board will not be used although the leds and buttons explained earlier in this page may still be of value to you.   
+
+\# Robot Configuration  
+sonars: None  
+\# sonars: 'pi_sonar_v1'
+
+The Sonar Board uses many GPIO lines that are shown the table below:
 
 | GPIO  | Pin | Comment |
 | ---------- | ------------- | ------ |
