@@ -22,7 +22,7 @@ A detailed list of MCB hardware changes as well as firmware revisions can be fou
 
 The following items identify a rev 5.1 board.
 
-* The white label with board serial number on the top will start with 39 (1999)
+* The white label with board serial number on the top will start with 39 (2019)
 * Mid right edge of the board will have a 1.4 inch square outline for a display
 * The P2 jack in mid right will be black plastic female 4-pin jack
 * A thick white strip is on the right edge for notes as required.
@@ -35,7 +35,7 @@ The following items identify a rev 5.1 board.
 
 These items identify a rev 5.0 board besides the top copper board rev in bottom left.
 
-* The white label with board serial number on the top will start with 38 (1998)
+* The white label with board serial number on the top will start with 38 (2018)
 * Mid right edge of the board will have a 1.4 inch square outline for a display
 * The P2 jack in mid right will be a 4-pin male header
 * A thick white strip is on the right edge for notes as required.

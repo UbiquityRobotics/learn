@@ -37,7 +37,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 4.	[Set up fiducials so you can set waypoints and goals](doing_more/fiducials.md)
 5. [Use Robot Commander over the network to go to waypoints](doing_more/waypoints.md)
 6.	[Try out the Sensor Package e.g. silver sensor package, gold sensor package](doing_more/sensors.md)
-7. [Use 4 Raspberry Pi GPIO Lines for your own needs](doing_more/GPIO_lines.md)
+7. [Raspberry Pi GPIO Lines In Use And Using Them For Your Own Needs](doing_more/GPIO_lines.md)
 
 ####	Verification and Programming Your Robot
 
