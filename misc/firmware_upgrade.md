@@ -11,7 +11,7 @@ permalink: firmware-upgrade
 Before you can upgrade firmware, your robot needs to be connected to the
 internet. See [Connecting the Robot to Your Network](/connect_network)
 
-We upgrade firmware using a tool that will by default install the current default firmware.  If a very new version is available it will require manual version entry seen in the Version column of the table below.
+We upgrade firmware using a tool that will by default install the latest released firmware. If a newer version is available it will require manual version entry seen in the Version column of the table below.
 
 Sometimes improvements to our motor controller firmware, in this case v35 or later, make it necessary to first upgrade the linux host side software before installing the newest firmware.  Our host side software supports prior firmware versions.  To update host software use a process we call 'Linux Host Software Update' seen on [this page](https://learn.ubiquityrobotics.com/updating).
 
@@ -19,8 +19,10 @@ The table below shows the default and latest available versions of firmware
 
 | Version |	Description |
 | ------- | ----------- |
-| v32	| Default production firmware used in 2019. Supported by any host side software |
-| v35 |	Latest firmware with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
+| v32	| Latest production firmware used in 2019. This is default if no version is entered. Supported by any host side software |
+| v35 |	Beta firmware with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
+
+To see more details about our firmware as well as our hardware revisions for the motor controller please view [this page](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
 
 ## Firmware Installation
 To install any firmware first log into the Raspberry Pi:
