@@ -37,7 +37,7 @@ Catkin may already have been installed, but if so this will do no harm.
     cd catkin_ws
     catkin_make
 
-#### Source the Setup.bash files
+#### Source the Setup.bash file
     source devel/setup.bash
 
 #### Install gazebo
