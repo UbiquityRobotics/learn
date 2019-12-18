@@ -37,10 +37,12 @@ If the above commands fail or the list of files is not found you will need to ad
 Catkin may already have been installed, but if so this will do no harm.
 
     sudo apt-get install ros-kinetic-catkin
+
 #### Make Catkin Folders And Run catkin_make
     mkdir -p ~/catkin_ws/src
     cd catkin_ws
     catkin_make
+
 #### Source the Setup.bash files
     source devel/setup.bash
 
@@ -48,14 +50,17 @@ Catkin may already have been installed, but if so this will do no harm.
 #### (should this be done in catkin_ws or catkin_ws/src?)
 git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b kinetic-devel
 
-#### Install Gazebo andCcheck the Dependencies  
+#### Install Gazebo and Check the Dependencies
+#### Looks like this has already been done!
+
     sudo apt-get install -y libgazebo7-dev
     rosdep check --from-paths . --ignore-src --rosdistro kinetic
 
 #### Run Catkin Make
-This may take rather a long time.  
+This may take rather a long time.  Error--it is quick!  
 
-        catkin_make
+    catkin_make
+
 #### Add the Required Lines to setup.bash
 
 Ensure that the last few lines in your ~/.bashrc look like this:
@@ -77,7 +82,7 @@ Make catkin_ws the current directory. Check the dependencies.
 
 This completes the installation of the prerequisites.
 
-### Run    
+### Run Gaxebo   
 In a new terminal, launch rviz and gazebo_ros_pkgs
 
     $ roslaunch  magni_gazebo empty_world.launch
