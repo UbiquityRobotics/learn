@@ -45,9 +45,10 @@ Catkin may already have been installed, but if so this will do no harm.
 
 #### Source the Setup.bash files
     source devel/setup.bash
-    
+
 #### Install gazebo
     sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control
+    
 #### Download the Gazebo ROS Packages
 #### (should this be done in catkin_ws or catkin_ws/src?)
 git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b kinetic-devel
