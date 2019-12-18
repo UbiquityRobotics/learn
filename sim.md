@@ -28,8 +28,69 @@ You can verify the required components are present by looking for required files
 
        CHANGELOG.rst CMakeLists.txt config launch media package.xml urdf
 
-If the above commands fail or the list of files is not found you will need to add the components required for Magni simulation in Gazibo
+If the above commands fail or the list of files is not found you will need to add the components required for Magni simulation in Gazebo.
 
+### Adding the required Components
+
+#### Install catkin
+
+Catkin may already have been installed, but if so this will do no harm.
+
+    sudo apt-get install ros-kinetic-catkin
+#### Make Catkin Folders And Run catkin_make
+    mkdir -p ~/catkin_ws/src
+    cd catkin_ws
+    catkin_make
+#### Source the Setup.bash files
+    source devel/setup.bash
+
+#### Download the Gazebo ROS Packages
+#### (should this be done in catkin_ws or catkin_ws/src?)
+git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b kinetic-devel
+
+#### Install Gazebo andCcheck the Dependencies  
+    sudo apt-get install -y libgazebo7-dev
+    rosdep check --from-paths . --ignore-src --rosdistro kinetic
+
+#### Run Catkin Make
+This may take rather a long time.  
+
+        catkin_make
+#### Add the Required Lines to setup.bash
+
+Ensure that the last few lines in your ~/.bashrc look like this:
+
+    source /opt/ros/kinetic/setup.bash  
+    source ~/catkin_ws/devel/setup.bash  
+    export ROS_HOSTNAME=`cat /etc/hostname`.local
+
+### Now get the Magni Gazebo Software
+Make catkin_ws the current directory. Check the dependencies.
+
+    git clone http://github.com/ubiquityrobotics/magni_robot
+    rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
+
+
+#### Run Catkin Make Again
+
+    catkin_make
+
+This completes the installation of the prerequisites.
+
+### Run    
+In a new terminal, launch rviz and gazebo_ros_pkgs
+
+    $ roslaunch  magni_gazebo empty_world.launch
+
+When empty_world.launch starts it will start 3 windows.   
+
+--------------------
+---
+---
+---
+# Material for documenting voice_cmd
+
+-----
 To run this example you will need a launch file called   voice_cmd.launch that is available   HERE   (LINK TO GITHUB voice_cmd.launch be it on github or on learn pages as a file but do NOT clutter the presentation with huge text files is my point)
 
 Running the Simulation
