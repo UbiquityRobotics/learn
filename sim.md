@@ -57,10 +57,11 @@ git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b kinetic-devel
     rosdep check --from-paths . --ignore-src --rosdistro kinetic
 
 #### Run Catkin Make
-This may take rather a long time.  Error--it is quick!  
+This may take rather a long time.  
+
 
     catkin_make
-
+#### Error--it is quick!
 #### Add the Required Lines to setup.bash
 
 Ensure that the last few lines in your ~/.bashrc look like this:
@@ -82,7 +83,7 @@ Make catkin_ws the current directory. Check the dependencies.
 
 This completes the installation of the prerequisites.
 
-### Run Gaxebo   
+### Run Gazebo   
 In a new terminal, launch rviz and gazebo_ros_pkgs
 
     $ roslaunch  magni_gazebo empty_world.launch
