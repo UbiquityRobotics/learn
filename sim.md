@@ -6,12 +6,6 @@ permalink: simulation
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-## what follows is a comment and not intended for publication
-<! --
-Although there is enough content to explain the magic command to run things I feel it says a couple brief things then dumps a huge launch file then talks more about the 'meat' of the issue.  Since we do not supply the workstation some link to how to setup your workstation for this should be supplied.   I 'think' there is a setup workstation link on learn somewhere but I do not know if it includes all the required gazibo install.
-
-I'm going to suggest this 'presentation' if we want to show this to real customers:   (sorry but it was hard to follow the doc IMHO)
--- >
 ## Running Magni in Simulation
 
 The Magni simulator utilizes the full desktop install of ROS Kinetic, plus components of the magni-robot distribution from Ubiquity robotics.
@@ -64,7 +58,7 @@ This may take rather a long time.
 
 
     catkin_make
-    
+
 #### Error--it is quick!
 #### Add the Required Lines to setup.bash
 
