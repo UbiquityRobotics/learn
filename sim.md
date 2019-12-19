@@ -30,34 +30,33 @@ If the above commands fail or the list of files is not found you will need to ad
 
 Catkin may already have been installed, but if so this will do no harm.
 
-    sudo apt-get install ros-kinetic-catkin
+    ~$ sudo apt-get install ros-kinetic-catkin
 
 #### Make Catkin Folders And Run catkin_make
-    mkdir -p ~/catkin_ws/src
-    cd catkin_ws
-    catkin_make
+    ~$ mkdir -p ~/catkin_ws/src
+    ~$ cd catkin_ws
+    ~/catkin_ws$  catkin_make
 
 #### Source the Setup.bash file
-    source devel/setup.bash
+    ~/catkin_ws$  source devel/setup.bash
 
 #### Install gazebo
-    sudo apt-get install ros-kinetic-gazebo-ros-pkgs ros-kinetic-gazebo-ros-control
+    ~/catkin_ws$  sudo apt-get install ros-kinetic-gazebo-~/~/catkin_ws$  ros-pkgs ros-kinetic-gazebo-ros-control
 
 #### Download the Gazebo ROS Packages
-#### (should this be done in catkin_ws or catkin_ws/src?)
-git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b kinetic-devel
+
+~/catkin_ws/src$ git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b kinetic-devel
 
 #### Install libgazebo and Check the Dependencies
 #### Looks like this has already been done!
 
-    sudo apt-get install -y libgazebo7-dev
-    rosdep check --from-paths . --ignore-src --rosdistro kinetic
+    ~/catkin_ws$ sudo apt-get install -y libgazebo7-dev
+    ~/catkin_ws$ rosdep check --from-paths . --ignore-src --rosdistro kinetic
 
 #### Run Catkin Make
 This may take rather a long time.  
 
-
-    catkin_make
+    ~/catkin_ws$ catkin_make
 
 #### Error--it is quick!
 #### Add the Required Lines to setup.bash
@@ -69,15 +68,15 @@ Ensure that the last few lines in your ~/.bashrc look like this:
     export ROS_HOSTNAME=`cat /etc/hostname`.local
 
 ### Now get the Magni Gazebo Software
-Make catkin_ws the current directory. Check the dependencies.
+Make catkin_ws/src the current directory. Then from catkin_ws, check the dependencies.
 
-    git clone http://github.com/ubiquityrobotics/magni_robot
-    rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
+    ~/catkin_ws/src$ git clone http://github.com/ubiquityrobotics/magni_robot
+    ~/catkin_ws$ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 
 
 #### Run Catkin Make Again
 
-    catkin_make
+    ~/catkin_ws$ catkin_make
 
 This completes the installation of the prerequisites.
 
