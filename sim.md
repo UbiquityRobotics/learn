@@ -45,6 +45,8 @@ Catkin may already have been installed, but if so this will do no harm.
 
 #### Download the Gazebo ROS Packages
 
+Make catkin_ws/src the current directory. 
+
 ~/catkin_ws/src$ git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b kinetic-devel
 
 #### Install libgazebo and Check the Dependencies
