@@ -47,7 +47,8 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 4. [Diagnostics, Developer Tips and I2C](misc/diagnostics.md)
 5. [PC Board Revision Identification](PC_Board_RevId)
 6. [Motor Controller Board Pinouts And Power Supply Ratings](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
-7. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
+7. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
+8, [Running Magni in Simulation](simulation)  
 
 
 
