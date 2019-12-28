@@ -45,7 +45,7 @@ Catkin may already have been installed, but if so this will do no harm.
 
 #### Download the Gazebo ROS Packages
 
-Make catkin_ws/src the current directory. 
+Make catkin_ws/src the current directory.
 
 ~/catkin_ws/src$ git clone https://github.com/ros-simulation/gazebo_ros_pkgs.git -b kinetic-devel
 
@@ -86,15 +86,19 @@ In a new terminal, launch rviz and gazebo_ros_pkgs
 
     $ roslaunch  magni_gazebo empty_world.launch
 
-When empty_world.launch starts it will start 3 windows.   
+When empty_world.launch starts it will start 3 windows--Rviz, Gazebo, and a control pad.
+
+[Rviz](https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/rviz.png)
+
+[Gazebo](https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/gazebo.png)
+
+[Control Pad](https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/controlpad.png)
 
 --------------------
----
----
----
+
+<!--
 # Material for documenting voice_cmd
 
------
 To run this example you will need a launch file called   voice_cmd.launch that is available   HERE   (LINK TO GITHUB voice_cmd.launch be it on github or on learn pages as a file but do NOT clutter the presentation with huge text files is my point)
 
 Running the Simulation
@@ -110,3 +114,4 @@ In another terminal window you may run the following command to show the many RO
 When voice_cmd.launch starts it will start 3 windows.   Below we discuss and show example windows
 
 <put in the pictures and window screen shots Alan supplied all here now>
+-->
