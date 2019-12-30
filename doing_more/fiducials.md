@@ -153,7 +153,7 @@ We have been developing a more precise mode suitable for use on flat floors whic
 
 <!--    
 Just as when map creation was running you will notice in this read-only flat floor navigation mode that the fiducials that are seen will be scrolling by on the console.
-->
+-->
 
 ## Using Navigation Commands To Move Magni
 Once a navigation stack is running such as at this point we are able to tell Magni to
