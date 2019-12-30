@@ -12,8 +12,12 @@ be determined.  For a discussion of other approaches, see the
 [Navigation and Localization Overview](../overview/overview.md).
 -->
 
-This document assumes that you are running the software on a Ubiquity
-Robotics robot base, using the supplied Raspberry Pi camera. It also assumes that you have a workstation with ROS installed, which is connected to a network in common with the robot. You will need a printer, too.
+This document discusses running our navigation software on a Ubiquity
+Robotics robot base, using the supported Raspberry Pi camera. It also assumes that you have a workstation with ROS installed, which is connected to a network in common with the robot. You will need a printer, too.
+
+This description assumes that all fiducials are on the ceiling. Actually, this is not
+required if our software is used in the arbitrary mode but we feel it is easier to visualize and learn about fiducial navigation using the ceiling
+mode.
 
 ## Basic Concept
 
@@ -28,15 +32,138 @@ A PDF file containing a range of fiducial markers can be generated on your works
 ```rosrun aruco_detect create_markers.py 100 112 fiducials.pdf```
 
 The *100* and *112* specify the starting and ending numerical IDs of the
-markers.  It is not important what these are (we recommend starting at 100), but it is important that each marker has a unique ID.  Print the PDF file to produce the fiducials.  
+markers.  It is not important what these are (we recommend starting at 100), but it is important that each marker has a unique ID.  Print the PDF file to produce the fiducials.
+
+We use 140mm fiducial patterns that must be printed to be 140mm. Our launch
+files can be customized to use another size for fiducials but we recommend use of
+140mm.  
 ## Check the Fiducials
 The fiducials must be printed accurately.  The image must be 14 cm by 14 cm, to within *half a millimeter*.  Depending on the printer settings, these dimensions may be off.  For instance, the printer may be trying to fill the page.  Measure with a good rule, and change the settings if necessary.  
-## Mount the fiducials
-Affix the fiducials (in any order) to any convenient
-surface, such as a ceiling, where they will be viewed by the robot's camera.
-They need to be at a sufficient spacing so that more than one is visible at a time, if the robot is at least 6 feet away from the wall or ceiling holding the fiducials. Below you will see how to test that the spacing is OK.
 
+## Mount the fiducials
+Affix the fiducials (in any order) to the ceiling where they will be viewed best by the
+robot’s camera. They need to be at a sufficient spacing so that more than two are
+visible at a time for this example where we are using flat floor navigation. The
+RaspiCam version 2.1 camera we ship has about a 62 x 49 degree field of view so
+you will have best results for a standard 8 foot tall ceiling if you space the fiducials
+about a meter apart. It is also best to try to avoid placing fiducials right next to or
+on the covers of overhead lights. The fiducials do not have to be in an ordered
+arrangement and in fact are best if spaced in a non regular arrangement. Some of
+our software performs best if you avoid having a very fixed grid of fiducials so
+perhaps consider every other row is staggered by a half spacing of the grid if you
+feel you must order them to look "neat".
+
+## Setup The RaspiCam for Upward Facing Navigation
+If your camera points straight up instead of forward, the file
+/etc/ubiquity/robot.yaml must be edited to change the default (which is “forward”).
+To do this, add the following 2 lines to /etc/ubiquity/robot.yaml:  
+
+    raspicam:   
+        position: 'upward'
+
+Your mapping will give you the best results if the camera on your Magni robot that
+is facing upward is precisely pointing straight up. Even an error in 1 degree will
+show up as several centimeter location error for a robot that is pointing one way
+vs when the robot points the opposite direction (You can work out the
+trigonometry if you like)
+
+We are working on a calibration we hope to introduce in the near future but until
+then we suggest you use a 1” round bubble level and place it on the 4 screws that
+hold the RaspiCam (on a powered down Magni with no RaspiCam screwed into the
+screws). Then after the RaspiCam is screwed back in with the Magni on a level
+floor, gently use pliers to get the bubble level to be centered by small bends to the RaspiCam bracket on the Magni. Some RaspiCam units are not parallel with the
+little PCB it uses so consider use of little washers for that case. Again, we are developing a calibration to avoid this in the future.
+
+## Creating A Global Map For Navigation
+
+In the mode this document is describing, flat floor navigation, we will first form a
+map and then later use the map in a read-only mode for all of the robots we want
+to be using. This map can have fiducials added later so if you are just starting out
+perhaps place about 9 fiducials just to try this all out and you can add more
+uniquely numbered fiducials later once you are comfortable with navigating with
+your robot(s).
+
+## Clear The Global Map
+Log in to the robot from your workstation using ssh. Your login folder should have a folder to hold the global map we will create. We will form that folder if it does not exist and then remove or rename the map.txt file in that folder if the folder did exist already.  
+
+    mkdir -p ~/.ros/slam
+    mv ~/.ros/slam/map.txt ~/.ros/slam/map.old
+
+## Forming A Global Map Of Your Area
+
+Next we will start the navigation code in a way so that a new map will be created.
+We will need to slowly drive around the area pausing for several seconds every
+meter and a half or so for the best map. Do not worry because we can save
+version of the map and start again as many times as we want in another pass.
+
+Place the Magni at the location on your floor that can both see fiducials and that
+you want to be the 0,0 location in terms of X and Y for the floor area. It does not
+have to be in any exact location but I like to place it under some particular fiducial
+such as 101 for example simply to keep better track of my layout.
+Then execute the following command on the robot to launch the detection and
+SLAM nodes:
+roslaunch magni_demos simple_navigation.launch
+It should be run for the first time with at least one marker visible to the robot’s
+camera. A map (this is a file of fiducial poses) is created such that the current
+position of the robot is the origin.
+
+After you are done driving around you will hit Control-C to stop the map building
+and the map will be saved in ~/.ros/slam folder as map.txt. We suggest you save
+map.txt off to the side somewhere once you create it then you will not need to re-
+make the map if you accidently modify it in some way.
+
+## Using rviz to Monitor Map Creation
+When the map creation launch file is running you will notice that the fiducials that
+are seen and are being mapped will be scrolling by on the console but this is
+confusing and a very fast moving screen to watch. I mention this because for
+debug this can be valuable to capture and inspect.
+
+The friendlier way to see map creation is to use The following command on your
+workstation to run the  robot visualization tool , rviz.
+
+    roslaunch magni_viz view_nav.launch
+
+This will produce a display as shown below. The bottom left pane shows the
+current camera view. This is useful for determining if the fiducial density is
+sufficient. The right-hand pane shows the map of fiducials as it is being built. Red
+cubes represent fiducials that are currently in view of the camera. Green cubes
+represent fiducials that are in the map, but not currently in the view of the
+camera. The blue lines show connected pairs of fiducials that have been observed
+in the camera view at the same time. The robustness of the map is increased by
+having a high degree of connectivity between the fiducials.
+
+![Visualizing with rviz](fiducial_rviz.png)
+
+## Using The Global Map For Magni Navigation
+Once you have created a global map for your robot accessable area you can then
+begin to navigate the Magni by using a navigation mode optimized for flat floors.
+
+We will start the navigation in a mode that only reads from our global map and
+this can be done over and over and even on other Magni robots that have this
+map file in the location mentioned earlier.
+
+    roslaunch magni_demos simple_navigation_flat.launch
+Just as when map creation was running you will notice in this read-only flat floor
+navigation mode that the fiducials that are seen will be scrolling by on the console.
+
+## Using Navigation Commands To Move Magni
+Once a navigation stack is running such as at this point we are able to tell Magni to
+move to a specific X,Y location and then rotate to a specific angular rotation.
+Magni will be running move_basic from the above roslaunch and so will be ready
+to accept commands to move to a given X,Y with a given rotation by sending
+MoveBaseGoal messages to ROS topic /move_base/goal.
+
+Once a move_basic goal is sent move_basic will try to complete the movement and
+then return status on another topic for success/fail of the movement.
+
+We hope to supply demonstration python script to help users get started with
+their own applications.
+
+#### &larr;[back](rviz)- - - - - - - - - - [next](waypoints)&rarr;
+
+<!--
 ## Running the Software
+
 If your camera points straight up instead of forward, the file /etc/ubiquity/robot.yaml
 must be edited to change the default (which is "forward"). To do this, add the following 2 lines to /etc/ubiquity/robot.yaml.
 
@@ -54,7 +181,7 @@ A map (this is a file of fiducial poses) is created such that the current positi
 
 Use The following command on your workstation to run the
 [robot visualization tool](http://wiki.ros.org/rviz), rviz.
-<!-- todo #### [Link here to the tutorial where we explain ROS_MASTER_URI]??? -->
+<!-- todo #### [Link here to the tutorial where we explain ROS_MASTER_URI]???
 
 ```roslaunch magni_viz view_nav.launch```
 
@@ -64,9 +191,7 @@ is sufficient.  The right-hand pane shows the map of fiducials as it is being
 built. Red cubes represent fiducials that are currently in view of the camera.
 Green cubes represent fiducials that are in the map, but not currently
 in the view of the camera. The blue lines show connected pairs of fiducials
-that have been observed in the camera view at the same time.  The robustness
+that have been observed in the camera view at the same time.  As noted above, the robustness
 of the map is increased by having a high degree of connectivity between the
 fiducials.
-
-![Visualizing with rviz](fiducial_rviz.png)
-#### &larr;[back](rviz)- - - - - - - - - - [next](waypoints)&rarr;
+-->
