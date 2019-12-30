@@ -5,7 +5,7 @@ permalink: fiducials
 ---
 # Fiducial-Based Localization
 
-#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)  - - - &larr;[back](rviz)- - - - - - - - - - [next](sensors)&rarr;
+#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
 <!-- todo This is one of the ways in which a robot's position in the `world` (localization) can
 be determined.  For a discussion of other approaches, see the
@@ -101,8 +101,10 @@ you want to be the 0,0 location in terms of X and Y for the floor area. It does 
 have to be in any exact location but I like to place it under some particular fiducial
 such as 101 for example simply to keep better track of my layout.
 Then execute the following command on the robot to launch the detection and
-SLAM nodes:
-roslaunch magni_demos simple_navigation.launch
+SLAM nodes:  
+
+    roslaunch magni_demos simple_navigation.launch
+
 It should be run for the first time with at least one marker visible to the robot’s
 camera. A map (this is a file of fiducial poses) is created such that the current
 position of the robot is the origin.
@@ -135,16 +137,23 @@ having a high degree of connectivity between the fiducials.
 ![Visualizing with rviz](fiducial_rviz.png)
 
 ## Using The Global Map For Magni Navigation
-Once you have created a global map for your robot accessable area you can then
-begin to navigate the Magni by using a navigation mode optimized for flat floors.
+Once you have created a global map for your robot accessible area you can then begin to navigate the Magni by using our original navigation mode.
 
-We will start the navigation in a mode that only reads from our global map and
+The existing navigation mode (originally released in 2018) can be started just like map creation. This mode will add in new fiducials to the global map as it sees them and allow navigation at the same time.
+
+    roslaunch magni_demos simple_navigation.launch
+
+<!--We will start the navigation in a mode that only reads from our global map and
 this can be done over and over and even on other Magni robots that have this
-map file in the location mentioned earlier.
+map file in the location mentioned earlier.-->
+
+We have been developing a more precise mode suitable for use on flat floors which we hope to release in early 2020.  Once this is available we can start the navigation in a mode that only reads from our global map. This can be done repeatedly and even on other Magni robots that have this map file in the same location -- which is ~/.ros/slam/map.txt.
 
     roslaunch magni_demos simple_navigation_flat.launch
-Just as when map creation was running you will notice in this read-only flat floor
-navigation mode that the fiducials that are seen will be scrolling by on the console.
+
+<!--    
+Just as when map creation was running you will notice in this read-only flat floor navigation mode that the fiducials that are seen will be scrolling by on the console.
+->
 
 ## Using Navigation Commands To Move Magni
 Once a navigation stack is running such as at this point we are able to tell Magni to
@@ -156,7 +165,7 @@ MoveBaseGoal messages to ROS topic /move_base/goal.
 Once a move_basic goal is sent move_basic will try to complete the movement and
 then return status on another topic for success/fail of the movement.
 
-We hope to supply demonstration python script to help users get started with
+We intend to supply a demonstration python script to help users get started with
 their own applications.
 
 #### &larr;[back](rviz)- - - - - - - - - - [next](waypoints)&rarr;
