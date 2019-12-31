@@ -23,7 +23,7 @@ people may have about the image.
 ### Connecting To Your Network
 Our image comes up and starts up a WiFi hotspot by default.
 To learn more about how to connect with the hotspot, see
-[this page](<https://learn.ubiquityrobotics.com/connect_network>).
+[**THIS_PAGE**](<https://learn.ubiquityrobotics.com/connect_network>).
 
 You can also directly hook up a LAN cable to a router you may have that offers a DHCP connection.  If you do that you can find software to scan your network for the new IP address and then use a tool such as  ssh  or  putty to connect a console.
 
@@ -62,4 +62,4 @@ these addresses if you can as you may get our software
 interacting with your software in some cases. See our
 I2C discussion that is specific to Magni but will list
 the addresses used in the section titled  Guidelines For
-Usage Of The I2C Bus on [this page](<https://learn.ubiquityrobotics.com/diagnostics>).
+Usage Of The I2C Bus on [**THIS_PAGE**](<https://learn.ubiquityrobotics.com/diagnostics>).
