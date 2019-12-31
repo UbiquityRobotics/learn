@@ -12,9 +12,9 @@ permalink: image_no_magni
 
 Ubiquity Robotics makes an image for the Raspberry Pi that it
 shares freely. This image is meant to support the Magni
-robot that we offer and we are not able to offer much
-assistance to the non-customers who wish to enjoy the
-usage of this image. We do offers some documents that
+robot that we offer and we are not able to give much
+assistance to those who don't have a Magni but who wish to use the image for their own projects.
+We do offer some documents that
 users of the image may find helpful and so this page is
 meant to offer some assistance of the most likely questions
 people may have about the image.
@@ -38,19 +38,17 @@ once you connect with a linux console as discussed above.
 
 ### Using The GPIO Lines
 Our image uses some of the GPIO lines to control our
-Magni robot.   By default quite a few of the lines are
-not used and these are the best ones to think about
+Magni robot. By default many of the lines are
+unused and these are the best ones to think about
 using for your own uses. You should see the section
-called  GPIO Lines Used For The Sonar Board first and
+regarding [GPIO Lines Used For The Sonar Board](<https://learn.ubiquityrobotics.com/doing_more/GPIO_lines.html>) and
 use those lines as we do not use them until they are
 enabled by users who order a Magni with a Sonar board.
-See the GPIO line information
-[here](<https://learn.ubiquityrobotics.com/doing_more/GPIO_lines.html>)
 
 ### Using The I2C Bus
-Our If you want to use the I2C bus you need to be aware that
+If you want to use the I2C bus be aware that
 we expect and look for certain I2C devices. You should avoid
-use of the I2C addresses that we use.   Also note that many
+use of the I2C addresses that we use.  Also note that many
 users don't realize they must supply pullup resistors to 3.3 volts
 for proper I2C operation.  As we cannot know what you have
 in mind a general rule is to try something on the order of
@@ -61,7 +59,7 @@ the pullup resistors in general.
 
 Please see the addresses on I2C that we use and avoid
 these addresses if you can as you may get our software
-interacting with your software in some cases.   See our
+interacting with your software in some cases. See our
 I2C discussion that is specific to Magni but will list
 the addresses used in the section titled  Guidelines For
 Usage Of The I2C Bus on [this page](<https://learn.ubiquityrobotics.com/diagnostics>).
