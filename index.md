@@ -18,7 +18,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 #### Quick Start
 
 1.  [If you don't have your robot yet](quick_start/no_robot.md)
-1.  [If you are using our Raspberry Pi image on it's own without a Magni](quick_start/image_no_magni.md)
+1.  [If you are using our Raspberry Pi image on it's own without a Magni](image_no_magni)
 1.	[Unboxing, putting in batteries and charging them](quick_start/unboxing/unboxing.md)
 2.	[How to drive with optional Logitech controller](quick_start/logitech.markdown)
 3.  [Connecting a workstation and starting the Robot](quick_start/connecting.md)
