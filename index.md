@@ -21,11 +21,11 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 1.  [If you are using our Raspberry Pi image on it's own without a Magni](image_no_magni.md)
 1.	[Unboxing, putting in batteries and charging them](quick_start/unboxing/unboxing.md)
 2.	[How to drive with optional Logitech controller](quick_start/logitech.markdown)
-3.  [Connecting a workstation and Starting the Robot](quick_start/connecting.md)
+3.  [Connecting a workstation and starting the Robot](quick_start/connecting.md)
 4.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/Robot_Commander_AP.markdown)
 <!--- this also works
 <a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>-->
-5.	[Driving a robot with a Keyboard](quick_start/keyboard_teleop.md)
+5.	[Driving a robot with a keyboard](quick_start/keyboard_teleop.md)
 6.	[How to set up cameras and sensors](quick_start/camera_sensor/installation.md)
 7.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
 
