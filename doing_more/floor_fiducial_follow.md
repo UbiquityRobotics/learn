@@ -21,12 +21,10 @@ seems a good choice for floor based fiducials given camera field of view and so 
 
 ### A Few Words To Help Visualize How This Mode Enables User Applications
 The enhanced follow.py app is written in Python. The existing code for the fiducial_follow
-app may be found on THIS_PAGE
-[https://github.com/UbiquityRobotics/demos/blob/master/fiducial_follow/nodes/follow.py] .
+app may be found on [**THIS_PAGE**](https://github.com/UbiquityRobotics/demos/blob/master/fiducial_follow/nodes/follow.py) .
 
-The commands can be used to have the robot find fiducials attached to the floor for
-applications where floor based fiducials are an acceptable solution. The commands
-allow things like such as the following basic commands:
+Several commands can be used in
+applications where floor-attached fiducials are an acceptable solution. The commands allow functions such as the following:
 • Change current drive speed or rotational speed to new values
 • Look for and then approach a fiducial such as #105 then stop
 • Once having found a fiducial such as #150, drive on top of it
@@ -34,12 +32,12 @@ allow things like such as the following basic commands:
 • Rotate right or left for a given time at the current rotation speed
 
 With these commands some sequential factory robotic applications can be implemented
-without full implementation of the much more complex full room navigations methods
+without full implementation of the much more complex full room navigation methods
 utilizing our MoveBasic command modes. In this way a robot can follow a trail of
 fiducials on the floor based on a user application sending commands as markers are
 reached.
 
-This is meant as a simpler mode that may in many cases be all that is required.
+This provides a simpler mode that may in many cases be all that is required.
 
 The ROS topic of /follower_commands is issued commands with a name and
 parameters depending on the action. ROS topic /follower_status will offer feedback to
@@ -50,11 +48,11 @@ A user program once at a given location could for example then tell it's own cus
 hardware to do some sort of load or unload operation using the custom user hardware
 that may have been designed.
 
-We offer a simply python script that can talk to and listen to this new follow.py node and
+We offer a simple python script that can talk to and listen to this new follow.py node and
 we call that script follower_controller.py which is very basic but perhaps a good head
 start to develop your own specific control required to suit your end application.
 
-### Setting Up A 'downward' facing Camera To Use This App
+### Setting Up a Downward Facing Camera to Use This App
 By default we will specify that a downward facing RaspiCam will be used and will be
 mounted 60cm above the floor and tilted 35 degrees downward ahead of the robot (this
 number may change). We also are thinking floor fiducials should be 110mm across for
@@ -65,14 +63,15 @@ will have to edit /etc/ubiquity/robot.yaml as root and change position to 'downw
 raspicam:
 position: 'downward'
 
-### The Git Code Branch For Fiducial Floor Follow App
+### The Git Code Branch for the Fiducial Floor Follow App
 This mode of fiducial follow as of the start of 2020 is not yet released but will be under
-our 'demos' git repository so it is in what is called a 'git branch' called
+our 'demos' git repository in a git branch called
 'followPlusCommands'. Also some code in our magni_robot repository will be required.
 If desired users who are familiar with the git revision control system can contact us and
 we can offer direction on how to use this mode as a Beta Site until it becomes released
 in first quarter of 2020 (our goal).
-### Running The Fiducial Floor Follow App
+
+### Running the Fiducial Floor Follow App
 The Ubiquity Robotics robots use fiducial markers (aruco markers). The
 fiducial_floor_follow launch for the follow.py app takes advantage of aruco_detect (a
 ROS node that is part of the Magni package) to detect aruco markers in the image feed
@@ -89,12 +88,9 @@ follow.py app the app knows or rather 'sees' the fiducial.
 You can use RVIZ to see what the camera sees and adjust lighting if required so that
 you can verify that the fiducial is really being seen by messages on the console.
 
-At this date prior to full release we can only say that documents that describe in the level
-of detail required to develop or use this new mode are in our 'demos/fiducial_follow'
-repository in branch 'followPlusCommands'.
+Documents that describe in the level of detail required to develop or use this new mode are in our 'demos/fiducial_follow'
+repository in branch 'followPlusCommands'. Refer to [**THIS LOCATION**](https://github.com/UbiquityRobotics/demos/tree/followPlusCommands/fiducial_follow).
 
-Refer to: https://github.com/UbiquityRobotics/demos/tree/followPlusCommands/fiducial_follow
-
-This is an exciting new mode that we feel will offer the ability for users to develop custom
-applications. We have an example python client that shows how to drive this code over the ROS topic
+This is an exciting new mode that will offer the ability for users to develop custom
+applications more easily. We have an example python client that shows how to drive this code over the ROS topic
 and it is called follower_controller.py found in above repository and git branch.
