@@ -6,7 +6,7 @@ permalink: floor_fiducial_follow
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-## Using Floor Fiducial Fiducials To Guide The Robot
+## Using Floor Fiducials To Guide The Robot
 We are adding a powerful ability to our fiducial follow application that will allow users to
 write a python or other program to send fiducial follow as well as basic movement
 commands to the follow.py application through a ROS topic. We hope to officially
@@ -25,11 +25,12 @@ app may be found on [**THIS_PAGE**](https://github.com/UbiquityRobotics/demos/bl
 
 Several commands can be used in
 applications where floor-attached fiducials are an acceptable solution. The commands allow functions such as the following:
-• Change current drive speed or rotational speed to new values
-• Look for and then approach a fiducial such as #105 then stop
-• Once having found a fiducial such as #150, drive on top of it
-• Drive forward or reverse for a given time at the current drive speed
-• Rotate right or left for a given time at the current rotation speed
+
+* Change current drive speed or rotational speed to new values
+* Look for and then approach a fiducial such as #105 then stop
+* Once having found a fiducial such as #150, drive on top of it
+* Drive forward or reverse for a given time at the current drive speed
+* Rotate right or left for a given time at the current rotation speed
 
 With these commands some sequential factory robotic applications can be implemented
 without full implementation of the much more complex full room navigation methods
@@ -39,8 +40,8 @@ reached.
 
 This provides a simpler mode that may in many cases be all that is required.
 
-The ROS topic of /follower_commands is issued commands with a name and
-parameters depending on the action. ROS topic /follower_status will offer feedback to
+The ROS topic of **/follower_commands** is issued commands with a name and
+parameters depending on the action. ROS topic **/follower_status** will offer feedback to
 the user program. So a program can say to drive to a fiducial then wait for positive
 status before issuing another command. In this way a user application can have it's own
 logic and let the Magni be the 'server' to perform the movement operations.
@@ -49,7 +50,7 @@ hardware to do some sort of load or unload operation using the custom user hardw
 that may have been designed.
 
 We offer a simple python script that can talk to and listen to this new follow.py node and
-we call that script follower_controller.py which is very basic but perhaps a good head
+we call that script **follower_controller.py** which is very basic but perhaps a good head
 start to develop your own specific control required to suit your end application.
 
 ### Setting Up a Downward Facing Camera to Use This App
@@ -58,10 +59,10 @@ mounted 60cm above the floor and tilted 35 degrees downward ahead of the robot (
 number may change). We also are thinking floor fiducials should be 110mm across for
 many reasons but if required users can modify this as suit their needs.
 
-We plan on making camera mounting hardware to properly release this mode. A user
-will have to edit /etc/ubiquity/robot.yaml as root and change position to 'downward'
-raspicam:
-position: 'downward'
+We plan on making camera mounting hardware to properly release this mode. A user will have to edit /etc/ubiquity/robot.yaml as root and change position to 'downward':
+
+    raspicam:
+         position: 'downward'
 
 ### The Git Code Branch for the Fiducial Floor Follow App
 This mode of fiducial follow as of the start of 2020 is not yet released but will be under
