@@ -12,7 +12,7 @@ With this app, the robot will follow a given marker, keeping a certain distance 
 
 The Ubiquity Robotics robots use a number of fiducial markers (aruco markers, illustrated below).  The fiducial_follow app takes advantage of aruco_detect (a ROS node that is part of the Magni package) to detect aruco markers in the image feed from a camera.  The characteristics of the markers' images enable the robot to compute its location and that of the markers.
 
-The app is written in Python. The code for the fiducial_follow app may be found [here](https://github.com/UbiquityRobotics/demos/blob/master/fiducial_follow/nodes/follow.py).  This document does not refer the code elements by line number because line numbers may change, but the reader can follow these references by use of the Search function.
+The app is written in Python. The code for the fiducial_follow app may be found [**here**](https://github.com/UbiquityRobotics/demos/blob/master/fiducial_follow/nodes/follow.py).  This document does not refer the code elements by line number because line numbers may change, but the reader can follow these references by use of the Search function.
 
 <img src="https://ubiquityrobotics.github.io/learn/assets/fiducial.png" />
 
