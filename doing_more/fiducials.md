@@ -131,8 +131,7 @@ sufficient. The right-hand pane shows the map of fiducials as it is being built.
 cubes represent fiducials that are currently in view of the camera. Green cubes
 represent fiducials that are in the map, but not currently in the view of the
 camera. The blue lines show connected pairs of fiducials that have been observed
-in the camera view at the same time. The robustness of the map is increased by
-having a high degree of connectivity between the fiducials.
+in the camera view at the same time. The more blue lines there are between fiducials, the more robust the map will be.
 
 ![Visualizing with rviz](fiducial_rviz.png)
 
