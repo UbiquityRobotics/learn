@@ -13,6 +13,10 @@ work area. The prerequisite for this section is the section for setup of fiducia
 so you can set waypoints and goals seen in
 [**THIS_LINK**](https://learn.ubiquityrobotics.com/fiducials).
 
+ href="https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2019-06-19-ubiquity-xenial-lxde-raspberry-pi.img.xz">2019-06-19-ubiquity-xenial-lxde
+                    
+
+
 ## Running the Script Along with Navigation
 A python script that shows how to send new waypoint goals to move_basic is
 shown on this page. Place this text into a file we will call move_basic_demo.py.
