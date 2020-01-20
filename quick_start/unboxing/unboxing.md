@@ -95,10 +95,10 @@ to be specified.  The user should be prepared for a current inrush spark? (not s
 #### The Real-Time Clock battery
 There is also a CR2032 coin cell battery on the back of the circuit board.  This provides power to the real-time clock, which is **essential**.  If this battery is not installed, obtain one and install it. Insert the battery with the lettering side up.
 
-<!--![Coin cell Holder](battery_holder.png)-->
+<!--![Coin cell Holder](battery_holder.png)
 
-![Coin cell clip](BatteryClipInstallNote.jpg)
-
+![Coin cell clip](BatteryClipInstallNote.jpg)-->
+![Coin cell clip](Magni_CR2032_Battery.jpg)
 #### Optional Top Flat Plate Install
 
 The top plate should be the last thing attached, using 6  M6 machine screws.   Note that the countersunk holes will be on the top and that an extra hole that is meant for an upward facing Raspberry Pi camera should be over the camera bracket.
