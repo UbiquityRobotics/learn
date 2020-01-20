@@ -15,7 +15,9 @@ and the planned Gold version.
 
 The Magni comes almost ready to run. Two 12v SLA (Sealed Lead Acid) batteries should be purchased separately. **A CR2032 coin cell battery is required for proper operation** and must be installed on the back of the main controller board which will be shown below.
 
-An Allen wrench (for M6 bolts) will be included in the shipping box. In addition a small Phillips (cross point) screw driver may be needed for mounting the Raspberry Pi camera.
+A 4mm Allen wrench (for M6 screws) is included in the shipping box. In addition a small Phillips (cross point) screw driver may be needed for mounting the Raspberry Pi camera.
+
+#### Opening The Box And Inspecting The Contents
 
 #### Step 1 - open the box
 ![Shipping Box](unb1.JPG)
@@ -36,11 +38,11 @@ An Allen wrench (for M6 bolts) will be included in the shipping box. In addition
 
   In the small parts bags, you will find fastners and  M4 and M2 Allen wrenches that fit them. The additional sensors (Silver and Gold versions) are wrapped separately.
 
-
+<!--
  ![RPi 3 installed](unb7.JPG)
 
  The front and back brackets can be installed using the brackets require a M4 hex Allen wrench. We suggest an extra long (6 cm). The other included fasteners are M3 (M2 hex wrench) and a small Phillips screwdriver for Raspi Cam attachment. [See the detailed section on camera and sensor installation.](camera_sensors)
-
+-->
 
 #### Bracket Installation
 ![Motors to MC](unb5.JPG)
@@ -56,17 +58,19 @@ motor cable that comes from the nearest side of the main PC board to that motor.
 The picture above shows a Magni without the front bracket.  In this picture the Raspberry Pi camera cable is attached to the Raspberry Pi itself which is part of setup for the camera.   Decide which camera configuration you will want on your Magni.    You should now take a detour to look at [**THIS_PAGE**](https://learn.ubiquityrobotics.com/camera_sensors)  and decide how you want to mount the camera.    Once you decide, use the camera setup page in combination with looking at the pictures on this page about bracket mounting.
 
 ![](MagniUnboxedAttachingTopFrontBracket.jpg)
+Front Bracket
 
-Using 3 of the M6 large bolts with the tapered heads attach the bracket.  The allen wrench will go through the top side of the bracket to reach the bolt.    In this case the forward mounted camera was selected and the ribbon cable routed to the camera.  Again, see the camera setup page.
+Note that the front and back brackets are different.  The front bracket is the one with a shelf for mounting the Raspberry Pi camera. Using 3 of the M6 flat head hex drive screws attach the bracket.  The Allen wrench will go through the top side of the bracket to reach the screw.    In this case the forward mounted camera was selected and the ribbon cable routed to the camera.  Again, see the camera setup page.
 
 ![](MagniUnboxedAttachingTopRearBracket.jpg)
+Back Bracket Viewed From Behind
 
-The back bracket as seen from behind the Magni also uses 3 M6 bolts with tapered heads to attach the back bracket.   Here we see the 3 bolts securing the back bracket to the main chassis.
+The back bracket attachment also uses 3 M6 flat head hex drive screws. Here we see the 3 screws securing the back bracket to the main chassis.
 
 #### The Mostly Assembled Magni Prior To Battery Install
 ![](MagniUnboxedFrontViewNoBatteriest.jpg)
 
-The Front Bracket with Camera mounted is shown above. The system power switch is the black switch above the first “U” in Ubiquity, and the red switch for the power to the wheels is above the “y". The charging port is between the two switches.  The ON position is with the switch extended out. Both buttons should be lit.
+The Front Bracket with Camera mounted is shown above. The system power switch is the black switch above the first “U” in Ubiquity, and the red switch for the power to the wheels is above the “y". The charging port is between the two switches.  The ON position is with the switch extended out. <!---Both buttons should be lit.-->
 
 **The next step will be to install the batteries.   At this time push both of the switches IN which will turn all power off as you connect the batteries.**
 
@@ -91,13 +95,13 @@ to be specified.  The user should be prepared for a current inrush spark? (not s
 #### The Real-Time Clock battery
 There is also a CR2032 coin cell battery on the back of the circuit board.  This provides power to the real-time clock, which is **essential**.  If this battery is not installed, obtain one and install it. Insert the battery with the lettering side up.
 
-![Coin cell Holder](battery_holder.png)
+<!--![Coin cell Holder](battery_holder.png)-->
 
 ![Coin cell clip](BatteryClipInstallNote.jpg)
 
 #### Optional Top Flat Plate Install
 
-The top plate should be the very last thing attached, using 6  M6 bolts.   Note that the tapers for the holes will be on the top and that an extra hole that is meant for an upward facing Raspberry Pi camera should be over the camera bracket.
+The top plate should be the last thing attached, using 6  M6 machine screws.   Note that the countersunk holes will be on the top and that an extra hole that is meant for an upward facing Raspberry Pi camera should be over the camera bracket.
 
 A video of the unboxing process is available:  [Video](https://youtu.be/pF38kFOl0Ic)
 
