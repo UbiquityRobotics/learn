@@ -115,3 +115,10 @@ When voice_cmd.launch starts it will start 3 windows.   Below we discuss and sho
 
 <put in the pictures and window screen shots Alan supplied all here now>
 -->
+![Magni_Gazebo](mg_gaz1.png)
+       
+       The Desktop with Gazebo and the Velocity Controller App opened.
+       
+![Magni_Rviz](mg_rviz.png)    
+
+       Magni in Rviz showing ping sensor cones.
