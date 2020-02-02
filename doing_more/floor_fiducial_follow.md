@@ -67,7 +67,7 @@ We plan on making camera mounting hardware to properly release this mode. A user
 ### The Git Code Branch for the Fiducial Floor Follow App
 This mode of fiducial follow as of the start of 2020 is not yet released but will be under
 our 'demos' git repository in a git branch called
-'followPlusCommands'. Also some code in our magni_robot repository will be required.
+'floor_follow'. More files like the launch file and changed URDF file are in our magni_robot repository in the branch also called 'floor_follow'.
 If desired users who are familiar with the git revision control system can contact us and
 we can offer direction on how to use this mode as a Beta Site until it becomes released
 in first quarter of 2020 (our goal).
@@ -90,7 +90,7 @@ You can use RVIZ to see what the camera sees and adjust lighting if required so 
 you can verify that the fiducial is really being seen by messages on the console.
 
 Documents that describe in the level of detail required to develop or use this new mode are in our 'demos/fiducial_follow'
-repository in branch 'followPlusCommands'. Refer to [**THIS LOCATION**](https://github.com/UbiquityRobotics/demos/tree/followPlusCommands/fiducial_follow).
+repository in branch 'floor_follow'. Refer to [**THIS LOCATION**](https://github.com/UbiquityRobotics/demos/tree/floor_follow/fiducial_follow).
 
 This is an exciting new mode that will offer the ability for users to develop custom
 applications more easily. We have an example python client that shows how to drive this code over the ROS topic

@@ -48,6 +48,8 @@ The robot will respond to keystrokes as follows:
 | m | circle backwards left |
 | , | straight back |
 | . | circle backwards left |
+| q | increase speed |
+| z | decrease speed |
 
 <!--
 >For Holonomic mode (strafing), hold down the shift key:
