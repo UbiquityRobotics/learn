@@ -87,8 +87,7 @@ These three items are to have a:
 * MicroSD Card with URPi Image:
   You need a Micro SD card that is at least 8GB in size and has a speed rating of class
   10 or higher.  This Micro SD card needs to have the URPi (Ubiquity Robotics Pi)
-  image loaded onto it.  There is a good chance that your robot comes with a
-  Micro SD card with the URPi image already installed on it.  Alternatively,
+  image loaded onto it. The robot comes with a Micro SD card with the URPi image already installed on it. Alternatively,
   you can purchase your own Micro SD card and install the URPi image on it.
   Please read the
   [URPi Image Installation](../urpi_install/urpi_install.md)
@@ -131,9 +130,8 @@ There are three strategies of getting to a shell prompt on your robot computer:
 
 * Internet Cable Strategy:
   This method uses a physical internet cable to connect between your local
-  network and the robot computer.  Most people have spare internet cables lying
-  around.  The bigger issue is that not all people have an accessible internet
-  port.
+  network and the robot computer. Be avare that all internet cables don't have 
+  accessible internet port.
 
 * Robot Access Point Strategy:
   This method just requires a laptop.  There are more steps involved and if something
@@ -349,7 +347,7 @@ onto the other configuration steps.
    random looking characters.  Please, just type `yes` followed by the
    `[Enter]` key.
 
-   Next, you get the following lovely message:
+   Next, you get the following message:
 
            Warning: Permanently added 'HOSTNAME.local' (ECDSA) to the list of known hosts.
            Warning: the ECDSA host key for 'onkyo.local' differs from the key for the IP address '#.#.#.#'
