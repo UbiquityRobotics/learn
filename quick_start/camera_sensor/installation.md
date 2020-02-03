@@ -39,15 +39,15 @@ Notice that in both orientations that the cable was routed through the slots in
 the metal bracket. The camera is screwed to fixed standoffs using M2 screws
 3 or 4mm in length. The white side of the flat cable is towards the top of the
 board and below there is a blue piece of tape on the cable. The cable must be
-inserted as shown in order to properly connect the camera.
+inserted as shown in order to properly connect the camera. Make sure the cable goes all the way in as it can seem to be in but not fully making contact.
 
 The Magni software must be configured to set usage of any camera mounting other than the **forward** configuration. If
 you for example use the **upward** facing camera you must before edit the
 `/etc/ubiquity/robot.yaml` file as root user to have a line for the raspicam
 orientation. The line would be as shown below and a reboot of the robot
-is required.
+is required. There must be a space between the colon and the left bracket.
 
-`raspicam:{'position':'upward'}`
+`raspicam: {'position':'upward'}`
 
 Take care when removing the pi to gently rock it back and forth after
 unscrewing it&#39;s screw that goes into a standoff on the main board. BE CAREFUL
@@ -56,14 +56,24 @@ in the right side of the Pi because it sticks out. It is very easy to break the 
 card in this process if your fingers push on the SD card.
 
 Next attach the cable to the Pi; the ‘blue’ part of the cable faces toward the USB
-ports.
+ports.  Make sure the cable goes all the way in as it can seem to be inserted but not fully making contact.
 
 ![Raspberry Pi with Camera Cable](a2.jpg)
 
 Next reinstall the Pi, making sure the pins are aligned correctly as in the picture
 below. (Misaligned pins will cause permanent failure!)
 
-![Magni Raspberry Pi Mounting](MagniRaspberryPiMounting.jpg)
+![Magni Sonar Board](MagniRaspberryPiMounting.jpg)
+
+## Testing the camera.
+If you find that fiducial follow or waypoint
+navigation launch files have errors early on for the camera, you may want quick way to test the camera. You can first open an ssh session to the robot and then try the following command:
+
+`raspistill -o test.jpg`
+
+If you don’t get an error message, you have a good camera. An (mmal) error
+message indicates the camera is not being detected by the Raspberry Pi, this is
+usually due to a poor cable connection or less likely a bad camera.
 
 ## Sonar Board Attachment To The Robot
 
@@ -95,13 +105,3 @@ picture below where it will be plugged into the Sonar board as the final step.
 
 Lastly attach the cover plate with 6 M6 screws using an M4 Allen wrench. You are
 done, hooray!
-## Testing the camera.
-If you find that fiducial follow or waypoint
-navigation aren’t working, you need a quick way to test the camera. If you can
-open an ssh session to the robot, try the following command:
-
-`raspistill -o test.jpg`
-
-If you don’t get an error message, you have a good camera. An (mmal) error
-message indicates the camera is not being detected by the Raspberry Pi, this is
-usually due to a poor cable connection or less likely a bad camera.
