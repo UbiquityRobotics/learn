@@ -42,9 +42,13 @@ board and below there is a blue piece of tape on the cable. The cable must be
 inserted as shown in order to properly connect the camera. Make sure the cable goes all the way in as it can seem to be in but not fully making contact.
 
 The Magni software must be configured to set usage of any camera mounting other than the **forward** configuration. If
-you for example use the **upward** facing camera you must before edit the
-`/etc/ubiquity/robot.yaml` file as root user to have a line for the raspicam
-orientation. The line would be as shown below and a reboot of the robot
+you for example use the **upward** facing camera you must edit the
+`/etc/ubiquity/robot.yaml` file as root user and change the line for the raspicam
+orientation.
+
+`sudo nano /etc/ubiquity/robot.yaml`
+
+The line would be as shown below and a reboot of the robot
 is required. There must be a space between the colon and the left bracket.
 
 `raspicam: {'position':'upward'}`
@@ -80,6 +84,15 @@ usually due to a poor cable connection or less likely a bad camera.
 Below is a picture of the Sonar board included with Magni Silver configuration. This section will show how the Sonar Board is mounted on tall standoffs and a 50-pin ribbon cable is then attached. The sonar board is included in the large box for a Magni Silver but is not attached to the robot prior to shipment.  Be careful to avoid the need to often re-bend the sonars if they bump something because the pins can only be bent and re-bent a limited number of times.
 
 ![Magni Sonar Board](MagniSonarBoard.jpg)
+
+The Magni software must be configured to enable usage of the sonar board. You must edit the
+`robot.yaml` file as root user then modify the file.
+
+`sudo nano /etc/ubiquity/robot.yaml`
+
+Make an edit so the only uncommented line with `sonars:` in it is as shown below.
+
+`sonars: 'pi_sonar_v1'`
 
 The Sonar board is mounted to the chassis using 4 standoffs that screw into 4
 fixed 3mm standoffs on the chassis. This description will show the 2 standoffs
