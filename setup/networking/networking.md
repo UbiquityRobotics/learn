@@ -86,9 +86,9 @@ These three items are to have a:
 
 * MicroSD Card with URPi Image:
   You need a Micro SD card that is at least 8GB in size and has a speed rating of class
-  10 or higher.  This Micro SD card needs to have the URPi (Ubiquity Robotics Pi)
+  10 or higher. This Micro SD card needs to have the URPi (Ubiquity Robotics Pi)
   image loaded onto it. The robot comes with a Micro SD card with the URPi image already installed on it. Alternatively,
-  you can purchase your own Micro SD card and install the URPi image on it.
+  you can purchase your own Micro SD card and install the URPi image on it. The card is recommended to be a Class 10 fast card of      16GigaBytes size or you may find it reacts slowly or runs out of space sooner than you had hoped.
   Please read the
   [URPi Image Installation](../urpi_install/urpi_install.md)
   document before ordering your MicroSD card.
@@ -130,8 +130,8 @@ There are three strategies of getting to a shell prompt on your robot computer:
 
 * Internet Cable Strategy:
   This method uses a physical internet cable to connect between your local
-  network and the robot computer. Be avare that all internet cables don't have 
-  accessible internet port.
+  network and the robot computer. Be aware that all internet cables don't have 
+  accessible internet port. If you have a physical internet port near your robot that supports DHCP so an IP address can be assigned and you have a class 5 or better internet cable you can plug that into the LAN port on the Magni computer for network access.
 
 * Robot Access Point Strategy:
   This method just requires a laptop.  There are more steps involved and if something
