@@ -12,6 +12,8 @@ write a python or other program to send fiducial follow as well as basic movemen
 commands to the follow.py application through a ROS topic. We hope to officially
 release this code in the first quarter of 2020.
 
+**Be aware that this node is under development** and as recently as the beginning of February we have decided to convert this node to use the standard 'actionlib' mechanism used widely in ROS.  So as of early February our goal is to have a different ROS node that will be started with the same launch file we discuss in this document.   The sample client will change to be an actionlib client.
+
 This page describe usage of a launch file that once released places the robot into a
 mode where it can be issued commands to find and approach or move about in simple
 movements. Contact us on the forum if you require this ability prior to introduction and
@@ -55,8 +57,8 @@ start to develop your own specific control required to suit your end application
 
 ### Setting Up a Downward Facing Camera to Use This App
 By default we will specify that a downward facing RaspiCam will be used and will be
-mounted 60cm above the floor and tilted 35 degrees downward ahead of the robot (this
-number may change). We also are thinking floor fiducials should be 110mm across for
+mounted 55cm above the floor and tilted 45 degrees downward ahead of the robot (these
+numbers may change). We also are thinking floor fiducials should be 110mm across for
 many reasons but if required users can modify this as suit their needs.
 
 We plan on making camera mounting hardware to properly release this mode. A user will have to edit /etc/ubiquity/robot.yaml as root and change position to 'downward':
@@ -65,9 +67,9 @@ We plan on making camera mounting hardware to properly release this mode. A user
          position: 'downward'
 
 ### The Git Code Branch for the Fiducial Floor Follow App
-This mode of fiducial follow as of the start of 2020 is not yet released but will be under
+This mode of fiducial follow as of the start of 2020 is not yet released but **the code will be under
 our 'demos' git repository in a git branch called
-'floor_follow'. More files like the launch file and changed URDF file are in our magni_robot repository in the branch also called 'floor_follow'.
+'floor_follow'**. More files like the launch file and changed URDF file are in our magni_robot repository in the branch also called 'floor_follow'.
 If desired users who are familiar with the git revision control system can contact us and
 we can offer direction on how to use this mode as a Beta Site until it becomes released
 in first quarter of 2020 (our goal).
