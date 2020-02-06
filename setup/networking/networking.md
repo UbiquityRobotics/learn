@@ -74,7 +74,7 @@ These three items are to have a:
   Obviously, you need a robot computer to power up.  The robot computer can be ordered
   separately from the robot.  In the United States, a separately ordered computer typically
   shows up in a day or two.  It should be mentioned that many UR robot configurations ship
-  with a robot computer already installed. 
+  with a robot computer already installed.
 
 * Robot Computer Power Source:
   There are currently two ways to power up the Robot computer.  First, if you have actually
@@ -86,10 +86,10 @@ These three items are to have a:
 
 * MicroSD Card with URPi Image:
   You need a Micro SD card that is at least 8GB in size and has a speed rating of class
-  10 or higher.  This Micro SD card needs to have the URPi (Ubiquity Robotics Pi)
-  image loaded onto it.  There is a good chance that your robot comes with a
+  10 or higher.  This Micro SD card must have the URPi (Ubiquity Robotics Pi)
+  image loaded onto it.  The robot comes with a
   Micro SD card with the URPi image already installed on it.  Alternatively,
-  you can purchase your own Micro SD card and install the URPi image on it.
+  you can purchase your own Micro SD card and install the URPi image on it. The card should be a Class 10 fast card of at least 16 GigaBytes.
   Please read the
   [URPi Image Installation](../urpi_install/urpi_install.md)
   document before ordering your MicroSD card.
@@ -131,9 +131,7 @@ There are three strategies of getting to a shell prompt on your robot computer:
 
 * Internet Cable Strategy:
   This method uses a physical internet cable to connect between your local
-  network and the robot computer.  Most people have spare internet cables lying
-  around.  The bigger issue is that not all people have an accessible internet
-  port.
+  network and the robot computer. Be aware that not all computers have an internet port. If you have a physical internet port near your robot that supports DHCP so an IP address can be assigned and you have a class 5 or better internet cable you can plug that into the LAN port on the Magni computer for network access.
 
 * Robot Access Point Strategy:
   This method just requires a laptop.  There are more steps involved and if something
@@ -240,7 +238,7 @@ The steps for ...
    The robot computer has successfully booted when you get a prompt that says:
 
            ubuntu login:
-     
+
    type the account name of `ubuntu` followed by the `[Enter]` key.  Note that the
    account name must be in lower case.  If the characters are showing up in upper
    case, please toggle the `[Caps Lock]` key and try again.
@@ -258,7 +256,7 @@ The steps for ...
 10. Shell Prompt:
     The shell prompt looks as follows:
 
-           ubuntu# 
+           ubuntu#
 
     where `ubuntu` is the computer host name and `#` means that you are logged in
     in system administrator mode (i.e. Linux "root" mode).
@@ -349,7 +347,7 @@ onto the other configuration steps.
    random looking characters.  Please, just type `yes` followed by the
    `[Enter]` key.
 
-   Next, you get the following lovely message:
+   Next, you get the following message:
 
            Warning: Permanently added 'HOSTNAME.local' (ECDSA) to the list of known hosts.
            Warning: the ECDSA host key for 'onkyo.local' differs from the key for the IP address '#.#.#.#'
@@ -362,13 +360,13 @@ onto the other configuration steps.
 
    Next you should get something like:
 
-           ubuntu@ubuntu.local's password: 
+           ubuntu@ubuntu.local's password:
 
    Now, you type in `robotseverywhere` followed the `[Enter]` key.  Lastly,
    you should get the following welcome message:
 
            Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-96-generic x86_64)
-           
+
            * Documentation:  https://help.ubuntu.com
            * Management:     https://landscape.canonical.com
            * Support:        https://ubuntu.com/advantage
@@ -376,7 +374,7 @@ onto the other configuration steps.
            N packages can be updated.
            M updates are security updates.
 
-           ubuntu@ubuntu:~$ 
+           ubuntu@ubuntu:~$
 
     Do not worry about, the numbers N and M, they change all the time.
 
@@ -413,13 +411,13 @@ robot computer and can proceed to the section on robot.
 
 {* waynegramlich:  The text below needs to be merged into the sections above. }*
 
-If you loaded the default Robot Computer 3 image from downloads.ubiquityrobotics.com, 
+If you loaded the default Robot Computer 3 image from downloads.ubiquityrobotics.com,
 or have received a Magni with the Robot Computer already installed, the Robot should boot up in WiFi access point mode. This means you should be able to begin testing your robot immediately, and be able to attach it to an existing network.  If you have a logitech controller or a fiducial marker, you should be able to drive or guide your robot once it is turned on.  The robot will broadcast it’s SSID as ubiquityrobot, and the password to connect is “robotseverywhere”
 
 Once connected I attempt to locate the robot by typing in a terminal window:
 
     ping ubiquityrobot.local   
-  
+
   (this may take a bit of time before it responds)
 
 once it does it should display the robots IP number. I then ssh to it:
@@ -430,9 +428,9 @@ once it does it should display the robots IP number. I then ssh to it:
 
     The authenticity of host '10.42.0.1 (10.42.0.1)' can't be established.
     ECDSA key fingerprint is SHA256:sDDeGZzL8FPY3kMmvhwjPC9wH+mGsAxJL/dNXpoYnsc.
-    Are you sure you want to continue connecting (yes/no)? yes 
+    Are you sure you want to continue connecting (yes/no)? yes
     Failed to add the host to the list of known hosts (/home/alan/.ssh/known_hosts).
-    ubuntu@10.42.0.1's password: 
+    ubuntu@10.42.0.1's password:
     Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.38-v7+ armv7l)
 
     * Documentation:  https://help.ubuntu.com
@@ -459,19 +457,19 @@ Next you should connect your robot to the local area network:
     NETGEAR37
     ubuntu@ubiquityrobot:~$ pifi add fedland simbacat
     Error writing to /var/lib/pifi/pending, make sure you are running with sudo
- 
+
  (oops)
 
      ubuntu@ubiquityrobot:~$ sudo pifi add “ssid”  “passwd”
 
 If now sudo reboot should come up on “ssid” wifi
 
-To test connect your laptop to the local area network, and ping: 
+To test connect your laptop to the local area network, and ping:
 
     ping ubiquityrobotXXXX.local
 
     alan@anfrosbase:~$ ping ubiquityrobot.local
-    PING ubiquityrobot.local (10.0.0.113) 56(84) bytes of data. 
+    PING ubiquityrobot.local (10.0.0.113) 56(84) bytes of data.
     64 bytes from 10.0.0.113: icmp_seq=1 ttl=64 time=97.6 ms
     64 bytes from 10.0.0.113: icmp_seq=2 ttl=64 time=5.70 ms
 
@@ -482,10 +480,10 @@ so now ssh into 10.0.0.113
 
     The authenticity of host '10.0.0.113 (10.0.0.113)' can't be established.
     ECDSA key fingerprint is SHA256:sDDeGZzL8FPY3kMmvhwjPC9wH+mGsAxJL/dNXpoYnsc
-  
+
     etc.
-    
-    
+
+
 (check the date)
 
     ubuntu@ubiquityrobot:~$ date
