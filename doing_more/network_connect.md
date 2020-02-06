@@ -8,7 +8,7 @@ permalink: connect_network
 
 # Connecting the Robot to Your Network
 
-Connect your workstation to the robot as described in [Connecting a Workstation and Starting the Robot](connecting).  If you haven't connected the robot to your network yet, the robot is still connected to its own network, which is called ubiquityrobot, and your workstation is connected to that. We assume you have ssh'ed into the robot.
+Connect your workstation to the robot as described in [Connecting a Workstation and Starting the Robot](connecting).  If you haven't connected the robot to your network yet, the robot is still connected to its own network, which is called `ubiquityrobotXXXX`, and your workstation is connected to that.
 
 Before you go on, you should change the hostname of your robot, to distinguish your robot from others. Open a new terminal window, and log in to the robot with ssh:
 
@@ -39,7 +39,7 @@ Now you can log in to the robot with NEWHOSTNAME:
 
 Use pifi to list the nearby networks:
 
-```ubuntu@NEWHOSTNAME:~$ pifi list seen```
+    pifi list seen
 
 >MyNetwork   
 Neighbor's network  
@@ -47,22 +47,23 @@ Other Network
 
 We want to switch to MyNetwork, and we have now verified that it's present. So we can command:
 
-```ubuntu@NEWHOSTNAME:~$ sudo pifi add MyNetwork password```
+    sudo pifi add MyNetwork password
+
+NOTE: `MyNetwork` is SSID and `password` is password of your wireless network.
 
 Now reboot the robot again.
 
-```sudo reboot```
+    sudo reboot
 
-The robot will reboot and try to attach to the “MyNetwork” wifi network. But your workstation is not connected to “MyNetwork”, because we left it connected to ubiquityrobot.  So, on a Linux machine, connect your workstation to "MyNetwork".
+The robot will reboot and try to attach to the “MyNetwork” wifi network. But your workstation is not connected to “MyNetwork”, because we left it connected to `ubiquityrobotXXXX`.  So, on a Linux machine, connect your workstation to "MyNetwork".
 
-If your workstation is a virtual machine, it accesses the network through its host.  So to change its network attachment, you must shut it down, close the virtual machine, change the host network attachment, then start the workstation again.
+If your workstation is a virtual machine, it accesses the network through its host. So on the host, change the network from `ubiquityrobotXXXX` to "MyNetwork". Than return to the virtual machine.
 
-<!-- *{ TODO: The virtual machine does not need to be shut down, since it is bridged.  Just use the native OS.}* -->
 
 
 To test,
 
-```$ping NEWHOSTNAME.local```
+    ping NEWHOSTNAME.local
 
 The ping result shows the network address of the robot:
 
@@ -72,11 +73,11 @@ The ping result shows the network address of the robot:
 
  Press control-c to stop the pinging.
 
-If something goes wrong here, the robot may come back up in Access Point mode--that is, on the network named ubiquityrobot.  Reboot everything and start over.
+If something goes wrong here, the robot may come back up in Access Point mode--that is, on the network named `ubiquityrobotXXXX`.  Reboot everything and start over.
 
 Now ssh into the robot.
 
- ```$ ssh ubuntu@NEWHOSTNAME.local```
+    ssh ubuntu@NEWHOSTNAME.local
 
 As before:
 >The authenticity of host '10.0.0.113 (10.0.0.113)' can't be established.
@@ -85,8 +86,7 @@ Are you sure you want to continue connecting (yes/no)?
 
     yes
 
->Failed to add the host to the list of known hosts (/somepath/.ssh/known_hosts).
-ubuntu@10.0.0.113's password:
+>ubuntu@10.0.0.113's password:
 
     ubuntu
 
@@ -112,14 +112,14 @@ to change your robot's name (hostname):
 
 There is some housekeeping that you can perform at this point, to keep your robot up to date.  Begin by checking the date.
 
-```ubuntu@NEWHOSTNAME:~$ date```
+    date
  >Mon Aug 14 17:16:26 UTC 2017
 
 Now that you have the correct date you can update the robot to get changes that have been made since the robot was manufactured.
 
-```sudo apt-get update```
+    sudo apt-get update
 
-```sudo apt-get upgrade```
+    sudo apt-get upgrade
 
 This may take some time, since it may have been a while since the original image was made.
 
