@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Use A Script To Control Robot Navigation"
-permalink: python_script
+permalink: python_script_1
 ---
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
