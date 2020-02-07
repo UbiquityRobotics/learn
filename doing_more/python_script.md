@@ -7,56 +7,35 @@ permalink: python_script
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
 # Use A Script To Control Robot Navigation
-Once the robot is configured and running a navigation stack based on ceiling
-fiducials we can tell the robot where to go within the global map of the robot's
-work area. The prerequisite for this section is the section for setup of fiducials
-so you can set waypoints and goals seen in
+Once the robot is configured and running a navigation stack based on ceiling fiducials we can tell the robot where to go within the global map of the robot's work area. The prerequisite for this section is the section for setup of fiducials so you can set waypoints and goals seen in
 [**THIS LINK**](https://learn.ubiquityrobotics.com/fiducials).
 
 ## Running the Script Along with Navigation
-A python script that shows how to send new waypoint goals to move_basic is
-shown on this page. Place this text into a file we will call move_basic_demo.py.
-In one console window we need to run the navigation as discussed in prior
-paragraph but as an example that window would run this command.
+A python script that shows how to send new waypoint goals to move_basic is available [**HERE**](https://github.com/UbiquityRobotics/move_basic/tree/kinetic-devel/scripts/move_patterns.py). Copy this text into a file called move_patterns.py. We will refer to it below as "the script".
+
+You will need two console windows in order to run the script. In one console window, run the navigation stack as discussed above. As an example you would run this command:
 
     roslaunch magni_demos simple_navigation.launch
 
-Then in a second console window run the script use the following command.
+Then in a second console window we will run move_patterns.py. After the script is in a directory on the Raspberry Pi, use the following commands from the script's location to see more help or to move on the default line as long as the robot can move 1 meter ahead on the floor.
 
-    python move_basic_demo.py
+    python move_patterns.py –help
+    python move_pattern.py   
 
-## What the Script Is Doing To Command move_basic actions
-The script walks through a small table of waypoints which is a simple line on
-the map and waits for the robot to finish each movement before waiting for the
-user to hit ENTER to go to the next point. You can disable the prompt so the
-robot will navigate on it's own from higher level commands from the script by
-setting waitAtEachVertex to 0.
+## What the Script Is Doing To Command move_basic Actions
+ The script walks through a small table of waypoints which is by default a simple line on the map and waits for the robot to finish each movement before waiting for the user to hit ENTER to go to the next point.  You can disable the prompt so the robot will navigate on it's own from higher level commands from the script by setting waitAtEachVertex to 0.
 
-A simple line in the form of two X,Y points is defined and then the program will
-continuously cycle through telling the robot to go to one and then the next.
-Users can define other patterns with more points as well as use the 3 rd
-parameter in each line which is the angle the robot should assume once it
-reaches the X,Y point.
+ Other patterns can be used and you can add your own patterns.   Use this script to see how things are done and then modify it to suit your needs.
 
-The script has a scaling parameter to grow the pattern in the table and also has
-an X and Y offset in meters to have the pattern be in another location in your
-map.
+ For the default list of waypoints a simple line in the form of two X,Y points is defined and then the program will continuously cycle through telling the robot to go to one and then the next.   Users can define other patterns with more points as well as use the 3rd parameter in each line which is the angle the robot should assume once it reaches the X,Y point.
+
+The script has a scaling parameter to grow the pattern in the table and also has an X and Y offset in meters to have the pattern be in another location in your map.
 
 ## A Few Words About High Level Operations For The Script
-A **MoveBaseGoal** class is used to describe the next goal to be moved to where
-the new X and Y location as well as final orientation or 'pose' to be assumed
-once at the endpoint. We form a **SimpleActionClient** and then send the new
-goal to the move_base server which is the endpoint move_basic receives new
-goals. Then we ask our just used client interface to wait for a result from the
-move_basic server. If all goes well we have a good result and can do other
-things in the script.
-It is not my intent here to dig deeper but in short the client will send out a ROS
-message on a ROS topic and receive the result on another ROS topic. For
-details on these interactions see
-[**THIS_PAGE**](http://wiki.ros.org/move_basic).
-
+A **MoveBaseGoal** class is used to describe the next goal to be moved to where the new X and Y location as well as final orientation or 'pose' to be assumed once at the endpoint.   We form a **SimpleActionClient** and then send the new goal to the move_base server which is the endpoint move_basic receives new goals.  Then we ask our just used client interface  to wait for a result from the move_basic server.  If all goes well we have a good result and can do other things in the script.
+It is not my intent here to dig deeper but in short the client will send out a ROS message on a ROS topic and receive the result on another ROS topic.  For details on these interactions see [**THIS_PAGE**](http://wiki.ros.org/move_basic).
+<!--
 ## The Python Program itself with Comments
-
 ```
 #!/usr/bin/python
 """
@@ -203,11 +182,8 @@ if __name__ == "__main__":
   # run it
   node.run()
 ```
+-->
 ## Summary Of What Was Shown
-A simple python script was shown that sends new waypoints or destination X,Y
-locations to the robot. The robot has already had a map of the working space
-made so when it gets new goals to move it moves to those locations.
+A python script was shown that sends new waypoints or destination X,Y locations to the robot.  The robot has already had a map of the working space made and is running the some form of navigation code so when it gets new goals to move it moves to those locations.   
 
-The simple table with the 2 endpoints of a line can be grown to support any
-sort of pattern a user wants to have the robot follow. We have used an
-enhanced version of this script to make the robot move in assorted patterns for longer term tests.
+The simple table with the 2 endpoints of a line can be grown to support any sort of pattern a user wants to have the robot follow.   Take a look at the other patterns in this script to make the robot move in assorted patterns for longer term tests.  Make your own patterns in additional fixed tables to select.
