@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Camera and Sensor Installation"
+title:  "Camera and Sonar Board Installation"
 permalink: camera_sensors
 author: Alan Federman
 ---
