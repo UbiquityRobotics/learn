@@ -90,7 +90,7 @@ The Magni software must be configured to enable usage of the sonar board. You mu
 
 `sudo nano /etc/ubiquity/robot.yaml`
 
-Make an edit so the only uncommented line with `sonars:` in it is as shown below.
+Make an edit so the only uncommented line with `sonars:` in it is as shown below.  There must be a space after the colon or it will not work.
 
 `sonars: 'pi_sonar_v1'`
 
@@ -115,6 +115,13 @@ The ribbon cable is then inserted into the main Magni board as shown in the
 picture below where it will be plugged into the Sonar board as the final step.
 
 ![Magni Sonar Board Cable From Main Pc Ready](MagniSonarBoardCableFromMainPcReady.jpg)
+
+Be sure the 50 pin ribbon cable is fully inserted into both the main Magni board as well as the Sonar board.  It can be held up due to being tight or having bent pins.   Notice how far they should go into the jacks, about 5mm or so, as shown from the side in the picture below and also shown as first picture on this page.
+
+![Magni Sonar Board Cable From Main Pc Ready](Sonar50pinCableInserted.jpg)
+
+LED1 is for the wifi but if you do not see that start to blink within around 15 seconds after a fresh power up case there may be something not connected on the 50 pin cable.
+
 
 Lastly attach the cover plate with 6 M6 screws using an M4 Allen wrench. You are
 done, hooray!
