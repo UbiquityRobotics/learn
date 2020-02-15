@@ -164,42 +164,6 @@ MoveBaseGoal messages to ROS topic /move_base/goal.
 Once a move_basic goal is sent move_basic will try to complete the movement and
 then return status on another topic for success/fail of the movement.
 
-We intend to supply a demonstration python script to help users get started with
-their own applications.
+There is a demonstration python script to help users get started with sending robot positions to the move_basic action server.  The app can get the robot to move along patterns setup in tables and may be found on [**THIS_PAGE**](https://github.com/UbiquityRobotics/move_basic/blob/master/scripts/move_patterns.py)
 
 #### &larr;[back](rviz)- - - - - - - - - - [next](waypoints)&rarr;
-
-<!--
-## Running the Software
-
-If your camera points straight up instead of forward, the file /etc/ubiquity/robot.yaml
-must be edited to change the default (which is "forward"). To do this, add the following 2 lines to /etc/ubiquity/robot.yaml.
-
-    raspicam:   
-        position: 'upward'
-
-Log in to the robot from your workstation using ssh.  Then execute the following command on the robot to launch the detection and SLAM nodes:
-
-```roslaunch magni_nav aruco.launch```
-
-It should be run for the first time with at least one marker visible to the robot's camera.
-A map (this is a file of fiducial poses) is created such that the current position of the robot is the origin.
-
-## Using rviz to Monitor Map Creation
-
-Use The following command on your workstation to run the
-[robot visualization tool](http://wiki.ros.org/rviz), rviz.
-<!-- todo #### [Link here to the tutorial where we explain ROS_MASTER_URI]???
-
-```roslaunch magni_viz view_nav.launch```
-
-This will produce a display as shown below.  The bottom left pane shows the
-current camera view.  This is useful for determining if the fiducial density
-is sufficient.  The right-hand pane shows the map of fiducials as it is being
-built. Red cubes represent fiducials that are currently in view of the camera.
-Green cubes represent fiducials that are in the map, but not currently
-in the view of the camera. The blue lines show connected pairs of fiducials
-that have been observed in the camera view at the same time.  As noted above, the robustness
-of the map is increased by having a high degree of connectivity between the
-fiducials.
--->
