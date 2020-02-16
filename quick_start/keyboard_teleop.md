@@ -76,5 +76,3 @@ Please note Holonomic mode does not apply to a Magni, as it uses differential dr
 -->
 
 You can also run teleop-twist keyboard with the program running in your workstation. To do this you must connect the robot to your local WiFi network, and set up ROS on the workstation.  These are discussed under [Doing More](ix_doing_more), below.
-
-<<[back](connecting)- - - - - - - - - - [next](camera_sensors)>>
