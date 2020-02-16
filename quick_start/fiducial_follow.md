@@ -73,5 +73,3 @@ Common problems are the camera not working. If this is the case check to see if 
 `raspistill -o cam.jpg`
 
 If there are no errors the camera is working.
-
-<<[back](camera_sensors)- - - - - - - - - - [up](ix_quick_start)>>

@@ -66,5 +66,3 @@ Temporarily withdrawn.
 * help
 
 \* These commands require navigation to be operating. which was described in the section on connecting a workstation.
-
-#### &larr;[back](connecting)- - - - - - - - - - [next](keyboard_teleop)&rarr;

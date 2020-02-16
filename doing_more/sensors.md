@@ -51,7 +51,7 @@ sonars: 'pi_sonar_v1'
 Rviz can visualize these messages as cones.  There are launch files to do this in:  
 https://github.com/UbiquityRobotics/magni_robot (the source package, not the binary packages)
 
-The [move_basic node](http://wiki.ros.org/move_basic) uses the messages published by the sonar node to determine proximity to obstacles. 
+The [move_basic node](http://wiki.ros.org/move_basic) uses the messages published by the sonar node to determine proximity to obstacles.
 
 | | |
 |---|---|
@@ -63,4 +63,3 @@ The [move_basic node](http://wiki.ros.org/move_basic) uses the messages publishe
 |/pi_sonar/sonar_4|   Far left|  
 
 <!-- todo complete this page! -->
-#### &larr;[back](waypoints)- - - - - - - - - - [up](ix_doing_more)&rarr;

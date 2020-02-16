@@ -4,7 +4,7 @@ title:  "Connecting the Robot to Your Network"
 permalink: connect_network
 ---
 
-#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/) 
+#### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
 # Connecting the Robot to Your Network
 
@@ -123,4 +123,4 @@ Now that you have the correct date you can update the robot to get changes that 
 
 This may take some time, since it may have been a while since the original image was made.
 
-#### &larr;[back](ix_doing_more)- - - - - - - - - - [next](workstation_setup)&rarr;  
+  

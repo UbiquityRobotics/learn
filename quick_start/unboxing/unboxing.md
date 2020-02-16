@@ -104,5 +104,3 @@ There is also a CR2032 coin cell battery on the back of the circuit board.  This
 The top plate should be the last thing attached, using 6  M6 machine screws.   Note that the countersunk holes will be on the top and that an extra hole that is meant for an upward facing Raspberry Pi camera should be over the camera bracket.
 
 A video of the unboxing process is available:  [Video](https://youtu.be/pF38kFOl0Ic)
-
-<<[back](ix_quick_start)- - - - - - - - - - [next](logitech)>>

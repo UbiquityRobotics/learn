@@ -165,5 +165,3 @@ Once a move_basic goal is sent move_basic will try to complete the movement and
 then return status on another topic for success/fail of the movement.
 
 There is a demonstration python script to help users get started with sending robot positions to the move_basic action server.  The app can get the robot to move along patterns setup in tables and may be found on [**THIS_PAGE**](https://github.com/UbiquityRobotics/move_basic/blob/kinetic-devel/scripts/move_patterns.py)
-
-#### &larr;[back](rviz)- - - - - - - - - - [next](waypoints)&rarr;

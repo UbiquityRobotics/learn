@@ -120,7 +120,3 @@ On a console to the Magni use these commands:
 
   At this point you can drive the robot from your workstation's
   keyboard, just as in the Quick Start section called [Driving a Magni with a Keyboard](keyboard_teleop). But now, instead of running the `teleop_twist_keyboard` in the robot, you can run it in the workstation. The motion commands will be generated in the workstation rather than in the robot, and ROS will manage the communication between the two.
-
-
-
-#### &larr;[back](connect_network)- - - - - - - - - - [next](rviz)&rarr;

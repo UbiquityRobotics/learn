@@ -81,6 +81,3 @@ Now you are connected and logged in.
 ```roslaunch magni_demos simple_navigation.launch```  
 
 At this point you will be able to control the robot from the workstation keyboard or by using Robot Commander.
-
-
-#### &larr;[back](logitech)- - - - - - - - - - [next](robot_commander)&rarr;

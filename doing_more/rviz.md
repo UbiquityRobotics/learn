@@ -34,6 +34,3 @@ In the right hand window you see the steps that are carried out on the workstati
 Once RViz is loaded you can see that the user issues a go to goal target in RViz using a few mouse clicks. She first clicks **2D Nav Goal** in the menu bar, then clicks on the desired pose. The arrow that is on the field of view is the desired location and orientation.
 
 The system determines its location by looking at the fiducials in the environment, then the robot turns and drives to the target location.
-
-
-#### &larr;[back](workstation_setup)- - - - - - - - - - [next](fiducials)&rarr;

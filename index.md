@@ -35,11 +35,12 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 1.	[How to connect the robot with your network](doing_more/network_connect.md)
 2.  [How to set-up a workstation with ROS and Synchronize Time](doing_more/workstation_setup.md)
 3.	[Visualize With rviz](doing_more/rviz.md)
+3.	[Fiducials Enable You To Set Waypoints and Goals](doing_more/fiducials.md)
 3.  [Using Floor Fiducials To Guide Your Robot](floor_fiducial_follow)
-4.	[Set up Fiducials so You Can Set Waypoints and Goals](doing_more/fiducials.md)
-5. [Use Robot Commander over the network to go to waypoints](doing_more/waypoints.md)
-6.	[Try out the Sensor Package e.g. silver sensor package, gold sensor package](doing_more/sensors.md)
-7. [Raspberry Pi GPIO Lines In Use And Using Them For Your Own Needs](doing_more/GPIO_lines.md)
+5. [Use Robot Commander To Control Robot Navigation](doing_more/waypoints.md)
+6. [Use A Script To Control Robot Navigation](python_script_1)
+7. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
+6. [Install and Try Out the Sensor Package](doing_more/sensors.md)
 
 ####	Verification and Programming Your Robot
 
@@ -49,8 +50,7 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 4. [Diagnostics, Developer Tips and I2C](misc/diagnostics.md)
 5. [PC Board Revision Identification](PC_Board_RevId)
 6. [Motor Controller Board Pinouts And Power Supply Ratings](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
-6. [Use A Script To Control Robot Navigation](python_script_1)
-7. [Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)  
+7. [Raspberry Pi GPIO Lines In Use And Using Them For Your Own Needs](doing_more/GPIO_lines.md)
 8. [Running Magni in Simulation](simulation)  
 
 

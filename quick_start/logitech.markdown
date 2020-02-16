@@ -139,5 +139,3 @@ The Logitech F710 is an approved joystick controller for the Magni robot. The de
 * scale_linear     This value controls the maximum velocity the joystick will control for maximum forward or reverse joystick movement.
 
 * scale_angular    This value controls the maximum turning rate in radians per second.  Some users lower this for slower turning when the joystick is pushed all the way right or left.
-
-<<[back](unboxing)- - - - - - - - - - [next](robot_commander)>>
