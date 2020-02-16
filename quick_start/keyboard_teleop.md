@@ -47,7 +47,7 @@ The robot will respond to keystrokes as follows:
 | l | rotate clockwise |
 | m | circle backwards left |
 | , | straight back |
-| . | circle backwards left |
+| . | circle backwards right |
 | q | increase speed |
 | z | decrease speed |
 
