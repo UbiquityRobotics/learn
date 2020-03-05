@@ -11,12 +11,39 @@ permalink: verification
 This page tells how to verify basic operation of the Magni robot.
 If you have Magni Silver then the robot will have a few blue LEDs on top that will be helpful but not required to do these tests.
 
+### Power Supply And Status LED Indications
+There is a line of 4 power supply indicator LEDs and a 'STAT' or status led that are in a row to the lower left of the board.  The 4 power supply leds should all be on and the status LED default state is to be on almost all the time but have very brief 'dropout'blink that form a blink every 4 to 6 seconds.  
+
+Revision 5.0 main control boards and after have the leds in a horizontal line with the 'STAT' led to the right.  On version 4.9 and other early production units the LEDs are vertical with 'STAT' at the top of the line of leds.
+
+If the 'STAT' led is off or does not blink there is something wrong with the onboard microprocessor subsystem on the main board.
+
+Starting with version 5.2 of the main control board, MCB, there is an onboard 3.3V power supply and a blue led up near the top and a bit below the large white 'MAIN' 4-pin power jack.  This led has the label 3.3V and must be on.
+
+### The Electronic Circuit Breaker, ECB', LEDS
+Starting with main board version 5.0 there are two LEDs that indicate the ECB circuit involved is active and passing power.
+
+On the lower left of the main board a blue LED will be ON if the `Main ECB` has been enabled due to the main power switch being set to the out position. The main switch is black and is to the left on the little switch board.
+
+On the lower right of the main board a blue LED will be ON if the `ESTOP` switch is set to the out position AND the main power switch is also in the out position.
+
+### Serial Communications LEDS
+Starting with version 5.2 of the main control board, MCB, there are two leds that show if serial communications are active between the host processor (Raspberry Pi) and the MCB.   Both of these leds are located in the middle of the MCB and very high up near the white power jacks at the top of the PC board.
+
+The lower blue LED is the SOUT led and will blink rapidly when the MCB processor is active even if there is no host processor.  This LED shows the signal seen by the host processor so the level shifter must work for this to be seen.
+
+The upper blue LED is the SIN led and will blink when the host processor is actively sending commands and queries to the MCB.  This is the most important led to be blinking.   It indicates of the ROS node called /motor_node is actively controlling the MCB.
+
+
 ### Wifi HotSpot Verification
 
 If no LAN cable is attached and if the robot has not been configured to look for a WiFi OR if no WiFi can be seen then the Magni software will create a HotSpot that you can connect to with your laptop.
 
 If you have Magni Silver with the Sonar board then as the robot is powered up the LED2 (right LED on Sonar board as seen from the front) will light with dim blue light.
-After 6 or so seconds that LED will turn off. After about 16 or so seconds if WiFi is able to come up LED2 will start to blink brightly about once per second indicating that the WiFi HotSpot is up.
+After 6 or so seconds that LED will turn off. After about 16 or so seconds if WiFi is able to come up LED2 will start to blink brightly about once per second indicating that the WiFi HotSpot is up.  We are working on enhancements to be available by mid 2020 which will indicate AP mode active or that the wifi specified by pifi utility is not available and perhaps more states on this led.
+
+Starting with main control board version 5.2 there will also be a wifi led on the right visible from the front of the magni.  This led is opposite from the sonar board led so it is off when the sonar board led is on and so on.
+
 At this time if you have on your smartphone some sort of WiFi network scanner you will see a ubiquityrobotics WiFi with last 4 digits being a unique hex value.
 
 You will also see this HotSpot show up on your laptop and will be able to connect.  Read [HERE](https://learn.ubiquityrobotics.com/connecting) for more.
@@ -100,7 +127,29 @@ Now we will do a few tests and make sure the robot can move forward 1 meter and 
 
    ``-rw-rw-r-- 1 ubuntu ubuntu 1543213 Aug  4 08:18 testpicture.jpg``
 
+### Sonar Board Test:
 
+If you have installed and enabled the sonar board using the install guide viewed [HERE](https://https://learn.ubiquityrobotics.com/camera_sensors) then you can verify sonar operation in realtime once the robot has been started.
+
+
+[The sonar node](https://github.com/UbiquityRobotics/ubiquity_sonar) publishes a `sensor_msgs/Range message` for each sonar reading.  Using `rostopic echo /sonars` you can view all the sensor readings in one topic where the frame_id of `sonar_3` would be for the front facing sonar 3.  Using the table that will follow you can place boxes in front of sensors to gain confidence that each sensor is showing the distance to that object.  A thin bar may not be seen properly and you may get mixed messages for what is behind it or may see the bar so use large objects for this test.
+
+There is one separate topic for each sensor as seen in the table that follows.  
+
+
+| | |
+|---|---|
+|Topic|                Direction|
+|/pi_sonar/sonar_0|   Far right|
+|/pi_sonar/sonar_1|   45 degrees to the left|
+|/pi_sonar/sonar_2|   45 degrees to the right
+|/pi_sonar/sonar_3|   Front|
+|/pi_sonar/sonar_4|   Far left|
+
+Rviz can visualize these messages as cones.  There are launch files to do this in:  
+https://github.com/UbiquityRobotics/magni_robot (the source package, not the binary packages)
+
+The [move_basic node](http://wiki.ros.org/move_basic) uses the messages published by the sonar node to determine proximity to obstacles.
 
 ### ESTOP Testing:
 (Assumes rev 5.0 or later board. If not exception will be
