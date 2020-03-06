@@ -14,7 +14,7 @@ version (not yet available) adds an IR long range obstacle avoidance
 package. Both versions come with a Raspberry Pi Camera. The camera is
 needed for fiducial follow, partybot and waypoint navigation, and other apps you may write.
 
-<H4 style="color:red">When reconfiguring hardware disconnect the battery cables from the batteries and wait 5 minutes so no live voltage is present on the main board</H3>
+<H4 style="color:red">When reconfiguring hardware disconnect the battery cables from the batteries and wait 5 minutes so no live voltage is present on the main board</H4>
 
 ## Sonar Board Cable And Camera Assembled
 The picture below shows the Raspberry Pi camera in the **forward** orientation
