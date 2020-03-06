@@ -36,6 +36,15 @@ once you connect with a linux console as discussed above.
 
     sudo systemctl disable magni-base
 
+### Disabling The Automatic Startup of roscore
+The Ubiquity Robotics images will start up roscore by default.
+Robot Operating System, ROS, uses a core process and the Magni software platform is based on ROS.
+
+In some cases users may want to disable even the startup of roscore and you can use the line that follows to do so after connecting to a linux console.
+
+    sudo systemctl disable roscore
+
+
 ### Using The GPIO Lines
 Our image uses some of the GPIO lines to control our
 Magni robot. By default many of the lines are
