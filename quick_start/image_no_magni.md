@@ -27,7 +27,9 @@ To learn more about how to connect with the hotspot, see
 
 You can also directly hook up a LAN cable to a router you may have that offers a DHCP connection.  If you do that you can find software to scan your network for the new IP address and then use a tool such as  ssh  or  putty to connect a console.
 
-### Disabling Of The Magni Support Software
+Also Note that pi3-miniuart-bt is enabled by default, so bluetooth stability may be affected. Disable it if you are using bluetooth but not the serial port.
+
+### Disabling the Magni Support Software
 The Ubiquity Robotics images will come up and run
 the software required for a Magni robot by default.
 
@@ -35,6 +37,12 @@ To disable the Magni software you can use this line
 once you connect with a linux console as discussed above.
 
     sudo systemctl disable magni-base
+
+### The GUI
+
+The GUI is provided for debugging purposes only. The primary method of using this image is headless via SSH. Minor GUI issues probably exist, but we don't have the resources to address them.
+
+If you are trying to connect to Wifi from the GUI you must first disconnect from the ubiquityrobotXXXX network
 
 ### Disabling The Automatic Startup of roscore
 The Ubiquity Robotics images will start up roscore by default.
