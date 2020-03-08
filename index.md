@@ -44,8 +44,9 @@ The Magni robot is strong, fast, and heavy
 5. [Use Robot Commander To Control Robot Navigation](doing_more/waypoints.md)
 6. [Use A Script To Control Robot Navigation](python_script_1)
 7. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
+8. [Running Magni in Simulation](simulation)  
 
-####	Verification and Programming Your Robot
+####	Verification and Support Of Your Robot
 
 1. [Overview](programming_your_robot/overview.md)
 2. [Updating Software and Firmware](programming_your_robot/updating.md)
@@ -54,7 +55,6 @@ The Magni robot is strong, fast, and heavy
 5. [PC Board Revision Identification](PC_Board_RevId)
 6. [Motor Controller Board Pinouts And Power Supply Ratings](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
 7. [Raspberry Pi GPIO Lines In Use And Using Them For Your Own Needs](doing_more/GPIO_lines.md)
-8. [Running Magni in Simulation](simulation)  
 
 
 
