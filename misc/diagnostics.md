@@ -67,8 +67,9 @@ A list of firmware and master controller board revisions can be found [HERE](htt
 Addresses given in 7-bit form so on the I2C bus they appear shifted up by 1 bit.
 
 * MCP7940 RTC 0x6F Realtime clock for Linux when no NTP can be contacted
-* PCF8574 IO Expander 0x20 IO Expander for Ubiquity Robotics usage on 5.x boards    
-* SSD1306 OLED Disp 0x3C Near future 8 line by 15 character small display on rev 5.x boards
+* PCF8574 IO Expander 0x20 IO Expander for Ubiquity Robotics U3 on 5.x MCB.
+* PCF8574A IO Expander 0x38. We have had this loaded by accident for U3    
+* SSD1306 OLED Disp 0x3C 8 line by 15 character small display on rev 5.x boards
 
 #### Tips and Guidelines For any I2C usage On the Magni Platform:
 The I2C is the main 3.3V Raspberry Pi I2C on pins 3 and 5 with Raspberry Pi as the master.
@@ -77,3 +78,4 @@ The Rev 5.0 board has a 4-pin jack that brings out I2C and 3.3V with a ground.
 * Use the I2C ONLY from within a ROS node to avoid conflict on the I2C bus.
 * Keep the I2C lines to your device under 60mm from board to your device
 * Only use devices for short data accesses and space out your accesses by at least 50msec
+* If you stop Magni with `sudo systemctl stop magni-base.service` you can scan the I2C bus for all devices using `sudo i2cdetect -y 1` if i2c-tools was installed using apt-get. The i2c-tools package also has `i2cget` and `i2cset` so look them up if curious.

@@ -9,6 +9,10 @@ title:  "Main Menu"
 <H3 style="color:red">Warning</H3>
 
 The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or whatever you have to lift the wheels free of the floor, or run it somewhere where it can't hurt anyone or anything if it surprises you. NOT ON A TABLE TOP.
+
+The Magni robot is strong, fast, and heavy
+<H4 style="color:red">When reconfiguring hardware always remove the battery cables so no live voltage is present on the main board</H4>
+
 #### On This Page
 1. [Preface](introduction)  
 2. [Requirements](need_to_know)  
