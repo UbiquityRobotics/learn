@@ -40,7 +40,6 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 5. [Use Robot Commander To Control Robot Navigation](doing_more/waypoints.md)
 6. [Use A Script To Control Robot Navigation](python_script_1)
 7. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
-6. [Install and Try Out the Sensor Package](doing_more/sensors.md)
 
 ####	Verification and Programming Your Robot
 
