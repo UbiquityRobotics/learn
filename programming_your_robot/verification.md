@@ -6,13 +6,13 @@ permalink: verification
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-## Basic Sanity Tests To Verify Core Operation
+## Basic Tests To Verify Main MCB Board Operation
 
-This page tells how to verify basic operation of the Magni robot.
+This page tells how to verify basic operation of the Magni robot.  These tests can be used to regression test hardware and firmware changes or new production boards installed in the Magni robot.
 If you have Magni Silver then the robot will have a few blue LEDs on top that will be helpful but not required to do these tests.
 
 ### Power Supply And Status LED Indications
-There is a line of 4 power supply indicator LEDs and a 'STAT' or status led that are in a row to the lower left of the board.  The 4 power supply leds should all be on and the status LED default state is to be on almost all the time but have very brief 'dropout'blink that form a blink every 4 to 6 seconds.  
+There is a line of 4 power supply indicator LEDs and a 'STAT' or status led that are in a row to the lower left of the board.  The 4 power supply leds should all be on and the status LED default state is to be on almost all the time but have very brief 'dropout'blink that form a blink every 4 to 6 seconds.  See the [firmware_upgrade page](https://learn.ubiquityrobotics.com/firmware-upgrade) for  the expected blink rates of released firmware.
 
 Revision 5.0 main control boards and after have the leds in a horizontal line with the 'STAT' led to the right.  On version 4.9 and other early production units the LEDs are vertical with 'STAT' at the top of the line of leds.
 
@@ -21,7 +21,7 @@ If the 'STAT' led is off or does not blink there is something wrong with the onb
 Starting with version 5.2 of the main control board, MCB, there is an onboard 3.3V power supply and a blue led up near the top and a bit below the large white 'MAIN' 4-pin power jack.  This led has the label 3.3V and must be on.
 
 ### The Electronic Circuit Breaker, ECB', LEDS
-Starting with main board version 5.0 there are two LEDs that indicate the ECB circuit involved is active and passing power.
+Starting with main board version 5.0 there are two LEDs that indicate the ECB circuit involved is active and passing power.  The switch board switches must be able to control the two ECB circuits as discussed below.
 
 On the lower left of the main board a blue LED will be ON if the `Main ECB` has been enabled due to the main power switch being set to the out position. The main switch is black and is to the left on the little switch board.
 
@@ -47,6 +47,17 @@ Starting with main control board version 5.2 there will also be a wifi led on th
 At this time if you have on your smartphone some sort of WiFi network scanner you will see a ubiquityrobotics WiFi with last 4 digits being a unique hex value.
 
 You will also see this HotSpot show up on your laptop and will be able to connect.  Read [HERE](https://learn.ubiquityrobotics.com/connecting) for more.
+
+### I2C Bus Devices
+The I2C bus on the host CPU needs to be able to communicate to a few devices on the MCB.  There is an I2C excpander at addr 0x20 and RealTime clock chip at address 0x6F. If there is a OLED display loaded on P2 it is at 0x3c. We should stop the motor node then run i2cdetect which is part of i2c-tools package.
+
+    sudo systemctl stop magni-base.service
+    sudo i2cdetect -y 1
+
+The above command will output 8 lines each with 16 possible hex addresses. We want to note that it detected 20 as well as 6f.  If an OLED display is loaded you may also see 3c.   After this test you may restart magni-base service
+
+    sudo systemctl start magni-base.service
+
 
 ### Basic Movement Tests:
    - The first Test is a Firmware Only test: With no WiFi connected, have the red 'ESTOP' switch in the 'out' position and the black main power switch pushed in so the Magni is totally off. Then push the black main power switch which will turn on main power. At this point the main power switch will be in the 'out' position.
