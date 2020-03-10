@@ -20,6 +20,19 @@ If the 'STAT' led is off or does not blink there is something wrong with the onb
 
 Starting with version 5.2 of the main control board, MCB, there is an onboard 3.3V power supply and a blue led up near the top and a bit below the large white 'MAIN' 4-pin power jack.  This led has the label 3.3V and must be on.
 
+### The /diagnostics ROS topic
+When the robot is running quite a few pieces of diagnostic information can be viewed by looking at the ROS topic the motor node publishes.  If you run the following command for a few seconds they use Control-C to stop it you can browse back and see many things helpful for diagnostic work.
+
+    rostopic echo /diagnostics       
+
+After you have run this for a couple seconds and stopped it with control-C here are a few items that are valuable to know about for diagnostics
+
+   - `Battery Voltage` key shows the battery level in DC volts
+   - `Motor Power` key is True when the ESTOP is enabling wheel power
+   - `Firmware Version` shows the main board firmware version
+   - `Firmware Date` shows the date for the firmware
+   - `Firmware Options` shows hardware options if enabled
+
 ### The Electronic Circuit Breaker, ECB', LEDS
 Starting with main board version 5.0 there are two LEDs that indicate the ECB circuit involved is active and passing power.  The switch board switches must be able to control the two ECB circuits as discussed below.
 
@@ -80,25 +93,14 @@ so sometimes.
 
      RESULT: Wheels PID locked still and no jump in movements.
 
-<!--     
-   - Using twist set to speed of 0.5 meters per second do following:
-(rosrun teleop_twist_keyboard teleop_twist_keyboard.py)
-     - Do a rostopic echo /odom to a window. Verify Position X is 0.
-Use the 'i' key to rotate wheels very nearly 1 full as you can get
-       RESULT: Position x: will be very near 0.64 meters
-     - Using a stopwatch and Magni on blocks so it does not drive press
-and hold 'i' which tries to move at 1 meter/sec.
-       RESULT: 10 full turns should take 13 seconds if the Magni wheels
-are running at 1 meter per second
--->
 ### Distance and Low Speed Movement Tests:
 
 Enter keyboard movement using:
 
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py  
 
-  Press the  'z' key 12 times until the 'speed' value shows about 0.14 meters per second;
-    the 'turn' value will show about 0.25
+  Press the  'z' key about 12 times until the 'speed' value shows about 0.15 meters per second;
+    the 'turn' value will show about 0.3
 
   At this point the robot will not move because when teleop is first entered it is in same state as if the 'k' was hit.
 
@@ -108,23 +110,23 @@ Also as setup have a second window open and in that type:
 
     rosrun tf tf_echo odom base_link  
 
-This command will continually update the robot position. There will be one line that shows the translation and 3 values that are for X,Y,Z in meters.  The line will look like this:
+This command will continually update the robot position. There will be one line that shows the translation and 3 values that are for X,Y,Z in meters.  The line will look like this if the robot was powered up in it's current position:
 
     Translation: [0.000, 0.000, 0.100]   at first where X and Y are 0.000.
 
-Now we will do a few tests and make sure the robot can move forward 1 meter and could have room to rotate fully.
+Now we will do a few tests so make sure the robot has room to move forward about 1 meter and could have room to rotate fully. Because these tests are not precisely timed the distances and rotations will be only near the expected vaues.
 
-   - In the teleop window press  the **i** letter at a quick rate for 4 seconds.   This should move the Magni about 0.6 meters forward.
+   - In the teleop window press  the **i** letter key at a quick rate for 4 seconds.   This should move the Magni about 0.6 meters forward which i about one spin of each wheel since one rotation is very near 0.64 meters.
 
-   - Look at the 'Translation' line in the second tf window and the first of the 3 numbers is X and should be near 0.6 meters.
+   - Look at the 'Translation' line in the second tf window and the first of the 3 numbers is X and should be near 0.6 meters perhaps within 0.1 meter.
 
-   - In the teleop window press the ',' (comma) key at a quick rate for 4 seconds. This should move the Magni about 0.6 meters straight back to where it started.
+   - In the teleop window press the **,** (comma) key at a quick rate for 4 seconds. This should move the Magni backwards about 0.6 meters to where it started.
 
    - Look at the ‘Translation’ line in the second tf window and the first of the 3 numbers is X and should have returned to near 0.0.
 
-   - Next press the j key at a quick rate for 6 seconds so the Magni rotates 90 degrees to face left. The tf window will have the 3rd line that says 'degrees' where at this rotation the 3rd number should be near 90 for 90 degrees to the left. If it goes too far you can use quick taps to the l key to inch it back to about 90.
+   - Next press the **j** letter key at a quick rate for about 5 seconds so the Magni rotates a little more than 90 degrees to face left. The tf window will have the 3rd line that says 'degrees' where at this rotation the 3rd number should be near or just above 90 degrees to the left. If it goes too far you can use quick taps to the l key to inch it back to about 90.
 
-   - Press the l letter key at a quick rate for 6 seconds and the Magni will rotate clockwise back to the starting point and will have the 3rd line that says 'degrees' now show the 3rd number to be near 0.
+   - Press the **l** letter key at a quick rate for 5 seconds and the Magni will rotate clockwise back to the starting point and will have the 3rd line that says 'degrees' now show the 3rd number to be near 0.
 
 ### RaspiCam Camera Test:
 
