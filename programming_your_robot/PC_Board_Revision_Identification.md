@@ -71,7 +71,7 @@ THE REV 4.7 BOARD WAS A PRE-PRODUCTION BOARD FOR EVALUATION
 
 ### The Power Switch Board Revisions
 
-There were several versions of switch boards from pre-production through first shipment of units using the rev 4.9 MCB. The revision number only started to appear on the switch boards at the time of the rev 5.0 MCB boards.
+There were several versions of switch boards from pre-production through first shipment of units using the rev 4.9 MCB. The revision number only started to appear on the switch boards at the time of the rev 5.0 MCB boards. A very early board with white switches is not shown because it was never shipped for any units except early test units.
 
 * The main thing to watch for is if the board has 3 resistors it is old for rev 4.9 or earlier MCB boards.
 
@@ -81,3 +81,12 @@ There were several versions of switch boards from pre-production through first s
 
 <img src="https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/MagniIdentificationOfSwitchBoards.jpg
 " />  
+
+In order to support user needs to place the main power switch and/or the ESTOP switch in a location that is on their robot cover or perhaps is more accessible due to the customer physical additions we developed the revision 2.2 switch board seen below
+
+<img src="https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/SwitchBoardRev2p2.jpg
+" />  
+
+The revision 2.2 board has P202 seen in the back right that is wired in series with the red keycap ESTOP switch on the board.   Our plan is we will ship the connector that mates with P202 that has one piece of wire sorted to itself.  In this way P202 is shorted from the factory and a user may remove this jack and put two wires going to his own ESTOP switch for his own robot needs.
+
+On the back left you see P201 which is wired in parallel with the black main power switch.  The thought here is users who want a remote main power switch connect a connector to two wires and then leave the installed main power switch OFF or pushed in.  The customer switch will then be the power switch.
