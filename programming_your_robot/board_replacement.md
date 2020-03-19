@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  "Verification"
-permalink: verification
+title:  "Board Replacement"
+permalink: board_replacement
 ---
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)

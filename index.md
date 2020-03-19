@@ -55,7 +55,7 @@ The Magni robot is strong, fast, and heavy
 5. [PC Board Revision Identification](PC_Board_RevId)
 6. [Motor Controller Board Pinouts And Power Supply Ratings](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
 7. [Raspberry Pi GPIO Lines In Use And Using Them For Your Own Needs](doing_more/GPIO_lines.md)
-8. [Removal And Replacement Of PC Boards](programming_your_robot/board_replacement.md)
+8. [Removal And Installation Of Main PC Boards](programming_your_robot/board_replacement.md)
 
 
 
