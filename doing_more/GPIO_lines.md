@@ -3,12 +3,14 @@
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
+<H4 style="color:red">When reconfiguring hardware always remove the battery cables so no live voltage is present on the main board that also goes to P702!  Just powering off the Magni will NOT keep 28V from the high numbered pins of P702</H4>
+
 <!--  (TODO if you can do a table for
 the list of the 4 lines in text below that would help) -->
 
-There are many GPIO lines used for features of Magni that could also be re purposed for your own needs if that is required.     The most logical way to use these lines is use a custom 50-pin ribbon cable that would normally go to our Sonar board.  You could then make a custom board to attach to lines of this connector as long as you make sure the lines will not be used by the Magni software.
+There are many GPIO lines used for features of Magni that could also be re purposed for your own needs if that is required.     The most logical way to use these lines is use a custom 50-pin ribbon cable that would normally go to our Sonar board on jack P702.  You could then make a custom board to attach to lines of this connector as long as you make sure the lines will not be used by the Magni software.
 
-The first 40 pins of P702, the 50 pin Sensor Board connector, are the same pin numbers as the Raspberry Pi 40 pins.  Pins shown in the tables below are therefore used on both of the large dual row connectors on the Motor Controller Board.
+The first 40 pins of P702, the 50 pin Sensor Board connector, are the same pin numbers as the Raspberry Pi 40 pins on P701.  Pins shown in the tables below are therefore used on both of the large dual row connectors on the Motor Controller Board.
 
 This page explains the GPIO line usage and how to disable features if you need to use the lines yourself.   
 
@@ -23,18 +25,20 @@ If you do not use the Sonar board OR are willing to sacrifice the
 features these lines support for Magni Silver and Magni Gold here is the
 information required.
 
-Look for and perhaps use P704 and P705 jacks after disabling the usage
+Look for and perhaps use P702 and P701 jacks after disabling the usage
 of these by Magni.
 Normally those 2 jacks and their Magni usage AND two other GPIO pins
 used to drive LEDs that exist on the Magni ‘Sonar Board’ are controlled
-by Magni.
+by Magni.  The first 40 pins of both jacks are identical but notice carefully each pin one as they are not aligned and it is tricky because the Raspberry Pi is plugged in to P701 making the pin numbering a bit 'upside down'.
 
-| GPIO  | RasPi Pin | Default Magni Usage |
-| ------------- |------------- | --------|
-| 5  | 29 | Status LED on the sonar board |
-| 25 | 22 | Status LED on the sonar board |
-| 6  | 31 | Goes to P704 pin 2. Does a shutdown when grounded. This goes to a pushbutton on Sonar Board neqar 50 pin connector. |
-| 13 | 33 | Goes to P705 pin 2. Used for PiFi and goes to a pushbutton on the Sonar Board |
+| GPIO  | RasPi Pin |P702 Pin| Default Magni Usage |
+| ------------- |------------- | -------- | --------|
+| 5  | 29 | 29 | Status LED on the sonar board |
+| 25 | 22 | 22 | Status LED on the sonar board |
+| 6  | 31 | 31 | Goes to P704 pin 2. Does a shutdown when grounded. This goes to a pushbutton on Sonar Board neqar 50 pin connector. |
+| 13 | 33 | 33 | Goes to P705 pin 2. Used for PiFi and goes to a pushbutton on the Sonar Board |
+
+<H4 style="color:red">Always remove the battery cables so no live voltage is present on P702!</H4>
 
 To use these as GPIO you must edit /etc/pifi/pifi.conf:  
 * Change the line for status_led to be set to None like this  
@@ -55,8 +59,10 @@ purposes and you should also configure them as your application requires.
 
 GPIO lines 6 and 13 go to some 3-pin jacks, P704 and P705, where pin 1
 is ground and short to pin 2 to ‘close’ or make that GPIO line low.
-Pin 3 of those jacks is 3.3 volts if you need that for your sensors. Do
-not short this to ground!
+
+Pin 3 of both jacks is 3.3 volts on the Raspberry Pi if you need that for your sensors keep the current usage low.   Do not short this pin to ground!
+Starting with MCB rev 5.2 there is an onboard 3.3V regulator so the MCB can power some of the 3.3V chips like serial line buffers and the OLED display without use of a Raspberry Pi supply.  The onboard 3.3V regulator does not connect to the pin 3 lines of either jack.
+
 Pin 2 of P704 and P705 goes directly to Raspberry PI GPIO so do NOT
 connect to 5V because it is for 3.3 volt maximum input.
 
@@ -73,7 +79,7 @@ In the robot.yaml file be sure the sonars: line is set to  None as below and if 
 sonars: None  
 \# sonars: 'pi_sonar_v1'
 
-The Sonar Board uses many GPIO lines that are shown the table below:
+The Sonar Board uses many GPIO lines that are shown the table below and again the pin numbers on P701 and P702 are the same for the first 40 pins.
 
 | GPIO  | Pin | Comment |
 | ---------- | ------------- | ------ |
