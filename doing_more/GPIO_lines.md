@@ -3,7 +3,7 @@
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-<H4 style="color:red">When reconfiguring hardware always remove the battery cables so no live voltage is present on the main board that also goes to P702!  Just powering off the Magni will NOT keep 28V from the high numbered pins of P702</H4>
+<H4 style="color:red">You must remove the battery cables when working on the boards because live battery voltage is on the board and on P702!  Powering off the Magni will not prevent the live voltages!</H4>
 
 <!--  (TODO if you can do a table for
 the list of the 4 lines in text below that would help) -->
@@ -25,7 +25,7 @@ If you do not use the Sonar board OR are willing to sacrifice the
 features these lines support for Magni Silver and Magni Gold here is the
 information required.
 
-Look for and perhaps use P702 and P701 jacks after disabling the usage
+You can use P704 and P705 jacks which have one GPIO each after disabling the usage
 of these by Magni.
 Normally those 2 jacks and their Magni usage AND two other GPIO pins
 used to drive LEDs that exist on the Magni ‘Sonar Board’ are controlled
@@ -33,7 +33,7 @@ by Magni.  The first 40 pins of both jacks are identical but notice carefully ea
 
 | GPIO  | RasPi Pin |P702 Pin| Default Magni Usage |
 | ------------- |------------- | -------- | --------|
-| 5  | 29 | 29 | Status LED on the sonar board |
+| 5  | 29 | 29 | WiFi Status LED on the sonar board and rev 5.2 MCB |
 | 25 | 22 | 22 | Status LED on the sonar board |
 | 6  | 31 | 31 | Goes to P704 pin 2. Does a shutdown when grounded. This goes to a pushbutton on Sonar Board neqar 50 pin connector. |
 | 13 | 33 | 33 | Goes to P705 pin 2. Used for PiFi and goes to a pushbutton on the Sonar Board |
@@ -46,7 +46,7 @@ To use these as GPIO you must edit /etc/pifi/pifi.conf:
 * Change the line for button_device_name to None like this
 ```button_device_name: None```
 
-Pifi should still work but you would not get LED indication or be able
+Pifi should still work but you would not get WiFi LED indication or be able
 to use the button that is used with PiFi
 
 To be able to drive the 2 LEDs on the sonar board yourself or just use
