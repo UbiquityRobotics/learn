@@ -40,11 +40,17 @@ by Magni.  The first 40 pins of both jacks are identical but notice carefully ea
 
 <H4 style="color:red">Always remove the battery cables so no live voltage is present on P702!</H4>
 
-To use these as GPIO you must edit /etc/pifi/pifi.conf:  
+To use these as GPIO you must edit two files as root
+Edit /etc/pifi/pifi.conf:  
 * Change the line for status_led to be set to None like this  
 ```status_led: None```  
 * Change the line for button_device_name to None like this
 ```button_device_name: None```
+
+Edit /boot/config.txt  (be very careful to ONLY change the one line)
+Remove the one line shown below and save the file
+* ```dtoverlay=ubiquity-led-buttons```
+
 
 Pifi should still work but you would not get WiFi LED indication or be able
 to use the button that is used with PiFi
