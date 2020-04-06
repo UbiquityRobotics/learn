@@ -1,4 +1,10 @@
 
+---
+layout: default
+title: "Magni 4WD Assembly Procedure"
+permalink: magni-4wd-Assembly
+---
+
 # Magni 4 Wheel Drive Assembly
 
 The chassis is composed of  4 main compartments that are composed of
