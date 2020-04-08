@@ -13,25 +13,25 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 The Magni robot is strong, fast, and heavy
 <H4 style="color:red">When reconfiguring hardware always remove the battery cables so no live voltage is present on the main board</H4>
 
-#### On This Page
-1. [Preface](introduction)  
-2. [Requirements](need_to_know)  
-3. [Magni Controls](magni_key)  
-4. [Troubleshooting](misc/troubleshooting.md)
+#### High Level Overviews
+1. [Introduction To The Magni Platform](introduction)  
+2. [Requirements: Batteries, Network, Workstation use & Configuration ](need_to_know)  
+3. [Magni Power Controls](magni_key)  
+4. [Basic Troubleshooting](misc/troubleshooting.md)
 
 #### Quick Start
 
 1.  [If you don't have your robot yet](quick_start/no_robot.md)
-1.  [If you are using our Raspberry Pi image on its own without a Magni](quick_start/image_no_magni.md)
-1.	[Unboxing, putting in batteries and charging them](quick_start/unboxing/unboxing.md)
-2.	[How to drive with optional Logitech controller](quick_start/logitech.markdown)
-3.  [Connecting a workstation and starting the Robot](quick_start/connecting.md)
-4.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/Robot_Commander_AP.markdown)
+2.  [If you are using our Raspberry Pi image on its own without a Magni](quick_start/image_no_magni.md)
+3.	[Unboxing, putting in batteries and charging them](quick_start/unboxing/unboxing.md)
+4.	[How to drive with optional Logitech controller](quick_start/logitech.markdown)
+5.  [Connecting a workstation and starting the Robot](quick_start/connecting.md)
+6.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/Robot_Commander_AP.markdown)
 <!--- this also works
 <a class="page-link" href="https://ubiquityrobotics.github.io/learn/robotcommander">How to control the robot using Robot Commander</a>-->
-5.	[Driving a robot with a keyboard](quick_start/keyboard_teleop.md)
-6.	[How to set up cameras and sonar board](quick_start/camera_sensor/installation.md)
-7.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
+7.	[Driving a robot with a keyboard](quick_start/keyboard_teleop.md)
+8.	[How to set up cameras and sonar board](quick_start/camera_sensor/installation.md)
+9.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
 
 
 ####	Doing More With Your Robot
@@ -46,16 +46,17 @@ The Magni robot is strong, fast, and heavy
 7. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
 8. [Running Magni in Simulation](simulation)  
 
-####	Verification and Support Of Your Robot
+####	Support and Verification Of Your Robot
 
-1. [Overview](programming_your_robot/overview.md)
-2. [Updating Software and Firmware](programming_your_robot/updating.md)
-3. [Basic Verification Of Operation](verification)
-4. [Diagnostics, Developer Tips and I2C](misc/diagnostics.md)
-5. [PC Board Revision Identification](PC_Board_RevId)
-6. [Motor Controller Board Pinouts And Power Supply Ratings](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
-7. [Raspberry Pi GPIO Lines In Use And Using Them For Your Own Needs](doing_more/GPIO_lines.md)
-8. [Removal And Installation Of Main PC Boards](programming_your_robot/board_replacement.md)
+1. [Magni ROS Usage](programming_your_robot/overview.md)
+2. [Burning a fresh Image, Updating Software and updating Firmware](programming_your_robot/updating.md)
+3. [Basic Troubleshooting](misc/troubleshooting.md)
+4. [Basic Verification Of Operation](verification)
+5. [Diagnostics, Developer Tips and I2C](misc/diagnostics.md)
+6. [PC Board Revision Identification](PC_Board_RevId)
+7. [Motor Controller Board Pinouts And Power Supply Ratings](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
+8. [Raspberry Pi GPIO Lines In Use And Using Them For Your Own Needs](doing_more/GPIO_lines.md)
+9. [Removal And Installation Of Main PC Boards](programming_your_robot/board_replacement.md)
 
 
 
