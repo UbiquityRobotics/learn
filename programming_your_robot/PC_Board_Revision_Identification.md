@@ -6,19 +6,24 @@ permalink: PC_Board_RevId
 #### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
 ## PC Board Revision Identification
-version: 20191103
+This page describes how to identify Magni PC board revisions of the ```Main Control Board (MCB)``` and the ```switch board``` for versions were the rev does not print on the board or is very hard to see due to poor contrast.
 
 ### Main Control Board Identification
 
-All of the Main Control Boards, also called MCB, have a version number on the top of the board that is printed along the left edge of the PC board on the top copper layer.   Because prior to rev 5.2 the version number is very hard to read we will supply pictures to help with board version identification.
+All of the Main Control Boards, also called MCB, have a version number on the top of the board that is printed along the left edge of the PC board on the top copper layer.   
 
-Starting with revision 5.1 the rev was shown on the top silkscreen under the large text of Ubiquity Robotics.  This text is normally under the Raspberry Pi controller and so was hard to see.
+Because prior to rev 5.2 the version number is very hard to read we will supply pictures to help with board version identification prior to rev 5.2
 
-Starting with version 5.2 the large text for the board revision will be up to mid left of the board and printed in bright white silkscreen.  So starting with version 5.2 identification will be quite easy.
+A detailed list of main MCB hardware changes as well as firmware revisions can be found [here](https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Firmware_and_Hardware_Revisions.md).
 
-A detailed list of MCB hardware changes as well as firmware revisions can be found [here](https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Firmware_and_Hardware_Revisions.md).
+#### Revision 5.2 Main Control boards
 
-### Revision 5.1 Main Control Board
+Starting with version 5.2 the large text for the board revision will be up to mid left of the board and printed in bright white silkscreen.  This page will not describe rev 5.2 boards because the revision is very easy to see.
+
+
+#### Revision 5.1 Main Control Board
+
+Starting with revision 5.1 the rev is also shown on the top silkscreen under the large text of Ubiquity Robotics.  This text is normally under the Raspberry Pi controller and so was hard to see.
 
 The following items identify a rev 5.1 board.
 
@@ -31,7 +36,7 @@ The following items identify a rev 5.1 board.
 <img src="https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/MagniIdentificationForMcbRev5p1.jpg
 " />
 
-### Revision 5.0 Main Control Board
+#### Revision 5.0 Main Control Board
 
 These items identify a rev 5.0 board besides the top copper board rev in bottom left.
 
@@ -44,7 +49,7 @@ These items identify a rev 5.0 board besides the top copper board rev in bottom 
 <img src="https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/MagniIdentificationForMcbRev5p0.jpg
 " />  
 
-### Revision 4.9 Main Control Board
+#### Revision 4.9 Main Control Board
 
 These items identify a rev 4.9 board besides the top copper board rev in bottom left.
 
@@ -55,7 +60,7 @@ These items identify a rev 4.9 board besides the top copper board rev in bottom 
 <img src="https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/MagniIdentificationForMcbRev4p9.jpg
 " />  
 
-### Revision 4.7 Main Control Board
+#### Revision 4.7 Main Control Board
 
 These items identify a rev 4.7 board besides the top copper board rev in bottom left.
 THE REV 4.7 BOARD WAS A PRE-PRODUCTION BOARD FOR EVALUATION
@@ -69,9 +74,24 @@ THE REV 4.7 BOARD WAS A PRE-PRODUCTION BOARD FOR EVALUATION
 <img src="https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/MagniIdentificationForMcbRev4p7.jpg
 " />  
 
+
 ### The Power Switch Board Revisions
 
-There were several versions of switch boards from pre-production through first shipment of units using the rev 4.9 MCB. The revision number only started to appear on the switch boards at the time of the rev 5.0 MCB boards. A very early board with white switches is not shown because it was never shipped for any units except early test units.
+There were several versions of switch boards from pre-production through first shipment of units using the rev 4.9 MCB. The revision number only started to appear on rev 2.0 switch boards shipped at the time of the rev 5.0 MCB boards.
+
+
+#### Switch Boards With Remote Switch Connectors
+
+In order to support user needs to place the main power switch and/or the ESTOP switch in a location that is on their robot cover or perhaps is more accessible due to the customer physical additions we developed the revision 2.2 switch board seen below
+
+<img src="https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/SwitchBoardRev2p2.jpg
+" />  
+
+The revision 2.2 board has P202 seen in the back right that is wired in series with the red keycap ESTOP switch on the board.   Our plan is we will ship the connector that mates with P202 that has one piece of wire sorted to itself.  In this way P202 is shorted from the factory and a user may remove this jack and put two wires going to his own ESTOP switch for his own robot needs.
+
+On the back left you see P201 which is wired in parallel with the black main power switch.  The thought here is users who want a remote main power switch connect a connector to two wires and then leave the installed main power switch OFF or pushed in.  The customer switch will then be the power switch.
+
+#### Switch Boards To Support Rev 5.x MCB Boards
 
 * The main thing to watch for is if the board has 3 resistors it is old for rev 4.9 or earlier MCB boards.
 
@@ -82,11 +102,6 @@ There were several versions of switch boards from pre-production through first s
 <img src="https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/MagniIdentificationOfSwitchBoards.jpg
 " />  
 
-In order to support user needs to place the main power switch and/or the ESTOP switch in a location that is on their robot cover or perhaps is more accessible due to the customer physical additions we developed the revision 2.2 switch board seen below
+#### Very early pre-production Switch boards
 
-<img src="https://ubiquityrobotics.github.io/learn/programming_your_robot/assets/SwitchBoardRev2p2.jpg
-" />  
-
-The revision 2.2 board has P202 seen in the back right that is wired in series with the red keycap ESTOP switch on the board.   Our plan is we will ship the connector that mates with P202 that has one piece of wire sorted to itself.  In this way P202 is shorted from the factory and a user may remove this jack and put two wires going to his own ESTOP switch for his own robot needs.
-
-On the back left you see P201 which is wired in parallel with the black main power switch.  The thought here is users who want a remote main power switch connect a connector to two wires and then leave the installed main power switch OFF or pushed in.  The customer switch will then be the power switch.
+In early prototypes there were switch boards with large white switches that had green leds in them to show the state.  These should not be in production units unless some sort of replacement had to happen early in first production units.
