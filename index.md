@@ -10,8 +10,9 @@ title:  "Main Menu"
 
 The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or whatever you have to lift the wheels free of the floor, or run it somewhere where it can't hurt anyone or anything if it surprises you. NOT ON A TABLE TOP.
 
-The Magni robot is strong, fast, and heavy
-<H4 style="color:red">When reconfiguring hardware always remove the battery cables so no live voltage is present on the main board</H4>
+<H4 style="color:red">Always remove the red battery cable for any work on boards to remove live voltage from the main board</H4>
+
+You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) for assistance or more information and tips
 
 #### High Level Overviews
 1. [Introduction To The Magni Platform](introduction)  
