@@ -5,9 +5,9 @@ permalink: diagnostics
 ---
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-## Diagnostics
+# Diagnostics And Technical Details
 
-### Sanity Checks
+## Sanity Checks
 * When magni is on, the wheels should have strong resistance to movement.  
 
 * The command `sudo systemctl status magni-base`should show that the magni-base service is up and running
@@ -24,15 +24,21 @@ Instructions for joining your local area network are in the same place.
 
   This should show you various information about the battery. If the battery voltage is somewhere between 21-28V that would be normal. Obviously the lower the voltage the less charge the batteries have.
 
-### Handy Tips for Developers
+## Handy Tips for Developers
 
-* The important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`. N.B. This file may be rewritten when the base is upgraded, as by apt=get.
+* The main config file for enabling the raspicam camera and sonars and more can be edited as root and is `/etc/ubiquity/robot.yaml`  Details on this are located in the sections discussing camera and sonars and other sections.
+
+* Another important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`. N.B. This file will be rewritten when the base is upgraded, as by apt=get.  The most likely things a user would change are being moved to the above robot.yaml file if not already there.
+
+* To find the firmware version while the system is running run this then stop
+    `rostopic echo /diagnostics`
+  In the busy output the firmware revision and if recent code the daycode will be in the /diagnostics topic
 
 * To disable magni startup: `sudo systemctl disable magni-base` and reboot so magni-base will be inactive.
 
     To get back to normal behavior you will need later a `sudo systemctl enable magni-base` and then a reboot.   
 
-* To find the firmware version: when the robot is idle,  
+* To find the firmware version when  magni-base is stopped
     `rosrun ubiquity_motor probe_robot -f`  
     For even more fun try **-a** instead of **-f**.
 
@@ -54,15 +60,34 @@ This invokes the ROS controller_manager; for more detail see `wiki.ros.org/contr
 
 * Much magni software will be found in `/opt/ros/kinetic/share/magni_*`` In particular, magni_demos/launch has ROS launch files.
 
-### Motor Controller Board Pinouts
+## Motor Controller Board Pinouts
 
 The pinouts for the many connectors on the main Motor Controller Board can be found [HERE](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf).
 
-### Motor Controller Revisions
+## Motor Controller Revisions
+
+You can see and download the released MCB board firmware revisions [HERE](https://learn.ubiquityrobotics.com/firmware-upgrade)
 
 A list of firmware and master controller board revisions can be found [HERE](https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Firmware_and_Hardware_Revisions.md).
 
-### Guidelines for Usage Of The I2C Bus
+## The MCB Serial Protocol and Commands
+A baud rate of 38400 is used with one stop bit for communications with between the host cpu (normally raspberry Pi) and the MCB, Motor Control Board.
+
+The Motor Control Board, sometimes called main control board, uses a protocol where a packet with checksum is sent and if a reply is required the reply will come back in the same binary protocol.
+
+By default the raspberry pi default host cpu single serial port on the 40 pin connector.  The MCB constantly transmits status and this goes to the 40 pin connector pin 10 which is the host Receive.  The raspberry pi host sends commands on it's Transmit using 3.3V signals and this arrives at the MCB on pin 8 of the 40 pin connector.
+
+Although the MCB sends status immediately on power up the host takes sometimes a minute or so to start all the nodes and then start sending commands to the MCB.  On revision 5.2 and later boards there are two blue leds that show both the directions of serial traffic.  Magni will not really be running till both of these are seen to be blinking very fast.
+
+For MCB boards prior to revision 5.2 the MCB serial conversion circuits required a 3.3V power supply to appear on pin 1 of the 40 pin connector.
+
+#### MCB Serial Protocol Details
+For details see  [The Magni Serial Protocol Spec](https://https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Serial_Protocol.md)
+
+#### Standalone Test Program To Control The Magni_MCB
+A standalone test program used in our tests and development.  You can get the source to this program on github  [HERE](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/scripts/test_motor_board.py)
+
+## Guidelines for Usage Of The I2C Bus
 #### The I2C devices Ubiquity Robotics reserves:
 Addresses given in 7-bit form so on the I2C bus they appear shifted up by 1 bit.
 
