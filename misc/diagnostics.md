@@ -82,7 +82,7 @@ Although the MCB sends status immediately on power up the host takes sometimes a
 For MCB boards prior to revision 5.2 the MCB serial conversion circuits required a 3.3V power supply to appear on pin 1 of the 40 pin connector.
 
 #### MCB Serial Protocol Details
-For details see  [The Magni Serial Protocol Spec](https://https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Serial_Protocol.md)
+For details see  [The Magni Serial Protocol Spec](https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Serial_Protocol.md)
 
 #### Standalone Test Program To Control The Magni_MCB
 A standalone test program used in our tests and development.  You can get the source to this program on github  [HERE](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/scripts/test_motor_board.py)
