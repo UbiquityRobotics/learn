@@ -240,3 +240,46 @@ RESULT: The robot will return to stopped state with wheels actively locked.
 RESULT: Robot should be operational after the motor node starts (takes 15 or more seconds to start).
 
 For re-connect of serial it will start back up in a second or less.
+
+## Built In Selftest
+
+The robot is able to test some of it's own subsystems.  This ability is most capable starting with MCB 5.2 and will be first introduced in firmware version v36.
+
+The results of the selftest will be available as status bits in a register of the MCB board and many of the tests have the ability to show up as blink codes on the `status`  led should the error be detected.
+
+The blink codes will be shown by the status led goes dark for a half second then a series of 2 to 4 long and short blinks occur followed by another half second of darkness before normal blinking returns.  If a selftest fails with more than one error only the one considered the most important is visually seen on the LED.
+
+Here is the table of blink codes
+
+|  Blink Code | Error Description |
+|-------------------------|----------------------|
+|  Long Short Short Short |  Low Battery voltage |
+|  Short Long Long Short  |  5V main or 12V main power error |
+|  Long Short Short Long  |  5V Aux or 12V Aux power error |
+|  Long Long              |  Motor Test Failed  |
+
+### Default Power on Selftest
+
+There will be a simple set of checks to look at the power supply levels every time the robot is started for any MCB of version 5.2 or later.  If any of the 5V or 12V power supplies are not functional an error will result.
+
+If the main battery is getting low an error will result but the robot will be allowed to start.  The main battery test will work on all version of the MCB.
+
+You can force the main power test fail code by connecting the TP4 testpoint to ground through a 4.7k ohm resistor as the test runs.
+
+You can force the aux power test to fail by connecting the TP3 testpoint to ground through a 4.7k ohm resistor.
+
+### The Motor And Wheel Encoder Test
+A test of the two drive wheels can be enabled by connecting TP4 to ground as the MCB is powered on.  The drive test is testing wheel sensitivity as well and to run properly the robot front wheels should not be on the ground so we suggest a block of wood or other object be placed under the front of the robot so the wheels do not touch the ground when this test is run.  Both wheels will turn a small amount one way and then another way in this short 8 second test.
+
+You can force this test to fail by holding back the wheels with reasonable force as this test runs which will force the blink code of  ```Long Long```
+
+### The Runtime Battery Low TEST
+Every 45 seconds as the robot runs the main battery will be checked and if the battery supply drops to 22.2 volts a low battery condition will be detected and show up as an LED blink code of  ```Long Short Short Short```
+The threshold for this test is settable in firmware but the feature to set it using the host has not been implemented as of April 2020.
+
+### Programatically Running Selected Parts Of the selftest
+Support for selection of one or more of the selftests to be run is done through some new registers in the firmware. Register with hex address 0x3b can request tests and register with hex address 0x3c will report results.   
+
+In order to run these tests the main host code must be stopped first using ```sudo systemctl stop magni-base``` and then a new version of a python test tool in the ubiquity_motor repository in the scripts folder which is called ```test_motor_board.py```.  This script is not distributed yet but once available can be used to run 1 or more tests and report the results.  More will appear here once it is supported.
+
+We hope to support tests in the future through more standard ROS mechanisms.
