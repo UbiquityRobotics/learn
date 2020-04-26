@@ -18,7 +18,9 @@ Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and cust
 
 ### Batteries
 
-The robot ships by air worldwide. The batteries are not included in order to keep shipping costs down, as they are are difficult to ship worldwide and safety restrictions vary by destination. The Lead Acid batteries are easy to source locally. Another advantage of this is that, as the robot accepts different battery sizes, the user can select batteries depending on whether they prefer a long-endurance heavier robot or a short- endurance lighter robot. In short you need to find your own batteries to put in the robot and these are commonly available online (https://www.batterysharks.com/) or in local stores that supply products for scooters, wheelchairs, uninterupped power supply systems or even automotive.
+The robot ships by air worldwide. The batteries are not included in order to keep shipping costs down, as they are are difficult to ship worldwide and safety restrictions vary by destination. The recommended lead acid batteries are easy to source locally.
+
+An added advantage of not including batteries is that the robot accepts different battery sizes so the user can select batteries depending on whether they prefer a long-endurance heavier robot or a short- endurance lighter robot. In short you need to find your own batteries to put in the robot and these are commonly available online (https://www.batterysharks.com/) or in local stores that supply products for scooters, wheelchairs, uninterupped power supply systems or even automotive.
 
 <H4 style="color:red">AT ALL TIMES IF RUNNING OR CHARGING THE BATTERY VOLTAGE CONNECTED TO THE Main BOARD MUST REMAIN 30.0V OR LESS.</H4>
 
@@ -40,9 +42,9 @@ The provided charger is specified for lead acid batteries. We provide foam inser
 
 We ship Magni with a foam cut-out that nicely holds two 1270 format Lead Acid batteries.   Hopefully this was not disguarded when unpacking.
 
-The floor of the battery compartment is always at least 205mm x 25.6mm.  Due to manufacturing tolerances it may be larger but that cannot be guaranteed.
+The floor of the battery compartment is always at least 205mm x 258mm.  Due to manufacturing tolerances it may be larger but that cannot be guaranteed.
 
-From the floor to the top of the top rails on the side we have 135mm of height.  Batteries can go up taller to the top flat metal plate and that would be a height of 180mm.  These measurement are intentionally meant to avoid trying to get so close on a mm of clearance as our manufacturing cannot guarantee mm specs.
+From the floor to the top of the top rails on the side we have 135mm of height.  Batteries can go up taller to the top flat metal plate and that would be a height of 184mm.  These measurement are intentionally meant to avoid trying to get so close on a mm of clearance as our manufacturing cannot guarantee mm specs.
 
 
 #### Other information That May Help Battery Selection
