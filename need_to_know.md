@@ -18,7 +18,13 @@ Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and cust
 
 ### Batteries
 
-The robot ships by air worldwide. The batteries are not included in order to keep shipping costs down, as they are are difficult to ship worldwide but are easy to source locally. Another advantage of this is that, as the robot accepts different battery sizes, the user can select batteries depending on whether they prefer a long-endurance heavier robot or a short- endurance lighter robot. In short you need to find your own batteries to put in the robot and these are commonly available online (https://www.batterysharks.com/) or in local stores that supply products for scooters, wheelchairs, uninterupped power supply systems or even automotive. The robot requires 2X 12V batteries and typically we recommend either:
+The robot ships by air worldwide. The batteries are not included in order to keep shipping costs down, as they are are difficult to ship worldwide and safety restrictions vary by destination. The Lead Acid batteries are easy to source locally. Another advantage of this is that, as the robot accepts different battery sizes, the user can select batteries depending on whether they prefer a long-endurance heavier robot or a short- endurance lighter robot. In short you need to find your own batteries to put in the robot and these are commonly available online (https://www.batterysharks.com/) or in local stores that supply products for scooters, wheelchairs, uninterupped power supply systems or even automotive.
+
+<H4 style="color:red">AT ALL TIMES IF RUNNING OR CHARGING THE BATTERY VOLTAGE CONNECTED TO THE Main BOARD MUST REMAIN 30.0V OR LESS.</H4>
+
+#### Specific Qualified Lead Acid Batteries
+
+The robot requires 2X 12V lead acid style batteries and typically we recommend one of the choices in this section.
 
 1250 or a 1255 sized battery. Typical capacity 4-6 Ah capacities provides around 4 hours of endurance. Used when portability of the robot is at a premium - for example if you are travelling by air with the robot.
 
@@ -26,7 +32,24 @@ The robot ships by air worldwide. The batteries are not included in order to kee
 
 12350 size. Typical capacity - 30-35 Ah usually much bigger (and heavier) than most applications demand - recommended only for those who must have extraordinary endurance - typicaly 24 hours or more of continuous use. This sized battery makes the robot sufficiently heavy that it will be difficult for most users to lift.
 
-In all cases we recommend a non-spill-able, deep cycle, sealed lead acid battery of either a Gel type or AGM type - although the robot can accept any type of battery pack with a voltage in the range of 21V - 30V, the provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
+In all cases we recommend a non-spill-able, deep cycle, sealed lead acid battery of either a Gel type or AGM type - although the robot can accept any type of battery pack with a voltage in the range of 22.5V - 30V.
+
+The provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
+
+#### The Size Of The Battery Compartment
+
+We ship Magni with a foam cut-out that nicely holds two 1270 format Lead Acid batteries.   Hopefully this was not disguarded when unpacking.
+
+The floor of the battery compartment is always at least 205mm x 25.6mm.  Due to manufacturing tolerances it may be larger but that cannot be guaranteed.
+
+From the floor to the top of the top rails on the side we have 135mm of height.  Batteries can go up taller to the top flat metal plate and that would be a height of 180mm.  These measurement are intentionally meant to avoid trying to get so close on a mm of clearance as our manufacturing cannot guarantee mm specs.
+
+
+#### Other information That May Help Battery Selection
+
+We are looking into solutions that perhaps in the future may be able to support  LiFePO4 battery chemistry but we have not determined if they meet the always under 30.0V limit even when on charger and fully charged.   There are many lithium solutions that would be over 30.0V and those absolutely cannot be used.   
+
+The stock battery charger we supply is ONLY FOR LEAD ACID batteries and will NOT work and in fact may be dangerous for other battery technologies.
 
 
 ### Communications
