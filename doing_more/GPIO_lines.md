@@ -20,13 +20,13 @@ GPIO lines not listed on this page are available for your own usage without any 
 ## GPIO Lines Used For Status LED and Switches
 
 There are two GPIO inputs used for switches and two GPIO outputs used to
-drive LEDs on the Sonar Board.
+drive LEDs on the Sonar Board.   The two GPIO input lines intended to be used for switches on the Sonar board appear on two 3-pin jacks on the MCB for P704 and P705.  
+
 If you do not use the Sonar board OR are willing to sacrifice the
-features these lines support for Magni Silver and Magni Gold here is the
-information required.
+features for two of the inputs and two of the outputs for leds for Magni Silver and Magni Gold here is the information required.
 
 You can use P704 and P705 jacks which have one GPIO each after disabling the usage
-of these by Magni.
+of these by Magni because by default they are for two switches on the Sonar board.
 Normally those 2 jacks and their Magni usage AND two other GPIO pins
 used to drive LEDs that exist on the Magni ‘Sonar Board’ are controlled
 by Magni.  The first 40 pins of both jacks are identical but notice carefully each pin one as they are not aligned and it is tricky because the Raspberry Pi is plugged in to P701 making the pin numbering a bit 'upside down'.
@@ -35,7 +35,7 @@ by Magni.  The first 40 pins of both jacks are identical but notice carefully ea
 | ------------- |------------- | -------- | --------|
 | 5  | 29 | 29 | WiFi Status LED on the sonar board and rev 5.2 MCB |
 | 25 | 22 | 22 | Status LED on the sonar board |
-| 6  | 31 | 31 | Goes to P704 pin 2. Does a shutdown when grounded. This goes to a pushbutton on Sonar Board neqar 50 pin connector. |
+| 6  | 31 | 31 | Goes to P704 pin 2. Does a shutdown when grounded. This goes to a pushbutton on Sonar Board near 50 pin connector. |
 | 13 | 33 | 33 | Goes to P705 pin 2. Used for PiFi and goes to a pushbutton on the Sonar Board |
 
 <H4 style="color:red">Always remove the battery cables so no live voltage is present on P702!</H4>
