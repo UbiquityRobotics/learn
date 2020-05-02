@@ -147,17 +147,17 @@ If you have installed and enabled the sonar board using the install guide viewed
 
 [The sonar node](https://github.com/UbiquityRobotics/ubiquity_sonar) publishes a `sensor_msgs/Range message` for each sonar reading.  Using `rostopic echo /sonars` you can view all the sensor readings in one topic where the frame_id of `sonar_3` would be for the front facing sonar 3.  Using the table that will follow you can place boxes in front of sensors to gain confidence that each sensor is showing the distance to that object.  A thin bar may not be seen properly and you may get mixed messages for what is behind it or may see the bar so use large objects for this test.
 
-There is one separate topic for each sensor as seen in the table that follows.  
+There is one separate topic for each sensor as seen in the table that follows. This table also has the jack number and 50-pin connector pins for echo and trigger  
 
 
-| | |
-|---|---|
-|Topic|                Direction|
-|/pi_sonar/sonar_0|   Far right|
-|/pi_sonar/sonar_1|   45 degrees to the left|
-|/pi_sonar/sonar_2|   45 degrees to the right
-|/pi_sonar/sonar_3|   Front|
-|/pi_sonar/sonar_4|   Far left|
+| | | | | |
+|---|---|---|---|---|
+|Topic|     Direction| Jack | Trig Pin | Echo Pin  |
+|/pi_sonar/sonar_0|   Far right| J5 | 38 | 40 |
+|/pi_sonar/sonar_1|   45 degrees left| J1 | 32 | 36 |
+|/pi_sonar/sonar_2|   45 degrees right| J6 | 16 | 18 |
+|/pi_sonar/sonar_3|   Front| J4 | 13 | 15 |
+|/pi_sonar/sonar_4|   Far left| J2 | 35 | 37 |
 
 Rviz can visualize these messages as cones.  There are launch files to do this in:  
 https://github.com/UbiquityRobotics/magni_robot (the source package, not the binary packages)
