@@ -6,12 +6,19 @@ permalink: verification
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-## Basic Tests To Verify Main MCB Board Operation
+# Basic Tests For The Magni Robotic Base
 
 This page tells how to verify basic operation of the Magni robot.  These tests can be used to regression test hardware and firmware changes or new production boards installed in the Magni robot.
-If you have Magni Silver then the robot will have a few blue LEDs on top that will be helpful but not required to do these tests.
 
-### Power Supply And Status LED Indications
+There is a main board we call the ```Motor Control Board``` or ```MCB```. This is sometimes called Main Control Board as well.
+
+There is a ```host linux``` computer which is the ```Raspberry Pi single board computer``` at this time and it plugs into the MCB as well as is powered from the MCB supplies.
+
+If you have Magni Silver then the robot will have a ```Sonar Board``` which will have a few blue LEDs on top that will be helpful but not required to do these tests.
+
+## Part 1:  MCB Hardware Level Verification
+
+### 1.1 Power Supply And Status LED Indications
 There is a line of 4 power supply indicator LEDs and a 'STAT' or status led that are in a row to the lower left of the board.  The 4 power supply leds should all be on and the status LED default state is to be on almost all the time but have very brief 'dropout'blink that form a blink every 4 to 6 seconds.  See the [firmware_upgrade page](https://learn.ubiquityrobotics.com/firmware-upgrade) for  the expected blink rates of released firmware.
 
 Revision 5.0 main control boards and after have the leds in a horizontal line with the 'STAT' led to the right.  On version 4.9 and other early production units the LEDs are vertical with 'STAT' at the top of the line of leds.
@@ -20,7 +27,64 @@ If the 'STAT' led is off or does not blink there is something wrong with the onb
 
 Starting with version 5.2 of the main control board, MCB, there is an onboard 3.3V power supply and a blue led up near the top and a bit below the large white 'MAIN' 4-pin power jack.  This led has the label 3.3V and must be on.
 
-### The /diagnostics ROS topic
+### 1.2  The Electronic Circuit Breakers And Power Indicators
+Starting with main board version 5.0 there are two LEDs that indicate the ECB circuit involved is active and passing power.  The switch board switches must be able to control the two ECB circuits as discussed below.
+
+On the lower left of the main board a blue LED will be ON if the `Main ECB` has been enabled due to the main power switch being set to the out position. The main switch is black and is to the left on the little switch board.
+
+On the lower right of the main board a blue LED will be ON if the `ESTOP` switch is set to the out position AND the main power switch is also in the out position.
+
+### 1.3  ESTOP Switch Motor Power Safety Overrides
+
+This test can be done without a raspberry Pi installed or with it installed.  
+
+Start with the robot powered down and the 'ESTOP' switch in the 'out' position and the black main power switch pushed in so the Magni is totally off. Then push the black main power switch which will turn on main power. At this point the main power switch will be in the 'out' position.  Verify both the blue and red leds are lite on the switch board.
+
+Verify that there is no jump in motors that move the robot more than one cm or so and that the motors are in the locked state strongly resisting movement.
+
+If the Raspberry Pi is installek, wait for motor node to be fully started which takes up to 2 minutes but is often 30 seconds or so sometimes.  On rev 5.2 MCB you can see the motor node is active when both the 'SIN' and 'SOUT' leds near center top of the MCB are both blinking quickly.
+
+Verify that the robot does not jump or move more than 1 cm as the motor_node has been engaged.  Verify that the Wheels PID locked still and no jump in movements.
+
+Now push in the red ESTOP switch and verify the ESTOP led goes off on the switch board and also fades within 5 or so seconds on the lower right of the MCB board where the 'Motor Power' led is located.  Also verify the motors can be turned.  Note that some resistance is natural and expected.
+
+Only do this next part of this test on rev 5.1 or later boards with v32 or later firmware.  While ESTOP is active and motor power is off turn both wheels by a half turn or so in either direction.   After the wheels have been turned press ESTOP so that the switch is OUT again.  There should be little to no movement in the wheels
+
+## Part 2:  Basic Host To MCB Tests
+
+### 2.1 Serial Communications LEDS
+Starting with version 5.2 of the main control board, MCB, there are two leds that show if serial communications are active between the host processor (Raspberry Pi) and the MCB.   Both of these leds are located in the middle of the MCB and very high up near the white power jacks at the top of the PC board.
+
+The lower blue LED is the SOUT led and will blink rapidly when the MCB processor is active even if there is no host processor.  This LED shows the signal seen by the host processor so the level shifter must work for this to be seen.
+
+The upper blue LED is the SIN led and will blink when the host processor is actively sending commands and queries to the MCB.  This is the most important led to be blinking.   It indicates of the ROS node called /motor_node is actively controlling the MCB.  Note that depending on certain network conditions it may take up to a couple minutes for host motor_node to start communications with the MCB.
+
+### 2.2 Wifi HotSpot Verification
+
+If no LAN cable is attached and if the robot has not been configured to look for a WiFi OR if no WiFi can be seen then the Magni software will create a HotSpot that you can connect to with your laptop.
+
+Do these tests with no Lan cable plugged into the Magni host computer.
+
+If you have Magni Silver with the Sonar board then as the robot is powered up the LED2 (right LED on Sonar board as seen from the front) will light with dim blue light.  If you have a rev 5.2 MCB there will also be the WiFi led on the MCB but it goes off when the sonar board one goes on so they alternate.
+
+After 6 or so seconds that LED on the sonar board will turn off. After about 16 or so seconds if WiFi is able to come up LED2 will start to blink brightly about once per second indicating that the WiFi HotSpot is up.  We are working on enhancements to be available by mid 2020 which will indicate AP mode active or that the wifi specified by pifi utility is not available and perhaps more states on this led.
+
+Starting with main control board version 5.2 there will also be a wifi led on the right visible from the front of the magni.  This led is opposite from the sonar board led so it is off when the sonar board led is on and so on.
+
+#### 2.2.1  Connect To The Magni Hotspot
+
+At this time if you have on your smartphone some sort of WiFi network scanner you will see a ubiquityrobotics WiFi with last 4 digits being a unique hex value.
+
+You will also see this HotSpot show up on your laptop and will be able to connect.  Read [HERE](https://learn.ubiquityrobotics.com/connecting) for more.
+
+Verify you can connect to the Magni using password 'robotseverywhere' and verify you can open a console using SSH.
+
+#### 2.2.2  Verify Magni Can Connect To Your Local Wifi
+
+For this test you should follow the configuration page for ```pifi``` to configure your own network once you are connected using pifi commands located somewhere on the learn pages [NOTE: We need this link].  Sorry link not found yet.
+
+### 2.3 Check Operation Using The /diagnostics ROS topic
+
 When the robot is running quite a few pieces of diagnostic information can be viewed by looking at the ROS topic the motor node publishes.  If you run the following command for a few seconds they use Control-C to stop it you can browse back and see many things helpful for diagnostic work.
 
     rostopic echo /diagnostics       
@@ -33,35 +97,8 @@ After you have run this for a couple seconds and stopped it with control-C here 
    - `Firmware Date` shows the date for the firmware
    - `Firmware Options` shows hardware options if enabled
 
-### The Electronic Circuit Breaker, ECB', LEDS
-Starting with main board version 5.0 there are two LEDs that indicate the ECB circuit involved is active and passing power.  The switch board switches must be able to control the two ECB circuits as discussed below.
 
-On the lower left of the main board a blue LED will be ON if the `Main ECB` has been enabled due to the main power switch being set to the out position. The main switch is black and is to the left on the little switch board.
-
-On the lower right of the main board a blue LED will be ON if the `ESTOP` switch is set to the out position AND the main power switch is also in the out position.
-
-### Serial Communications LEDS
-Starting with version 5.2 of the main control board, MCB, there are two leds that show if serial communications are active between the host processor (Raspberry Pi) and the MCB.   Both of these leds are located in the middle of the MCB and very high up near the white power jacks at the top of the PC board.
-
-The lower blue LED is the SOUT led and will blink rapidly when the MCB processor is active even if there is no host processor.  This LED shows the signal seen by the host processor so the level shifter must work for this to be seen.
-
-The upper blue LED is the SIN led and will blink when the host processor is actively sending commands and queries to the MCB.  This is the most important led to be blinking.   It indicates of the ROS node called /motor_node is actively controlling the MCB.
-
-
-### Wifi HotSpot Verification
-
-If no LAN cable is attached and if the robot has not been configured to look for a WiFi OR if no WiFi can be seen then the Magni software will create a HotSpot that you can connect to with your laptop.
-
-If you have Magni Silver with the Sonar board then as the robot is powered up the LED2 (right LED on Sonar board as seen from the front) will light with dim blue light.
-After 6 or so seconds that LED will turn off. After about 16 or so seconds if WiFi is able to come up LED2 will start to blink brightly about once per second indicating that the WiFi HotSpot is up.  We are working on enhancements to be available by mid 2020 which will indicate AP mode active or that the wifi specified by pifi utility is not available and perhaps more states on this led.
-
-Starting with main control board version 5.2 there will also be a wifi led on the right visible from the front of the magni.  This led is opposite from the sonar board led so it is off when the sonar board led is on and so on.
-
-At this time if you have on your smartphone some sort of WiFi network scanner you will see a ubiquityrobotics WiFi with last 4 digits being a unique hex value.
-
-You will also see this HotSpot show up on your laptop and will be able to connect.  Read [HERE](https://learn.ubiquityrobotics.com/connecting) for more.
-
-### I2C Bus Devices
+### 2.4 I2C Bus Devices
 The I2C bus on the host CPU needs to be able to communicate to a few devices on the MCB.  There is an I2C excpander at addr 0x20 and RealTime clock chip at address 0x6F. If there is a OLED display loaded on P2 it is at 0x3c. We should stop the motor node then run i2cdetect which is part of i2c-tools package.
 
     sudo systemctl stop magni-base.service
@@ -72,28 +109,24 @@ The above command will output 8 lines each with 16 possible hex addresses. We wa
     sudo systemctl start magni-base.service
 
 
-### Basic Movement Tests:
-   - The first Test is a Firmware Only test: With no WiFi connected, have the red 'ESTOP' switch in the 'out' position and the black main power switch pushed in so the Magni is totally off. Then push the black main power switch which will turn on main power. At this point the main power switch will be in the 'out' position.
+## Part 3:  Basic Movement Tests:
 
-     RESULT: No jump in motors and motors are in the locked state strongly resisting movement.
+This set of tests has the focus of verification of circuits and commands that are related to robot movement or the ESTOP safety feature.
 
-<!--
-   - The next tests are full system. Power up unit with ESTOP switch allowing power to motors AND/OR
-ESTOP powering down motors then power up motors within 5 seconds.
+### 3.1  ESTOP Switch Motor Power Safety Override
 
- RESULT: Wheels PID locked wheels to a stopped state with full
-resistance. (we did this in 5 sec to do so before motor node started up) -->
-   - Edit ROS log with  
-   ``vi `roslaunch-logs`/rosout.log``  
+This test starts out the same as the more complete test in Part 1 earlier in this doc so if you did that this test may be skipped as it is a subset.
 
-   and verify that the last
-'Firmware version' line in the log is the expected firmware version.
-   - Wait for motor node to be fully started which takes 20 seconds or
-so sometimes.
+With no WiFi connected, have the red 'ESTOP' switch in the 'out' position and the black main power switch pushed in so the Magni is totally off. Then push the black main power switch which will turn on main power. At this point the main power switch will be in the 'out' position.
 
-     RESULT: Wheels PID locked still and no jump in movements.
+Verify that there is no jump in motors that move the robot more than one cm or so and that the motors are in the locked state strongly resisting movement.
 
-### Distance and Low Speed Movement Tests:
+Wait for motor node to be fully started which takes 20 seconds or
+so sometimes.  On rev 5.2 MCB you can see the motor node is active when both the 'SIN' and 'SOUT' leds near center top of the MCB are both blinking quickly.
+
+Verify that the robot does not jump or move more than 1 cm as the motor_node has been engaged.  Verify that the Wheels PID locked still and no jump in movements.
+
+### 3.2 Distance and Low Speed Movement Tests:
 
 Enter keyboard movement using:
 
@@ -128,7 +161,72 @@ Now we will do a few tests so make sure the robot has room to move forward about
 
    - Press the **l** letter key at a quick rate for 5 seconds and the Magni will rotate clockwise back to the starting point and will have the 3rd line that says 'degrees' now show the 3rd number to be near 0.
 
-### RaspiCam Camera Test:
+
+### 3.2 ESTOP Testing In A Running Full System
+
+There have been other ESTOP tests that appear earlier in Part 1.  The reason for these tests is to validate ESTOP operation when the host has been sending movement command to the MCB.
+
+NOTE:  These tests require a rev 5.0 or later MCB board.
+YOU MUST NOT DO THIS TEST ON REV 4.9 boards as it will be dangerous!
+
+Be sure the motor node is running which can be easily seen with a rev 5.2 or later MCB by inspection that both the 'SIN' and 'SOUT' leds in top center of the MCB board are blinking quickly.
+
+Place the robot on blocks so it does not 'get away from you' for these tests.
+
+#### 3.2.1  Entering The ESTOP state with Movement In Progress
+
+Run the joystick or use 'twist' to make motors actively move.  Press ESTOP to active state which will cause the 'Motor Power' led to turn off in the lower right of the MCB.
+
+Verify the motors will no longer have power and will slow to a stop
+with mild 'self braking' resistance to movement.
+
+#### 3.2.2  Exiting The ESTOP state with Movement Commands
+
+With the robot already in ESTOP state so there is no motor power, run the joystick or the twist program actively for a couple seconds and while doing so release the
+ ESTOP while still issuing movement commands.
+
+Verify that the robot will start moving at the speed it is being commanded in a controlled way and not at full speed or other speed.
+
+No matter how many movement commands were issued when ESTOP is active, it is only on the release of ESTOP  after a half second or so that that velocity will be re-enabled as the wheels nicely ramp to speed again.
+
+### 3.3  Max Speed Limit Test:
+
+Here we look to verify the max speed limit value will cause the robot to not exceed the default 1 meter per second setting.  We will again use teleop_twist_keyboard so just keep it active OR start it like this if not running yet
+
+``rosrun teleop_twist_keyboard teleop_twist_keyboard.py``  
+
+Place the robot on 'blocks' for the front wheel so the drive wheels do not touch the floor. Normally we put a block of wood or a small stack of books under the front of the robot and it raises it up so the wheels do not touch the floor. Put a piece of tape on the outside of a wheel so while testing we can count revolutions to get the actual speed.
+
+YOU MUST HAVE THE ROBOT DRIVE WHEELS ELEVATED TO NOT TOUCH THE GROUND FOR THIS TEST IN GENERAL OR IT WILL TRY TO MOVE PERHAPS A VERY LONG WAY!
+
+In the teleop window press the **k** key once to be in "stop" mode then press the **z** key several times until the "speed" value shows a value just under 1.0 meters per second.  If you go too far the **,** (comma) key backs the speed value down.
+
+In the teleop window press the **i** key repeatedly at a fast rate (3 or 4 times a second) and the wheels spin.
+
+Verify the speed is going at 1 meter per second by watching the wheels turn 10 times in about 14 seconds.  The wheels have a circumference of just near 0.64 meters.  This is not a scientific test, it is looking for things being far off of the expected speed.
+
+### 3.4 Deadman Timer Testing:
+
+The robot is designed to return to zero speed if
+it loses touch with constant host velocity commands.
+   - Startup and run the robot on blocks at a constant speed. Kill
+the motor node OR disconnect serial (if your system allows).
+     The motor node can be stopped and starting using:
+
+     `sudo systemctl stop magni-base.service`
+
+RESULT: The robot will return to stopped state with wheels actively locked.
+   - Start or re-connect serial to the motor node using
+
+   `sudo systemctl start  magni-base.service`
+
+RESULT: Robot should be operational after the motor node starts (takes 15 or more seconds to start).
+
+For re-connect of serial it will start back up in a second or less.
+
+## Part 4:  RaspiCam and Sonar Board tests
+
+### 4.1 RaspiCam Camera Test:
 
    There is a very simple way to test the RaspiCam camera on the robot.   This test will generate a jpeg still picture in about 6 seconds just to check the camera functionality.
 
@@ -140,7 +238,7 @@ Now we will do a few tests so make sure the robot has room to move forward about
 
    ``-rw-rw-r-- 1 ubuntu ubuntu 1543213 Aug  4 08:18 testpicture.jpg``
 
-### Sonar Board Test:
+### 4.2 Sonar Board Test:
 
 If you have installed and enabled the sonar board using the install guide viewed [HERE](https://https://learn.ubiquityrobotics.com/camera_sensors) then you can verify sonar operation in realtime once the robot has been started.
 
@@ -164,86 +262,11 @@ https://github.com/UbiquityRobotics/magni_robot (the source package, not the bin
 
 The [move_basic node](http://wiki.ros.org/move_basic) uses the messages published by the sonar node to determine proximity to obstacles.
 
-### ESTOP Testing:
-(Assumes rev 5.0 or later board. If not exception will be
-noted)
-   - For any rev 5.0 board and current code the ROS topic
-/motor_power_active indicates if power is on or off.
-     The topic is not instantaneous in response and can take a couple
-seconds.  Note that ESTOP active means motor power off.
-   - Press in to engage ESTOP with 0 cmd_vel OR non-zero cmd_vel. (keep
-ESTOP pressed)
-
-     RESULT: Wheels have slight resistance when ESTOP is active
-   - Release ESTOP having not moved the motors and motor node is on
-
-     RESULT: Wheels return to locked, stopped state with none or only a
-tiny amount of movement noticed
-   - Press ESTOP again and this time move the wheel a half revolution
-(there is resistance but it moves).  Release ESTOP
-
-     RESULT: For rev 5.0 board no wheel 'lurch' happens and motors
-return to locked state with tiny or no movement.
-     RESULT: For rev 4.9 board the wheel will snap back quickly the
-half turn then lock. This cannot be avoided.
-
-   - Run the joystick or use 'twist' to make motors actively move
-(perhaps on blocks not on ground).  Press ESTOP to active state
-
-     RESULT: Motors will no longer have power and will slow to a stop
-with mild 'self braking' resistance to movement.
-   - Continue to run the joystick for a couple seconds then release the
-joystick and then release ESTOP a second later to power motors.
-
-     RESULT: Rev 5.0 board will power up the wheels and there will be
-tiny or no movement as wheels return to locked stopped state
-
-     RESULT: This test is not recommended for rev 4.9 boards as ESTOP
-switch could not be read so large movements can happen.
-   - As before run the joystick with motors running then hold joystick
-active and press ESTOP (wheels stop).  Release ESTOP in 3 sec
-
-     RESULT: Even though joystick was active all the time, on release of
-ESTOP after a half second or so wheels nicely ramp to speed again.
-
-### Max Speed Limit Test:
-
-Here we look to verify the max speed limit value will cause the robot to not exceed the default 1 meter per second setting.  We will again use teleop_twist_keyboard so just keep it active OR start it like this if not running yet
-
-``rosrun teleop_twist_keyboard teleop_twist_keyboard.py``  
-
-Place the robot on 'blocks' for the front wheel so the drive wheels do not touch the floor. Normally we put a block of wood or a small stack of books under the front of the robot and it raises it up so the wheels do not touch the floor. Put a piece of tape on the outside of a wheel so while testing we can count revolutions to get the actual speed.
-
-YOU MUST HAVE THE ROBOT DRIVE WHEELS ELEVATED TO NOT TOUCH THE GROUND FOR THIS TEST!
-
-In the teleop window press the **k** key once to be in "stop" mode then press the **z** key several times until the "speed" value shows a value just under 1.0 meters per second.  If you go too far the **,** (comma) key backs the speed value down.
-
-In the teleop window press the **i** key repeatedly at a fast rate (3 or 4 times a second) and the wheels spin.
-
-Verify the speed is going at 1 meter per second by watching the wheels turn 10 times in about 14 seconds.  The wheels have a circumference of just near 0.64 meters.  This is not a scientific test, it is looking for things being far off of the expected speed.
-
-### Deadman Timer Testing:
-
-The robot is designed to return to zero speed if
-it loses touch with constant host velocity commands.
-   - Startup and run the robot on blocks at a constant speed. Kill
-the motor node OR disconnect serial (if your system allows).
-     The motor node can be stopped and starting using:
-
-     `sudo systemctl stop magni-base.service`
-
-RESULT: The robot will return to stopped state with wheels actively locked.
-   - Start or re-connect serial to the motor node using
-
-   `sudo systemctl start  magni-base.service`
-
-RESULT: Robot should be operational after the motor node starts (takes 15 or more seconds to start).
-
-For re-connect of serial it will start back up in a second or less.
-
-## Built In Selftest
+## Part 5: Built In MCB Selftest
 
 The robot is able to test some of it's own subsystems.  This ability is most capable starting with MCB 5.2 and will be first introduced in firmware version v36.
+
+This section has been broken out from basic MCB tests due to it's complexity merits it's own section.
 
 The results of the selftest will be available as status bits in a register of the MCB board and many of the tests have the ability to show up as blink codes on the `status`  led should the error be detected.
 
