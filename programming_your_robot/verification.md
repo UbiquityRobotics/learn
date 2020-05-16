@@ -81,7 +81,7 @@ Verify you can connect to the Magni using password 'robotseverywhere' and verify
 
 #### 2.2.2  Verify Magni Can Connect To Your Local Wifi
 
-For this test you should follow the configuration page for ```pifi``` to configure your own network once you are connected using pifi commands located somewhere on the learn pages [NOTE: We need this link].  Sorry link not found yet.
+For this test you should follow the configuration page for ```pifi``` to configure your own network once you are connected using pifi commands available  [HERE](https://learn.ubiquityrobotics.com/connect_network) .
 
 ### 2.3 Check Operation Using The /diagnostics ROS topic
 
