@@ -162,7 +162,7 @@ Now we will do a few tests so make sure the robot has room to move forward about
    - Press the **l** letter key at a quick rate for 5 seconds and the Magni will rotate clockwise back to the starting point and will have the 3rd line that says 'degrees' now show the 3rd number to be near 0.
 
 
-### 3.2 ESTOP Testing In A Running Full System
+### 3.3 ESTOP Testing In A Running Full System
 
 There have been other ESTOP tests that appear earlier in Part 1.  The reason for these tests is to validate ESTOP operation when the host has been sending movement command to the MCB.
 
@@ -173,14 +173,14 @@ Be sure the motor node is running which can be easily seen with a rev 5.2 or lat
 
 Place the robot on blocks so it does not 'get away from you' for these tests.
 
-#### 3.2.1  Entering The ESTOP state with Movement In Progress
+#### 3.3.1  Entering The ESTOP state with Movement In Progress
 
 Run the joystick or use 'twist' to make motors actively move.  Press ESTOP to active state which will cause the 'Motor Power' led to turn off in the lower right of the MCB.
 
 Verify the motors will no longer have power and will slow to a stop
 with mild 'self braking' resistance to movement.
 
-#### 3.2.2  Exiting The ESTOP state with Movement Commands
+#### 3.3.2  Exiting The ESTOP state with Movement Commands
 
 With the robot already in ESTOP state so there is no motor power, run the joystick or the twist program actively for a couple seconds and while doing so release the
  ESTOP while still issuing movement commands.
@@ -189,7 +189,7 @@ Verify that the robot will start moving at the speed it is being commanded in a 
 
 No matter how many movement commands were issued when ESTOP is active, it is only on the release of ESTOP  after a half second or so that that velocity will be re-enabled as the wheels nicely ramp to speed again.
 
-### 3.3  Max Speed Limit Test:
+### 3.4  Max Speed Limit Test:
 
 Here we look to verify the max speed limit value will cause the robot to not exceed the default 1 meter per second setting.  We will again use teleop_twist_keyboard so just keep it active OR start it like this if not running yet
 
@@ -205,7 +205,7 @@ In the teleop window press the **i** key repeatedly at a fast rate (3 or 4 times
 
 Verify the speed is going at 1 meter per second by watching the wheels turn 10 times in about 14 seconds.  The wheels have a circumference of just near 0.64 meters.  This is not a scientific test, it is looking for things being far off of the expected speed.
 
-### 3.4 Deadman Timer Testing:
+### 3.5 Deadman Timer Testing:
 
 The robot is designed to return to zero speed if
 it loses touch with constant host velocity commands.
