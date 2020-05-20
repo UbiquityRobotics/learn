@@ -68,7 +68,7 @@ The pinouts for the many connectors on the main Motor Controller Board can be fo
 
 You can see and download the released MCB board firmware revisions [HERE](https://learn.ubiquityrobotics.com/firmware-upgrade)
 
-A list of firmware and master controller board revisions can be found [HERE](https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Firmware_and_Hardware_Revisions.md).
+A list of firmware and master controller board revisions can be found [HERE](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
 
 ## The MCB Serial Protocol and Commands
 A baud rate of 38400 is used with one stop bit for communications with between the host cpu (normally raspberry Pi) and the MCB, Motor Control Board.
