@@ -104,7 +104,21 @@ The I2C bus on the host CPU needs to be able to communicate to a few devices on 
     sudo systemctl stop magni-base.service
     sudo i2cdetect -y 1
 
-The above command will output 8 lines each with 16 possible hex addresses. We want to note that it detected 20 as well as 6f.  If an OLED display is loaded you may also see 3c.   After this test you may restart magni-base service
+The above command will output 8 lines each with 16 possible hex addresses. We want to note that it detected devices that are present on the I2C bus.  The OLED display was optional prior to MCB rev 5.2.   The table that follows shows likely addresses.
+
+| | | |
+|---|---|---|
+|Device| I2C Address|Notes|
+|SSD1306 OLED Display|0x3C|Shipped starting on MCB Rev 5.2|
+|PCF8574|0x20|IO Expander|
+|MCP7940 RT Clock|0x6f|RTC will show as UU addr|
+
+* Because the MCP7940 is owned by the kernel the i2cdetect tool will show it at address 0x6F as  ```UU```.  This indicates it was seen.  If the kernel recognized the RTC properly there will be a  /dev/rtc0 device for final confirmation.
+
+* If there is a production issue where a PCF8574A was incorrectly loaded then you would see address 0x38.  This is considered a misload in production.
+
+
+After this test you may restart magni-base service
 
     sudo systemctl start magni-base.service
 
@@ -189,13 +203,32 @@ Verify that the robot will start moving at the speed it is being commanded in a 
 
 No matter how many movement commands were issued when ESTOP is active, it is only on the release of ESTOP  after a half second or so that that velocity will be re-enabled as the wheels nicely ramp to speed again.
 
-### 3.4  Max Speed Limit Test:
+### 3.4  Speed Tests:
 
-Here we look to verify the max speed limit value will cause the robot to not exceed the default 1 meter per second setting.  We will again use teleop_twist_keyboard so just keep it active OR start it like this if not running yet
+The speed tests verify proper operation of speed regulation and limits. We will use teleop_twist_keyboard.  If you already have it running, fine keep it active OR start it like this if not running yet
 
 ``rosrun teleop_twist_keyboard teleop_twist_keyboard.py``  
 
-Place the robot on 'blocks' for the front wheel so the drive wheels do not touch the floor. Normally we put a block of wood or a small stack of books under the front of the robot and it raises it up so the wheels do not touch the floor. Put a piece of tape on the outside of a wheel so while testing we can count revolutions to get the actual speed.
+These tests are best done with the robot on 'blocks' for the front wheel so the drive wheels do not touch the floor. Normally we put a block of wood or a small stack of books under the front of the robot and it raises it up so the wheels do not touch the floor. Put a piece of tape on the outside of a wheel so while testing we can count revolutions to get the actual speed.
+
+#### 3.4.1  Medium Speed Test:
+
+Here we look to verify a medium speed is correctly regulated for both forward and backward driving.
+
+In the teleop window press the **k** key once to be in "stop" mode then press the **z** key several times until the "speed" value shows a value close to 0.32 meters per second.  If you go too far the **,** (comma) key backs the speed value down.
+
+In the teleop window press the **i** key repeatedly at a fast rate (5 times a second) and the wheels spin in a forward direction.
+
+Verify the speed is about 0.32 meter per second by watching that the wheels both turn one full revolution forward in near 2 seconds.
+
+Next we will verify reverse works as well.   In the teleop window press the **,**  (comma) key repeatedly at a fast rate (5 times a second) and the wheels spin in reverse.
+
+Verify the speed is about 0.32 meter per second by watching that the wheels both turn one full revolution reverse in near 2 seconds.
+
+
+### 3.4.2  Maximum Speed Limit Test:
+
+Here we look to verify the max speed limit value will cause the robot to not exceed the default 1 meter per second setting.  We will again use teleop_twist_keyboard
 
 YOU MUST HAVE THE ROBOT DRIVE WHEELS ELEVATED TO NOT TOUCH THE GROUND FOR THIS TEST IN GENERAL OR IT WILL TRY TO MOVE PERHAPS A VERY LONG WAY!
 
@@ -203,7 +236,7 @@ In the teleop window press the **k** key once to be in "stop" mode then press th
 
 In the teleop window press the **i** key repeatedly at a fast rate (3 or 4 times a second) and the wheels spin.
 
-Verify the speed is going at 1 meter per second by watching the wheels turn 10 times in about 14 seconds.  The wheels have a circumference of just near 0.64 meters.  This is not a scientific test, it is looking for things being far off of the expected speed.
+Verify the speed is going at 1 meter per second by watching the wheels turn about 16 times in about 10 seconds.  The wheels have a circumference of just near 0.64 meters.  This is not a scientific test, it is looking for things being far off of the expected speed.
 
 ### 3.5 Deadman Timer Testing:
 
