@@ -53,6 +53,23 @@ We are looking into solutions that perhaps in the future may be able to support 
 
 The stock battery charger we supply is ONLY FOR LEAD ACID batteries and will NOT work and in fact may be dangerous for other battery technologies.
 
+### Host Linux computer
+
+The robot ships with a built in Raspberry Pi single board computer running the Linux operating system.   Units sold in 2019 use the Raspberry Pi 3 B+ running Ubuntu Linux 16.04 and the Kinetic version of ROS (Robot Operating System).  Initial support for the Raspberry Pi 4 is currently planned for shipment on units sometime in mid 2020 timeframe.
+
+Most of the live administration to the robot is normally done by opening an SSH console to the host computer.  If access is via a linux laptop to the built in WiFi hotspot then the following command is used to get a console screen from a console on the laptop.
+
+    ssh ubuntu@10.42.0.1
+
+Of course names can be used for the host but above a simple IP address is used.  The default password for shipped units is  ```ubuntu```
+
+Although the host computer has a robust file system less chance of file system corruption is always possible if the Linux system is shutdown in a clean way.  When connected to the robot with an SSH console this is how to reboot (-r) or completely halt (-h) the robot to do a clean power off. Below is the full halt which will ask for root password that is ```ubuntu``` as shipped from factory.
+
+    sudo shutdown -h now
+
+There is a shutdown button feature on a standard Magni but only users with the sonar board will have the actual button.   We do a clean shutdown of the robot by connecting GPIO 6 which is on pin 31 of both the 40 pin P701 and the 50 pin P702.  Pin 30 of these two connectors is ground.  If you have a sonar board there is a button labeled ```SW1``` for shutdown as it connects to GPIO 6.
+
+If you do not have the sonar board the pins to the 50 pin P702 are available to be connected to with push on connectors common for prototype uses.  Many users make their own shutdown button with one wire to pin 31 and one wire to pin 30.  Note that for P702 pin 1 is on the far left and the bottom row of pins.  These jacks have odd number pins on bottom and even starting with 2 on top row.
 
 ### Communications
 

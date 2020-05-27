@@ -103,4 +103,4 @@ The Rev 5.0 board has a 4-pin jack that brings out I2C and 3.3V with a ground.
 * Use the I2C ONLY from within a ROS node to avoid conflict on the I2C bus.
 * Keep the I2C lines to your device under 60mm from board to your device
 * Only use devices for short data accesses and space out your accesses by at least 50msec
-* If you stop Magni with `sudo systemctl stop magni-base.service` you can scan the I2C bus for all devices using `sudo i2cdetect -y 1` if i2c-tools was installed using apt-get. The i2c-tools package also has `i2cget` and `i2cset` so look them up if curious.
+* If you stop Magni with `sudo systemctl stop magni-base.service` you can scan the I2C bus for all devices using `sudo i2cdetect -y 1` if i2c-tools was installed using apt-get. The i2c-tools package also has `i2cget` and `i2cset` so look them up if curious.  Because the MCP7940 clock chip is owned by the kernel at address 6F you will see UU but that is confirmation it is present.
