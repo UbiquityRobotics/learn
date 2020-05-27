@@ -53,7 +53,7 @@ We are looking into solutions that perhaps in the future may be able to support 
 
 The stock battery charger we supply is ONLY FOR LEAD ACID batteries and will NOT work and in fact may be dangerous for other battery technologies.
 
-### Host Linux computer
+### Linux Host Computer
 
 The robot ships with a built in Raspberry Pi single board computer running the Linux operating system.   Units sold in 2019 use the Raspberry Pi 3 B+ running Ubuntu Linux 16.04 and the Kinetic version of ROS (Robot Operating System).  Initial support for the Raspberry Pi 4 is currently planned for shipment on units sometime in mid 2020 timeframe.
 
