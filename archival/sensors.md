@@ -32,12 +32,12 @@ roslaunch pi_sonar pi_sonar.launch
 
 Then, to enable the sensors, edit the file as root using
 
-    `sudo nano etc/ubiquity/robot.yaml`  
+    `sudo nano /etc/ubiquity/robot.yaml`  
 
   or some other editor of your choice, so that
 
 `sonars: 'pi_sonar_v1'`
-is uncommented and `sonars: None` is commented.
+is uncommented and `sonars: None` is commented. Be sure there is a space just after the `sonars:` and before the single quote.
 
 Like so:
 ```
