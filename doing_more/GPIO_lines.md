@@ -99,3 +99,9 @@ The Sonar Board uses many GPIO lines that are shown the table below and again th
  | 22 |15  |   Sonar 3 Echo|
  | 19 |35  |   Sonar 4 Trigger|
  | 26 |37  |   Sonar 4 Echo|
+
+ ## Raspberry Pi Main 40 pin Connector Pinout
+
+ Here is a full pinout of the Raspberry Pi 40 pin connector which may come in handy for a reference.  There are plenty of these on the web but it is important to note there are two numberings of the GPIO port numbers.   This drawing below agrees with the numbering scheme we use in our documents.
+
+ ![Raspberry Pi Connector](raspberry_pi_connector.png)
