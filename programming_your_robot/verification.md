@@ -16,6 +16,17 @@ There is a ```host linux``` computer which is the ```Raspberry Pi single board c
 
 If you have Magni Silver then the robot will have a ```Sonar Board``` which will have a few blue LEDs on top that will be helpful but not required to do these tests.
 
+### Powering Up The Magni ROBOT
+
+Before we get going on the tests a quick word on the two power switches on the ```Switch Board``` that plugs into the main board may be of value.  
+
+Both switches must be in the OUT position for full robot operation.
+
+* The black switch to the left as you look at the robot from the front is the ```Main Power``` button.  To enable this the switch must be out and not pressed in. When the main power is enabled the blue led on the switch board is on.
+* The red switch to the right is the ```ESTOP Switch``` and it is easiest to think of this as the power for the motors.  To power up the wheel motors this switch must also be in the OUT position and the red led on the switch board will light when power is enabled.
+
+As of later in 2019 switch boards started to have two connectors so that users could have their own switches on their product.   If you have a current switch board then there will be a white connector just behind the ESTOP switch to the right which MUST BE SHORTED OUT for motor power to work. We ship this version switch board with a jumper in that jack but it can get lost.
+
 ## Part 1:  MCB Hardware Level Verification
 
 ### 1.1 Power Supply And Status LED Indications
