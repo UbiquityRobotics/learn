@@ -9,5 +9,4 @@ Camera,
 5 point Sonar array
 Software distribution on provided SD card
 Power cabling to support both spade type and M6 screw type battery terminations
-Bluetooth ring controller joystick and charging cables
 Battery Charger for 24V Lead Acid Batteries (Batteries not included)  
