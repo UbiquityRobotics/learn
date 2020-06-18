@@ -39,11 +39,10 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 2.  [How to set-up a workstation with ROS and Synchronize Time](doing_more/workstation_setup.md)
 3.	[Visualize With rviz](doing_more/rviz.md)
 4.	[Fiducials Enable You To Set Waypoints and Goals](doing_more/fiducials.md)
-5.  [Using Floor Fiducials To Guide Your Robot](floor_fiducial_follow)
-6. [Use Robot Commander To Control Robot Navigation](doing_more/waypoints.md)
-7. [Use A Script To Control Robot Navigation](python_script_1)
-8. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
-9. [Running Magni in Simulation](simulation)  
+5. [Use Robot Commander To Control Robot Navigation](doing_more/waypoints.md)
+6. [Use A Script To Control Robot Navigation](python_script_1)
+7. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
+8. [Running Magni in Simulation](simulation)  
 
 ####	Support and Verification Of Your Robot
 
