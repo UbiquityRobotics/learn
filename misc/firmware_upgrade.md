@@ -15,15 +15,29 @@ We upgrade firmware using a tool that will by default install the latest release
 
 Sometimes improvements to our motor controller firmware, in this case v35 or later, make it necessary to first upgrade the linux host side software before installing the newest firmware.  Our host side software supports prior firmware versions.  To update host software use a process we call 'Linux Host Software Update' seen on [this page](https://learn.ubiquityrobotics.com/updating).
 
-The table below shows the default and latest available versions of firmware as well as the expected LED blink rates which is handy to visually check. It is best to count the time of 2 blinks then divide by 2 for more accuracy.
+## Firmware Release Versions
 
-| Version |	Rate | Description |
+The table below shows the default and latest available versions of firmware.  
+
+Also shown is the rate at which the MCB ```STAT``` led will blink which is handy to visually check. It is best to count the time of 4 or more blinks then divide by that number for more accuracy. If the blink rate is found to be other than in the table it is possible you have a beta or non-approved version that may have been recalled.
+
+| Version |	BlinkRate | Description |
 | ------- | ---- | ----------- |
 | v28 | 6.0 sec | Production shipment version that does wheel movement check on startup. Users should do a firmware upgrade from this very old version |
-| v32	| 5.0 sec | Latest production firmware used in 2019. This is default if no version is entered. Supported by any host side software |
-| v35 |	4.0 sec |Beta firmware with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
+| v32	| 5.0 sec | Production firmware used in 2019. This is default if no version is entered. Supported by any host side software |
+| v35 |	4.0 sec | Production firmware with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
+| v37 | 4.75 sec | Beta firmware. Has built in selftest. |
 
 To see more details about our firmware as well as our hardware revisions for the motor controller please view [this page](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
+
+## Checking ROS /diagnostics Topic For Firmware
+
+The firmware version as well as the firmware release date are published by the motor_node to ROS topic  ```/diagnostics```
+
+Use the following command for a couple seconds then use Control-C to stop the fast moving output.  Scroll back and look for ```"Firmware Version"``` and ```"Firmware Date"```
+
+    rostopic echo /diagnostics
+
 
 ## Firmware Installation
 To install any firmware first log into the Raspberry Pi:
