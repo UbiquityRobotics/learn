@@ -14,7 +14,7 @@ All of the Main Control Boards, also called MCB, have a version number on the to
 
 Because prior to rev 5.2 the version number is very hard to read we will supply pictures to help with board version identification prior to rev 5.2
 
-A detailed list of main MCB hardware changes as well as firmware revisions can be found [here](https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Firmware_and_Hardware_Revisions.md).
+A detailed list of main MCB hardware changes as well as firmware revisions can be found on our [Firmware_Hardware_Revisions](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md) github page.
 
 #### Revision 5.2 Main Control boards
 
