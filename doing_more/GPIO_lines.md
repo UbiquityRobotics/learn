@@ -104,7 +104,7 @@ The Sonar Board uses many GPIO lines that are shown the table below and again th
 
  ## GPIO Lines With Planned Usage but Unused Today
 
- Here are 5 more GPIO lines that are not in use at this time that we have plans for for a future IO board.   Because the board does not exist today and because GPIO lines are in such high demand we will list them here.  When we used these in the future there will be specific lines in a config file to enable usage of them that will be off by default so these lines can be considered usable at this time.
+ Here are 5 more GPIO lines that are not in use at this time that we have plans for in a future IO board.   Because the board does not exist today and because GPIO lines are in such high demand we will list them here.  When we used these in the future there will be specific lines in a config file to enable usage of them that will be off by default so these lines can be considered usable at this time.
 
  | GPIO  | Pin | Function |
  | ---------- | ------------- | ------ |
