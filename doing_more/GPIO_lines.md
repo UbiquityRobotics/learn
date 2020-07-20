@@ -102,7 +102,9 @@ The Sonar Board uses many GPIO lines that are shown the table below and again th
  | 19 |35  |   Sonar 4 Trigger|
  | 26 |37  |   Sonar 4 Echo|
 
- ## GPIO Lines With Planned Usage but Unused Today
+
+
+ ## GPIO Lines With Planned Future Usage
 
  Here are 5 more GPIO lines that are not in use at this time that we have plans for in a future IO board.   Because the board does not exist today and because GPIO lines are in such high demand we will list them here.  When we used these in the future there will be specific lines in a config file to enable usage of them that will be off by default so these lines can be considered usable at this time.
 
@@ -115,6 +117,7 @@ The Sonar Board uses many GPIO lines that are shown the table below and again th
  | 11 | 23  |   GPIO11  SPI0_CLK |
 
 
+   
  ## Raspberry Pi Main 40 pin Connector Pinout
 
  Here is a full pinout of the Raspberry Pi 40 pin connector which may come in handy for a reference.  There are plenty of these on the web but it is important to note there are two numberings of the GPIO port numbers.   This drawing below agrees with the numbering scheme we use in our documents.
