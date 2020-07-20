@@ -30,10 +30,10 @@ This page discusses the usage of a VirtualBox so that if you do not have a linux
 
 ## Use of your own Linux machine with WiFi
 
-If you have your own Linux laptop you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network.  Please skip ahead to the section below on connecting to a Magni for this case.
+If you have your own Linux laptop you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network.  
 
-<!-- *{ Wayne: Shouldn't we use .ova instead of .vdi ?  That way people can use other virtual
-   machine emulators to run the image.  Note to Joe--try this, and document if possible } -->
+```Skip ahead to the section below on connecting to a Magni for this case.```
+
 
 ## Using our out-of-the-box virtual machine workstation
 

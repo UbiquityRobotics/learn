@@ -70,11 +70,19 @@ The back bracket attachment also uses 3 M6 flat head hex drive screws. Here we s
 #### The Mostly Assembled Magni Prior To Battery Install
 ![](MagniUnboxedFrontViewNoBatteriest.jpg)
 
-The Front Bracket with Camera mounted is shown above. The system power switch is the black switch above the first “U” in Ubiquity, and the red switch for the power to the wheels is above the “y". The charging port is between the two switches.  The ON position is with the switch extended out. <!---Both buttons should be lit.-->
+The Front Bracket with power switch board and Camera mounted is shown above.
+
+
+The Main Power switch is the black switch to the left above the first “U” in Ubiquity.  On recent Switchboards it will say 'Main Power' next to the blue LED.
+
+The Motor Power is the red switch for the power to the wheels is above the “y" of Ubiquity printed on the chassis. On recent Switchboards it will say 'Motor Power' next to the red LED.  
+
+For both power switches the 'ON' position is when the switch is out and when pushed in the switch will be  'off'.
+
+The charging port is between the two switches.  
 
 **The next step will be to install the batteries.   At this time push both of the switches IN which will turn all power off as you connect the batteries.**
 
-Do not operate the robot when the power to the wheels is off and power to the Raspberry Pi is on  (black switch out and red switch in). On early units commands will be stored by the robot. Then when power is enabled, the robot may move unexpectedly.
 
 #### Main Power Battery Installation
 
@@ -101,6 +109,12 @@ There is also a CR2032 coin cell battery on the back of the circuit board.  This
 ![Coin cell clip](Magni_CR2032_Battery.jpg)
 #### Optional Top Flat Plate Install
 
-The top plate should be the last thing attached, using 6  M6 machine screws.   Note that the countersunk holes will be on the top and that an extra hole that is meant for an upward facing Raspberry Pi camera should be over the camera bracket.
+The top plate should be the last thing attached, using 6  M6 machine screws. Notice that there is one 10mm or so hole in one corner of the plate that is meant to allow the camera if in 'upward' position to see the ceiling so be aware of that as you put the top plate on the robot.    Note that the countersunk holes will be on the top.
 
 A video of the unboxing process is available:  [Video](https://youtu.be/pF38kFOl0Ic)
+
+### Suggested Next Page To Visit To Connect To The robot
+
+The next logical step to use the Magni robot would be to connect to it and start learning more about the robot using a network connection.  
+
+Next you can take a look next at the [**CONNECTING**](https://learn.ubiquityrobotics.com/connecting)  page of the learn documentation.
