@@ -1,7 +1,12 @@
-
-# Raspberry Pi GPIO Lines In Use And Using Them For Your Own Needs
+---
+layout: default
+title:  "GPIO Lines"
+permalink: GPIO_lines
+---
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
+
+# GPIO Lines In Use And Using Them For Your Own Needs
 
 <H4 style="color:red">You must remove the battery cables when working on the boards because live battery voltage is on the board and on P702!  Powering off the Magni will not prevent the live voltages!</H4>
 

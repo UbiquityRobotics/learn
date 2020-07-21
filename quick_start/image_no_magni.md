@@ -58,7 +58,7 @@ Our image uses some of the GPIO lines to control our
 Magni robot. By default many of the lines are
 unused and these are the best ones to think about
 using for your own uses. You should see the section
-regarding [GPIO Lines Used For The Sonar Board](<https://learn.ubiquityrobotics.com/doing_more/GPIO_lines.html>) and
+regarding [GPIO Lines Used For The Sonar Board](<https://learn.ubiquityrobotics.com/support/GPIO_lines.html>) and
 use those lines as we do not use them until they are
 enabled by users who order a Magni with a Sonar board.
 

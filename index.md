@@ -52,7 +52,7 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 5. [Diagnostics, Developer Tips and I2C](support/diagnostics.md)
 6. [PC Board Revisions For MCB, Switch Boards & more](PC_Board_RevId)
 7. [Motor Controller Board Pinouts And Power Supply Ratings](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
-8. [Raspberry Pi GPIO Line Usage And Using Them For Your Own Needs](support/GPIO_lines.md)
+8. [GPIO Line Usage And Using Them For Your Own Needs](support/GPIO_lines.md)
 9. [Removal And Installation Of Main PC Boards](support/board_replacement.md)
 
 
