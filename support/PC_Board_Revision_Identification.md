@@ -89,7 +89,14 @@ In order to support user needs to place the main power switch and/or the ESTOP s
 
 The revision 2.2 board has P202 seen in the back right that is wired in series with the red keycap ESTOP switch on the board.   Our plan is we will ship the connector that mates with P202 that has one piece of wire sorted to itself.  In this way P202 is shorted from the factory and a user may remove this jack and put two wires going to his own ESTOP switch for his own robot needs.
 
+However it is done ```P202 MUST be connected``` or no motor power will be enabled
+
 On the back left you see P201 which is wired in parallel with the black main power switch.  The thought here is users who want a remote main power switch connect a connector to two wires and then leave the installed main power switch OFF or pushed in.  The customer switch will then be the power switch.
+
+For either ESTOP switch or Main Power switch we ship one jumper that can be modified but sometimes for replacment boards you may want the part numbers for the cable.  Ideally a crimp tool would be used for the pins but it is possible to manually solder onto pins although that is time consuming and a little tricky to wrap the crimp metal around the wire so the pin will fit in the housing.  
+
+    Plastic Housing:  Molex 0009501021.  Digi-Key Part Num WM18813-ND
+    Female Pins:      Molex 0008701031.  Digi-Key part Num WM18820CT-ND
 
 #### Switch Boards To Support Rev 5.x MCB Boards
 

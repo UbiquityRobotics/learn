@@ -18,7 +18,6 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 1. [Introduction To The Magni Platform](introduction)  
 2. [Requirements: Batteries, Network, Workstation use & Configuration ](need_to_know)  
 3. [Magni Power Controls](magni_key)  
-4. [Basic Troubleshooting](misc/troubleshooting.md)
 
 #### Quick Start
 
@@ -48,13 +47,13 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 
 1. [Magni ROS Usage](programming_your_robot/overview.md)
 2. [Burning a fresh Image, Updating Software and updating Firmware](programming_your_robot/updating.md)
-3. [Basic Troubleshooting](misc/troubleshooting.md)
-4. [Basic Verification Of Operation](verification)
-5. [Diagnostics, Developer Tips and I2C](misc/diagnostics.md)
+3. [Basic Troubleshooting](support/troubleshooting.md)
+4. [Basic Verification Of Operation](support/verification.md)
+5. [Diagnostics, Developer Tips and I2C](support/diagnostics.md)
 6. [PC Board Revisions For MCB, Switch Boards & more](PC_Board_RevId)
 7. [Motor Controller Board Pinouts And Power Supply Ratings](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
-8. [Raspberry Pi GPIO Line Usage And Using Them For Your Own Needs](doing_more/GPIO_lines.md)
-9. [Removal And Installation Of Main PC Boards](programming_your_robot/board_replacement.md)
+8. [Raspberry Pi GPIO Line Usage And Using Them For Your Own Needs](support/GPIO_lines.md)
+9. [Removal And Installation Of Main PC Boards](support/board_replacement.md)
 
 
 
