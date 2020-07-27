@@ -84,13 +84,18 @@ The charging port is between the two switches.
 **The next step will be to install the batteries.   At this time push both of the switches IN which will turn all power off as you connect the batteries.**
 
 
-#### Main Power Battery Installation
+#### Main Power Battery And Wheel Cables Installation
 
 ![](MagniBatteryInstallation.jpg)
 
 Use the thick styrofoam cutout piece that came with your Magni in the bed of the chassis. It holds the most common battery types in place even if the robot bumps things or is moved around.  
 
-The picture above shows proper cable connections for the batteries.  The red power cable goes to positive of battery on the right.  The yellow cable connects the positive of the left battery to the negative of the battery shown on the right. The black cable goes from the negative terminal of the battery on the left to ground on the robot.
+The picture above shows proper cable connections for the batteries and wheels.  
+
+The wheels should be properly connected from the factory.
+As seen in this picture notice that the cable attached to the two green terminal strips seen on the right of the back of the main MCB board goes to the right wheel.   The cable that comes from the two green terminal strips seen on the left of the back of the MCB board goes to the left wheel.   
+
+For the main power cables, the red power cable goes to positive of battery on the right.  The yellow cable connects the positive of the left battery to the negative of the battery shown on the right. The black cable goes from the negative terminal of the battery on the left to ground on the robot.
 
 There are cables for both spade type and screw type battery terminals. A 24 volt battery charger is included in the package (Photo not available). The recommended batteries are of the type specified by UB12xxx where xxx specifies Amp Hours. Commonly UB1250, UB1290, or UB12150 are used. Since it is unknown what size and shape the batteries will be it is the user’s responsibility to see they are secured in the chassis by the use of straps or packing material.
 
