@@ -81,6 +81,24 @@ If you don’t get an error message, you have a good camera. An (mmal) error
 message indicates the camera is not being detected by the Raspberry Pi, this is
 usually due to a poor cable connection or less likely a bad camera.
 
+If you have a laptop running ROS where the robot is the ROS master then you may have or want to install  ```image_view``` on the laptop to see the camera output fairly easily.  Briefly if image_view is on your laptop and configured use this:
+
+    rosrun image_view image_view image:=/raspicam_node/image
+
+If you know how to use rviz on the laptop that too can be configured to show you the camera image but that is a bit more complex.
+
+
+
+## Camera Calibration
+Sometimes for best performance or certainly if a different type of camera than the robot has from the factory you may want or need to do a camera calibration.   The calibration is used to ```flatten the field```.   All camera lenses introduce optical distortion some people refer to as ```fish eye``` distortion.  The shorter the focal length the greater the field of view but along with that comes greater fish eye distortion.    
+
+To perform this calibration please see our 'Calibration' section in the readme in our  [raspicam github repository](https://github.com/UbiquityRobotics/raspicam_node) where we explain that our camera must be running the raspicam node and publishing raw camera data.   Then on a laptop setup as a ROS node where the robot is the ROS master a camera_callibrator program is run.  
+
+The link above will point to a ROS calibration process that is used for the calibration itself once our raspicam node is publishing images.  One thing that can surprise people is after it has been indicated the program has enough data to do the calibration you will click the 'Calibrate' button.   What happens then can take a great many minutes to complete and it appears that the camera_callibrator program is hung up but in fact it has to do a great many calculations so give it time.
+
+The ROS page with calibration is the [Monocular Calibration Page](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration)
+
+
 ## Sonar Board Attachment To The Robot
 
 Below is a picture of the Sonar board included with Magni Silver configuration. This section will show how the Sonar Board is mounted on tall standoffs and a 50-pin ribbon cable is then attached. The sonar board is included in the large box for a Magni Silver but is not attached to the robot prior to shipment.  Be careful to avoid the need to often re-bend the sonars if they bump something because the pins can only be bent and re-bent a limited number of times.
