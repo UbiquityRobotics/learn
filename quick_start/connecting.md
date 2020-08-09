@@ -6,7 +6,13 @@ permalink: connecting
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-# Doing a clean Shutdown Of the Magni Robot
+# Connecting a Workstation and Starting the Robot
+
+Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  Read more about this [here](need_to_know).
+
+This page discusses the usage of a VirtualBox so that if you do not have a linux computer available you can still use a virtual Linux machine to connect to the Magni robot.   
+
+## Doing a clean Shutdown Of the Magni Robot
 
 Forgive us for first explaining how to shutdown and then power off the Magni robot but we felt this step may be missed if it were at the very end of this page.
 
@@ -21,12 +27,6 @@ Once you have an open SSH console to the Magni, which is explained next on this 
 If your Magni is a Magni silver and you have the sonar board you can always use the SW1 switch by holding it down for a couple seconds.  This will lead to a clean shutdown of the host Raspberry Pi CPU.
 
 If you do not have a sonar board you can wire for yourself a reset switch that is normally open and when connected connects pin 31 of P702 on the MCB to pin 30 of that large 50 pin connector.
-
-# Connecting a Workstation and Starting the Robot
-
-Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  Read more about this [here](need_to_know).
-
-This page discusses the usage of a VirtualBox so that if you do not have a linux computer available you can still use a virtual Linux machine to connect to the Magni robot.   
 
 ## Use of your own Linux machine with WiFi
 
