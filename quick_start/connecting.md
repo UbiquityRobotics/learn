@@ -102,8 +102,27 @@ Now you are connected and logged in.
   0 updates are security updates.  
  Last login: Thu Feb 11 16:30:39 2016 from 10.42.0.143
 
- Finally, start the robot's software by typing:
+## Running ROS apps not requiring a Display
 
-```roslaunch magni_demos simple_navigation.launch```  
+Many of the robot applications we supply as demos or some you may be writting yourself do not require a laptop if they do not need to display anything.  These types of command line applications can be run on a console to the robot.  
+
+One example is to start the robot's navigation software by typing:
+
+ ```roslaunch magni_demos simple_navigation.launch```  
+
+We would suggest that to run simple_navigation you should see our [Fiducial-Based Localization Page](https://learn.ubiquityrobotics.com/fiducials) as our intent here is not to explain that complex mode, simply to show an example of a ROS app.
+
+## Setup Laptop ROS Environment For Magni Control
+
+In order to have your laptop be able to issue ROS messages to control the Magni such as running ```twist``` on the laptop or to run programs that require a graphical display such as ```rviz``` you will need to run ROS on your laptop and setup the laptop instance of ROS so that the robot is the ROS master.
+
+Once the laptop (or VM) is configured with the robot as the ROS master you can inspect the ROS topics on the laptop and even view what the camera is seeing from your laptop or do other things like configure dynamic ROS parameters which all are done with a laptop display normally.
+
+Rather than duplicate the required setup here you should refer to the [ROS Workstation Setup Page](https://learn.ubiquityrobotics.com/workstation_setup) to do these required configuration steps.
+
+  * Setup the ROS version that the robot is running if not already done
+  * Set environment variables so the robot is the ROS master
+  * Setup the laptop and the robot so they are synchronized in time
+  * Run other programs using programs that require a graphics display.
 
 At this point you will be able to control the robot from the workstation keyboard or by using Robot Commander.
