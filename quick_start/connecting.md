@@ -28,7 +28,7 @@ If your Magni is a Magni silver and you have the sonar board you can always use 
 
 If you do not have a sonar board you can wire for yourself a reset switch that is normally open and when connected connects pin 31 of P702 on the MCB to pin 30 of that large 50 pin connector.
 
-## Use of your own Linux machine with WiFi
+# Use of your own Linux machine with WiFi
 
 If you have your own Linux laptop you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network.  
 
@@ -104,9 +104,13 @@ Now you are connected and logged in.
 
 ## Running ROS apps not requiring a Display
 
-Many of the robot applications we supply as demos or some you may be writting yourself do not require a laptop if they do not need to display anything.  These types of command line applications can be run on a console to the robot.  
+Many of the robot applications we supply as demos or some you may be writting yourself do not require a laptop if they do not need to display anything.  These types of command line applications can be run on a console to the robot.
 
-One example is to start the robot's navigation software by typing:
+A common simple app to control robot movement for example:
+
+```rosrun teleop_twist_keyboard teleop_twist_keyboard.py```
+
+Even some complex applications such as to start the robot's navigation software can be run on the robot directly in a text console.  
 
  ```roslaunch magni_demos simple_navigation.launch```  
 
@@ -123,6 +127,7 @@ Rather than duplicate the required setup here you should refer to the [ROS Works
   * Setup the ROS version that the robot is running if not already done
   * Set environment variables so the robot is the ROS master
   * Setup the laptop and the robot so they are synchronized in time
+  * Some environments may require setting up IP addresses in /etc/hosts
   * Run other programs using programs that require a graphics display.
 
 At this point you will be able to control the robot from the workstation keyboard or by using Robot Commander.
