@@ -68,7 +68,7 @@ The standard motor/wheel unit we ship have these characteristics
 
     - 3 phase brushless motors with internal gearing
     - The wheels have a circumference of 0.64 meters
-    - The 3 phase magnetic encoders produce 42 pulses each phase per revolution
+    - The 3 phase magnetic encoders produce 43 pulses each phase per revolution
     - We use both edges of the 3 non-overlaping phases for 258 tics per rev
     - This translates to about 2.5mm as the rough linear travel per enc tick
     - This also translates to 1.4 degrees wheel rotation per encoder tick
