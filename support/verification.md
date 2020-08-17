@@ -186,6 +186,16 @@ Now we will do a few tests so make sure the robot has room to move forward about
 
    - Press the **l** letter key at a quick rate for 5 seconds and the Magni will rotate clockwise back to the starting point and will have the 3rd line that says 'degrees' now show the 3rd number to be near 0.
 
+Another mode you may want to try is while the robot is up on blocks so drive wheels don't touch the ground you can get wheels to run a fixed speed as follows:
+
+    rostopic pub -r 10 /cmd_vel geometry_msgs/Twist '{ linear: {x: 0.3} }'  
+
+If you want the robot to continuously rotate this can be done directly on the ground or on blocks as follows:
+
+    rostopic pub -r 10 /cmd_vel geometry_msgs/Twist '{ angular: {z: 0.5} }'
+
+
+
 
 ### 3.3 ESTOP Testing In A Running Full System
 
@@ -272,15 +282,22 @@ For re-connect of serial it will start back up in a second or less.
 
 ### 4.1 RaspiCam Camera Test:
 
-   There is a very simple way to test the RaspiCam camera on the robot.   This test will generate a jpeg still picture in about 6 seconds just to check the camera functionality.
+There is a very simple way to test the RaspiCam camera on the robot.   This test will generate a jpeg still picture in about 6 seconds just to check the camera functionality.
 
-   ``raspistill -o testpicture.jpg``
+    raspistill -o testpicture.jpg
 
-   To verify the camera is operating properly the testpicture.jpg file needs to be moved to your laptop or other computer that has a jpeg picture viewer.  If it is too difficult to move the picture using ftp or some other linux operation, the next best thing is to look at the file size. This can be done in the line below and the reply shows the 1543213 as the size in bytes for the jpeg image file.
+To verify the camera is operating properly the testpicture.jpg file needs to be moved to your laptop or other computer that has a jpeg picture viewer.  If it is too difficult to move the picture using ftp or some other linux operation, the next best thing is to look at the file size. This can be done in the line below and the reply shows the 1543213 as the size in bytes for the jpeg image file.
 
-   ``ls -l testpicture.jpg``
+    ls -l testpicture.jpg
+    -rw-rw-r-- 1 ubuntu ubuntu 1543213 Aug  4 08:18 testpicture.jpg
 
-   ``-rw-rw-r-- 1 ubuntu ubuntu 1543213 Aug  4 08:18 testpicture.jpg``
+If you have previously setup a laptop to be running ROS and have your Magni setup to be the ROS_MASTER you can start the raspicam node on the magni
+
+    roslaunch raspicam_node camerav2_1280x960.launch
+
+Then on the laptop which has graphics you can view live video like this:
+
+    rosrun image_view image_view image:=/raspicam_node/image _image_transport:=compressed  
 
 ### 4.2 Sonar Board Test:
 
