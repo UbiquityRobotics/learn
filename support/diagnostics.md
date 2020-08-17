@@ -26,7 +26,7 @@ Instructions for joining your local area network are in the same place.
 
 ## Handy Tips for Developers
 
-* The main config file for enabling the raspicam camera and sonars and more can be edited as root and is `/etc/ubiquity/robot.yaml`  Details on this are located in the sections discussing camera and sonars and other sections.
+* The main config file for enabling the raspicam camera and sonars and more can be edited as root and is `/etc/ubiquity/robot.yaml`  Details on this are located in the sections discussing camera and sonars and other sections. Beware that the format is very specific. Do not use tabs and pay attention to where spaces are required.
 
 * Another important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`. N.B. This file will be rewritten when the base is upgraded, as by apt=get.  The most likely things a user would change are being moved to the above robot.yaml file if not already there.
 
@@ -58,7 +58,20 @@ Instructions for joining your local area network are in the same place.
 This launch file does `rosrun controller_manager spawner ubiquity_velocity_controller ubiquity_joint_publisher`.  
 This invokes the ROS controller_manager; for more detail see `wiki.ros.org/controller_manager`.
 
-* Much magni software will be found in `/opt/ros/kinetic/share/magni_*`` In particular, magni_demos/launch has ROS launch files.
+* Much magni software will be found in ```/opt/ros/kinetic/share/magni_*``` In particular, magni_demos/launch has ROS launch files.
+
+## Motor And Wheel Encoders
+
+We limit the motor speed by default to 1 M/sec.  It is possible to make this faster but perhaps contact us for guidance.
+
+The standard motor/wheel unit we ship have these characteristics
+
+    - 3 phase brushless motors with internal gearing
+    - The wheels have a circumference of 0.64 meters
+    - The 3 phase magnetic encoders produce 42 pulses each phase per revolution
+    - We use both edges of the 3 non-overlaping phases for 258 tics per rev
+    - This translates to about 2.5mm as the rough linear travel per enc tick
+    - This also translates to 1.4 degrees wheel rotation per encoder tick
 
 ## Motor Controller Board Pinouts
 
