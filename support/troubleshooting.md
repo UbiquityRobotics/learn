@@ -14,13 +14,9 @@ For most of these operations you will need to have connected to the robot using 
 
 If you need help doing the connection refer to [Connecting a Workstation page](https://learn.ubiquityrobotics.com/verification)
 
-The most basic way to do a test to verify the robot can move is to be on an SSH console window on the robot and see if you can use keyboard to control the robot at all where ```Forward``` is just tapping the ```i``` key.  
+The most common and most basic issue that can come about in different ways is that the robot does not move.   The main focus of this page is to therefore troubleshoot common issues we have seen with the robot not moving when told to move.
 
-    rosrun teleop_twist_keyboard telelop_twist_keyboard.py
-
-The most common and most basic issue that can come about in different ways is that the robot does not move.   In order to understand how to get to that point we had a post from some time back that you should review just in case it is one of these issue then this page will elaborate.   
-Take a look at the  [Magni Does Not Move issue on our forum](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
-
+This page also has some information on other forms of troubleshooting software we have written or that is common to use in ROS based robots (Robot Operating System)
 
 Below are some other locations on in our documents that may help troubleshoot issues not discussed in enough detail on this page:
 
@@ -30,6 +26,19 @@ Below are some other locations on in our documents that may help troubleshoot is
 [Magni Does Not Move](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
 [Robot Commander](#robot-commander)  
 [Rviz](#rviz-troubleshooting)
+
+
+## Troubleshooting Lack Of Robot Movement
+
+The most basic way to do a test to verify the robot can move is to be on an SSH console window on the robot and see if you can use keyboard to control the robot at all where ```Forward``` is just tapping the ```i``` key.  
+
+    rosrun teleop_twist_keyboard telelop_twist_keyboard.py
+
+Before we dig into some detailed troubleshooting on lack of movement it may be good to review some key high level reasons for lack of movement that we had in a post on our forum from some time back that you should review just in case it is one of these issue then this page will elaborate.   
+Take a look at the  [Magni Does Not Move issue on our forum](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
+
+If that post does not resolve things here are more detailed proceedures.
+
 
 ### The Battery
 
