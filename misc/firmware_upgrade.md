@@ -19,14 +19,17 @@ Sometimes improvements to our motor controller firmware, in this case v35 or lat
 
 The table below shows the default and latest available versions of firmware.  
 
-Also shown is the rate at which the MCB ```STAT``` led will blink which is handy to visually check. It is best to count the time of 4 or more blinks then divide by that number for more accuracy. If the blink rate is found to be other than in the table it is possible you have a beta or non-approved version that may have been recalled.
+The ```Rate``` in the table is the rate at which the MCB ```STATUS``` led will blink which is handy to visually check. It is best to count the time of 4 or more blinks then divide by that number for more accuracy. If the blink rate is found to be other than in the table it is possible you have a beta or non-approved version.
 
-| Version |	BlinkRate | Description |
-| ------- | ---- | ----------- |
-| v28 | 6.0 sec | Production shipment version that does wheel movement check on startup. Users should do a firmware upgrade from this very old version |
-| v32	| 5.0 sec | Production firmware used in 2019. This is default if no version is entered. Supported by any host side software |
-| v35 |	4.0 sec | Production firmware with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
-| v37 | 4.75 sec | Beta firmware. Has built in selftest. |
+DateCode was started around version v35 and shows up in /diagnostics topic along with the version.  DateCode is in YYYYMMDD format for releases and YYMMDD for beta releases. It is the date of that particular version.  If you have a version that the date is before the date in the table it is likely a Beta or unofficial release. DateCode did not start till around v35.
+
+| Ver |	Rate | DateCode | Description |
+| ------- | ---- | ---- | ----------- |
+| v28 | 6.0 | NA | Production shipment version that does wheel movement check on startup. Users should do a firmware upgrade from this very old version |
+| v32	| 5.0 | NA | Production firmware used in 2019. This is default if no version is entered. Supported by any host side software |
+| v35 |	4.0 | 20190815 | Production firmware with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
+| v37 | 4.75 | 20200620 | Used in manufacturing only.  Has built in selftest. |
+| v38 | 5.25 | 200731 | Beta release for custom wheel support |
 
 To see more details about our firmware as well as our hardware revisions for the motor controller please view [this page](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
 
