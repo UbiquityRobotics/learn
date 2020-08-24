@@ -174,7 +174,7 @@ This command will continually update the robot position. There will be one line 
 
 Now we will do a few tests so make sure the robot has room to move forward about 1 meter and could have room to rotate fully. Because these tests are not precisely timed the distances and rotations will be only near the expected vaues.
 
-   - In the teleop window press  the **i** letter key at a quick rate for 4 seconds.   This should move the Magni about 0.6 meters forward which i about one spin of each wheel since one rotation is very near 0.64 meters.
+   - In the teleop window press  the **i** letter key at a quick rate for 4 seconds. This should move the Magni about 0.6 meters forward which is about one spin of each wheel since one rotation is very near 0.64 meters.
 
    - Look at the 'Translation' line in the second tf window and the first of the 3 numbers is X and should be near 0.6 meters perhaps within 0.1 meter.
 
