@@ -59,7 +59,7 @@ Run the firmware upgrade utility:
     rosrun ubiquity_motor upgrade_firmware.py
 
 After entering your email address, you should receive an access token.
-Enter this token and either accept the default version which is seen in the above table or specify a different version perhaps for latest features (eg. specify the version 35 by typing in 'v35'). The download will start and upgrade the motor controller board.
+Enter this token and either accept the default version which is seen in the above table or specify a different version perhaps for latest features (eg. specify version 35 by typing in 'v35'). The download will start and upgrade the motor controller board.
 
 Should any problems show up you are always allowed to do this firmware upgrade again to select a version you know was best for your needs.
 
