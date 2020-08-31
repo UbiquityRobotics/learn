@@ -70,3 +70,19 @@ inoperable and require factory servicing.
 When done, reboot the robot with `sudo reboot`.
 
 You are now on the latest version of the firmware.
+
+### Firmware Installation From A File
+
+In some support situations you may be working with the development team here and be given a beta version of software in the form of an encrypted file.
+
+Upgrade Firmware from a file that you place on your system:
+
+    rosrun ubiquity_motor upgrade_firmware.py --file  betaFirmwareFileName
+
+### Firmware Installation Using Non Standard Serial support
+
+In some situations the serial port used for controlling the robot may not be the default port on the Raspberry Pi host computer attached to the MCB.
+
+To specify a different serial port such as one plugged into usb:
+
+    rosrun ubiquity_motor upgrade_firmware.py --device /dev/ttyUSB0
