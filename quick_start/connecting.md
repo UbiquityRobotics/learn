@@ -8,31 +8,17 @@ permalink: connecting
 
 # Connecting a Workstation and Starting the Robot
 
-Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  Read more about this [here](need_to_know).
+Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  
 
-This page discusses the usage of a VirtualBox so that if you do not have a linux computer available you can still use a virtual Linux machine to connect to the Magni robot.   
+This page discusses connection of your laptop or workstation or the usage of a VirtualBox to control the robot.  If you do not have a linux computer available you can still use a virtual Linux machine to connect to the Magni robot.   
 
-## Doing a clean Shutdown Of the Magni Robot
+Additional information may be found [here](need_to_know).
 
-Forgive us for first explaining how to shutdown and then power off the Magni robot but we felt this step may be missed if it were at the very end of this page.
-
-We recommend doing clean shutdown on a Magni to lower your chances of corrupting your file system and to make your next powerup be faster by avoiding file system check next powerup.  If you have the time to properly shutdown the linux host you will not run the risk, however small, of corrupting your Micro SD card.
-
-Once you have an open SSH console to the Magni, which is explained next on this page, you can shutdown the Magni in a clean way using these commands and actions
-
-* Turn off the motor power by releasing the red ESTOP switch on the right and the RED motor power led will go off.
-* In a SSH console session type  ```sudo shutdown -h now```
-* After 10 seconds turn off the main power using the BLACK switch
-
-If your Magni is a Magni silver and you have the sonar board you can always use the SW1 switch by holding it down for a couple seconds.  This will lead to a clean shutdown of the host Raspberry Pi CPU.
-
-If you do not have a sonar board you can wire for yourself a reset switch that is normally open and when connected connects pin 31 of P702 on the MCB to pin 30 of that large 50 pin connector.
-
-# Use of your own Linux machine with WiFi
+## Use of your own Linux machine with WiFi
 
 If you have your own Linux laptop you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network.  
 
-```Skip ahead to the section below on connecting to a Magni for this case.```
+```Skip ahead to the section 'Connecting to the Robot and Logging In' for laptop.```
 
 
 ## Using our out-of-the-box virtual machine workstation
@@ -68,7 +54,7 @@ If you have received a Magni with the Raspberry Pi already installed, or loaded 
 If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus, the VM will see whatever network your host system is connected to. If your workstation is running, shut it down. Then connect your host system to the `ubiquityrobotXXXX network`.  Now start the workstation (that is, the Ubuntu system running under VBox); it will be connected to the robot's network `ubiquityrobotXXXX`. The password (sometimes called the security key) to connect is `robotseverywhere`.
 
 
-## Connecting to the Robot and Logging In
+# Connecting to the Robot and Logging In
 
 Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
 
@@ -131,3 +117,19 @@ Rather than duplicate the required setup here you should refer to the [ROS Works
   * Run other programs using programs that require a graphics display.
 
 At this point you will be able to control the robot from the workstation keyboard or by using Robot Commander.
+
+# Doing a clean Shutdown Of the Magni Robot
+
+Forgive us for first explaining how to shutdown and then power off the Magni robot but we felt this step may be missed if it were at the very end of this page.
+
+We recommend doing clean shutdown on a Magni to lower your chances of corrupting your file system and to make your next powerup be faster by avoiding file system check next powerup.  If you have the time to properly shutdown the linux host you will not run the risk, however small, of corrupting your Micro SD card.
+
+Once you have an open SSH console to the Magni, which is explained next on this page, you can shutdown the Magni in a clean way using these commands and actions
+
+* Turn off the motor power by releasing the red ESTOP switch on the right and the RED motor power led will go off.
+* In a SSH console session type  ```sudo shutdown -h now```
+* After 10 seconds turn off the main power using the BLACK switch
+
+If your Magni is a Magni silver and you have the sonar board you can always use the SW1 switch by holding it down for a couple seconds.  This will lead to a clean shutdown of the host Raspberry Pi CPU.
+
+If you do not have a sonar board you can wire for yourself a reset switch that is normally open and when connected connects pin 31 of P702 on the MCB to pin 30 of that large 50 pin connector.

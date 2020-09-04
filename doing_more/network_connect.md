@@ -8,7 +8,11 @@ permalink: connect_network
 
 # Connecting the Robot to Your Network
 
-Connect your workstation to the robot as described in [Connecting a Workstation and Starting the Robot](connecting).  If you haven't connected the robot to your network yet, the robot is still connected to its own network, which is called `ubiquityrobotXXXX`, and your workstation is connected to that.
+The robot has the ability to connect to your own local WiFi network. For debug or development use you can also directly connect your robot to your wired Ethernet using the jack on the raspberry Pi.
+
+ By default the robot is configured to use the WiFi channels used in the United States.  Countries that use WiFi channels on their WiFi router that are not part of the normal channels used in the US will need to set their country code which is explained later or the robot may not see their WiFi router.
+
+Once you have connected your robot to either the WiFi network or decided to run the robot with it's own WiFi hotspot you are likely going to want to connect your workstation to the robot as described in [Connecting a Workstation and Starting the Robot](connecting).  If you haven't connected the robot to your network yet, the robot is still connected to its own network, which is called `ubiquityrobotXXXX`, and your workstation is connected to that.
 
 Before you go on, you should change the hostname of your robot, to distinguish your robot from others. Open a new terminal window, and log in to the robot with ssh:
 
@@ -40,6 +44,10 @@ Now you can log in to the robot with NEWHOSTNAME:
 Use pifi to list the nearby networks:
 
     pifi list seen
+
+If you are sure you have a WiFi router that should be seen but it does not show up it may be due to the router using a WiFi channel that is not used in the United States which is the default country code on our images.   We are implementing a way to set the country code that will be available in late 2020 where below we set China country code.  Refer to www.iban.com/country-codes or other reference.
+
+    sudo pifi set-country CN
 
 >MyNetwork   
 Neighbor's network  
@@ -122,5 +130,3 @@ Now that you have the correct date you can update the robot to get changes that 
     sudo apt-get upgrade
 
 This may take some time, since it may have been a while since the original image was made.
-
-  
