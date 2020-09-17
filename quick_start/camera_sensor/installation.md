@@ -114,10 +114,14 @@ Make an edit so the only uncommented line with `sonars:` in it is as shown below
 
 `sonars: 'pi_sonar_v1'`
 
-The Sonar board is mounted to the chassis using 4 standoffs that screw into 4
-fixed 3mm standoffs on the chassis. This description will show the 2 standoffs
+The Sonar board is mounted to the chassis using just 4 standoffs.  Only the two standoffs to the sides that will have large pads with holes on the sonar board for 3mm standoffs are to be used. This description will show the 2 standoffs
 on the right but two other standoffs on the left also at the 45 degree angle are
-used as well. The standoffs and the M3 screws are shown below for reference.
+used as well.
+
+<H4 style="color:red">If you get your robot with a standoff screwed into the front top bar of the robot in the middle location REMOVE THAT STANDOFF because it will cause a SHORT CIRCUIT to parts in the middle of the Sonar board. The middle standoff is used ONLY for a board that sits below the Sonar board</H4>
+
+
+The standoffs and the M3 screws are shown below for reference.
 
 ![Magni Standoff Reference](MagniStandoffReference.jpg)
 
