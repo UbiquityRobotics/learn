@@ -125,10 +125,11 @@ The standoffs and the M3 screws are shown below for reference.
 
 ![Magni Standoff Reference](MagniStandoffReference.jpg)
 
-The standoffs screw into the fixed nuts on the chassis. Here we show the 2 on
-the right.
+The 4 standoffs screw into the fixed nuts on the chassis. The picture below shows the 2 standoff locations on right and the 2 on the left.  Center standoff is NOT used.
 
-![Magni Sonar Board Standoffs](MagniSonarBoardStandoffs.jpg)
+There is also no need to load the large fuse on the back of the board for just the Sonar board and we recommend removing F701 if it is loaded for when you only have the Sonar board (Up to 2020 that was always the case).  The fuse allows 24V to get routed to other boards that sometimes can sit below the sonar board but it is best safety to just remove that fuse.
+
+![Magni Sonar Board Standoffs](MagniAllSonarBoardStandoffs.jpg)
 
 Below is shown the right side of the sonar board fully mounted using the M3
 standoffs and M3 screws from the top.
