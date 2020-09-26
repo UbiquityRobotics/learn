@@ -66,7 +66,8 @@ We limit the motor speed by default to 1 M/sec.  It is possible to make this fas
 
 The standard motor/wheel unit we ship have these characteristics
 
-    - 3 phase brushless motors with internal gearing
+    - 3 phase brushless motors with internal gearing.
+    - The Wheels are spaced 0.33 meters apart.
     - The wheels have a circumference of 0.64 meters
     - The 3 phase magnetic encoders produce 43 pulses each phase per revolution
     - We use both edges of the 3 non-overlaping phases for 258 tics per rev
