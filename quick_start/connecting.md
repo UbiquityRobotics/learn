@@ -8,17 +8,36 @@ permalink: connecting
 
 # Connecting a Workstation and Starting the Robot
 
-Your workstation may be a Ubuntu Linux system of your own, or you can use our preconfigured virtual machine.  
+The Magni robot is normally running all the software for whatever sensors and navigation mode you are using for your project but there is no practical way to see what the robot is doing within ROS because the Host Linux Cpu running the Magni itself is ```headless``` and normally only has WiFi to access.
+
+The workstation is setup so the robot is the ROS master and this allows ROS running on the workstation to monitor ROS topics and inspect the state of ROS using command line tools or graphical tools.  
+
+Your ```workstation``` may be a Ubuntu Linux system of your own such as a laptop, or you can use our preconfigured virtual machine in the form of a VirtualBox.  
 
 This page discusses connection of your laptop or workstation or the usage of a VirtualBox to control the robot.  If you do not have a linux computer available you can still use a virtual Linux machine to connect to the Magni robot.   
 
 Additional information may be found [here](need_to_know).
 
+## Reasons A Workstation Comes In Handy
+
+This little section is optional reading to better understand the power of running a workstation.
+
+The robot itself is normally running all hardware drivers for sensors such as any sort of camera or sonar sensors or even Lidar unit. If your system uses any form of navigation then things like  fiducial navigation, gmapping, move_base, move_basic or AMCL all run on the robot itself so they are close to the hardware.    
+
+The prime reason a workstation or virtual machine is required in a system using a Magni is that there so a way to get access through console screens running as SSH terminals seen on the workstation to start, stop and monitor output from software running on the robot.   A second fairly important console screen sort of use for a workstation is that since it will also see all the ROS activity the workstation can monitor ROS topics or other status for ROS at that time.
+
+A workstation is also used so that graphical tools such as RViz or plotting software can be run on the screen of the workstation.  This is the case if the robot is to do navigation you would then run visual tools such as the RViz environment to see the robot move around or to set goals.  In this mode you could configure RViz to show you the sensors such as our sonar board or even a Lidar unit.   
+
+Another need for a workstation would be so that you can monitor values in a ROS topic either from command line tools or such as for when you want to do PID tuning it is important to see the PID error values in a graph you would tend to run rqt_plot on the workstation or just run ```image_view``` to see what the raspicam camera is seeing as the robot drives around.
+
+We are not in this section discussing purely virtual simulation tools but those too can be run on a workstation assuming the workstation has a powerful enough configuration.  
+
+
 ## Use of your own Linux machine with WiFi
 
-If you have your own Linux laptop you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network.  
+If you have your own Linux laptop already configured with ROS to be running the same ROS release as the robot then you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network.  
 
-```Skip ahead to the section 'Connecting to the Robot and Logging In' for laptop.```
+```Skip ahead to the next major section 'Connecting to the Robot and Logging In' for laptop if you are not going to run a VirtualBox instance.```
 
 
 ## Using our out-of-the-box virtual machine workstation
@@ -43,7 +62,7 @@ Your workstation is ready to use.
 
 In a later section we will explain how to attach the robot to an existing WiFi network and how ROS can take advantage of that to control the robot.
 
-## Connecting to The Magni Robot's network
+### Connecting to The Magni Robot's network
 
 At this point you should have either your own linux physical machine or the VirtualBox setup described above and we are ready to connect to the Magni WiFi hotspot.
 
