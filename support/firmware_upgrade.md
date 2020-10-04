@@ -27,9 +27,9 @@ DateCode was started around version v35 and shows up in /diagnostics topic along
 | ------- | ---- | ---- | ----------- |
 | v28 | 6.0 | NA | Production shipment version that does wheel movement check on startup. Users should do a firmware upgrade from this very old version |
 | v32	| 5.0 | NA | Production firmware used in 2019. This is default if no version is entered. Supported by any host side software |
-| v35 |	4.0 | 20190815 | Production firmware with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
+| v35 |	4.0 | 20190815 | Current release as of Sept 2020 with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
 | v37 | 4.75 | 20200620 | Used in manufacturing only.  Has built in selftest. |
-| v38 | 5.25 | 200731 | Beta release for custom wheel support |
+| v38 | 5.25 | 20200909 | Beta release and current candidate for next full release |
 
 To see more details about our firmware as well as our hardware revisions for the motor controller please view [this page](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
 

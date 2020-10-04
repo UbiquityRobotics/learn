@@ -46,14 +46,15 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 ####	Support and Verification Of Your Robot
 
 1. [Magni ROS Usage](programming_your_robot/overview.md)
-2. [Burning a fresh Image, Updating Software and updating Firmware](programming_your_robot/updating.md)
-3. [Basic Troubleshooting](support/troubleshooting.md)
+2. [Burning a fresh Image, Updating Software](support/updating.md)
+3. [Updating Firmware](support/firmware_upgrade.md)
 4. [Basic Verification Of Operation](support/verification.md)
 5. [Diagnostics, Developer Tips and I2C](support/diagnostics.md)
 6. [PC Board Revisions For MCB, Switch Boards & more](PC_Board_RevId)
 7. [Motor Controller Board Pinouts Leds And User Power Supplies](mcb_pinouts_leds_userpower)
 8. [GPIO Line Usage And Using Them For Your Own Needs](support/GPIO_lines.md)
 9. [Removal And Installation Of Main PC Boards](support/board_replacement.md)
+10. [Basic Troubleshooting](support/troubleshooting.md)
 
 
 

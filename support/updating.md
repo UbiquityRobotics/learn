@@ -5,11 +5,11 @@ permalink: updating
 ---
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
-# Updating Software and Firmware
+# Burning A Fresh Image And Updating Software
 
 From time to time Ubiquity Robotics will be updating
 either the full Raspberry Pi image, the working software
-on the Raspberry Pi, or the firmware on the Motor Controller Board.
+on the Raspberry Pi. This page also contains a link to the page for firmware on the Motor Controller Board.
 
 #### Raspberry Pi Image Update
 

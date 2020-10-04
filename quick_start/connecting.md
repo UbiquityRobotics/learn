@@ -62,20 +62,22 @@ Your workstation is ready to use.
 
 In a later section we will explain how to attach the robot to an existing WiFi network and how ROS can take advantage of that to control the robot.
 
-### Connecting to The Magni Robot's network
-
-At this point you should have either your own linux physical machine or the VirtualBox setup described above and we are ready to connect to the Magni WiFi hotspot.
-
-If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This is a WiFi mode which provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobotXXXX` where XXXX is a number letter combination. You should find it under network list; the password (sometimes called the security key) to connect is `robotseverywhere`. If you can't find it under available networks, try restarting the robot.
-
 ### Connecting a Virtual Machine
 
 If you are running under VirtualBox, you will have installed this virtual machine with a bridged network.  Thus, the VM will see whatever network your host system is connected to. If your workstation is running, shut it down. Then connect your host system to the `ubiquityrobotXXXX network`.  Now start the workstation (that is, the Ubuntu system running under VBox); it will be connected to the robot's network `ubiquityrobotXXXX`. The password (sometimes called the security key) to connect is `robotseverywhere`.
 
 
-# Connecting to the Robot and Logging In
+# Connecting to the Robots Network and Logging In
 
-Now that you are on the robot's network, you can connect to the robot itself. On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
+At this point you should have either your own linux physical machine or the VirtualBox setup described above and we are ready to connect to the Magni WiFi hotspot or sometimes for development the robot may be wired to your LAN.
+
+## Connecting To The Magni Robot WiFi hotspot
+
+If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This is a WiFi mode which provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobotXXXX` where XXXX is a number letter combination. You should find it under network list; the password (sometimes called the security key) to connect is `robotseverywhere`. If you can't find it under available networks, try restarting the robot.
+
+## Open A SSH Console Once You Are On The Robot's Network
+
+Once you are on the robot's network, via WiFi Or Wired, you can connect to the robot itself. On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
 
 ```ssh ubuntu@ubiquityrobot.local```
 

@@ -6,7 +6,7 @@ permalink: verification
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-# Basic Tests For The Magni Robotic Base
+# Basic Verification Of Operation
 
 This page tells how to verify basic operation of the Magni robot.  These tests can be used to regression test hardware and firmware changes or new production boards installed in the Magni robot.
 
