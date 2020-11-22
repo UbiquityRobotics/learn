@@ -21,6 +21,7 @@ Our goal here is to put in one place the key elements of robot navigation using 
 
 The full system here could be studied and investigated by learning more about such things as ROS /tf topic and the lidar itself as well as how ROS understands the orientation of sensors in 3D space. Plenty to learn but this is a known starting point as an example.
 
+
 # The RPLidar In This Demo On The Magni
 
 We will use a relatively low cost and very popular Slamtec RPLidar A1 that is connected to the Magni raspberry pi USB and will by default in most cases show up as serial device /dev/ttyUSB0.  If you have a Pi4 we recommend using one of the jacks with blue plastic as they have higher current capability.  Use a good quality USB cable to avoid loss of power in many of the cheap cables leading to odd problems.
@@ -54,7 +55,16 @@ After the above installs to be prepaired to run navigation code you will also ne
     Edit to replace ```scan_topic_name``` with ```scan``` where ros::Publisher_scan_pub is setup
     catkin_make
 
-After the above steps you will need to decide on a location for the lidar and this location will have to be placed into the launch files below. We are trying to keep things simple but there are ways in ros to have parameter files and so on and perhaps those may be added.
+# A How To Get Our Demo Launch Files
+
+You will need to update your ~/catkin_ws/src/demos  repository in order to get the launch files.  The command below will pull the new magni_lidar folder into catkin_ws/src/demos folder by doing a pull for your existing demo folder below.  The actual location of the magni_lidar demo on github is :  https://github.com/UbiquityRobotics/demos/tree/master/magni_lidar
+
+    cd ~/catkin_ws/src/demos
+    git pull
+    cd ~/catkin_ws
+    catkin_make -j 1
+
+After the above steps you will need to decide on a physical location for the lidar and this location will have to be placed into the launch files below. We are trying to keep things simple but there are ways in ros to have parameter files and so on and perhaps those may be added.
 
 For each launch file below open it up in an editor and be sure to make proper modifications as stated in the start of the launch file comments
 
