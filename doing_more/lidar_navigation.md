@@ -3,7 +3,7 @@ layout: default
 title:  "Lidar-Based Localization"
 permalink: lidar_navigation
 ---
-# Navigate Using A Lidar for Localization
+# Lidar Navigation Using a Magni
 
 #### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
@@ -12,23 +12,23 @@ be determined.  For a discussion of other approaches, see the
 [Navigation and Localization Overview](../overview/overview.md).
 -->
 
-This document discusses running our navigation software on a Ubiquity
-Robotics robot base, using an RPLidar that would have to be installed you yourself. It also assumes that you have a workstation with ROS installed, which is connected to a network in common with the robot. You will need a printer, too.
+This document discusses running navigation software on a Ubiquity
+Robotics robot base using a RPLidar that would have to be installed yourself. It also assumes that you have a workstation with ROS installed connected to a network in common with the robot and configured so the robot is the ROS master. For laptop configurations please see [Setup a ROS workstation[(https://learn.ubiquityrobotics.com/workstation_setup)
 
-Because navigation using a Lidar is a very popular and relatively easy mode for robots we are going to supply here some basic starter launch files and some directions for how to get started in robot navigation using a Lidar.
+Use of a Lidar is a popular method of implementing robot navigation.  We are going to supply here some basic starter launch files and some directions for how to get started in robot navigation using a Lidar.
 
-Our goal here is to put in one place the key elements of robot navigation using a very popular device, a LIDAR, to allow the robot to see walls all around and both map and then later navigate within a known mapped area.  We will use a RPLidar simply because they are easily available and a ROS driver exists for that Lidar.  
+The Lidar will allow the robot to see walls all around and both map and then later navigate within a known mapped area.  We will use a RPLidar simply because they are very available and a ROS driver exists for that Lidar.  
 
 The full system here could be studied and investigated by learning more about such things as ROS /tf topic and the lidar itself as well as how ROS understands the orientation of sensors in 3D space. Plenty to learn but this is a known starting point as an example.
 
 
 # The RPLidar In This Demo On The Magni
 
-We will use a relatively low cost and very popular Slamtec RPLidar A1 that is connected to the Magni raspberry pi USB and will by default in most cases show up as serial device /dev/ttyUSB0.  If you have a Pi4 we recommend using one of the jacks with blue plastic as they have higher current capability.  Use a good quality USB cable to avoid loss of power in many of the cheap cables leading to odd problems.
+We will use a relatively low cost and very popular ```Slamtec RPLidar A1``` that is connected to the Magni raspberry pi USB and will by default in most cases show up as serial device /dev/ttyUSB0 once it's USB cable is plugged into the Pi CPU.  If you have a Pi4 we recommend using one of the jacks with blue plastic as they have higher current capability.  Use a good quality USB cable to avoid loss of power in many of the cheap cables leading to odd problems.
 
-For the launch files in this demos the RPLidar is screwed to the top plate using 5mm spacers so the ribbon cable can bend around and allow their little USB board to be connected via USB cable to a port of the Raspberry Pi.
+For the launch files in this demos the RPLidar is screwed to the top plate using 10mm of spacers so the ribbon cable can bend around and allow their little USB board to be connected via USB cable to a USB port of the Raspberry Pi.
 
-The center of the lidar is centered in Y and is thus half way between each wheel but of course on top of the Magni top plate. The motor and pully is on the rear side of the lidar.
+The center of the lidar when looking from the top is located half way between each wheel but of course on top of the Magni top plate. This places the translated X and Y of the Lidar at 0,0 relative to what is called ```base_link``` in the robot physical model, the URDF file. The motor and pully is on the rear side of the lidar.
 
 ![RpLidar Mounting](Magni_RpLidarMounting.png)
 
