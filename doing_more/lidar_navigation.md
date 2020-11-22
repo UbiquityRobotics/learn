@@ -38,9 +38,9 @@ The position of the Lidar should match in X and Y as defined in the launch files
 
 There are 6 floating point values in the lidar_translation definition. First 3 are X,Y,Z translation in meters from our 'base_link' or a spot in space located directly between the centers of our two large main drive wheels. Z is not too critical so standoff height is not important because the lidar only generates data in the 2D X-Y plane. The next 3 values are rotational values in radians around the X,Y,Z axis.  If you must rotate the lidar about Z then note that the 6th value is the rotation about the Z axis (straight up). If you must rotate the lidar about X or Y ... you are on your own, it can be confusing.
 
-# ROS Configuration And Prerequisites To Run These demo launch files
+## ROS Configuration And Prerequisites
 
-Unless we later install these on our images at this time, late 2020, these installs are required.
+Unless we later install these on our images at this time, late 2020, these installs may be required.  These do no harm if they are already installed.  Your robot must be able to see the web to do these updates.
 
     sudo apt update
     sudo apt install ros-kinetic-navigation
@@ -55,7 +55,7 @@ After the above installs to be prepaired to run navigation code you will also ne
     Edit to replace ```scan_topic_name``` with ```scan``` where ros::Publisher_scan_pub is setup
     catkin_make
 
-# A How To Get Our Demo Launch Files
+## How To Get Our Demo Launch Files
 
 You will need to update your ~/catkin_ws/src/demos  repository in order to get the launch files.  The command below will pull the new magni_lidar folder into catkin_ws/src/demos folder by doing a pull for your existing demo folder below.  The actual location of the magni_lidar demo on github is :  https://github.com/UbiquityRobotics/demos/tree/master/magni_lidar
 
@@ -74,7 +74,7 @@ After a couple minutes you will run the launch file example to start a lidar, th
 
     roslaunch magni_lidar magni_lidar_mapmaker.launch
 
-# Verify that the Lidar is Publishing To a ROS topic
+## Verify that the Lidar is Publishing To a ROS topic
 
 Once the lidar is started, the /scan ROS topic will publish the lidar scan data. You can verify it is generating data (although it is a great deal of data) using this test command
 
@@ -105,13 +105,13 @@ Your best chance at a good map is to drive slowly.   So use the ```z``` key if u
 
 Later you can do this whole map exercise in more complex rooms but keep it simple if you have never done this sort of thing before.
 
-# SAVE THE MAP!
+## BE SURE TO SAVE THE MAP!
 
 It is very important to ```SAVE THE MAP``` because if you just stop things you loose the entire set of data you just created with some effort I might add.
 
     rosrun map_server map_saver -f mynewmap-ils
 
-We suggest you move both the .pgm and the .yaml files into magni_lidar/maps so they can be found and used easily
+We suggest you copy both the .pgm and the .yaml files into magni_lidar/maps so they can be found and used easily.  You can name them with things like 'myworkshop' or 'labarea' with no spaces in the names.  Later you can put the desired map in the proper location or modify the launch files with your own map names.  Maps will be used from your  ```~/.ros/slam``` folder.
 
 # Navigating Within A Pre-Created Map
 
@@ -122,7 +122,7 @@ A key piece of software used in this simple example is the move_basic package th
 You then can use RViz on your laptop (described in mapping example) and can define a pose that you want the robot to move to. A 'Pose' means a specific location in terms of X and Y on the floor as well as the rotation of the robot.
 Lets GO!
 
-# Start The Navigation Stack Using An Existing Map
+## Start The Navigation Stack Using An Existing Map
 
 Here we need to start the launch file and specify a map that will be used for navigation in whatever room or area you are in that has previously been mapped using gmapping and saved as a map. Edit magni_lidar_maprunner.launch to set the desired map. We supply a tinyroom.map as an example but this is just a small square area and unless you duplicate it exactly this will not work for you. It was about 1.9M x 1.5M if you have a bunch of cardboard you could start doing navigation without the making of the map part of this demo
 
@@ -130,9 +130,9 @@ Here we need to start the launch file and specify a map that will be used for na
 
 This launch file will strictly respect the odom information the robot keeps track of to determine robot position and rotation (called robot pose). The problem with this method is all robot odom only determination of pose drifts over time the more movements that take place. So this method is ok for a short demo but not very usable in general real world situations.
 
-# Start move_basic So That You Can Set Goals And Navigate
+## Start move_basic For setting Navigation Goals
 
-So far we have setup things so the robot knows where it is within a map. We need to start some software that we can tell where we want to move to so that that piece of software can control the robot to approach a desired destination X,Y and rotation (both of these things together are called a desired pose. We will use rviz but we must start this piece of software called move_base now. Ubiquity Robotics move_basic is a simplified version of move_base where move_base can do complex plans to get around objects or corners. The move_basic package can only do line of sight straight paths and if something gets in the way it stops and does not plan around the object.
+So far we have setup things so the robot knows where it is within a map. We need to start some software that we can tell where we want to move to so that that piece of software can control the robot to approach a desired destination X,Y and rotation (both of these things together are called a desired pose. A pose is the X and Y location on the map as well as the rotation of the robot within the map.   We will use rviz but we must start this piece of software called move_base now. Ubiquity Robotics move_basic is a simplified version of move_base where move_base can do complex plans to get around objects or corners. The move_basic package can only do line of sight straight paths and if something gets in the way it stops and does not plan around the object.
 
     roslaunch magni_nav move_basic.launch
 
@@ -140,7 +140,7 @@ We will now be ready to accept 'goals' and then move to those goals.
 
 The more general solution to navigation uses object avoidance and the move_base package combined with a map that holds obstacles seen by sensors such as the sonar. The objects that move in fron are in what is called the costmap. Perhaps that will be added to this example in the future.
 
-# Run RViz On Your Laptop To Watch And Set Goals
+## Run RViz On Your Laptop To Watch And Set Goals
 
 On the laptop copy over lidar_mapmaker.rviz from this repository to your home directory so it can configure rviz easily. Then on the laptop you can run this from home folder.
 
@@ -150,7 +150,7 @@ Below is an example of a very simple map shown in RViz.  The black outline surro
 
 ![RpLidar Mounting](Magni_ExampleOfLidarAndSonarsInMap.png)
 
-# Tell The Robot Where It Is Located In The MAP
+## Tell The Robot Where It Is Located In The MAP
 
 The AMCL package is now told just where the robot is within the map and which direction it is pointing. This step allows the AMCL package to have a very good initial pose for the robot so it can estimate how to get to other locations right away.
 
@@ -161,7 +161,7 @@ Set the 2D Pose Estimate using the RViz interface as follows:
     - A large green arrow will appear and you have to drag mouse so the arrow points the same angle as the robot is facing.
     - Release the mouse button and then the robot will have a very good estimate of it's pose
 
-# Define A Target Pose As A Goal So The Robot Will Go There
+## Define A Target Pose As A Navigation Goal
 
 Here is the really fun part, assuming all the other things are working. This is where you tell the robot to move to places in the map. Because we are using the simple move_basic planner be sure the path is clear to the destination.
 
@@ -176,7 +176,7 @@ I will attempt to explain in words how to define a goal for the robot. Basically
 
 If the gods are with you the robot will approach that spot and rotate to the direction you specified.
 
-# Running AMCL to Dynamically Correct The Robot Location
+# Running AMCL to Correct Robot Location
 
 The most common package that figures out where the robot it in the room (relative to the map made before) is called AMCL. It uses an adaptive Monte Carlo method to find the location of the robot at any given time.
 
