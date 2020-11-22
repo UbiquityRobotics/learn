@@ -13,7 +13,7 @@ be determined.  For a discussion of other approaches, see the
 -->
 
 This document discusses running navigation software on a Ubiquity
-Robotics robot base using a RPLidar that would have to be installed yourself. It also assumes that you have a workstation with ROS installed connected to a network in common with the robot and configured so the robot is the ROS master. For laptop configurations please see [Setup a ROS workstation](https://learn.ubiquityrobotics.com/workstation_setup)
+Robotics robot base using a RPLidar that would have to be installed yourself. It also assumes that you have a workstation with ROS installed connected to a network in common with the robot and configured so the robot is the ROS master. For workstation configuration please see [Setup a ROS workstation](https://learn.ubiquityrobotics.com/workstation_setup)
 
 Use of a Lidar is a popular method of implementing robot navigation.  We are going to supply here some basic starter launch files and some directions for how to get started in robot navigation using a Lidar.
 
@@ -22,13 +22,13 @@ The Lidar will allow the robot to see walls all around and both map and then lat
 The full system here could be studied and investigated by learning more about such things as ROS /tf topic and the lidar itself as well as how ROS understands the orientation of sensors in 3D space. Plenty to learn but this is a known starting point as an example.
 
 
-# The RPLidar In This Demo On The Magni
+# The RPLidar Placement and Connection
 
-We will use a relatively low cost and very popular ```Slamtec RPLidar A1``` that is connected to the Magni raspberry pi USB and will by default in most cases show up as serial device /dev/ttyUSB0 once it's USB cable is plugged into the Pi CPU.  If you have a Pi4 we recommend using one of the jacks with blue plastic as they have higher current capability.  Use a good quality USB cable to avoid loss of power in many of the cheap cables leading to odd problems.
+We will use a relatively low cost and very popular ```Slamtec RPLidar A1``` that is connected to the Magni raspberry Pi using USB and will by default in most cases show up as serial device /dev/ttyUSB0.  If you have a Pi4 we recommend using one of the jacks with blue plastic as they have higher current capability.  Use a good quality USB cable to avoid loss of power in many of the cheap cables leading to odd problems.
 
-For the launch files in this demos the RPLidar is screwed to the top plate using 10mm of spacers so the ribbon cable can bend around and allow their little USB board to be connected via USB cable to a USB port of the Raspberry Pi.
+For the launch files in this demos the RPLidar is screwed to the top plate using 10mm spacers so the ribbon cable can bend around and allow the RPLidar little USB board to be connected via USB cable to a USB port of the Raspberry Pi. Be sure to not let the little USB board short out against the metal on the Magni and of course use standoffs for that as well if desired.
 
-The center of the lidar when looking from the top is located half way between each wheel but of course on top of the Magni top plate. This places the translated X and Y of the Lidar at 0,0 relative to what is called ```base_link``` in the robot physical model, the URDF file. The motor and pully is on the rear side of the lidar.
+The center of the lidar when looking from the top is located half way between each wheel but of course on top of the Magni top plate. This places the translated X and Y of the lidar at 0,0 relative to what is called ```base_link``` in the robot physical model, URDF model,  the rotation of the Lidar is specified so the little pulley is to the rear side of the robot.
 
 ![RpLidar Mounting](Magni_RpLidarMounting.png)
 
