@@ -64,10 +64,6 @@ You will need to update your ~/catkin_ws/src/demos  repository in order to get t
     cd ~/catkin_ws
     catkin_make -j 1
 
-After the above steps you will need to decide on a physical location for the lidar and this location will have to be placed into the launch files below. We are trying to keep things simple but there are ways in ros to have parameter files and so on and perhaps those may be added.
-
-For each launch file below open it up in an editor and be sure to make proper modifications as stated in the start of the launch file comments
-
 # Making A Map Of Your Area
 
 It is suggested on first time use of this demo to choose a fairly simple room without a lot of chairs and tables with thin legs at the height of the lidar.  It is also suggested until you understand this entire demo that you have a few things in your room so it is not just a complete square with no features.   The robot later will try to understand where it is so if you put it in a totally square room there are multiple choices and some situations may confuse the robot navigation stack.
