@@ -56,7 +56,7 @@ On your workstation you should be able to ping the robot with `ping ROBOTNAME.lo
 
 Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
 
-    export ROS_MASTER_URI=http://ROBOTNAME.local:11311  
+    export ROS_MASTER_URI=http://ROBOTNAME.local:11311
     export ROS_HOSTNAME=$(hostname).local
 
 Again replace ROBOTNAME with your robot's hostname.
@@ -72,15 +72,11 @@ Again replace ROBOTNAME with your robot's hostname.
 
 ### If zeroconf is not working (the ping fails):
 
-<<<<<<< HEAD
-**Note, if you are using IP addresses instead of zeroconf, we highly recommend setting up static IP addresses or DHCP static assignments.**
-=======
 **Note, if you are using IP addresses instead of zeroconf, we highly recommend setting up static IP addresses, or DHCP static assignments**
->>>>>>> 16691276fd0c6d09b7478600c20b43ab2a7e1ed9
 
 Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
 
-    export ROS_MASTER_URI=http://<robot_ip>:11311  
+    export ROS_MASTER_URI=http://<robot_ip>:11311
     export ROS_IP=<workstation_ip>
 
 However, environment variables set by the `export ...` method are not persistent across system boots.
@@ -98,7 +94,7 @@ perhaps due to NTP config changes that have been done on your laptop or the Magn
 The Magni robot uses chrony to synchronize time so it is best if your workstation also uses chrony although not a hard requirement it may
 avoid some issues.
 
-On a laptop that has chrony installed use these commands:             
+On a laptop that has chrony installed use these commands:
 
     sudo chronyc -a local stratum 10
     sudo chronyc -a allow 0/0
@@ -109,6 +105,10 @@ On a console to the Magni use these commands:
     sudo chronyc -a add server <yourLaptopName> iburst
     sudo chronyc -a burst 2/4
     sudo systemctl start magni-base
+
+In order to set date and time to your timezone, use command:
+
+    sudo dpkg-reconfigure tzdata
 
 ## Test the connection
 
