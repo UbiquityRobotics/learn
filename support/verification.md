@@ -172,15 +172,19 @@ This command will continually update the robot position. There will be one line 
 
     Translation: [0.000, 0.000, 0.100]   at first where X and Y are 0.000.
 
-Now we will do a few tests so make sure the robot has room to move forward about 1 meter and could have room to rotate fully. Because these tests are not precisely timed the distances and rotations will be only near the expected vaues.
+Now we will do a few tests so make sure the robot has room to move forward about 1 meter and could have room to rotate fully. Because these tests are not precisely timed the distances and rotations will be only near the expected values.
 
-   - In the teleop window press  the **i** letter key at a quick rate for 4 seconds. This should move the Magni about 0.6 meters forward which is about one spin of each wheel since one rotation is very near 0.64 meters.
+   - Put a piece of tape or a coin on the floor beside the central hub of a front wheel to know where the robot started.
 
-   - Look at the 'Translation' line in the second tf window and the first of the 3 numbers is X and should be near 0.6 meters perhaps within 0.1 meter.
+   - Press  **k** key then use **z** or **q** until 'speed' value is near 0.15 MPS.
 
-   - In the teleop window press the **,** (comma) key at a quick rate for 4 seconds. This should move the Magni backwards about 0.6 meters to where it started.
+   - In the teleop window press  the **i** letter key at a quick rate for 4 seconds. This should move the Magni about 0.5 - 0.6 meters forward which is about one spin of each wheel since one rotation is very near 0.64 meters.
 
-   - Look at the ‘Translation’ line in the second tf window and the first of the 3 numbers is X and should have returned to near 0.0.
+   - Look at the 'Translation' line in the second tf window and the first of the 3 numbers is X and verify with a ruler that the translation is very close to the measured distance on the floor.
+
+   - In the teleop window press the **,** (comma) key at a quick rate for 4 seconds. This should move the Magni backwards to about where it started.
+
+   - Look at the ‘Translation’ line in the second tf window and the first of the 3 numbers is X and should have returned to near 0.0. Because of human timing there will be a small error.
 
    - Next press the **j** letter key at a quick rate for about 5 seconds so the Magni rotates a little more than 90 degrees to face left. The tf window will have the 3rd line that says 'degrees' where at this rotation the 3rd number should be near or just above 90 degrees to the left. If it goes too far you can use quick taps to the l key to inch it back to about 90.
 
@@ -226,38 +230,46 @@ No matter how many movement commands were issued when ESTOP is active, it is onl
 
 ### 3.4  Speed Tests:
 
-The speed tests verify proper operation of speed regulation and limits. We will use teleop_twist_keyboard.  If you already have it running, fine keep it active OR start it like this if not running yet
+The speed tests verify proper operation of speed regulation and limits. These tests are done from the command line without the teleop twist program so use Control-C if you have the teleop twist program running.
 
-``rosrun teleop_twist_keyboard teleop_twist_keyboard.py``  
+These tests should be done with the robot on 'blocks' for the big powered front wheels so the wheels do not touch the floor. Normally we put a block of wood or a small stack of books under the front of the robot and it raises it up so the wheels do not touch the floor.
 
-These tests are best done with the robot on 'blocks' for the front wheel so the drive wheels do not touch the floor. Normally we put a block of wood or a small stack of books under the front of the robot and it raises it up so the wheels do not touch the floor. Put a piece of tape on the outside of a wheel so while testing we can count revolutions to get the actual speed.
+Put a piece of tape on the outside of a wheel so while testing we can count revolutions to get the actual speed.
 
 #### 3.4.1  Medium Speed Test:
 
-Here we look to verify a medium speed is correctly regulated for both forward and backward driving.
+Here we look to verify a medium speed is correctly regulated for both forward and backward driving.  This test is done from the command line without the teleop twist program so use Control-C if you have the teleop twist program running.
 
-In the teleop window press the **k** key once to be in "stop" mode then press the **z** key several times until the "speed" value shows a value close to 0.32 meters per second.  If you go too far the **,** (comma) key backs the speed value down.
+YOU MUST HAVE THE ROBOT DRIVE WHEELS ELEVATED TO NOT TOUCH THE GROUND FOR THIS TEST.
 
-In the teleop window press the **i** key repeatedly at a fast rate (5 times a second) and the wheels spin in a forward direction.
+Type the following command and hit enter so the robot moves at 0.3 meter per seconds
 
-Verify the speed is about 0.32 meter per second by watching that the wheels both turn one full revolution forward in near 2 seconds.
+   - Type this: ``rostopic pub -r 10 /cmd_vel geometry_msgs/Twist '{ linear: {x: 0.3} }'``
 
-Next we will verify reverse works as well.   In the teleop window press the **,**  (comma) key repeatedly at a fast rate (5 times a second) and the wheels spin in reverse.
+   - Verify the speed is about 0.3 meter per second by watching that the wheels both turn one full revolution forward in about 2 seconds.  Use Control-C to stop movement.
 
-Verify the speed is about 0.32 meter per second by watching that the wheels both turn one full revolution reverse in near 2 seconds.
+   - Type this: ``rostopic pub -r 10 /cmd_vel geometry_msgs/Twist '{ linear: {x: -0.3} }'``
+
+   - Verify the speed is about 0.3 meter per second reverse and that the wheels both turn one full revolution forward in about 2 seconds.  Use Control-C to stop movement.
 
 
 ### 3.4.2  Maximum Speed Limit Test:
 
-Here we look to verify the max speed limit value will cause the robot to not exceed the default 1 meter per second setting.  We will again use teleop_twist_keyboard
+We will drive at the max speed limit value will cause the robot to not exceed the default 1 meter per second setting.  This test is done from the command line without the teleop twist program so use Control-C if you have the teleop twist program running.
 
-YOU MUST HAVE THE ROBOT DRIVE WHEELS ELEVATED TO NOT TOUCH THE GROUND FOR THIS TEST IN GENERAL OR IT WILL TRY TO MOVE PERHAPS A VERY LONG WAY!
+This test is best done using a stopwatch and timing how long 10 wheel revolutions takes.
 
-In the teleop window press the **k** key once to be in "stop" mode then press the **z** key several times until the "speed" value shows a value just under 1.0 meters per second.  If you go too far the **,** (comma) key backs the speed value down.
+YOU MUST HAVE THE ROBOT DRIVE WHEELS ELEVATED TO NOT TOUCH THE GROUND FOR THIS TEST.
 
-In the teleop window press the **i** key repeatedly at a fast rate (3 or 4 times a second) and the wheels spin.
+Type the following command and hit enter so the wheels rotate at 1 meter per second
 
-Verify the speed is going at 1 meter per second by watching the wheels turn about 16 times in about 10 seconds.  The wheels have a circumference of just near 0.64 meters.  This is not a scientific test, it is looking for things being far off of the expected speed.
+   - Type this: ``rostopic pub -r 10 /cmd_vel geometry_msgs/Twist '{ linear: {x: 1.0} }'``
+
+   - Verify the speed is about 1 meter per second by watching that 10 turns of the wheel take about 6 seconds.  The circumference of the wheels is near 0.64 meters.  Use Control-C to stop the movement.
+
+   - Type this: ``rostopic pub -r 10 /cmd_vel geometry_msgs/Twist '{ linear: {x: -1.0} }'``
+
+   - Verify the speed is about 1 meter per second in reverse by watching that 10 turns of the wheel take about 6 seconds.  The circumference of the wheels is near 0.64 meters.  Use Control-C to stop the movement.
 
 ### 3.5 Deadman Timer Testing:
 
