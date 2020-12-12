@@ -34,13 +34,15 @@ The most basic way to do a test to verify the robot can move is to be on an SSH 
 
     rosrun teleop_twist_keyboard telelop_twist_keyboard.py
 
-Before we dig into some detailed troubleshooting on lack of movement it may be good to review some key high level reasons for lack of movement that we had in a post on our forum from some time back that you should review just in case it is one of these issue then this page will elaborate.   
+Before we dig into some detailed troubleshooting below on lack of movement be aware you can also review some key high level reasons for lack of movement that we had in a post on our forum from some time back that you should review just in case it is one of these issue then this page will elaborate.    Feel free to read that if this page does not help or you wish to revew all of our resources for lack of movement of which one is our online user forum.  
 Take a look at the  [Magni Does Not Move issue on our forum](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
-
-If that post does not resolve things here are more detailed proceedures.
 
 
 ### The Battery
+
+By FAR the number 1 issue we see time and again is a weak battery. We have protections to shutdown things but as the battery gets weak many other issues show up.  We are continuously making strides to better inform customers of dangerously low batteries.
+
+If you are 100% sure your battery is delivering over 23volts to the MCB board large power connectors as the robot runs then you can skip this section and move to the next section.
 
 Make sure your battery is installed correctly, with all the contacts
 fully attached and the batteries are fully charged.
@@ -60,16 +62,52 @@ Check the row of 5 LEDs on the master control board. The MCB, master control boa
 
 If you see no leds at all check the main fuse on the robot - you should be able to visually see if the fuse is blown.  The main fuse is on the front near the center and low on the MCB.
 
+### Power Supply And Status Quick Reference Table
+
+Here is a summary of key leds on the MCB main board.  If any of these are not correct the robot is likely to have significant problems (except for the 2 Aux power leds).   All of these LEDs exist for rev 5.2 or later boards but earlier boards have less leds.  
+
+The locations are specified as if you are looking at the board with the two large white 4-pin power connectors at top and large 50 pin connector also at top right.
+
+Most of these not able to turn on as described is generally a big problem.
+
+| Purpose |	Location | Description |
+| ------- | ---- | ----------- |
+| MainPower | LowerLeft | ON when black main power key is activated in the out position. When this is on all 5 of the leds in a row will be active as shown below |
+| MotorPower| LowerRight | ON when red & black keys are both activated in the out position |
+| 12vAux | MidLowerRight | ON for Aux 12V active. This is far left of 5 leds. On pre rev 5.0 MCB  this was lowest led. (Robot will work with no 12V Aux) |
+| 12vMain | MidLowerRight | ON for Main 12V active. This is 2nd from left of 5 leds. On pre rev 5.0 MCB this was 2nd led from bottom |
+| 5vMain | MidLowerRight | ON for Main 5V active. This is 3nd from left of 5 leds. On pre rev 5.0 MCB this was 3nd led from bottom |
+| 5vAux | MidLowerRight | ON for Aux 5V active. This is 4th from left of 5 leds. On pre rev 5.0 MCB this was 4nd led from bottom |
+| STATUS | MidLowerRight | ON for Aux 5V active. This is the far right of 5 leds. On pre rev 5.0 MCB this was the top led in the row of 5 |
+| 3.3V | TopMidLeft | ON for 3.3V active. This is on rev 5.2 and later MCB boards |
+| SOUT |  TopMiddle | Blinks very fast when the MCB processor is running. On rev 5.2 and later |
+| SIN |  TopMiddle | Blinks very fast when the host CPU is actively up and communicating with the MCB.  This can take a couple minutes to start blinking for bootup. On rev 5.2 and later |
+
+
 ### Very Long Starup Times
 
 If it takes 3 to 5 minutes for the /motor_node to show up this has been seen in the past to usually be because the CR2032 coin cell battery mounted on the back of the MCB board has never been installed or has gone dead.  Refer to our [Unboxing and Assembling page](https://learn.ubiquityrobotics.com/unboxing)
 We had to stop shipping these small batteries due to assorted recent regulations and are sorry for this inconvenience.
 
-### Communication Issues Within The Robot
+### Communication Check LEDs Within The Robot
 
 If the battery looks to be charged we can then look at communications between the Raspberry Pi host Linux computer and the Master Control Board, MCB.
 
+#### The MCB Status Led Indicates Working On-Board Processor
+
 If you do not see the 'STATUS' led mostly on then doing very fast drop-out blinks every 4 to 6 seconds something is wrong with the MCB processor and requires advanced troubleshooting or a replacement from the factory.
+
+#### The Serial Communications Leds Both Blink fast
+
+Check if you see both SIN and SOUT leds are blinking rapidly 5 minutes after bootup. If SOUT is blinking fast it means the onboard processor is outputing state to the main host processor or Raspberry Pi SBC.  
+
+Watch for the SIN led to start to blink very fast from 30 seconds and sometimes as long as a few minutes after powerup.   
+
+When both SIN and SOUT leds are blinking it means the hardware serial driver chips and connections are all functional for communications between the Raspberry Pi and the MCB.
+
+#### A Note On A rare Serial Bug Seen In 2019
+
+there is a chance you may be seeing an intermittent serial communications port problem now fixed but was very common. For this issue the /motor_node is running but is getting garbled messages from the MCB.  The symptom was that all messages read from the MCB were rejected so the log was filled with the word REJECT.   Use this command from an ssh console to the robot.
 
 We want a key observation before we continue.   SSH in to the robot so you have a console on the robot itself and run this command:
 
@@ -78,13 +116,11 @@ We want a key observation before we continue.   SSH in to the robot so you have 
 The list of ROS nodes must show /motor_node or the robot will not function.
 Keep track of if you see the /motor_node for the troubleshooting sections that follow.
 
-#### Verify If you are seeing the Baud Rate Bug
+#### Verify If you are seeing the Rare Baud Rate Bug
 
-If you DO SEE /motor_node and the robot is not operational for movements check this section.
+If you DO SEE the SIN and SOUT leds blinking fast AND you see /motor_node when you run ```rosnode list``` and the robot is not operational for movements here is one known issue which we feel has been solved since early 2020.
 
-If you have a version 5.2 or later MCB board as seen in white silkscreen in lower left of the board we want to look for activity on our debug leds.  If using an earlier board keep reading.
-
-Check if you see both SIN and SOUT leds blinking rapidly there is a chance you may be seeing an intermittent serial communications port problem now fixed but was very common. For this issue the /motor_node is running but is getting garbled messages from the MCB.  The symptom was that all messages read from the MCB were rejected so the log was filled with the word REJECT.   Use this command from an ssh console to the robot.
+For this issue the /motor_node is running but is getting garbled messages from the MCB.  We can look for huge numbers of REJECT messages.    Use this command from an ssh console to the robot.
 
     grep REJECT ~/.ros/log/latest/rosout.log | wc
 
