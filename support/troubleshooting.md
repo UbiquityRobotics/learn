@@ -34,8 +34,10 @@ The most basic way to do a test to verify the robot can move is to be on an SSH 
 
     rosrun teleop_twist_keyboard telelop_twist_keyboard.py
 
-Before we dig into some detailed troubleshooting below on lack of movement be aware you can also review some key high level reasons for lack of movement that we had in a post on our forum from some time back that you should review just in case it is one of these issue then this page will elaborate.    Feel free to read that if this page does not help or you wish to revew all of our resources for lack of movement of which one is our online user forum.  
-Take a look at the  [Magni Does Not Move issue on our forum](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
+Before we dig into some detailed troubleshooting below on lack of movement be aware you can also review some key high level reasons for lack of movement that we had in a post on our forum from some time back that you should review just in case it is one of these issue then this page will elaborate.    
+
+Feel free to read that post if this page does not resolve your problem quickly.   
+Older troubleshooting post:  [Magni Does Not Move issue on our forum](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
 
 
 ### The Battery
