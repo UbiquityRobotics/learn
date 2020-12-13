@@ -56,15 +56,21 @@ A good way to make sure the batteries are fully charged is by
 plugging in the provided charger. If it switches off automatically
 then the the batteries are fully charged.
 
+Make sure the 14 pin connector that connects the switch board to the main board has not pulled out and if it has push it in again.
+
 Make sure that both push buttons on the front of the robot are out
 all the way (the red push button de-energizes the motor circuit
 as an emergency stop). Both blue and red LED on the small ```switch board``` PCB that has the switches should be illuminated.
 
-Check the row of 5 LEDs on the master control board. The MCB, master control board, is the big PCB on the robot that you can see on the front of the robot right above the switch boardPCB.   All 5 LEDs should be illuminated. The 'STATUS' led, the rightmost one, should be mostly on but have very brief blink-out then on every 4-6 seconds. If you don’t see this behavior then  email support@ubiquityrobotics.com. (On very old units the status led is the top led in a vertical row of leds)
+### The Main Power And Status Row of LEDs
 
-If you see no leds at all check the main fuse on the robot - you should be able to visually see if the fuse is blown.  The main fuse is on the front near the center and low on the MCB.
+There are many LEDs to show status but perhaps the most important to check first are the row of 5 LEDs on the master control board. The MCB, master control board, is the big PCB on the robot that you can see on the front of the robot right above the switch boardPCB.   A table will show details but in short the 5 LEDs should be illuminated. On all official production boards the leds are horizontal but very early boards had the row as vertical. The 'STATUS' led (to the right but on top for old boards) should be mostly on but have very brief blink-out then on every 4-6 seconds. If you don’t see proper behavior see the table presented next.   
 
-### Power Supply And Status Quick Reference Table
+If you are convinced there is a problem you can make a post on our [Online Support Forum](https://forum.ubiquityrobotics.com) or send an email to support@ubiquityrobotics.com to start a discussion
+
+If you see no leds at all check the main fuse on the robot in the middle lower part of the board - you should be able to visually see if the fuse is blown.  The main fuse is on the front near the center and low on the MCB.
+
+#### Power Supply And Status Quick Reference Table
 
 Here is a summary of key leds on the MCB main board.  If any of these are not correct the robot is likely to have significant problems (except for the 2 Aux power leds).   All of these LEDs exist for rev 5.2 or later boards but earlier boards have less leds.  
 
@@ -76,11 +82,11 @@ Most of these not able to turn on as described is generally a big problem.
 | ------- | ---- | ----------- |
 | MainPower | LowerLeft | ON when black main power key is activated in the out position. When this is on all 5 of the leds in a row will be active as shown below |
 | MotorPower| LowerRight | ON when red & black keys are both activated in the out position |
-| 12vAux | MidLowerRight | ON for Aux 12V active. This is far left of 5 leds. On pre rev 5.0 MCB  this was lowest led. (Robot will work with no 12V Aux) |
-| 12vMain | MidLowerRight | ON for Main 12V active. This is 2nd from left of 5 leds. On pre rev 5.0 MCB this was 2nd led from bottom |
-| 5vMain | MidLowerRight | ON for Main 5V active. This is 3nd from left of 5 leds. On pre rev 5.0 MCB this was 3nd led from bottom |
-| 5vAux | MidLowerRight | ON for Aux 5V active. This is 4th from left of 5 leds. On pre rev 5.0 MCB this was 4nd led from bottom |
-| STATUS | MidLowerRight | ON for Aux 5V active. This is the far right of 5 leds. On pre rev 5.0 MCB this was the top led in the row of 5 |
+| 12vAux | MidLowerLeft | ON for Aux 12V active. This is far left of 5 leds. On pre rev 5.0 MCB  this was lowest led. (Robot will work with no 12V Aux) |
+| 12vMain | MidLowerLeft | ON for Main 12V active. This is 2nd from left of 5 leds. On pre rev 5.0 MCB this was 2nd led from bottom |
+| 5vMain | MidLowerLeft | ON for Main 5V active. This is 3nd from left of 5 leds. On pre rev 5.0 MCB this was 3nd led from bottom |
+| 5vAux | MidLowerLeft | ON for Aux 5V active. This is 4th from left of 5 leds. On pre rev 5.0 MCB this was 4nd led from bottom |
+| STATUS | MidLowerLeft | ON for Aux 5V active. This is the far right of 5 leds. On pre rev 5.0 MCB this was the top led in the row of 5 |
 | 3.3V | TopMidLeft | ON for 3.3V active. This is on rev 5.2 and later MCB boards |
 | SOUT |  TopMiddle | Blinks very fast when the MCB processor is running. On rev 5.2 and later |
 | SIN |  TopMiddle | Blinks very fast when the host CPU is actively up and communicating with the MCB.  This can take a couple minutes to start blinking for bootup. On rev 5.2 and later |
