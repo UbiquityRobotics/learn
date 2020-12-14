@@ -96,18 +96,21 @@ For this test you should follow the configuration page for ```pifi``` to configu
 
 ### 2.3 Check Operation Using The /diagnostics ROS topic
 
-When the robot is running quite a few pieces of diagnostic information can be viewed by looking at the ROS topic the motor node publishes.  If you run the following command for a few seconds they use Control-C to stop it you can browse back and see many things helpful for diagnostic work.
+When the robot is running quite a few pieces of diagnostic information can be viewed by looking at the ROS topic the motor node publishes.  The diagnostic topic has other things besides the motor node so we filter it for firmware info in the example below for easy reading.
 
-    rostopic echo /diagnostics       
+    rostopic echo /diagnostics | grep -A 1  'Firmware [DV]'
 
-After you have run this for a couple seconds and stopped it with control-C here are a few items that are valuable to know about for diagnostics
+You can view the full diagnostics output and find other info such as:
 
-   - `Battery Voltage` key shows the battery level in DC volts
-   - `Motor Power` key is True when the ESTOP is enabling wheel power
-   - `Firmware Version` shows the main board firmware version
-   - `Firmware Date` shows the date for the firmware
-   - `Firmware Options` shows hardware options if enabled
+  - `Battery Voltage` key shows the battery level in DC volts
+  - `Motor Power` key is True when the ESTOP is enabling wheel power
+  - `Firmware Version` shows the main board firmware version
+  - `Firmware Date` shows the date for the firmware
+  - `Firmware Options` shows hardware options if enabled
 
+In the raw /diagnostics output these things may also be useful for feedback to factory on some issues.  For full output of /diagnostics do this.
+
+    rostopic echo /diagnostics
 
 ### 2.4 I2C Bus Devices
 The I2C bus on the host CPU needs to be able to communicate to a few devices on the MCB.  There is an I2C excpander at addr 0x20 and RealTime clock chip at address 0x6F. If there is a OLED display loaded on P2 it is at 0x3c. We should stop the motor node then run i2cdetect which is part of i2c-tools package.

@@ -9,11 +9,17 @@ permalink: firmware-upgrade
 # Upgrading Motor Controller Firmware
 
 Before you can upgrade firmware, your robot needs to be connected to the
-internet. See [Connecting the Robot to Your Network](/connect_network).
+internet or you must have the firmware file and copy it to the robot.  See [Connecting the Robot to Your Network](/connect_network).
 
 We upgrade firmware using a tool that will by default install the latest released firmware. If an older fimware version is needed, it will require manual version entry seen in the Version column of the table below.
 
 Improvements to out motor controller fimware (v35 and later) need the latest Linux host side software. Installing the latest Linux host side software can be done by following a process we call 'Linux Host Software Update' seen on [this page](https://learn.ubiquityrobotics.com/updating).
+
+## Finding The Firmware Version Info For Your Robot
+
+Here is how to get firmware version and date once you have opened a SSH window into your robot.  This works by filtering off just the 2 items of interest which are ```Firmware Version```  and  ```Firmware Date```
+
+    rostopic echo /diagnostics | grep -A 1  'Firmware [DV]'
 
 ## Firmware Release Versions
 

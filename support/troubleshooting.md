@@ -27,6 +27,12 @@ Below are some other locations on in our documents that may help troubleshoot is
 [Robot Commander](#robot-commander)  
 [Rviz](#rviz-troubleshooting)
 
+## Finding Robot Firmware Version Info
+
+Should you have to get back to report behavior issues with the robot and not powersupply sort of issues here is how to get firmware version and date.
+
+    rostopic echo /diagnostics | grep -A 1  'Firmware [DV]'
+
 
 ## Troubleshooting Lack Of Robot Movement
 
