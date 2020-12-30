@@ -35,8 +35,8 @@ DateCode was started around version v35 and shows up in /diagnostics topic along
 | v32	| 5.0 | NA | Production firmware used in 2019. This is default if no version is entered. Supported by any host side software |
 | v35 |	4.0 | 20190815 | Current release as of Sept 2020 with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
 | v37 | 4.75 | 20200620 | Used in manufacturing only.  1st with a selftest. |
-| v38 | 5.25 | 20201006 | Beta release with many fixes. Seems ok but not fully tested |
-| v39 | 5.5 | 202011?? | Beta release for cutting edge experiments. In progress |
+| v38 | 5.25 | 20201006 | Beta release with many fixes. Not a release candidate |
+| v40 | 5.75 | 20201209 | Beta release for most recent release candidate. |
 
 To see more details about our firmware as well as our hardware revisions for the motor controller please view [this page](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
 
