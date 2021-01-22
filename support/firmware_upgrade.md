@@ -86,6 +86,8 @@ Upgrade Firmware from a file that you place on your system:
 
     rosrun ubiquity_motor upgrade_firmware.py --file  betaFirmwareFileName
 
+For beta firmware if you are told to use a given version then you may not be able to request a beta version so you would have to check our please visit  [OUR REPOSITORY](https://github.com/UbiquityRobotics/ubiquity_motor)  and navigate into the firmware folder.
+
 ### Firmware Installation Using Non Standard Serial support
 
 In some situations the serial port used for controlling the robot may not be the default port on the Raspberry Pi host computer attached to the MCB.
