@@ -105,6 +105,16 @@ Below is a picture of the Sonar board included with Magni Silver configuration. 
 
 ![Magni Sonar Board](MagniSonarBoard.jpg)
 
+#### Raspberry Pi 4 Issues With Sonar board
+
+We have found serious issues with using a Raspberry Pi 4 in combination of the Sonar board.  These come from fundamental architectural changes in how the GPIO lines are implemented on the Pi4.  
+
+We are sorry for these issues which we have recently discovered exist in all our Images through 2020. We had some fixes in mid 2020 that now seem to also have failures. This is a very high priority issue.  Certain workarounds had been found in mid 2020 but they seem to no longer work.
+
+We will fix this as soon as we can and it is high priority.
+
+### Must Enable Sonar Board To Run in robot.yaml file
+
 The Magni software must be configured to enable usage of the sonar board. You must edit the
 `robot.yaml` file as root user then modify the file.
 

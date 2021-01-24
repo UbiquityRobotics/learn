@@ -359,22 +359,28 @@ Here is the table of blink codes
 
 ### Default Power on Selftest
 
-There will be a simple set of checks to look at the power supply levels every time the robot is started for any MCB of version 5.2 or later.  If any of the 5V or 12V power supplies are not functional an error will result.
+There will be a simple set of checks to look at the power supply levels every time the robot is started for any MCB of version 5.2 or later.  If any of the 5V or 12V power supplies are not functional an error will result as a one of the voltage blink codes seen in the table above.  
 
-If the main battery is getting low an error will result but the robot will be allowed to start.  The main battery test will work on all version of the MCB.
-
-You can force the main power test fail code by connecting the TP4 testpoint to ground through a 4.7k ohm resistor as the test runs.
-
-You can force the aux power test to fail by connecting the TP3 testpoint to ground through a 4.7k ohm resistor.
+If the main battery is getting low an error will result but the robot will be allowed to start.  The main battery test will work on all version of the MCB.  ```The battery low condition shows up as a long blink followed by 3 shorter blinks```.  This dual long blink code also will happen every 45 seconds so watch for this to remind you battery is very low which leads to erratic operation.
 
 ### The Motor And Wheel Encoder Test
-A test of the two drive wheels can be enabled by connecting TP4 to ground as the MCB is powered on.  The drive test is testing wheel sensitivity as well and to run properly the robot front wheels should not be on the ground so we suggest a block of wood or other object be placed under the front of the robot so the wheels do not touch the ground when this test is run.  Both wheels will turn a small amount one way and then another way in this short 8 second test.
+A test of the two drive wheels can be enabled by connecting TP4 to ground as the MCB is powered on.  On MCB rev 5.3 and beyond this is easily done by using a standard 0.1" spacing jumper placed on the back of the board seen from battery compartment.  ```Place the jumper between the bottom 2 pins on the TP4 side on the 3-pin P706 header located near the center on the back of board then power up the robot```.
+
+The drive test is testing wheel sensitivity as well and to run properly the robot front wheels should not be on the ground so we suggest a block of wood or other object be placed under the front of the robot so the wheels do not touch the ground when this test is run.  Both wheels will turn a small amount one way and then another way in this short 8 second test.
+
+Normally when this works the status led will simply drop into it's normal single dropout blink every 5 seconds or so.  ```If you see a series of two long blinks that indicates the motor test failed```.
 
 You can force this test to fail by holding back the wheels with reasonable force as this test runs which will force the blink code of  ```Long Long```
 
 ### The Runtime Battery Low TEST
 Every 45 seconds as the robot runs the main battery will be checked and if the battery supply drops to 22.2 volts a low battery condition will be detected and show up as an LED blink code of  ```Long Short Short Short```
 The threshold for this test is settable in firmware but the feature to set it using the host has not been implemented as of April 2020.
+
+### Simulate Failure On Power Supply Tests
+
+You can force the main power test fail code by connecting the TP4 testpoint to ground through a 2.2k or 4.7k ohm resistor as the test runs on power up.
+
+You can force the aux power test to fail by connecting the TP3 testpoint to ground through a 2.2k or 4.7k ohm resistor.
 
 ### Programatically Running Selected Parts Of the selftest
 Support for selection of one or more of the selftests to be run is done through some new registers in the firmware. Register with hex address 0x3b can request tests and register with hex address 0x3c will report results.   
