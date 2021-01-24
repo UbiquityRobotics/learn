@@ -361,7 +361,7 @@ Here is the table of blink codes
 
 There will be a simple set of checks to look at the power supply levels every time the robot is started for any MCB of version 5.2 or later.  If any of the 5V or 12V power supplies are not functional an error will result as a one of the voltage blink codes seen in the table above.  
 
-If the main battery is getting low an error will result but the robot will be allowed to start.  The main battery test will work on all version of the MCB.  ```The battery low condition shows up as a long blink followed by 3 shorter blinks```.  This dual long blink code also will happen every 45 seconds so watch for this to remind you battery is very low which leads to erratic operation.
+If the main battery is getting low an error will result but the robot will be allowed to start.  The main battery test will work on all version of the MCB.  ```The battery low condition shows up as a long blink followed by 3 shorter blinks```.  This blink code also will happen every 45 seconds so watch for this to remind you battery is very low which leads to erratic operation.
 
 ### The Motor And Wheel Encoder Test
 A test of the two drive wheels can be enabled by connecting TP4 to ground as the MCB is powered on.  On MCB rev 5.3 and beyond this is easily done by using a standard 0.1" spacing jumper placed on the back of the board seen from battery compartment.  ```Place the jumper between the bottom 2 pins on the TP4 side on the 3-pin P706 header located near the center on the back of board then power up the robot```.
