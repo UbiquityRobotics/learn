@@ -98,8 +98,59 @@ The link above will point to a ROS calibration process that is used for the cali
 
 The ROS page with calibration is the [Monocular Calibration Page](http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration)
 
+## Using A Different Camera
+The robot ships with a Raspicam v2.1 which has a fixed lens suitable for many of the uses for the robot such as fiducial applications and viewing where the robot is heading.  
 
-## Sonar Board Attachment To The Robot
+Using a different camera is very infolved so this section has been written to help guide those who need a better or different camera than the Raspicam v2.1
+
+This section will explain what sort of steps must take place to use a different camera that is compatible with the Raspberry Pi standard flat cable interface, the CSI-2 interface.   A short list of the things that will be required is presented then some details that will focus on the 2020 new camera called the RaspicamHQ using a 6mm lens.  Any different camera will require hardware and software as well as config file changes.
+
+Decide on a camera name and stick with this name as it will appear in files and as parts of file names to help you keep the many references less confusing.  We will in this example use ```camerahq6mm_2048x1520```
+
+We consider a given camera with a given lens as one camera so if you use something like a RaspicamHQ with a 6mm lens, that is one camera config.
+
+    1) An adapter to physically mount the camera and connect flat cable
+    2) A camera calibration file created for this camera and lens
+    3) Possible changes to the URDF file for location of the camera
+    4) Changes to any launch files to start apps using this camera
+
+### Physically Mounting The Camera To The robot
+In the simple case a 3D printed part that attaches to the existing Magni robot camera standoffs can be used.   We have done this with at least 2 cameras incuding the RaspicamHQ camera.  Below is shown the 3D printed adapter by itself and then the RaspicamHQ mounted to the adapter.
+
+![RaspicamHQ Mounted](RaspicamHQ_MountedOnMagni.jpg)
+
+### Camera Calibration File Must Be created
+You will need to create a camera calibration file per instructions above in 'Camera Calibration' section.   We suggest you give it a name that indicates the camera type, the lens being used and the camera resolution.  For our example here lets say we call this file ```camerahq6mm_2048x1520.yaml```.  
+
+For this example we will set  'camera_name' in this file to be ```camerahq6mm_2048x1520``` and you will need to remember this for later in other files to be modified.
+
+The camera calibration files are normally placed in ```/home/ubuntu/.ros/camera_info```  so you can put it there along with other cal files.
+
+In some cases you may need this config file also in another default location so put it in both places and modify it both places later as required to avoid having to know the exact reasons each location may be used.  The other folder is ```/opt/ros/kinetic/share/raspicam_node/camera_info```
+
+### Possible Changes To They URDF file
+The URDF file is a file that defines where physically each part of the robot is relative to the main 'origin' of the robot which is called ```base_link```.    If you are not requiring precise navigation and can live with errors due to camera placement that are only a cm more or so we suggest you not modify the URDF file as this can be an advanced task.  
+
+The default path to the Magni URDF file, which you should backup for sure if you are going to try to change it, is this path  ```/opt/ros/kinetic/share/magni_description/urdf/magni.urdf.xacro```
+
+Seek assistance and plan on taking some time to change this but if you do then note that all the things that are likely to change are in one or more sub-sections of that file with the word 'raspicam_mount' and the values to be changed will be the center of the camera as 'origin xyz'  and then 'rpy' which is a 3D space rotational notation too complex for this brief discussion.
+
+### Changes To Launch Files That Will Need The camera
+This is the most involved of all the changes because it spans many launch files.   We suggest you use names in these files that are like the calibration file so you can keep track with minimal confusion.  For that reason I will use names that contain  ```camerahq6mm_2048x1520``` in the very brief coverage of files and pieces of those files that are likely to be used for the camera to use fiducials for navigation.
+
+I will be mentioning file paths assuming you have not cloned Ubiquity Robotics folders that are for fiducial navigation be because if you do that the files to be created or modified will be in your catkin_ws space.
+
+- Create a new launch file to specify the camera, resolution and frame rate where for example we can call it ```camerahq6mm_2048x1520_10fps.launch``` and this file would by default be located in ```/opt/ros/kinetic/share/raspicam_node/launch``` folder.  You may want to copy over an existing file such as camerav2_1280x960_10fps.launch and give the copy this new name then modify it.   
+
+Be aware that near the top the parameter ```camera_name``` must be the name that is used inside the config file which in this example was going to be
+
+- A very similar file in the same folder is sometimes needed so create in ```/opt/ros/kinetic/share/raspicam_node/launch``` this similar file where you can copy over the existing camerav2_1280x960.launch to form ```camerahq6mm_2048x1520.launch``` then edit this file to customize it for your new camera.
+
+- For fiducial recognition we use a package called aruco.  You will need to perhaps save a copy of aruco.launch to aruco_old.launch and edit the file ```/opt/ros/kinetic/share/magni_nav/launch/aruco.launch``` so that instead of references to original camera has new camera.  You must modify the line near the top that has default camerav2_1280x960_10fps.launch in it and use your new launch file which for this example we called ```camerahq6mm_2048x1520_10fps.launch```
+
+
+
+## Enable And Mount The Sonar Board To The Robot
 
 Below is a picture of the Sonar board included with Magni Silver configuration. This section will show how the Sonar Board is mounted on tall standoffs and a 50-pin ribbon cable is then attached. The sonar board is included in the large box for a Magni Silver but is not attached to the robot prior to shipment.  Be careful to avoid the need to often re-bend the sonars if they bump something because the pins can only be bent and re-bent a limited number of times.
 
@@ -111,7 +162,11 @@ We have found serious issues with using a Raspberry Pi 4 in combination of the S
 
 We are sorry for these issues which we have recently discovered exist in all our Images through 2020. We had some fixes in mid 2020 that now seem to also have failures. This is a very high priority issue.  Certain workarounds had been found in mid 2020 but they seem to no longer work.
 
-We will fix this as soon as we can and it is high priority.
+We believe we have a fix and discuss it in this post in our forum:
+
+[Sonar sensors not functioning](https://forum.ubiquityrobotics.com/t/sonar-sensors-not-functioning/709/21)
+
+We will fix this in a new image as soon as possible as a high priority.
 
 ### Must Enable Sonar Board To Run in robot.yaml file
 
