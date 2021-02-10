@@ -18,7 +18,8 @@ needed for fiducial follow, partybot and waypoint navigation, and other apps you
 
 ## Sonar Board Installation Is On A Different page
 
-This page used to also have sonar board setup but we split it off so please see our [Sonar board setup page](quick_start/camera_sensor/sonar_setup.md)
+This page used to also have sonar board setup but we split it off to a new page.
+For sonar board setup see [Sonar board setup page](sonar_setup.md)
 
 ## The Camera Mounted In Forward orientation
 
