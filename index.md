@@ -27,8 +27,8 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 4.  [Connecting a workstation, starting and stopping the Robot](quick_start/connecting.md)
 5.  [Driving a robot with a keyboard using teleop twist](quick_start/keyboard_teleop.md)
 6.  [How to drive with optional Logitech controller](quick_start/logitech.markdown)
-7.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/Robot_Commander_AP.markdown)
-8.	[How to set up cameras and sonar board](quick_start/camera_sensor/installation.md)
+7.	[How to set up the camera](quick_start/camera_sensor/installation.md)
+8.	[How to set up the sonar board](quick_start/camera_sensor/sonar_setup.md)
 9.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
 
 
@@ -38,11 +38,12 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 2.  [How to set-up a workstation with ROS and Synchronize Time](doing_more/workstation_setup.md)
 3.	[Visualize With rviz](doing_more/rviz.md)
 4.  [Lidar Navigation Using A Magni](doing_more/lidar_navigation.md)
-4.	[Fiducials Enable You To Set Waypoints and Goals](doing_more/fiducials.md)
-5. [Use Robot Commander To Control Robot Navigation](doing_more/waypoints.md)
+5.	[Fiducials Enable You To Set Waypoints and Goals](doing_more/fiducials.md)
 6. [Use A Script To Control Robot Navigation](python_script_1)
 7. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
-8. [Running Magni in Simulation](simulation)  
+8.	[Control the robot by voice using Robot Commander on an Android phone](quick_start/Robot_Commander_AP.markdown)
+9. [Use Robot Commander To Control Robot Navigation](doing_more/waypoints.md)
+10. [Running Magni in Simulation](simulation)  
 
 ####	Support and Verification Of Your Robot
 
