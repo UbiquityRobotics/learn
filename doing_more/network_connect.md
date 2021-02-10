@@ -130,3 +130,52 @@ Now that you have the correct date you can update the robot to get changes that 
     sudo apt-get upgrade
 
 This may take some time, since it may have been a while since the original image was made.
+
+# Finding The IP Address Of The Robot
+
+A common problem that comes up is to find the IP address of the robot when it is not acting as the Access Point (AP) that you connect to from your workstation or other device.
+
+## IP address Fixed If The Robot Supplies the WiFi AP
+When the robot sets up it's access point and you connect to its WiFi the IP address of the robot will always be 10.42.0.1   So after you connect to the Robot Access Point (its network) you always can use ssh directly using an IP address like this:
+
+    ssh ubuntu@10.42.0.1
+
+## Finding The Robot IP Address on Your Own network
+
+When you have told the robot to connect to your own wifi by setting up pifi OR when you have a lan cable from the robot to your own hard network cables we have different ways to find the robot's IP address depending on the device you are using to connect to the robot using SSH.  Suppose you found the IP address the SSH command would look like the example below but with the IP address you found
+
+    ssh ubuntu@192.168.1.123
+
+So lets say that you used pifi to add YOUR wifi network with SSID of ‘mynetwork’ so I can talk about what to do.
+If the Magni connected to ‘mynetwork’ it will no longer present an ‘access point’ for it’s OWN network because there is no need. The Magni either uses the Pi wifi to present it’s OWN wifi Access Point, AP, OR if it is told to join your network it simply joins and gets an IP address from YOUR network access point (normally this is some Wifi Router that connects to the outside Internet.
+
+So IF the Magni connects to your Wifi with your unique SSID (network name) the magni will be on your own network.
+
+The other case is in the lab sometimes it is easiest to use a real ethernet cable plugged right into the robot to avoid the possible issues with WiFi.
+
+
+## Use a Network Scanner To Search For All Devices
+
+What you then must do is have some OTHER device like laptop or Windows machine or an android phone and then have a tool on that device to ‘SCAN’ and show you the IP address of the Magni.
+
+Some scanning software will say it is a Raspberry Pi and some will say the name on the network but all will show the IP address.  There are many network scanners, I am just going to mention a few.
+
+### Scan The Network On Windows Machine
+
+For Windows on that network I install and then use an app called ‘Advanced IP Scanner’. Once installed IF your windows machine is also on the same wifi of ‘mynetwork’ you just hit ‘SCAN’ and look for any raspberry Pi or look for hostname like ubiquityrobot to find it’s IP address that your own router assigned to it on your network.
+
+### Scan The Network On An Android device
+
+If you have an android phone you can connect your phone to ‘my network’ and then use an IP scanner such as my favorite, ‘Fing’ available on google Play Store. This too will scan your network IF the android phone is in this case connected to ‘mynetwork’. Look for a raspberry pi with a name starting with ‘ubiquity’.
+
+### Scan The Network On A Linux Workstation
+
+If you connect a linux laptop to ‘mynetwork’ you may then use ‘iwconfig’ to look up your first 3 numbers of your IP address and then use ‘arpscan’ so this is the most ‘unfriendly’ method but it does work. Lets say you connect your Linux Laptop to the same network SSID (name) you told PiFi to connect to. Lets say you run ‘iwconfig’ and it tells you your WIFI IP starts with 192.168.1.x  where x is just what you ended up with and is a number from 1 to 253 or so.  We need the first 3 numbers in our command so to run the Linux scan this would be the command
+
+    sudo arp-scan 192.168.1.1/24
+
+I know this appears MAJOR cryptic but that in fact is HOW linux is in general. Geeks LOVE cryptic command line magical tools!
+
+### Finding The Robot IP Address If you have an OLED display
+
+Starting in late 2020 we had formed host software to drive a low cost OLED display that is usable on rev 5.2 or more recent MCB boards.  This is not yet built into our images so it would require manually downloading and configuring our OLED display in one of our github repositories. Some MCB boards were shipped with the display but some were not so this applies if you see a small plug-in board in mid right of the MCB, that would be the OLED display.  To use it you would need to look at our [OLED Display github repository](https://github.com/UbiquityRobotics/oled_display_node)
