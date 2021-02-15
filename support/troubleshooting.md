@@ -98,7 +98,7 @@ Most of these not able to turn on as described is generally a big problem.
 | SIN |  TopMiddle | Blinks very fast when the host CPU is actively up and communicating with the MCB.  This can take a couple minutes to start blinking for bootup. On rev 5.2 and later |
 
 
-### Very Long Starup Times
+### Very Long Startup Times
 
 If it takes 3 to 5 minutes for the /motor_node to show up this has been seen in the past to usually be because the CR2032 coin cell battery mounted on the back of the MCB board has never been installed or has gone dead.  Refer to our [Unboxing and Assembling page](https://learn.ubiquityrobotics.com/unboxing)
 We had to stop shipping these small batteries due to assorted recent regulations and are sorry for this inconvenience.
