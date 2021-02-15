@@ -68,7 +68,7 @@ Make sure that both push buttons on the front of the robot are out
 all the way (the red push button de-energizes the motor circuit
 as an emergency stop). Both blue and red LED on the small ```switch board``` PCB that has the switches should be illuminated.
 
-### The Main Power And Status Row of LEDs
+### Main Power And Status LEDs
 
 There are many LEDs to show status but perhaps the most important to check first are the row of 5 LEDs on the master control board. The MCB, master control board, is the big PCB on the robot that you can see on the front of the robot right above the switch boardPCB.   A table will show details but in short the 5 LEDs should be illuminated. On all official production boards the leds are horizontal but very early boards had the row as vertical. The 'STATUS' led (to the right but on top for old boards) should be mostly on but have very brief blink-out then on every 4-6 seconds. If you don’t see proper behavior see the table presented next.   
 
@@ -111,19 +111,43 @@ If the battery looks to be charged we can then look at communications between th
 
 If you do not see the 'STATUS' led mostly on then doing very fast drop-out blinks every 4 to 6 seconds something is wrong with the MCB processor and requires advanced troubleshooting or a replacement from the factory.
 
-#### The Serial Communications Leds Both Blink fast
+## Serial Communications Checks
+The main host linux computer controls the MCB over a serial communications port. This port is by default /dev/ttyAMA0 which is configured in our images but if it does not exist for some reason that would explain serial problems.
 
-Check if you see both SIN and SOUT leds are blinking rapidly 5 minutes after bootup. If SOUT is blinking fast it means the onboard processor is outputing state to the main host processor or Raspberry Pi SBC.  
+### The Serial Communications Status LEDS
+If your MCB board is version 5.2 or later then there are two debug leds to show serial activity.  These leds are located just below the AUX power jack at the top of the MCB board.Check if you see both SIN and SOUT leds are blinking rapidly 5 minutes after bootup. If SOUT is blinking fast it means the onboard processor is outputing state to the main host processor or Raspberry Pi SBC.  
 
 Watch for the SIN led to start to blink very fast from 30 seconds and sometimes as long as a few minutes after powerup.   
 
 When both SIN and SOUT leds are blinking it means the hardware serial driver chips and connections are all functional for communications between the Raspberry Pi and the MCB.
 
-#### A Note On A rare Serial Bug Seen In 2019
+### Verify The MCB Is Recognized Over Serial port
+If you are unable to get the robot to move and are sure battery is ok and the ESTOP switch is not set to disable motor power then here is how to verify the linux host computer is talking to the MCB.
 
-there is a chance you may be seeing an intermittent serial communications port problem now fixed but was very common. For this issue the /motor_node is running but is getting garbled messages from the MCB.  The symptom was that all messages read from the MCB were rejected so the log was filled with the word REJECT.   Use this command from an ssh console to the robot.
+Edit file ```/home/ubuntu/.ros/log/latest/rosout.log```.   Look for a ROS error with the word ```Firmware``` in it that says ```not reporting its version```.   That message is because the motor node has been unable to communicate with the MCB over the serial interface.
 
-We want a key observation before we continue.   SSH in to the robot so you have a console on the robot itself and run this command:
+#### Manually Connecting To The MCB
+We have a tool that can be used to figure out if the linux host computer is able to communicate with the MCB.  We need to stop the main motor control node then use the tool to do something simple like read the firmware version.
+
+    cd ~
+    sudo systemctl stop magni-base
+    python /opt/ros/kinetic/lib/ubiquity_motor/test_motor_board.py
+
+This should show a help menu and at that point we know we can open the serial port so then we can read the firmware version using the version command
+
+    v
+    Fetch sofware and hardware version information
+    fw revision 40
+    fw daycode  20201209
+    hw revision 5.1
+
+If you see the version (whatever it may be) serial is working at least at the level of linux serial port talking to the MCB.
+
+Restart the robot code using  ```sudo systemctl start magni-base```
+
+#### Verify the motor_node is running
+
+We want a key observation before we continue.  Assuming you have waited a couple minutes after starting the robot we want to SSH in to the robot so you have a console on the robot itself and run this command:
 
     rosnode list
 
