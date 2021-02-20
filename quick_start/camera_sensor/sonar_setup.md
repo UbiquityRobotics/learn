@@ -47,7 +47,7 @@ From an SSH session to the robot that has internet access use these commands
 
     sudo systemctl stop magni-base
     cd catkin_ws/src
-    git clone https://github.com/UbiquityRobotics/pi_sonar 1
+    git clone https://github.com/UbiquityRobotics/pi_sonar
     cd pi_sonar
     git checkout daemon_pigpio
     cd ~/catkin_ws
