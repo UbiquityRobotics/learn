@@ -12,12 +12,16 @@ be determined.  For a discussion of other approaches, see the
 [Navigation and Localization Overview](../overview/overview.md).
 -->
 
-This document discusses running our navigation software on a Ubiquity
+This document discusses running our fiducial based navigation software on a Ubiquity
 Robotics robot base, using the supported Raspberry Pi camera. It also assumes that you have a workstation with ROS installed, which is connected to a network in common with the robot. You will need a printer, too.
 
 This description assumes that all fiducials are on the ceiling. Actually, this is not
 required if our software is used in the arbitrary mode but we feel it is easier to visualize and learn about fiducial navigation using the ceiling
 mode.
+
+## We use Aruco Style Fiducial markers
+
+We use the ```Aruco``` style Fiducial Markers and try to so far use the ones where the 'checkerboard' patern is a 5x5 grid.  The default library we generally stick to is called  ```DICT_5X5_1000``` so if you print some markers shown below they will by default come for that Aruco library.
 
 ## Basic Concept
 
@@ -25,6 +29,14 @@ The Ubiquity Robotics localization system uses a number of fiducial markers of k
 is done by using the robot's camera.  The characteristics of the images of the fiducial markers enable the robot to compute its location.
 
 ![Fiducial Markers](two_fiducials.png)
+
+## Detection And Processing Basics
+
+In our launch files we will have a node to detect Aruco fiducials from the camera images.  The output of this ```aruco_detect``` node goes to two topics where one topic give the verticies of each detected fiducial and another topic publishes the transforms of each fiducial relative to the camera itself.
+
+You may want to take a look at the [Aruco Detect Wiki](http://wiki.ros.org/aruco_detect) if you are curious about detection of fiducials for other nodes you may want to form to do other things besides navigation.  
+
+We have other nodes that subscribe to the aruco_detect topics to then do the math to sort out where each fiducial is relative to the robot itself using 3D math and form the map or use the map to navigate.
 
 ## Print Some Fiducials
 
