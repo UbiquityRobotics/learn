@@ -51,7 +51,7 @@ After the above installs to be prepaired to run navigation code you will also ne
     cd ~/catkin_ws/src
     git clone https://github.com/sharp-rmf/rplidar_ros
     cd ~/catkin_ws
-    vi ~/catkin_ws/src/rp_lidar_ros/src/node.cpp
+    vi ~/catkin_ws/src/rplidar_ros/src/node.cpp
     Edit to replace ```scan_topic_name``` with ```scan``` where ros::Publisher_scan_pub is setup
     catkin_make
 
