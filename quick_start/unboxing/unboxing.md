@@ -84,7 +84,9 @@ The charging port is between the two switches.
 **The next step will be to install the batteries.   At this time push both of the switches IN which will turn all power off as you connect the batteries.**
 
 
-#### Main Power Battery And Wheel Cables Installation
+### Main Power Battery And Wheel Cables Installation
+
+First a picture of a fully assembled Magni using 2 of the 7 ampHour batteries and having the motor cables attached for both wheels.
 
 ![](MagniBatteryInstallation.jpg)
 
@@ -95,9 +97,26 @@ The picture above shows proper cable connections for the batteries and wheels.
 The wheels should be properly connected from the factory.
 As seen in this picture notice that the cable attached to the two green terminal strips seen on the right of the back of the main MCB board goes to the right wheel.   The cable that comes from the two green terminal strips seen on the left of the back of the MCB board goes to the left wheel.   
 
+#### Battery Power cable Connectors
+
+The normal MCB power cables attached at the factory are setup to connect to SLA (Sealed Lead Acid) batteries using a F2 (6mm - 1/4 inch) male spade or flat connectors.  Some smaller batteries may use the F1 (3/16 inch) male flat connector and the cables we normally attach will work on those as well.     We also include alternate power cables with 6mm loop connections for larger high capacity batteries with bolts.  Below is a picture of both types of connectors that a battery may required
+
+![Two types of MCB to Battery Cable Connectors](PowerCablesWithHeatShrink.jpg)
+
+#### Battery to MCB Power Cable details
+
 For the main power cables, the red power cable goes to positive of battery on the right.  The yellow cable connects the positive of the left battery to the negative of the battery shown on the right. The black cable goes from the negative terminal of the battery on the left to ground on the robot.
 
 There are cables for both spade type and screw type battery terminals. A 24 volt battery charger is included in the package (Photo not available). The recommended batteries are of the type specified by UB12xxx where xxx specifies Amp Hours. Commonly UB1250, UB1290, or UB12150 are used. Since it is unknown what size and shape the batteries will be it is the user’s responsibility to see they are secured in the chassis by the use of straps or packing material.
+
+#### The Motor cables to the Wheels
+
+The wheels require the use of a high current cable that also holds the wheel encoder wires.   This cable can be very difficult to detact and only a little bit easier to install because it has a very tight fit.    Below is a picture of the male pin end and below that is properly connected motor cable.
+
+Take note of the small arrows which can be hard to see but mark the key location and the cables will only fit together if the two sides align the arrow markings.
+
+![Motor Cable Connectors](MotorCables.jpg)
+
 
 
 <!-- *{TODO: Somewhere there needs to be a discussion of what size batteries to use.  The spade connector sizes need
