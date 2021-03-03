@@ -14,6 +14,12 @@ The Master Control Board is sometimes called ```Motor Control Board``` or ```MCB
 
 This page highlights the power supplies available for user use and briefly explains the LEDs on the board.  More details on the LEDs is available elsewhere but it was felt a brief overview here combined with the main connections a user may want to use would be nice to have on one page.
 
+## USB and the Ethernet Connectors On The Raspberry Pi Computer
+
+Although not technically on the MCB itself these can be extremely popular for many users.   The Ethernet can be very handy for lab development to not have to worry about WiFi or lack of WiFi.   
+
+One common use is that users can add more serial ports using USB to serial ports.  Another common usage is to plug into a USB port for a device such as a Lidar or other expansion IO device.  Keep in mind the power supplied by USB ports varies and in a general way may be lower than your device requires so see the power jacks we discuss next rather than expect the USB to supply currents much over 100mA in a reliable way.
+
 ## A Comprehensive Description Of MCB Connections
 
 We have always had a separate document showing most all of the MCB connections.
@@ -21,27 +27,54 @@ To see this comprehensive document please see [Motor Controller Board Pinouts An
 
 This page is meant to highlight more common connectors being asked about but the earlier full list of the  MCB connections still exists in above link.
 
-## Power Supplies Available For User Specific Equipment
 
-The picture below shows the 4 power supplies available in cases where a user may need 12V or 5V for their own circuits.
-We prefer that the user use the  Auxilary 12V and 5V power first because they are separate from the robot main supplies.
-The auxilary supplies should be able to supply 12V at 7 amps and 5V at 7 amps.  High transient loads may cause them to briefly sag.
+### PC Style Power Connectors with 5V and 12V
+
+The picture below shows the 4 power supplies available from connectors or holes near the top of the board.  These can be of use for cases where a user may need 12V or 5V for their own circuits.
 
 ![Power Supply Connections For User Uses](PowerConnectorsForUser.jpg)
 
-## The USB Style 5V Power, Fan Power, High Current Aux Power And Main Battery fuse
+We prefer that the user use the  Auxilary 12V and 5V power first because they are separate from the robot main supplies.
+The auxilary supplies should be able to supply 12V at 7 amps and 5V at 7 amps.  High transient loads may cause them to briefly sag.
 
-Located at the bottom of the MCB board there are two 5V connectors that you may plug in a standard USB A cable to get 5V.
+There are other places to solder to the Aux power connections seen in this picture to the left of the large white PC style power connectors.
 
-Starting with MCB rev 5.2 we have added a standard 3-pin 12V Fan Power Jack where G is ground and + is 12V.
+To make your own cables here are the mating connector housing and pin numbers
+* Housing is `Molex 0015244048` (Available as Digikey # WM6982-ND)
+* Crimp pins are `Molex 0002081201` (Available as DigiKey # WM2293CT-ND)
 
-The Aux Motor Board jack allows for high current full unregulated battery voltage usage.  We recommend you contact us if you wish to use this jack.  The jack was put on this board for an expansion jack for internal use but is available.  See the P*1001 jack description in the comprehensive description of MCB connections doc we gave a link for a couple paragraphs ago for more detail.
+As the silkscreen shows for both of these connectors 5V is on the left then the two centeral pins are ground and on the right is 12V.  These are accurate, regulated supplies.
 
-Also shown in this picture is our main battery fuse which we hope you never have to worry about but it is just above the USB power jacks
+
+## Power Connectors On Bottom Of The Board  
+
+Several expansion power connectors are located near the bottom of the board by the large automotive main Fuse
 
 ![USB Jacks, Fan Jack and Aux Motor Power](UsbJacksAndAuxPowerAndFanJack.jpg)
 
+### The USB Style 5V Power
 
+Located at the bottom of the MCB board as the board is in the Magni robot there are two 5V connectors that you may plug in a standard USB A cable to get 5V.
+
+If your USB power cables cannot plug into these jacks we recommend you get some right angle USB 3.0 adapters.  Note that you need the type where the plastic in the adapter is going to fit into our connectors thus the plastic must be above the hole for the part that plugs in.  Here is some search text to find the jack we recommend but there are other vendors.   `USB 3.0 Adapter 90 Degree Male to Female Down Angle Coupler Connector by Oxsubor`
+
+### The 12V Fan Power Connector
+
+Starting with MCB rev 5.2 we have added a standard 3-pin 12V Fan Power Jack where Ground is the left pin with 'G' and 12V is on the center pin.  It is 3-pins so 12V can be in the middle to avoid polarity issues.
+
+This is a Molex 22232031 connector so to make cables these parts apply
+* Housing is `Molex 0022013037` (Available as DigiKey # 900-0022013037-ND)
+* Crimp pins are `Molex 0008500113` (Available as Digikey # WM1114CT-ND)
+
+### The AUX MOTOR BOARD High Voltage Connectors
+
+The 8-pin Aux Motor Board jack allows for high current full unregulated battery voltage usage.  We recommend you contact us if you wish to use this jack.  The jack was put on this board for an expansion jack for internal.  See the P*1001 jack description in the To see this comprehensive document please see [Motor Controller Board Pinouts](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf)
+
+### Main Battery Fuse
+
+The 35Amp  main battery fuse is just above the USB power jacks and directly supplies protection for the Aux Motor Board power. It can be a different color. For almost ALL our customers this fuse really could be 10 or 15 amps so you may wish to use a lower current fuse for added safety especially if you are going to be changing around boards and so on frequently.
+
+We do see customers drop things on the still plugged in electronics (WHICH WE TRY TO WARN THEM NOT TO DO)  and a 35 amp fuse can lead to great damage.  For most all our customers this fuse does not have to be over 15 amps.
 
 # Master Control Board Led Indicators
 

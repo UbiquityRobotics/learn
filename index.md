@@ -54,8 +54,7 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 6. [PC Board Revisions For MCB, Switch Boards & more](PC_Board_RevId)
 7. [Mechanical Drawings](support/mechanical_drawings.md)
 8. [GPIO Line Usage And Using Them For Your Own Needs](support/GPIO_lines.md)
-9. [Motor Controller Board Pinouts Leds And User Power Supplies](mcb_pinouts_leds_userpower)
-
+9. [MCB Board Pinouts, Leds And User Power Supplies](mcb_pinouts_leds_userpower)
 10. [Removal And Installation Of Main PC Boards](support/board_replacement.md)
 11. [Troubleshooting](support/troubleshooting.md)
 
