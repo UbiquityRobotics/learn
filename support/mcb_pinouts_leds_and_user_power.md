@@ -14,11 +14,20 @@ The Master Control Board is sometimes called ```Motor Control Board``` or ```MCB
 
 This page highlights the power supplies available for user use and briefly explains the LEDs on the board.  More details on the LEDs is available elsewhere but it was felt a brief overview here combined with the main connections a user may want to use would be nice to have on one page.
 
-## USB and the Ethernet Connectors On The Raspberry Pi Computer
+## USB and the Other Connectors On The Raspberry Pi Computer
 
 Although not technically on the MCB itself these can be extremely popular for many users.   The Ethernet can be very handy for lab development to not have to worry about WiFi or lack of WiFi.   
 
 One common use is that users can add more serial ports using USB to serial ports.  Another common usage is to plug into a USB port for a device such as a Lidar or other expansion IO device.  Keep in mind the power supplied by USB ports varies and in a general way may be lower than your device requires so see the power jacks we discuss next rather than expect the USB to supply currents much over 100mA in a reliable way.
+
+### Raspberry Pi Audio And Display connectors
+The Raspberry Pi may be connected to two types of full displays.  
+
+We sometimes use the Raspberry Pi 7" touch screen that plugs into the flat ribbon cable on one edge of this small CPU.  You will very soon see some Magni based products using this display.
+
+There is an HDMI connector on the Raspberry Pi 3 and the recent shipments we have use the Raspberry Pi 4 which has two HDMI micro connectors.
+
+All models of the Raspberry Pi have audio input and output on a 3.5mm compound jack.
 
 ## A Comprehensive Description Of MCB Connections
 
@@ -54,7 +63,7 @@ Several expansion power connectors are located near the bottom of the board by t
 
 ### The USB Style 5V Power
 
-Located at the bottom of the MCB board as the board is in the Magni robot there are two 5V connectors that you may plug in a standard USB A cable to get 5V.
+Located at the bottom of the MCB board as the board is in the Magni robot there are two 5V connectors that you may plug in a standard USB A cable to get 5V.  There is no USB data at all, just power.  If you need full USB connectors you need to plug into up to 4 USB jacks on the Raspberry Pi computer attached to the MCB.
 
 If your USB power cables cannot plug into these jacks we recommend you get some right angle USB 3.0 adapters.  Note that you need the type where the plastic in the adapter is going to fit into our connectors thus the plastic must be above the hole for the part that plugs in.  Here is some search text to find the jack we recommend but there are other vendors.   `USB 3.0 Adapter 90 Degree Male to Female Down Angle Coupler Connector by Oxsubor`
 
@@ -108,7 +117,7 @@ When main power is active AND the red 'ESTOP switch is also in the out position 
 
 ## The 3.3V Onboard Power Regulator
 
-Starting with MCB version 5.2 we have an onboard 3.3V power regulator so that the 3.3V circuits do not have to use the 3.3V power from the Raspberry Pi.  This is both a reliability enhancement as well as a way to have more 3.3V power even when a user uses a different CPU than the Raspberry Pi.
+Starting with MCB version 5.2 we have an onboard 3.3V power regulator so that the 3.3V circuits do not have to use the 3.3V power from the Raspberry Pi.  This is both a reliability enhancement as well as a way to have more 3.3V power even when a user uses a different CPU than the Raspberry Pi.  We do not directly support usage of this supply for user circuits yet.
 
 There is an led that should be on whenever the board is powered up and that led is labeled 3.3V and is located about 2cm lower than the large white Main Power jack at the top of the board.
 
@@ -121,3 +130,32 @@ Starting with version 5.2 of the MCB board we added two leds that normally blink
 These two leds are labeled ```SIN``` and ```SOUT``` and are located just below the right large white AUX power connector at the very top of the board near the center.
 
 Normally the SOUT led will blink very fast right after power up of the robot.  The SIN led will take a minute or more to blink because the Raspberry Pi has to initialize the Linux operating system before it gets to starting to communicate with the MCB.    Unfortunately the led is a bit hard to see but be aware that until this SIN led starts to blink very fast the robot will not respond to any sort of command.   So the leds is valuable to tell when the robot is ready to go.
+
+## I2C Expansion Jack Used For OLED display
+We are trying to start to ship a small OLED display with each MCB but we are not quite ready yet in our supply chain however it is our goal to ship this OLED display which we have a node for already on our repository.
+
+The reason I write this here is to explain that starting with MCB rev 5.2 we have a 4-pin 0.1" pin spacing female jack that brings out the Raspberry Pi I2C lines as well as our own MCB 3.3V.  Rev 5.1 board also had this jack but because power for 3.3 came from the Raspberry Pi we do not recommend using that jack for I2C devices.
+
+We are planning on doing I2C based expansion boards in the future where we plan on plugging in an accessory/expansion board then plug the OLED display on top of that board.
+
+![MCB I2C Expansion Jack](McbI2cJack.jpg)
+
+From left to right here are the P2 I2C expansion jack pin definitions
+
+|  Pin | Description |
+|-------------------------|----------------------|
+|  GND|  Ground for the power and I2C |
+|  3V3  |  This is 3.3V power some boards call Vcc |
+|  SCL |  The I2C Clock Line. No need to add more pullups |
+|  SDA |  The I2C Data Line. No need to add more pullups |
+
+
+## Alternative Wiring To Replace Our Switch Board
+
+Some users mount the MCB in their chassis and do not want to use the `Switch Board` that we normally use for stock Magni units.  Recent switch boards have jacks to allow users to have remote power and ESTOP switches but some users want to avoid use of the switch board for mechanical reasons in their own product.
+
+Below is the wiring you would have to supply to the MCB 14-pin P601 jack.  You MUST use 1/2 watt resistors as shown.  The switches themselves are low current and will only need to control under an amp of current at 30V
+
+Be very careful if you use a ribbon cable or other wiring because that connector has direct battery access and EXTREME currents are possible.  Thus  Measure and verify and measure AGAIN before going 'live' with direct battery connect.   I have indicated off to the left the pins used for the battery charger because you would also not have the XLR jack for charger without our Switch Board.
+
+![Switch Board Alternative Wiring](McbSwitchBoardAlternativeWiring.jpg)
