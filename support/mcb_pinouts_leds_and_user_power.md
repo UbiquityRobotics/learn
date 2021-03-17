@@ -149,6 +149,25 @@ From left to right here are the P2 I2C expansion jack pin definitions
 |  SCL |  The I2C Clock Line. No need to add more pullups |
 |  SDA |  The I2C Data Line. No need to add more pullups |
 
+## Making A Remote RF Estop switch
+
+Starting with our SwitchBoard rev 2.2 it is now possible to include either your own ESTOP switch on your chassis cover or shell.    Besides that though here we describe using low cost RF control units that offer a latched set of relay connections so you can install an RF safety switch to turn off Magni Power remotely if you require that for your own safety needs.
+
+I suggest one particular RF control unit that by adding a connector for 12V power and a connector to plug into our Switch board jack called P202 you can have such an RF controlled power switch.   Note that this could also be done on our rev 2.2 switch board to have the main power-on also with RF if you wish that feature.
+
+![Remote ESTOP Switching](SwitchBoardRfEstopWiring.jpg)
+
+Here are some details to help make cables for this sort of unit.   
+Here is the connector for the ESTOP that goes to P202
+
+    Plastic Housing:  Molex 0009501021.  Digi-Key Part Num WM18813-ND
+    Female Pins:      Molex 0008701031.  Digi-Key part Num WM18820CT-ND
+
+Here is the connector for the 12V power to supply it from MCB AUX power jack that is also described in detail earlier in this page.
+
+    Plastic Housing:  Molex 0015244048   Digi-Key Part Num WM6982-ND
+    Female Pins:      Molex 0002081201   Digi-Key Part NumWM2293CT-ND
+
 
 ## Alternative Wiring To Replace Our Switch Board
 
