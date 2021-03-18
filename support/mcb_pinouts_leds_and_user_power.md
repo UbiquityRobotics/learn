@@ -157,6 +157,8 @@ I suggest one particular RF control unit that by adding a connector for 12V powe
 
 ![Remote ESTOP Switching](SwitchBoardRfEstopWiring.jpg)
 
+These remote RF relays come with a small plastic box that latches closed firmly and covers the circuit board. The case is not shown in this picture simply to show the power and switch wire connections. You could use good quality double sided flexible tape to attach this to the inside space near the switch board or make a bracket if you are going to ship this with your product.
+
 Here are some details to help make cables for this sort of unit.   
 Here is the connector for the ESTOP that goes to P202
 
