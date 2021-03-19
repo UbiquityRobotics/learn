@@ -6,7 +6,25 @@ permalink: PC_Board_RevId
 #### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
 ## PC Board Revision Identification
-This page describes how to identify Magni PC board revisions of the ```Main Control Board (MCB)``` and the ```switch board``` for versions were the rev does not print on the board or is very hard to see due to poor contrast.
+This page describes how to identify PC board Revisions used in the Magni robot.
+
+- Raspberry Pi Host Computer
+- Main Control Board (MCB)
+- Switch board
+
+### Raspberry Pi Host Computer
+
+Starting in mid 2020 we started to ship the Raspberry Pi 4 host computer that is inserted into the MCB board so that only the bottom is visible and even that is hard to see due to the robot chassis.  The easiest way to tell which general Raspberry Pi you have (3 vs 4) is to look at the USB and Ethernet jacks as follows.
+- Pi 4 middle 2 jacks use blue plastic for USB 3.0 ability.
+- Pi 4 Ethernet jack will be the top metal jack (bottom on Pi3)
+- Pi 3 will have a large square 1.2cm black chip on the bottom of the board
+
+The best identification is to use this linux command from an ssh command line shell into the robot which will also show the rev of Pi3 or Pi4
+
+    cat /sys/firmware/devicetree/base/model
+
+- Typical Pi3 reply:  `Raspberry Pi 3 Model B Plus Rev 1.3`
+- Typical Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.2`
 
 ### Main Control Board Identification
 
@@ -16,9 +34,17 @@ Because prior to rev 5.2 the version number is very hard to read we will supply 
 
 A detailed list of main MCB hardware changes as well as firmware revisions can be found on our [Firmware_Hardware_Revisions](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md) github page.
 
-#### Revision 5.2 Main Control boards
+#### Revision 5.2 And Later Main Control boards
 
-Starting with version 5.2 the large text for the board revision will be up to mid left of the board and printed in bright white silkscreen.  This page will not describe rev 5.2 boards because the revision is very easy to see.
+Starting with version 5.2 the large text for the board revisions are printed in bright white silkscreen on the left edge of the board.  This page will not describe physical differences to identify the boards because the board revision is clearly marked.  Below shows rev 5.2 and rev 5.3 left edge markings.
+
+![Current MCB Board Revision Markings](Mcb_5p2and5p3_BoardRevMarking.jpg)
+
+#### Revision Markings On Rev 5.1 and earlier
+
+All MCB boards have the revision on the left edge of the PCB but bright white silkscreen was only started to be used as of rev 5.2.  Below is an enhanced picture of a rev 5.1 board to better show what is there.  These markings are very low contrast but are present on all MCB boards.
+
+![Older MCB Board Revision Markings](Mcb_5p1_BoardRevMarking.jpg)
 
 
 #### Revision 5.1 Main Control Board
