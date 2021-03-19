@@ -6,7 +6,13 @@ permalink: overview
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/) - - -&uarr;[up](ix_programming)
 
-## Overview
+## ROS Notes With A Focus On Magni Usage
+
+ROS stands for `Robot Operating System` and is composed of libraries and tools to help software developers create robot applications.  A great many robots are using ROS these days which allows for use of common ROS practices for connecting robot subsystems together in a defined way.
+
+For the details on ROS refer to [The ROS Documentation Wiki](http://wiki.ros.org/Documentation)
+
+The Magni product up through 2020 has used the original ROS.  There has been a steady increase in the next version of ROS which is called ROS2 and addresses a great many limitations to the original ROS while maintaining most of the feel and terminology of the original ROS.
 
 As many of you will know already, ROS operates with a set of nodes that are able to publish and/or subscribe to messages that are passed between the nodes by the core ROS process. The task of programming the robot to do something we want is the task of writing a node that subscribes to the data we want to use and publishes the action we want the robot to take.
 

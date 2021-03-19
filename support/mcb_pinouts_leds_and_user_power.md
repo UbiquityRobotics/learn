@@ -6,7 +6,7 @@ permalink: mcb_pinouts_leds_userpower
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-# Master Control Board Connectors and User Power Supplies
+# MCB Connectors, Power Supplies, LEDs & Helpful Mods
 
 This page tells explains the connections that the MCB, Master Control Board, make available as well as the LED indications on the board.
 
@@ -155,9 +155,11 @@ Starting with our SwitchBoard rev 2.2 it is now possible to include either your 
 
 I suggest one particular RF control unit that by adding a connector for 12V power and a connector to plug into our Switch board jack called P202 you can have such an RF controlled power switch.   Note that this could also be done on our rev 2.2 switch board to have the main power-on also with RF if you wish that feature.
 
+We find the one that looks like this picture and has a dual button control unit allows for latched or momentary power modes.   You can find this style on EBay using the search string of  `DC12V 1CH Relay Receiver RF Transmitter Remote Control Switch`
+
 ![Remote ESTOP Switching](SwitchBoardRfEstopWiring.jpg)
 
-These remote RF relays come with a small plastic box that latches closed firmly and covers the circuit board. The case is not shown in this picture simply to show the power and switch wire connections. You could use good quality double sided flexible tape to attach this to the inside space near the switch board or make a bracket if you are going to ship this with your product.
+This remote RF relay comes with black plastic box that latches closed firmly and covers the circuit board without taking much space. The case is not shown in this picture simply to show the power and switch wire connections. You could use good quality double sided flexible tape to attach this to the inside space near the switch board or make a bracket if you are going to ship this with your product.
 
 Here are some details to help make cables for this sort of unit.   
 Here is the connector for the ESTOP that goes to P202
