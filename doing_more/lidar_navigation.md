@@ -101,6 +101,8 @@ If you did not get anything you can debug by running the lidar node all by itsel
 
     roslaunch magni_lidar rplidar.launch
 
+Once you feel the lidar is working exit this with a Control-C so you can go on with this demo where the lidar will be launched within the map maker launch file.
+
 ### Clear Any Prior Map data
 
 We now want to clear any old ROS global map so a fresh one is generated next. We will form that folder if it does not exist and then remove or rename the map.txt file in that folder if the folder did exist already.  There are other ways to do this but this is straightforward and easy to also remind you to save a prior map if you are running the test in a different room or room configuration.
