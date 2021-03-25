@@ -70,19 +70,40 @@ It is suggested on first time use of this demo to choose a fairly simple room wi
 
 Place the magni where you would like to be the origin of the map which will be X,Y as 0,0.  The easiest way to operate later when you use the map is to know where the front wheels are as you start your map and what direction the robot is facing so I suggest 2 pieces of masking tape to the sides of the wheels to use later.  Now you should totally restart the robot right at this origin which is done using a ```sudo shutdown -h now``` and then a full power off and power back on. The reason for this is that this is a certain way to set the MCB odom counters at 0,0 so when the magni-base service starts odometry will be reset.
 
-After a couple minutes you will run the launch file example to start a lidar, the RPLIDAR A1, and make the system ready for gmapping is in this repository.
+## Verfiy The Robot Is Fully Ready To Respond
+
+Whenever there is a power-up situation or a reboot of the robot there will be delays  due to network before the robot is ready.  We suggest the simple command and wait for it to be active.  There can be many `no new messages`  shown but after the rate shows the robot is ready.  (Use Contro-C to stop the rostopic command)
+
+    rostopic hz /odom
+    no new messages              (These can go on for a minute or more)
+    average rate: 20.181         (Once these start the robot is ready)
+             min: 0.044s max: 0.052s std dev: 0.00159s window: 19
+
+## Launch The Map Making Application
+
+The next command will be to launch the map maker example to start a lidar, the RPLIDAR A1, and make the system ready for gmapping is in this repository.
 
     roslaunch magni_lidar magni_lidar_mapmaker.launch
 
-## Verify that the Lidar is Publishing To a ROS topic
+### Verify that the Lidar is Publishing To a ROS topic
 
 Once the lidar is started, the /scan ROS topic will publish the lidar scan data. You can verify it is generating data (although it is a great deal of data) using this test command
 
-    rostopic echo /scan
+    rostopic hz /scan
+    average rate: 6.740
+            min: 0.144s max: 0.152s std dev: 0.00370s window: 6
 
-Use Control-C to stop this onslaught of text! we just wanted to see if the Lidar is running
+Use Control-C to stop this periodic display of the rate for publications of the lidar /scan topic because we just wanted to see if the Lidar is running
 
-We now want to clear any old ROS global map so a fresh one is generated next. We will form that folder if it does not exist and then remove or rename the map.txt file in that folder if the folder did exist already.  
+### Debug Help If /scan shows no data
+
+If you did not get anything you can debug by running the lidar node all by itself till you resolve the issue which may be wrong serial port or power to the lidar or other things.   The following command will just start the lidar used in this demo.
+
+    roslaunch magni_lidar rplidar.launch
+
+### Clear Any Prior Map data
+
+We now want to clear any old ROS global map so a fresh one is generated next. We will form that folder if it does not exist and then remove or rename the map.txt file in that folder if the folder did exist already.  There are other ways to do this but this is straightforward and easy to also remind you to save a prior map if you are running the test in a different room or room configuration.
 
     cd ~
     mkdir -p ~/.ros/slam

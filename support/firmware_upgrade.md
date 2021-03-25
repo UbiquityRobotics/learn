@@ -33,11 +33,11 @@ DateCode was started around version v35 and shows up in /diagnostics topic along
 | ------- | ---- | ---- | ----------- |
 | v28 | 6.0 | NA | Production shipment version that does wheel movement check on startup. Users should do a firmware upgrade from this very old version |
 | v32	| 5.0 | NA | Production firmware used in 2019. This is default if no version is entered. Supported by any host side software |
-| v35 |	4.0 | 20190815 | Current release as of Sept 2020 with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
-| v37 | 4.75 | 20200620 | Used in manufacturing only.  1st with a selftest. |
-| v38 | 5.25 | 20201006 | Beta release with many fixes. Not a release candidate |
+| v35 |	4.0 | 20190815 | Last well known good release as of Sept 2020 with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
+| v37 | 4.75 | 20200620 | Use in manufacturing only.  1st with a selftest. |
+| v38 | 5.25 | 20201006 | Depreciated Beta release for some fixes. |
 | v39 | 5.5 | 20201129 | Non-Magni release for in development 4wheel drive unit |
-| v40 | 5.75 | 20201209 | Magni Beta release for most recent release candidate. |
+| v40 | 5.75 | 20201209 | Magni current release for most recent release candidate. |
 
 To see more details about our firmware as well as our hardware revisions for the motor controller please view [this page](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
 
@@ -66,8 +66,8 @@ Run the firmware upgrade utility:
 
     rosrun ubiquity_motor upgrade_firmware.py
 
-After entering your email address, you should receive an access token.
-Enter this token and either accept the default version which is seen in the above table or specify a different version perhaps for latest features (eg. specify version 35 by typing in 'v35'). The download will start and upgrade the motor controller board.
+After entering your email address, you should receive an email with an access token.
+Enter this token and either accept the default version which is seen in the above table or specify a different version perhaps for latest features or perhaps an older trusted release (eg. specify version 35 by typing in 'v35'). The download will start and upgrade the motor controller board.
 
 Should any problems show up you are always allowed to do this firmware upgrade again to select a version you know was best for your needs.
 
