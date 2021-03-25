@@ -101,7 +101,13 @@ If you did not get anything you can debug by running the lidar node all by itsel
 
     roslaunch magni_lidar rplidar.launch
 
-Once you feel the lidar is working exit this with a Control-C so you can go on with this demo where the lidar will be launched within the map maker launch file.
+You can use the rostopic hz command as above or see the console if there is some fault in serial port or other problem the launch will abort.
+
+Once you feel the lidar is working exit this with a Control-C so you can go on with this demo where the lidar will be launched within the map maker launch file by running as before this command.  
+
+    roslaunch magni_lidar magni_lidar_mapmaker.launch
+
+Here too you could verify using the rostopic hz command before continuing.
 
 ### Clear Any Prior Map data
 
