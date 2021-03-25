@@ -31,13 +31,13 @@ DateCode was started around version v35 and shows up in /diagnostics topic along
 
 | Ver |	Rate | DateCode | Description |
 | ------- | ---- | ---- | ----------- |
-| v28 | 6.0 | NA | Production shipment version that does wheel movement check on startup. Users should do a firmware upgrade from this very old version |
-| v32	| 5.0 | NA | Production firmware used in 2019. This is default if no version is entered. Supported by any host side software |
+| v28 | 6.0 | NA | Depreciated Production shipment version that does wheel movement check on startup. Users should do a firmware upgrade from this very old version |
+| v32	| 5.0 | NA | Depreciated Production firmware used in 2019.  |
 | v35 |	4.0 | 20190815 | Last well known good release as of Sept 2020 with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
 | v37 | 4.75 | 20200620 | Use in manufacturing only.  1st with a selftest. |
 | v38 | 5.25 | 20201006 | Depreciated Beta release for some fixes. |
 | v39 | 5.5 | 20201129 | Non-Magni release for in development 4wheel drive unit |
-| v40 | 5.75 | 20201209 | Magni current release for most recent release candidate. |
+| v40 | 5.75 | 20201209 | Magni current release for most recent release candidate.  This is the default if just an enter is done when asking for version |
 
 To see more details about our firmware as well as our hardware revisions for the motor controller please view [this page](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
 
