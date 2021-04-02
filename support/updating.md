@@ -36,7 +36,7 @@ Here is a list of some key image dates and issues or limitations of the raspberr
 |  2020-02-10 |  Ethernet and Sonars do not work when CPU is a Pi4 |
 |  2019-06-19 |  Supports Pi3 but came before Pi4 support |
 |  2020-02-10 |  First image meant to add Pi4 support. Cannot run our Sonar board without manual fixes seen on our Sonar board install page |
-|  2020-11=07 |  Adds more fixes for Pi4 usage. Being evaluated. |
+|  2020-11-07 |  Adds more fixes for Pi4 usage. Being evaluated. |
 
 
 ### Linux Host Software Update
@@ -59,7 +59,9 @@ This may take some time, since it may have been a while since the original image
 We have new software being qualified and then placed into our github repositories.
 Often we must tell people to clone and make a particular repository so that they can get the very latest code.   
 
-Direct use of our repositories is a sort of Beta usage of the software and as such you may hit issues we have not found yet.  In that case we encourage you to post an entry on our forum located at https://forum.ubiquityrobotics.com/
+Some changes in order to use latest software may require 1 or more other repositories to also be used.  Contact us on our forum at https://forum.ubiquityrobotics.com/ if you are unsure.
+
+Direct use of our repositories is a sort of Beta usage of the software and as such you may hit issues we have not found yet.  In that case we encourage you to post an entry on our forum which was just listed in prior paragraph. 
 
 Consider direct use of our repositories as Beta software which has shown promise.   All of the Ubiquity Robotics repositories will show up in your folder of  ```/home/ubuntu/catkin_ws/src``` folder where this assumes you are using the image as the default user of  ubuntu.
 
