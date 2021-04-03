@@ -162,12 +162,12 @@ We find the one that looks like this picture and has a dual button control unit 
 This remote RF relay comes with black plastic box that latches closed firmly and covers the circuit board without taking much space. The case is not shown in this picture simply to show the power and switch wire connections. You could use good quality double sided flexible tape to attach this to the inside space near the switch board or make a bracket if you are going to ship this with your product.
 
 Here are some details to help make cables for this sort of unit.   
-Here is the connector for the ESTOP that goes to P202
+Here is the connector for the ESTOP that goes to P202 but note that we ship this connector and a wire that loops to short this connection with each current Magni robot.  You can then cut that existing wire and splice longer 2 wires back to the RF switch unit. Never leave exposed connections from spliced wires so cover them with shrink wrap or electrical tape of course.
 
     Plastic Housing:  Molex 0009501021.  Digi-Key Part Num WM18813-ND
     Female Pins:      Molex 0008701031.  Digi-Key part Num WM18820CT-ND
 
-Here is the connector for the 12V power to supply it from MCB AUX power jack that is also described in detail earlier in this page.
+Here is the connector for the 12V power to supply it from MCB AUX power jack that is also described in detail earlier in this page.  We use a very standard connector that had popular usage as the older disk drive power connectors some years back.  If you have an older PC power supply sitting about you could use the yellow and black wires on one of it's cables that was meant to go to a disk drive after cutting the cable off of the old power supply.   If no such 'junk' about then here are connector details.
 
     Plastic Housing:  Molex 0015244048   Digi-Key Part Num WM6982-ND
     Female Pins:      Molex 0002081201   Digi-Key Part NumWM2293CT-ND
