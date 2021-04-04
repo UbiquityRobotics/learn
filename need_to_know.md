@@ -38,6 +38,23 @@ In all cases we recommend a non-spill-able, deep cycle, sealed lead acid battery
 
 The provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
 
+#### Typical Current Draw For The Robot
+
+Below is a table showing ```typical currents``` seen on the positive lead of the battery using a DC clamp on meter for steady states.
+
+
+|  Operating State | DC Current in Amps |
+|-------------------------|----------------------|
+|  Stationary robot using the Pi4 with 4GByte and on flat ground with motor power off | 0.4 - 0.45 Amps |
+|  Driving on flat surface with no load at about 0.5 meters/sec  |  0.8 - 0.9 Amps |
+|  Rotating in place with no load (about same as slow driving) | 0.8 Amps |
+|  Stationary on flat ground with power to the motors |  0.5 - 0.6 amps |
+|  Stationary on flat surface but pushing down and back on robot so wheels have to fight to stay in one place but we are not slipping just yet | 1.2 Amps |
+
+The instantaneous currents can be well over 10 amps in certain cases but since these are transient cases for stress tests they are not considered useful for battery life calculations.
+
+Other cases such as the robot driving up a slope with large loads of course also increases current over the above values.
+
 #### The Size Of The Battery Compartment
 
 We ship Magni with a foam cut-out that nicely holds two 1270 format Lead Acid batteries.   Hopefully this was not disguarded when unpacking.
