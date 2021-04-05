@@ -50,6 +50,7 @@ Below is a table showing ```typical currents``` seen on the positive lead of the
 |  Rotating in place with no load (about same as slow driving) | 0.8 Amps |
 |  Stationary on flat ground with power to the motors |  0.5 - 0.6 amps |
 |  Stationary on flat surface but pushing down and back on robot so wheels have to fight to stay in one place but we are not slipping just yet | 1.2 Amps |
+|  Place the robot so it cannot move and apply a great deal of torque to each wheel so the motor controller has to fight to hold the wheels firm.  | 2 - 3 Amps |
 
 The instantaneous currents can be well over 10 amps in certain cases but since these are transient cases for stress tests they are not considered useful for battery life calculations.
 
