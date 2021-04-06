@@ -44,7 +44,13 @@ Up - Forward, Down - Back, Left - rotate counter clockwise, Right - rotate clock
 
 The controller is set to be very slow. You can increase the speed by using the (LT) button below the deadman, this will increase the maximum speed by about 25%.  Moving the joytick to a position between full up and full right will move the robot in a curved path.
 
+### Modify The Logitech Joystick Default Parameters
 
+The Logitech F710 is an approved joystick controller for the Magni robot. The default scale for the joystick is 0 to 1.0. Output values can be found in the file ```/opt/ros/kinetic/share/magni_teleop/param/logitech.yaml```. The values most commonly modified are these:
+
+* ```scale_linear```     This value controls the maximum velocity the joystick will control for maximum forward or reverse joystick movement when the ```turbo``` button is not pressed.
+
+* ```scale_angular```    This value controls the maximum turning rate in radians per second.  Some users lower this to around 1 for less sensitive turning so driving straight is easier.
 
 ### Troubleshooting
 
@@ -131,11 +137,3 @@ The folowing command
 	/ubiquity_velocity_controller/odom
 
 Shows everything is running. You now should be able use the controller to drive the robot.
-
-#### Modify The Logitech Joystick Default Parameters
-
-The Logitech F710 is an approved joystick controller for the Magni robot. The default scale for the joystick is 0 to 1.0. Output values can be found in the file /opt/ros/kinetic/share/magni_teleop/param/logitech.yaml. The values most commonly modified are these:
-
-* scale_linear     This value controls the maximum velocity the joystick will control for maximum forward or reverse joystick movement.
-
-* scale_angular    This value controls the maximum turning rate in radians per second.  Some users lower this for slower turning when the joystick is pushed all the way right or left.
