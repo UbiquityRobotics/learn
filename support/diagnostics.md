@@ -74,6 +74,27 @@ The standard motor/wheel unit we ship have these characteristics
     - This translates to about 2.5mm as the rough linear travel per enc tick
     - This also translates to 1.4 degrees wheel rotation per encoder tick
 
+### Verification Of Wheel Encoder Operation
+
+Here is how to verify the wheel encoders work on the robot.  This may be of use for certain hardware failures that may be due to wheel encoder failure.
+
+Start with the robot powered off.  Raise the robot front wheels from touching the floor perhaps using block(s) of wood or other objects.   Turn on the robot power and then turn off the motor power by pressing in the RED switch so the large RED led is off and thus motor power is off.
+
+We are going to look at the robots readings for Wheel Odometry which are entirely determined by reading the wheel encoders and tracking where the robot should be if the wheels rotated any which way.
+
+In an SSH window to the robot type  ```rosrun tf tf_echo odom base_link```
+This produces a repeating display with robot Translation and with robot Rotations where rotations are given in 3 ways.  
+
+We will focus on the last line that says  ```in RPY (degree)  [0.000, 0.000, 0.000]```   The third number is the rotation about the Z (up) axis that the robot calculates from wheel encoder tics as measured in degrees.  The Z axis rotation measures positive for a rotation to the left using standard robot axis definitions.
+
+If you rotate the left wheel 1/2 of a rotation as if that wheel is moving forward then the Z rotation number will get to around 50 (degrees).  Rotate that same wheel back to where it started in reverse rotation and Z rotation goes back to about 0.
+
+Test the right wheel in a similar way where rotating as if moving forward will generate a Z rotation of around -50 degrees.   These are approximate values.
+
+If you have the robot back on the floor you can do a similar test starting from all zero numbers after a reboot and roll the robot forward 0.1 meters and then see the  Translation 1st number go to 0.1 Meters where X is forward.   
+
+The 6 small gauge wires out of the motor cables are the wheel encoder and power to the wheel encoder wires in case you are curious.
+
 ## Motor Controller Board Pinouts
 
 The pinouts for the many connectors on the main Motor Controller Board can be found [HERE](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf).
