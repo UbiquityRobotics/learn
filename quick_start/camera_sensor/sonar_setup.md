@@ -29,6 +29,36 @@ Below is a picture of the Sonar board included with Magni Silver configuration. 
 
 ![Magni Sonar Board](MagniSonarBoard.jpg)
 
+
+### Enable Sonar Board To Run in robot.yaml file
+
+The Magni software must be configured to enable usage of the sonar board. You must edit the
+`robot.yaml` file as root user then modify the file.
+
+`sudo nano /etc/ubiquity/robot.yaml`
+
+Make an edit so the only uncommented line with `sonars:` in it is as shown below.
+Be sure to edit the line with  `sonars: none` so the line starts with a pound sign and is thus a comment.    
+
+Remove the ```#``` from the line that will enable the sonar software and note there must be a space after the colon or it will not work.
+
+`sonars:  'pi_sonar_v1'`
+
+### Verification Of Sonars Operating
+
+Once the sonars are enabled to run in the robot.yaml file you can reboot the robot and verify the sonars are running with a simple command.
+
+In a SSH console session to the robot after the robot has fully started (can take a minute) type ```rostopic hz /sonars```
+If the Sonars are working then you will see a periodic messaage repeat with a rate that the sonar messages are being received.
+
+You can also use  ```rostopic echo /sonars``` which if the sonars are running will scroll a great deal of messages so hit Control-C to stop the messages and when you scroll back the window you should see over and over all 5 sonars showing their range.
+
+The most common reasons for this not to work are as follows:
+* Sometimes we see the customer has not fully inserted the 50 pin ribbon cable going from the MCB to the sonar board.  Be sure to hutdown and power off the robot and disconnect the fat red battery before trying to check for this condition.
+* The line in the robot.yaml file is not quite right with the most common issue being the lack of a space after the `sonars:`  as there must be a space before the rest of the line.
+* We have had a standoff put below the middle of the board due to a manufacturing error.  In a section just below this is discussed so check for this case.
+* For Raspberry Pi 4 boards we have found and fixed a problem in the GPIO drivers that prevents sonars from working.  See the next section below for details.
+
 #### Raspberry Pi 4 Issues With Sonar board
 
 We have found serious issues with using a Raspberry Pi 4 in combination of the Sonar board.  These come from fundamental architectural changes in how the GPIO lines are implemented on the Pi4.  
@@ -57,19 +87,9 @@ From an SSH session to the robot that has internet access use these commands
 
 You may now setup the robot to enable the sonar board as part of our normal sonar board install that continues below
 
-### Enable Sonar Board To Run in robot.yaml file
 
-The Magni software must be configured to enable usage of the sonar board. You must edit the
-`robot.yaml` file as root user then modify the file.
 
-`sudo nano /etc/ubiquity/robot.yaml`
-
-Make an edit so the only uncommented line with `sonars:` in it is as shown below.
-Be sure to edit the line with  `sonars: none` so the line starts with a pound sign and is thus a comment.    
-
-Remove the ```#``` from the line that will enable the sonar software and note there must be a space after the colon or it will not work.
-
-`sonars:  'pi_sonar_v1'`
+### The Sonar Board Is Mounted To The Robot With standoffs
 
 The Sonar board is mounted to the chassis using just 4 standoffs.  Only the two standoffs to the sides that will have large pads with holes on the sonar board for 3mm standoffs are to be used. This description will show the 2 standoffs
 on the right but two other standoffs on the left also at the 45 degree angle are
