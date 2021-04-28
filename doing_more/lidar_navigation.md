@@ -13,7 +13,7 @@ be determined.  For a discussion of other approaches, see the
 -->
 
 This document discusses running navigation software on a Ubiquity
-Robotics robot base using a RPLidar that would have to be installed yourself. It also assumes that you have a workstation with ROS installed connected to a network in common with the robot and configured so the robot is the ROS master. For workstation configuration please see [Setup a ROS workstation](https://learn.ubiquityrobotics.com/workstation_setup)
+Robotics robot base using a RPLidar that would have to have been installed by yourself. It also assumes that you have a workstation with ROS installed connected to a network in common with the robot and configured so the robot is the ROS master. For workstation configuration please see [Setup a ROS workstation](https://learn.ubiquityrobotics.com/workstation_setup)
 
 Use of a Lidar is a popular method of implementing robot navigation.  We are going to supply here some basic starter launch files and some directions for how to get started in robot navigation using a Lidar.
 
