@@ -24,6 +24,12 @@ You can verify the required components are present by looking for required files
 
 If the above commands fail or the list of files is not found you will need to add the components required for Magni simulation in Gazebo.
 
+#### Running ROS Melodic for simulation
+
+As of early 2021 you could run Ubuntu 18.04 with ROS Melodic and still use the process on this page.
+
+If you did that you would have to use the word   'melodic' for every place in every command that used 'kinetic'.
+
 ### Adding the required Components
 
 #### Install catkin
@@ -54,6 +60,12 @@ Make catkin_ws/src the current directory.
 
     ~/catkin_ws$ sudo apt-get install -y libgazebo7-dev
     ~/catkin_ws$ rosdep check --from-paths . --ignore-src --rosdistro kinetic
+
+After you run this you may find you need ros_navigation and other modules. You may have to do  sudo apt install ros-kinetic-xxxxx   for those where xxxx may perhaps be  'navigation' and other modules.  
+
+#### You may also need our OLED repository as of mid 2020
+
+    ~/catkin_ws/src$  git clone https://github.com/UbiquityRobotics/oled_display_node
 
 #### Run Catkin Make
 This may take rather a long time.  
@@ -116,9 +128,9 @@ When voice_cmd.launch starts it will start 3 windows.   Below we discuss and sho
 <put in the pictures and window screen shots Alan supplied all here now>
 -->
 ![Magni_Gazebo](mg_gaz1.png)
-       
+
        The Desktop with Gazebo and the Velocity Controller App opened.
-       
+
 ![Magni_Rviz](mg_rviz.png)    
 
        Magni in Rviz showing ping sensor cones.
