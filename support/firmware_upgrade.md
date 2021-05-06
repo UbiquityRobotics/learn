@@ -116,6 +116,8 @@ Upgrade Firmware from a file that you place on your system:
 
 For beta firmware if you are told to use a given version then you may not be able to request a beta version so you would have to check our please visit  [OUR REPOSITORY](https://github.com/UbiquityRobotics/ubiquity_motor)  and navigate into the firmware folder.
 
+As of mid 2021 we have decided on a naming convention for our firmware which will start the name with   vXX_YYMMDD  where XX is the firmware rev and YYMMDD is they daycode.  We use a daycode so that we can have 'beta' or early release tests.  When we do have a beta firmware we will try to end the name in  beta and may say other text.  So the vXX_YYMMDD is the only fixed format specified but other characters may be after that format.   
+
 #### Firmware Installation Using Non Standard Serial support
 
 In some situations the serial port used for controlling the robot may not be the default port on the Raspberry Pi host computer attached to the MCB.
