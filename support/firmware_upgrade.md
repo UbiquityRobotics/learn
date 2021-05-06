@@ -59,11 +59,11 @@ all of the following commands are to be run on the Pi.
 
 ### First Prevent The motor_node From Talking to the MCB
 
-There are now two ways to prevent the ROS motor_node from constand query and commands to the MCB board over the serial connection.  
+There are now two ways to prevent the ROS motor_node from constant queries and commands to the MCB board over the serial connection.  
 For a standard Magni configuration it is best to completely stop the Ubiquity Software and then do the firmware upgrade.
 As of our motor_node available as of April 2021 you can also do a new method that does not shutdown everything but only impacts the motor node by a disable or relinquish of the serial port to allow direct serial control which in this case would be for the firmware upgrade.   We suggest for a standard Magni use the full system stop.
 
-#### Full Stop Of the Magni Software If Best Method
+#### Full Stop Of the Magni Software Is The Best Method
 
 The following command fully stops standard Magni software but may not fully stop other configurations for some new Magni applications to be announced in 2021
 
@@ -74,11 +74,11 @@ Once you have completed a firmware upgrade you are best off to reboot when using
     sudo shutdown -r now
 
 #### A soft disable of motor_node control of the MCB Is Now Possible
-As of about April users who have very current ubiquity_motor repository code are able to do a softer stop of the motor node and then later re-enable the motor node.   We suggest use of the prior method but show this to be complete.
+As of about April 2021 users who have very current ubiquity_motor repository code are able to do a softer stop of the motor node and then later re-enable the motor node.   We suggest use of the prior method but show this to be complete.
 
     rostopic pub /system_control std_msgs/String "motor_control disable"
 
-When using this method you may after the firmware upgrade either reboot or used
+After the firmware upgrade you may still just reboot OR use this command
 
     rostopic pub /system_control std_msgs/String "motor_control enable"
 
@@ -112,9 +112,9 @@ In some support situations you may be working with the development team here and
 
 Upgrade Firmware from a file that you place on your system:
 
-    rosrun ubiquity_motor upgrade_firmware.py --file  betaFirmwareFileName
+    rosrun ubiquity_motor upgrade_firmware.py --file  v40_20201209_enc.cyacd
 
-For beta firmware if you are told to use a given version then you may not be able to request a beta version so you would have to check our please visit  [OUR REPOSITORY](https://github.com/UbiquityRobotics/ubiquity_motor)  and navigate into the firmware folder.
+The name above is an example file for released v40 firmware. For beta firmware if you are told to use a given version then you may not be able to request a beta version so you would have to check our please visit  [OUR REPOSITORY](https://github.com/UbiquityRobotics/ubiquity_motor)  and navigate into the firmware folder.
 
 As of mid 2021 we have decided on a naming convention for our firmware which will start the name with   vXX_YYMMDD  where XX is the firmware rev and YYMMDD is they daycode.  We use a daycode so that we can have 'beta' or early release tests.  When we do have a beta firmware we will try to end the name in  beta and may say other text.  So the vXX_YYMMDD is the only fixed format specified but other characters may be after that format.   
 
