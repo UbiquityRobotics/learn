@@ -57,11 +57,38 @@ To install any firmware first log into the Raspberry Pi:
 
 all of the following commands are to be run on the Pi.  
 
-Stop all running ROS nodes:
+### First Prevent The motor_node From Talking to the MCB
 
-```
-sudo systemctl stop magni-base
-```
+There are now two ways to prevent the ROS motor_node from constand query and commands to the MCB board over the serial connection.  
+For a standard Magni configuration it is best to completely stop the Ubiquity Software and then do the firmware upgrade.
+As of our motor_node available as of April 2021 you can also do a new method that does not shutdown everything but only impacts the motor node by a disable or relinquish of the serial port to allow direct serial control which in this case would be for the firmware upgrade.   We suggest for a standard Magni use the full system stop.
+
+#### Full Stop Of the Magni Software If Best Method
+
+The following command fully stops standard Magni software but may not fully stop other configurations for some new Magni applications to be announced in 2021
+
+    sudo systemctl stop magni-base
+
+Once you have completed a firmware upgrade you are best off to reboot when using this method.   
+
+    sudo shutdown -r now
+
+#### A soft disable of motor_node control of the MCB Is Now Possible
+As of about April users who have very current ubiquity_motor repository code are able to do a softer stop of the motor node and then later re-enable the motor node.   We suggest use of the prior method but show this to be complete.
+
+    rostopic pub /system_control std_msgs/String "motor_control disable"
+
+When using this method you may after the firmware upgrade either reboot or used
+
+    rostopic pub /system_control std_msgs/String "motor_control enable"
+
+### After The MCB is Free over serial do the upgrade_firmware
+
+You can use the firmware upgrade utility that must have web access to fetch the most current released firmware OR you can load a version you have fetched yourself and placed in a file.
+
+#### Upgrading Firmware From The Web If You Have A connection.
+To use this method you would generally connect the robot to your own WiFi or use an ethernet cable into the Pi to your own network.  
+
 Run the firmware upgrade utility:
 
     rosrun ubiquity_motor upgrade_firmware.py
@@ -75,11 +102,11 @@ The process should take less than a minute; make sure that power is
 not interrupted during this process. Otherwise your robot may become
 inoperable and require factory servicing.
 
-When done, reboot the robot with `sudo reboot`.
+When done, reboot the robot with `sudo shutdown -r now` if you used
 
 You are now on the latest version of the firmware.
 
-### Firmware Installation From A File
+#### Firmware Installation From A File
 
 In some support situations you may be working with the development team here and be given a beta version of software in the form of an encrypted file.
 
@@ -89,7 +116,7 @@ Upgrade Firmware from a file that you place on your system:
 
 For beta firmware if you are told to use a given version then you may not be able to request a beta version so you would have to check our please visit  [OUR REPOSITORY](https://github.com/UbiquityRobotics/ubiquity_motor)  and navigate into the firmware folder.
 
-### Firmware Installation Using Non Standard Serial support
+#### Firmware Installation Using Non Standard Serial support
 
 In some situations the serial port used for controlling the robot may not be the default port on the Raspberry Pi host computer attached to the MCB.
 
