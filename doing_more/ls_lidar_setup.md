@@ -66,3 +66,4 @@ we need the eth0 interface to have a static address of 192.168.42.125/24. After 
 # Running
 
 <!-- TODO add compiling and running once we have the repo with the URLIDAR setup -->
+<!-- TODO before this tutorial is written, lidar extrinsics should be configured through robot.yaml -->
