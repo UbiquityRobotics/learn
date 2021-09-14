@@ -38,6 +38,7 @@ DateCode was started around version v35 and shows up in /diagnostics topic along
 | v38 | 5.25 | 20201006 | Depreciated Beta release for some fixes. |
 | v39 | 5.5 | 20201129 | Non-Magni release for in development 4wheel drive unit |
 | v40 | 5.75 | 20201209 | Magni current release for most recent release candidate.  This is the default if just an enter is done when asking for version |
+| v43 | 4.0 | 20210829 | Magni beta release with some fixes and minor new abilities |
 
 To see more details about our firmware as well as our hardware revisions for the motor controller please view [this page](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
 

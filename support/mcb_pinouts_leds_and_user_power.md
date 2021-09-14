@@ -57,15 +57,18 @@ As the silkscreen shows for both of these connectors 5V is on the left then the 
 
 ## Power Connectors On Bottom Of The Board  
 
-Several expansion power connectors are located near the bottom of the board by the large automotive main Fuse
+There are two power only expansion connectors near the bottom of the board by the large automotive main Fuse.  These can easily supply power for most 5V usb powered devices.
 
 ![USB Jacks, Fan Jack and Aux Motor Power](UsbJacksAndAuxPowerAndFanJack.jpg)
+
 
 ### The USB Style 5V Power
 
 Located at the bottom of the MCB board as the board is in the Magni robot there are two 5V connectors that you may plug in a standard USB A cable to get 5V.  There is no USB data at all, just power.  If you need full USB connectors you need to plug into up to 4 USB jacks on the Raspberry Pi computer attached to the MCB.
 
-If your USB power cables cannot plug into these jacks we recommend you get some right angle USB 3.0 adapters.  Note that you need the type where the plastic in the adapter is going to fit into our connectors thus the plastic must be above the hole for the part that plugs in.  Here is some search text to find the jack we recommend but there are other vendors.   `USB 3.0 Adapter 90 Degree Male to Female Down Angle Coupler Connector by Oxsubor`
+If your USB power cables cannot plug into these jacks we recommend you get some right angle USB 3.0 adapters.  Note that you need the type where the plastic in the adapter is going to fit into our connectors thus the plastic must be above the hole for the part that plugs in.  Here is some search text to find the jack we recommend but there are other vendors.   `USB 3.0 Adapter 90 Degree Male to Female Combo Vertical Up and Down Angle Coupler Connector`
+
+![USB Jacks, Fan Jack and Aux Motor Power](UsbTypeARightAngleAdapter.jpg)
 
 ### The 12V Fan Power Connector
 
@@ -156,6 +159,8 @@ Starting with our SwitchBoard rev 2.2 it is now possible to include either your 
 I suggest one particular RF control unit that by adding a connector for 12V power and a connector to plug into our Switch board jack called P202 you can have such an RF controlled power switch.   Note that this could also be done on our rev 2.2 switch board to have the main power-on also with RF if you wish that feature.
 
 We find the one that looks like this picture and has a dual button control unit allows for latched or momentary power modes.   You can find this style on EBay using the search string of  `DC12V 1CH Relay Receiver RF Transmitter Remote Control Switch`
+
+`You must find a control that will latch on` and stay on until you push a button on the control later.   Once installed you keep it enabled till you must stop for safety and then one click will stop the unit.  Many of these have programming ability but with really bad directions.
 
 ![Remote ESTOP Switching](SwitchBoardRfEstopWiring.jpg)
 
