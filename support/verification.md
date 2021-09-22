@@ -6,9 +6,11 @@ permalink: verification
 
 #### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
 
-# Basic Verification Of Operation
+# Verification Of Operation
 
 This page tells how to verify basic operation of the Magni robot.  These tests can be used to regression test hardware and firmware changes or new production boards installed in the Magni robot.
+
+Also included is a discussion on the evaluation of the the state of your batteries.
 
 There is a main board we call the ```Motor Control Board``` or ```MCB```. This is sometimes called Main Control Board as well.
 
@@ -26,6 +28,22 @@ Both switches must be in the OUT position for full robot operation.
 * The red switch to the right is the ```ESTOP Switch``` and it is easiest to think of this as the power for the motors.  To power up the wheel motors this switch must also be in the OUT position and the red led on the switch board will light when power is enabled.
 
 As of later in 2019 switch boards started to have two connectors so that users could have their own switches on their product.   If you have a current switch board then there will be a white connector just behind the ESTOP switch to the right which MUST BE SHORTED OUT for motor power to work. We ship this version switch board with a jumper in that jack but it can get lost.
+
+### Evaluating The Batteries Of The Magni ROBOT
+
+One of the most common issues with the robot is that the batteries are not fully charged due to lack of charging or because they have degraded to a point where they no longer hold charge as well as when they were new.  This section is here because all too often the real problems we see in the field are due to degraded or poorly charged batteries.
+
+Your batteries will degrade and over time and loose their ability to hold as much charge as when they were new especially if they are accidentally over-discharged many times.
+
+Unlike most cars, the Magni robot does have hardware that will shut off the usage of the batteries when the battery voltage gets VERY low but there is still some degradation every time you let the magni low voltage cutoff be the method of shutting off the product.  ```Shutdown and turn off your robot then charge it when you leave it overnight.```
+
+We urge customers to be aware of the need to do battery charging and more recent changes show battery voltage and if it is low on our OLED display to try to make this easier to know.
+
+Here are some ways to get a rough feel for if your batteries are 'weak'.
+
+* Fully charge the robot overnight in the off state till the charger led goes to green.   If your charger led never goes to green the batteries are in need of replacement (or the charger is bad).
+* After a full charge let the robot sit with power off for over an hour and measure the battery voltage if you have a voltmeter.   If this voltage is below 25.4 volts the batteries are in some weakened state but likely usable.  If the voltage is below 24.5 volts your batteries are in need of replacement.
+* If above are ok, turn on the robot as well as the motor power (both switches on) and let the robot sit this way for 30 minutes to reach a stable mild load state.   If at the end of this time the voltage is 25 volts your batteries are weak but just how weak is difficult to judge.  If the voltage is 24V or below you most certainly have batteries in need of replacement.  This test is easier if you have the little OLED display and very current software that shows the battery voltage on the OLED display.
 
 ## Part 1:  MCB Hardware Level Verification
 
