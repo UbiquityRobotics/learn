@@ -33,7 +33,9 @@ These steps are taken to remove the main board.  It should be noted that to repl
    - Getting the MCB board out requires patience and care.  Do not force anything!   It will be removed out the front in the general direction of 'up'.   As you look behind the MCB in the battery area free up the thick black cables and/or thick power cables then work the MCB out a bit more and eventually it will be guided out in an upward direction.  Just take your time and always watch for any parts that may get bent or scraped so try to do this carefully and take your time.
    - Once the MCB board is out we leave on the thick red and black cables and return those with the MCB if you have been requested to return the board for us to study the failure.
 
+   This completes the mechanical replacement of the MCB
 
-   ## Check MCB Firmware And Upgrade As required
+
+## Check MCB Firmware And Upgrade As required
 
    The MCB board may be shipped with old firmware so all replacements of the MCB should be followed by checking and updating MCB firmware after the replacement board is running.  Refer to [Upgrading MCB Firmware](https://learn.ubiquityrobotics.com/firmware-upgrade) to check and upgrade if needed.
