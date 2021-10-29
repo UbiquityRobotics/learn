@@ -10,7 +10,7 @@ permalink: board_replacement
 
 This page explains the steps required to remove or replace boards from the Magni product that are associated with the main control or power switch board.
 
-This is in text form at this time and we hope to add pictures in the future.
+The firmware on the MCB is critical to have up to date to avoid prior bugs from showing up when a different MCB is put in the robot.  The MCB board may be shipped with old firmware so all replacements of the MCB should be followed by checking and updating MCB firmware after the replacement board is running.  Refer to [Upgrading MCB Firmware](https://learn.ubiquityrobotics.com/firmware-upgrade) to check and upgrade if needed.
 
 <H4 style="color:red">YOU MUST REMOVE POWER CABLES FROM THE BATTERIES FOR THESE PROCEDURES BECAUSE WE MUST BE SURE THE FULL BATTERY VOLTAGE IS NOT PRESENT ON THE BOARD WHEN REPLACED.</H4>
 
@@ -32,3 +32,8 @@ These steps are taken to remove the main board.  It should be noted that to repl
    - Now it is time to unscrew the 4 M3 button head screws that hold the MCB to the chassis using a 2mm long Allen wrench that came with the robot or your own. For some of the screws you may need to run a long allen wrench through access holes in the chassis 5cm away in some cases to get the allen driver straight into the screw head.  Watch where these screws go and don't loose them.
    - Getting the MCB board out requires patience and care.  Do not force anything!   It will be removed out the front in the general direction of 'up'.   As you look behind the MCB in the battery area free up the thick black cables and/or thick power cables then work the MCB out a bit more and eventually it will be guided out in an upward direction.  Just take your time and always watch for any parts that may get bent or scraped so try to do this carefully and take your time.
    - Once the MCB board is out we leave on the thick red and black cables and return those with the MCB if you have been requested to return the board for us to study the failure.
+
+
+   ## Check MCB Firmware And Upgrade As required
+
+   The MCB board may be shipped with old firmware so all replacements of the MCB should be followed by checking and updating MCB firmware after the replacement board is running.  Refer to [Upgrading MCB Firmware](https://learn.ubiquityrobotics.com/firmware-upgrade) to check and upgrade if needed.
