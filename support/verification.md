@@ -65,19 +65,21 @@ On the lower right of the main board a blue LED will be ON if the `ESTOP` switch
 
 ### 1.3  ESTOP Switch Motor Power Safety Overrides
 
-This test can be done without a raspberry Pi installed or with it installed.  
+This test can be done without a raspberry Pi installed or with it installed but some of the tests require host side code running so this is best with the Raspberry Pi and current host side code on the raspberry Pi.  
 
 Start with the robot powered down and the 'ESTOP' switch in the 'out' position and the black main power switch pushed in so the Magni is totally off. Then push the black main power switch which will turn on main power. At this point the main power switch will be in the 'out' position.  Verify both the blue and red leds are lite on the switch board.
 
 Verify that there is no jump in motors that move the robot more than one cm or so and that the motors are in the locked state strongly resisting movement.
 
-If the Raspberry Pi is installek, wait for motor node to be fully started which takes up to 2 minutes but is often 30 seconds or so sometimes.  On rev 5.2 MCB you can see the motor node is active when both the 'SIN' and 'SOUT' leds near center top of the MCB are both blinking quickly.
+If the Raspberry Pi is installed, wait for motor node to be fully started which takes up to 2 minutes but is often 30 seconds or so sometimes.  On rev 5.2 MCB you can see the motor node is active when both the 'SIN' and 'SOUT' leds near center top of the MCB are both blinking quickly.
 
 Verify that the robot does not jump or move more than 1 cm as the motor_node has been engaged.  Verify that the Wheels PID locked still and no jump in movements.
 
 Now push in the red ESTOP switch and verify the ESTOP led goes off on the switch board and also fades within 5 or so seconds on the lower right of the MCB board where the 'Motor Power' led is located.  Also verify the motors can be turned.  Note that some resistance is natural and expected.
 
-Only do this next part of this test on rev 5.1 or later boards with v32 or later firmware.  While ESTOP is active and motor power is off turn both wheels by a half turn or so in either direction.   After the wheels have been turned press ESTOP so that the switch is OUT again.  There should be little to no movement in the wheels
+Only do this next part of this test on rev 5.1 or later boards with v35 or later firmware.  While ESTOP is active and motor power is off turn both wheels by a half turn or so in either direction.   After the wheels have been turned press ESTOP so that the switch is OUT again.  There should be little to no movement in the wheels
+
+Fully shutdown the robot and turn off motor and estop power (both switches out).  Turn on the main power and after 3 seconds roll the robot 10cm.   Wait 3 seconds and enable the E-STOP so motor power is on.   There should be no jump in the robot either at that point OR at the point the host computer is fully active (which may take a minute or more)
 
 ## Part 2:  Basic Host To MCB Tests
 
