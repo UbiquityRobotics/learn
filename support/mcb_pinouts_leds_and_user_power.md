@@ -66,9 +66,9 @@ There are two power only expansion connectors near the bottom of the board by th
 
 Located at the bottom of the MCB board as the board is in the Magni robot there are two 5V connectors that you may plug in a standard USB A cable to get 5V.  There is no USB data at all, just power.  If you need full USB connectors you need to plug into up to 4 USB jacks on the Raspberry Pi computer attached to the MCB.
 
-If your USB power cables cannot plug into these jacks we recommend you get some right angle USB 3.0 adapters.  Note that you need the type where the plastic in the adapter is going to fit into our connectors thus the plastic must be above the hole for the part that plugs in.  Here is some search text to find the jack we recommend but there are other vendors.   `USB 3.0 Adapter 90 Degree Male to Female Combo Vertical Up and Down Angle Coupler Connector`
+If your USB power cables cannot plug into these jacks we recommend you get some right angle USB 3.0 adapters.  Note that you need the type where the plastic in the adapter is going to fit into our connectors thus the plastic must be above the hole for the part that plugs in. This type is normally called 'Down' although it will point up in our case for the MCB.  Here is some search text to find the jack we recommend but there are other vendors.   `USB 3.0 Adapter 90 Degree Male to Female Combo Vertical Up and Down Angle Coupler Connector`
 
-![USB Jacks, Fan Jack and Aux Motor Power](UsbTypeARightAngleAdapter.jpg)
+![USB Jacks, Fan Jack and Aux Motor Power](UsbTypeARightAngleDownAdapter.jpg)
 
 ### The 12V Fan Power Connector
 
@@ -84,7 +84,7 @@ The 8-pin Aux Motor Board jack allows for high current full unregulated battery 
 
 ### Main Battery Fuse
 
-The 35Amp  main battery fuse is just above the USB power jacks and directly supplies protection for the Aux Motor Board power. It can be a different color. For almost ALL our customers this fuse really could be 10 or 15 amps so you may wish to use a lower current fuse for added safety especially if you are going to be changing around boards and so on frequently.
+The 35Amp  main battery fuse is just above the USB power jacks and supplies protection for the system. It can be a different color. For almost ALL our customers this fuse really could be 10 or 15 amps so you may wish to use a lower current fuse for added safety especially if you are going to be changing around boards and so on frequently.
 
 We do see customers drop things on the still plugged in electronics (WHICH WE TRY TO WARN THEM NOT TO DO)  and a 35 amp fuse can lead to great damage.  For most all our customers this fuse does not have to be over 15 amps.
 
@@ -96,14 +96,14 @@ Although the LED indicators are discussed in assorted sections of this document 
 
 A row of 5 leds can be seen to the lower left as you look at the MCB board.   In boards prior to rev 5.0 they were vertical but as of rev 5.0 and later they have been horizontal.    Here is a table showing the meaning of these leds from left to right.
 
-The 4 power supply leds should always be on when power is active.  The 12V Main and 5V Main are critical for robot operation. Auxilary supplies are for user only.
+The 4 power supply leds should always be on when power is active.  The 12V Main and 5V Main are critical for robot operation. Auxiliary supplies are for user only.
 
 |  Led Name | Description |
 |-------------------------|----------------------|
-|  12VA |  Lights when the 12V Auxilary supply is active |
+|  12VA |  Lights when the 12V Auxiliary supply is active |
 |  12VM  |  Lights when the 12V Main supply is active|
 |  5VM |  Lights when the 5V Main supply is active |
-|  5VA |  Lights when the 5V Auxilary supply is active |
+|  5VA |  Lights when the 5V Auxiliary supply is active |
 |  STAT | Shows status for the MCB onboard processor |
 
 The STAT led is more recently labeled STATUS and is highlighted and is the most complex led.
@@ -112,7 +112,7 @@ As of firmware v37 we have had a self test and battery monitoring function where
 
 ## The Main Power and Motor Power Active Leds
 
-Starting with MCB version 5.0 there exists leds on the MCB board to indicates when either or both of the two main power feeds is active on the MCB.
+Starting with MCB version 5.0 there exists leds on the MCB board that indicate when either or both of the two main power feeds is active on the MCB.
 
 When the main power is active there is an led on the far left and lower part of the board  that will be on.  This indicates the main power is active and the board is powered up.  If this is on but the black power button is off there may be a problem with our ECB, Electronic Circuit Breaker circuit.
 
@@ -135,11 +135,9 @@ These two leds are labeled ```SIN``` and ```SOUT``` and are located just below t
 Normally the SOUT led will blink very fast right after power up of the robot.  The SIN led will take a minute or more to blink because the Raspberry Pi has to initialize the Linux operating system before it gets to starting to communicate with the MCB.    Unfortunately the led is a bit hard to see but be aware that until this SIN led starts to blink very fast the robot will not respond to any sort of command.   So the leds is valuable to tell when the robot is ready to go.
 
 ## I2C Expansion Jack Used For OLED display
-We are trying to start to ship a small OLED display with each MCB but we are not quite ready yet in our supply chain however it is our goal to ship this OLED display which we have a node for already on our repository.
+We are starting in 2022 to ship a small OLED display with each MCB. The OLED display is driven by a ROS node and is connected to the I2C bus of the Raspberry Pi.
 
-The reason I write this here is to explain that starting with MCB rev 5.2 we have a 4-pin 0.1" pin spacing female jack that brings out the Raspberry Pi I2C lines as well as our own MCB 3.3V.  Rev 5.1 board also had this jack but because power for 3.3 came from the Raspberry Pi we do not recommend using that jack for I2C devices.
-
-We are planning on doing I2C based expansion boards in the future where we plan on plugging in an accessory/expansion board then plug the OLED display on top of that board.
+Starting with MCB rev 5.2 we have had a 4-pin 0.1" pin spacing female jack that brings out the Raspberry Pi I2C lines as well as the MCB onboard 3.3V power.  Rev 5.1 board also had this jack but because power for 3.3 came from the Raspberry Pi we do not recommend using that jack for the OLED display.
 
 ![MCB I2C Expansion Jack](McbI2cJack.jpg)
 
@@ -151,6 +149,14 @@ From left to right here are the P2 I2C expansion jack pin definitions
 |  3V3  |  This is 3.3V power some boards call Vcc |
 |  SCL |  The I2C Clock Line. No need to add more pullups |
 |  SDA |  The I2C Data Line. No need to add more pullups |
+
+### Expansion Boards For IO and IMU Capabilities
+
+We are working on small I2C based expansion board designs to be available in 2022 that will plug into the MCB board and still allow the OLED display to then plug in on top of that board to form a stack of boards powered by the MCB P2 jack.
+
+The first board will have a BNO055 IMU as well as 8 bits of digital IO to drive 3 on-board LEDs as well as offer 5 lines for low current digital output or inputs at 3.3V digital levels.  
+
+Another board is only in low volume 1st prototype form that would offer more IO at higher currents some with relay driver ability.  This board also would have 4 0-3V analog ADC inputs as well as 2 0-3V DAC outputs both of which are meant for only slow or static analog signal usage. It would have 2 switches and some leds and an expansion I2C jack for ease of customer I2C connections.
 
 ## Making A Remote RF Estop switch
 
