@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Setting up magni-default lidar"
+title:  "Setting up magni-default lidar Noetic"
 permalink: default_lidar_setup
 ---
 # Setting up ubiquity robotics default lidar
@@ -11,11 +11,11 @@ Ubuntu 20.04
 
 ROS Noetic
 
-**This tutorial works only with magni_robot branch: noetic-devel**
+**This tutorial works only with magni_robot branch: [noetic-devel](https://github.com/UbiquityRobotics/magni_robot/tree/noetic-devel/)**
 
 In this document it is described how to set up the LS301 lidar on the Magni.
 
-It is assumed that the LS lidar is already mounted and the network is setup. If this is not the case, please first follow THIS (TODO link) tutorial.
+It is assumed that the LS lidar is already mounted and the network is setup following tutorial [Setting up magni-default lidar](/learn/doing_more/ls_lidar_setup_common.md)
 
 # Default lidar extrinsics
 
