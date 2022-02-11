@@ -11,7 +11,7 @@ In this document it is described how to set up the LS301 lidar on the Magni.
 
 # Mounting the lidar
 
-**Before doing anything with the electronics, the robot must be powered down the batteries disconnected.**
+**Before doing anything with the electronics, the robot must be powered down and THE BATTERIES DISCONNECTED.**
 
 Connect the lidar lan cable into Raspberry Pi lan port and the power supply connector into the right molex connector on the MCB board: 
 
@@ -30,11 +30,10 @@ The default location of the lidar is on the top plate looking into the forward d
 
 On the picture red, green, blue correspond to x, y and z axis
 
-Default camera and lidar positions can be found [here](https://github.com/UbiquityRobotics/magni_robot/tree/noetic-devel/magni_description/extrinsics)
-
 # Setup to work with RaspberryPi
 
 ## Network
+<!-- TODO: Works on Xenial, add instructions for focal as well -->
 The lidar should come pre-configured with static IP: 192.168.42.222 and only answering to requests coming from IP 192.168.42.125, so we need to configure that on the RPI.
 
 A static interface needs to be set on RPIs lan port by editing the interfaces file
