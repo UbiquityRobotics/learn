@@ -7,7 +7,7 @@ permalink: default_lidar_setup
 
 #### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
-In this document it is described how to set up the LS301 lidar on the Magni.
+In this document it is described how to set up the LS-N301 lidar on the Magni.
 
 # Mounting the lidar
 
