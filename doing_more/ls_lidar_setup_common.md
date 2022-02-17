@@ -30,38 +30,6 @@ The default location of the lidar is on the top plate looking into the forward d
 
 On the picture red, green, blue correspond to x, y and z axis
 
-# Setup to work with RaspberryPi
-
-## Network
-<!-- TODO: Works on Xenial, add instructions for focal as well -->
-The lidar should come pre-configured with static IP: 192.168.42.222 and only answering to requests coming from IP 192.168.42.125, so we need to configure that on the RPI.
-
-A static interface needs to be set on RPIs lan port by editing the interfaces file
-
-    sudo nano /etc/network/interfaces
-
-we need the eth0 interface to have a static address of 192.168.42.125/24:
-
-    auto eth0
-	iface eth0 inet static
-	address 192.168.42.125/24 #this IP may depend on your lidar settings
-	gateway 0.0.0.0
-	dns-nameservers 8.8.8.8
-
-# Compiling
-
-    cd ~/catkin_ws/src
-    git clone https://github.com/LS-Technical-Supporter/LS-LIDAR-N301ROS.git
-    cd ~/catkin_ws/
-    catkin_make
-    
-
-# Running
-
-    cd ~/catkin_ws/
-    source devel/setup.bash
-    roslaunch lslidar_n301_decoder lslidar_n301_config.launch device_IP:=192.168.42.222
-    
 # Advanced: Changing LIDAR internal IP settings
 **Warning: IPs are changed from their defaults, it is highly likely nothing will work out of the box with Ubiquity Robotics products.**
 

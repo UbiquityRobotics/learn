@@ -17,6 +17,50 @@ In this document it is described how to set up the LS301 lidar on the Magni.
 
 It is assumed that the LS lidar is already mounted and the network is setup following tutorial [Setting up magni-default lidar](/learn/doing_more/ls_lidar_setup_common.md)
 
+# Setup to work with RaspberryPi
+
+## Network
+The lidar should come pre-configured with static IP: 192.168.42.222 and only answering to requests coming from IP 192.168.42.125, so we need to configure that on the RPI.
+
+    sudo nano /etc/systemd/network/10-eth-dhcp.network
+
+and replace everything in there with 
+
+    [Match]
+    Name=eth*
+
+    Address=192.168.42.125/24
+    [Network]
+
+and then `sudo reboot` or `sudo systemctl restart systemd-networkd`. After that the IP on eth interface should always be set to 192.168.42.125 when any device is plugged into ethernet port. You can check that with
+
+    ubuntu@pi-focal ~$ ifconfig eth0
+    eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+            inet 192.168.42.125  netmask 255.255.255.0  broadcast 192.168.42.255
+            inet6 fe80::e65f:1ff:fe33:ef3f  prefixlen 64  scopeid 0x20<link>
+            ether e4:5f:01:33:ef:3f  txqueuelen 1000  (Ethernet)
+            RX packets 243450  bytes 302746896 (302.7 MB)
+            RX errors 0  dropped 0  overruns 0  frame 0
+            TX packets 5618  bytes 2593522 (2.5 MB)
+            TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
+# Compiling
+
+    cd ~/catkin_ws/src
+    git clone https://github.com/UbiquityRobotics/ls_lidar_driver
+    cd ~/catkin_ws/
+    rosdep install --from-paths src --ignore-src -r -y
+    catkin_make
+    
+
+# Running
+
+    cd ~/catkin_ws/
+    source devel/setup.bash
+    roslaunch lslidar_n301_decoder lslidar_n301_config.launch device_IP:=192.168.42.222
+
 # Default lidar extrinsics
 
 The system is setup so that lidar extrinsics can be set in two places with following priorities:
