@@ -1,13 +1,13 @@
 ---
 layout: default
-title:  "Setting up magni-default lidar"
-permalink: default_lidar_setup
+title:  "Setting up ur50 lidar"
+permalink: ur50_lidar_setup
 ---
-# Setting up ubiquity robotics default lidar
+# Setting up ubiquity robotics ur50 lidar
 
 #### &uarr;[top]( https://ubiquityrobotics.github.io/learn/)
 
-In this document it is described how to set up the LS-N301 lidar on the Magni.
+In this document it is described how to set up the ur50 lidar on the Magni.
 
 # Mounting the lidar
 
@@ -47,6 +47,6 @@ Additionally to whats shown on the video, make sure:
  	- in the video the IP is changed to 192.168.42.125 -> this is arbitrary and can be any IP
 
 # Next steps
-If your base image is running Ubuntu Focal and ROS Noetic follow tutorial: [Setting up magni-default lidar Noetic](/learn/doing_more/ls_lidar_setup_noetic.md)
+If your base image is running Ubuntu Focal and ROS Noetic follow tutorial: [Setting up magni-default lidar Noetic](/learn/doing_more/ur50_lidar_setup_noetic.md)
 
-If your base image is running Ubuntu Xenial and ROS Kinetic follow tutorial: [Setting up magni-default lidar Kinetic](ls_lidar_setup_kinetic.md)
+If your base image is running Ubuntu Xenial and ROS Kinetic follow tutorial: [Setting up magni-default lidar Kinetic (will be deprecated soon)](ur50_lidar_setup_kinetic.md)

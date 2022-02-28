@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  "Setting up magni-default lidar Kinetic"
-permalink: default_lidar_setup
+title:  "Setting up ur50 lidar Kinetic"
+permalink: ur50_lidar_setup
 ---
 # Setting up ubiquity robotics default lidar - Kinetic
 
@@ -13,11 +13,11 @@ ROS Kinetic
 
 **This tutorial works only with magni_robot branch: indigo-devel (which should work up to and including Kinetic)**
 
-This document will be deprecated soon as we are moving to newer versions of ROS. See Noetic instructions [here](ls_lidar_setup_noetic.md).
+This document will be deprecated soon as we are moving to newer versions of ROS. See Noetic instructions [here](ur50_lidar_setup_noetic.md).
 
-In this document it is described how to set up the LS301 lidar on the Magni.
+In this document it is described how to set up the ur50 lidar on the Magni.
 
-It is assumed that the LS lidar is already mounted and the network is setup following tutorial [Setting up magni-default lidar](/learn/doing_more/ls_lidar_setup_common.md)
+It is assumed that the ur50 lidar is already mounted and the network is setup following tutorial [Setting up magni-default lidar](/learn/doing_more/ur50_lidar_setup_common.md)
 
 
 
@@ -68,10 +68,4 @@ which should, among other things also contain:
 
 If the lidar is set in a different position, readjust its coordinates in the [urdf files](https://github.com/UbiquityRobotics/magni_robot/blob/4c43300e4fc08a37f5206c9db85a6e11105f91d6/magni_description/urdf/magni.urdf.xacro#L205). Example:
 
-    <xacro:if value="${lidar_installed}">
-        <xacro:hokuyo_lidar name="laser" connected_to="base_link">
-        <origin xyz="0 0.1 0.4" rpy="0 0 0"/> <!--change lidar pose here-->
-        </xacro:hokuyo_lidar>
-    </xacro:if>
-
-***
+    <origin xyz="0 0.1 0.4" rpy="0 0 0"/> <!--change lidar pose here-->

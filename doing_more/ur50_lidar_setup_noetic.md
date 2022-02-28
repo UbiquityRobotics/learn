@@ -1,7 +1,7 @@
 ---
 layout: default
-title:  "Setting up magni-default lidar Noetic"
-permalink: default_lidar_setup
+title:  "Setting up ur50 lidar Noetic"
+permalink: ur50_lidar_setup
 ---
 # Setting up ubiquity robotics default lidar
 
@@ -13,9 +13,9 @@ ROS Noetic
 
 **This tutorial works only with magni_robot branch: [noetic-devel](https://github.com/UbiquityRobotics/magni_robot/tree/noetic-devel/)**
 
-In this document it is described how to set up the LS301 lidar on the Magni.
+In this document it is described how to set up the ur50 lidar on the Magni.
 
-It is assumed that the LS lidar is already mounted and the network is setup following tutorial [Setting up magni-default lidar](/learn/doing_more/ls_lidar_setup_common.md)
+It is assumed that the ur50 lidar is already mounted and the network is setup following tutorial [Setting up magni-default lidar](/learn/doing_more/ur50_lidar_setup_common.md)
 
 # Setup to work with RaspberryPi
 
