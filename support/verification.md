@@ -140,10 +140,14 @@ The above command will output 8 lines each with 16 possible hex addresses. We wa
 |---|---|---|
 |Device| I2C Address|Notes|
 |SSD1306 OLED Display|0x3C|Shipped starting on MCB Rev 5.2|
-|PCF8574|0x20|IO Expander|
+|PCF8574|0x20|IO port on MCB|
 |MCP7940 RT Clock|0x6f|RTC will show as UU addr|
+|BNO055 Expander |0x28|Optional - Advanced Accel/Gyro IMU|
+|PCF8572 Expander|0x21|Optional - IO port on IMU Expander|
 
 * Because the MCP7940 is owned by the kernel the i2cdetect tool will show it at address 0x6F as  ```UU```.  This indicates it was seen.  If the kernel recognized the RTC properly there will be a  /dev/rtc0 device for final confirmation.
+
+* Expander boards are optional small boards that sit under the OLED display and are not present from production MCB boards.  They are special ordered and added later.
 
 * If there is a production issue where a PCF8574A was incorrectly loaded then you would see address 0x38.  This is considered a misload in production.
 
@@ -352,6 +356,32 @@ Rviz can visualize these messages as cones.  There are launch files to do this i
 https://github.com/UbiquityRobotics/magni_robot (the source package, not the binary packages)
 
 The [move_basic node](http://wiki.ros.org/move_basic) uses the messages published by the sonar node to determine proximity to obstacles.
+
+### 4.3 Touchscreen Display
+
+Some products using recent images for newer products support a 7 inch Raspberry Pi touchscreen display.    If you have such a product with proper SD card image for the product the display would light up and respond to touch activations.
+
+This section is for using command line tools to detect the presence and health of the display without having to see the display in person.  
+
+Detection using command line is done by looking to see if the kernel log found the display.   If the line below returns it was found then it is online.
+
+    dmesg | grep -i _fb | grep found
+
+### 4.4 IMU Expander Board With IO port
+
+A small board that fits under the OLED display has been developed so we can use an IMU in the product as well as have some extra leds and a small amount of user supplied simple slow speed IO.  
+
+If you have obtained this board then the I2C bus scan shown earlier in this page would show I2C addresses of 21 and 28.  See table in the section above called ```I2C Bus Devices```.   
+
+You can send a byte to the 8-bit IO port with the command below where the 3 leds are the upper bits and low=on.  A value of 0xdf lights left led0xbf lights middle one and 0x7f lights right hand led.  The 0x21 is the I2C address of this port.  Set bits to 1 so they act as inputs from the jack when read using the i2cget command below
+
+    i2cset -y 1 0x21 0xdf       Turns on just the left leds
+    i2cget -y 1 0x21            Reads all 8 bits. A switch to ground gives 0
+
+Detection of the BNO055 on the I2C bus can be seen using the I2C bus scan.  We can also readback the chip ID register if we first ensure the BNO055 is not being reset because we have one line of the port that if low keeps the BNO055 in reset.  So use these two command to release reset then read chip ID register that is always 0xa0
+
+    i2cset -y 1 0x21 0xff       Assures the BNO055 out of reset mode
+    i2cget -y 1 0x28            Reads back chip ID regsiter, always 0xa0
 
 ## Part 5: Built In MCB Selftest
 
