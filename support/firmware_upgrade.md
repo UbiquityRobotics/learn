@@ -113,7 +113,7 @@ In some support situations you may be working with the development team here and
 
 Upgrade Firmware from a file that you place on your system:
 
-    rosrun ubiquity_motor upgrade_firmware.py --file  v40_20201209_enc.cyacd
+    rosrun ubiquity_motor upgrade_firmware.py --file  {full path}v40_20201209_enc.cyacd
 
 The name above is an example file for released v40 firmware. For beta firmware if you are told to use a given version then you may not be able to request a beta version so you would have to check our please visit  [OUR REPOSITORY](https://github.com/UbiquityRobotics/ubiquity_motor)  and navigate into the firmware folder.
 
