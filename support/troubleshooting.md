@@ -29,9 +29,11 @@ Below are some other locations on in our documents that may help troubleshoot is
 
 ## Finding Robot Firmware Version Info
 
-Should you have to get back to report behavior issues with the robot and not powersupply sort of issues here is how to get firmware version and date.
+Should you have to get back to report behavior issues with the robot where the robot can move that means a great deal of the system is operational.  It is important to report to the support group the firmware version and its date which is done as follows if the host Raspberry Pi cpu is able to communicate with the main MCB board.
 
     rostopic echo /diagnostics | grep -A 1  'Firmware [DV]'
+
+Report the version of the MCB main board if any tests indicate it has a fault.
 
 
 ## Troubleshooting Lack Of Robot Movement
@@ -48,7 +50,7 @@ Older troubleshooting post:  [Magni Does Not Move issue on our forum](https://fo
 
 ### The Battery
 
-By FAR the number 1 issue we see time and again is a weak battery. We have protections to shutdown things but as the battery gets weak many other issues show up.  We are continuously making strides to better inform customers of dangerously low batteries.
+By FAR the number 1 issue we see time and again is a weak or discharged battery. We have protections to shutdown things but as the battery gets weak many other issues show up.  We are continuously making strides to better inform customers of dangerously low batteries. In versions of the product shipping in 2022 we have the battery state indicated on the recently added OLED display to greatly help make this issue very visible to users of the robot.  The battery voltage and if it is too low will show up in 2022 current systems.
 
 If you are 100% sure your battery is delivering over 23volts to the MCB board large power connectors as the robot runs then you can skip this section and move to the next section.
 
@@ -68,13 +70,37 @@ Make sure that both push buttons on the front of the robot are out
 all the way (the red push button de-energizes the motor circuit
 as an emergency stop). Both blue and red LED on the small ```switch board``` PCB that has the switches should be illuminated.
 
-### Main Power And Status LEDs
+### Main Power And Status LEDs Must All Be Brightly Shining
 
-There are many LEDs to show status but perhaps the most important to check first are the row of 5 LEDs on the master control board. The MCB, master control board, is the big PCB on the robot that you can see on the front of the robot right above the switch boardPCB.   A table will show details but in short the 5 LEDs should be illuminated. On all official production boards the leds are horizontal but very early boards had the row as vertical. The 'STATUS' led (to the right but on top for old boards) should be mostly on but have very brief blink-out then on every 4-6 seconds. If you don’t see proper behavior see the table presented next.   
+There are many important LEDs on the large MCB PC board. First verfiy the row of 5 horizontal LEDs on the master control board just above the switch board connector. All 5 leds must be brightly on with the STATUS led to the right doing very brief drop-outs in light every 4-6 seconds as a heartbeat for the on-board processor. Also verify the 3.3V LED which is higher up on the MCB just under the large white 'MAIN' power jack at the top of the MCB is brightly on always.  If you don’t see these LEDS lit brightly you very likely have a bad power supply on the MCB board. If your board pre-dates rev 5.2 there is no 3.3V led.
 
 If you are convinced there is a problem you can make a post on our [Online Support Forum](https://forum.ubiquityrobotics.com) or send an email to support@ubiquityrobotics.com to start a discussion
 
-If you see no leds at all check the main fuse on the robot in the middle lower part of the board - you should be able to visually see if the fuse is blown.  The main fuse is on the front near the center and low on the MCB.
+If you see no leds at all check the main fuse on the robot in the middle lower part of the board - you should be able to visually see if the fuse is blown.  The main fuse is on the front near the center and low on the MCB.  The left black switch of course must be in the 'out' position for ON and the big Blue led on the switch board must be ON before you will see any MCB board LEDs on.
+
+### Verify Serial Monitor LEDS are operating properly
+
+When the MCB is properly running the SOUT led that is 1cm below the AUX  12V pin should start blinking very fast within 5 seconds of power on to the MCB.  If you do not see this the MCB is very likely to be in need of repair IF you do see the STATUS led doing it's drop-out blinks every 4-6 seconds.  
+
+If the SOUT is blinking fast then verify that when the MCB and the host Raspberry Pi computer are operating and host software is fully running The SIN led high up on the MCB just near the AUX 12 pin on left white connector at the top of the LCD will be blinking fast within 5 minutes of turning on the robot.  If this is not happening it may be host software OR a failure in MCB serial hardware inbound driver chip.
+
+When both SIN and SOUT leds are blinking it means the hardware serial driver chips and connections are all functional for communications between the Raspberry Pi and the MCB.
+
+#### Verify If you are seeing the Rare Baud Rate Bug
+
+If you DO SEE the SIN and SOUT leds blinking fast yet the robot is not operational for movements here is one known issue which we feel has been solved since late 2022.
+
+For this issue the /motor_node is running but is getting garbled messages from the MCB.  We can look for huge numbers of REJECT messages.    Use this command from an ssh console to the robot.
+
+    grep REJECT ~/.ros/log/latest/rosout.log | wc
+
+If you see the first number as hundreds or even thousands and doing the command again gives an even larger number then this softare defect is happening.  This defect is sometimes disappears after a ```sudo shutdown -r now``` command to soft reboot the robot.
+
+The fix we discovered it to a root user CAREFLLLY edit /boot/config.txt and find the line that is commented out with a # sign in column 1 with ```init_uart_baud``` .   You must remove the pound sign and change the value so the line reads as follows:
+
+    init_uart_baud=38400
+
+Save the file and then a reboot is required after this change which will fix the baud rate bug and the REJECT messages will no longer be in the log when fixed.
 
 #### Power Supply And Status Quick Reference Table
 
@@ -97,29 +123,26 @@ Most of these not able to turn on as described is generally a big problem.
 | SOUT |  TopMiddle | Blinks very fast when the MCB processor is running. On rev 5.2 and later |
 | SIN |  TopMiddle | Blinks very fast when the host CPU is actively up and communicating with the MCB.  This can take a couple minutes to start blinking for bootup. On rev 5.2 and later |
 
+### Verify the Raspberry Pi CPU Is operational
+
+We have seen cases where the serial lines of the Raspberry Pi have been damaged.   First of all the Raspberry Pi when booting up will blink its tiny green LED located very near the small USB C connector opposite the LAN jack on the Pi.  If you see not blinking after power-on the green Pi Activity led or the Micro SD card is broken.  
+
+#### Things To Inspect If RasPi Green Led Does Not Blinks
+
+Remove the micro-SD card and verify it is not cracked.   Perhaps try a second micro SD card burned fresh from a known good image we supply.  If you have an HDMI monitor and can plug that into the Pi before power-up of the Raspberry Pi you can maybe see if the Pi is booting up or is stuck in some way.   If the HDMI monitor does NOT show the Pi boot up properly then your Pi or the SD card is in some way bad.    
+
+#### Verification The RasPi WiFi is operational
+
+Every so often we see Raspberry Pi units where there is no WiFi.   For our default images after a good bootup and if you have NOT configured this unit to use your own WiFi yet then you would see our WiFi show up in a scan for WiFi using your phone perhaps.   The name would be ubiquityrobotXXXX where XXXX is a unique ‘hex’ code.   If you have a fully powered up system using a known good and proven production ready codeset with no WiFi it is likely a broken WiFi on that Raspberry Pi
+
+#### Detailed Inspection Of The RasPi Bootup sequence
+
+This is a last resort but can in fact shed light into failures due to SD card corruption or unanticipated failure modes of the host software on the Raspberry Pi host CPU.  You would have to with a cable plug in a HDMI monitor into the Raspberry Pi or on some more modern robots inspecting the output of the 7 inch TFT display as the system boots up. For the Raspberry Pi 4 this is the tiny micro HDMI so you need a cable with one end with the tiny HDMI connection.  Either HDMI micro will work but we tend to use the HDMI0 connector which is next to the USB C connector.   If you see some fault that looks bad and things stop there is an issue with either the  Raspberry Pi or perhaps our Image has hit some unknown case or some Raspberry Pi hardware on the Pi is broken.
 
 ### Very Long Startup Times
 
 If it takes 3 to 5 minutes for the /motor_node to show up this has been seen in the past to usually be because the CR2032 coin cell battery mounted on the back of the MCB board has never been installed or has gone dead.  Refer to our [Unboxing and Assembling page](https://learn.ubiquityrobotics.com/unboxing)
 We had to stop shipping these small batteries due to assorted recent regulations and are sorry for this inconvenience.
-
-### Communication Check LEDs Within The Robot
-
-If the battery looks to be charged we can then look at communications between the Raspberry Pi host Linux computer and the Master Control Board, MCB.
-
-#### The MCB Status Led Indicates Working On-Board Processor
-
-If you do not see the 'STATUS' led mostly on then doing very fast drop-out blinks every 4 to 6 seconds something is wrong with the MCB processor and requires advanced troubleshooting or a replacement from the factory.
-
-## Serial Communications Checks
-The main host linux computer controls the MCB over a serial communications port. This port is by default /dev/ttyAMA0 which is configured in our images but if it does not exist for some reason that would explain serial problems.
-
-### The Serial Communications Status LEDS
-If your MCB board is version 5.2 or later then there are two debug leds to show serial activity.  These leds are located just below the AUX power jack at the top of the MCB board.Check if you see both SIN and SOUT leds are blinking rapidly 5 minutes after bootup. If SOUT is blinking fast it means the onboard processor is outputing state to the main host processor or Raspberry Pi SBC.  
-
-Watch for the SIN led to start to blink very fast from 30 seconds and sometimes as long as a few minutes after powerup.   
-
-When both SIN and SOUT leds are blinking it means the hardware serial driver chips and connections are all functional for communications between the Raspberry Pi and the MCB.
 
 ### Verify The MCB Is Recognized Over Serial port
 If you are unable to get the robot to move and are sure battery is ok and the ESTOP switch is not set to disable motor power then here is how to verify the linux host computer is talking to the MCB.
@@ -153,18 +176,6 @@ We want a key observation before we continue.  Assuming you have waited a couple
 
 The list of ROS nodes must show /motor_node or the robot will not function.
 Keep track of if you see the /motor_node for the troubleshooting sections that follow.
-
-#### Verify If you are seeing the Rare Baud Rate Bug
-
-If you DO SEE the SIN and SOUT leds blinking fast AND you see /motor_node when you run ```rosnode list``` and the robot is not operational for movements here is one known issue which we feel has been solved since early 2020.
-
-For this issue the /motor_node is running but is getting garbled messages from the MCB.  We can look for huge numbers of REJECT messages.    Use this command from an ssh console to the robot.
-
-    grep REJECT ~/.ros/log/latest/rosout.log | wc
-
-If you see the first number as hundreds or even thousands and doing the command again gives an even larger number then this softare defect is happening.  This defect is generally fixed by doing a ```sudo shutdown -r now``` command to soft reboot the robot.
-
-To fix this it is best to perform a full ```Linux Host Software Update``` as described on our [Updating Software and Firmware page](https://learn.ubiquityrobotics.com/verification)  
 
 ### Troubleshooting Failure Of The Motor Node
 
