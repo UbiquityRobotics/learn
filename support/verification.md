@@ -86,9 +86,18 @@ The lower blue LED is the SOUT led and will blink rapidly when the MCB processor
 
 The upper blue LED is the SIN led and will blink when the host processor is actively sending commands and queries to the MCB.  This is the most important led to be blinking.   It indicates of the ROS node called /motor_node is actively controlling the MCB.  Note that depending on certain network conditions it may take up to a couple minutes for host motor_node to start communications with the MCB.
 
-### 2.2 Wifi HotSpot Verification
+### 2.2 Wifi Verification
 
 If no LAN cable is attached and if the robot has not been configured to look for a WiFi OR if no WiFi can be seen then the Magni software will create a HotSpot that you can connect to with your laptop.
+
+There is a WIFI status led on the large MCB board if it is rev 5.2 later.  The MCB WIFI led is located on the right middle height of the MCB.  There is also this WIFI led on the optional sonar board however which does brief blinks to on at same rate.    The table below shows WiFi status indications for the led on the MCB which is mostly on with short blinks off at rates shown in the table.
+
+| Blink Rate |	WiFi Status |
+| ------- | ----------- |
+| 2 per sec | WiFi is being initialized after a startup or reboot |
+| 1 per sec | WiFi is operating as an Access Point (AP) and ready to be connected to by a laptop or phone |
+| 1 per 2 sec | WiFi has successfully connected to your own WiFi ssid setup already |
+
 
 Do these tests with no Lan cable plugged into the Magni host computer.
 
@@ -129,7 +138,9 @@ In the raw /diagnostics output these things may also be useful for feedback to f
     rostopic echo /diagnostics
 
 ### 2.4 I2C Bus Devices
-The I2C bus on the host CPU needs to be able to communicate to a few devices on the MCB.  There is an I2C excpander at addr 0x20 and RealTime clock chip at address 0x6F. If there is a OLED display loaded on P2 it is at 0x3c. We should stop the motor node then run i2cdetect which is part of i2c-tools package.
+The I2C bus on the host CPU needs to be able to communicate to a few devices on the MCB.  With recent software on newer MCB boards there is a small OLED display.  If this display shows the expected text the I2C bus is working but you still need to see if other I2C devices are on the bus.    
+
+There is an I2C excpander at addr 0x20 and RealTime clock chip at address 0x6F. If there is a OLED display loaded on P2 it is at 0x3c. We should stop the motor node then run i2cdetect which is part of i2c-tools package.
 
     sudo systemctl stop magni-base.service
     sudo i2cdetect -y 1
@@ -336,6 +347,10 @@ Then on the laptop which has graphics you can view live video like this:
 ### 4.2 Sonar Board Test:
 
 If you have installed and enabled the sonar board using the install guide viewed [HERE](https://https://learn.ubiquityrobotics.com/camera_sensors) then you can verify sonar operation in realtime once the robot has been started.
+
+An easy way to see all 5 sonar ranges if they are working is to use the following command which continuously shows all 5 ranges
+
+    rostopic echo /sonars | grep -e frame_id  -e ^range
 
 
 [The sonar node](https://github.com/UbiquityRobotics/ubiquity_sonar) publishes a `sensor_msgs/Range message` for each sonar reading.  Using `rostopic echo /sonars` you can view all the sensor readings in one topic where the frame_id of `sonar_3` would be for the front facing sonar 3.  Using the table that will follow you can place boxes in front of sensors to gain confidence that each sensor is showing the distance to that object.  A thin bar may not be seen properly and you may get mixed messages for what is behind it or may see the bar so use large objects for this test.

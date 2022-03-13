@@ -102,9 +102,11 @@ The fix we discovered it to a root user CAREFLLLY edit /boot/config.txt and find
 
 Save the file and then a reboot is required after this change which will fix the baud rate bug and the REJECT messages will no longer be in the log when fixed.
 
-#### Power Supply And Status Quick Reference Table
+#### Power Supply And Status LEDs Quick Reference Table
 
-Here is a summary of key leds on the MCB main board.  If any of these are not correct the robot is likely to have significant problems (except for the 2 Aux power leds).   All of these LEDs exist for rev 5.2 or later boards but earlier boards have less leds.  
+Here is a summary of the leds on the MCB main board.  If any of these are not correct the robot is likely to have significant problems (except for the 2 Aux power leds).   All of these LEDs exist for rev 5.2 or later boards and earlier boards have less leds.  
+
+There are also 2 large leds on the switch board where a blue led when on indicates main power is activated by the black switch and a red led indicates the motor power is activated by the red switch. The red led will always be off if the main power is off.
 
 The locations are specified as if you are looking at the board with the two large white 4-pin power connectors at top and large 50 pin connector also at top right.
 
@@ -118,8 +120,9 @@ Most of these not able to turn on as described is generally a big problem.
 | 12vMain | MidLowerLeft | ON for Main 12V active. This is 2nd from left of 5 leds. On pre rev 5.0 MCB this was 2nd led from bottom |
 | 5vMain | MidLowerLeft | ON for Main 5V active. This is 3nd from left of 5 leds. On pre rev 5.0 MCB this was 3nd led from bottom |
 | 5vAux | MidLowerLeft | ON for Aux 5V active. This is 4th from left of 5 leds. On pre rev 5.0 MCB this was 4nd led from bottom |
-| STATUS | MidLowerLeft | ON for Aux 5V active. This is the far right of 5 leds. On pre rev 5.0 MCB this was the top led in the row of 5 |
 | 3.3V | TopMidLeft | ON for 3.3V active. This is on rev 5.2 and later MCB boards |
+| STATUS | MidLowerLeft | ON with short blinks off/on every 3 to 6 sec depending on firmware rev. This is the far right of 5 leds. On pre rev 5.0 MCB this was the top led in the row of 5 |
+| WIFI | MidRight | WiFi status. 2 blink/sec in startup, 1 blink/sec when operating as an Access Point, 1 blink every 2 sec when connected to another WiFi.  The complement of this led is on our optional switch board|
 | SOUT |  TopMiddle | Blinks very fast when the MCB processor is running. On rev 5.2 and later |
 | SIN |  TopMiddle | Blinks very fast when the host CPU is actively up and communicating with the MCB.  This can take a couple minutes to start blinking for bootup. On rev 5.2 and later |
 

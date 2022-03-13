@@ -75,6 +75,14 @@ At this point you should have either your own linux physical machine or the Virt
 
 If you have received a Magni with the Raspberry Pi already installed, or loaded the default Raspberry Pi 3 image from downloads.ubiquityrobotics.com, the robot will boot up in WiFi Access Point mode. This is a WiFi mode which provides its own network to which you can connect your workstation.  The SSID (network name) is `ubiquityrobotXXXX` where XXXX is a number letter combination. You should find it under network list; the password (sometimes called the security key) to connect is `robotseverywhere`. If you can't find it under available networks, try restarting the robot.
 
+There is a WIFI status led on the large MCB board if it is rev 5.2 later.  The MCB WIFI led is located on the right middle height of the MCB.  There is also this WIFI led on the optional sonar board however which does brief blinks ON at same rate.    The table below shows WiFi status indications for the led on the MCB which is mostly on with short blinks off at rates shown in the table.
+
+| Blink Rate |	WiFi Status |
+| ------- | ----------- |
+| 2 per sec | WiFi is being initialized after a startup or reboot |
+| 1 per sec | WiFi is operating as an Access Point (AP) and ready to be connected to by a laptop or phone |
+| 1 per 2 sec | WiFi has successfully connected to your own WiFi ssid setup already |
+
 ## Open A SSH Console Once You Are On The Robot's Network
 
 Once you are on the robot's network, via WiFi Or Wired, you can connect to the robot itself. On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
