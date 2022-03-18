@@ -15,7 +15,7 @@ ROS Noetic
 
 In this document it is described how to set up the ur50 lidar on the Magni.
 
-It is assumed that the ur50 lidar is already mounted and the network is setup following tutorial [Setting up magni-default lidar](/learn/doing_more/ur50_lidar_setup_common.md)
+It is assumed that the ur50 lidar is already mounted and the network is setup following tutorial [Setting up UR50 lidar](ur50_lidar_setup_common.md)
 
 # Setup to work with RaspberryPi
 
