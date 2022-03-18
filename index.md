@@ -29,7 +29,8 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 6.  [How to drive with optional Logitech controller](quick_start/logitech.markdown)
 7.	[How to set up the camera](quick_start/camera_sensor/installation.md)
 8.	[How to set up the sonar board](quick_start/camera_sensor/sonar_setup.md)
-9.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
+9.  [How to set up UR50 lidar](doing_more/ur50_lidar_setup_common.md)
+10.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
 
 
 ####	Doing More With Your Robot
@@ -37,13 +38,12 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 1.	[How to connect the robot with your network](doing_more/network_connect.md)
 2.  [How to set-up a workstation with ROS and Synchronize Time](doing_more/workstation_setup.md)
 3.	[Visualize With rviz](doing_more/rviz.md)
-4.  [Setup a ur50 lidar](/learn/doing_more/ur50_lidar_setup_common.md)
-5.  [Lidar Navigation Using A Magni](doing_more/lidar_navigation.md)
-6.	[Fiducials Enable You To Set Waypoints and Goals](doing_more/fiducials.md)
-7. [Use A Script To Control Robot Navigation](python_script_1)
-8. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
-9.	[Using Robot Commander Joystick and Voice Control](quick_start/Robot_Commander_AP.markdown)
-10. [Running Magni in Simulation](simulation)  
+4.  [Lidar Navigation Using A Magni](doing_more/lidar_navigation.md)
+5.	[Fiducials Enable You To Set Waypoints and Goals](doing_more/fiducials.md)
+6. [Use A Script To Control Robot Navigation](python_script_1)
+7. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
+8.	[Using Robot Commander Joystick and Voice Control](quick_start/Robot_Commander_AP.markdown)
+9. [Running Magni in Simulation](simulation)  
 
 ####	Support and Verification Of Your Robot
 
