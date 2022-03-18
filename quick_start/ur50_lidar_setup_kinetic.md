@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Setting up ur50 lidar Kinetic"
-permalink: ur50_lidar_setup
+permalink: ur50_lidar_setup_kinetic
 ---
 # Setting up ubiquity robotics default lidar - Kinetic
 

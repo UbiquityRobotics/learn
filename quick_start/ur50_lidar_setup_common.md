@@ -1,7 +1,7 @@
 ---
 layout: default
 title:  "Setting up ur50 lidar"
-permalink: ur50_lidar_setup
+permalink: ur50_lidar_setup_common
 ---
 # Setting up ubiquity robotics ur50 lidar
 
