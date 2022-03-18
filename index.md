@@ -29,7 +29,7 @@ You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) 
 6.  [How to drive with optional Logitech controller](quick_start/logitech.markdown)
 7.	[How to set up the camera](quick_start/camera_sensor/installation.md)
 8.	[How to set up the sonar board](quick_start/camera_sensor/sonar_setup.md)
-9.  [How to set up UR50 lidar](doing_more/ur50_lidar_setup_common.md)
+1.  [How to set up UR50 lidar](quick_start/ur50_lidar_setup_common.md)
 10.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
 
 

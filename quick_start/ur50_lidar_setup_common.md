@@ -47,6 +47,6 @@ Additionally to whats shown on the video, make sure:
  	- in the video the IP is changed to 192.168.42.125 -> this is arbitrary and can be any IP
 
 # Next steps
-If your base image is running Ubuntu Focal and ROS Noetic follow tutorial: [Setting up magni-default lidar Noetic](/learn/doing_more/ur50_lidar_setup_noetic.md)
+If your base image is running Ubuntu Focal and ROS Noetic follow tutorial: [Setting up magni-default lidar Noetic](ur50_lidar_setup_noetic.md)
 
 If your base image is running Ubuntu Xenial and ROS Kinetic follow tutorial: [Setting up magni-default lidar Kinetic (will be deprecated soon)](ur50_lidar_setup_kinetic.md)
