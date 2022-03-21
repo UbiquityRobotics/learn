@@ -33,16 +33,23 @@ Below is a picture of the Sonar board included with Magni Silver configuration. 
 ### Enable Sonar Board To Run in robot.yaml file
 
 The Magni software must be configured to enable usage of the sonar board. You must edit the
-`robot.yaml` file as root user then modify the file.
+`robot.yaml` file as root user then modify the file.   
 
 `sudo nano /etc/ubiquity/robot.yaml`
 
+#### For Images Running Kinetic ROS Code (Prior to 2022)
 Make an edit so the only uncommented line with `sonars:` in it is as shown below.
 Be sure to edit the line with  `sonars: none` so the line starts with a pound sign and is thus a comment.    
 
 Remove the ```#``` from the line that will enable the sonar software and note there must be a space after the colon or it will not work.
 
 `sonars:  'pi_sonar_v1'`
+
+#### For Images Running Noetic ROS Code (As of 2022)
+
+It is now more readable so find the sonars_installed line in robot.yaml and use true
+
+    sonars_installed: True # to enable set to True, to disable set to False
 
 ### Verification Of Sonars Operating
 
