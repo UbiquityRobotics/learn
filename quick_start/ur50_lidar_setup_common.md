@@ -28,7 +28,7 @@ The default location of the lidar is on the top plate looking into the forward d
 
 ![Magni Laser Rviz](magni_laser_rviz.png)
 
-On the picture red, green, blue correspond to x, y and z axis
+On the picture red, green, blue correspond to x, y and z axis. Lidar is the component that says 'laser' on the image (lidars are sometimes also called lasers)
 
 # Advanced: Changing LIDAR internal IP settings
 **Warning: IPs are changed from their defaults, it is highly likely nothing will work out of the box with Ubiquity Robotics products.**
@@ -43,7 +43,7 @@ Additionally to whats shown on the video, make sure:
 
 1. First make sure you have WinPcap installed (sourced [here](https://workdrive.zohoexternal.com/external/4b6aefb568cd674dfd5b0fa846535897202c93a31b5de5bad275020bc7c29560) or download from the internet)
 2. Follow the steps shown on the video to change the LIDAR IP, but a couple of notes:
- 	- by default the PC IP should be 192.168.1.125. If this is the same subnet as the other interfaces (eg. WiFi) this may cause problems. In this case disconnect from any other connection but the LIDAR to get it working :)
+ 	- in the video PC IP  is changed from 192.168.1.125 to 192.168.42.125. This was done because often external network is also on the subnet 192.168.1.xxx and this creates problems with the internet connection. 
  	- in the video the IP is changed to 192.168.42.125 -> this is arbitrary and can be any IP
 
 # Next steps
