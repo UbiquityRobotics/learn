@@ -1,0 +1,43 @@
+{%- assign nav = site.pages | sort:"nav_order" %}
+
+{%- assign folderorder = "QuickStart|Hardware|EZ-Map|Conveyorbot" | split: "|" %}
+
+{%- assign rosver = "noetic" %}
+
+{% if page.path contains "kinetic" %}
+    {%- assign rosver = "kinetic" %}
+{% endif %}
+
+{%- for folder in folderorder %}
+
+    {%- if folder == "EZ-Map" %}
+        <p class="caption"><span class="caption-text">Software Bundles</span></p>
+    {%- endif %}
+
+    {% if page.path contains folder %}
+
+        <li class="toctree-l1" style="background: white;"><a class="reference internal" href="/{{rosver}}/{{folder}}/intro.html"><i><b style="color: black">{{ folder }}</b></i></a></li>
+
+        {%- for nav_item in nav %}
+
+            {%- assign path_array = nav_item.path | split: "/" %}
+
+            {%- if nav_item.path != "README.md" and nav_item.name != "intro.md" and path_array[1] == folder %}
+
+                {%- assign pathsplit = nav_item.path | split: "." %}
+
+                {%- if nav_item.url == page.url %}
+                    {%- include toc.html html=content sanitize=true h_max=2 item_class="toctree-l%level%" %}
+                {%- else %}
+                    <li class="toctree-l2" style="background: white;"><a class="reference internal" href="/{{ pathsplit[0] | append: '.html'}}"><span style="color: black"> {{ nav_item.title }}</span></a></li>
+                {%- endif %}
+
+            {%- endif %}
+        {%- endfor %}
+
+    {% else %}
+        <li class="toctree-l1"><a class="reference internal" href="/{{rosver}}/{{folder}}/intro.html"><i><b style="colour: white">{{ folder }}</b></i></a></li>
+    {% endif %}
+
+{%- endfor %}
+
