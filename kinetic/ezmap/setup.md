@@ -21,7 +21,7 @@ You should have two sensors installed on the robot before starting up the softwa
 
 - Leishen N301 Lidar (shown below)
 
-<img src="/assets/ezmap/lidar.png" alt="" width="640">
+> ![](assets/ezmap/lidar.png)
 
 When the robot first starts you’ll be asked to provide a location and orientation for both, for best results. The menu can also be skipped and later accessed in the calibration menu.
 
@@ -39,12 +39,12 @@ Assuming the robot has a Pi Camera V2 installed and the ezpkg_video_screen packa
 
 Depending on device capability, the system will automatically switch between fast WebRTC streaming and fallback HTTP streaming.
 
-<img src="/assets/ezmap/ezmap_video.png" alt="" width="800">
+> ![](assets/ezmap/ezmap_video.png)
 
 
 ## Mapping
 
-To use the robot’s autonomous functions, first switch to the mapping view if multiple views are installed (<img src="/assets/ezmap/viewswitch_landscape.svg" alt="" width="35">). The interface shown should look as follows, the mapping should start automatically:
+To use the robot’s autonomous functions, first switch to the mapping view if multiple views are installed. The interface shown should look as follows, the mapping should start automatically:
 
 ### Landmarks
 The hybrid particle filter SLAM also supports landmarks as a way to improve localization accuracy. These are by default set up to be aruco markers that can be printed out and laid out around in view of the camera.
