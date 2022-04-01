@@ -1,3 +1,12 @@
+---
+title: "Developers Documentation"
+permalink: ezmap_dev_docs
+group: ez-map
+rosver: noetic
+nav_order: 3
+nav_exclude: false
+---
+
 # Developers Documentation
 
 ## Views and Widgets

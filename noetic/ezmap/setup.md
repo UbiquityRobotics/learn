@@ -1,3 +1,12 @@
+---
+title: "Beginner Tutorial"
+permalink: ezmap_beginner_tutorial
+group: ez-map
+rosver: noetic
+nav_order: 2
+nav_exclude: false
+---
+
 # Beginner Tutorial
 
 ## Setup

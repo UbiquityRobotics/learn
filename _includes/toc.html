@@ -21,6 +21,7 @@
             * item_class   (string) :   ''   - add custom class(es) for each list item; has support for '%level%' placeholder, which is the current heading level
             * baseurl      (string) :   ''   - add a base url to the TOC links for when your TOC is on another page than the actual content
             * anchor_class (string) :   ''   - add custom class(es) for each anchor element
+            * title (string)        :   ''   - override the first h1 title
 
         Output:
             An ordered or unordered list representing the table of contents of a markdown block. This snippet will only
@@ -48,7 +49,6 @@
         {% endif %}
 
         {% if firstHeader %}
-            {% assign firstHeader = false %}
             {% assign minHeader = headerLevel %}
         {% endif %}
 
@@ -70,6 +70,11 @@
         {% capture _hAttrToStrip %}{{ _workspace[0] | split: '>' | first }}>{% endcapture %}
         {% assign header = _workspace[0] | replace: _hAttrToStrip, '' %}
 
+        {% if firstHeader %}
+            {% assign firstHeader = false %}
+            {% assign header = include.title %}
+        {% endif %}
+
         {% assign space = '' %}
         {% for i in (1..indentAmount) %}
             {% assign space = space | prepend: '    ' %}
@@ -79,7 +84,7 @@
             {% if headerLevel == 1 %}
                 {% capture listItemClass %}{:.{{ include.item_class | replace: '%level%', headerLevel }}.current}{% endcapture %}
             {% else %}
-                {% capture listItemClass %}{:.{{ include.item_class | replace: '%level%', headerLevel }}.current}{% endcapture %}
+                {% capture listItemClass %}{:.{{ include.item_class | replace: '%level%', headerLevel }}}{% endcapture %}
             {% endif %}
         {% endunless %}
 
