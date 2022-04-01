@@ -9,6 +9,8 @@ nav_exclude: false
 
 # Advanced Documentation
 
+(This is a noetic page, sanity check for evaluation)
+
 ## Views and Widgets
 
 EZ-Map at it's core consists of a system that loads custom plugins, which in turn add the main functionality and allow for high customisability.

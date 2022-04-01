@@ -9,6 +9,8 @@ nav_exclude: false
 
 # Beginner Tutorial
 
+(This is a noetic page, sanity check for evaluation)
+
 ## Setup
 
 ### Sensors

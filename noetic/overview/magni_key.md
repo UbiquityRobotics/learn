@@ -9,6 +9,8 @@ nav_exclude: false
 
 # Views of Magni with Key Parts Identified
 
+(This is a noetic page, sanity check for evaluation)
+
 <img src="https://ubiquityrobotics.github.io/learn/assets/Magni_Front_View_1.jpg" />
 
 <img src="https://ubiquityrobotics.github.io/learn/assets/Magni_Front_View_2.jpg
