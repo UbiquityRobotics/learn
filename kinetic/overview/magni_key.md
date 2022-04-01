@@ -16,4 +16,11 @@ nav_exclude: false
 <img src="https://ubiquityrobotics.github.io/learn/assets/Magni_Front_View_2.jpg
 " />
 
-## [Motor Control Board Connector Pinout](Magni_MCB_pinout.pdf)
+## Motor Control Board Connector Pinout
+
+[Download PDF](Magni_MCB_pinout.pdf)
+
+<embed src="Magni_MCB_pinout.pdf" width="100%" height="600px">
+
+
+
