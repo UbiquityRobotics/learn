@@ -7,20 +7,11 @@ nav_order: 2
 nav_exclude: false
 ---
 
-# Requirements
+# About Magni
 
-### About Magni
+Ubiquity Robotics use Raspberry Pis running Ubuntu, ROS and custom software for the Magni platform. There are also utility programs that will enable you to connect to a local area network.
 
-Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and custom software for the Magni platform. There are also utility programs that will enable you to connect to a local area network.
-
-[Batteries](#batteries)  
-[Communications](#communications)  
-[The Workstation](#the-workstation)  
-[The Configuration File](#the-configuration-file)  
-[ROS Params](#ros-params)  
-[Keeping Your Software Current](#keeping-your-software-current)
-
-### Batteries
+## Batteries
 
 The robot ships by air worldwide. The batteries are not included in order to keep shipping costs down, as they are are difficult to ship worldwide and safety restrictions vary by destination. The recommended lead acid batteries are easy to source locally.
 
@@ -28,7 +19,7 @@ An added advantage of not including batteries is that the robot accepts differen
 
 <H4 style="color:red">AT ALL TIMES IF RUNNING OR CHARGING THE BATTERY VOLTAGE CONNECTED TO THE Main BOARD MUST REMAIN 30.0V OR LESS.</H4>
 
-#### Specific Qualified Lead Acid Batteries
+### Specific Qualified Lead Acid Batteries
 
 The robot requires 2X 12V lead acid style batteries and typically we recommend one of the choices in this section.
 
@@ -42,7 +33,7 @@ In all cases we recommend a non-spill-able, deep cycle, sealed lead acid battery
 
 The provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
 
-#### Typical Current Draw For The Robot
+### Typical Current Draw For The Robot
 
 Below is a table showing ```typical currents``` seen on the positive lead of the battery using a DC clamp on meter for steady states.
 
@@ -60,7 +51,7 @@ The instantaneous currents can be well over 10 amps in certain cases but since t
 
 Other cases such as the robot driving up a slope with large loads of course also increases current over the above values.
 
-#### The Size Of The Battery Compartment
+### The Size Of The Battery Compartment
 
 We ship Magni with a foam cut-out that nicely holds two 1270 format Lead Acid batteries.   Hopefully this was not disguarded when unpacking.
 
@@ -69,13 +60,13 @@ The floor of the battery compartment is always at least 205mm x 258mm.  Due to m
 From the floor to the top of the top rails on the side we have 135mm of height.  Batteries can go up taller to the top flat metal plate and that would be a height of 184mm.  These measurement are intentionally meant to avoid trying to get so close on a mm of clearance as our manufacturing cannot guarantee mm specs.
 
 
-#### Other information That May Help Battery Selection
+### Other information That May Help Battery Selection
 
 We are looking into solutions that perhaps in the future may be able to support  LiFePO4 battery chemistry but we have not determined if they meet the always under 30.0V limit even when on charger and fully charged.   There are many lithium solutions that would be over 30.0V and those absolutely cannot be used.   
 
 The stock battery charger we supply is ONLY FOR LEAD ACID batteries and will NOT work and in fact may be dangerous for other battery technologies.
 
-### Linux Host Computer
+## Linux Host Computer
 
 The robot ships with a built in Raspberry Pi single board computer running the Linux operating system.   Units sold in 2019 use the Raspberry Pi 3 B+ running Ubuntu Linux 16.04 and the Kinetic version of ROS (Robot Operating System).  Initial support for the Raspberry Pi 4 is currently planned for shipment on units sometime in mid 2020 timeframe.
 
@@ -93,7 +84,7 @@ There is a shutdown button feature on a standard Magni but only users with the s
 
 If you do not have the sonar board the pins to the 50 pin P702 are available to be connected to with push on connectors common for prototype uses.  Many users make their own shutdown button with one wire to pin 31 and one wire to pin 30.  Note that for P702 pin 1 is on the far left and the bottom row of pins.  These jacks have odd number pins on bottom and even starting with 2 on top row.
 
-### Communications
+## Communications
 
 Of course, as the robot is delivered it has no connection to your local network. Because of this, the robot has its own network (called an access point or "AP mode") that enables you to [connect to it directly](connecting), without connecting to your local network. For example, you can drive the robot with our Android Robot Commander app. You can use AP mode to connect directly to the robot from a workstation, to run ROS commands such as keyboard teleoperation. However, in AP mode, the robot cannot access the Internet.
 
@@ -102,7 +93,7 @@ Of course, as the robot is delivered it has no connection to your local network.
 
 The local network must support [zeroconf](https://en.wikipedia.org/wiki/Zero-configuration_networking) and operate in in PSK (Pre-Shared Key) infrastructure mode. This permits you to use names like `robot.local` instead of the IP address, which can change.
 
-### The Workstation
+## The Workstation
 
 You need a workstation to control the robot. In these tutorials it is assumed that your workstation, whether a laptop, desktop, or virtual machine, is running Ubuntu 16.04 LTS.  ("16.04" stands for "2016, April" and "LTS" denotes "Long Term Support" which means 5 years.)  **Ubiquity Robotics supports only this release.**
 
@@ -120,7 +111,7 @@ Be aware of this--it's easy to type a command into the wrong system.
 
 Instructions for workstation setup are given in the sections below, as they are needed. We know you may want to start as soon as possible to get your projects underway. Since we provide downloadable software images for the Raspberry Pi 3 and for Virtual Box, it is possible to 'try before you buy.'  [Download Site](https://downloads.ubiquityrobotics.com/)
 
-### The Configuration File
+## The Configuration File
 
 The configuration file is used to tell the robot software what options are installed.  It is located at: ```/etc/ubiquity/robot.yaml```
 
@@ -136,11 +127,11 @@ sonars: None
 <Todo: finish a description of the configuration file, and how to make use of it, and insert a link to a previously utilized configuration file>
 
 
-### ROS Params
+## ROS Params
 
 The parameter `ubiquity_robot_mode` specifies the level of capabilities available in the robot. Possible values are 'core', 'teleop', and 'navigation'. The launch file magni_bringup base.launch runs as part of the boot process and automatically sets the parameter to 'teleop'.  The launch file magni_demos simple_navigation.launch enables navigation, so the parameter is set to 'navigation'.
 
-### Keeping Your Software Current
+## Keeping Your Software Current
 
 From time to time we update software for improvements and fixes.  The robot should be updated to stay up to date. Upgrade information is found [here](updating).
 
