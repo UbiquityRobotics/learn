@@ -1,13 +1,13 @@
 ---
 title: "Introduction To The Magni Platform"
-permalink: noetic_overview_intro
+permalink: kinetic_overview_intro
 group: overview
-rosver: noetic
+rosver: kinetic
 nav_order: 1
 nav_exclude: false
 ---
 
-# Preface: Ubiquity Robotics' Robot Development Platform (Noetic)
+# Preface: Ubiquity Robotics' Robot Development Platform (Kinetic)
 
 **The goal of this guide is to get web, mobile, and maker developers using ROS (the Robot Operating System) via Magni, the Ubiquity Robotics development platform.** We hope you will see the amazing possibilities and opportunities, dive in and never look back.
 

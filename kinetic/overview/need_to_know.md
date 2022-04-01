@@ -1,8 +1,8 @@
 ---
 title: "Requirements: Batteries, Network, Workstation use & Configuration"
-permalink: noetic_overview_need_to_know
+permalink: kinetic_overview_need_to_know
 group: overview
-rosver: noetic
+rosver: kinetic
 nav_order: 2
 nav_exclude: false
 ---

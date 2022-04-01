@@ -1,8 +1,8 @@
 ---
 title: "Introduction"
-permalink: noetic_ezmap_intro
+permalink: kinetic_ezmap_intro
 group: ez-map
-rosver: noetic
+rosver: kinetic
 nav_order: 1
 nav_exclude: false
 ---

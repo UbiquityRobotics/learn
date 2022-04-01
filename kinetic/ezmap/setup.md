@@ -1,8 +1,8 @@
 ---
 title: "Beginner Tutorial"
-permalink: noetic_ezmap_beginner_tutorial
+permalink: kinetic_ezmap_beginner_tutorial
 group: ez-map
-rosver: noetic
+rosver: kinetic
 nav_order: 2
 nav_exclude: false
 ---

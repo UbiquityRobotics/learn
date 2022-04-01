@@ -1,8 +1,8 @@
 ---
 title: "Magni Power Controls"
-permalink: noetic_overview_magni_key
+permalink: kinetic_overview_magni_key
 group: overview
-rosver: noetic
+rosver: kinetic
 nav_order: 3
 nav_exclude: false
 ---

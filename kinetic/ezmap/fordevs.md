@@ -1,8 +1,8 @@
 ---
 title: "Advanced Documentation"
-permalink: noetic_ezmap_dev_docs
+permalink: ezmap_dev_docs
 group: ez-map
-rosver: noetic
+rosver: kinetic
 nav_order: 3
 nav_exclude: false
 ---
