@@ -11,6 +11,8 @@ nav_exclude: false
 
 (This is a kinetic page, sanity check for evaluation)
 
+[Link Test](kinetic_overview_magni_key)
+
 ### About Magni
 
 Ubiquity Robotics use Raspberry Pi 3s running Ubuntu 16.04, ROS Kinetic and custom software for the Magni platform. There are also utility programs that will enable you to connect to a local area network.
