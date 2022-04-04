@@ -38,12 +38,16 @@ by Magni.  The first 40 pins of both jacks are identical but notice carefully ea
 
 | GPIO  | RasPi Pin |P702 Pin| Default Magni Usage |
 | ------------- |------------- | -------- | --------|
+| 14 | 8 | 8 | Transmit serial port pin from host to MCB (SIN led on MCB)|
+| 15 | 10 | 10 | Receive serial port pin from MCB to host (SOUT led on MCB) |
 | 5  | 29 | 29 | WiFi Status LED on the sonar board and rev 5.2 MCB |
 | 25 | 22 | 22 | Status LED on the sonar board |
 | 6  | 31 | 31 | Goes to P704 pin 2. Does a shutdown when grounded. This goes to a pushbutton on Sonar Board near 50 pin connector. |
 | 13 | 33 | 33 | Goes to P705 pin 2. Used for PiFi and goes to a pushbutton on the Sonar Board |
 
 <H4 style="color:red">Always remove the battery cables so no live voltage is present on P702!</H4>
+
+The serial transmit and receive are always required by the motor_node and we have no mechanism to disable their usage except disconnect the MCB and then do not let the motor_node run is only of use for non-Magni users of our image.
 
 To use these as GPIO you must edit two files as root
 Edit /etc/pifi/pifi.conf:  
@@ -122,7 +126,7 @@ The Sonar Board uses many GPIO lines that are shown the table below and again th
  | 11 | 23  |   GPIO11  SPI0_CLK |
 
 
-   
+
  ## Raspberry Pi Main 40 pin Connector Pinout
 
  Here is a full pinout of the Raspberry Pi 40 pin connector which may come in handy for a reference.  There are plenty of these on the web but it is important to note there are two numberings of the GPIO port numbers.   This drawing below agrees with the numbering scheme we use in our documents.
