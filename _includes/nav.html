@@ -25,7 +25,7 @@ function redirect(version){
     let url = window.location.href;
     for (i in rosvers) {
         if(url.includes(rosvers[i])){
-            location = url.replace(rosvers[i],version);
+            location = url.replace(rosvers[i],version).split("#")[0];
             return;
         }
     }    

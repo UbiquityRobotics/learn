@@ -38,74 +38,12 @@ When a mobile base can move wherever it is needed without running into obstacles
 Whether you are delivering coffee, transporting people, or moving industrial equipment, progress starts with knowing where you are, what your goal is, and how to achieve it while avoiding obstacles. Magni makes learning these core concepts affordable, accessible and fun.
 
 
-<!--
-#### High Level Overviews
-1. [Introduction To The Magni Platform](introduction)  
-2. [Requirements: Batteries, Network, Workstation use & Configuration ](need_to_know)  
-3. [Magni Power Controls](magni_key)  
+### What can I do while my robot is being shipped?
 
-#### Quick Start
+The Ubiquity robots are controlled by a Raspberry Pi. If you have one of these (especially if you have a camera for it), there are numerous things you can profitably do by running the Ubiquity software on your Pi. It is as though you were running a robot with no motors.
 
-1.  [If you don't have your robot yet](quick_start/no_robot.md)
-2.  [If you are using our Raspberry Pi image on its own without a Magni](quick_start/image_no_magni.md)
-3.	[Unboxing, putting in batteries and charging them](quick_start/unboxing/unboxing.md)
-4.  [Connecting a workstation, starting and stopping the Robot](quick_start/connecting.md)
-5.  [Driving a robot with a keyboard using teleop twist](quick_start/keyboard_teleop.md)
-6.  [How to drive with optional Logitech controller](quick_start/logitech.markdown)
-7.	[How to set up the camera](quick_start/camera_sensor/installation.md)
-8.	[How to set up the sonar board](quick_start/camera_sensor/sonar_setup.md)
-1.  [How to set up UR50 lidar](quick_start/ur50_lidar_setup_common.md)
-10.	[How to make Follow Me work with a fiducial](quick_start/fiducial_follow.md)
+* [Install the software image](noetic_quick_start_microsd)
 
+* [Connect to and set up the image](noetic_quick_start_connecting)
 
-####	Doing More With Your Robot
-
-1.	[How to connect the robot with your network](doing_more/network_connect.md)
-2.  [How to set-up a workstation with ROS and Synchronize Time](doing_more/workstation_setup.md)
-3.	[Visualize With rviz](doing_more/rviz.md)
-4.  [Lidar Navigation Using A Magni](doing_more/lidar_navigation.md)
-5.	[Fiducials Enable You To Set Waypoints and Goals](doing_more/fiducials.md)
-6. [Use A Script To Control Robot Navigation](python_script_1)
-7. [The Fiducial Follow App](programming_your_robot/fiducial_follow_app.md)
-8.	[Using Robot Commander Joystick and Voice Control](quick_start/Robot_Commander_AP.markdown)
-9. [Running Magni in Simulation](simulation)  
-
-####	Support and Verification Of Your Robot
-
-1. [Burning a fresh Image, Updating Software](support/updating.md)
-2. [Updating Firmware](support/firmware_upgrade.md)
-3. [Verification Of Operation](support/verification.md)
-4. [GPIO Line Usage And Using Them For Your Own Needs](support/GPIO_lines.md)
-5. [MCB Connectors, Power Supplies, LEDs & Helpful Mods](mcb_pinouts_leds_userpower)
-6. [Mechanical Drawings](support/mechanical_drawings.md)
-7. [ROS Notes With A Focus On Magni Usage](programming_your_robot/overview.md)
-8. [Diagnostics, Developer Tips and I2C](support/diagnostics.md)
-9. [PC Board Revisions For MCB, Switch Boards & more](PC_Board_RevId)
-10. [Removal And Installation Of Main PC Boards](support/board_replacement.md)
-11. [Troubleshooting](support/troubleshooting.md)
-
-
-
-
-12.	Writing Your First Script
-13.	Creating a Map
-14.	Autonomous Driving
-15.	Going Forward and Avoiding Obstacles with Code
-16.	Going to a Specific Location on Your Map Using Code
-17.	Monitor Magni Battery Status
-18.	Button Events
-19.	What to Read Next
-
-* [Software Reference](software_reference/software_reference.md)
-
-<!--
-
-* [Setup In Depth](setup/setup.md):
-
-  Everything from ordering batteries and network cables to figuring out networking issues.
-
-* [Miscellaneous](misc/misc.md)
-
-* [CoffeeBot Challenge](ix_coffeebot)
-* [Learning with Magni in Simulation](ix_simulation1)
-* [Challenge in Simulation](ix_simulation2) -->
+* [Set up your ROS workstation](noetic_quick_start_workstation)

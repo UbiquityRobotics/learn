@@ -3,7 +3,7 @@ title: "Unboxing"
 permalink: noetic_quickstart_unboxing
 group: "quick start"
 rosver: noetic
-nav_order: 2
+nav_order: 1
 nav_exclude: false
 ---
 

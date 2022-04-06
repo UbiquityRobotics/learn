@@ -9,8 +9,6 @@ nav_exclude: false
 
 # About Magni
 
-(This is a noetic page, sanity check for evaluation)
-
 Ubiquity Robotics use Raspberry Pis running Ubuntu, ROS and custom software for the Magni platform. There are also utility programs that will enable you to connect to a local area network.
 
 ## Batteries

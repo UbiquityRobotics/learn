@@ -1,5 +1,5 @@
 ---
-title: "Magni Power Controls"
+title: "Schematics"
 permalink: noetic_overview_magni_key
 group: overview
 rosver: noetic
@@ -7,16 +7,19 @@ nav_order: 3
 nav_exclude: false
 ---
 
-# Views of Magni with Key Parts Identified
+# Schematics
 
-(This is a noetic page, sanity check for evaluation)
+## Key Parts Identified
 
-<img src="https://ubiquityrobotics.github.io/learn/assets/Magni_Front_View_1.jpg" />
+<img src="assets/Magni_Front_View_1.jpg" >
 
-<img src="https://ubiquityrobotics.github.io/learn/assets/Magni_Front_View_2.jpg
-" />
+<img src="assets/Magni_Front_View_2.jpg" >
 
-## Motor Control Board Connector Pinout
+## Motor Control Board - MCB
+
+
+
+### Full PCB Schematic
 
 [Download PDF](Magni_MCB_pinout.pdf)
 

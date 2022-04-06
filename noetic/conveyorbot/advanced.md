@@ -21,8 +21,6 @@ To run, type
 
   ```roslaunch breadcrumb_demos demo_world.launch```
 
-![rviz](assets/breadcrumb/rviz_image.png)
-
 Using rviz, you can move the robot:
 Click on "2D Nav Goal" in the menu bar.
 Click again in the black screen area and indicate what the robot is to do.

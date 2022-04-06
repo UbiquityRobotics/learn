@@ -3,7 +3,7 @@ title: "Tower and Shell"
 permalink: noetic_quickstart_shell_tower
 group: "quick start"
 rosver: noetic
-nav_order: 3
+nav_order: 10
 nav_exclude: false
 ---
 
