@@ -2,7 +2,10 @@
 
 var rosvers = ["kinetic", "noetic"];
 
-function set_ros_version(version) {
+function set_ros_version(version) {   
+    document.getElementById("button_"+version).checked = true;
+    document.getElementById("distroslider").style.display = "block";
+
     for (i in rosvers) {
         let list = document.getElementsByClassName(rosvers[i]);
 
@@ -25,7 +28,7 @@ function redirect(version){
             location = url.replace(rosvers[i],version);
             return;
         }
-    }
+    }    
 }
 
 window.onload = function() {

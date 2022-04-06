@@ -1,37 +1,34 @@
+
+{%- assign gitloc = "https://github.com/MoffKalast/learn/blob/master" %}
+
 <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    {%- if page %}
-      {%- if page.collection == "posts" %}
-        <li><a href="{{ site.url | absolute_url }}{{ site.github.baseurl }}">Posts</a> &raquo;</li>
-        <li>{{ page.title }}</li>
-      {%- else %}
-        {%- assign page_directories = page.dir | split: '/' %}
-        <li><a href="{{ site.url | absolute_url }}{{ site.github.baseurl }}">Docs</a>&raquo;</li>
-        {%- for dir in page_directories %}
-        {%- if forloop.first == false %}
-        <li>{{ dir | capitalize }} &raquo;</li>
+    <ul class="wy-breadcrumbs">
+
+        {%- if site.edit_on_github != false and page and page.name != "search.html" %}
+        <th style="float: left;">
+            <a style="margin-top: 15px;" href="{{ gitloc }}/{{ page.path }}" class="icon icon-github" target="_blank"> Edit on GitHub</a>
+        </th> 
         {%- endif %}
-        {%- endfor %}
-        <li>{{ page.title }}</li>
-      {%- endif %}
-    {%- endif %}
-    <li class="wy-breadcrumbs-aside">
-      {%- if site.edit_on_github != false and page and page.name != "search.html" %}
-        <a href="{{ site.repo_url | url }}/blob/master/{%- if site.github_docs_folder %}docs/{% endif %}{{ page.path }}" class="icon icon-github" target="_blank"> Edit on GitHub</a>
-      {%- endif %}
-    </li>
-  </ul>
 
-  {%- if (site.prev_next_buttons_location == 'top' or  site.prev_next_buttons_location =='both') and (previous_page or next_page) %}
-    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
-      {%- if next_page %}
-        <a href="{{ next_page.url | absolute_url }}" class="btn btn-neutral float-right" title="{{ next_page.title }}">Nextc <span class="icon icon-circle-arrow-right"></span></a>
-      {%- endif %}
-      {%- if previous_page %}
-        <a href="{{ previous_page.url | absolute_url }}" class="btn btn-neutral" title="{{ previous_page.title }}"><span class="icon icon-circle-arrow-left"></span> Previousc</a>
-      {%- endif %}
-    </div>
-  {%- endif %}
-
-  <hr/>
+        <table style="float: right">
+            <tr>
+                <th>
+                    <b style="color: gray">Select ROS Distro:</b>
+                </th>
+                <th>
+                    <span style="margin-left: 12px"></span>
+                </th> 
+                <th>
+                    <fieldset class="multiswitch" style="width: 100%">
+                        <div class="slide-container">
+                            <input type="radio" name="account" id="button_kinetic" onclick="set_ros_version('kinetic'); redirect('kinetic')"><label for="button_kinetic"><b>Kinetic</b></label>
+                            <input type="radio" name="account" id="button_noetic" onclick="set_ros_version('noetic'); redirect('noetic')"><label for="button_noetic"><b>Noetic</b></label>
+                            <a id="distroslider" class="slide" style="display: none;" aria-hidden="true"></a>
+                        </div>
+                    </fieldset>
+                </th>
+            </tr>
+        </table>
+    </ul>
+    <hr/>
 </div>

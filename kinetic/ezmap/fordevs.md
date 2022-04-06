@@ -1,6 +1,6 @@
 ---
 title: "Advanced Documentation"
-permalink: ezmap_dev_docs
+permalink: kinetic_ezmap_dev_docs
 group: ez-map
 rosver: kinetic
 nav_order: 3
