@@ -7,6 +7,68 @@ nav_order: 4
 nav_exclude: false
 --- 
 
+
+## The Workstation
+
+The robot itself is normally running all hardware drivers for sensors such as any sort of camera or sonar sensors or even Lidar unit. If your system uses any form of navigation then things like  fiducial navigation, gmapping, move_base, move_basic or AMCL all run on the robot itself so they are close to the hardware.    
+
+The prime reason a workstation or virtual machine is required in a system using a Magni is that there so a way to get access through console screens running as SSH terminals seen on the workstation to start, stop and monitor output from software running on the robot. A second fairly important console screen sort of use for a workstation is that since it will also see all the ROS activity the workstation can monitor ROS topics or other status for ROS at that time.
+
+A workstation is also used so that graphical tools such as RViz or plotting software can be run on the screen of the workstation.  This is the case if the robot is to do navigation you would then run visual tools such as the RViz environment to see the robot move around or to set goals.  In this mode you could configure RViz to show you the sensors such as our sonar board or even a Lidar unit.   
+
+Another need for a workstation would be so that you can monitor values in a ROS topic either from command line tools or such as for when you want to do PID tuning it is important to see the PID error values in a graph you would tend to run rqt_plot on the workstation or just run ```image_view``` to see what the raspicam camera is seeing as the robot drives around.
+
+We are not in this section discussing purely virtual simulation tools but those too can be run on a workstation assuming the workstation has a powerful enough configuration.  
+
+### Native Linux machine
+
+If you have your own Linux laptop already configured with ROS to be running the same ROS release as the robot then you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network.
+
+### Virtual machine
+
+You can setup a Linux VirtualBox to communicate with the Magni robot to work around the dedicated Ubuntu machine requirement.
+
+* Download the appropriate VirtualBox software from [the VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and install it.
+
+* Download the correct Ubuntu LTS VM, for example [Kubuntu if you're used to Windows](https://www.osboxes.org/kubuntu/) and save it in VirtualBox's folder for virtual machines. On Windows this is \Users\<username>\VirtualBox VMs.
+
+* On Windows or MacOS, unzip (decompress) the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vdi`, and double-click it. This will cause VirtualBox to import the Virtual Machine (the VM) and open the VirtualBox Manager.
+
+* Check the following parameters of the VM:
+
+  * System/Base Memory: at least 2048 MB, why not 4096?
+  * Display/Video Memory: at least 64 MB, why not 128?
+  * Storage: at least 25GB
+  * Network/Adapter 1: Bridged Adapter <- Important, so you'll be able to see your robot on LAN
+
+* [Install the correct version of ROS](http://wiki.ros.org/ROS/Installation) for your OS
+
+* Add the [Ubiquity package repository](https://packages.ubiquityrobotics.com/)
+
+The workstation is setup so the robot is the ROS master and this allows ROS running on the workstation to monitor ROS topics and inspect the state of ROS using command line tools or graphical tools.  
+
+Your ```workstation``` may be a Ubuntu Linux system of your own such as a laptop, or you can use a virtual machine in the form of a VirtualBox.
+
+This page discusses connection of your laptop or workstation or the usage of a VirtualBox to control the robot. If you do not have a linux computer available you can still use a virtual Linux machine to connect to the Magni robot, and for SSH-only access a Putty terminal also works in a pinch.
+
+## Setup ROS Environment
+
+In order to have your laptop be able to issue ROS messages to control the Magni such as running `twist` on the laptop or to run programs that require a graphical display such as `viz` you will need to run ROS on your laptop and setup the laptop instance of ROS so that the robot is the ROS master.
+
+Once the laptop (or VM) is configured with the robot as the ROS master you can inspect the ROS topics on the laptop and even view what the camera is seeing from your laptop or do other things like configure dynamic ROS parameters which all are done with a laptop display normally.
+
+Rather than duplicate the required setup here you should refer to the [ROS Workstation Setup Page](https://learn.ubiquityrobotics.com/workstation_setup) to do these required configuration steps.
+
+  * Setup the ROS version that the robot is running if not already done
+  * Set environment variables so the robot is the ROS master
+  * Setup the laptop and the robot so they are synchronized in time
+  * Some environments may require setting up IP addresses in `/etc/hosts`
+  * Run other programs using programs that require a graphics display.
+
+At this point you will be able to control the robot from the workstation keyboard or by using Robot Commander.
+
+
+
 # How to set up a ROS workstation
 
 A ROS workstation is a full setup of ROS (the Robot Operating System) on a desktop or laptop computer, that you can connect to your robot. ROS shares all the internal communication within the robot with a ROS workstation over your network. Thus you can monitor internal robot activity, see what the robot is seeing, send commands and even offload data processing tasks from the robot on to more powerful computers. A ROS workstation is needed if you are going to program the robot to perform you robotic application.

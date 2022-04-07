@@ -1,7 +1,7 @@
 ---
 title: "Schematics"
 permalink: noetic_overview_magni_key
-group: overview
+group: "magni silver (gen 5)"
 rosver: noetic
 nav_order: 3
 nav_exclude: false

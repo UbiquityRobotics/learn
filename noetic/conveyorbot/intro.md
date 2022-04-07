@@ -37,15 +37,17 @@ If you are unfamiliar with the Magni robot, start with the [Overview](noetic_ove
 ConveyorBot is optimized to run on a Raspberry Pi 4.
 If you have one (especially if you have Pi Camera for it), there are numerous things you can do easily, even if you don't have one of out Magni Robots.  It would be possible to run our software on other platforms, but it would take a lot of effort to edit the various parameters.
 
-* [Set up ROS on your workstation.](http://wiki.ros.org/)
+* [Flash the custom SD card image.](noetic_quick_start_microsd)
 
-* [Connect the Pi with the Conveyorbot image to your workstation](https://ubiquityrobotics.github.io/learn/connecting).
+* [Set up ROS on your workstation.](noetic_quick_start_workstation)
 
-* [Generate and print fiducials](how_to_generate_markers.md).
+* [Connect the Pi with the Conveyorbot image to your workstation](noetic_quick_start_connecting).
 
-* [Visualize what's going on on the Pi using Rviz and other tools](rviz)
+* [Generate and print fiducials](noetic_conveyorbot_fiducials).
 
-* [Run Gazebo Simulator on your Workstation](gazebo) to see how conveyorbot works in principle.
+* [Visualize what's going on on the Pi using Rviz and other tools](noetic_conveyorbot_advanced#visualize-with-rviz)
+
+* [Run Gazebo Simulator on your Workstation](noetic_conveyorbot_advanced#running-in-gazebo) to see how conveyorbot works in principle.
 
 
 

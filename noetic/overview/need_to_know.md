@@ -3,7 +3,7 @@ title: "Requirements: Batteries, Network, Workstation use & Configuration"
 permalink: noetic_overview_need_to_know
 group: overview
 rosver: noetic
-nav_order: 2
+nav_order: 1
 nav_exclude: false
 ---
 

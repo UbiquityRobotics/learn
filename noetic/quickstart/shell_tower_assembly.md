@@ -11,13 +11,15 @@ nav_exclude: false
 
 **Before you begin:**
 
-1. It is assumed that you have an overview understanding of Magni base robot and its parts (Pi camera, Raspberry Pi, MCB, Swithcboard, Batteries). If that is not so, [please read about it first](noetic_overview_need_to_know).
+**①** It is assumed that you have a general understanding of Magni and its parts (Pi camera, Raspberry Pi, MCB, Switchboard, Batteries, etc.). If that is not so, [make sure to check that out first](noetic_overview_need_to_know).
 
-1. It is assumed that Magni base robot is already unboxed and assembled following [the instructions](noetic_quickstart_unboxing). The sonar board also has to be mounted mounted as described [in the instructions](noetic_quick_start_sensors#sonars)
+**②** It is assumed that Magni base robot is already [unboxed and assembled](noetic_quickstart_unboxing). 
 
-1. **🛑 ALWAYS DISCONNECT THE CABLE FROM THE BATTERIES BEFORE DOING ANYTHING WITH ELECTRONICS 🛑** The most important thing to note, is that you always have to have the batteries physically disconnected, while you are doing anything with the cables or electronics to prevent any short circuits to the main PCB board. Turning off the robot with the provided main switches is not enough. **Failing to do this can result in injuries and/or fried electronics!**
+**③** The sonar board also has to be mounted mounted [as described here](noetic_quick_start_sensors#sonars).
 
-1. If the Raspberry PI has a micro SD card mounted – avoid powering it on and off too many times just by cutting off the power. That can lead to microSD card corruption. Always try to either use touchscreen or an SSH connection to shut it down and then cut the power.
+**④** **🛑 ALWAYS DISCONNECT THE CABLE FROM THE BATTERIES BEFORE DOING ANYTHING WITH ELECTRONICS 🛑** The most important thing to note, is that you always have to have the batteries physically disconnected, while you are doing anything with the cables or electronics to prevent any short circuits to the main PCB board. Turning off the robot with the provided main switches is not enough. **Failing to do this can result in injuries and/or fried electronics!**
+
+**⑤** If the Raspberry PI has a micro SD card mounted – avoid powering it on and off too many times just by cutting off the power. That can lead to microSD card corruption. Always try to either use touchscreen or an SSH connection to shut it down and then cut the power.
 
 ## Full BOM of the Conveyorbot (Without base Magni)
 
@@ -101,7 +103,7 @@ Note the batteries orientation - they need to have terminals at the back of the 
 
     
     
-Here we are going to mount the lidar on LEFT side from the robots perspective, but there are other lidar positions available - [see picture](lidar_mounts2.png). If another position is preferred, please route the lidar cables accordingly.
+Here we are going to mount the lidar on LEFT side from the robots perspective, but there are other lidar positions available - [see picture](assets/shell_tower/lidar_mounts2.png). If another position is preferred, please route the lidar cables accordingly.
 
 ![Coordinate system](assets/shell_tower/coordinates.jpg)
 
@@ -195,7 +197,7 @@ Also use a sharpie or some other tool to indicate the camera flat cable to be ab
  
 &nbsp;
 
-**③** A lot of times the flat cable connections being not adequate or faulty is the reason screen or camera don't work. You can test this connections (by following steps in the [Connecting The Tower To Shell](#connecting-the-tower-to-shell) Section below) by connecting to RPi and powering it up to see if the screen and camera are working - to avoid having to reassemble everything up again later.
+**③** A lot of times the flat cable connections being not adequate or faulty is the reason screen or camera don't work. You can test this connections (by following steps in the [Connecting The Tower To Shell](noetic_quickstart_shell_tower#connecting-the-tower-to-the-shell) Section below) by connecting to RPi and powering it up to see if the screen and camera are working - to avoid having to reassemble everything up again later.
 
 &nbsp;
 

@@ -7,20 +7,30 @@ nav_order: 2
 nav_exclude: false
 --- 
 
-# Software Images 
+# Software Images
 
 The Magni robots use Raspberry Pi computers, and as such require a software image to be loaded onto an SD card and then inserted into the Pi to run it.
 
-We distribute an armhf image of Ubuntu with ROS and Magni packages preinstalled, which you can find on the [image download page](https://downloads.ubiquityrobotics.com/pi.html).
+We distribute our images with ROS and Magni packages preinstalled, which you can find on the [image download page](noetic_pi_image_downloads).
 
 Other software suites like Conveyorbot and EZ-Map also use pre-loaded images which are delivered separately.
 
-## Flashing Images into a Micro SD card
+## Flashing Images onto a Micro SD card
 
 The first step is taking the downloaded SD card image (imagename.img.xz) and flashing it onto an SD card of at least 16GB in size. 
 
 We recommend using [Etcher](https://www.balena.io/etcher/) to flash the image on most systems or [Win32DiskImager](https://win32diskimager.download/) as an alternative on Windows (requires .xz files to be extracted first. Under Ubuntu Linux you can also use the GNOME Disks tool to flash images. If you haven't installed it, simply run `sudo apt install gnome-disk-utility`. Then you can double click on the downloaded image file, the GNOME Disks tool will automatically come up, and you can direct it to expand the image onto an SD card drive attached to your computer.
 
+
+## Getting Started
+
+**NOTE:** When the Raspberry Pi boots for the first time, it resizes the file system to fill the SD card, this can make the first boot take some time.
+
+If you want to use our image for something other than our robots, please read this document.
+
+Our image comes up as a Wifi access point. The SSID is `ubiquityrobotXXXX` where `XXXX` is part of the MAC address. The wifi password is `robotseverywhere`.
+
+Once connected, it is possible to log into the Pi with `ssh ubuntu@10.42.0.1` with a password of `ubuntu`. If you connect up a keyboard and mouse enter the password `ubuntu` at the prompt.
 
 <hr>
 

@@ -1,7 +1,7 @@
 ---
 title: "Unboxing"
 permalink: noetic_quickstart_unboxing
-group: "quick start"
+group: "magni silver (gen 5)"
 rosver: noetic
 nav_order: 1
 nav_exclude: false
@@ -138,8 +138,10 @@ The top plate should be the last thing attached, using 6  M6 machine screws. Not
 
 Note that the countersunk holes should be on the top.
 
-### Suggested Next Page To Visit To Connect To The robot
+## Power Switches
 
-The next logical step to use the Magni robot would be to connect to it and start learning more about the robot using a network connection.  
+Now you can turn your robot on by pressing the ON switch (the one coloured BLACK) and follow [the guide on how to connect to it](noetic_quick_start_connecting).
 
-Next you can take a look next at the [**CONNECTING**](https://learn.ubiquityrobotics.com/connecting)  page of the learn documentation.
+If you need to install any sensors (e.g. camera, sonars), you can check [guide for that](noetic_quick_start_sensors).
+
+<img src="assets/Magni_Front_View_2.jpg">

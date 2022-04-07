@@ -11,7 +11,17 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 
 <H4 style="color:red">Always remove the red battery cable for any work on boards to remove live voltage from the main board</H4>
 
-You may visit the [Ubiquity Robotics Forum](https://forum.ubiquityrobotics.com) for assistance or more information and tips
+<hr>
+
+#### Discourse Forum - [forum.ubiquityrobotics.com](https://forum.ubiquityrobotics.com)
+
+#### Apt Repository - [packages.ubiquityrobotics.com](https://packages.ubiquityrobotics.com)
+
+#### Image Repository - [downloads.ubiquityrobotics.com](https://downloads.ubiquityrobotics.com/pi.html)
+
+#### Store - [ubiquityrobotics.com](https://ubiquityrobotics.com)
+
+<hr>
 
 ## Preface: Ubiquity Robotics' Robot Development Platform
 
@@ -36,7 +46,6 @@ The Robot Operating System (ROS) is an open source framework for writing robot s
 When a mobile base can move wherever it is needed without running into obstacles, lots of opportunities arise.
 
 Whether you are delivering coffee, transporting people, or moving industrial equipment, progress starts with knowing where you are, what your goal is, and how to achieve it while avoiding obstacles. Magni makes learning these core concepts affordable, accessible and fun.
-
 
 ### What can I do while my robot is being shipped?
 
