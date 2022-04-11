@@ -9,9 +9,7 @@ nav_exclude: false
 
 # Driving a Robot with a Keyboard
 
-#### &uarr;[top](https://ubiquityrobotics.github.io/learn/)
-
-Connect to your robot and log in, following the instructions in [Connecting to your robot for the first time](connecting). Log in to the robot from an ssh window, as before.
+Connect to your robot and log in, following the instructions in [Connecting the Robot to Your Network](noetic_quick_start_connecting). Log in to the robot from an ssh window, as before.
 
 After logging in, the  magni_base program will be running under ROS. To verify this, type:
 
@@ -23,27 +21,18 @@ Next, start the keyboard teleop program.  In the ssh window, type:
 
 This will launch the teleop program in the robot. There will be a screen that shows the commands in a sort of crude graphical way.
 
-Because the robot has a 'dead man timer' you must rapidly continue to press keys or the robot will automatically stop as a safety measure.  Sometimes users hit the keys too slow and will see the robot do jerky movements but that is the deadman timer kicking in for too slow of a rate of keypresses.
+Because the robot has a 'dead man timer' you must rapidly continue to press keys or the robot will automatically stop as a safety measure.  Sometimes due to spotty wifi connectivity the received commands may be too slow and you may see the robot do jerky movements but that is the deadman timer kicking in for too slow of a rate of keypresses.
 
-<!--Alternatively from a second terminal window on your workstation, you can run the program in the workstation and let it communicate with the robot:
-    export ROS_MASTER_URI=http://ubiquityrobotXXXX.local:11311
-    rosrun teleop_twist_keyboard teleop_twist_keyboard.py
--->    
 
->Reading from the keyboard and Publishing to Twist!
+Moving around:
 
->Moving around:
-
-| | | |
-|---|---|---|
 |  u | i  | o  |
 |  j | k  | l  |
 |  m | ,  | .  |
 
 The robot will respond to keystrokes as follows:
 
-| | |
-|---|---|
+
 | u | circle left |
 | I | straight ahead |
 | o | circle right |
@@ -54,46 +43,22 @@ The robot will respond to keystrokes as follows:
 | , | straight back |
 | . | circle backwards right |
 
+
 You can increase or decrease the speed that will be used also from keys on the keyboard but it is often desired to first stop the robot and then when you issue the increase or decrease the robot will not keep moving.  You may want to increase speed AS the robot is moving and that is ok as well.
 
-| | |
-|---|---|
+
 | k | optionally stop the robot |
 | q | increase speed |
 | z | decrease speed |
 
-<!--
->For Holonomic mode (strafing), hold down the shift key:
+<br>
 
->| | | |
-|----|----|----|
-|  U | I  | O  |
-|  J | K  | L  |
-|  M | <  | >  |
+## Running teleop-twist from a workstation
 
->t : up (+z)  
-b : down (-z)  
-anything else : stop
+As of right now you're running the teleop node on the actual robot, and as such are sending keypress packets through the SSH tunnel to the robot. To run the node on your workstation and send messsages through ROS sockets, then you'll need to first [connect to the robot as a workstation and set it up as a ROS master](noetic_quick_start_workstation).
 
->q/z : increase/decrease max speeds by 10%  
-w/x : increase/decrease only linear speed by 10%  
-e/c : increase/decrease only angular speed by 10%  
-
->CTRL-C to quit
-
-currently:	speed 0.5	turn 1
-
-Please note Holonomic mode does not apply to a Magni, as it uses differential drive.
--->
-
-# Running teleop-twist from a workstation
-
-You can also run teleop-twist keyboard from a properly setup ROS workstation that has the Magni robot setup as it's ROS master. To do this you can connect your configured ROS workstation to the network of the robot (which can be to connect to the robot Access point OR have the robot connect to your wireless network along with your workstation).  
-
-Take a look a the first two links about connecting to a network and setting up a ROS workstation [Doing More](ix_doing_more).
-
-## Must Have teleop-twist setup on your ROS workstation
-
-Install teleop-twist on your workstation which will be setup to have the robot be the ROS master.   The program can be run as discussed above because the ```cmd_vel``` topic will be fed movement commands by the teleop-twist program on your workstation and the robot will then move just as it would if the teleop-twist were run on the robot itself.
+You'll also need to install the actual teleop node in order to run it:
 
      sudo apt install ros-kinetic-teleop-twist-keyboard
+
+There is no major difference in running the node locally, however the principle is a good starting point and test for more advanced usage.
