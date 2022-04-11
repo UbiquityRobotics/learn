@@ -142,6 +142,6 @@ Note that the countersunk holes should be on the top.
 
 Now you can turn your robot on by pressing the ON switch (the one coloured BLACK) and follow [the guide on how to connect to it](noetic_quick_start_connecting).
 
-If you need to install any sensors (e.g. camera, sonars), you can check [guide for that](noetic_quick_start_sensors).
+If you need to install any sensors (e.g. camera, sonars), you can check [the guide for that](noetic_quick_start_sensors).
 
 <img src="assets/Magni_Front_View_2.jpg">

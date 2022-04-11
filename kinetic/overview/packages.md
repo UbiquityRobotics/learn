@@ -1,8 +1,8 @@
 ---
 title: "Package Repositories"
-permalink: noetic_package_repositories
+permalink: kinetic_package_repositories
 group: overview
-rosver: noetic
+rosver: kinetic
 nav_order: 3
 nav_exclude: false
 ---
@@ -19,7 +19,7 @@ As you can see we only build for Ubuntu, beacuse that is what we use and support
 ### Adding the Repositories:
 
     Add the source to your apt lists:
-    sudo sh -c 'echo "deb https://packages.ubiquityrobotics.com/ubuntu/ubiquity focal main" > /etc/apt/sources.list.d/ubiquity-latest.list'
+    sudo sh -c 'echo "deb https://packages.ubiquityrobotics.com/ubuntu/ubiquity xenial main" > /etc/apt/sources.list.d/ubiquity-latest.list'
     Add our signing key to your trusted list:
     sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key C3032ED8
     sudo apt-get update
@@ -28,7 +28,7 @@ You added our repository! Now you can install our stuff.
 
 If you wish to use the testing repository, replace the first step with:
 
-    sudo sh -c 'echo "deb https://packages.ubiquityrobotics.com/ubuntu/ubiquity-testing focal main" > /etc/apt/sources.list.d/ubiquity-latest.list'
+    sudo sh -c 'echo "deb https://packages.ubiquityrobotics.com/ubuntu/ubiquity-testing xenial main" > /etc/apt/sources.list.d/ubiquity-latest.list'
 
 ### About The Testing Repositories
 

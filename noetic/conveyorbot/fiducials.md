@@ -22,9 +22,11 @@ ConveyorBot uses several types of fiducials:
 |  🟦 **Turn marker** is made for creating crossroads. Crossroad is a couple of markers in the same location (they must not overlap!), where each is pointing in an arbitrary/different direction. Purpose of Turn markers and crossroads is to change the driving direction of the ConveyorBot. | <img src="assets/breadcrumb/turn_marker.jpg" >  |
 |  🟪 **Bidirectional marker** is the only marker with 2 arrows in it. ConveyorBot drives allong the arrow that requires less robot rotation. Bidirectional marker is good for two-way routes where ConveyorBot requires to move in both directions for example narrow aisles where there is not enough space for both a forward and return path. | <img src="assets/breadcrumb/bidirectional_marker.jpg" >  |
 
-ConveyorBot is enabled to be used either with STag or ArUco markers. The analogy of marker types is the same for both. The recommended and default type of markers is STag.
+<br>
 
-Each marker has a unique id, which is written on it. This way marker types are correctly distinguished which correspond to the correct ConveyorBot manevers.
+ConveyorBot can be used either with STag or ArUco markers (default and recommended being STag). The analogy of marker types is the same for both.
+
+Each marker has a unique numeric ID, which is written on it. This way marker types are correctly distinguished which correspond to the correct ConveyorBot manevers.
 
 ### How to place the markers
 

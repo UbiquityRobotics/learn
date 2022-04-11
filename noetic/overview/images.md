@@ -11,113 +11,23 @@ nav_exclude: false
 
 See the [Software Images and SD Card Flashing](noetic_quick_start_microsd) guide on how to install the following images.
 
-| Download | [2021-11-24-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2021-11-24-ubiquity-xenial-lxde-raspberry-pi.img.xz) |
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
+| Download | [2022-03-29-ubiquity-gdm3-beta2](https://ubiquity-pi-image.sfo2.digitaloceanspaces.com/2022-03-29-ubiquity-gdm3-beta2-testing-focal-raspberry-pi.img.xz) |
+| OS Version  | Ubuntu 20.04 LTS + GDM3 |
+| ROS  | Noetic |
 | Architecture | armhf (32 bit) |
-| SHA256 Sum   | eab6d6ad0320893c12ee2a72f542ed12e5812293ac1dccb98db1ee02b03d2455 |
+| SHA256 Sum   | eb9da2da181e89b2e22c9f42a9031aee890164bcb64bed0c25165439ccb4f64a |
 | Status | <b style="color: green;">Latest</b> |
-| Notes | Kernel Upgrade for Pi 4 Rev 1.4 support |
+| Notes | Second noetic beta image, with gnome desktop. |
 
 <br>
 
-| Download | [2020-11-07-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2020-11-07-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
+| Download | [2021-08-06-focal](https://ubiquity-pi-image.sfo2.digitaloceanspaces.com/2021-08-06-focal.img.xz) |
+| OS Version  | Ubuntu 20.04 LTS |
+| ROS  | Noetic |
 | Architecture | armhf (32 bit) |
-| SHA256 Sum   | 8585c3839e2405163302f0fef774c1caa22b4ebc6f2582d9266a30ecef6987b4 |
+| SHA256 Sum   | e4a5e7df6cf4f2542d68bc6162aa5f5c1bd976447807a4a0b2184c62a82e4089 |
 | Status | <b style="color: darkred;">Deprecated</b> |
-| Notes | Does not run Sonar board when CPU is a Pi4 |
-
-<br>
-
-| Download | [2020-02-10-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2020-02-10-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
-| Architecture | armhf (32 bit) |
-| SHA256 Sum   | bce2437fa8c33a43ec972304f6ca92f3a56e659a053ff0f21b4224e7d99fc28a |
-| Status | <b style="color: darkred;">Deprecated</b> |
-| Notes | Ethernet and Sonars do not work when CPU is a Pi4 |
-
-<br>
-
-| Download | [2019-06-19-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2019-06-19-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
-| Architecture | armhf (32 bit) |
-| SHA256 Sum   | 3a691ce442f4432c24ab0305b270fa38128681da276402e4e6f619c7e54976ca |
-| Status | <b style="color: darkred;">Deprecated</b> |
-| Notes |  |
-
-<br>
-
-| Download | [2019-02-19-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2019-02-19-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
-| Architecture | armhf (32 bit) |
-| SHA256 Sum   | cef9f11b34d30ecc72db516ff7a92e98862ff708b38251b6b70821ba6342e3f1 |
-| Status | <b style="color: darkred;">Deprecated</b> |
-| Notes | |
-
-<br>
-
-| Download | [2019-02-10-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2019-02-10-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
-| Architecture | armhf (32 bit) |
-| SHA256 Sum   | 45269a92a4a709d86f703a0038f47c2faf9db48170ba618ada00183005138b04 |
-| Status | <b style="color: darkred;">Deprecated</b> |
-| Notes | First image meant to add Pi4 support. Cannot run our Sonar board without manual fixes seen on our Sonar board install page |
-
-<br>
-
-| Download | [2018-12-08-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2018-12-08-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
-| Architecture | armhf (32 bit) |
-| SHA256 Sum   | a7db887d9ce0f4c26eeff8ec578ccbe7862724345ee33511712c1c85e8e4215b |
-| Status | <b style="color: darkred;">Deprecated</b> |
-| Notes | |
-
-<br>
-
-| Download | [2018-11-15-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2018-11-15-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
-| Architecture | armhf (32 bit) |
-| SHA256 Sum   | 12fc9d824e386287163e562feb9f02567f200290fce560619ab8b54d7d1af290 |
-| Status | <b style="color: darkred;">Deprecated</b> |
-| Notes | |
-
-<br>
-
-| Download | [2018-06-27-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2018-06-27-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
-| Architecture | armhf (32 bit) |
-| SHA256 Sum   | c9f86d12098788ee459cab5c3c54d1eda30dc5183abb2e53d28201d5c901bbdd |
-| Status | <b style="color: darkred;">Deprecated</b> |
-| Notes | |
-
-<br>
-
-| Download | [2018-06-07-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2018-06-07-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
-| Architecture | armhf (32 bit) |
-| SHA256 Sum   | bbf260dfa7b97acc896faa9af10d05e4feca19aa1b36b859748ea125d0285dcf |
-| Status | <b style="color: darkred;">Deprecated</b> |
-| Notes | |
-
-<br>
-
-| Download | [2018-01-13-ubiquity-xenial-lxde](https://ubiquity-pi-image.sfo2.cdn.digitaloceanspaces.com/2018-01-13-ubiquity-xenial-lxde-raspberry-pi.img.xz)|
-| OS Version  | Lubuntu 16.04 LTS + LXDE |
-| ROS  | Kinetic |
-| Architecture | armhf (32 bit) |
-| SHA256 Sum   | 9f9db4187cf76add1e5580f3aa80067374bd670f0dcea3044316f0ba8508e508 |
-| Status | <b style="color: darkred;">Deprecated</b> |
-| Notes | |
+| Notes | First noetic beta, headless only. |
 
 <hr>
 

@@ -7,22 +7,25 @@ nav_order: 4
 nav_exclude: false
 --- 
 
+# The Workstation
 
-## The Workstation
+A ROS workstation is a full setup of ROS (the Robot Operating System) on a desktop or laptop computer, that you can connect to your robot. ROS shares all the internal communication within the robot with a ROS workstation over your network. Thus you can monitor internal robot activity, see what the robot is seeing, send commands and even offload data processing tasks from the robot on to more powerful computers. A ROS workstation is needed if you are going to program the robot to perform you robotic application.
 
-The robot itself is normally running all hardware drivers for sensors such as any sort of camera or sonar sensors or even Lidar unit. If your system uses any form of navigation then things like  fiducial navigation, gmapping, move_base, move_basic or AMCL all run on the robot itself so they are close to the hardware.    
-
-The prime reason a workstation or virtual machine is required in a system using a Magni is that there so a way to get access through console screens running as SSH terminals seen on the workstation to start, stop and monitor output from software running on the robot. A second fairly important console screen sort of use for a workstation is that since it will also see all the ROS activity the workstation can monitor ROS topics or other status for ROS at that time.
-
-A workstation is also used so that graphical tools such as RViz or plotting software can be run on the screen of the workstation.  This is the case if the robot is to do navigation you would then run visual tools such as the RViz environment to see the robot move around or to set goals.  In this mode you could configure RViz to show you the sensors such as our sonar board or even a Lidar unit.   
+The prime reason a workstation or virtual machine is required in a system using a Magni is to see all the ROS activity the workstation can monitor ROS topics or other status for ROS at that time. A workstation is also used so that graphical tools such as RViz or plotting software can be run on the screen of the workstation. This is the case if the robot is to do navigation you would then run visual tools such as the RViz environment to see the robot move around or to set goals. In this mode you could configure RViz to show you the sensors such as our sonar board or even a Lidar unit.   
 
 Another need for a workstation would be so that you can monitor values in a ROS topic either from command line tools or such as for when you want to do PID tuning it is important to see the PID error values in a graph you would tend to run rqt_plot on the workstation or just run ```image_view``` to see what the raspicam camera is seeing as the robot drives around.
 
 We are not in this section discussing purely virtual simulation tools but those too can be run on a workstation assuming the workstation has a powerful enough configuration.  
 
+Your ```workstation``` may be a Ubuntu Linux system of your own such as a desktop or laptop computer, or you can use a virtual machine as described below.
+
 ### Native Linux machine
 
-If you have your own Linux laptop already configured with ROS to be running the same ROS release as the robot then you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network.
+If you have a native machine running the an Ubuntu LTS you should be able to install ROS on it and link it to your robot.
+
+Though ROS will run natively on several operating systems, ROS and Ubiquity's software is supported only on Ubuntu Linux LTS versions. If you haven't already got a Ubuntu partition you should set one up. Ubuntu has a [detailed guide](https://help.ubuntu.com/community/Installation) that covers installing from a DVD, installing using a USB and even installing within Windows.
+
+Once you have a working Ubuntu Linux installation [you can install ROS](noetic_quick_start_workstation#install-ros).
 
 ### Virtual machine
 
@@ -30,7 +33,7 @@ You can setup a Linux VirtualBox to communicate with the Magni robot to work aro
 
 * Download the appropriate VirtualBox software from [the VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and install it.
 
-* Download the correct Ubuntu LTS VM, for example [Kubuntu if you're used to Windows](https://www.osboxes.org/kubuntu/) and save it in VirtualBox's folder for virtual machines. On Windows this is \Users\<username>\VirtualBox VMs.
+* Download the correct Ubuntu LTS VM, for example [Kubuntu if you're used to Windows](https://www.osboxes.org/kubuntu/) and save it in VirtualBox's folder for virtual machines. On Windows this is `\Users\<username>\VirtualBox VMs`.
 
 * On Windows or MacOS, unzip (decompress) the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vdi`, and double-click it. This will cause VirtualBox to import the Virtual Machine (the VM) and open the VirtualBox Manager.
 
@@ -41,59 +44,23 @@ You can setup a Linux VirtualBox to communicate with the Magni robot to work aro
   * Storage: at least 25GB
   * Network/Adapter 1: Bridged Adapter <- Important, so you'll be able to see your robot on LAN
 
-* [Install the correct version of ROS](http://wiki.ros.org/ROS/Installation) for your OS
-
-* Add the [Ubiquity package repository](https://packages.ubiquityrobotics.com/)
-
 The workstation is setup so the robot is the ROS master and this allows ROS running on the workstation to monitor ROS topics and inspect the state of ROS using command line tools or graphical tools.  
 
-Your ```workstation``` may be a Ubuntu Linux system of your own such as a laptop, or you can use a virtual machine in the form of a VirtualBox.
+## Install ROS
 
-This page discusses connection of your laptop or workstation or the usage of a VirtualBox to control the robot. If you do not have a linux computer available you can still use a virtual Linux machine to connect to the Magni robot, and for SSH-only access a Putty terminal also works in a pinch.
+For ROS 1, the currently releant Ubuntu + ROS pairs are the following:
 
-## Setup ROS Environment
+* Ubuntu 16.04 Xenial - ROS Kinetic
 
-In order to have your laptop be able to issue ROS messages to control the Magni such as running `twist` on the laptop or to run programs that require a graphical display such as `viz` you will need to run ROS on your laptop and setup the laptop instance of ROS so that the robot is the ROS master.
+* Ubuntu 18.04 Bionic - ROS Melodic
 
-Once the laptop (or VM) is configured with the robot as the ROS master you can inspect the ROS topics on the laptop and even view what the camera is seeing from your laptop or do other things like configure dynamic ROS parameters which all are done with a laptop display normally.
+* Ubuntu 20.04 Focal - ROS Noetic
 
-Rather than duplicate the required setup here you should refer to the [ROS Workstation Setup Page](https://learn.ubiquityrobotics.com/workstation_setup) to do these required configuration steps.
+Make sure to install the correct version that's compatible with the [image you downloaded](noetic_pi_image_downloads). See the [ROS downloads page](http://wiki.ros.org/ROS/Installation) for installation instructions.
 
-  * Setup the ROS version that the robot is running if not already done
-  * Set environment variables so the robot is the ROS master
-  * Setup the laptop and the robot so they are synchronized in time
-  * Some environments may require setting up IP addresses in `/etc/hosts`
-  * Run other programs using programs that require a graphics display.
+Next, add the [Ubiquity package repository](https://packages.ubiquityrobotics.com/) to add Magni packages to your apt installer.
 
-At this point you will be able to control the robot from the workstation keyboard or by using Robot Commander.
-
-
-
-# How to set up a ROS workstation
-
-A ROS workstation is a full setup of ROS (the Robot Operating System) on a desktop or laptop computer, that you can connect to your robot. ROS shares all the internal communication within the robot with a ROS workstation over your network. Thus you can monitor internal robot activity, see what the robot is seeing, send commands and even offload data processing tasks from the robot on to more powerful computers. A ROS workstation is needed if you are going to program the robot to perform you robotic application.
-
-There are two methods to get a ROS workstation setup.
-
-1. Use our out of the box virtual machine
-2. Install ROS on a native Linux partition of your system
-
-ROS runs on Ubuntu Linux. However not everyone has Ubuntu Linux installed on their machine, so we've created a virtual machine (VM) as a VirtualBox image. This is a system that allows most any laptop or computer to pretend that it is a Ubuntu Linux machine. Our VM has a full install of Ubuntu, ROS and Ubiquity Robotics' software as appropriate for a workstation. The good news is that its quick and easy to get started this way. The downside is that the process of virtualization saps performance from your system so things will not be as fast as if you are running natively. On a fast system you may not notice this. In any event, the virtualization system is a good way to try out having a workstation before committing to set one up on your laptop.
-
-### 1) Using our out-of-the-box virtual machine
-
-This is covered in the section above, [Connecting a Workstation for the First Time](connecting).  ROS is already set up on this virtual machine.
-
-### 2) Install ROS on a native Linux partition of your system
-
-Though ROS will run natively on several operating systems, ROS and Ubiquity's software is supported only on Ubuntu Linux. If you haven't already got a Ubuntu Linux partition you should set one up. Ubuntu has a [detailed guide](https://help.ubuntu.com/community/Installation) that covers installing from a DVD, installing using a USB and even installing within Windows.
-
-**Note: Ubuntu 16.04 is the only version currently supported by Ubiquity Robotics.**
-
-Once you have a working Ubuntu Linux installation you can install ROS. Refer to the
-[ROS installation guide](http://wiki.ros.org/kinetic/Installation)
-
-## Using Robot and Workstation Together
+### Setup Environment
 
 On the workstation, we want to make sure that we have zeroconf networking enabled:
 
@@ -106,17 +73,12 @@ To update the workstation, open a terminal window:
     sudo apt update
     sudo apt upgrade
 
-Then, in another terminal window, ssh into the robot and perform the update there:
-
-    sudo apt update
-    sudo apt upgrade
-
-## Set environment variables on the workstation
+#### Set environment variables on the workstation
 
 Test if zeroconf greatly simplifies connecting to the robot, but it doesn't work in every environment.
 On your workstation you should be able to ping the robot with `ping ROBOTNAME.local` where ROBOTNAME is the hostname of your robot.
 
-### If zeroconf works (the ping succeeds):
+#### If zeroconf works (the ping succeeds):
 
 Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
 
@@ -127,14 +89,14 @@ Again replace ROBOTNAME with your robot's hostname.
 
 However, environment variables set by the `export ...` method are not persistent across system boots.
 
-To make this environment variable persistent, we append its setting to the file called ~/.bashrc, which runs when the Ubuntu shell (called bash) is started. Use an editor, or from the command line: **Warning: Don't do this step if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot. Instead, set the environment variables manually for each terminal.**
+To make this environment variable persistent, we append its setting to the file called `~/.bashrc`, which runs when the Ubuntu shell (called bash) is started. Use an editor, or from the command line: **Warning: Don't do this step if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot. Instead, set the environment variables manually for each terminal.**
 
     echo "export ROS_MASTER_URI=http://ROBOTNAME.local:11311" >> ~/.bashrc
     echo "export ROS_HOSTNAME=$(hostname).local" >> ~/.bashrc
 
 Again replace ROBOTNAME with your robot's hostname.
 
-### If zeroconf is not working (the ping fails):
+#### If zeroconf is not working (the ping fails):
 
 **Note, if you are using IP addresses instead of zeroconf, we highly recommend setting up static IP addresses, or DHCP static assignments**
 
@@ -145,7 +107,7 @@ Now go to your workstation terminal window and set its environment variables. RO
 
 However, environment variables set by the `export ...` method are not persistent across system boots.
 
-To make this environment variable persistent, we append its setting to the file called ~/.bashrc, which runs when the Ubuntu shell (called bash) is started. Use an editor, or from the command line: **Warning: Don't do this step if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot. Instead, set the environment variables manually for each terminal.**
+To make this environment variable persistent, we append its setting to the file called `~/.bashrc`, which runs when the Ubuntu shell (called bash) is started. Use an editor, or from the command line: **Warning: Don't do this step if you have more than one robot. If you do, each terminal will have the same ROS_MASTER_URI and so will try to communicate with the same robot. Instead, set the environment variables manually for each terminal.**
 
     echo "export ROS_MASTER_URI=http://<robot_ip>:11311" >> ~/.bashrc
     echo "export ROS_IP=<workstation_ip>" >> ~/.bashrc
@@ -174,7 +136,7 @@ In order to set date and time to your timezone, use command:
 
     sudo dpkg-reconfigure tzdata
 
-## Test the connection
+### Test the connection
 
   Verify that ROS is running and you are connected. On the workstation type:
 
