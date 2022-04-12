@@ -19,7 +19,7 @@ Other software suites like Conveyorbot and EZ-Map also use pre-loaded images whi
 
 The first step is taking the downloaded SD card image (imagename.img.xz) and flashing it onto an SD card of at least 16GB in size. 
 
-We recommend using [Etcher](https://www.balena.io/etcher/) to flash the image on most systems or [Win32DiskImager](https://win32diskimager.download/) as an alternative on Windows (requires .xz files to be extracted first. Under Ubuntu Linux you can also use the GNOME Disks tool to flash images. If you haven't installed it, simply run `sudo apt install gnome-disk-utility`. Then you can double click on the downloaded image file, the GNOME Disks tool will automatically come up, and you can direct it to expand the image onto an SD card drive attached to your computer.
+We recommend using [Etcher](https://www.balena.io/etcher/) to flash the image on most systems or [Win32DiskImager](https://win32diskimager.download/) as an alternative on Windows (requires .xz files to be extracted first). Under Ubuntu Linux you can also use the GNOME Disks tool to flash images. If you haven't installed it, simply run `sudo apt install gnome-disk-utility`. Then you can double click on the downloaded image file, the GNOME Disks tool will automatically come up, and you can direct it to expand the image onto an SD card drive attached to your computer.
 
 
 ## Getting Started
