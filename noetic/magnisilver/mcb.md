@@ -3,7 +3,7 @@ title: "Motor Control Board (MCB)"
 permalink: noetic_magnisilver_mcb
 group: "magni silver (gen 5)"
 rosver: noetic
-nav_order: 5
+nav_order: 3
 nav_exclude: false
 --- 
 

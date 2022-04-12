@@ -1,5 +1,5 @@
 ---
-title: "Robot Info"
+title: "General Info"
 permalink: noetic_overview_magni_key
 group: "magni silver (gen 5)"
 rosver: noetic
@@ -7,7 +7,7 @@ nav_order: 3
 nav_exclude: false
 ---
 
-# Robot Info
+# General Information
 
 Here you should be able to find all relevant info on the robot's mechanical and electronic parts.
 
