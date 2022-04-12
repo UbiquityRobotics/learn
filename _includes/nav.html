@@ -41,38 +41,38 @@ function redirect(version){
 window.onload = function() {
 
     //figure out what pages exist
-    const regex = "\/[a-zA-Z0-9]*_.*";
-    let list = document.getElementsByClassName("navbarentry");
-    for (let i = 0; i < list.length; i++) {
-        let found = list[i].innerHTML.match(regex);
+    // const regex = "\/[a-zA-Z0-9]*_.*";
+    // let list = document.getElementsByClassName("navbarentry");
+    // for (let i = 0; i < list.length; i++) {
+    //     let found = list[i].innerHTML.match(regex);
 
-        if(found == null)
-            continue;
+    //     if(found == null)
+    //         continue;
 
-        found = found.toString().substring(1).split("\"")[0];
-        allpages.push(found);
-    }
+    //     found = found.toString().substring(1).split("\"")[0];
+    //     allpages.push(found);
+    // }
 
-    let currentpage = get_generic_href();
-    if(currentpage != null){
-        currentpage = currentpage.split("/")[3];
-        for (i in rosvers) {
+    // let currentpage = get_generic_href();
+    // if(currentpage != null){
+    //     currentpage = currentpage.split("/")[3];
+    //     for (i in rosvers) {
 
-            if(window.location.href.includes(rosvers[i]))
-                continue;
+    //         if(window.location.href.includes(rosvers[i]))
+    //             continue;
 
-            let possible_redirect = currentpage.replace("ROSDISTRO",rosvers[i]);
+    //         let possible_redirect = currentpage.replace("ROSDISTRO",rosvers[i]);
 
-            if(!allpages.includes(possible_redirect)){
-                let button = document.getElementById("button_"+rosvers[i]);
-                let buttonlabel = document.getElementById("button_"+rosvers[i]+"_label");
+    //         if(!allpages.includes(possible_redirect)){
+    //             let button = document.getElementById("button_"+rosvers[i]);
+    //             let buttonlabel = document.getElementById("button_"+rosvers[i]+"_label");
 
-                button.disabled = true;
-                button.style.opacity = "0.3"
-                buttonlabel.style.opacity = "0.3"
-            }
-        }
-    }
+    //             button.disabled = true;
+    //             button.style.opacity = "0.3"
+    //             buttonlabel.style.opacity = "0.3"
+    //         }
+    //     }
+    // }
 
     //hide irrelevant ros versions in the navbar
     let url = window.location.href;

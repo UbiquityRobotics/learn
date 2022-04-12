@@ -13,11 +13,17 @@ Each page needs to have the following defined at the top:
     nav_exclude: false
     ---
 
+
 `title`: what the nav bar will show the page as
+
 `permalink`: unique identifier for the page, best set as `<ros version>_<navbar group>_something` and **MUST BE UNIQUE** otherwise only one of the same-named pages will be accesible
+
 `group`: the navbar group the page should appear in, see below for current options
+
 `rosver`: which ros version the page is for, right now the possible options are "kinetic" and "noetic"; the page should also be in the correct folder for its version but it's not strictly required
+
 `nav_order`: in which place should this page appear in the navbar group
+
 `nav_exclude`: if set to true the page will be excluded from the navbar
 
 Navbar groups are hardcoded in https://github.com/MoffKalast/learn/blob/84dd6acac33f9ea9bb8d7f94b40e21a6feabd12d/_includes/nav.html#L46 for simplicity and to keep the order correct.
