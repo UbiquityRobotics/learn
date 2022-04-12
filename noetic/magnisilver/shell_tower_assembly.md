@@ -1,9 +1,9 @@
 ---
 title: "Tower and Shell"
 permalink: noetic_quickstart_shell_tower
-group: "quick start"
+group: "magni silver (gen 5)"
 rosver: noetic
-nav_order: 10
+nav_order: 3
 nav_exclude: false
 ---
 

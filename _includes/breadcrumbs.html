@@ -18,12 +18,17 @@
                 <th>
                     <fieldset class="multiswitch" style="width: 100%">
                         <div class="slide-container">
-                            <input type="radio" name="account" id="button_kinetic" onclick="set_ros_version('kinetic'); redirect('kinetic')"><label for="button_kinetic"><b>Kinetic</b></label>
-                            <input type="radio" name="account" id="button_noetic" onclick="set_ros_version('noetic'); redirect('noetic')"><label for="button_noetic"><b>Noetic</b></label>
+
+                            <input type="radio" name="account" id="button_kinetic" onclick="set_ros_version('kinetic'); redirect('kinetic')">
+                            <label for="button_kinetic"><b id="button_kinetic_label">Kinetic</b></label>
+
+                            <input type="radio" name="account" id="button_noetic" onclick="set_ros_version('noetic'); redirect('noetic')">
+                            <label for="button_noetic"><b id="button_noetic_label">Noetic</b></label>
+
                             <a id="distroslider" class="slide" style="display: none;" aria-hidden="true"></a>
                         </div>
                     </fieldset>
-                </th
+                </th>
             </tr>
         </table>
     </ul>
