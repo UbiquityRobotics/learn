@@ -41,9 +41,12 @@ function redirect(version){
 window.onload = function() {
 
     //figure out what pages exist
+    const regex = "\/[a-zA-Z0-9]*_.*";
     let list = document.getElementsByClassName("navbarentry");
     for (let i = 0; i < list.length; i++) {
-        allpages.push(list[i].innerHTML.split("href=\"")[1].split("/")[3].split("\"")[0]);
+        let found = list[i].innerHTML.match(regex);
+        found = found.toString().substring(1).split("\"")[0];
+        allpages.push(found);
     }
 
     let currentpage = get_generic_href();
