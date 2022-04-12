@@ -45,6 +45,10 @@ window.onload = function() {
     let list = document.getElementsByClassName("navbarentry");
     for (let i = 0; i < list.length; i++) {
         let found = list[i].innerHTML.match(regex);
+
+        if(found == null)
+            continue;
+
         found = found.toString().substring(1).split("\"")[0];
         allpages.push(found);
     }
