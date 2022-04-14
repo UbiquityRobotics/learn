@@ -125,12 +125,8 @@ to be specified.  The user should be prepared for a current inrush spark? (not s
 ![Final](assets/unboxing/unb-bat.JPG)
 -->
 ## The Real-Time Clock Battery
-There is also a CR2032 coin cell battery on the back of the circuit board.  This provides power to the real-time clock, which is **essential**.  If this battery is not installed, obtain one and install it. Insert the battery with the lettering side up.
 
-<!--![Coin cell Holder](assets/unboxing/battery_holder.png)
-
-![Coin cell clip](assets/unboxing/BatteryClipInstallNote.jpg)-->
-![Coin cell clip](assets/unboxing/Magni_CR2032_Battery.jpg)
+Make sure to install [the CR2032 real time clock battery](noetic_overview_batteries#the-real-time-clock-battery).
 
 ## Flat Top Plate Install
 

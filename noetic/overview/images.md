@@ -3,7 +3,7 @@ title: "Raspberry Pi Image Downloads"
 permalink: noetic_pi_image_downloads
 group: overview
 rosver: noetic
-nav_order: 2
+nav_order: 10
 nav_exclude: false
 ---
 

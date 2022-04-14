@@ -25,7 +25,9 @@ If you have a native machine running the an Ubuntu LTS you should be able to ins
 
 Though ROS will run natively on several operating systems, ROS and Ubiquity's software is supported only on Ubuntu Linux LTS versions. If you haven't already got a Ubuntu partition you should set one up. Ubuntu has a [detailed guide](https://help.ubuntu.com/community/Installation) that covers installing from a DVD, installing using a USB and even installing within Windows.
 
-Once you have a working Ubuntu Linux installation [you can install ROS](noetic_quick_start_workstation#install-ros).
+Once you have a working Ubuntu Linux installation [you can install ROS](noetic_quick_start_workstation#install-ros). 
+
+**WARNING: Make sure you have the correct Ubuntu LTS for the ROS version you'll be installing.**
 
 ### Virtual machine
 
@@ -46,15 +48,22 @@ You can setup a Linux VirtualBox to communicate with the Magni robot to work aro
 
 The workstation is setup so the robot is the ROS master and this allows ROS running on the workstation to monitor ROS topics and inspect the state of ROS using command line tools or graphical tools.  
 
+Note that there will be two--or maybe three--simultaneously running systems in this configuration, all sharing the same keyboard:
+* Robot OS, the Ubuntu running on your robot you'll be SSH'd into
+* Workstation OS, the VM you'll be using to connect to the robot with ROS
+* Workstation Native OS, your VM host OS
+
+Be aware of this--it's easy to type a command into the wrong system.
+
 ## Install ROS
 
 For ROS 1, the currently releant Ubuntu + ROS pairs are the following:
 
-* Ubuntu 16.04 Xenial - ROS Kinetic
+* Ubuntu 16.04 Xenial + ROS Kinetic
 
-* Ubuntu 18.04 Bionic - ROS Melodic
+* Ubuntu 18.04 Bionic + ROS Melodic
 
-* Ubuntu 20.04 Focal - ROS Noetic
+* Ubuntu 20.04 Focal + ROS Noetic
 
 Make sure to install the correct version that's compatible with the [image you downloaded](noetic_pi_image_downloads). See the [ROS downloads page](http://wiki.ros.org/ROS/Installation) for installation instructions.
 

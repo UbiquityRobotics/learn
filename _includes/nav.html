@@ -88,13 +88,24 @@ window.onload = function() {
 {%- assign groups = "overview|magni silver (gen 5)|quick start|conveyorbot|ez-map" | split: "|" %}
 {%- assign nav = site.pages | sort:"nav_order" %}
 
-{%- for nav_item in nav %}
-        {%- if nav_item.nav_exclude == true and nav_item.name != "README.md" %}
+{%- for item in nav %}
+        {%- if item.nav_exclude == true and item.name != "README.md" and item.name != "index.md" %}
 
-            {%- if nav_item.url == page.url %}
-                <div class="{{ nav_item.rosver }}">
+            {%- if item.url != page.url %}
+                <div class="{{ item.rosver }}">
+                    <ul style="display: none">
+                        <li class="toctree-l1">
+                            <a class="reference internal" href="{{ item.url | absolute_url}}">{{ item.title }}</a>
+                        </li>
+                    </ul>
+                </div>     
+
+            {%- else %}
+
+                <div class="{{ item.rosver }}">
                     {%- include toc.html html=content sanitize=true h_max=2 item_class="toctree-l%level%" title=item.title %}
                 </div>
+
             {%- endif %}
 
     {%- endif %}

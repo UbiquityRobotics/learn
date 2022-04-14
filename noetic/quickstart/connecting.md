@@ -1,5 +1,5 @@
 ---
-title: "Connecting the Robot to Your Network"
+title: "Connecting to the Robot"
 permalink: noetic_quick_start_connecting
 group: "quick start"
 rosver: noetic
@@ -7,9 +7,9 @@ nav_order: 3
 nav_exclude: false
 --- 
 
-# Connecting the Robot to Your Network
+# Connecting to the Robot
 
-The Magni robot is normally running all the software for whatever sensors and navigation mode you are using for your project but there is no practical way to see what the robot is doing within ROS because the Host Linux cpu running the Magni itself is ```headless``` and normally only has WiFi to access.
+The Magni robot is normally running all the software for whatever sensors and navigation mode you are using for your project but there is no practical way to see what the robot is doing within ROS because the Host Linux cpu running the Magni itself is ```headless``` and normally only has WiFi to access. 
 
 As such you'll need at least SSH access to use the robot properly which will be explained here, for more advanced ROS connectivity check [the workstation setup](noetic_quick_start_workstation).
 
@@ -27,7 +27,7 @@ There is a WIFI status led on the large MCB board if it is rev 5.2 later.  The M
 
 ## SSH Console
 
-Once you are on the robot's network, via WiFi Or Wired, you can connect to the robot itself. On your workstation, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
+Once you are on the robot's network, via WiFi Or Wired, you can connect to the robot itself. If using a linux computer, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
 
 ```ssh ubuntu@ubiquityrobot.local```
 
@@ -51,7 +51,28 @@ Ignore that. You will be asked for the password, which initially is "ubuntu".
 
 Now you are connected and logged in.
 
+The process should be similar in a Mac Terminal and in PuTTY on Windows.
+
+
+## Doing a clean Shutdown Of the Magni Robot
+
+Congrats, you should now have SSH access to the robot. This means you can now shutdown the Pi properly to avoid [the chance of corrupting the file system](noetic_quick_start_microsd#troubleshooting).
+
+You can shutdown the Magni in a clean way using these commands and actions:
+
+* Turn off the motor power by releasing the red ESTOP switch on the right and the RED motor power led will go off.
+* In a SSH console session type ```sudo shutdown -h now```
+* After the green light on the Pi stops flashing turn off the main power using the BLACK switch (usually less than a minute)
+
+If your Magni is a Magni silver and you have the sonar board you can always use the SW1 switch by holding it down for a couple seconds. This will lead to a clean shutdown of the host Raspberry Pi CPU.
+
+If you do not have the sonar board the pins to the 50 pin P702 are available to be connected to with push on connectors common for prototype uses.  Many users make their own shutdown button with one wire to pin 31 and one wire to pin 30.  Note that for P702 pin 1 is on the far left and the bottom row of pins.  These jacks have odd number pins on bottom and even starting with 2 on top row.
+
 ## Connecting the robot to your local network
+
+Of course, as the robot is delivered it has no connection to your local network. Because of this, the robot has its own network (called an access point or "AP mode") that enables you to connect to it directly, as described above. For example, you can drive the robot with our old [Android Robot Commander app](https://play.google.com/store/apps/details?id=com.jrlandau.robotcmdr&hl=en&gl=US). You can use AP mode to connect directly to the robot from a workstation, to run ROS commands such as keyboard teleoperation. 
+
+However, in AP mode, the robot cannot access the Internet. This is what we'll be fixing in this section.
 
 By default the robot is configured to use the WiFi channels used in the United States. Countries that use WiFi channels on their WiFi router that are not part of the normal channels used in the US will need to set their country code which is explained later or the robot may not see their WiFi router.
 
@@ -142,19 +163,6 @@ Now that you have the correct date you can update the robot to get changes that 
 
     sudo apt-get upgrade
 
-## Doing a clean Shutdown Of the Magni Robot
-
-Congrats, you should now have SSH access to the robot. This means you can now shutdown the Pi properly to avoid [the chance of corrupting the file system](noetic_quick_start_microsd#troubleshooting).
-
-You can shutdown the Magni in a clean way using these commands and actions:
-
-* Turn off the motor power by releasing the red ESTOP switch on the right and the RED motor power led will go off.
-* In a SSH console session type ```sudo shutdown -h now```
-* After the green light on the Pi stops flashing turn off the main power using the BLACK switch (usually less than a minute)
-
-If your Magni is a Magni silver and you have the sonar board you can always use the SW1 switch by holding it down for a couple seconds. This will lead to a clean shutdown of the host Raspberry Pi CPU.
-
-If you do not have a sonar board you can wire for yourself a reset switch that is normally open and when connected connects pin 31 of P702 on the MCB to pin 30 of that large 50 pin connector.
 
 ## Finding The IP Address
 

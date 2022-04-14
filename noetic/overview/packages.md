@@ -3,7 +3,7 @@ title: "Package Repositories"
 permalink: noetic_package_repositories
 group: overview
 rosver: noetic
-nav_order: 3
+nav_order: 11
 nav_exclude: false
 ---
 
