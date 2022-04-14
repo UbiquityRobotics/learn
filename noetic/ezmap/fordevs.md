@@ -33,21 +33,20 @@ Joysticks for remote control are always present and offer a few different modes:
 
 Plugins usually fit into two groups: windows or widgets. Widgets appear as buttons on the screen and usually open a specific menu or run an action. 
 
-#### Required:
+#### Default:
 
-- ![settings.svg](assets/ezmap/settings.svg) Settings
-- ![viewswitch_landscape.svg](assets/ezmap/viewswitch_landscape.svg) View Switch
+- <img src="assets/ezmap/settings.svg" alt="" width="70"> Settings
+- <img src="assets/ezmap/viewswitch_landscape.svg" alt="" width="70"> View Switch
 
 #### Optional:
 
-- ![100.svg](assets/ezmap/100.svg) Battery
-- ![calibrations.svg](assets/ezmap/calibrations.svg) Calibrations
-- ![record_off.svg](assets/ezmap/record_off.svg) Telemetry Record
-- ![photo.svg](assets/ezmap/photo.svg) Photo
-
+- <img src="assets/ezmap/100.svg" alt="" width="70"> Battery
+- <img src="assets/ezmap/calibrations.svg" alt="" width="70"> Calibrations
+- <img src="assets/ezmap/record_off.svg" alt="" width="70"> Telemetry Record
+- <img src="assets/ezmap/photo.svg" alt="" width="70"> Photo
 
 ---
 
 The same installed widgets will also appear on the portrait mode button bar.
 
-<img src="/assets/ezmap/portrait.png" alt="" width="250">
+<img src="assets/ezmap/portrait.png" alt="" width="250">
