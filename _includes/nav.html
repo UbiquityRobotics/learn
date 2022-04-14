@@ -49,16 +49,13 @@ window.onload = function() {
     //disable rosdistro switch if pages don't exist
     let currentpage = get_generic_href();
     if(currentpage != null){
-        currentpage = currentpage.split("/")[3];
+        currentpage = currentpage.split("/").at(-1);
         for (i in rosvers) {
 
             if(window.location.href.includes(rosvers[i]))
                 continue;
 
             let possible_redirect = currentpage.replace("ROSDISTRO",rosvers[i]);
-
-            console.log(possible_redirect)
-
             if(!allpages.includes(possible_redirect)){
                 let button = document.getElementById("button_"+rosvers[i]);
                 let buttonlabel = document.getElementById("button_"+rosvers[i]+"_label");

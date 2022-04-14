@@ -19,7 +19,7 @@ We are not in this section discussing purely virtual simulation tools but those 
 
 Your ```workstation``` may be a Ubuntu Linux system of your own such as a desktop or laptop computer, or you can use a virtual machine as described below.
 
-### Native Linux machine
+## Native Linux machine
 
 If you have a native machine running the an Ubuntu LTS you should be able to install ROS on it and link it to your robot.
 
@@ -29,7 +29,7 @@ Once you have a working Ubuntu Linux installation [you can install ROS](noetic_q
 
 **WARNING: Make sure you have the correct Ubuntu LTS for the ROS version you'll be installing.**
 
-### Virtual machine
+## Virtual machine
 
 You can setup a Linux VirtualBox to communicate with the Magni robot to work around the dedicated Ubuntu machine requirement.
 
@@ -69,7 +69,7 @@ Make sure to install the correct version that's compatible with the [image you d
 
 Next, add the [Ubiquity package repository](https://packages.ubiquityrobotics.com/) to add Magni packages to your apt installer.
 
-### Setup Environment
+## Setup Environment
 
 On the workstation, we want to make sure that we have zeroconf networking enabled:
 
@@ -121,7 +121,7 @@ To make this environment variable persistent, we append its setting to the file 
     echo "export ROS_MASTER_URI=http://<robot_ip>:11311" >> ~/.bashrc
     echo "export ROS_IP=<workstation_ip>" >> ~/.bashrc
 
-### Synchronize Magni Time To The Workstation Time
+## Synchronize Magni & Workstation Time
 
 When using the robot as the master ROS node the workstation will need to use the same time as the robot or information on the ROS topics will not be recognized properly.  If your laptop and Magni are set properly you should be able to check the time on both at the same time and verify that they are the same.  The process below is to be used only if that fails,
 perhaps due to NTP config changes that have been done on your laptop or the Magni.
@@ -145,7 +145,7 @@ In order to set date and time to your timezone, use command:
 
     sudo dpkg-reconfigure tzdata
 
-### Test the connection
+## Test the connection
 
   Verify that ROS is running and you are connected. On the workstation type:
 
