@@ -41,38 +41,34 @@ function redirect(version){
 window.onload = function() {
 
     //figure out what pages exist
-    // const regex = "\/[a-zA-Z0-9]*_.*";
-    // let list = document.getElementsByClassName("navbarentry");
-    // for (let i = 0; i < list.length; i++) {
-    //     let found = list[i].innerHTML.match(regex);
+    let list = document.getElementsByClassName("navbarentry");
+    for (let i = 0; i < list.length; i++) {
+        allpages.push(list[i].innerHTML.split('\n').join('').trim());
+    }
 
-    //     if(found == null)
-    //         continue;
+    //disable rosdistro switch if pages don't exist
+    let currentpage = get_generic_href();
+    if(currentpage != null){
+        currentpage = currentpage.split("/")[3];
+        for (i in rosvers) {
 
-    //     found = found.toString().substring(1).split("\"")[0];
-    //     allpages.push(found);
-    // }
+            if(window.location.href.includes(rosvers[i]))
+                continue;
 
-    // let currentpage = get_generic_href();
-    // if(currentpage != null){
-    //     currentpage = currentpage.split("/")[3];
-    //     for (i in rosvers) {
+            let possible_redirect = currentpage.replace("ROSDISTRO",rosvers[i]);
 
-    //         if(window.location.href.includes(rosvers[i]))
-    //             continue;
+            console.log(possible_redirect)
 
-    //         let possible_redirect = currentpage.replace("ROSDISTRO",rosvers[i]);
+            if(!allpages.includes(possible_redirect)){
+                let button = document.getElementById("button_"+rosvers[i]);
+                let buttonlabel = document.getElementById("button_"+rosvers[i]+"_label");
 
-    //         if(!allpages.includes(possible_redirect)){
-    //             let button = document.getElementById("button_"+rosvers[i]);
-    //             let buttonlabel = document.getElementById("button_"+rosvers[i]+"_label");
-
-    //             button.disabled = true;
-    //             button.style.opacity = "0.3"
-    //             buttonlabel.style.opacity = "0.3"
-    //         }
-    //     }
-    // }
+                button.disabled = true;
+                button.style.opacity = "0.2"
+                buttonlabel.style.opacity = "0.2"
+            }
+        }
+    }
 
     //hide irrelevant ros versions in the navbar
     let url = window.location.href;
@@ -92,24 +88,13 @@ window.onload = function() {
 {%- assign groups = "overview|magni silver (gen 5)|quick start|conveyorbot|ez-map" | split: "|" %}
 {%- assign nav = site.pages | sort:"nav_order" %}
 
-{%- for item in nav %}
-        {%- if item.nav_exclude == true and item.name != "README.md" %}
+{%- for nav_item in nav %}
+        {%- if nav_item.nav_exclude == true and nav_item.name != "README.md" %}
 
-            {%- if item.url != page.url %}
-                <div class="{{ item.rosver }}">
-                    <ul style="display: none">
-                        <li class="toctree-l1 navbarentry">
-                            <a class="reference internal" href="{{ item.url | absolute_url}}">{{ item.title }}</a>
-                        </li>
-                    </ul>
-                </div>     
-
-            {%- else %}
-
-                <div class="{{ item.rosver }}">
+            {%- if nav_item.url == page.url %}
+                <div class="{{ nav_item.rosver }}">
                     {%- include toc.html html=content sanitize=true h_max=2 item_class="toctree-l%level%" title=item.title %}
                 </div>
-
             {%- endif %}
 
     {%- endif %}
@@ -127,7 +112,7 @@ window.onload = function() {
 
                 {%- else %}
                      <ul>
-                        <li class="toctree-l1 navbarentry">
+                        <li class="toctree-l1">
                             <a class="reference internal" href="{{ nav_item.url | absolute_url}}">{{ nav_item.title }}</a>
                         </li>
                     </ul>
@@ -137,5 +122,14 @@ window.onload = function() {
 
         {%- endif %}
     {%- endfor %}
-
 {%- endfor %}
+
+{%- for nav_item in nav %}
+    {%- if nav_item.name != "README.md" %}
+        <div class="navbarentry" style="display: none">
+            {{ nav_item.permalink }}
+        </div>
+    {%- endif %}
+{%- endfor %}
+
+
