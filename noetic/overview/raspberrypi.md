@@ -115,17 +115,7 @@ connect to 5V because it is for 3.3 volt maximum input.
 
 ### The Sonar Board
 
-There are many other GPIO lines used for the sensor board.   If the sensor board is not in use you may ensure the configuration is not trying to use the Sonar board and then the GPIO lines would be available for your own use.   
-To use the lines you must disable the sensors. As root you will need to edit robot.yaml file.
-
-`sudo nano /etc/ubiquity/robot.yaml`  
-
-In the robot.yaml file be sure the sonars: line is set to  None as below and if you see something other than None you need to comment out that line as shown using pound sign.   Just to be clear:  IF you set sonars: to None the sonar board will not be used although the leds and buttons explained earlier in this page may still be of value to you.   
-```
-# Robot Configuration  
-sonars: None  
-# sonars: 'pi_sonar_v1'
-```
+There are many other GPIO lines used for the sensor board.   If the sensor board is not in use you may ensure the configuration is not trying to use the Sonar board and then the GPIO lines would be available for your own use. To use the lines you must [disable the sensors](noetic_magnisilver_sonars#enable-sonar-board-to-run-in-robotyaml-file).
 
 The Sonar Board uses many GPIO lines that are shown the table below and again the pin numbers on P701 and P702 are the same for the first 40 pins.
 

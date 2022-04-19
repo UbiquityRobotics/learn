@@ -27,6 +27,6 @@ We currently support two LiDARs:
 
 ## Extras: RPLIDAR A1
 
-While not officialy supported, many users of the magni have set their robot up with the popular RPLidar from SlamTec. The official driver for it can be found [here](http://wiki.ros.org/rplidar).
+While not officialy supported, many users of the magni have set their robot up with the popular RPLidar from SlamTec. 
 
-The purpose of this note here is that you may need to adjust the lidar's TF frame ("laser" in the magni_description urdf file) to turn it upside down to conform to usual standards, for use in e.g. EZ-Map and similar in case your unit has this issue. Not relevant for the R6 units.
+See how to set up [mapping and navigation with it](noetic_quick_start_navigation).
