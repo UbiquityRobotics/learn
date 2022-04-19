@@ -17,15 +17,13 @@ An added advantage of not including batteries is that the robot accepts differen
 
 ## Specific Qualified Lead Acid Batteries
 
-The robot requires 2X 12V lead acid style batteries and typically we recommend one of the choices in this section.
+The robot requires **2X 12V** lead acid style batteries and typically we recommend one of the choices in this section.
 
-1250 or a 1255 sized battery. Typical capacity 4-6 Ah capacities provides around 4 hours of endurance. Used when portability of the robot is at a premium - for example if you are travelling by air with the robot.
-
-1270 sized battery. Typical capacity 7AH - 10 Ah. The preferred and most common choice. Usually provides 7-8 hours of continuous use with a typical duty cycle. This size battery makes the robot still light enough to lift.
-
-12350 size. Typical capacity - 30-35 Ah usually much bigger (and heavier) than most applications demand - recommended only for those who must have extraordinary endurance - typicaly 24 hours or more of continuous use. This sized battery makes the robot sufficiently heavy that it will be difficult for most users to lift.
-
-In all cases we recommend a non-spill-able, deep cycle, sealed lead acid battery of either a Gel type or AGM type - although the robot can accept any type of battery pack with a voltage in the range of 22.5V - 30V.
+| Battery Size      | Capacity (Ah)  | Runtime (hours)  | Notes |
+| ---------------- | ---------------- |---------------- |----- |
+| 1250/1255  | 4-6      |      3-4		 |	Used when portability of the robot is at a premium - for example if you are travelling by air with the robot. |
+| 1270  		  | 7-10    |   6-8  	 	 |	This size battery makes the robot still light enough to lift. |
+| 12350  		  | 30-35     |   24+  	 	 |	Recommended only for those who must have extraordinary endurance. This sized battery makes the robot sufficiently heavy that it will be difficult for most users to lift. |
 
 The provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
 
