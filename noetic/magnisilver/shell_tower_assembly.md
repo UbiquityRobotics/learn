@@ -15,7 +15,7 @@ nav_exclude: false
 
 **②** It is assumed that Magni base robot is already [unboxed and assembled](noetic_quickstart_unboxing). 
 
-**③** The sonar board also has to be mounted mounted [as described here](noetic_quick_start_sensors#sonars).
+**③** The sonar board also has to be mounted mounted [as described here](noetic_magnisilver_sonars).
 
 **④** **🛑 ALWAYS DISCONNECT THE CABLE FROM THE BATTERIES BEFORE DOING ANYTHING WITH ELECTRONICS 🛑** The most important thing to note, is that you always have to have the batteries physically disconnected, while you are doing anything with the cables or electronics to prevent any short circuits to the main PCB board. Turning off the robot with the provided main switches is not enough. **Failing to do this can result in injuries and/or fried electronics!**
 
@@ -327,9 +327,18 @@ If everything went well touch the camera stream to exit and shutdown the RPI, wa
  
         sudo nano /etc/ubiquity/robot.yaml
     
-    And the lidar position should be changed to the proper one. In this tutorial the lidar was mounted on the left side of the shell. Position of the camera should be downward
+And the lidar position should be changed to the proper one. In this tutorial the lidar was mounted on the left side of the shell. Position of the camera should be downward. Check for lidar and camera extrinsics files in two places with following priorities:
 
-        lidar: {'position' : 'shell_left'} # possible: none, top_plate, shell_left, shell_right, shell_center, tower_center
+1.) In `~/.ros/extrinsics/<SENSOR>_extrinsics_<POSITION>.yaml`
+
+2.) In package `magni_description/extrinsics/<SENSOR>_extrinsics_<POSITION>.yaml`
+
+Where <SENSOR> is either "camera" or "lidar" and <POSITION> is an arbitrary string with which the extrinsics file is identified:
+
+```
+raspicam_position: 'forward' # to disable insert "None"
+lidar_position : 'top_plate'  # to disable insert "None"
+```
 
 
 **⑭** You can now reconnect the battery, power up the robot and begin using it. Remember to every time in the future you need to reconnect something first disconnect the red battery connector. The Conveyorbot assembly is now complete.
