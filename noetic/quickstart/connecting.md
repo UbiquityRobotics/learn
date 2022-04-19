@@ -70,7 +70,7 @@ If you do not have the sonar board the pins to the 50 pin P702 are available to 
 
 ## Connecting the robot to your local network
 
-Of course, as the robot is delivered it has no connection to your local network. Because of this, the robot has its own network (called an access point or "AP mode") that enables you to connect to it directly, as described above. For example, you can drive the robot with our old [Android Robot Commander app](noetic_robot_commander). You can use AP mode to connect directly to the robot from a workstation, to run ROS commands such as keyboard teleoperation. 
+Of course, as the robot is delivered it has no connection to your local network. Because of this, the robot has its own network (called an access point or "AP mode") that enables you to connect to it directly, as described above. For example, you can drive the robot with our old [Android Robot Commander app](robot_commander). You can use AP mode to connect directly to the robot from a workstation, to run ROS commands such as keyboard teleoperation. 
 
 However, in AP mode, the robot cannot access the Internet. This is what we'll be fixing in this section.
 

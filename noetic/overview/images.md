@@ -1,5 +1,5 @@
 ---
-title: "Raspberry Pi Image Downloads"
+title: "Image Downloads"
 permalink: noetic_pi_image_downloads
 group: overview
 rosver: noetic

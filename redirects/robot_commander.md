@@ -1,9 +1,6 @@
 ---
-title: "Workstation Setup"
-permalink: noetic_robot_commander
-group: "quick start"
-rosver: noetic
-nav_order: 1
+title: "Robot Commander"
+permalink: robot_commander
 nav_exclude: true
 --- 
 

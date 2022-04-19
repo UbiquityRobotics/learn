@@ -1,15 +1,17 @@
 ---
-title: "Troubleshooting"
-permalink: noetic_quick_start_troubleshooting
-group: "quick start"
+title: "Diagnostics & Troubleshooting"
+permalink: noetic_magni_silver_diagnostics_and_troubleshooting
+group: "magni silver (gen 5)"
 rosver: noetic
 nav_order: 11
 nav_exclude: false
 ---
 
-# Troubleshooting
+# Diagnostics & Troubleshooting
 
 This page is a collection of troubleshooting tips and pointers to things to be verified in the case that the robot does not seem to be operating properly for even simple movement commands.
+
+See the [Tips and Tricks page](noetic_quick_start_tips_and_tricks) for software tips on debugging your robot.
 
 For most of these operations you will need to have connected to the robot using ssh through either the robot's built in HotSpot or through a hard Ethernet connection to your workstation or laptop on the same network as the robot.
 
@@ -21,30 +23,71 @@ This page also has some information on other forms of troubleshooting software w
 
 Below are some other locations on in our documents that may help troubleshoot issues not discussed in enough detail on this page:
 
-* [Magni Verification Tests](noetic_quick_start_verification)  
+* [Magni Verification Tests](noetic_magni_silver_verification)  
 * [Fiducial Follow or Localization](https://forum.ubiquityrobotics.com/t/troubleshooting-procedure-for-fiducial-localization-problems/134)   
 * [Magni Does Not Move](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
 
-## Finding Robot Firmware Version Info
+## Motor And Wheel Encoders
 
-Should you have to get back to report behavior issues with the robot where the robot can move that means a great deal of the system is operational.  It is important to report to the support group the firmware version and its date which is done as follows if the host Raspberry Pi cpu is able to communicate with the main MCB board.
+We limit the motor speed by default to 1 M/sec.  It is possible to make this faster but perhaps contact us for guidance.
 
-    rostopic echo /diagnostics | grep -A 1  'Firmware [DV]'
+The standard motor/wheel unit we ship have these characteristics
 
-Report the version of the MCB main board if any tests indicate it has a fault.
+    - 3 phase brushless motors with internal gearing.
+    - The Wheels are spaced 0.33 meters apart.
+    - The wheels have a circumference of 0.64 meters
+    - The 3 phase magnetic encoders produce 43 pulses each phase per revolution
+    - We use both edges of the 3 non-overlaping phases for 258 tics per rev
+    - This translates to about 2.5mm as the rough linear travel per enc tick
+    - This also translates to 1.4 degrees wheel rotation per encoder tick
 
+### Verification Of Wheel Encoder Operation
 
-## Troubleshooting Lack Of Robot Movement
+Here is how to verify the wheel encoders work on the robot.  This may be of use for certain hardware failures that may be due to wheel encoder failure.
 
-The most basic way to do a test to verify the robot can move is to be on an SSH console window on the robot and see if you can use keyboard to control the robot at all where ```Forward``` is just tapping the ```i``` key.  
+Start with the robot powered off.  Raise the robot front wheels from touching the floor perhaps using block(s) of wood or other objects.   Turn on the robot power and then turn off the motor power by pressing in the RED switch so the large RED led is off and thus motor power is off.
 
-    rosrun teleop_twist_keyboard telelop_twist_keyboard.py
+We are going to look at the robots readings for Wheel Odometry which are entirely determined by reading the wheel encoders and tracking where the robot should be if the wheels rotated any which way.
 
-Before we dig into some detailed troubleshooting below on lack of movement be aware you can also review some key high level reasons for lack of movement that we had in a post on our forum from some time back that you should review just in case it is one of these issue then this page will elaborate.    
+In an SSH window to the robot type  ```rosrun tf tf_echo odom base_link```
+This produces a repeating display with robot Translation and with robot Rotations where rotations are given in 3 ways.  
 
-Feel free to read that post if this page does not resolve your problem quickly.   
-Older troubleshooting post:  [Magni Does Not Move issue on our forum](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
+We will focus on the last line that says  ```in RPY (degree)  [0.000, 0.000, 0.000]```   The third number is the rotation about the Z (up) axis that the robot calculates from wheel encoder tics as measured in degrees.  The Z axis rotation measures positive for a rotation to the left using standard robot axis definitions.
 
+If you rotate the left wheel 1/2 of a rotation as if that wheel is moving forward then the Z rotation number will get to around 50 (degrees).  Rotate that same wheel back to where it started in reverse rotation and Z rotation goes back to about 0.
+
+Test the right wheel in a similar way where rotating as if moving forward will generate a Z rotation of around -50 degrees.   These are approximate values.
+
+If you have the robot back on the floor you can do a similar test starting from all zero numbers after a reboot and roll the robot forward 0.1 meters and then see the  Translation 1st number go to 0.1 Meters where X is forward.   
+
+The 6 small gauge wires out of the motor cables are the wheel encoder and power to the wheel encoder wires in case you are curious.
+
+## Motor Controller Board Pinouts
+
+The pinouts for the many connectors on the main Motor Controller Board can be found [HERE](https://learn.ubiquityrobotics.com/Magni_MCB_pinout.pdf).
+
+## Motor Controller Revisions
+
+You can see and download the released MCB board firmware revisions [HERE](https://learn.ubiquityrobotics.com/firmware-upgrade)
+
+A list of firmware and master controller board revisions can be found [HERE](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/Firmware_and_Hardware_Revisions.md).
+
+## The MCB Serial Protocol and Commands
+A baud rate of 38400 is used with one stop bit for communications with between the host cpu (normally raspberry Pi) and the MCB, Motor Control Board.
+
+The Motor Control Board, sometimes called main control board, uses a protocol where a packet with checksum is sent and if a reply is required the reply will come back in the same binary protocol.
+
+By default the raspberry pi default host cpu single serial port on the 40 pin connector.  The MCB constantly transmits status and this goes to the 40 pin connector pin 10 which is the host Receive.  The raspberry pi host sends commands on it's Transmit using 3.3V signals and this arrives at the MCB on pin 8 of the 40 pin connector.
+
+Although the MCB sends status immediately on power up the host takes sometimes a minute or so to start all the nodes and then start sending commands to the MCB.  On revision 5.2 and later boards there are two blue leds that show both the directions of serial traffic.  Magni will not really be running till both of these are seen to be blinking very fast.
+
+For MCB boards prior to revision 5.2 the MCB serial conversion circuits required a 3.3V power supply to appear on pin 1 of the 40 pin connector.
+
+#### MCB Serial Protocol Details
+For details see  [The Magni Serial Protocol Spec](https://github.com/UbiquityRobotics/ubiquity_motor/blob/indigo-devel/Serial_Protocol.md)
+
+#### Standalone Test Program To Control The Magni_MCB
+A standalone test program used in our tests and development. You can get the source to this program on github  [HERE](https://github.com/UbiquityRobotics/ubiquity_motor/blob/kinetic-devel/scripts/test_motor_board.py)
 
 ### The Battery
 

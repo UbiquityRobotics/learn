@@ -1,7 +1,7 @@
 ---
 title: "Verification"
-permalink: noetic_quick_start_verification
-group: "quick start"
+permalink: noetic_magni_silver_verification
+group: "magni silver (gen 5)"
 rosver: noetic
 nav_order: 10
 nav_exclude: false

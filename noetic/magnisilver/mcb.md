@@ -144,26 +144,12 @@ To specify a different serial port such as one plugged into usb:
 
 <hr>
 
-## PC Board Revision Identification
-This page describes how to identify PC board Revisions used in the Magni robot.
+## Board Revision Identification
+This page describes how to identify board Revisions used in the Magni robot.
 
-- Raspberry Pi Host Computer
+- [Raspberry Pi Host Computer, click here to see Pi versions/revisions](noetic_overview_raspberrypi#versions-and-revisions)
 - Main Control Board (MCB)
 - Switch board
-
-### Raspberry Pi Host Computer
-
-Starting in mid 2020 we started to ship the Raspberry Pi 4 host computer that is inserted into the MCB board so that only the bottom is visible and even that is hard to see due to the robot chassis.  The easiest way to tell which general Raspberry Pi you have (3 vs 4) is to look at the USB and Ethernet jacks as follows.
-- Pi 4 middle 2 jacks use blue plastic for USB 3.0 ability.
-- Pi 4 Ethernet jack will be the top metal jack (bottom on Pi3)
-- Pi 3 will have a large square 1.2cm black chip on the bottom of the board
-
-The best identification is to use this linux command from an ssh command line shell into the robot which will also show the rev of Pi3 or Pi4
-
-    cat /sys/firmware/devicetree/base/model
-
-- Typical Pi3 reply:  `Raspberry Pi 3 Model B Plus Rev 1.3`
-- Typical Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.2`
 
 ### Main Control Board Identification
 

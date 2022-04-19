@@ -55,7 +55,7 @@ motor cable that comes from the nearest side of the main PC board to that motor.
 
 ![Front](assets/unboxing/MagniUnboxedWithoutTopBrackets.jpg)
 
-The picture above shows a Magni without the front bracket.  In this picture the Raspberry Pi camera cable is attached to the Raspberry Pi itself which is part of setup for the camera.   Decide which camera configuration you will want on your Magni.    You should now take a detour to look at [**THIS_PAGE**](https://learn.ubiquityrobotics.com/camera_sensors)  and decide how you want to mount the camera.    Once you decide, use the camera setup page in combination with looking at the pictures on this page about bracket mounting.
+The picture above shows a Magni without the front bracket.  In this picture the Raspberry Pi camera cable is attached to the Raspberry Pi itself which is part of setup for the camera. Decide which camera configuration you will want on your Magni. You should now take a detour to look at [**THIS_PAGE**](noetic_magnisilver_camera)  and decide how you want to mount the camera. Once you decide, use the camera setup page in combination with looking at the pictures on this page about bracket mounting.
 
 ![](assets/unboxing/MagniUnboxedAttachingTopFrontBracket.jpg)
 Front Bracket
@@ -137,7 +137,5 @@ Note that the countersunk holes should be on the top.
 ## Power Switches
 
 Now you can turn your robot on by pressing the ON switch (the one coloured BLACK) and follow [the guide on how to connect to it](noetic_quick_start_connecting).
-
-If you need to install any sensors (e.g. camera, sonars), you can check [the guide for that](noetic_quick_start_sensors).
 
 <img src="assets/Magni_Front_View_2.jpg">
