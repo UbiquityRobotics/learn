@@ -52,6 +52,8 @@ Older troubleshooting post:  [Magni Does Not Move issue on our forum](https://fo
 
 By FAR the number 1 issue we see time and again is a weak or discharged battery. We have protections to shutdown things but as the battery gets weak many other issues show up.  We are continuously making strides to better inform customers of dangerously low batteries. In versions of the product shipping in 2022 we have the battery state indicated on the recently added OLED display to greatly help make this issue very visible to users of the robot.  The battery voltage and if it is too low will show up in 2022 current systems.
 
+If your robot has a working OLED display the battery voltage should be indicated. Also, it will indicate if the motor_node is active. This will indicate if the battery or some issue with the MCB might be the problem.
+
 If you are 100% sure your battery is delivering over 23volts to the MCB board large power connectors as the robot runs then you can skip this section and move to the next section.
 
 Make sure your battery is installed correctly, with all the contacts
