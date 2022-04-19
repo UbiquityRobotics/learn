@@ -26,7 +26,7 @@ Each page needs to have the following defined at the top:
 
 `nav_exclude`: if set to true the page will be excluded from the navbar
 
-Navbar groups are hardcoded in https://github.com/MoffKalast/learn/blob/84dd6acac33f9ea9bb8d7f94b40e21a6feabd12d/_includes/nav.html#L46 for simplicity and to keep the order correct.
+Navbar groups are hardcoded in https://github.com/MoffKalast/learn/blob/adc93c3e08533a46f2e0e6f56897eeda89d10612/_includes/nav.html#L85 for simplicity and to keep the order correct.
 
 ## Test Locally
 
