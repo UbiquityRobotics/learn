@@ -20,7 +20,7 @@ The last 3 of the above list will require the robot to have access to the intern
 
 ### Raspberry Pi Image Update
 
-To check or update the full Raspberry Pi image you will have to obtain the image and then burn it to a micro S card using some laptop or workstation you have onhand.  Visit the [Ubiquity Robotics Download](https://downloads.ubiquityrobotics.com/pi.html) page.    ```Updating a full image will lead to loss of any customization you have done.```  Never destroy your old card till you know you have everything on the new image.
+To check or update the full Raspberry Pi image you will have to obtain the image and then burn it to a micro S card using some laptop or workstation you have onhand.  Visit the [Ubiquity Robotics Download](noetic_pi_image_downloads) page.    ```Updating a full image will lead to loss of any customization you have done.```  Never destroy your old card till you know you have everything on the new image.
 
 #### Raspberry Pi 4 Supported on MCB Version 5.2 or later
 

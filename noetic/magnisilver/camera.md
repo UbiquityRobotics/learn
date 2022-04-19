@@ -113,12 +113,12 @@ For this example we will set  'camera_name' in this file to be ```camerahq6mm_20
 
 The camera calibration files are normally placed in ```/home/ubuntu/.ros/camera_info```  so you can put it there along with other cal files.
 
-In some cases you may need this config file also in another default location so put it in both places and modify it both places later as required to avoid having to know the exact reasons each location may be used.  The other folder is ```/opt/ros/kinetic/share/raspicam_node/camera_info```
+In some cases you may need this config file also in another default location so put it in both places and modify it both places later as required to avoid having to know the exact reasons each location may be used.  The other folder is ```/opt/ros/$ROS_DISTRO/share/raspicam_node/camera_info```
 
 ### Possible Changes To The URDF file
 The URDF file is a file that defines where physically each part of the robot is relative to the main 'origin' of the robot which is called ```base_link```.    If you are not requiring precise navigation and can live with errors due to camera placement that are only a cm more or so we suggest you not modify the URDF file as this can be an advanced task.  
 
-The default path to the Magni URDF file, which you should backup for sure if you are going to try to change it, is this path  ```/opt/ros/kinetic/share/magni_description/urdf/magni.urdf.xacro```
+The default path to the Magni URDF file, which you should backup for sure if you are going to try to change it, is this path  ```/opt/ros/$ROS_DISTRO/share/magni_description/urdf/magni.urdf.xacro```
 
 Seek assistance and plan on taking some time to change this but if you do then note that all the things that are likely to change are in one or more sub-sections of that file with the word 'raspicam_mount' and the values to be changed will be the center of the camera as 'origin xyz'  and then 'rpy' which is a 3D space rotational notation too complex for this brief discussion.
 
@@ -127,13 +127,13 @@ This is the most involved of all the changes because it spans many launch files.
 
 I will be mentioning file paths assuming you have not cloned Ubiquity Robotics folders that are for fiducial navigation be because if you do that the files to be created or modified will be in your catkin_ws space.
 
-- Create a new launch file to specify the camera, resolution and frame rate where for example we can call it ```camerahq6mm_2048x1520_10fps.launch``` and this file would by default be located in ```/opt/ros/kinetic/share/raspicam_node/launch``` folder.  You may want to copy over an existing file such as camerav2_1280x960_10fps.launch and give the copy this new name then modify it.   
+- Create a new launch file to specify the camera, resolution and frame rate where for example we can call it ```camerahq6mm_2048x1520_10fps.launch``` and this file would by default be located in ```/opt/ros/$ROS_DISTRO/share/raspicam_node/launch``` folder.  You may want to copy over an existing file such as camerav2_1280x960_10fps.launch and give the copy this new name then modify it.   
 
 Be aware that near the top the parameter ```camera_name``` must be the name that is used inside the config file which in this example was going to be
 
-- A very similar file in the same folder is sometimes needed so create in ```/opt/ros/kinetic/share/raspicam_node/launch``` this similar file where you can copy over the existing camerav2_1280x960.launch to form ```camerahq6mm_2048x1520.launch``` then edit this file to customize it for your new camera.
+- A very similar file in the same folder is sometimes needed so create in ```/opt/ros/$ROS_DISTRO/share/raspicam_node/launch``` this similar file where you can copy over the existing camerav2_1280x960.launch to form ```camerahq6mm_2048x1520.launch``` then edit this file to customize it for your new camera.
 
-- For fiducial recognition we use a package called aruco.  You will need to perhaps save a copy of aruco.launch to aruco_old.launch and edit the file ```/opt/ros/kinetic/share/magni_nav/launch/aruco.launch``` so that instead of references to original camera has new camera.  You must modify the line near the top that has default camerav2_1280x960_10fps.launch in it and use your new launch file which for this example we called ```camerahq6mm_2048x1520_10fps.launch```
+- For fiducial recognition we use a package called aruco.  You will need to perhaps save a copy of aruco.launch to aruco_old.launch and edit the file ```/opt/ros/$ROS_DISTRO/share/magni_nav/launch/aruco.launch``` so that instead of references to original camera has new camera.  You must modify the line near the top that has default camerav2_1280x960_10fps.launch in it and use your new launch file which for this example we called ```camerahq6mm_2048x1520_10fps.launch```
 
 
 ## Extra: USB Cameras

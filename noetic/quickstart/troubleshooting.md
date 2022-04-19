@@ -155,7 +155,7 @@ We have a tool that can be used to figure out if the linux host computer is able
 
     cd ~
     sudo systemctl stop magni-base
-    python /opt/ros/kinetic/lib/ubiquity_motor/test_motor_board.py
+    python /opt/ros/$ROS_DISTRO/lib/ubiquity_motor/test_motor_board.py
 
 This should show a help menu and at that point we know we can open the serial port so then we can read the firmware version using the version command
 
