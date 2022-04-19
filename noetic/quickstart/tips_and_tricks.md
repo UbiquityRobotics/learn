@@ -32,7 +32,7 @@ Instructions for joining your local area network are in the same place.
 
 * The main config file for enabling the raspicam camera and sonars and more can be edited as root and is `/etc/ubiquity/robot.yaml`  Details on this are located in the sections discussing camera and sonars and other sections. Beware that the format is very specific. Do not use tabs and pay attention to where spaces are required.
 
-* Another important configuration file `base.yaml` is found at: `/opt/ros/kinetic/share/magni_bringup/param/base.yaml`. N.B. This file will be rewritten when the base is upgraded, as by apt=get.  The most likely things a user would change are being moved to the above robot.yaml file if not already there.
+* Another important configuration file `base.yaml` is found at: `/opt/ros/$ROS_DISTRO/share/magni_bringup/param/base.yaml`. N.B. This file will be rewritten when the base is upgraded, as by apt=get.  The most likely things a user would change are being moved to the above robot.yaml file if not already there.
 
 * To find the firmware version while the system is running run this then stop
     `rostopic echo /diagnostics`
@@ -54,15 +54,15 @@ Instructions for joining your local area network are in the same place.
 
     To find the version number of the most important ubiquity software, type:
 
-    `dpkg-query --showformat='${Package}\t${Version}\n' --show ros-kinetic-magni-robot ros-kinetic-ubiquity-motor ros-kinetic-fiducials ros-kinetic-raspicam-node ros-kinetic-pi-sonar`
+    `dpkg-query --showformat='${Package}\t${Version}\n' --show ros-$ROS_DISTRO-magni-robot ros-$ROS_DISTRO-ubiquity-motor ros-$ROS_DISTRO-fiducials ros-$ROS_DISTRO-raspicam-node ros-$ROS_DISTRO-pi-sonar`
 
 *  To run magni services after a 'systemctl disable' line as shown above:    `roslaunch magni_bringup base.launch`.
 
-* The launch file used by the magni-base.service is `/opt/ros/kinetic/share/magni_bringup/launch/base.launch`.  
+* The launch file used by the magni-base.service is `/opt/ros/$ROS_DISTRO/share/magni_bringup/launch/base.launch`.  
 This launch file does `rosrun controller_manager spawner ubiquity_velocity_controller ubiquity_joint_publisher`.  
 This invokes the ROS controller_manager; for more detail see `wiki.ros.org/controller_manager`.
 
-* Much magni software will be found in ```/opt/ros/kinetic/share/magni_*``` In particular, magni_demos/launch has ROS launch files.
+* Much magni software will be found in ```/opt/ros/$ROS_DISTRO/share/magni_*``` In particular, magni_demos/launch has ROS launch files.
 
 ## Keeping your battery charged
 

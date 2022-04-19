@@ -91,7 +91,7 @@ The controller is set to be very slow. You can increase the speed by using the (
 
 ### Modify The Logitech Joystick Default Parameters
 
-The Logitech F710 is an approved joystick controller for the Magni robot. The default scale for the joystick is 0 to 1.0. Output values can be found in the file ```/opt/ros/kinetic/share/magni_teleop/param/logitech.yaml```. The values most commonly modified are these:
+The Logitech F710 is an approved joystick controller for the Magni robot. The default scale for the joystick is 0 to 1.0. Output values can be found in the file ```/opt/ros/$ROS_DISTRO/share/magni_teleop/param/logitech.yaml```. The values most commonly modified are these:
 
 * ```scale_linear```     This value controls the maximum velocity the joystick will control for maximum forward or reverse joystick movement when the ```turbo``` button is not pressed.
 
