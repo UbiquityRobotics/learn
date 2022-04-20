@@ -21,9 +21,9 @@ The robot requires **2X 12V** lead acid style batteries and typically we recomme
 
 | Battery Size      | Capacity (Ah)  | Runtime (hours)  | Notes |
 | ---------------- | ---------------- |---------------- |----- |
-| 1250/1255  | 4-6      |      3-4		 |	Used when portability of the robot is at a premium - for example if you are travelling by air with the robot. |
-| 1270  		  | 7-10    |   6-8  	 	 |	This size battery makes the robot still light enough to lift. |
-| 12350  		  | 30-35     |   24+  	 	 |	Recommended only for those who must have extraordinary endurance. This sized battery makes the robot sufficiently heavy that it will be difficult for most users to lift. |
+| 1250/1255  | 4 - 6      |      3 - 4		 |	Used when portability of the robot is at a premium - for example if you are travelling by air with the robot. |
+| 1270  		  | 7 - 10    |   6 - 8  	 	 |	This size battery makes the robot still light enough to lift. |
+| 12350  		  | 30 - 35     |   24+  	 	 |	Recommended only for those who must have extraordinary endurance. This sized battery makes the robot sufficiently heavy that it will be difficult for most users to lift. |
 
 The provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
 
@@ -34,12 +34,12 @@ Below is a table showing ```typical currents``` seen on the positive lead of the
 
 |  Operating State | DC Current in Amps |
 |-------------------------|----------------------|
-|  Stationary robot using the Pi4 with 4GByte and on flat ground with motor power off | 0.4 - 0.45 Amps |
-|  Driving on flat surface with no load at about 0.5 meters/sec  |  0.8 - 0.9 Amps |
-|  Rotating in place with no load (about same as slow driving) | 0.8 Amps |
-|  Stationary on flat ground with power to the motors |  0.5 - 0.6 amps |
-|  Stationary on flat surface but pushing down and back on robot so wheels have to fight to stay in one place but we are not slipping just yet | 1.2 Amps |
-|  Place the robot so it cannot move and apply a great deal of torque to each wheel so the motor controller has to fight to hold the wheels firm.  | 2 - 3 Amps |
+|  Stationary robot using the Pi4 with 4GByte and on flat ground with motor power off | 0.4 - 0.45 |
+|  Driving on flat surface with no load at about 0.5 meters/sec  |  0.8 - 0.9 |
+|  Rotating in place with no load (about same as slow driving) | 0.8 |
+|  Stationary on flat ground with power to the motors |  0.5 - 0.6 |
+|  Stationary on flat surface but pushing down and back on robot so wheels have to fight to stay in one place but we are not slipping just yet | 1.2 |
+|  Place the robot so it cannot move and apply a great deal of torque to each wheel so the motor controller has to fight to hold the wheels firm.  | 2 - 3 |
 
 The instantaneous currents can be well over 10 amps in certain cases but since these are transient cases for stress tests they are not considered useful for battery life calculations.
 
