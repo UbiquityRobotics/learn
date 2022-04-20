@@ -6,4 +6,4 @@ nav_exclude: true
 
 # Unboxing
 
-This page has moved to -> [Software Images](noetic_quickstart_unboxing).
+This page has moved to -> [Unboxing and Assembling a Magni Silver](noetic_quickstart_unboxing).
