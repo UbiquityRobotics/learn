@@ -6,7 +6,7 @@ rosver: noetic
 nav_order: 3
 nav_exclude: false
 ---
-## Shell and Tower assembly instructions
+# Shell and Tower assembly instructions
 
 **Before you begin:**
 
