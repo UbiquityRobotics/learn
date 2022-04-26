@@ -65,6 +65,13 @@ window.onload = function() {
                 buttonlabel.style.opacity = "0.2"
             }
         }
+
+        //scroll nav to correct item
+        document.getElementById(window.location.href.split("#")[0].split("/").at(-1)).scrollIntoView({
+           behavior: 'auto',
+           block: 'end',
+           inline: 'start'
+        });
     }
 
     //hide irrelevant ros versions in the navbar
@@ -113,7 +120,7 @@ window.onload = function() {
 
     {%- for nav_item in nav %}
         {%- if nav_item.group == group and nav_item.nav_exclude != true and nav_item.name != "README.md" %}
-            <div class="{{ nav_item.rosver }}">
+            <div class="{{ nav_item.rosver }}" id="{{ nav_item.permalink }}">
 
                 {%- if nav_item.url == page.url %}
                     {%- include toc.html html=content sanitize=true h_max=2 item_class="toctree-l%level%" title=nav_item.title %}
