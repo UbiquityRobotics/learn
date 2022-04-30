@@ -12,55 +12,30 @@ The Magni robot is normally running all the software for whatever sensors and na
 
 The workstation is setup so the robot is the ROS master and this allows ROS running on the workstation to monitor ROS topics and inspect the state of ROS using command line tools or graphical tools.  
 
-Your ```workstation``` may be a Ubuntu Linux system of your own such as a laptop, or you can use our preconfigured virtual machine in the form of a VirtualBox.  
+Your ```workstation``` may be a Ubuntu Linux system of your own such as a laptop, or a virtual Ubuntu machine running under another system.  
 
-This page discusses connection of your laptop or workstation or the usage of a VirtualBox to control the robot.  If you do not have a linux computer available you can still use a virtual Linux machine to connect to the Magni robot.   
+This page discusses connection of your laptop or workstation.  If you do not have a linux computer available, you can still use a virtual Linux machine to connect to the Magni robot.   
 
 Additional information may be found [here](need_to_know).
 
 ## Reasons A Workstation Comes In Handy
 
-This little section is optional reading to better understand the power of running a workstation.
+This following section is optional, aimed at getting a better understanding of the power of running a workstation.
 
-The robot itself is normally running all hardware drivers for sensors such as any sort of camera or sonar sensors or even Lidar unit. If your system uses any form of navigation then things like  fiducial navigation, gmapping, move_base, move_basic or AMCL all run on the robot itself so they are close to the hardware.    
+The robot itself is normally running all hardware drivers for sensors, such as camera, sonar, or even Lidar. If your system uses any form of navigation, then fiducial navigation, gmapping, move_base, move_basic or AMCL all are run on the robot itself, so they are close to the hardware.    
 
-The prime reason a workstation or virtual machine is required in a system using a Magni is that there so a way to get access through console screens running as SSH terminals seen on the workstation to start, stop and monitor output from software running on the robot.   A second fairly important console screen sort of use for a workstation is that since it will also see all the ROS activity the workstation can monitor ROS topics or other status for ROS at that time.
+The reason a workstation or virtual machine is required in a system using a Magni, is so a way to get access by running a SSH terminals can start, stop and monitor software running on the robot.   A second fairly important console screen use for a workstation is it will also see all the ROS activity the workstation.
 
-A workstation is also used so that graphical tools such as RViz or plotting software can be run on the screen of the workstation.  This is the case if the robot is to do navigation you would then run visual tools such as the RViz environment to see the robot move around or to set goals.  In this mode you could configure RViz to show you the sensors such as our sonar board or even a Lidar unit.   
+A workstation can use graphical tools such as RViz or plotting software.  
 
-Another need for a workstation would be so that you can monitor values in a ROS topic either from command line tools or such as for when you want to do PID tuning it is important to see the PID error values in a graph you would tend to run rqt_plot on the workstation or just run ```image_view``` to see what the raspicam camera is seeing as the robot drives around.
-
-We are not in this section discussing purely virtual simulation tools but those too can be run on a workstation assuming the workstation has a powerful enough configuration.  
-
+A workstation can monitor values in a ROS topic either from command line tools or such as for when you want to do PID tuning it is important to see the PID error values in a graph you would tend to run rqt_plot on the workstation or just run ```image_view``` to see what the raspicam camera is seeing as the robot drives around.
 
 ## Use of your own Linux machine with WiFi
 
-If you have your own Linux laptop already configured with ROS to be running the same ROS release as the robot then you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network.  
+If you have your own Linux laptop already configured with ROS running the same release as the robot, then you can use it to connect to the hotspot on the Magni computer using standard Linux interfaces to connect to a network. (Note since Ubuntu 18.04 the standard method is to use netplan)  
 
 ```Skip ahead to the next major section 'Connecting to the Robot and Logging In' for laptop if you are not going to run a VirtualBox instance.```
 
-
-## Using our out-of-the-box virtual machine workstation
-
-You can setup a Linux VirtualBox to communicate with the Magni robot.  In this case we have a Linux image that is preloaded with a great many ROS tools so this is a nice way to get going fast if you have the resources to be able to run VirtualBox environment.
-
-* Download the appropriate VirtualBox software from [the VirtualBox website](https://www.virtualbox.org/wiki/Downloads) and install it.
-
-*  Download the [Ubiquity Robotics Virtual Machine](https://downloads.ubiquityrobotics.com/vm.html) and save it in VirtualBox's folder for virtual machines.  On Windows this is \Users\<username>\VirtualBox VMs.
-
-* On Windows or MacOS, unzip (decompress) the file you just downloaded. The result will be a single folder with the same name as the zip file.  Inside this folder find the file with the suffix `.vbox`, and double-click it.  This will cause VirtualBox to import the Virtual Machine (the VM) and open the VirtualBox Manager.
-
-* Check the following parameters of the VM:
-
-  * System/Base Memory: at least 2048 MB, why not 4096?
-  * Display/Video Memory: at least 64 MB, why not 128?
-  * Storage: at least 25GB
-  * Network/Adapter 1: Bridged Adapter
-
-* Start the VM. Your user ID is "ubuntu", and the password is "ubuntu".
-Your workstation is ready to use.
-
-In a later section we will explain how to attach the robot to an existing WiFi network and how ROS can take advantage of that to control the robot.
 
 ### Connecting a Virtual Machine
 
