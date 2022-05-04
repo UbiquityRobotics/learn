@@ -9,7 +9,21 @@ nav_exclude: false
 
 # Advanced Documentation
 
-Intended for developers.
+Intended for developers and power users.
+
+## Save locations
+
+EZ-Map saves various files during its operation, with all of them being found in `~/.ros`.
+
+The created maps and their routes are saved as four files:
+* `~/.ros/name.pgm` (map occupancy grid image)
+* `~/.ros/name.yaml` (map metadata)
+* `~/.ros/name_landmarks.yaml` (locations of fiducial landmarks on the map)
+* `~/.ros/name_routes.json` (routes defined on the map)
+
+The web part also stores it's settings config in `~/.ros/web_settings.cfg`.
+
+To move your data from robot to robot simply copy the files into the same directory on the new robot. The maps can be edited using an image editor that supports pgm files (for example Gimp on Linux), whereas the rest of the files can be edited using any text editor.
 
 ## API Reference
 
@@ -77,33 +91,6 @@ Without any plugins default you should only see the window switch (<img src="ass
 
 <img src="assets/ezmap/ezmap_core.png" alt="" width="600"> 
 
-Plugins can add content in 3 main areas: Views, Buttons and Modal windows.
-
-#### Views
-
-Content that takes up the entire screen and can be swapped between by pressing <img src="assets/ezmap/viewswitch_landscape.svg" alt="" width="35">.
-
-The two views included by default are the video streaming screen (by `ezpkg_video_screen`) and the mapping view (by `ezpkg_map_screen`).
-
-<img src="assets/ezmap/view.png" alt="" width="500"> 
-
-#### Buttons
-
-Any of the empty slots can be occupied by additional buttons, with custom functionality when clicked.
-
-The following buttons are included by default:
-
-- <img src="assets/ezmap/100.svg" alt="" width="40"> Battery (`ezpkg_battery_widget`)
-- <img src="assets/ezmap/calibrations.svg" alt="" width="40"> Calibrations (`ezpkg_calibration_widget`)
-- <img src="assets/ezmap/record_off.svg" alt="" width="40"> Telemetry Record (`ezpkg_rosbag_widget`)
-- <img src="assets/ezmap/photo.svg" alt="" width="40"> Photo (`ezpkg_photo_widget`)
-
-#### Modal windows
-
-Typically when a button is pressed, a popup window will open with additional content:
-
-<img src="assets/ezmap/widget.png" alt="" width="500"> 
-
 ## Writing a Plugin
 
 Plugins can be defined as regular ROS packages included in the same catkin workspace as `ezmap_core`, usually `~/catkin_ws/src`.
@@ -126,7 +113,7 @@ The packages already set up to be launched by default can be found in `ezmap_bri
 
 So how does one actually hook into the existing codebase?
 
-At the basic level what you're doing is replacing files that are found in `ezmap_core/ezmap_web/public/`. When a client requests an asset, say `html_modal/modal_4.html` the asset loader will try to find the file with the highest priority, which could be a plugin or the core ezmap_web package as a fallback. There is a long list of empty files named `modal_X.html` in the `html_modal` designed to be fetched by the client, so they can be replaced by plugins.
+At the basic level what you're doing is replacing files that are found in `ezmap_core/ezmap_web/public/` and `ezmap_core/ezpkg_views/public/`. When a client requests an asset, say `html_modal/modal_4.html` the asset loader will try to find the file with the highest priority, which could be a plugin or the core ezmap_web package as a fallback. There is a long list of empty files named `modal_X.html` in the `html_modal` designed to be fetched by the client, so they can be replaced by plugins.
 
 So how come multiple HTML files can be loaded as such? The autoloader handles a custom tag serverside called `includehtml`, which lets you include external html files. Example usage: `<includehtml src="html_modal/modal_video.html"/>` (root of file structure is the `public`folder). Usually not needed by plugins, but it can be used for organization.
 
@@ -148,10 +135,50 @@ For example the `modal_map.html` that's usually replaced by the mapping package 
 <script src="map_globaltriggers.js"></script>
 ```
 
-#### Adding buttons 
+#### Views
 
-TODO
+Plugins can add content in 3 main areas: Views, Buttons and Modal windows.
 
-`ezmap_core/ezpkg_views/public/views/`
+Content that takes up the entire screen and can be swapped between by pressing <img src="assets/ezmap/viewswitch_landscape.svg" alt="" width="35">.
+
+The two views included by default are the video streaming screen (by `ezpkg_video_screen`) and the mapping view (by `ezpkg_map_screen`).
+
+<img src="assets/ezmap/view.png" alt="" width="500"> 
+
+The way to add your own view is to override one of the screen html files by placing an overriding one in `public/views/landscape/` and `public/views/portrait/`. These are replacing the existing dummy declarations in the `ezpkg_views` package.
+
+    <includehtml src="views/landscape/screen_map.html"/>
+    <includehtml src="views/landscape/screen_video.html"/>
+    <includehtml src="views/landscape/screen_0.html"/>
+    <includehtml src="views/landscape/screen_1.html"/>
+    <includehtml src="views/landscape/screen_2.html"/>
+    <includehtml src="views/landscape/screen_3.html"/>
+
+#### Buttons
+
+Any of the empty slots can be occupied by additional buttons, with custom functionality when clicked.
+
+The following buttons are included by default:
+
+- <img src="assets/ezmap/100.svg" alt="" width="40"> Battery (`ezpkg_battery_widget`)
+- <img src="assets/ezmap/calibrations.svg" alt="" width="40"> Calibrations (`ezpkg_calibration_widget`)
+- <img src="assets/ezmap/record_off.svg" alt="" width="40"> Telemetry Record (`ezpkg_rosbag_widget`)
+- <img src="assets/ezmap/photo.svg" alt="" width="40"> Photo (`ezpkg_photo_widget`)
+
+Much like the views, the buttons need to replace the html files in `ezpkg_views`:
+
+- `public/views/buttons_landscape_left`
+- `public/views/buttons_landscape_right`
+- `public/views/buttons_portrait`
+
+Landscape buttons are split into left and right and occupy a fixed position from 0-5, while the portrait buttons will be listed from left to right in increasing order.
 
 <img src="assets/ezmap/buttons.png" alt="" width="600">
+
+#### Modal windows
+
+Typically when a button is pressed, a popup window will open with additional content:
+
+<img src="assets/ezmap/widget.png" alt="" width="500"> 
+
+As previously mentioned the modal declerations need to replace the html files in `public/html_modal/` in `ezmap_web`.

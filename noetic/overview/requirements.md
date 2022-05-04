@@ -23,6 +23,8 @@ To power up the real time clock and make sure robot time is always accurate.
 
 Most of the live administration to the robot is normally done by opening an SSH console to the host computer. As such you need what's likely to be a laptop and a capability to run SSH (via Terminal on Mac and Linux or through puTTY on Windows).
 
+Note: Not required for Conveyorbot, and only wifi capability is needed for EZ-Map.
+
 ### For advanced use:
 
 #### ➤ [Linux compatible computer or virtual machine](noetic_quick_start_workstation)
