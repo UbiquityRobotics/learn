@@ -67,11 +67,14 @@ window.onload = function() {
         }
 
         //scroll nav to correct item
-        document.getElementById(window.location.href.split("#")[0].split("/").at(-1)).scrollIntoView({
-           behavior: 'auto',
-           block: 'center',
-           inline: 'start'
-        });
+        let navelement = document.getElementById(window.location.href.split("#")[0].split("/").at(-1))
+        if (navelement != undefined){
+            navelement.scrollIntoView({
+               behavior: 'auto',
+               block: 'center',
+               inline: 'start'
+            });
+        }
     }
 
     //hide irrelevant ros versions in the navbar
