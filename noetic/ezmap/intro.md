@@ -41,7 +41,7 @@ While those two are supported out of the box, it’s possible to run the suite w
 
 ### Pi Camera
 
-The camera used for remote viewing and fiducial marker detection that should already be included with the Magni, see [the setup instructions page](noetic_magnisilver_camera)) on how to mount it. 
+The camera used for remote viewing and fiducial marker detection that should already be included with the Magni, see [the setup instructions page](noetic_magnisilver_camera) on how to mount it. 
 
 ### EZ-Map software image
 

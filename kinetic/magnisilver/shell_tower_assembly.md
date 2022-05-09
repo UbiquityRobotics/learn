@@ -27,14 +27,18 @@ Here are two videos of how assembly looks like so you know what to expect. All d
 
 
 ## Full BOM of the Conveyorbot (Without base Magni)
+
 ### Bolt BOM
+
   - 3x Grommet 20mm (black rubber to cover lidar holes with)
   - 4x 	M6 x 2-2.5mm thick washers -  temporary replacement for Shell Distancers (2-2.5mm thickness whichever is available)
   - 4x	M3x5mm Cap Socket (4xtouchscreen)
   - 30x	M3x8mm Cap Socket (6xlidar + 12xtouchscreen + 4xfrontp. + 4xsidep.+ 8xbrakes)
   - 2x	M4x8-10mm Thumb Screw (8 or 10 mm whichever is available)
   - 24x	M6x12mm Button Socket (6xtowerangle + 6xshell + 12xshelfs)
+
 ### Electrical BOM
+
   - 1x Touchscreen
   - 1x Emergency switch custom cable (red wires)
   - 1x Power switch custom cable (black wires)
@@ -42,7 +46,9 @@ Here are two videos of how assembly looks like so you know what to expect. All d
   - 1x USB micro cable 1m
   - 2x Flat cable 1m
   - 1x Adhesive Cable clip
+
 ### Mechanical Parts BOM
+
 1. 1x Shell
 2. 1x Lidar Mount
 3. 1x Touchscreen Back Cover
