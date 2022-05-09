@@ -54,6 +54,20 @@ This page explains the GPIO line usage and how to disable features if you need t
 GPIO lines not listed on this page are available for your own usage without any configuration changes to the Magni
 
 
+### GPIO lines required to control the robot
+
+There are a few lines that if you are using our robot you must let our system use these lines even for the base product with no options like sonar board and so on. The lines in the table below are reserved for usage by our ROS motor_node to control the main board called the MCB board from the Host CPU (usually the Pi).
+
+| GPIO  | RasPi Pin |P702 Pin| Default Magni Usage |
+| ------------- |------------- | -------- | --------|
+| 2 | 3 | 3 | I2C bus  Data line (SDA) |
+| 3 | 5 | 5 | I2C bus  Clock line (SCL) |
+| 14 | 8 | 8 | Transmit serial port pin from host to MCB (SIN led on MCB)|
+| 15 | 10 | 10 | Receive serial port pin from MCB to host (SOUT led on MCB) |
+
+For non-Magni users of our image: The serial transmit and receive are always required by the motor_node and we have no mechanism to disable that except disconnecting the MCB and disabling the motor_node [see disabling the magni-base service](noetic_quick_start_microsd#using-our-raspberry-pi-image-without-a-magni).
+
+
 ### Status LED and Switches
 
 There are two GPIO inputs used for switches and two GPIO outputs used to
