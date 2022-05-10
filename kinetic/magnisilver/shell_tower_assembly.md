@@ -284,12 +284,9 @@ What tools will be needed to assemble the Breadcrumb together:
     
     And the lidar position should be changed to the proper one. In this tutorial the lidar was mounted on the left side of the shell. Position of the camera should be "tower"
 
-        # Check for lidar and camera extrinsics files in two places with following priorities:
-        #  1.) in ~/.ros/extrinsics/<SENSOR>_extrinsics_<POSITION>.yaml
-        #  2.) in package magni_description/extrinsics/<SENSOR>_extrinsics_<POSITION>.yaml
-        # where <SENSOR> is either "camera" or "lidar" and <POSITION> is an arbitrary string with which the extrinsics file is identified
-        raspicam_position: 'tower' # to disable insert "None"
-        lidar_position : 'shell_left'  # to disable insert "None"
+        raspicam: {'position' : 'downward'} #possible: none, downward, upward, ahead, forward
+        
+        lidar: {'position' : 'shell_left'} # possible: none, top_plate, shell_left, shell_right, shell_center, tower_center
 
 
 14. You can now reconnect the battery, power up the robot and begin using it. Remember to every time in the future you need to reconnect something first disconnect the red battery connector. The Conveyorbot assembly is now nearly complete.
