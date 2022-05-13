@@ -3,7 +3,7 @@ title: "Camera"
 permalink: kinetic_magnisilver_camera
 group: "magni silver (gen 5)"
 rosver: kinetic
-nav_order: 4
+nav_order: 6
 nav_exclude: false
 --- 
 
