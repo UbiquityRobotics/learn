@@ -3,7 +3,7 @@ title: "Tower and Shell"
 permalink: kinetic_quickstart_shell_tower
 group: "magni silver (gen 5)"
 rosver: kinetic
-nav_order: 3
+nav_order: 5
 nav_exclude: false
 ---
 # Shell and Tower assembly instructions

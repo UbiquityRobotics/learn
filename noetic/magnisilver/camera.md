@@ -3,7 +3,7 @@ title: "Camera"
 permalink: noetic_magnisilver_camera
 group: "magni silver (gen 5)"
 rosver: noetic
-nav_order: 4
+nav_order: 6
 nav_exclude: false
 --- 
 

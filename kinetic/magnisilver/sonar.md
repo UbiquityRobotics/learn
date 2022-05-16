@@ -3,7 +3,7 @@ title: "Sonars"
 permalink: kinetic_magnisilver_sonars
 group: "magni silver (gen 5)"
 rosver: kinetic
-nav_order: 5
+nav_order: 7
 nav_exclude: false
 --- 
 # Sonars

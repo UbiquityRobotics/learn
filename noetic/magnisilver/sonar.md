@@ -3,7 +3,7 @@ title: "Sonars"
 permalink: noetic_magnisilver_sonars
 group: "magni silver (gen 5)"
 rosver: noetic
-nav_order: 5
+nav_order: 7
 nav_exclude: false
 --- 
 # Sonars

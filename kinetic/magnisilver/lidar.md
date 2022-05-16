@@ -3,7 +3,7 @@ title: "LiDAR"
 permalink: kinetic_magnisilver_lidar
 group: "magni silver (gen 5)"
 rosver: kinetic
-nav_order: 6
+nav_order: 8
 nav_exclude: false
 --- 
 
