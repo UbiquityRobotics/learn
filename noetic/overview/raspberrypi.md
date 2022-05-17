@@ -22,25 +22,6 @@ The robot ships with a Raspberry Pi computer, usually the Pi 4 4GB Model.
 Also see the [MCB pin layout](noetic_magnisilver_mcb#full-pcb-layout).
 
 
-## Versions and Revisions
-
-Starting in mid 2020 we started to ship the Raspberry Pi 4 host computer that is inserted into the MCB board so that only the bottom is visible and even that is hard to see due to the robot chassis.  The easiest way to tell which general Raspberry Pi you have (3 vs 4) is to look at the USB and Ethernet jacks as follows.
-- Pi 4 middle 2 jacks use blue plastic for USB 3.0 ability.
-- Pi 4 Ethernet jack will be the top metal jack (bottom on Pi3)
-- Pi 3 will have a large square 1.2cm black chip on the bottom of the board
-
-The best identification is to use this linux command from an ssh command line shell into the robot which will also show the rev of the Pi.
-
-    cat /sys/firmware/devicetree/base/model
-
-- Typical Pi3 reply:  `Raspberry Pi 3 Model B Plus Rev 1.3`
-- Possible Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.1`
-- Possible Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.2`
-- Possible Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.4`
-- Possible Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.5`
-
-NOTE: The Rev 1.4 and 1.5 Pi 4 were released recently and change the way the bootloader behaves, as such they may not be supported by all images.
-
 ## GPIO lines
 
 <H4 style="color:red">You must remove the battery cables when working on the boards because live battery voltage is on the board and on P702!  Powering off the Magni will not prevent the live voltages!</H4>
@@ -159,3 +140,22 @@ Here are 5 more GPIO lines that are not in use at this time that we have plans f
 | 10 | 19  |   GPIO10  SPI0_MOSI |
 | 9 | 21  |   GPIO09  SPI0_MISO |
 | 11 | 23  |   GPIO11  SPI0_CLK |
+
+## Versions and Revisions
+
+Starting in mid 2020 we started to ship the Raspberry Pi 4 host computer that is inserted into the MCB board so that only the bottom is visible and even that is hard to see due to the robot chassis.  The easiest way to tell which general Raspberry Pi you have (3 vs 4) is to look at the USB and Ethernet jacks as follows.
+- Pi 4 middle 2 jacks use blue plastic for USB 3.0 ability.
+- Pi 4 Ethernet jack will be the top metal jack (bottom on Pi3)
+- Pi 3 will have a large square 1.2cm black chip on the bottom of the board
+
+The best identification is to use this linux command from an ssh command line shell into the robot which will also show the rev of the Pi.
+
+    cat /sys/firmware/devicetree/base/model
+
+- Typical Pi3 reply:  `Raspberry Pi 3 Model B Plus Rev 1.3`
+- Possible Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.1`
+- Possible Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.2`
+- Possible Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.4`
+- Possible Pi4 reply:  `Raspberry Pi 4 Model B Rev 1.5`
+
+NOTE: The Rev 1.4 and 1.5 Pi 4 were released recently and change the way the bootloader behaves, as such they may not be supported by all images.

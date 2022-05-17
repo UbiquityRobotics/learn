@@ -11,20 +11,22 @@ nav_exclude: false
 
 A collection of various tips for general software diagnostics, troubleshooting, etc.
 
+Also see [the hardware troubleshooting page](kinetic_magni_silver_diagnostics_and_troubleshooting).
+
 ## Sanity Checks
+
 * When magni is on, the wheels should have strong resistance to movement.  
 
 * The command `sudo systemctl status magni-base`should show that the magni-base service is up and running
 
-* The command `rosnode list` should show `motor_node` and other nodes. The command `rostopic list` should show many ROS topics, including `/battery` and `/cmd_vel`.
+* The command `rosnode list` should show `motor_node` and other nodes. The command `rostopic list` should show many ROS topics, including `/battery_state` and `/cmd_vel`.
 
 * After the command `rosrun teleop_twist_keyboard teleop_twist_keyboard.py`, pressing the 'i' key should move the robot.
 
 * To change the robot's hostname (a must if you will ever have a second robot), see the instructions in [Connecting the Robot](connect_network).
 Instructions for joining your local area network are in the same place.
 
-
-* To check the battery level type: `rostopic echo /battery`
+* To check the battery level type: `rostopic echo /battery_state`
 
   This should show you various information about the battery. If the battery voltage is somewhere between 21-28V that would be normal. Obviously the lower the voltage the less charge the batteries have.
 
@@ -64,28 +66,9 @@ This invokes the ROS controller_manager; for more detail see `wiki.ros.org/contr
 
 * Much magni software will be found in ```/opt/ros/$ROS_DISTRO/share/magni_*``` In particular, magni_demos/launch has ROS launch files.
 
-## Keeping your battery charged
+## Rviz Troubleshooting
 
-By FAR the number 1 issue we see time and again is a weak or discharged battery. We have protections to shutdown things but as the battery gets weak many other issues show up.  We are continuously making strides to better inform customers of dangerously low batteries. In versions of the product shipping in 2022 we have the battery state indicated on the recently added OLED display to greatly help make this issue very visible to users of the robot.  The battery voltage and if it is too low will show up in 2022 current systems.
-
-If you are 100% sure your battery is delivering over 23 volts to the MCB board large power connectors as the robot runs then you can skip this section and move to the next section.
-
-Make sure your battery is installed correctly, with all the contacts
-fully attached and the batteries are fully charged.
-A pair of fully charged Lead Acid batteries should give around
-26-27V - if you don’t have a voltmeter and the robot has enough charge to run then the robot can self report
-battery voltage which is covered later on in this message (point 5).
-
-A good way to make sure the batteries are fully charged is by
-plugging in the provided charger. If it switches off automatically
-then the the batteries are fully charged.
-
-Make sure the 14 pin connector that connects the switch board to the main board has not pulled out and if it has push it in again.
-
-Make sure that both push buttons on the front of the robot are out
-all the way (the red push button de-energizes the motor circuit
-as an emergency stop). Both blue and red LED on the small ```switch board``` PCB that has the switches should be illuminated.
-
+Some users have reported that, when running on a virtual machine workstation, it is necessary to turn off hardware acceleration.
 
 ## Finding Robot Firmware Version Info
 
@@ -107,7 +90,9 @@ Feel free to read that post if this page does not resolve your problem quickly.
 Older troubleshooting post:  [Magni Does Not Move issue on our forum](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
 
 ## Guidelines for Usage Of The I2C Bus
+
 #### The I2C devices Ubiquity Robotics reserves:
+
 Addresses given in 7-bit form so on the I2C bus they appear shifted up by 1 bit.
 
 | | |
@@ -127,6 +112,7 @@ Addresses given in 7-bit form so on the I2C bus they appear shifted up by 1 bit.
 
 
 #### Tips and Guidelines For any I2C usage On the Magni Platform:
+
 The I2C is the main 3.3V Raspberry Pi I2C on pins 3 and 5 with Raspberry Pi as the master.
 The Rev 5.0 board has a 4-pin jack that brings out I2C and 3.3V with a ground.
 

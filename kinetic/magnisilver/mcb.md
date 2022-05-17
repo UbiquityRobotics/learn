@@ -149,7 +149,7 @@ This page describes how to identify board Revisions used in the Magni robot.
 
 - [Raspberry Pi Host Computer, click here to see Pi versions/revisions](kinetic_overview_raspberrypi#versions-and-revisions)
 - Main Control Board (MCB)
-- Switch board
+- Switch Board (ESTOP & Power)
 
 ### Main Control Board Identification
 
@@ -224,12 +224,12 @@ THE REV 4.7 BOARD WAS A PRE-PRODUCTION BOARD FOR EVALUATION
 " />  
 
 
-### The Power Switch Board Revisions
+## Switch Board (ESTOP & Power) Revision Identification
 
 There were several versions of switch boards from pre-production through first shipment of units using the rev 4.9 MCB. The revision number only started to appear on rev 2.0 switch boards shipped at the time of the rev 5.0 MCB boards.
 
 
-#### Switch Boards With Remote Switch Connectors
+### Switch Boards With Remote Switch Connectors
 
 In order to support user needs to place the main power switch and/or the ESTOP switch in a location that is on their robot cover or perhaps is more accessible due to the customer physical additions we developed the revision 2.2 switch board seen below
 
@@ -247,7 +247,7 @@ For either ESTOP switch or Main Power switch we ship one jumper that can be modi
     Plastic Housing:  Molex 0009501021.  Digi-Key Part Num WM18813-ND
     Female Pins:      Molex 0008701031.  Digi-Key part Num WM18820CT-ND
 
-#### Switch Boards To Support Rev 5.x MCB Boards
+### Switch Boards To Support Rev 5.x MCB Boards
 
 * The main thing to watch for is if the board has 3 resistors it is old for rev 4.9 or earlier MCB boards.
 
@@ -258,7 +258,7 @@ For either ESTOP switch or Main Power switch we ship one jumper that can be modi
 <img src="assets/programming_your_robot/MagniIdentificationOfSwitchBoards.jpg
 " />  
 
-#### Very early pre-production Switch boards
+### Very early pre-production Switch boards
 
 In early prototypes there were switch boards with large white switches that had green leds in them to show the state.  These should not be in production units unless some sort of replacement had to happen early in first production units.
 
@@ -275,14 +275,14 @@ The firmware on the MCB is critical to have up to date to avoid prior bugs from 
 These steps are taken to remove the main board.  It should be noted that to replace a board these steps can be done in reverse order.
 
    - Disconnect ALL battery leads from your batteries. We always leave the thick red and black power cables connected to the MCB board because if you get a replacement it will have the power cables attached. The cables are routed in a very specific way with the mounting hardware also done in a precise way thus we do not remove these cables.
-   - Disconnect both large multi-pin black wheel cables with inline jacks from the wheels.  These can be very tight so you may need a very good grip and work the connectors gently back and forth as you try to extract.  Be careful to not bang your knuckles as they can release all at once. See the ```The Motor cables to the Wheels``` section of [THIS PAGE](https://learn.ubiquityrobotics.com/unboxing) for pictures
+   - Disconnect both large multi-pin black wheel cables with inline jacks from the wheels.  These can be very tight so you may need a very good grip and work the connectors gently back and forth as you try to extract.  Be careful to not bang your knuckles as they can release all at once. See the ['the Motor cables to the wheels' section of unboxing](kinetic_quickstart_unboxing#main-power-battery-and-wheel-cables-installation) for pictures
    - Unscrew the 2 screws that hold the small 'Switch Board' to the Magni front panel and place the screws in a safe place.   After screw removal the switch board can be unplugged from the main MCB board and taken out then set aside perhaps near the 2 screws.
 
      ![Switch Board Screws](assets/support/SwitchBoardMountingScrews.jpg)
 
-   - If your Magni has the sonar board you should remove it's 50 pin cable from the main MCB board and remove the sonar board to make things easier for this process.    You can see how it is installed and do the reverse that is described on the last half of [THIS PAGE](https://learn.ubiquityrobotics.com/sonar_sensors)
-   - We are going to free up the RaspiCam flat white cable so the Raspberry Pi can be removed easier in next step.  Refer to [THIS PAGE](https://learn.ubiquityrobotics.com/camera_sensors) for pictures.  Locate the white flat thin ribbon cable to the camera at the point it gets to the camera.  Take note at this time that the blue tape on the flat cable is away from the RaspiCam PCB which will have to happen as you reassemble later.   NOTE: The jack for the cable is very delicate so just pull back the tabs on each side just a mm or two and do not force it harder or it may break the tabs.  Pull out the cable from the camera end.  
-   - Remove the large sheetmetal rectangular Front Bracket that has the raspicam camera bracket riveted to it.  Refer to the middle of [THIS PAGE](https://learn.ubiquityrobotics.com/unboxing) and see the ```Front Bracket``` picture. The removal is done using a long allen wrench with 4mm tip for the bolts that hold this 24mm wide side to side bar to the top shelf of the Magni chassis.   The 4mm allen wrench has to be long enough to go through from the top of the bar all the way to insert into the bolts.
+   - If your Magni has the sonar board you should remove it's 50 pin cable from the main MCB board and remove the sonar board to make things easier for this process.    You can see how it is installed and do the reverse that is described on the last half of [the sonar sensors page](kinetic_magnisilver_sonars)
+   - We are going to free up the RaspiCam flat white cable so the Raspberry Pi can be removed easier in next step.  Refer to [camera sensors](kinetic_magnisilver_camera) for pictures.  Locate the white flat thin ribbon cable to the camera at the point it gets to the camera.  Take note at this time that the blue tape on the flat cable is away from the RaspiCam PCB which will have to happen as you reassemble later.   NOTE: The jack for the cable is very delicate so just pull back the tabs on each side just a mm or two and do not force it harder or it may break the tabs.  Pull out the cable from the camera end.  
+   - Remove the large sheetmetal rectangular Front Bracket that has the raspicam camera bracket riveted to it.  Refer to the middle of [unboxing](kinetic_quickstart_unboxing) and see the ```Front Bracket``` picture. The removal is done using a long allen wrench with 4mm tip for the bolts that hold this 24mm wide side to side bar to the top shelf of the Magni chassis.   The 4mm allen wrench has to be long enough to go through from the top of the bar all the way to insert into the bolts.
 
    ![Front Bracket](assets/support/FrontBracketWithRaspicam.jpg)
 
@@ -297,7 +297,7 @@ These steps are taken to remove the main board.  It should be noted that to repl
 
 <hr>
 
-## 🛠 USB and the Other Connectors On The Raspberry Pi Computer
+## 🔧 USB and the Other Connectors On The Raspberry Pi Computer
 
 Although not technically on the MCB itself these can be extremely popular for many users. The Ethernet can be very handy for lab development to not have to worry about WiFi or lack of WiFi.   
 
@@ -313,7 +313,7 @@ There is an HDMI connector on the Raspberry Pi 3 and the recent shipments we hav
 
 All models of the Raspberry Pi have audio input and output on a 3.5mm compound jack.
 
-## 🛠 PC Style Power Connectors with 5V and 12V
+## 🔧 PC Style Power Connectors with 5V and 12V
 
 The picture below shows the 4 power supplies available from connectors or holes near the top of the board.  These can be of use for cases where a user may need 12V or 5V for their own circuits.
 
@@ -426,7 +426,7 @@ From left to right here are the P2 I2C expansion jack pin definitions
 |  SCL |  The I2C Clock Line. No need to add more pullups |
 |  SDA |  The I2C Data Line. No need to add more pullups |
 
-## 🛠 Expansion Boards For IO and IMU Capabilities
+## 🔧 Expansion Boards For IO and IMU Capabilities
 
 We are working on small I2C based expansion board designs to be available in 2022 that will plug into the MCB board and still allow the OLED display to then plug in on top of that board to form a stack of boards powered by the MCB P2 jack.
 
@@ -434,7 +434,7 @@ The first board will have a BNO055 IMU as well as 8 bits of digital IO to drive 
 
 Another board is only in low volume 1st prototype form that would offer more IO at higher currents some with relay driver ability.  This board also would have 4 0-3V analog ADC inputs as well as 2 0-3V DAC outputs both of which are meant for only slow or static analog signal usage. It would have 2 switches and some leds and an expansion I2C jack for ease of customer I2C connections.
 
-## 🛠 Making A Remote RF Estop switch
+## 🔧 Making A Remote RF Estop switch
 
 Starting with our SwitchBoard rev 2.2 it is now possible to include either your own ESTOP switch on your chassis cover or shell. Besides that though here we describe using low cost RF control units that offer a latched set of relay connections so you can install an RF safety switch to turn off Magni Power remotely if you require that for your own safety needs.
 
