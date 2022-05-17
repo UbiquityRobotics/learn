@@ -1,5 +1,5 @@
 ---
-title: "General Info"
+title: "General & Mechanical Info"
 permalink: kinetic_overview_magni_key
 group: "magni silver (gen 5)"
 rosver: kinetic
@@ -7,7 +7,7 @@ nav_order: 3
 nav_exclude: false
 ---
 
-# General Information
+# General and Mechanical Info
 
 Here you should be able to find all relevant info on the robot's mechanical and electronic parts.
 
