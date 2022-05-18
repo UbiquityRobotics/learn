@@ -20,11 +20,11 @@ Each page needs to have the following defined at the top:
 
 `group`: the navbar group the page should appear in, see below for current options
 
-`rosver`: which ros version the page is for, right now the possible options are "kinetic" and "noetic"; the page should also be in the correct folder for its version but it's not strictly required
+`rosver`: which ros version the page is for, right now the possible options are "kinetic" and "noetic"; the page should also be in the correct folder for its version but it's not strictly required, the nav menu will filter pages based on this parameter only
 
 `nav_order`: in which place should this page appear in the navbar group
 
-`nav_exclude`: if set to true the page will be excluded from the navbar
+`nav_exclude`: if set to true the page will be excluded from the navbar; note: hidden pages do not need a `rosver` if it's not relevant for the page, since the nav won't be filtering them anyway
 
 Navbar groups are hardcoded in https://github.com/UbiquityRobotics/learn/blob/b9445842f965e29c937405db88ae9717b9152789/_includes/nav.html#L95 for simplicity and to keep the order correct.
 
