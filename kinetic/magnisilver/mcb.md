@@ -44,7 +44,7 @@ DateCode was started around version v35 and shows up in /diagnostics topic along
 | v40 | 5.75 | 20201209 | Magni current release for most recent release candidate.  This is the default if just an enter is done when asking for version |
 | v43 | 4.0 | 20210829 | Magni beta release with some fixes and minor new abilities |
 
-##### See: [Master Controller Board Firmware and Hardware Revision History](kinetic_magnisilver_mcb_revisions).
+##### See: [Master Controller Board Firmware and Hardware Revision History](magnisilver_mcb_revisions).
 
 #### Checking ROS /diagnostics Topic For Firmware
 

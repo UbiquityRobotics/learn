@@ -1,9 +1,8 @@
 ---
 title: "Master Controller Board Firmware and Hardware Revision History"
-permalink: kinetic_magnisilver_mcb_revisions
+permalink: magnisilver_mcb_revisions
 group: "magni silver (gen 5)"
-rosver: kinetic
-nav_order: 3
+nav_order: 0
 nav_exclude: true
 --- 
 
@@ -16,7 +15,7 @@ We will use the term MCB for Master Controller Board (the main board containing 
 ## Firmware Revisions
 
 Below is presented a history of what was included or fixed for each firmware revision that was considered stable.
-To do a firmware upgrade for the motor controller board please see [our instructions](kinetic_magnisilver_mcb#firmware-upgrade).
+To do a firmware upgrade for the motor controller board please see [our instructions](noetic_magnisilver_mcb#firmware-upgrade).
 
 Firmware Revision History
 
