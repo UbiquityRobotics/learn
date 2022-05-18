@@ -6,4 +6,4 @@ nav_exclude: true
 
 # PC Board Revision Identification
 
-This page has moved to -> [MCB](noetic_magnisilver_mcb#pc-board-revision-identification).
+This page has moved to -> [MCB](noetic_magnisilver_mcb#board-revision-identification).
