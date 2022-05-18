@@ -1,10 +1,12 @@
-title: Learn Ubiquity Robots and ROS
-description: Tutorials for Magni
+title: Magni Documentation
+description: Learn to use our robots with ROS
 email: jrlandau@gmail.com
 
-theme: jekyll-theme-cayman
+
+remote_theme: carlosperate/jekyll-theme-rtd
 
 plugins:
+- jekyll-remote-theme
 - jekyll-coffeescript
 - jekyll-gist
 - jekyll-github-metadata

@@ -1,0 +1,153 @@
+<script>
+
+var rosvers = ["kinetic", "noetic"];
+var allpages = [];
+
+function set_ros_version(version) {   
+    document.getElementById("button_"+version).checked = true;
+    document.getElementById("distroslider").style.display = "block";
+
+    for (i in rosvers) {
+        let list = document.getElementsByClassName(rosvers[i]);  
+
+        if (rosvers[i] == version) {
+            for (let i = 0; i < list.length; i++) {
+                list[i].style.display = "block";
+            }
+        } else {
+            for (let i = 0; i < list.length; i++) {
+                list[i].style.display = "none";
+            }
+        }
+    }
+}
+
+function get_generic_href(){
+    let url = window.location.href.split("#")[0];
+    for (i in rosvers) {
+        if(url.includes(rosvers[i])){
+            return url.replace(rosvers[i],"ROSDISTRO");
+        }
+    }
+    return null;
+}
+
+function redirect(version){
+    let url = get_generic_href();
+    if(url != null)
+        location = url.replace("ROSDISTRO",version); 
+}
+
+window.onload = function() {
+
+    //figure out what pages exist
+    let list = document.getElementsByClassName("navbarentry");
+    for (let i = 0; i < list.length; i++) {
+        allpages.push(list[i].innerHTML.split('\n').join('').trim());
+    }
+
+    //disable rosdistro switch if pages don't exist
+    let currentpage = get_generic_href();
+    if(currentpage != null){
+        currentpage = currentpage.split("/").at(-1);
+        for (i in rosvers) {
+
+            if(window.location.href.includes(rosvers[i]))
+                continue;
+
+            let possible_redirect = currentpage.replace("ROSDISTRO",rosvers[i]);
+            if(!allpages.includes(possible_redirect)){
+                let button = document.getElementById("button_"+rosvers[i]);
+                let buttonlabel = document.getElementById("button_"+rosvers[i]+"_label");
+
+                button.disabled = true;
+                button.style.opacity = "0.2"
+                buttonlabel.style.opacity = "0.2"
+            }
+        }
+
+        //scroll nav to correct item
+        let navelement = document.getElementById(window.location.href.split("#")[0].split("/").at(-1))
+        if (navelement != undefined){
+            navelement.scrollIntoView({
+               behavior: 'auto',
+               block: 'center',
+               inline: 'start'
+            });
+        }
+    }
+
+    //hide irrelevant ros versions in the navbar
+    let url = window.location.href;
+    for (i in rosvers) {
+        if(url.includes(rosvers[i])){
+            set_ros_version(rosvers[i]);
+            return;
+        }
+    }
+
+    set_ros_version("noetic");
+    
+};
+
+</script>
+
+{%- assign groups = "overview|magni silver (gen 5)|quick start|conveyorbot|ez-map" | split: "|" %}
+{%- assign nav = site.pages | sort:"nav_order" %}
+
+{%- for item in nav %}
+        {%- if item.nav_exclude == true and item.name != "README.md" and item.name != "index.md" %}
+
+            {%- if item.url != page.url %}
+                <div class="{{ item.rosver }}">
+                    <ul style="display: none">
+                        <li class="toctree-l1">
+                            <a class="reference internal" href="{{ item.url | absolute_url}}">{{ item.title }}</a>
+                        </li>
+                    </ul>
+                </div>     
+
+            {%- else %}
+
+                <div class="{{ item.rosver }}">
+                    {%- include toc.html html=content sanitize=true h_max=2 item_class="toctree-l%level%" title=item.title %}
+                </div>
+
+            {%- endif %}
+
+    {%- endif %}
+{%- endfor %}
+
+{%- for group in groups %}
+    <p class="caption"><b class="caption-text" style="color: #66C4FF">{{ group }}</b></p>
+
+    {%- for nav_item in nav %}
+        {%- if nav_item.group == group and nav_item.nav_exclude != true and nav_item.name != "README.md" %}
+            <div class="{{ nav_item.rosver }}" id="{{ nav_item.permalink }}">
+
+                {%- if nav_item.url == page.url %}
+                    {%- include toc.html html=content sanitize=true h_max=2 item_class="toctree-l%level%" title=nav_item.title %}
+
+                {%- else %}
+                     <ul>
+                        <li class="toctree-l1">
+                            <a class="reference internal" href="{{ nav_item.url | absolute_url}}">{{ nav_item.title }}</a>
+                        </li>
+                    </ul>
+                {%- endif %}
+
+            </div>
+
+        {%- endif %}
+    {%- endfor %}
+{%- endfor %}
+
+{%- for nav_item in nav %}
+    {%- if nav_item.name != "README.md" %}
+        <div class="navbarentry" style="display: none">
+            {{ nav_item.permalink }}
+        </div>
+    {%- endif %}
+{%- endfor %}
+
+

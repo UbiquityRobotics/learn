@@ -1,0 +1,23 @@
+<footer>
+
+    <hr/>
+
+    <div role="contentinfo">
+      <p>
+        {%- if site.github.build_revision %}
+          {%- if site.repo_url %}
+            <span class="commit">Revision <a href="{{ site.repo_url | url }}/commit/{{ site.github.build_revision }}" target="_blank"><code>{{ site.github.build_revision | truncate: 8, "" }}</code></a>.
+          {%- else %}
+            <span class="commit">Revision <code>{{ site.github.build_revision | truncate: 8, "" }}</code>.</span>
+          {%- endif %}
+        {%- endif %}
+      </p>
+    </div>
+    Copyright (c) 2022, Ubiquity Robotics.
+    BSD 3-Clause License
+    <br>
+    Built with GitHub Pages using a 
+    <a href="https://github.com/carlosperate/jekyll-theme-rtd" target="_blank">theme</a>
+    based on 
+    <a href="https://sphinx-rtd-theme.readthedocs.io" target="_blank">Read the Docs</a>.
+</footer>

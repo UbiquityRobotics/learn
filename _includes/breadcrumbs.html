@@ -1,0 +1,36 @@
+
+{%- assign gitloc = "https://github.com/MoffKalast/learn/blob/master" %}
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+    <ul class="wy-breadcrumbs">
+
+        {%- if site.edit_on_github != false and page and page.name != "search.html" %}
+        <th style="float: left;">
+            <a style="margin-top: 15px;" href="{{ gitloc }}/{{ page.path }}" class="icon icon-github" target="_blank"> Edit on GitHub</a>
+        </th> 
+        {%- endif %}
+
+        <table id="distrotable" style="float: right; width: auto">
+            <tr>
+                <th>
+                    <b style="color: gray">Select ROS Distro:</b>
+                </th>
+                <th>
+                    <fieldset class="multiswitch" style="width: 100%">
+                        <div class="slide-container">
+
+                            <input type="radio" name="account" id="button_kinetic" onclick="set_ros_version('kinetic'); redirect('kinetic')">
+                            <label for="button_kinetic"><b id="button_kinetic_label">Kinetic</b></label>
+
+                            <input type="radio" name="account" id="button_noetic" onclick="set_ros_version('noetic'); redirect('noetic')">
+                            <label for="button_noetic"><b id="button_noetic_label">Noetic</b></label>
+
+                            <a id="distroslider" class="slide" style="display: none;" aria-hidden="true"></a>
+                        </div>
+                    </fieldset>
+                </th>
+            </tr>
+        </table>
+    </ul>
+    <hr/>
+</div>
