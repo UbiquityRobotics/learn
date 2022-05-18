@@ -21,6 +21,8 @@ Improvements to out motor controller fimware (v35 and later) need the latest Lin
 
 ##### See: [Motor Control Board (MCB)](noetic_magnisilver_mcb) for more info about the MCB.
 
+##### See: [Firmware Revision History](https://learn.ubiquityrobotics.com/noetic_magnisilver_mcb_revisions#firmware-revisions).
+
 ## Installation
 To install any firmware first log into the Raspberry Pi:
 
