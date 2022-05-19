@@ -72,7 +72,7 @@ Our image uses some of the GPIO lines to control our
 Magni robot. By default many of the lines are
 unused and these are the best ones to think about
 using for your own uses. You should see the section
-regarding [GPIO Lines Used For The Sonar Board](<https://learn.ubiquityrobotics.com/GPIO_lines>) and
+regarding [GPIO Lines Used For The Sonar Board](kinetic_overview_raspberrypi#gpio-lines) and
 use those lines as we do not use them until they are
 enabled by users who order a Magni with a Sonar board.
 
@@ -92,8 +92,8 @@ Please see the addresses on I2C that we use and avoid
 these addresses if you can as you may get our software
 interacting with your software in some cases. See our
 I2C discussion that is specific to Magni but will list
-the addresses used in the section titled  Guidelines For
-Usage Of The I2C Bus on [**THIS_PAGE**](<https://learn.ubiquityrobotics.com/diagnostics>).
+the addresses used in the section titled [Guidelines For
+Usage Of The I2C Bus](kinetic_quick_start_tips_and_tricks#guidelines-for-usage-of-the-i2c-bus).
 
 <hr>
 
