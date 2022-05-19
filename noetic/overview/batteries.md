@@ -47,7 +47,7 @@ Other cases such as the robot driving up a slope with large loads of course also
 
 ## The Size Of The Battery Compartment
 
-We ship Magni with a foam cut-out that nicely holds two 1270 format Lead Acid batteries.   Hopefully this was not disguarded when unpacking.
+We ship Magni with a foam cut-out that nicely holds two 1270 format Lead Acid batteries.  Avoid discarding this insert when unpacking.
 
 The floor of the battery compartment is always at least 205mm x 258mm.  Due to manufacturing tolerances it may be larger but that cannot be guaranteed.
 
