@@ -13,17 +13,13 @@ The Magni robot is strong, fast, and heavy. Initially, use lumber, bricks, or wh
 
 <hr>
 
+Sources that you might find helpful:
+
 #### Discourse Support Forum - [forum.ubiquityrobotics.com](https://forum.ubiquityrobotics.com)
 
 #### Store - [ubiquityrobotics.com](https://ubiquityrobotics.com)
 
 #### Archival Learn Pages - [learn_legacy_archive](https://ubiquityrobotics.github.io/learn_legacy_archive)
-
-<hr>
-
-#### Image Repository - [downloads.ubiquityrobotics.com](https://downloads.ubiquityrobotics.com/pi.html)
-
-#### Apt Repository - [packages.ubiquityrobotics.com](https://packages.ubiquityrobotics.com)
 
 <hr>
 
