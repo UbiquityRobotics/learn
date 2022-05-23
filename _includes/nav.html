@@ -77,6 +77,17 @@ window.onload = function() {
         }
     }
 
+    //image download thanks
+    document.querySelectorAll('[href]').forEach(link => {
+        if(link.href.startsWith("https://ubiquity-pi-image.sfo2")){
+            link.addEventListener("click", function(){
+                let handle = window.open('https://www.ubiquityrobotics.com/dl-thank-you/','_blank');
+                handle.blur();
+                window.focus();
+            });
+        }
+    });
+
     //hide irrelevant ros versions in the navbar
     let url = window.location.href;
     for (i in rosvers) {
