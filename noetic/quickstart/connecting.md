@@ -9,9 +9,9 @@ nav_exclude: false
 
 # Connecting to the Robot
 
-The Magni robot is normally running all the software for whatever sensors and navigation mode you are using for your project but there is no practical way to see what the robot is doing within ROS because the Host Linux cpu running the Magni itself is ```headless``` and normally only has WiFi to access. 
+The Magni robot normally runs all the software for equiped sensors and navigation mode, but there is no practical way to see what the robot is doing within ROS, because the Host Linux CPU running the Magni itself is usually```headless``` and normally only has WiFi access. 
 
-As such you'll need at least SSH access to use the robot properly which will be explained here, for more advanced ROS connectivity check [the workstation setup](noetic_quick_start_workstation).
+As such you'll need at least SSH access to use the robot properly, for more advanced ROS connectivity check [the workstation setup](noetic_quick_start_workstation).
 
 ## WiFi Hotspot
 
@@ -27,7 +27,7 @@ There is a WIFI status led on the large MCB board if it is rev 5.2 later.  The M
 
 ## SSH Console
 
-Once you are on the robot's network, via WiFi Or Wired, you can connect to the robot itself. If using a linux computer, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
+Once you are on the robot's network, via WiFi or Wired, you can connect to the robot itself. If using a linux computer, start a terminal window (Linux shortcut: ctrl-alt-t). In that window, log in by typing
 
 ```ssh ubuntu@ubiquityrobot.local```
 
@@ -70,7 +70,7 @@ If you do not have the sonar board the pins to the 50 pin P702 are available to 
 
 ## Connecting the robot to your local network
 
-Of course, as the robot is delivered it has no connection to your local network. Because of this, the robot has its own network (called an access point or "AP mode") that enables you to connect to it directly, as described above. For example, you can drive the robot with our old [Android Robot Commander app](robot_commander). You can use AP mode to connect directly to the robot from a workstation, to run ROS commands such as keyboard teleoperation. 
+Of course, as the robot as delivered has no connection to your local network. Because of this, the robot has its own network (called an access point or "AP mode") that enables you to connect to it directly, as described above. For example, you can drive the robot with our old [Android Robot Commander app](robot_commander). You can use AP mode to connect directly to the robot from a workstation to run ROS commands such as keyboard teleoperation. 
 
 However, in AP mode, the robot cannot access the Internet. This is what we'll be fixing in this section.
 
@@ -101,7 +101,7 @@ Use pifi to list the nearby networks:
 
     pifi list seen
 
-If you are sure you have a WiFi router that should be seen but it does not show up it may be due to the router using a WiFi channel that is not used in the United States which is the default country code on our images.   We are implementing a way to set the country code that will be available in late 2020 where below we set China country code.  Refer to www.iban.com/country-codes or other reference.
+If you are sure you have a WiFi router that should be seen, but if it does not show up it may be due to the router using a WiFi channel that is not used in the United States. (The US is the default country code on our images.)   We are implementing a way to set the country code that will be available in late 2020. This is how to set  the China country code.  Refer to www.iban.com/country-codes or other reference.
 
     sudo pifi set-country CN
 
