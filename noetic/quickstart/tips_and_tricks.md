@@ -28,28 +28,34 @@ Instructions for joining your local area network are in the same place.
 
 * To check the battery level type: `rostopic echo /battery_state`
 
-  This should show you various information about the battery. If the battery voltage is somewhere between 21-28V that would be normal. Obviously the lower the voltage the less charge the batteries have.
+  This should show you information about the battery. If the battery voltage is somewhere between 21-28V that would be normal. Obviously the lower the voltage the less charge the batteries have.
 
 ## Handy Tips for Developers
 
-* The main config file for enabling the raspicam camera and sonars and more can be edited as root and is `/etc/ubiquity/robot.yaml`  Details on this are located in the sections discussing camera and sonars and other sections. Beware that the format is very specific. Do not use tabs and pay attention to where spaces are required.
+* The main config file for enabling the raspicam camera, sonars and more can be edited as root and is `/etc/ubiquity/robot.yaml`  Details are located in the sections discussing camera and sonars and other sections. Beware that the format is very specific. Do not use tabs and pay attention to spaces.
 
-* Another important configuration file `base.yaml` is found at: `/opt/ros/$ROS_DISTRO/share/magni_bringup/param/base.yaml`. N.B. This file will be rewritten when the base is upgraded, as by apt=get.  The most likely things a user would change are being moved to the above robot.yaml file if not already there.
+* Another important configuration file `base.yaml` is found at: `/opt/ros/$ROS_DISTRO/share/magni_bringup/param/base.yaml`. N.B. This file will be rewritten when the base is upgraded, as by apt-get.  The most likely things a user would change are being moved to the above robot.yaml file if not already there.
 
-* To find the firmware version while the system is running run this then stop
+* To find the firmware version while the system is running run this: 
+* 
     `rostopic echo /diagnostics`
-  In the busy output the firmware revision and if recent code the daycode will be in the /diagnostics topic
+    
+  In the output, the firmware revision and the daycode will be in the /diagnostics topic
 
 * To disable magni startup: `sudo systemctl disable magni-base` and reboot so magni-base will be inactive.
 
     To get back to normal behavior you will need later a `sudo systemctl enable magni-base` and then a reboot.   
 
-* To find the firmware version when  magni-base is stopped
+* To find the firmware version when  magni-base is stopped:
+* 
     `rosrun ubiquity_motor probe_robot -f`  
-    For even more fun try **-a** instead of **-f**.
+    
+    For even more fun try: **-a** instead of **-f**.
 
-    If the robot is running a program, run  
+    If the robot is running a program, run:
+    
     `sudo systemctl disable magni-base.service`  
+    
     and then reboot before trying the probe_robot command again.
 
     To return the robot to normal startup you will then need to use   `sudo systemctl enable magni-base.service` and reboot again.  
@@ -70,21 +76,21 @@ This invokes the ROS controller_manager; for more detail see `wiki.ros.org/contr
 
 Some users have reported that, when running on a virtual machine workstation, it is necessary to turn off hardware acceleration.
 
-## Finding Robot Firmware Version Info
+## Finding the Robot Firmware Version Info
 
-Should you have to get back to report behavior issues with the robot where the robot can move that means a great deal of the system is operational.  It is important to report to the support group the firmware version and its date which is done as follows if the host Raspberry Pi cpu is able to communicate with the main MCB board.
+Should you need to report behavior issues with the robot while the robot can move, that means a most of the system is operational.  It is important to report to the support group the firmware version and its date, which is done as follows if the host Raspberry Pi cpu is able to communicate with the main MCB board.
 
     rostopic echo /diagnostics | grep -A 1  'Firmware [DV]'
 
 Report the version of the MCB main board if any tests indicate it has a fault.
 
-## Troubleshooting Lack Of Robot Movement
+## Troubleshooting a Lack Of Robot Movement
 
-The most basic way to do a test to verify the robot can move is to be on an SSH console window on the robot and see if you can use keyboard to control the robot at all where ```Forward``` is just tapping the ```i``` key.  
+The most basic way to do a test to verify the robot can move is to be in an SSH console window to the robot and use teleop-keyboard to see if you can use keyboard to control the robot at all where ```Forward``` is just tapping the ```i``` key.  
 
     rosrun teleop_twist_keyboard telelop_twist_keyboard.py
 
-Before we dig into some detailed troubleshooting below on lack of movement be aware you can also review some key high level reasons for lack of movement that we had in a post on our forum from some time back that you should review just in case it is one of these issue then this page will elaborate.    
+Before we dig into some detailed troubleshooting below on lack of movement, be aware you can also review some key high level reasons for lack of movement that we had in a post on our forum from some time back. You should review this just in case it is one of these issue.    
 
 Feel free to read that post if this page does not resolve your problem quickly.
 Older troubleshooting post:  [Magni Does Not Move issue on our forum](https://forum.ubiquityrobotics.com/t/magni-does-not-move/98)  
@@ -102,7 +108,7 @@ Addresses given in 7-bit form so on the I2C bus they appear shifted up by 1 bit.
 |PCF8574|0x20|
 |MCP7940 RT Clock|0x6f|
 
- * If you stop Magni with `sudo systemctl stop magni-base.service` you can scan the I2C bus for all devices using `sudo i2cdetect -y 1` if i2c-tools was installed using apt-get. The i2c-tools package also has `i2cget` and `i2cset` so look them up if curious.
+ * If you stop Magni with `sudo systemctl stop magni-base.service` you can scan the I2C bus for all devices using `sudo i2cdetect -y 1` if i2c-tools were installed using apt-get. The i2c-tools package also has `i2cget` and `i2cset` so look them up if curious.
 
  * The OLED display was only added to shipment boards as of MCB version 5.2 but was possible to load starting from version 5.0 boards.
 
