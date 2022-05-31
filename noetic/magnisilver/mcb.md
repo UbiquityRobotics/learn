@@ -21,7 +21,7 @@ This page explains the main control and power switch boards.
 
 ## Finding The Firmware Version Info For Your Robot
 
-Here is how to get firmware version and date once you have opened a SSH window into your robot.  This works by filtering off just the 2 items of interest which are ```Firmware Version```  and  ```Firmware Date```
+Open a SSH window to your robot.  The 2 items of interest are ```Firmware Version```  and  ```Firmware Date```
 
     rostopic echo /diagnostics | grep -A 1  'Firmware [DV]'
 
@@ -29,9 +29,9 @@ Here is how to get firmware version and date once you have opened a SSH window i
 
 The table below shows the default and latest available versions of firmware.  
 
-The ```Rate``` in the table is the rate at which the MCB ```STATUS``` led will blink which is handy to visually check. It is best to count the time of 4 or more blinks then divide by that number for more accuracy. If the blink rate is found to be other than in the table it is possible you have a beta or non-approved version.
+The ```Rate``` in the table is the rate at which the MCB ```STATUS``` led will blink which is a handy visual check. It is best to count the time of 4 or more blinks then divide by that number for accuracy. If the blink rate is found to differ from the table, it is possible you have a beta or non-approved version.
 
-DateCode was started around version v35 and shows up in /diagnostics topic along with the version.  DateCode is in YYYYMMDD format for releases and YYMMDD for beta releases. It is the date of that particular version.  If you have a version that the date is before the date in the table it is likely a Beta or unofficial release. DateCode did not start till around v35.
+DateCode use started around version v35 and shows up in the /diagnostics topic along with the version.  DateCode is in YYYYMMDD format for releases and YYMMDD for beta releases. It is the date of that particular version.  If you have a version that the date is before the date in the table it is likely a Beta or unofficial release. DateCode did not start till around v35.
 
 | Ver | Rate | DateCode | Description |
 | ------- | ---- | ---- | ----------- |
@@ -48,12 +48,11 @@ DateCode was started around version v35 and shows up in /diagnostics topic along
 
 #### Checking ROS /diagnostics Topic For Firmware
 
-The firmware version as well as the firmware release date are published by the motor_node to ROS topic  ```/diagnostics```
+The firmware version and release date are published from the motor_node to ther ROS topic  ```/diagnostics```
 
-Use the following command for a couple seconds then use Control-C to stop the fast moving output.  Scroll back and look for ```"Firmware Version"``` and ```"Firmware Date"```
+Invoke the following command for a couple seconds, then use Control-C to stop the scrolling output.  Scroll back and look for ```"Firmware Version"``` and ```"Firmware Date"```
 
     rostopic echo /diagnostics
-
 
 ##### See: [Firmware Upgrade (MCB)](noetic_magnisilver_mcb_upgrade) for a guide on upgrading the firmware.
 
@@ -68,9 +67,9 @@ This page describes how to identify board Revisions used in the Magni robot.
 
 ### Main Control Board Identification
 
-All of the Main Control Boards, also called MCB, have a version number on the top of the board that is printed along the left edge of the PC board on the top copper layer.   
+All of the Main Control Boards, also called the MCB, have a version number on the top of the board printed along the left edge of the PC board.   
 
-Because prior to rev 5.2 the version number is very hard to read we will supply pictures to help with board version identification prior to rev 5.2
+Prior to rev 5.2 the version number is very hard to read; we supply pictures to help with board version identification prior to rev 5.2
 
 #### Revision 5.2 And Later Main Control boards
 
