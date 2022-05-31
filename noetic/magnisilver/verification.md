@@ -13,38 +13,38 @@ This page explains how to verify basic operation of the Magni robot.  These test
 
 Also included is a discussion on how to evaluate the batteries' condition.
 
-The main board is called the ```Motor Control Board``` or ```MCB```. 
+The main board is called the ```Motor Control Board``` or ```MCB```.  This board, besides controlling the drive motors, provides 5v and 12v power, interfaces with both the Raspberry Pi computer and any peripherals.
 
-There is a ```host linux``` computer which is the ```Raspberry Pi single board computer``` and it plugs into and powered by the MCB
 
-If you have Magni Silver, then the robot will have a ```Sonar Board``` which will has a few blue LEDs on top that will be helpful for testing.
-
+If you have Magni Silver, then the robot will have a ```Sonar Board``` which has a few blue indicator LEDs. Magni robots after 2021 also have an OLED display, this will provide conectivity, battery power, and other information. 
+ 
 ### Powering Up The Magni ROBOT
 
-Before starting tests a quick review of the two power switches on the ```Switch Board``` that plugs into the main board.  
+There are two power switches on the ```Switch Board``` that houses the charging connector.  
 
-Both switches must be in the OUT position for full robot operation.
+Both switches must in the OUT (on) position for full robot to move.
 
-* The black switch to the left as you look at the robot from the front is the ```Main Power``` button.  To enable this the switch must be out and not pressed in. When the main power is enabled the blue led on the switch board is on.
-* The red switch to the right is the ```ESTOP Switch``` and it is easiest to think of this as power for the motors.  To power up the wheel motors this switch must also be in the OUT position and the red led on the switch board will light when enabled.
+* The black switch to the left as you look at the robot from the front is the ```Main Power``` button.  When on, the "blue" led next to it lights up.
+* The red switch to the right is the ```ESTOP Switch``` when on the "red" LED wil be lit.
 
-After 2019, switch boards were equiped with two connectors to enable custom witches.   If you have a current switch board, there will be a white connector just behind the ESTOP switch to the right which MUST BE SHORTED OUT for motor power to work. We ship this version switch board with a jumper in that jack, but it may get lost.
+After 2019, switch boards were equiped with two connectors to enable custom switches.   If you have a newer switch board, there will be a white connector just behind the ESTOP switch to the right which MUST BE SHORTED OUT for motor power to work. We ship this version switch board with a jumper in that jack, but it may get lost.
 
 ### Evaluating The Batteries Of The Robot
 
-One of the most common issues with the robot is that the batteries are not fully charged due to lack of charging or because they have degraded to a point where they no longer hold charge.  Many problems we see in the field are due to degraded or poorly charged batteries.
+ Many problems we see in the field are due to degraded or discharged batteries. ```HINT - If the robot is misbehaving, check the batteries!```
 
-Your batteries will degrade over time and loose their ability to hold as much charge as when they were new, especially if they are accidentally over-discharged many times.
+Sealed Lead Acid (SLA) batteries degrade over time and loose their ability to hold as much charge as when they were new, especially if they are frequently over-discharged.
 
-Unlike most cars, the Magni robot does have hardware that will shut off the usage of the batteries when the battery voltage gets VERY low but there is still some degradation every time you let the magni low voltage cutoff typically shut down.  ```Shutdown and turn off your robot then charge it overnight.```
+Unlike most cars, the Magni robot does have hardware that will shutdown cleanly if the battery voltage gets VERY low. 
+```Shutdown and turn off your robot, then charge it overnight.```
 
 Please check your batteries often.
 
 Here are some ways to get a rough idea of if your batteries are 'degraded'.
 
-* Fully charge the robot overnight or for many hours in the off state untill the charger led goes to green.   If your charger led never goes to green for a very long charge such as over 10 hours, the batteries are in need of replacement (or the charger is bad).
+* Fully charge the robot overnight or untill the charger LED goes to green.   If your charger LED never goes to green after a very long charge (over 10 hours), the batteries need replacement (There is a remote chance the charger is bad).
 * After a full charge let the robot sit with power off for over an hour and measure the battery voltage if you have a voltmeter.   If this voltage is below 25.4 volts the batteries are in some weakened state but likely usable.  If the voltage is below 24.5 volts your batteries are in need of replacement.
-* If above are ok, turn on the robot as well as the motor power (both switches on) and let the robot sit this way for 30 minutes to reach a stable mild load state.   If at the end of this time the voltage is below 25 volts your batteries are weak but just how weak is difficult to judge in this simple test.  If the voltage is 24V or below you most certainly have batteries in need of replacement.  This test is easier if you have the little OLED display and very current software that shows the battery voltage on the OLED display.
+* If above are ok, turn on the robot as well as the motor power (both switches on) and let the robot sit this way for 30 minutes to reach a stable mild load state.   If at the end of this time the voltage is below 25 volts your batteries are weak, but just how weak is difficult to judge in this simple test.  If the voltage is 24V or below you most certainly have batteries in need of replacement.  This test is easier if you have the little OLED display and very current software that shows the battery voltage on the OLED display.
 
 ## Part 1:  MCB Hardware Level Verification
 
@@ -66,9 +66,9 @@ On the lower right of the main board a blue LED will be ON if the `ESTOP` switch
 
 ### 1.3  ESTOP Switch Motor Power Safety Overrides
 
-The ESTOP and motor initial state tests require a fully functional robot.  Some of these tests appear later in section 3 as well as here because these test sections are used for different types of verifications.
+The ESTOP and motor initial state tests require a fully functional robot.  Some of these tests appear later in section 3 as well as here because these test sections are used for different types of verification.
 
-*  This first test can be done without the host CPU installed or with it installed.  Start with the robot powered down and the 'ESTOP' switch in the 'out' position and the black main power switch pushed in so the Magni is totally off. Then push the black main power switch which will turn on main power. At this point the main power switch will be in the 'out' position.  ```VERIFY``` both the blue and red leds on the switchboard are on AND the blue led on bottom right of rev 5.1 MCB or later is on AND that the main power and status leds are all on located on the left middle of the MCB  ```VERIFY``` that there is no jump in motors or if movement happens it is less than one cm.  ```VERIFY``` that both motors are in the locked state strongly resisting movement.
+*  This first test can be done with the Raspberry PI installed or uninstalled.  Start with the robot powered down and the 'ESTOP' switch in the 'out' position and the black main power switch pushed in so the Magni is totally off. Then push the black main power switch which will turn on main power. At this point the main power switch will be in the 'out' position.  ```VERIFY``` both the blue and red leds on the switchboard are on AND the blue led on bottom right of rev 5.1 MCB or later is on AND that the main power and status leds are all on located on the left middle of the MCB  ```VERIFY``` that there is no jump in motors or if movement happens it is less than one cm.  ```VERIFY``` that both motors are in the locked state strongly resisting movement.
 
 * With a host CPU, Raspberry Pi, installed do same as above and wait for motor node to be fully started which takes up to 2 minutes but is often faster.  On rev 5.2 MCB you can see the motor node is active when both the 'SIN' and 'SOUT' leds near center top of the MCB are both blinking quickly. ```VERIFY``` that the robot does not jump or move more than 1 cm as as the robot fully starts.  ```VERIFY``` that the Wheels did not jump in movements as we started the robot.
 
