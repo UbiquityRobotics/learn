@@ -8,15 +8,15 @@ nav_exclude: false
 --- 
 # Sonars
 
-<H4 style="color:red">When changing out sensors makes sure to disconnect the RED battery cable from the batteries and wait 2 minutes so high voltage and current are not linked with the main board!</H4>
+<H4 style="color:red">When changing out sensors, disconnect the RED battery cable and wait 2 minutes so no power is sent to the main board!</H4>
 
-The picture below shows the Raspberry Pi camera in the **forward** orientation and the cable to the Sonar board included with Magni Silver. This is a very popular configuration for Magni.
+The picture below shows the Raspberry Pi camera in the **forward** orientation and the cable to the Sonar board included with Magni Silver. This is a usual configuration for Magni.
 
 ![Magni Sonar To Mcb With Camera](assets/camera_sensor/MagniSonarToMcbWithCamera.jpg)
 
 ## Attach and Enable The Sonar Board
 
-Below is a picture of the Sonar board included with Magni Silver configuration. This section will show how the Sonar Board is mounted on tall standoffs and a 50-pin ribbon cable is then attached. The sonar board is included in the large box for a Magni Silver but is not attached to the robot prior to shipment.  Be careful to avoid the need to often re-bend the sonars if they bump something because the pins can only be bent and re-bent a limited number of times.
+Below is a picture of the Sonar board included with the Magni Silver configuration. This section will show how the Sonar Board is mounted on tall standoffs and a 50-pin ribbon cable is then attached. The sonar board is included in the large box for a Magni Silver but is not attached to the robot prior to shipment.  Be careful to avoid the need to often re-bend the sonars if they bump something because the pins can only be bent and re-bent a limited number of times.
 
 ![Magni Sonar Board](assets/camera_sensor/MagniSonarBoard.jpg)
 
