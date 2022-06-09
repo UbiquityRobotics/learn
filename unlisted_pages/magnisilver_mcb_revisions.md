@@ -24,8 +24,8 @@ DateCode was started around version v35 and shows up in /diagnostics topic along
 
 | Ver |	Rate | DateCode | Description |
 | ------- | ---- | ---- | ----------- |
-| v43 | 4.0 | 20210829 | Magni beta release with some fixes and minor new abilities |
-| v40 | 5.75 | 20201209 | Magni current release for most recent release candidate.  This is the default if just an enter is done when asking for version |
+| v43 | 4.0 | 20210829 | Magni late 2021 release with bug fixes and minor new abilities |
+| v40 | 5.75 | 20201209 | Magni previous release used in 2021.  This is the default if just an enter is done when asking for version |
 | v39 | 5.5 | 20201129 | Non-Magni release for in development 4wheel drive unit |
 | v38 | 5.25 | 20201006 | Depreciated Beta release for some fixes. |
 | v37 | 4.75 | 20200620 | Use in manufacturing only.  1st rev with a selftest. When people get a replacement MCB this was often the version and should be updated or checked upon reception of the MCB replacement.  |
