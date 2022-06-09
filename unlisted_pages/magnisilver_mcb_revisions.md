@@ -4,9 +4,9 @@ permalink: magnisilver_mcb_revisions
 group: "magni silver (gen 5)"
 nav_order: 0
 nav_exclude: true
---- 
+---
 
-# Master Controller Board Firmware and Hardware Revision History 
+# Master Controller Board Firmware and Hardware Revision History
 
 Here is where we list in reverse time order the important high level changes for Firmware and Hardware revisions.
 
@@ -14,57 +14,25 @@ We will use the term MCB for Master Controller Board (the main board containing 
 
 ## Firmware Revisions
 
-Below is presented a history of what was included or fixed for each firmware revision that was considered stable.
+Below is presented as a reverse history of the firmware revisions with the most recent revisions at the top of the table.
+
 To do a firmware upgrade for the motor controller board please see [our instructions](noetic_magnisilver_mcb#firmware-upgrade).
 
-Firmware Revision History
+The ```Rate``` in the table is the rate at which the MCB ```STATUS``` led will blink which is handy to visually check. It is best to count the time of 4 or more blinks then divide by that number for more accuracy. If the blink rate is found to be other than in the table it is possible you have a beta or non-approved version.
 
-* **`v43`  20210829.  Our most recent and promising beta release for Magni and new products yet un-announced.  Likely to be set as over the air update in early 2022**
+DateCode was started around version v35 and shows up in /diagnostics topic along with the version.  DateCode is in YYYYMMDD format for releases and YYMMDD for beta releases. It is the date of that particular version.  If you have a version that the date is before the date in the table it is likely a Beta or unofficial release. DateCode did not start till around v35.
 
-* **`v42`  The v41 and v42 firmware versions are custom versions for customers with unique systems.  Do NOT use these in a Magni Product.**
+| Ver |	Rate | DateCode | Description |
+| ------- | ---- | ---- | ----------- |
+| v43 | 4.0 | 20210829 | Magni beta release with some fixes and minor new abilities |
+| v40 | 5.75 | 20201209 | Magni current release for most recent release candidate.  This is the default if just an enter is done when asking for version |
+| v39 | 5.5 | 20201129 | Non-Magni release for in development 4wheel drive unit |
+| v38 | 5.25 | 20201006 | Depreciated Beta release for some fixes. |
+| v37 | 4.75 | 20200620 | Use in manufacturing only.  1st rev with a selftest. When people get a replacement MCB this was often the version and should be updated or checked upon reception of the MCB replacement.  |
+| v35 |	4.0 | 20190815 | Last well known good release as of Sept 2020 with double resolution wheel encoders and many improvements.    Requires host side software update done after 11/10/2019 |
+| v32	| 5.0 | NA | Depreciated Production firmware used in 2019.  |
+| v28 | 6.0 | NA | Depreciated Production shipment version that does wheel movement check on startup. Users should do a firmware upgrade from this very old version |
 
-* **`v40`  20201209.  Our most current Magni release firmware. This is what over the air firmware upgrade provides.**
-    * Just about the same as v39 but has proper defaults for a shipping Magni Products. Has everything discussed for v29
-
-* **`v39`  2020-11-29. NOT A MAGNI Compatible Release! Custom build for a 4 wheel drive architecture in development**
-    * Adds new modes for advanced wheel control options to improve higher load turning response.
-    * Adds new feedback and registers for indication of wheel currents and control state
-    * Added support for MCB rev 5.3 testpoints. Simple selftest connect TP4 to center on P706 on rev 5.3 (this will move motors on powerup!)
-
-* **`v37`  2020-06-20. Used as initial code on MCB board production. Not qualified for final product.**
-    * Contains built in selftest ability including a wheel test. Simple selftest always but wheel test is use P706 on rev 5.3 connect TP4 to center for test on poweron.
-    * Contains runtime checks for power supply and main battery levels
-
-* **`v35`  2019-08-15. Available as version v35 using upgrade_firmware tool.**
-    * This is a major release with first support for double resolution wheels
-    * THIS VERSION REQUIRES HOST SIDE CODE UPDATE TO Nov 15, 2019 apt upgrade or later to function properly!
-    * Doubles the wheel encoder resolution.
-    * Improves motor PID speed controller for added responsiveness as well as options for setting certain limits.
-
-ALL REVISIONS FROM HERE ON REQUIRE HOST SIDE UPDATE TO Nov 15, 2019 or later
-
-* **`v33`  BETA Firmware. DO NOT USE THIS version.  Available as version v33 using upgrade_firmware tool and is not our default. Not to be used due to some defects.**
-    * If the wheels move when ESTOP switch is activated the Magni we do NOT jump upon ESTOP release
-    * Improved PID loop reset on detection of no motor power (ESTOP activated) so we are at a fully PID loop reset state on ESTOP release.
-    * DEFECT: On startup prior to first movement we can see a state sometimes where the motors are not in a 'breaking' state and we are looking into this.    This is reported so far if you don't fully reset the linux software but have power cycled the motor controller board which is possible when not using the Raspberry Pi as the CPU.
-
-* **`v32`  2019-03-25  This was our default firmware for much of 2019**
-    * Many improvements to ESTOP behavior to prevent large movements upon ESTOP release on rev 5.0 boards
-    * Support to enable the improved ESTOP behavior if high level ROS enables the feature
-    * A worse-case default ESTOP detect logic that will work on boards prior to rev 5.0 but is very crude and still moves
-    * Detection of when motors fall too far behind from speed settings indicating velocity settings are too high.
-    * Improved recovery for when ROS motor node is stopped when it is issuing movement commands we will not move in drastic ways as the ROS motor node is restarted due to development or recovery reasons.
-    * Parameter to set maximum wheel velocity settings to prevent unobtainable speed settings from causing problems.
-    * Parameter to set maximum PWM setting the motors can be set to so bad PID cooeficients cannot lead to dangerous movements of the Magni unit.
-    * Build environment cleanup of unused files (not a 'fix' but needs to be mentioned to be complete
-
-* **`v30`  2018-07-21**
-    * Motor encoder inputs use double sync to prevent false readings that gave bad encoder readings
-    * Improvements to the bootloader and firmware download mechanisms to be ready for production
-
-* **`v29`  A near ready for production release used on pre-production units with rev 4.7 boards.**
-
-* **`v28`  A production test firmware revision that is not intended to be sent to customers.**
 
 ## Hardware Revisions
 
