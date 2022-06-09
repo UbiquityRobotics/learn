@@ -16,7 +16,7 @@ We will use the term MCB for Master Controller Board (the main board containing 
 
 Below is presented as a reverse history of the firmware revisions with the most recent revisions at the top of the table.
 
-To do a firmware upgrade for the motor controller board please see [our instructions](noetic_magnisilver_mcb#firmware-upgrade).
+To do a firmware upgrade for the motor controller board please see [our instructions](https://learn.ubiquityrobotics.com/noetic_magnisilver_mcb_upgrade).
 
 The ```Rate``` in the table is the rate at which the MCB ```STATUS``` led will blink which is handy to visually check. It is best to count the time of 4 or more blinks then divide by that number for more accuracy. If the blink rate is found to be other than in the table it is possible you have a beta or non-approved version.
 
