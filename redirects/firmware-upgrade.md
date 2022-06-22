@@ -6,4 +6,4 @@ nav_exclude: true
 
 # Upgrading Motor Controller Firmware
 
-This page has moved to -> [MCB](noetic_magnisilver_mcb#firmware-upgrade).
+This page has moved to -> [MCB](noetic_magnisilver_mcb_upgrade).
