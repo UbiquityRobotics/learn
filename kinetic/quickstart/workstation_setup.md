@@ -109,6 +109,22 @@ Again replace ROBOTNAME with your robot's hostname.
 
 **Note, if you are using IP addresses instead of zeroconf, we highly recommend setting up static IP addresses, or DHCP static assignments**
 
+If you are using NetworkManager network service you need to do some additional configuration. First, you need to enable mDNS by uncommenting and changing to:
+
+    MulticastDNS=yes
+
+in /etc/systemd/resolved.conf. Also, you need to append to /etc/NetworkManager/conf.d/mdns.conf:
+
+    [connection]
+    connection.mdns=2
+
+You can find more about this config [here](https://developer-old.gnome.org/NetworkManager/stable/settings-connection.html). In order to apply the config restart the following services:
+
+    sudo service NetworkManager restart
+    sudo service systemd-resolved restart
+
+Try to ping your network device and see if it works.
+
 Now go to your workstation terminal window and set its environment variables. ROS assumes that the computer it is set up on is the robot. But we are running on the workstation, not the robot.  To tell ROS how to communicate with the robot, you must type:
 
     export ROS_MASTER_URI=http://<robot_ip>:11311
