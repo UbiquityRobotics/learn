@@ -27,6 +27,8 @@ The robot requires **2X 12V** lead acid style batteries and typically we recomme
 
 The provided charger is specified for lead acid batteries. We provide foam inserts with the robot to fit the above battery sizes. Do not discard these foam inserts with the packaging.
 
+While any set of batteries that can together supply roughly 24V will work, the ideal battery type is a deep cycle lead acid battery. Typically for the smaller batteries (1250, 1255, 1270) a gel type lead acid is common and for the larger types (12350) an AGM type is more common. Li battery types will work, but it should be a drop in replacement type that is fully compatible with a lead acid charging cycle and has its own battery balancing system. As the system is designed for lead acid batteries if you use anything else the battery state topic could give misleading numbers as to the true battery state, but this will not affect the ability of the robot to drive properly.
+
 ## Typical Current Draw For The Robot
 
 Below is a table showing ```typical currents``` seen on the positive lead of the battery using a DC clamp on meter for steady states.
