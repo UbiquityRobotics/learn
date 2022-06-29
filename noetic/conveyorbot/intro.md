@@ -30,7 +30,7 @@ It can carry the packages that can be handled by regular conveyor belts:
 
 As software suite is designed to work with the tower and shell, you'll need to check the [Shell and Tower Assembly Instructions](noetic_quickstart_shell_tower).
 
-If you are unfamiliar with the Magni robot, start with the [Overview](noetic_overview_need_to_know) category in the navbar.
+If you are unfamiliar with the Magni robot, start with the [Quick Start](noetic_overview_need_to_know) category in the navbar.
 
 ## Don't have your robot yet?
 

@@ -1,8 +1,8 @@
 ---
 title: "Raspberry Pi Computer"
-permalink: noetic_overview_raspberrypi
-group: "overview"
-rosver: noetic
+permalink: kinetic_overview_raspberrypi
+group: "quick start"
+rosver: kinetic
 nav_order: 12
 nav_exclude: false
 ---
@@ -19,8 +19,7 @@ The robot ships with a Raspberry Pi computer, usually the Pi 4 4GB Model.
 
 ![Raspberry Pi Connector](assets/support/raspberry_pi_connector.png)
 
-Also see the [MCB pin layout](noetic_magnisilver_mcb#full-pcb-layout).
-
+Also see the [MCB pin layout](kinetic_magnisilver_mcb#full-pcb-layout).
 
 ## GPIO lines
 
@@ -34,7 +33,6 @@ This page explains the GPIO line usage and how to disable features if you need t
 
 GPIO lines not listed on this page are available for your own usage without any configuration changes to the Magni
 
-
 ### GPIO lines required to control the robot
 
 There are a few lines that if you are using our robot you must let our system use these lines even for the base product with no options like sonar board and so on. The lines in the table below are reserved for usage by our ROS motor_node to control the main board called the MCB board from the Host CPU (usually the Pi).
@@ -46,7 +44,7 @@ There are a few lines that if you are using our robot you must let our system us
 | 14 | 8 | 8 | Transmit serial port pin from host to MCB (SIN led on MCB)|
 | 15 | 10 | 10 | Receive serial port pin from MCB to host (SOUT led on MCB) |
 
-For non-Magni users of our image: The serial transmit and receive are always required by the motor_node and we have no mechanism to disable that except disconnecting the MCB and disabling the motor_node [see disabling the magni-base service](noetic_quick_start_microsd#using-our-raspberry-pi-image-without-a-magni).
+For non-Magni users of our image: The serial transmit and receive are always required by the motor_node and we have no mechanism to disable that except disconnecting the MCB and disabling the motor_node [see disabling the magni-base service](kinetic_quick_start_microsd#using-our-raspberry-pi-image-without-a-magni).
 
 
 ### Status LED and Switches
@@ -110,7 +108,7 @@ connect to 5V because it is for 3.3 volt maximum input.
 
 ### The Sonar Board
 
-There are many other GPIO lines used for the sensor board.   If the sensor board is not in use you may ensure the configuration is not trying to use the Sonar board and then the GPIO lines would be available for your own use. To use the lines you must [disable the sensors](noetic_magnisilver_sonars#enable-sonar-board-to-run-in-robotyaml-file).
+There are many other GPIO lines used for the sensor board.   If the sensor board is not in use you may ensure the configuration is not trying to use the Sonar board and then the GPIO lines would be available for your own use. To use the lines you must [disable the sensors](kinetic_magnisilver_sonars#enable-sonar-board-to-run-in-robotyaml-file).
 
 The Sonar Board uses many GPIO lines that are shown the table below and again the pin numbers on P701 and P702 are the same for the first 40 pins.
 

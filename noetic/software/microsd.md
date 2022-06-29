@@ -1,8 +1,8 @@
 ---
 title: "Software Images and Micro SD Flashing"
-permalink: kinetic_quick_start_microsd
-group: "quick start"
-rosver: kinetic
+permalink: noetic_quick_start_microsd
+group: "software"
+rosver: noetic
 nav_order: 2
 nav_exclude: false
 --- 
@@ -11,7 +11,7 @@ nav_exclude: false
 
 The Magni robots use Raspberry Pi computers, and as such require a software image to be loaded onto an SD card and then inserted into the Pi to run it.
 
-We distribute our images with ROS and Magni packages preinstalled, which you can find on the [image download page](kinetic_pi_image_downloads).
+We distribute our images with ROS and Magni packages preinstalled, which you can find on the [image download page](noetic_pi_image_downloads).
 
 Other software suites like Conveyorbot and EZ-Map also use pre-loaded images which are delivered separately.
 
@@ -25,8 +25,6 @@ We recommend using [Etcher](https://www.balena.io/etcher/) to flash the image on
 ## Getting Started
 
 **NOTE:** When the Raspberry Pi boots for the first time, it resizes the file system to fill the SD card, this can make the first boot take some time.
-
-If you want to use our image for something other than our robots, please read this document.
 
 Our image comes up as a Wifi access point. The SSID is `ubiquityrobotXXXX` where `XXXX` is part of the MAC address. The wifi password is `robotseverywhere`.
 
@@ -48,7 +46,7 @@ people may have about the image.
 
 ### Connecting
 Our image comes up and starts up a WiFi hotspot by default.
-To learn more about how to connect with the hotspot, see [here](kinetic_quick_start_connecting).
+To learn more about how to connect with the hotspot, see [here](noetic_quick_start_connecting).
 
 You can also directly hook up a LAN cable to a router you may have that offers a DHCP connection.  If you do that you can find software to scan your network for the new IP address and then use a tool such as  ssh  or  putty to connect a console.
 
@@ -72,7 +70,7 @@ Our image uses some of the GPIO lines to control our
 Magni robot. By default many of the lines are
 unused and these are the best ones to think about
 using for your own uses. You should see the section
-regarding [GPIO Lines Used For The Sonar Board](kinetic_overview_raspberrypi#gpio-lines) and
+regarding [GPIO Lines Used For The Sonar Board](noetic_overview_raspberrypi#gpio-lines) and
 use those lines as we do not use them until they are
 enabled by users who order a Magni with a Sonar board.
 
@@ -92,8 +90,8 @@ Please see the addresses on I2C that we use and avoid
 these addresses if you can as you may get our software
 interacting with your software in some cases. See our
 I2C discussion that is specific to Magni but will list
-the addresses used in the section titled [Guidelines For
-Usage Of The I2C Bus](kinetic_quick_start_tips_and_tricks#guidelines-for-usage-of-the-i2c-bus).
+the addresses used in the section titled  [Guidelines For
+Usage Of The I2C Bus](noetic_quick_start_tips_and_tricks#guidelines-for-usage-of-the-i2c-bus).
 
 <hr>
 

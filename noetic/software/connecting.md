@@ -1,7 +1,7 @@
 ---
 title: "Connecting to the Robot"
 permalink: noetic_quick_start_connecting
-group: "quick start"
+group: "software"
 rosver: noetic
 nav_order: 3
 nav_exclude: false

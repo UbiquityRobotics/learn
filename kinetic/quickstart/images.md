@@ -1,7 +1,7 @@
 ---
 title: "Image Downloads"
 permalink: kinetic_pi_image_downloads
-group: overview
+group: "quick start"
 rosver: kinetic
 nav_order: 2
 nav_exclude: false

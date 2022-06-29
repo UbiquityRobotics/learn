@@ -1,8 +1,8 @@
 ---
 title: "Driving the robot"
-permalink: kinetic_quick_keyboard_driving
-group: "quick start"
-rosver: kinetic
+permalink: noetic_quick_keyboard_driving
+group: "software"
+rosver: noetic
 nav_order: 5
 nav_exclude: false
 --- 
@@ -13,7 +13,7 @@ Now that you have your robot all assembled, the first test should be to try driv
 
 ## Keyboard Teleop
 
-Connect to your robot and log in, following the instructions in [Connecting the Robot to Your Network](kinetic_quick_start_connecting). Log in to the robot from an ssh window, as before.
+Connect to your robot and log in, following the instructions in [Connecting the Robot to Your Network](noetic_quick_start_connecting). Log in to the robot from an ssh window, as before.
 
 After logging in, the  magni_base program will be running under ROS. To verify this, type:
 
@@ -59,7 +59,7 @@ You can increase or decrease the speed that will be used also from keys on the k
 
 ## Running teleop-twist from a workstation
 
-As of right now you're running the teleop node on the actual robot, and as such are sending keypress packets through the SSH tunnel to the robot. To run the node on your workstation and send messsages through ROS sockets, then you'll need to first [connect to the robot as a workstation and set it up as a ROS master](kinetic_quick_start_workstation).
+As of right now you're running the teleop node on the actual robot, and as such are sending keypress packets through the SSH tunnel to the robot. To run the node on your workstation and send messsages through ROS sockets, then you'll need to first [connect to the robot as a workstation and set it up as a ROS master](noetic_quick_start_workstation).
 
 You'll also need to install the actual teleop node in order to run it:
 

@@ -1,7 +1,7 @@
 ---
 title: "Workstation Setup"
 permalink: noetic_quick_start_workstation
-group: "quick start"
+group: "software"
 rosver: noetic
 nav_order: 4
 nav_exclude: false

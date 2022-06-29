@@ -1,7 +1,7 @@
 ---
 title: "Connecting to the Robot"
 permalink: kinetic_quick_start_connecting
-group: "quick start"
+group: "software"
 rosver: kinetic
 nav_order: 3
 nav_exclude: false

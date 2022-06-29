@@ -1,7 +1,7 @@
 ---
 title: "Workstation Setup"
 permalink: kinetic_quick_start_workstation
-group: "quick start"
+group: "software"
 rosver: kinetic
 nav_order: 4
 nav_exclude: false

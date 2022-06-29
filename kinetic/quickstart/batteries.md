@@ -1,7 +1,7 @@
 ---
 title: "Batteries"
 permalink: kinetic_overview_batteries
-group: overview
+group: "quick start"
 rosver: kinetic
 nav_order: 2
 nav_exclude: false

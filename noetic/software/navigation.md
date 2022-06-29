@@ -1,8 +1,8 @@
 ---
 title: "Mapping & Navigation"
-permalink: kinetic_quick_start_navigation
-group: "quick start"
-rosver: kinetic
+permalink: noetic_quick_start_navigation
+group: "software"
+rosver: noetic
 nav_order: 6
 nav_exclude: false
 ---  

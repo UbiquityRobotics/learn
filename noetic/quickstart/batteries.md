@@ -1,7 +1,7 @@
 ---
 title: "Batteries"
 permalink: noetic_overview_batteries
-group: overview
+group: "quick start"
 rosver: noetic
 nav_order: 2
 nav_exclude: false

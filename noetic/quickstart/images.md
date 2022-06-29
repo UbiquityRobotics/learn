@@ -1,7 +1,7 @@
 ---
 title: "Image Downloads"
 permalink: noetic_pi_image_downloads
-group: overview
+group: "quick start"
 rosver: noetic
 nav_order: 10
 nav_exclude: false

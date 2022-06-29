@@ -1,7 +1,7 @@
 ---
 title: "Tips and Tricks"
 permalink: kinetic_quick_start_tips_and_tricks
-group: "quick start"
+group: "software"
 rosver: kinetic
 nav_order: 11
 nav_exclude: false
