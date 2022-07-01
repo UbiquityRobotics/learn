@@ -161,13 +161,13 @@ Because prior to rev 5.2 the version number is very hard to read we will supply 
 
 Starting with version 5.2 the large text for the board revisions are printed in bright white silkscreen on the left edge of the board.  This page will not describe physical differences to identify the boards because the board revision is clearly marked.  Below shows rev 5.2 and rev 5.3 left edge markings.
 
-![Current MCB Board Revision Markings](assets/support/Mcb_5p2and5p3_BoardRevMarking.jpg)
+![Current MCB Board Revision Markings](../../assets/support/Mcb_5p2and5p3_BoardRevMarking.jpg)
 
 #### Revision Markings On Rev 5.1 and earlier
 
 All MCB boards have the revision on the left edge of the PCB but bright white silkscreen was only started to be used as of rev 5.2.  Below is an enhanced picture of a rev 5.1 board to better show what is there.  These markings are very low contrast but are present on all MCB boards.
 
-![Older MCB Board Revision Markings](assets/support/Mcb_5p1_BoardRevMarking.jpg)
+![Older MCB Board Revision Markings](../../assets/support/Mcb_5p1_BoardRevMarking.jpg)
 
 
 #### Revision 5.1 Main Control Board
@@ -182,7 +182,7 @@ The following items identify a rev 5.1 board.
 * A thick white strip is on the right edge for notes as required.
 * The large black MosFet transistor in lower right will fit the pads on the PC board.
 
-<img src="assets/programming_your_robot/MagniIdentificationForMcbRev5p1.jpg
+<img src="../../assets/programming_your_robot/MagniIdentificationForMcbRev5p1.jpg
 " />
 
 #### Revision 5.0 Main Control Board
@@ -195,7 +195,7 @@ These items identify a rev 5.0 board besides the top copper board rev in bottom 
 * A thick white strip is on the right edge for notes as required.
 * The upper left of the board will have a large capacitor on its side with white glue
 
-<img src="assets/programming_your_robot/MagniIdentificationForMcbRev5p0.jpg
+<img src="../../assets/programming_your_robot/MagniIdentificationForMcbRev5p0.jpg
 " />  
 
 #### Revision 4.9 Main Control Board
@@ -206,7 +206,7 @@ These items identify a rev 4.9 board besides the top copper board rev in bottom 
 * No white stripe of top silkscreen along the right edge and it has not P2 there either
 * The top layer text on the left will be bordered by top layer full copper PC layer.
 
-<img src="assets/programming_your_robot/MagniIdentificationForMcbRev4p9.jpg
+<img src="../../assets/programming_your_robot/MagniIdentificationForMcbRev4p9.jpg
 " />  
 
 #### Revision 4.7 Main Control Board
@@ -220,7 +220,7 @@ THE REV 4.7 BOARD WAS A PRE-PRODUCTION BOARD FOR EVALUATION
 * The 14-pin jack that holds the switch board had to be cut to not hit a large transistor.
 * The large 50-pin jack in upper right will be a female jack for this pre-production board
 
-<img src="assets/programming_your_robot/MagniIdentificationForMcbRev4p7.jpg
+<img src="../../assets/programming_your_robot/MagniIdentificationForMcbRev4p7.jpg
 " />  
 
 
@@ -233,7 +233,7 @@ There were several versions of switch boards from pre-production through first s
 
 In order to support user needs to place the main power switch and/or the ESTOP switch in a location that is on their robot cover or perhaps is more accessible due to the customer physical additions we developed the revision 2.2 switch board seen below
 
-<img src="assets/programming_your_robot/SwitchBoardRev2p2.jpg
+<img src="../../assets/programming_your_robot/SwitchBoardRev2p2.jpg
 " />  
 
 The revision 2.2 board has P202 seen in the back right that is wired in series with the red keycap ESTOP switch on the board.   Our plan is we will ship the connector that mates with P202 that has one piece of wire sorted to itself.  In this way P202 is shorted from the factory and a user may remove this jack and put two wires going to his own ESTOP switch for his own robot needs.
@@ -255,7 +255,7 @@ For either ESTOP switch or Main Power switch we ship one jumper that can be modi
 
 * A rev 2.x switch board with 4 resistors can be used with earlier MCB boards.
 
-<img src="assets/programming_your_robot/MagniIdentificationOfSwitchBoards.jpg
+<img src="../../assets/programming_your_robot/MagniIdentificationOfSwitchBoards.jpg
 " />  
 
 ### Very early pre-production Switch boards
@@ -278,13 +278,13 @@ These steps are taken to remove the main board.  It should be noted that to repl
    - Disconnect both large multi-pin black wheel cables with inline jacks from the wheels.  These can be very tight so you may need a very good grip and work the connectors gently back and forth as you try to extract.  Be careful to not bang your knuckles as they can release all at once. See the ['the Motor cables to the wheels' section of unboxing](kinetic_quickstart_unboxing#main-power-battery-and-wheel-cables-installation) for pictures
    - Unscrew the 2 screws that hold the small 'Switch Board' to the Magni front panel and place the screws in a safe place.   After screw removal the switch board can be unplugged from the main MCB board and taken out then set aside perhaps near the 2 screws.
 
-     ![Switch Board Screws](assets/support/SwitchBoardMountingScrews.jpg)
+     ![Switch Board Screws](../../assets/support/SwitchBoardMountingScrews.jpg)
 
    - If your Magni has the sonar board you should remove it's 50 pin cable from the main MCB board and remove the sonar board to make things easier for this process.    You can see how it is installed and do the reverse that is described on the last half of [the sonar sensors page](kinetic_magnisilver_sonars)
    - We are going to free up the RaspiCam flat white cable so the Raspberry Pi can be removed easier in next step.  Refer to [camera sensors](kinetic_magnisilver_camera) for pictures.  Locate the white flat thin ribbon cable to the camera at the point it gets to the camera.  Take note at this time that the blue tape on the flat cable is away from the RaspiCam PCB which will have to happen as you reassemble later.   NOTE: The jack for the cable is very delicate so just pull back the tabs on each side just a mm or two and do not force it harder or it may break the tabs.  Pull out the cable from the camera end.  
    - Remove the large sheetmetal rectangular Front Bracket that has the raspicam camera bracket riveted to it.  Refer to the middle of [unboxing](kinetic_quickstart_unboxing) and see the ```Front Bracket``` picture. The removal is done using a long allen wrench with 4mm tip for the bolts that hold this 24mm wide side to side bar to the top shelf of the Magni chassis.   The 4mm allen wrench has to be long enough to go through from the top of the bar all the way to insert into the bolts.
 
-   ![Front Bracket](assets/support/FrontBracketWithRaspicam.jpg)
+   ![Front Bracket](../../assets/support/FrontBracketWithRaspicam.jpg)
 
    - Unscrew one phillips head screw that may be holding your raspberry Pi to a 20mm tall standoff near the center of the MCB.   Save this and take note of the washers and 1mm thick plastic spacers on some boards and don't loose these tiny parts.
    - Now you may gently ease out the Raspberry Pi. This is a bit tricky so take your time. Care should be taken to never apply any pressure to the very thin Micro SD card in this process as it is easy to break.  You first back the Pi out of the 40 pin tall connector.  Next you have to remove in an upward direction the Raspberry Pi clear of the chassis. Place the Raspberry Pi aside in your work area.  I find that gentle rocking away and towards the MCB at the side of the 20mm standoff while pulling pins out is easiest.
@@ -317,7 +317,7 @@ All models of the Raspberry Pi have audio input and output on a 3.5mm compound j
 
 The picture below shows the 4 power supplies available from connectors or holes near the top of the board.  These can be of use for cases where a user may need 12V or 5V for their own circuits.
 
-![Power Supply Connections For User Uses](assets/support/PowerConnectorsForUser.jpg)
+![Power Supply Connections For User Uses](../../assets/support/PowerConnectorsForUser.jpg)
 
 We prefer that the user use the  Auxilary 12V and 5V power first because they are separate from the robot main supplies.
 The auxilary supplies should be able to supply 12V at 7 amps and 5V at 7 amps.  High transient loads may cause them to briefly sag.
@@ -335,7 +335,7 @@ As the silkscreen shows for both of these connectors 5V is on the left then the 
 
 There are two power only expansion connectors near the bottom of the board by the large automotive main Fuse.  These can easily supply power for most 5V usb powered devices.
 
-![USB Jacks, Fan Jack and Aux Motor Power](assets/support/UsbJacksAndAuxPowerAndFanJack.jpg)
+![USB Jacks, Fan Jack and Aux Motor Power](../../assets/support/UsbJacksAndAuxPowerAndFanJack.jpg)
 
 
 ### The USB Style 5V Power
@@ -344,7 +344,7 @@ Located at the bottom of the MCB board as the board is in the Magni robot there 
 
 If your USB power cables cannot plug into these jacks we recommend you get some right angle USB 3.0 adapters.  Note that you need the type where the plastic in the adapter is going to fit into our connectors thus the plastic must be above the hole for the part that plugs in. This type is normally called 'Down' although it will point up in our case for the MCB.  Here is some search text to find the jack we recommend but there are other vendors.   `USB 3.0 Adapter 90 Degree Male to Female Combo Vertical Up and Down Angle Coupler Connector`
 
-![USB Jacks, Fan Jack and Aux Motor Power](assets/support/UsbTypeARightAngleDownAdapter.jpg)
+![USB Jacks, Fan Jack and Aux Motor Power](../../assets/support/UsbTypeARightAngleDownAdapter.jpg)
 
 ### The 12V Fan Power Connector
 
@@ -400,7 +400,7 @@ Starting with MCB version 5.2 we have an onboard 3.3V power regulator so that th
 
 There is an led that should be on whenever the board is powered up and that led is labeled 3.3V and is located about 2cm lower than the large white Main Power jack at the top of the board.
 
-![3.3V Power Led And Serial Active Leds](assets/support/SerialLedsAnd3p3VPowerLed.jpg)
+![3.3V Power Led And Serial Active Leds](../../assets/support/SerialLedsAnd3p3VPowerLed.jpg)
 
 ### The Serial Communication indicators
 
@@ -415,7 +415,7 @@ We are starting in 2022 to ship a small OLED display with each MCB. The OLED dis
 
 Starting with MCB rev 5.2 we have had a 4-pin 0.1" pin spacing female jack that brings out the Raspberry Pi I2C lines as well as the MCB onboard 3.3V power.  Rev 5.1 board also had this jack but because power for 3.3 came from the Raspberry Pi we do not recommend using that jack for the OLED display.
 
-![MCB I2C Expansion Jack](assets/support/McbI2cJack.jpg)
+![MCB I2C Expansion Jack](../../assets/support/McbI2cJack.jpg)
 
 From left to right here are the P2 I2C expansion jack pin definitions
 
@@ -444,7 +444,7 @@ We find the one that looks like this picture and has a dual button control unit 
 
 `You must find a control that will latch on` and stay on until you push a button on the control later.   Once installed you keep it enabled till you must stop for safety and then one click will stop the unit.  Many of these have programming ability but with really bad directions.
 
-![Remote ESTOP Switching](assets/support/SwitchBoardRfEstopWiring.jpg)
+![Remote ESTOP Switching](../../assets/support/SwitchBoardRfEstopWiring.jpg)
 
 This remote RF relay comes with black plastic box that latches closed firmly and covers the circuit board without taking much space. The case is not shown in this picture simply to show the power and switch wire connections. You could use good quality double sided flexible tape to attach this to the inside space near the switch board or make a bracket if you are going to ship this with your product.
 
@@ -468,4 +468,4 @@ Below is the wiring you would have to supply to the MCB 14-pin P601 jack.  You M
 
 Be very careful if you use a ribbon cable or other wiring because that connector has direct battery access and EXTREME currents are possible.  Thus  Measure and verify and measure AGAIN before going 'live' with direct battery connect.   I have indicated off to the left the pins used for the battery charger because you would also not have the XLR jack for charger without our Switch Board.
 
-![Switch Board Alternative Wiring](assets/support/McbSwitchBoardAlternativeWiring.jpg)
+![Switch Board Alternative Wiring](../../assets/support/McbSwitchBoardAlternativeWiring.jpg)

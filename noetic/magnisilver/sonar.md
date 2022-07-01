@@ -12,13 +12,13 @@ nav_exclude: false
 
 The picture below shows the Raspberry Pi camera in the **forward** orientation and the cable to the Sonar board included with Magni Silver. This is a usual configuration for Magni.
 
-![Magni Sonar To Mcb With Camera](assets/camera_sensor/MagniSonarToMcbWithCamera.jpg)
+![Magni Sonar To Mcb With Camera](../../assets/camera_sensor/MagniSonarToMcbWithCamera.jpg)
 
 ## Attach and Enable The Sonar Board
 
 Below is a picture of the Sonar board included with the Magni Silver configuration. This section will show how the Sonar Board is mounted on tall standoffs and a 50-pin ribbon cable is then attached. The sonar board is included in the large box for a Magni Silver but is not attached to the robot prior to shipment.  Be careful to avoid the need to often re-bend the sonars if they bump something because the pins can only be bent and re-bent a limited number of times.
 
-![Magni Sonar Board](assets/camera_sensor/MagniSonarBoard.jpg)
+![Magni Sonar Board](../../assets/camera_sensor/MagniSonarBoard.jpg)
 
 
 ## Enable Sonar Board To Run in robot.yaml file
@@ -54,10 +54,10 @@ We have found serious issues with using a Raspberry Pi 4 in combination of the S
 If your unit has a Pi4 then this fix is required for Images we supply up through 2020. This is a very high priority issue.  Certain workarounds had been found in mid 2020 but they seem to no longer work.   If your raspberry Pi is a Pi 3 you do not need to do this nor should you do this process!
 
 Here is what must be done to make the Sonar board work with a Raspberry Pi 4 CPU.  
-Obtain and burn a fresh image using our 2020-11-07 image located on our [Download Page](assets/camera_sensor/https://downloads.ubiquityrobotics.com/pi.html)
+Obtain and burn a fresh image using our 2020-11-07 image located on our [Download Page](../../assets/camera_sensor/https://downloads.ubiquityrobotics.com/pi.html)
 
 To do this fix you will need to have the Magni connected to your own Wifi so that the robot can gain access to the internet and apply these fixes.  You would use an SSH session to the robot and to assist in that setup see this page:
-[Connecting the Robot to Your Network](assets/camera_sensor/https://learn.ubiquityrobotics.com/connect_network)
+[Connecting the Robot to Your Network](../../assets/camera_sensor/https://learn.ubiquityrobotics.com/connect_network)
 
 We will fix this in a new image as soon as possible as a high priority but until then this is the process.
 
@@ -88,27 +88,27 @@ used as well.
 
 The standoffs and the M3 screws are shown below for reference.
 
-![Magni Standoff Reference](assets/camera_sensor/MagniStandoffReference.jpg)
+![Magni Standoff Reference](../../assets/camera_sensor/MagniStandoffReference.jpg)
 
 The 4 standoffs screw into the fixed nuts on the chassis. The picture below shows the 2 standoff locations on right and the 2 on the left.  Center standoff is NOT used.
 
 There is also no need to load the large fuse on the back of the board for just the Sonar board and we recommend removing F701 if it is loaded for when you only have the Sonar board (Up to 2020 that was always the case).  The fuse allows 24V to get routed to other boards that sometimes can sit below the sonar board but it is best safety to just remove that fuse.
 
-![Magni Sonar Board Standoffs](assets/camera_sensor/MagniAllSonarBoardStandoffs.jpg)
+![Magni Sonar Board Standoffs](../../assets/camera_sensor/MagniAllSonarBoardStandoffs.jpg)
 
 Below is shown the right side of the sonar board fully mounted using the M3
 standoffs and M3 screws from the top.
 
-![Magni Sonar Board Mounted On Standoffs](assets/camera_sensor/MagniSonarBoardMountedOnStandoffs.jpg)
+![Magni Sonar Board Mounted On Standoffs](../../assets/camera_sensor/MagniSonarBoardMountedOnStandoffs.jpg)
 
 The ribbon cable is then inserted into the main Magni board as shown in the
 picture below where it will be plugged into the Sonar board as the final step.
 
-![Magni Sonar Board Cable From Main Pc Ready](assets/camera_sensor/MagniSonarBoardCableFromMainPcReady.jpg)
+![Magni Sonar Board Cable From Main Pc Ready](../../assets/camera_sensor/MagniSonarBoardCableFromMainPcReady.jpg)
 
 Be sure the 50 pin ribbon cable is fully inserted into both the main Magni board as well as the Sonar board.  It can be held up due to being tight or having bent pins.   Notice how far they should go into the jacks, about 5mm or so, as shown from the side in the picture below and also shown as first picture on this page.
 
-![Magni Sonar Board Cable From Main Pc Ready](assets/camera_sensor/Sonar50pinCableInserted.jpg)
+![Magni Sonar Board Cable From Main Pc Ready](../../assets/camera_sensor/Sonar50pinCableInserted.jpg)
 
 LED1 is for the wifi but if you do not see that start to blink within around 15 seconds after a fresh power up case there may be something not connected on the 50 pin cable.
 

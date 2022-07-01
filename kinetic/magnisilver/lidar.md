@@ -13,13 +13,13 @@ We currently support two LiDARs:
 
 ## UR-50 Long Range LiDAR
 
-![Magni lidar connection](assets/camera_sensor/n301.png)
+![Magni lidar connection](../../assets/camera_sensor/n301.png)
 
 ##### [Installation guide and info](kinetic_ur50_lidar)
 
 ## UR-12 Short Range LiDAR
 
-![Magni lidar connection](assets/camera_sensor/ld06.png)
+![Magni lidar connection](../../assets/camera_sensor/ld06.png)
 
 ##### [Installation guide and info](kinetic_ur12_lidar)
 

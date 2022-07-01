@@ -64,6 +64,6 @@ The stock battery charger we supply is ONLY FOR LEAD ACID batteries and will NOT
 
 There is also a CR2032 coin cell battery on the back of the [MCB](noetic_magnisilver_mcb).  This provides power to the real-time clock, which is **essential** for time keeping while the robot is without power or turned off. If this battery is not installed, obtain one and install it. Insert the battery with the lettering side up.
 
-![Coin cell clip](assets/unboxing/Magni_CR2032_Battery.jpg)
+![Coin cell clip](../../assets/unboxing/Magni_CR2032_Battery.jpg)
 
  

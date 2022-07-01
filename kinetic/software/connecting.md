@@ -209,7 +209,7 @@ If you have access to your router it may be simplest to just log into it via you
 
 Starting in late 2020 we had formed host software to drive a low cost OLED display that is usable on rev 5.2 or more recent MCB boards. If you happen to have one and are using an up to date image, you should be able to view your IP on the display itself.
 
-![oled display](assets/oled.png)
+![oled display](../../assets/oled.png)
 
 The display also shows other data:
 - hostname

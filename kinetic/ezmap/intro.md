@@ -9,7 +9,7 @@ nav_exclude: false
 
 # Introduction
 
-> ![](assets/ezmap/ezmap_logo.png)
+> ![](../../assets/ezmap/ezmap_logo.png)
 
 Welcome to EZ-Map. Following this wiki should allow you to to map a room with a lidar and set up routes to execute, or drive the robot around using video streaming and remote control.
 

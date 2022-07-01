@@ -17,7 +17,7 @@ The robot ships with a Raspberry Pi computer, usually the Pi 4 4GB Model.
 
 * [GPIO Reference Table](http://www.panu.it/raspberry/)
 
-![Raspberry Pi Connector](assets/support/raspberry_pi_connector.png)
+![Raspberry Pi Connector](../../assets/support/raspberry_pi_connector.png)
 
 Also see the [MCB pin layout](noetic_magnisilver_mcb#full-pcb-layout).
 

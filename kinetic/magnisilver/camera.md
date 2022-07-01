@@ -22,7 +22,7 @@ navigating in a space with fiducial patterns on the ceiling the **upward** mount
 
 Other postions include **downwards** which corresponds to the tower+shell setup and has the camera pointing down to see floor markers, and **ahead** which points straight forward.
 
-![Magni Camera Forward And Upward Mounting](assets/camera_sensor/MagniCamera_ForwardAndUpwardMounting.jpg)
+![Magni Camera Forward And Upward Mounting](../../assets/camera_sensor/MagniCamera_ForwardAndUpwardMounting.jpg)
 
 Notice that in both orientations that the cable was routed through the slots in
 the metal bracket. The camera is screwed to fixed standoffs using M2 screws
@@ -51,12 +51,12 @@ card in this process if your fingers push on the SD card.
 Next attach the cable to the Pi; the ‘blue’ part of the cable faces toward the USB
 ports.  Make sure the cable goes all the way in as it can seem to be inserted but not fully making contact.
 
-![Raspberry Pi with Camera Cable](assets/camera_sensor/a2.jpg)
+![Raspberry Pi with Camera Cable](../../assets/camera_sensor/a2.jpg)
 
 Next reinstall the Pi, making sure the pins are aligned correctly as in the picture
 below. (Misaligned pins will cause permanent failure!)
 
-![Magni Sonar Board](assets/camera_sensor/MagniRaspberryPiMounting.jpg)
+![Magni Sonar Board](../../assets/camera_sensor/MagniRaspberryPiMounting.jpg)
 
 ## Testing
 If you find that fiducial follow or waypoint
@@ -104,7 +104,7 @@ We consider a given camera with a given lens as one camera so if you use somethi
 ## Physically Mounting The Camera To The robot
 In the simple case a 3D printed part that attaches to the existing Magni robot camera standoffs can be used.   We have done this with at least 2 cameras incuding the RaspicamHQ camera.  Below is shown the 3D printed adapter by itself and then the RaspicamHQ mounted to the adapter.
 
-![RaspicamHQ Mounted](assets/camera_sensor/RaspicamHQ_MountedOnMagni.jpg)
+![RaspicamHQ Mounted](../../assets/camera_sensor/RaspicamHQ_MountedOnMagni.jpg)
 
 ### Camera Calibration File Must Be created
 You will need to create a camera calibration file per instructions above in 'Camera Calibration' section.   We suggest you give it a name that indicates the camera type, the lens being used and the camera resolution.  For our example here lets say we call this file ```camerahq6mm_2048x1520.yaml```.  

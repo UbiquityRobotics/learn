@@ -10,7 +10,7 @@ nav_exclude: true
 
 The Fiducial Follow system enables the robot to follow fiducial markers like this one:
 
-![Fiducial Markers](assets/fiducial.png)
+![Fiducial Markers](../assets/fiducial.png)
 
 This is an aruco marker. Its a little square image,
 that like a QR code contains an identifier encoded in the pattern of the marker. We use this type of marker a lot on our robots and you'll encounter them again when you get to the navigation system description. With fiducial follow running the robot continuously searches its field of view for a specific aruco marker (number 49 by default which is shown). Because the marker is a pre-set size and has a pre-set orientation the robot can figure out how far away it is and even which direction it is pointing!
