@@ -21,12 +21,22 @@ See the [Software Images and SD Card Flashing](noetic_quick_start_microsd) guide
 
 <br>
 
-| Download | [2022-03-29-ubiquity-gdm3-beta2](https://ubiquity-pi-image.sfo2.digitaloceanspaces.com/2022-03-29-ubiquity-gdm3-beta2-testing-focal-raspberry-pi.img.xz) |
+| Download | [2022-06-15-ubiquity-gdm3-testing](https://ubiquity-pi-image.sfo2.digitaloceanspaces.com/2022-06-15-ubiquity-gdm3-testing-focal-raspberry-pi.img.xz) |
 | OS Version  | Ubuntu 20.04 LTS + GDM3 |
 | ROS  | Noetic |
 | Architecture | armhf (32 bit) |
 | SHA256 Sum   | eb9da2da181e89b2e22c9f42a9031aee890164bcb64bed0c25165439ccb4f64a |
 | Status | <b style="color: green;">Active</b> |
+| Notes | Image with Gnome Desktop - Rpi 1.5 and lower support, general details improvements |
+
+<br>
+
+| Download | [2022-03-29-ubiquity-gdm3-beta2](https://ubiquity-pi-image.sfo2.digitaloceanspaces.com/2022-03-29-ubiquity-gdm3-beta2-testing-focal-raspberry-pi.img.xz) |
+| OS Version  | Ubuntu 20.04 LTS + GDM3 |
+| ROS  | Noetic |
+| Architecture | armhf (32 bit) |
+| SHA256 Sum   | eb9da2da181e89b2e22c9f42a9031aee890164bcb64bed0c25165439ccb4f64a |
+| Status | <b style="color: darkred;">Deprecated</b> |
 | Notes | Second noetic beta image, with gnome desktop. |
 
 <br>
