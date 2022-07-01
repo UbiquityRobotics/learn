@@ -28,7 +28,7 @@ For the launch files in this demos the RPLidar is screwed to the top plate using
 
 The center of the lidar when looking from the top is located half way between each wheel but of course on top of the Magni top plate. This places the translated X and Y of the lidar at 0,0 relative to what is called ```base_link``` in the robot physical model, URDF model,  the rotation of the Lidar is specified so the little pulley is to the rear side of the robot.
 
-![RpLidar Mounting](assets/doing_more/Magni_RpLidarMounting.png)
+![RpLidar Mounting](../../assets/doing_more/Magni_RpLidarMounting.png)
 
 To modify this example for use of any other Lidar it would be best done after you understand this demo but even reading this demo set of instructions will offer you many things to investigate and research to go as far as you like with your own robot hardware.  Should you wish to use a different Lidar the launch files would need modifications and you would need a ROS driver for that Lidar.  
 
@@ -175,7 +175,7 @@ rosrun rviz rviz -d lidar_mapmaker.rviz
 
 Below is an example of a very simple map shown in RViz.  The black outline surrounds gray 'known open area' and is the navigation stack's thinking on where the map ends or objects were located.    The red outline is the realtime lidar scan data.  The cones are shown here but we are not taking advantage of them so far in this demo.   The cones are data from the Magni Silver sonar board.  The colorful lines are different axis of different key parts of the robot and where they are located.   This picture does not have the simulated model of the Magni showing up because I like to see ALL the axis of the robot and you can even see the ones for the wheels rotate when the robot drives!
 
-![RpLidar Mounting](assets/doing_more/Magni_ExampleOfLidarAndSonarsInMap.png)
+![RpLidar Mounting](../../assets/doing_more/Magni_ExampleOfLidarAndSonarsInMap.png)
 
 ### Tell the robot where it is located on the MAP
 

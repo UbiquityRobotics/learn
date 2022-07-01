@@ -27,7 +27,7 @@ We use the ```Aruco``` style Fiducial Markers and try to so far use the ones whe
 The Ubiquity Robotics localization system uses a number of fiducial markers of known size (illustrated below).  Detection of the markers
 is done by using the robot's camera.  The characteristics of the images of the fiducial markers enable the robot to compute its location.
 
-![Fiducial Markers](assets/doing_more/two_fiducials.png)
+![Fiducial Markers](../assets/doing_more/two_fiducials.png)
 
 ## Detection And Processing Basics
 
@@ -144,7 +144,7 @@ represent fiducials that are in the map, but not currently in the view of the
 camera. The blue lines show connected pairs of fiducials that have been observed
 in the camera view at the same time. The more blue lines there are between fiducials, the more robust the map will be.
 
-![Visualizing with rviz](assets/doing_more/fiducial_rviz.png)
+![Visualizing with rviz](../assets/doing_more/fiducial_rviz.png)
 
 ## Using The Global Map For Magni Navigation
 Once you have created a global map for your robot accessible area you can then begin to navigate the Magni by using our original navigation mode.

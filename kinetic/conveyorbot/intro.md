@@ -11,7 +11,7 @@ nav_exclude: false
 
 #### ConveyorBot is not available on Kinetic, please see [Noetic documentation](noetic_conveyorbot_intro).
 
-> ![ConveyorBot](assets/breadcrumb/Breadcrumb_main.jpg)
+> ![ConveyorBot](../../assets/breadcrumb/Breadcrumb_main.jpg)
 
 
 

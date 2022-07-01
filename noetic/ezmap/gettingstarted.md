@@ -29,7 +29,7 @@ The app can be used straight away, however saving it as a home screen app ② el
 
  The app should then be able to run in full screen ④.
 
-![Add To Home Screen](assets/ezmap/homescreen.png)
+![Add To Home Screen](../../assets/ezmap/homescreen.png)
 
 ### Initial extrinsics calibration
 
@@ -73,7 +73,7 @@ Assuming the camera is connected correctly, one of the main two screens (<img sr
 
 The robot can be driven around using the joysticks which show up by default, or you can select alternative control schemes in the settings menu (<img src="assets/ezmap/settings.svg" alt="" width="40">).
 
-![Video](assets/ezmap/ezmap_video.png)
+![Video](../../assets/ezmap/ezmap_video.png)
 
 Note, if the battery widget appears as gray (<img src="assets/ezmap/unknown.svg" alt="" width="40"> ), then the MCB and motor node have not yet connected and you may need to wait a few more seconds until the robot is ready to go. If it persists for longer than a minutes or two then it may be an indicator that there's something wrong with the motor control.
 
@@ -85,7 +85,7 @@ Note, if the battery widget appears as gray (<img src="assets/ezmap/unknown.svg"
 
 To use the robot’s autonomous functions, first switch to the mapping view (<img src="assets/ezmap/viewswitch_landscape.svg" alt="" width="40">). The interface shown should look as follows, the mapping should start automatically:
 
-![Mapping](assets/ezmap/mapping.png)
+![Mapping](../../assets/ezmap/mapping.png)
 
 If the screen shows a checklist of required items that haven't all been checked out, give the system a minute to start or move the robot around slightly so the lidar can gather more data for the initial map iteration. If the message persists for longer it’s likely that the system has not received required data for functioning: i.e. the motor node hasn’t started yet (no battery info) or the lidar hasn’t been connected or configured properly. The checklist should give you an idea of what's missing.
 
@@ -111,16 +111,16 @@ In order to get positional data correct it is crucial to set up the correct came
 ### Localizing on a loaded map
 When a new map is loaded the robot may not be in the same place as when it was originally when the map was created. As such it may be shown out of position:
 
-![](assets/ezmap/wack.png)
+![](../../assets/ezmap/wack.png)
 
 To help the system gain a good starting point you can drag and drop the robot to a new location in a way that the red dots align with the black walls. After the robot is dropped an arrow will appear showing the forward direction. On mobile it requires another tap and drag for rotation, while on desktop you just need to move the mouse and click once.
 
-![](assets/ezmap/unwack.png)
+![](../../assets/ezmap/unwack.png)
 
 
 Once the red dots vaguely align with the walls you can let go and the system will localize the robot. Once the robot moves a little it should snap to the map and confirm its position.
 
-![](assets/ezmap/unwack2.png)
+![](../../assets/ezmap/unwack2.png)
 
 <hr>
 
@@ -135,7 +135,7 @@ Clicking the route management icon (<img src="assets/ezmap/routes.png" alt="" wi
 
 Double tapping anywhere on the map should allow you to add a new goal or prompt you for creation of the first route. Unselected routes of the same map are drawn as greyed out.
 
-![](assets/ezmap/routeintro.png)
+![](../../assets/ezmap/routeintro.png)
 
 Once a route is created and selected you can double click/tap on the map to add and remove new goals. Double tapping on the line between goals should also create a new goal between them. You can of course also drag goals around to make adjustments.
 
@@ -151,11 +151,11 @@ If the robot is in motion one of the previous two buttons will change to stop ic
 
 When you have a route set up, the next step is to define actions executed upon reaching a goal. Hold down the mouse/finger on a goal until the Actions menu appears.
 
-![](assets/ezmap/touch.png)
+![](../../assets/ezmap/touch.png)
 
 As the robot arrives at the specified goal it will then check the defined actions and execute them sequentially one after the other:
 
-![](assets/ezmap/goalactions.png)
+![](../../assets/ezmap/goalactions.png)
 
 In this case the robot would:
 * wait for one second
@@ -164,7 +164,7 @@ In this case the robot would:
 
  The goal should then change colour and shape to indicate stored actions.
 
-![](assets/ezmap/changecolor.png)
+![](../../assets/ezmap/changecolor.png)
 
 The command line functionality should allow for running custom scripts at specific points in the route or sending data to other parts of the system.
 
@@ -172,7 +172,7 @@ The command line functionality should allow for running custom scripts at specif
 
 There are currently two ways to create perpetual driving. The first one is simply moving the first and last goal together (requires a minimum of 3 goals)
 
-![](assets/ezmap/looping.png)
+![](../../assets/ezmap/looping.png)
 
 The route will then turn purple to indicate successful looping.
 
@@ -180,7 +180,7 @@ The route will then turn purple to indicate successful looping.
 
 Another way to do so is to create so called ping-pong looping, which is to set the first and last goal to trigger the route in opposite ways using actions:
 
-![](assets/ezmap/pingponglooping.png)
+![](../../assets/ezmap/pingponglooping.png)
 
 The robot should then drive the route one way, then reverse and return to the start, and continue forward again. By removing the “Forward” action we also get go-and-return behaviour for example. There are further possible combinations by setting the drive commands to other routes, which lets you chain different routes together.
 
@@ -198,7 +198,7 @@ In case of small devices, it may be easier to lock the positions of goals so the
 
 The global triggers menu (<img src="assets/ezmap/actions.png" alt="" width="35">) lets you set a string of actions that will be executed once the set conditions are met. The actions are much the same as the ones you can set on specific goals, however they will be triggered globally by some sort of event instead of the robot arriving at the goal. The functionality can be enabled or disabled in order to easily set up and reset the cooldown timers of triggers.
 
-![](assets/ezmap/triggers.png)
+![](../../assets/ezmap/triggers.png)
 
 In this example we see that the executed actions will be the following:
 * upon spotting the aruco marker number 3, the robot will wait 1 second and then slow down movement
@@ -208,7 +208,7 @@ Triggers (and actions) are web app independent, so they will run in the backgrou
 
 Another example below will load a saved map upon seeing marker 23, then start a predefined route on the map at max speed:
 
-![](assets/ezmap/detected.png)
+![](../../assets/ezmap/detected.png)
 
 Such a setting should allow for driving a robot using remote control into a room so it sees the marker, upon which it takes over and runs the automated route.
 
