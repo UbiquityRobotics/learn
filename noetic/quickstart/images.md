@@ -37,7 +37,7 @@ See the [Software Images and SD Card Flashing](noetic_quick_start_microsd) guide
 | ROS  | Noetic |
 | Architecture | armhf (32 bit) |
 | SHA256 Sum   | eb9da2da181e89b2e22c9f42a9031aee890164bcb64bed0c25165439ccb4f64a |
-| Status | <b style="color: green;">Deprecated</b> |
+| Status | <b style="color: darkred;">Deprecated</b> |
 | Notes | Second noetic beta image, with gnome desktop. |
 
 <br>
