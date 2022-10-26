@@ -130,7 +130,7 @@ window.onload = function() {
 {%- endfor %}
 
 {%- for group in groups %}
-    <p class="caption"><b class="caption-text" style="color: #66C4FF">{{ group }}</b></p>
+    <p class="caption"><b class="caption-text" style="color: #66ffcc">{{ group }}</b></p>
 
     {%- for nav_item in nav %}
         {%- if nav_item.group == group and nav_item.nav_exclude != true and nav_item.name != "README.md" %}
