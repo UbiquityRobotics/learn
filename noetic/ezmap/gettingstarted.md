@@ -31,9 +31,15 @@ The app can be used straight away, however saving it as a home screen app ② el
 
 ![Add To Home Screen](../../assets/ezmap/homescreen.png)
 
-### Initial extrinsics calibration
+<hr>
 
-When the robot first starts you’ll be asked to provide a location and orientation for your sensors, for best results. The process can also be skipped by opening and closing the menu once and can later accessed in the calibration menu (<img src="assets/ezmap/calibrations.svg" alt="" width="55">).
+## Initial setup
+
+When the robot first starts you’ll be asked to provide a location and orientation for your sensors. The process can also be skipped by opening and closing the menu once and can later accessed in the calibration menu (<img src="assets/ezmap/calibrations.svg" alt="" width="55">).
+
+![Calibrations](../../assets/ezmap/calibrations.jpg)
+
+This step is absolutely essential to make sure your robot is configured properly.
 
 <hr>
 
