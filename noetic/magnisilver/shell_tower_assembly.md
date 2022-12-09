@@ -26,7 +26,7 @@ Here are two videos of how assembly looks like so you know what to expect. All d
 <iframe width="640" height="360" src="https://www.youtube.com/embed/O-YKXxbponM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-## Full BOM of the Conveyorbot (Without base Magni)
+## Full BOM of the Modular shelving system with touchscreen (Without base Magni)
 
 ### Bolt BOM
 
