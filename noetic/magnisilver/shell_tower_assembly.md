@@ -61,7 +61,6 @@ Here are two videos of how assembly looks like so you know what to expect. All d
 11. 1x Battery Shell Cover
 12. 2x Touchscreen Holders
 13. 2x Shell Distancers (if these are not found in the package, you should have gotten extra washers in the SHELL bolts bag)
-14. 2x Brake
 
 ![Mechanical Parts](../../assets/shell_tower/mechanical_parts.jpg)
 
