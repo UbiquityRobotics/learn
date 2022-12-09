@@ -31,11 +31,10 @@ Here are two videos of how assembly looks like so you know what to expect. All d
 ### Bolt BOM
 
   - 3x Grommet 20mm (black rubber to cover lidar holes with)
-  - 4x 	M6 x 2-2.5mm thick washers -  temporary replacement for Shell Distancers (2-2.5mm thickness whichever is available)
-  - 4x	M3x5mm Cap Socket (4xtouchscreen)
-  - 30x	M3x8mm Cap Socket (6xlidar + 12xtouchscreen + 4xfrontp. + 4xsidep.+ 8xbrakes)
-  - 2x	M4x8-10mm Thumb Screw (8 or 10 mm whichever is available)
-  - 24x	M6x12mm Button Socket (6xtowerangle + 6xshell + 12xshelfs)
+  - 2x Small zip tie
+  - 2x Shell Distancers
+  - 14x	M3x8mm Cap Socket (2x lidar plate, 4x lidar, 8x tower angle)
+  - 24x	M6x15mm Cap Socket (6x tower angle + 6x shell + 12x shelves)
 
 ### Electrical BOM
 
@@ -43,8 +42,8 @@ Here are two videos of how assembly looks like so you know what to expect. All d
   - 1x Emergency switch custom cable (red wires)
   - 1x Power switch custom cable (black wires)
   - 1x Black Shell Power switch
-  - 1x USB micro cable 1m
-  - 2x Flat cable 1m
+  - 1x USB micro cable 1m (rolled inside the touchscreen case)
+  - 2x Flat cable 1m (rolled inside the touchscreen case)
   - 1x Adhesive Cable clip
 
 ### Mechanical Parts BOM
@@ -128,9 +127,8 @@ What tools will be needed to assemble the Breadcrumb together:
 
     ![Lidar and Front plate](../../assets/shell_tower/front_plate.png)
 
-7. Turn the shell and use some paper tape to glue the 4 washers from zip bag SHELL over the corner holes - make sure the screws from the top will be able to go through both the shell hole and the washer. **This is a temporary solution to have the shell mounted higher so the sonars are not obstructed by the shell. In the future these washers are going to be replaced by a dedicated part.**
-
-    ![Washers](../../assets/shell_tower/washers.jpg)
+7. Take the shell distancers, place them on each side, starting with the corner holes. Make sure all the wholes are aligned to make the next step easier.
+   
 
 8. Put the shell on the robot. Be careful that you don't bend the sonars when putting the shell onto the robot (red lines). We suggest first putting the front part over the sonars like shown. 
 
@@ -186,7 +184,7 @@ What tools will be needed to assemble the Breadcrumb together:
     ![Screen Back Screw](../../assets/shell_tower/screen_back.png)
 
 
-5. Use **6xM6x12mm Button Socket screws** from zip bag to put the two angle parts of the tower together. 
+5. Use **6xM6x15mm Cap Socket screws** from zip bag to put the two angle parts of the tower together. 
 
     The holes in two parts might not always fully align if the parts are just out of the box. If that is the case first screw the front two screws tightly and then use a bit of force to also screw the others. The parts should fit together with a bit of effort. 
 
@@ -209,9 +207,7 @@ What tools will be needed to assemble the Breadcrumb together:
 
 ### Connecting The Tower To Shell
 
-**TODO all pictures with M6 screws are with CAP socket, they should be replaced with pictures with M6 BUTTON socket.**
-
-1. If you haven't already, burn the latest Conveyorbot image onto a MicroSD card. You do that by first downloading the latest Conveyorbot image here(TODO add link). Then take the MicroSD card out of Raspberry Pi and insert it into your computer. Flash the downloaded image onto the microSD card using either GNOME Disks tool, [Etcher](https://www.balena.io/etcher/) or [Win32DiskImager](https://win32diskimager.download/). 
+1. Make sure you have the proper SD card inserted. If you haven't already, burn the latest software image onto a MicroSD card. The download link for licensed software was delivered to you via email. Then take the MicroSD card out of Raspberry Pi and insert it into your computer. Flash the downloaded image onto the microSD card using either GNOME Disks tool, [Etcher](https://www.balena.io/etcher/) or [Win32DiskImager](https://win32diskimager.download/). Insert the SD card back into the card slot on the Raspberry Pi.
 
 2. Put the assembled tower onto the robot. Be careful with the fragile flat cables.
 
@@ -247,7 +243,7 @@ What tools will be needed to assemble the Breadcrumb together:
     
     3.) switching on the square switch on the shell. 
     
-    The screen should be lighting up and after the robot boots you should see camera stream by clicking the Screen icon on the Conveyorbot app. The camera stream might not show up immediately - please wait at least until the battery icon shows some battery charge. If anything does not work, the fault, most probably is the bad connections of the flat cables – recheck those. Turn off the robot and disconnect the RED battery connector before continuing.
+    The screen should be lighting up and after the robot boots you should see camera stream by clicking the Screen icon on the app. The camera stream might not show up immediately - please wait at least until the battery icon shows some battery charge. If anything does not work, the fault, most probably is the bad connections of the flat cables – recheck those. Turn off the robot and disconnect the RED battery connector before continuing.
 
     ![Connection Test](../../assets/shell_tower/connection_test.png)
 
@@ -264,11 +260,11 @@ What tools will be needed to assemble the Breadcrumb together:
     ![Charging Cover](../../assets/shell_tower/charging_cover.png)
 
 
-11. Use **6xM6x12mm Button Socket screws** from zip bag to mount the tower and the shell to the robot. 
+11. Use **6xM6x15mm Button Socket screws** from zip bag to mount the tower and the shell to the robot. 
 
     ![Tower to Shell Mount](../../assets/shell_tower/mount_tower_to_shell.png)
 
-    You can use **4xM6x12mm Button Socket screws** to mount the angle shelf holder and **10xM6x12mm Button socket screws** to mount the two shelves.
+    You can use **4xM6x15mm Button Socket screws** to mount the angle shelf holder and **10xM6x15mm Button socket screws** to mount the two shelves.
 
     ![Shelves Mount](../../assets/shell_tower/shelves_mount.png)
 
@@ -292,19 +288,6 @@ What tools will be needed to assemble the Breadcrumb together:
         lidar_position : 'shell_left'  # to disable insert "None"
 
 
-14. You can now reconnect the battery, power up the robot and begin using it. Remember to every time in the future you need to reconnect something first disconnect the red battery connector. The Conveyorbot assembly is now nearly complete.
+14. You can now reconnect the battery, power up the robot and begin using it. Remember: Every time in you need to reconnect something, first disconnect the red battery connector. The modular shelving system with touchscreen is now nearly complete.
 
 ---
-
-### Installation of brakes
-
-1. Take the two brakes and screw both brake-ends to be at approximately 5mm distance.
-
-    ![brake_length](../../assets/shell_tower/brake_screw.png)
-
-2. Screw brakes at both sides of the conveyorbot shell with 8xM3x8mm Cap Socket screws - 4 on each side. The two brakes are mirrored images to fit on each side. The brake is turned correctly when the **red holder** is turned **upwards when brake is released**.
-
-    ![brake_install](../../assets/shell_tower/brake_install1.png)
-    ![brake_install2](../../assets/shell_tower/brake_install2.png)
-
-3. Now release both brakes (turn the red holder upward) and check that the brake rubber doesn't touch the wheel. If it does, screw the same screw as in step 1 to adjust its position.
