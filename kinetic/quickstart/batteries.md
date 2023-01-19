@@ -30,6 +30,8 @@ The robot requires **two** **12V** lead acid style batteries wired up in series 
 
 <p style="color:red">The stock battery charger we supply is ONLY FOR LEAD ACID batteries and will NOT work and in fact may be dangerous for other battery technologies.</p>
 
+While any set of batteries that can together supply roughly 24V will work, the ideal battery type is a deep cycle lead acid battery. Typically for the smaller batteries (1250, 1255, 1270) a gel type lead acid is common and for the larger types (12350) an AGM type is more common. Li battery types will work, but it should be a drop in replacement type that is fully compatible with a lead acid charging cycle and has its own battery balancing system (typically LiFePO4). As the system is designed for lead acid batteries if you use anything else the battery state topic could give misleading numbers as to the true battery state, but this will not affect the ability of the robot to drive properly.
+
 ## Compartment Size
 
 We ship Magni with a foam cut-out that nicely holds two 1270 format Lead Acid batteries. **Do not discard the foam inserts along with the packaging.**
