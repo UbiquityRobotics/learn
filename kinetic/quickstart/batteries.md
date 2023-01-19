@@ -25,7 +25,8 @@ The robot requires **two** **12V** lead acid style batteries wired up in series 
 | 1270  		  | 7 - 10    |   6 - 8  	 	 |	This size battery makes the robot still light enough to lift. |
 | 12350  		  | 30 - 35     |   12 - 24  	 	 |	Recommended only for those who must have extraordinary endurance. This sized battery makes the robot sufficiently heavy that it will be difficult for most users to lift. |
 
-![1270 Battery](./../assets/leadacid.png)
+![1270 Battery](../../assets/leadacid.png)
+
 <p align = "center">A typical 1270 7.2Ah 12V battery, two of these are most commonly used with the Magni.</p>
 
 <p style="color:red">The stock battery charger we supply is ONLY FOR LEAD ACID batteries and will NOT work and in fact may be dangerous for other battery technologies.</p>
@@ -83,19 +84,19 @@ All Lead Acid batteries loose their ability to hold a full charge over time and 
 3. The MCB has a typical parasitic current draw of 0.72 watts when connected (around 30 mA at 24 volts), as such it will gradually empty the batteries even if completely turned off. As such it is recommended to **completely disconnect at least one of the battery leads when the robot is in long term storage** (3 weeks and more).
 
 
-|  Capacity | Voltage for the 24 V Magni battery | Voltage for a single 12 V battery
-|-------------------------|----------------------|
-|100%|25.77V|12.89V|
-|90%|25.56V|12.78V|
-|80%|25.31V|12.65V|
-|70%|25.02V|12.51V|
-|60%|24.81V|12.41V|
-|50%|24.45V|12.23V|
-|40%|24.21V|12.11V|
-|30%|23.91V|11.96V|
-|20%|23.61V|11.81V|
-|10%|23.40V|11.70V|
-|0%|23.25V|11.63V|
+|  Capacity | Voltage for the 24 V Magni battery | Voltage for a single 12 V battery |
+|------------------|------------|--------|
+| 100% | 25.77V | 12.89V |
+| 90% | 25.56V | 12.78V |
+| 80% | 25.31V | 12.65V |
+| 70% | 25.02V | 12.51V |
+| 60% | 24.81V | 12.41V |
+| 50% | 24.45V | 12.23V |
+| 40% | 24.21V | 12.11V |
+| 30% | 23.91V | 11.96V |
+| 20% | 23.61V | 11.81V |
+| 10% | 23.40V | 11.70V |
+| 0% | 23.25V | 11.63V |
 
 For more info see [Batterystuff Lead Acid Battery Basics](https://www.batterystuff.com/kb/articles/battery-articles/battery-basics.html).
 
