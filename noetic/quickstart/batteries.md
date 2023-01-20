@@ -68,7 +68,7 @@ There is also a CR2032 coin cell battery on the back of the [MCB](noetic_magnisi
 
 **Battery capacity is a complex topic so we try to tell users a percentage that is based on brand new fresh batteries, as the Magni has no idea the state of the batteries that are in use and their age and past usage patterns.**
 
-All Lead Acid batteries loose their ability to hold a full charge over time and have a lower capacity after charging than a new battery and get to the full voltage that a new battery can attain as they age and have been through different levels of discharge and then re-charging cycles. The voltage curve should stay consistent thoughout so the percentage indicator should remain usable throughout their life span, however they may no longer ever register as 100% charged, as even the idle current draw sags the voltage more than on new batteries.
+All Lead Acid batteries lose their ability to hold a full charge over time and have a lower capacity after charging than a new battery and get to the full voltage that a new battery can attain as they age and have been through different levels of discharge and then re-charging cycles. The voltage curve should stay consistent thoughout so the percentage indicator should remain usable throughout their life span, however they may no longer ever register as 100% charged, as even the idle current draw sags the voltage more than on new batteries.
 
 #### General guidelines for lead acid gell cells commly used on the Magni robots:
 
