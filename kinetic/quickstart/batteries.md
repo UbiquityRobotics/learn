@@ -68,7 +68,7 @@ There is also a CR2032 coin cell battery on the back of the [MCB](noetic_magnisi
 
 **Battery capacity is a complex topic so we try to tell users a percentage that is based on brand new fresh batteries, as the Magni has no idea the state of the batteries that are in use and their age and past usage patterns.**
 
-All Lead Acid batteries lose their ability to hold a full charge over time and have a lower capacity after charging than a new battery and get to the full voltage that a new battery can attain as they age and have been through different levels of discharge and then re-charging cycles. The voltage curve should stay consistent thoughout so the percentage indicator should remain usable throughout their life span, however they may no longer ever register as 100% charged, as even the idle current draw sags the voltage more than on new batteries.
+All lead acid batteries lose their ability to hold a full charge over time and have a lower capacity after charging than a new battery and get to the full voltage that a new battery can attain as they age and have been through different levels of discharge and then re-charging cycles. The voltage curve should stay consistent thoughout so the percentage indicator should remain usable throughout their life span, however they may no longer ever register as 100% charged, as as they no longer charge to the same voltage level and the idle current draw sags the voltage more than on new batteries.
 
 #### General guidelines for lead acid gell cells commly used on the Magni robots:
 
@@ -81,7 +81,7 @@ All Lead Acid batteries lose their ability to hold a full charge over time and h
 3. When used on old or damaged cells the robot's charger may cause slight overcharging if left connected after charge completion and **can cause the batteries to vent gas** (characterized by the smell of rotten eggs). If this happens it is recommended to not keep the charger connected for longer than it takes the battery to charge.
 
 
-3. The MCB has a typical parasitic current draw of 0.72 watts when connected (around 30 mA at 24 volts), as such it will gradually empty the batteries even if completely turned off. As such it is recommended to **completely disconnect at least one of the battery leads when the robot is in long term storage** (3 weeks and more).
+3. The MCB has a typical parasitic current draw of around 0.04 watts when connected (around 1-2 mA at 24 volts), as such it will gradually empty the batteries even if completely turned off. As such it is recommended to **completely disconnect at least one of the battery leads when the robot is in long term storage** (3 weeks and more).
 
 
 |  Capacity | Voltage for the 24 V Magni battery | Voltage for a single 12 V battery |
