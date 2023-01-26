@@ -32,11 +32,14 @@ Navbar groups are hardcoded in https://github.com/UbiquityRobotics/learn/blob/b9
 
 Github can be very slow (up to 20 mins) to show changes so testing stuff locally can be a good option.
 
-    # Install jekyll
+    # Install jekyll, and Ruby version 2.7
     https://jekyllrb.com/docs/installation/
 
     # Install bundler
     gem install bundler
+    
+    # Ruby
+    rvm 2.7
 
     cd learn
     bundle install
