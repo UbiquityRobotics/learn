@@ -11,13 +11,35 @@ nav_exclude: false
 
 See the [Software Images and SD Card Flashing](noetic_quick_start_microsd) guide on how to install the following images.
 
+| Download | [2023-02-09-ubiquity-base-gdm3-focal](https://ubiquity-pi-image.sfo2.digitaloceanspaces.com/2023-02-09-ubiquity-base-gdm3-focal-raspberry-pi.img.xz) |
+| OS Version  | Ubuntu 20.04 LTS + GDM3 |
+| ROS  | Noetic |
+| Architecture | armhf (32 bit) |
+| SHA256 Sum   | 05b7b4ee7f2331c961cde9aa892c6d34c3788db0053956da3eb1a609f75751fc |
+| Status | <b style="color: green;">Latest</b> |
+| Notes | With Gnome desktop. |
+| Changelog | Added support for rev 1.5 Pi 4s, removed multipath-tools for faster booting, enabled gpio kernel interfaces by default. |
+
+
+<br>
+
+| Download | [2023-02-09-ubiquity-base-focal](https://ubiquity-pi-image.sfo2.digitaloceanspaces.com/2023-02-09-ubiquity-base-focal-raspberry-pi.img.xz) |
+| OS Version  | Ubuntu 20.04 LTS |
+| ROS  | Noetic |
+| Architecture | armhf (32 bit) |
+| SHA256 Sum   | 32ac24acbbaa6ab8140b22402ec06a4a7b8cc7ec39a2d40088aa7d3507b67532 |
+| Status | <b style="color: green;">Latest</b> |
+| Notes | Headless (no desktop). |
+| Changelog | Added support for rev 1.5 Pi 4s, removed multipath-tools for faster booting, enabled gpio kernel interfaces by default. |
+
+<br>
 
 | Download | [2022-06-15-ubiquity-gdm3](https://ubiquity-pi-image.sfo2.digitaloceanspaces.com/2022-06-15-ubiquity-gdm3-testing-focal-raspberry-pi.img.xz) |
 | OS Version  | Ubuntu 20.04 LTS + GDM3 |
 | ROS  | Noetic |
 | Architecture | armhf (32 bit) |
 | SHA256 Sum   | 8bf16ab7ae78d3804b9d96b2326276f61e54b346fc6745f1f2034837848a2f98 |
-| Status | <b style="color: green;">Latest</b> |
+| Status | <b style="color: darkred;">Deprecated</b> |
 | Notes | Stable Noetic image, with Gnome desktop. |
 
 <br>
@@ -27,8 +49,8 @@ See the [Software Images and SD Card Flashing](noetic_quick_start_microsd) guide
 | ROS  | Noetic |
 | Architecture | armhf (32 bit) |
 | SHA256 Sum   | 7692a22265421b511baf8c2563ca20bf27bbe64f7f4a696923b56d0e1cc139ec |
-| Status | <b style="color: green;">Active</b> |
-| Notes | Added support for rev 1.5 Pi 4s, no desktop. |
+| Status | <b style="color: darkred;">Deprecated</b> |
+| Notes | Added support for rev 1.2 Pi 4s, no desktop. |
 
 <br>
 
