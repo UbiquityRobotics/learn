@@ -24,31 +24,15 @@ ConveyorBot uses several types of fiducials:
 
 <br>
 
-ConveyorBot can be used either with STag or ArUco markers (default and recommended being STag). The analogy of marker types is the same for both.
+ConveyorBot can be used either with STag or ArUco markers (default and recommended being STag). The analogy of marker types is the same for both. Each marker has a unique numeric ID, which is written on it. This way marker types are correctly distinguished which correspond to the correct ConveyorBot manevers. 
 
-Each marker has a unique numeric ID, which is written on it. This way marker types are correctly distinguished which correspond to the correct ConveyorBot manevers.
+ConveyorBot markers specifically, are rugged prefabricated sticky vinyl stickers that can be peeled off and placed on another floor location. However, it's not recommended to peel them off too many times as they'll stick less each time.
 
-### How to place the markers
+## Generating Markers
 
-The most important things to remember before setting up the route of markers are:
-- Each marker should point in the direction of the next one
-- TURN markers should be used to change driving direction (In the crossroads - multiple markers at one position pointing in different directions)
-- BIDIRECTIONAL markers should be used for two-way routes, where robot can drive in both directions and not for changing the driving direction. In other words, robot should never come sideways to the BIDIRECTIONAL marker, since it may turn in the wrong direction as intended.
-- GO marker should be used for one-way routes, where robot can drive only in one direction
+You can also print out markers on regular paper, though this requires a few modifications on the robot side (mainly marker size). We've provided a selection of scripts that offer a simple terminal UI, which enables user to re-configure fiducials according to their need.
 
-
-Markers are sticky stickers that can be peeled off and placed on another floor location. But it is not recommended to peel it off too many times as the glue on the marker can dry out.
-
-An example of a simple marker layout is shown in the figure below.
-
-<img src="assets/breadcrumb/Map_example1.png" >
-
-
-## Generating Fiducials
-
-We've provided a selection of scripts that offer a simple terminal UI, which enables user to re-configure fiducials according to their need.
-
-Said scripts can be found in the ConveyorBot repository in the `ConveyorBot/breadcrumb_detect/scripts` directory:
+Said scripts can be found in the ConveyorBot repository in the `breadcrumb/breadcrumb_detect/scripts` directory:
 
 - `ArUco/gen_markers.py` -> generate Aruco markers with frames
 - `STag/gen_markers_autogen.py` -> generate STag markers with frames by generating also the inner part.

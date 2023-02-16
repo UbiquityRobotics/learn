@@ -11,6 +11,27 @@ nav_exclude: false
 
 Intended for developers.
 
+## Running manually
+
+To run, type:
+
+  `roslaunch ground_fiducials ground_fiducials.launch`
+
+or in Gazebo:
+
+  `roslaunch ground_fiducials sim_ground_fiducials.launch`
+
+ConveyorBot main package consists of:
+- `raspicam_node` that starts onboard Raspberry Pi Camera
+- `breadcrumb_description` that spawns a urdf ConveyorBot model
+- `breadcrumb_detect` for detecting markers and forwarding the pose of the markers
+- `ground_fiducials` which handles type of markers
+- `breadcrumb_nav` which handles navigation maneuvers execution
+
+ConveyorBot can be connected with your workstation, which can be so that graphical tools such as RViz or plotting software can be run on the screen and many other features. For more informationrefer to [Connecting a Workstation and Starting the Robot](https://learn.ubiquityrobotics.com/connecting).
+
+While running the system keeps writing logs, which eventually fill up the entire file system partition if left unchecked. Cleaning log files can be done manually or with the help of a script that deletes logs automatically after a predefined number of days. See [here](https://github.com/UbiquityRobotics/ConveyorBot/blob/finalization/ConveyorBot_bringup/scripts/ros_log_clean.bash).
+
 ## Visualize with RViz
 
 Rviz (ROS visualization) is a 3D visualizer for displaying sensor data and state information from ROS. It can show the robot in space as well as graph practically any robot parameter.
@@ -89,17 +110,18 @@ roslaunch breadcrumb_touchscreen touchscreen_rosbridge.launch
 
 <br>
 
+## Navigation Stack
 
-## ConveyorBot Navigation Stack
-
-`breadcrumb_nav` is the main ROS package that consists of:
+`breadcrumb_nav` is the main ROS package that consist of:
 - **Planning of the goals** (Phantom planner)
 - **Execution of navigation goals** (Move Smooth)
 - **Collision avoidance** based on LiDAR and/or Sonars
 
 ### Node Details 
 
-#### Phantom planner
+You can skip that part if you are not interested in the internals.
+
+### Phantom planner
 
 Phantom planner node handles planning of navigation goals, sending them forward to `move_smooth`. 
 We are using `phantom_planner` node to plan two different types of goal: **Fiducial goal** and **Phantom goal**. 
@@ -126,7 +148,7 @@ If more than two goals are send, the QueuedActionServer(Custom ROS Action Server
 
 If data from a laser scanner or sonars is available, collision avoidance can be performed. If an obstacle is detected, it will slow or stop in an attempt to avoid a collision.
 
-## Dynamically Reconfigure Navigation parameters
+### Dynamically Reconfigure Navigation parameters
 
 While ConveyorBot is running, you can modify its velocity or change the stopping distance of the robot in order to prevent collision etc.
 Before proceeding you should make sure ConveyorBot is connected to the network (https://learn.ubiquityrobotics.com/connect_network) and your workstation synced with ConveyorBot (https://learn.ubiquityrobotics.com/workstation_setup). 
