@@ -246,7 +246,7 @@ As the silkscreen shows for both of these connectors 5V is on the left then the 
 
 ### Power Connectors On Bottom Of The Board  
 
-There are two power only expansion connectors near the bottom of the board by the large automotive main Fuse.  These can easily supply power for most 5V usb powered devices.
+There are two power only expansion connectors near the bottom of the board by the large automotive main Fuse.  These can easily supply power for most 5V usb powered devices. Each connector is rated at 1.5amp max and they are both to the 5V Aux power which can supply about 4-5amp total for typical loads given that many loads can have higher current spikes in the device in use. Keep in mind that many USB cables have very small gauge wires so evaluate the voltage at the far end of the cable and keep your cables short as possible.  
 
 ![USB Jacks, Fan Jack and Aux Motor Power](../../assets/support/UsbJacksAndAuxPowerAndFanJack.jpg)
 
