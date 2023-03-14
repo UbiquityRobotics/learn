@@ -66,13 +66,8 @@ In some cases users may want to disable even the startup of roscore and you can 
     sudo systemctl disable roscore
 
 ### Using The GPIO Lines
-Our image uses some of the GPIO lines to control our
-Magni robot. By default many of the lines are
-unused and these are the best ones to think about
-using for your own uses. You should see the section
-regarding [GPIO Lines Used For The Sonar Board](noetic_overview_raspberrypi#gpio-lines) and
-use those lines as we do not use them until they are
-enabled by users who order a Magni with a Sonar board.
+
+By default our images use pigpiod for GPIO communication, which allows multiple nodes to access the gpio header. The one already using a fair few lines is the pi_sonar node (which interfaces with the sonar board), the oled_display_node uses the default i2c pins, and ubiquity_motor node's MCB communication occupies the AMA0 serial lines. You should see the section regarding [GPIO Lines Used For The Sonar Board](noetic_overview_raspberrypi#gpio-lines) to see exact the occupied pin table.
 
 ### Using The I2C Bus
 If you want to use the I2C bus be aware that
