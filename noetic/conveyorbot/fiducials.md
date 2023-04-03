@@ -20,41 +20,22 @@ ConveyorBot uses several types of fiducials:
 |  🟩 **Go marker**  has a single arrow which point to the direction where the ConveyorBot will drive. | <img src="assets/breadcrumb/go_marker.jpg" >  |
 |  🟥 **Stop marker** is made to halt the ConveyorBot in that spot. After the ConveyorBot moves on top of the Stop marker it rotates in a direction of a marker arrow. While ConveyorBot waits on a Stop marker the user can load or unload the packages. The robot will resume following markers when user presses the CONTINUE button on the touchscreen of the ConveyorBot. | <img src="assets/breadcrumb/stop_marker.jpg" >  |
 |  🟦 **Turn marker** is made for creating crossroads. Crossroad is a couple of markers in the same location (they must not overlap!), where each is pointing in an arbitrary/different direction. Purpose of Turn markers and crossroads is to change the driving direction of the ConveyorBot. | <img src="assets/breadcrumb/turn_marker.jpg" >  |
-|  🟪 **Bidirectional marker** is the only marker with 2 arrows in it. ConveyorBot drives allong the arrow that requires less robot rotation. Bidirectional marker is good for two-way routes where ConveyorBot requires to move in both directions for example narrow aisles where there is not enough space for both a forward and return path. | <img src="assets/breadcrumb/bidirectional_marker.jpg" >  |
+|  🟪 **Bidirectional marker** is the only marker with 2 arrows on it. ConveyorBot drives along the arrow that requires less robot rotation. Bidirectional marker is good for two-way routes where ConveyorBot requires to move in both directions for example narrow aisles where there is not enough space for both a forward and return path. | <img src="assets/breadcrumb/bidirectional_marker.jpg" >  |
 
 <br>
 
-ConveyorBot can be used either with STag or ArUco markers (default and recommended being STag). The analogy of marker types is the same for both. Each marker has a unique numeric ID, which is written on it. This way marker types are correctly distinguished which correspond to the correct ConveyorBot manevers. 
+ConveyorBot can be used either with STag or ArUco markers (default and recommended being STag). The analogy of marker types is the same for both. Each marker has a unique numeric ID, which is written on it. This way marker types are correctly distinguished which correspond to the correct ConveyorBot maneuvers. 
 
-ConveyorBot markers specifically, are rugged prefabricated sticky vinyl stickers that can be peeled off and placed on another floor location. However, it's not recommended to peel them off too many times as they'll stick less each time.
+ConveyorBot markers specifically, are rugged prefabricated sticky vinyl stickers that can be peeled off and placed on another floor location. However, it's not recommended to peel them off too many times as they'll stick less each time. In fact, we recommend that while initially setting up the markers, you shouldn't unpeel the stickers, but just stick them to the ground with a tape which doesn't leave traces on the ground or on the marker, and is easy to unpeel (we recommend masking tape). This is so that it is easier to correct a marker's position on the ground if you realize afterwards that the way in which you initially positioned the marker is not ideal. Once you are happy with the position, you can stick the marker on the ground with the glue on its back.
 
 ## Generating Markers
 
-You can also print out markers on regular paper, though this requires a few modifications on the robot side (mainly marker size). We've provided a selection of scripts that offer a simple terminal UI, which enables user to re-configure fiducials according to their need.
-
-Said scripts can be found in the ConveyorBot repository in the `breadcrumb/breadcrumb_detect/scripts` directory:
-
-- `ArUco/gen_markers.py` -> generate Aruco markers with frames
-- `STag/gen_markers_autogen.py` -> generate STag markers with frames by generating also the inner part.
-- `STag/gen_markers.py`  -> generate STag markers with frames by getting the inner part from downloaded image library. Download the required images from [here](https://drive.google.com/drive/folders/0ByNTNYCAhWbIV1RqdU9vRnd2Vnc).
-
-Script were tested using python2.7.
-
-### ArUco Dictionary ID
-
-You can generate ArUco markers from any dictionary you prefer.
-Make sure you set the corresponding `dictionary` parameter in launch file.
-We performed most of the test with dictionary with **ID 7**.
-For more information about ArUco refer to [`ArUco`](http://docs.opencv.org/trunk/d5/dae/tutorial_aruco_detection.html).
-
-### STag Library HD
-
-You can generate STag markers from any library you prefer.
-Make sure you set the corresponding `libraryHD` parameter in launch file.
-We performed most of the test with library **HD15**, which suited our needs.
-For more information about STag refer to [`STag`](https://github.com/usrl-uofsc/stag_ros).
+It might happen that you run out of markers which are provided with your Conveyorbot.
+Right now, to obtain additional markers, we recommend you contact UbiquityRobotics and we will print new markers for you. If you are interested in printing them on your own, because maybe you want to experiment with different materials of markers, you can also ask us to send you a PDF with the markers. We are also working on a webpage where you will be able to generate them on your own. Note that you need to be careful to print them exactly in the size in which they are in the PDF (a side of the inner black square which contains the white shape inside of it has to be 18cm long). 
 
 ### Packs
 
-Generally each pack should correspond to a standalone route, but you can generate yourself packs according to your preference.
-Take note that each marker has a unique id, while a number is unique only to the pack.
+A "pack" is a number on each marker which says to which "marker setup" a marker belongs.
+A marker setup is a group of all of the markers on which a robot can drive. In other words, robots can't go from one marker setup to another by following any marker sequence. A marker setup usually means all of the markers which form the "main circular route" and all of the "branches" connected to it.
+It is not necessary to use this number (you might just use number 1 for all marker setups), but it is a convenient way of differentiating between different marker setups if you want to do so. 
+It is a rule that each marker on a marker setup has to be unique (has to have a unique ID). If you have 2 or more marker setups, you can use a marker with the same ID on each of them (but only once on each). More information about route setup will be in Route Setup section.

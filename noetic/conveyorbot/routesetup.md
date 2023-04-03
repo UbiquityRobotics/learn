@@ -11,15 +11,21 @@ nav_exclude: false
 
 To set up a route you'll first have to place [fiducial markers](noetic_conveyorbot_fiducials) in desired locations, and then use the touchscreen to set up which turn markers each robot should follow.
 
+Please read [usage guide](noetic_conveyorbot_usage) section first to get the general understanding of how routes work.
+
+**Note that this page is a work in progress and some parts might be outdated. If you are unsure about some details, contact Ubiquity Robotics support.**
+
 ## How to place floor markers
 
-To make sure your setup works as intended, set of rules need to be followed to prevent undesired behaviour:
+To make sure your setup works as intended, set of rules need to be followed to prevent undesired behavior:
 
 - Each marker should accurately point towards the next one <br>
 
+- Markers shouldn't be too close together (crossroads are exceptions)
+
 - Before sticking markers to the ground using their strong adhesive back side, it is recommended to stick them to the ground using some tape, so that you can test if your route setup is correct. Be careful that you don't cover the inner black part of the marker with the tape. After you've made sure the route is setup correctly, you can stick the markers by removing their back side. Stick the markers onto clean, smooth floor. <br>
 
-- Route loops should be set up in a way that makes the robots turn only left or right depending on where the lidar is mounted. This is done to prevent blind spot collisions and to simplify robot to robot interactions. <br>
+- Route loops should be set up in a way that makes the robots turn only left or right depending on where the lidar is mounted. This is done to prevent "T-shaped" collisions and to simplify robot to robot interactions. **It is currently necessary to place the lidar in "shell left" position and setup routes so that robot does left turns (robot drives counter-clockwise from bird's-eye view) This limitation will be soon removed and you will be able to setup routes in both directions** <br>
 
 - <img src="assets/breadcrumb/turn_marker.jpg" alt="" width="40"> TURN markers should be used to create crossroads (or switches, in railroad terms) <br>
 
@@ -39,8 +45,11 @@ By default, the GO markers which are rotated in the opposite direction as the ro
 
 ### Circuit route
 
-If you want multiple robots to drive on the same marker setup, you should arrange the markers in a so-called "Circuit route", so that the robots won't collide into each other. This type of marker setup is recommended even if you have only one robot, because you never know when you will add another robot to your fleet. We divide circuit route into an inbound and an outbound path. Inbound serves as the path for robots to drive to the goal and the outbound is the path which is used for the robots to return back to the starting point. The inbound and outbound paths should be at a little more (about 20 cm more) than 1 robot width apart, so that the robots can pass each other without collision. If you have space, its convienient to place the routes 1 meter apart. On both ends of the path, markers should be arranged in a specific way, shown in the image bellow.
+If you want multiple robots to drive on the same marker setup, you should arrange the markers in a so-called "Circuit route", so that the robots won't collide into each other. This type of marker setup is recommended even if you have only one robot, because you never know when you will add another robot to your fleet. We divide circuit route into an inbound and an outbound path. Inbound serves as the path for robots to drive to the goal and the outbound is the path which is used for the robots to return back to the starting point. The inbound and outbound paths should be at a little more (about 20 cm more) than 1 robot width apart, so that the robots can pass each other without collision. If you have space, its convenient to place the routes 1 meter apart. On both ends of the path, markers should be arranged in a specific way, shown in the image bellow.
 When setting up a route, the measurements from the image bellow need to be considered.
+
+Circuit route includes one "Main circular route" which can be seen either as "main inbound and outbound paths", or just as a circular route. You can set it up in a inbound-outbound style where inbound and outbound paths are close together (e.g. if you want the whole Main circular route in one hallway) or you can set it up as a big "looping route" which "ends where it begins" and has "inbound and outbound paths" far apart (e.g. in separate hallways). So, the style of "Main circular route" is dependent on your specific use case.
+
 If you want to include a STOP marker into the Circuit route, the best way of placing it is one meter behind the GO marker. GO markers must be max 4-5 meters apart regardless of where you put the STOP markers, because the STOP markers are ignored in the case if you don't want the robot to stop on them.
 As seen from the image, on each end of the Circuit route, there is a TURN marker, which you need to include into the route on the touchscreen. This can't be a GO marker, because it would be ignored as it is turned in opposite direction as the robot's driving direction.
 
@@ -52,10 +61,10 @@ You can also do "branches" from the main circular route similarly as shown on th
 
 <img src="../../assets/breadcrumb/circuit_branch.png" >
 
-As you can see, there is a possibility that two robots would collide into each other on the marker where the branch merges back into the main route. This is handeled in a way that the robot comming from the branch always "looks" to the left with LIDAR in order to see if there is another robot approaching from the main route. If this is the case, the robot approaching from the branch will stop and wait for the robot on the main route to pass. 
+As you can see, there is a possibility that two robots would collide into each other on the marker where the branch merges back into the main route. This is handled in a way that the robot coming from the branch always "looks" to the left with LIDAR in order to see if there is another robot approaching from the main route. If this is the case, the robot approaching from the branch will stop and wait for the robot on the main route to pass. This is the so-called "T-shaped collision avoidance".
 
 But this introduces a problem. The robots **always** look to the left when turning right on a marker in order to detect a potential robot on the main route. This means that if the robot is just turning right (and it is not going back to the main route), ideally there should also be about two meters of clearance on the left side of the robot so that the wall or any other obstacle is not detected as the robot approaching from the main route. So, if the robot is driving in a hallway which is turning right, you should put the inbound path as close to the right wall as needed so that there is still 2 meters of clearance on the left side of the robot. Or, if that's not possible, you should disable t collision detection for each individual marker, that makes the robot turn right, on which you don't want the robot to stop because of the obstacle on the left. This can be done on the touchscreen's route settings screen. By clicking on any marker in the route, a popup will open where you can check the "Disable T collision check" checkbox.
-Bear in mind that to rejoin the main route at the point where the main route makes a 90 degree turn will create problems with this collision avoidance. Please rejoin the main route a few cm earlier than where the main route takes a 90 degree turn.
+Bear in mind that to rejoin the main route at the point where the main route makes a 90 degree turn will create problems with this collision avoidance. (This is because the robot "looks" into reverse direction to which the marker on the main route is facing. So if the robot on the main route is not approaching that marker from marker's reverse direction, T-shaped collision avoidance won't work). Please rejoin the main route a few dm earlier than where the main route takes a 90 degree turn (by placing a marker there and pointing the last marker on the branch towards it).
 
 ### Narrow hallway limitations
 
@@ -100,9 +109,3 @@ If you want to completely ignore a marker, put it into the right (“Don’t fol
 When creating the route, you have to be careful that the first marker is close enough for the robot to detect it, otherwise the robot won't start. You can see if the first marker is detected in the Debug screen. It should have a green outline on the camera image.  
 A special case, where you have to specify GO, STOP and BIDIR markers in the route is, if there are two markers from the same crossroads in the route one after another. This would happen, for example, when the route goes from a crossroad to the STOP marker, which is directed back to the same crossroad. In this case, this STOP marker also has to be specified in the marker list. In general, at least one marker on a part of the route which goes out of the crossroad and then back to the same crossroad has to be specified. This is a current issue and it will be resolved in further updates.
 Note that after changing the route in any way, it will be resent to the robot automatically and started from beginning, so you should move the robot to the start of the route after doing that. 
-
-### Remainder route
-(Be aware that this is an experimental feature and might not work as expected in all cases. It will also probably be removed in the future.)
-When performing an action which would override an unfinished route, a remainder of that route is saved as a route with name “\<remainder\>”. This is useful, because if the user accidentally selects a different route or exits the software, he/she won’t have to manually drive the robot to the end/start of the route, but the robot will just continue where it left by selecting the “\<remainder\>” route.  
-Depending on where the robot was interrupted, the remainder might be one marker too long - the first marker of the remainder route might not be visible by the robot anymore. In that case, the user should delete the first marker by manually editing the remainder route.
-
