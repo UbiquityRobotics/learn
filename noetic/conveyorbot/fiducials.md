@@ -11,50 +11,29 @@ nav_exclude: false
 
 > *"A fiducial marker or fiducial is an object placed in the field of view of an imaging system, for use as a point of reference or a measure. It may be either something placed into or on the imaging subject, or a mark or set of marks in the reticle of an optical instrument."*
 
-Fiducial markers (also known as AR markers) are a type of robust QR code that only encodes a simple number, and are used by ConveyorBot as landmarks, which it can use to navigate the environment of your choosing.
+Fiducial markers, also known as augmented reality (AR) markers, function as robust QR codes that encode a simple number. ConveyorBot uses these markers as landmarks to navigate through various environments.
 
 ## Marker Types
 
-ConveyorBot uses several types of fiducials:
+ConveyorBot utilizes several fiducial markers:
 
-|  🟩 **Go marker**  has a single arrow which point to the direction where the ConveyorBot will drive. | <img src="assets/breadcrumb/go_marker.jpg" >  |
-|  🟥 **Stop marker** is made to halt the ConveyorBot in that spot. After the ConveyorBot moves on top of the Stop marker it rotates in a direction of a marker arrow. While ConveyorBot waits on a Stop marker the user can load or unload the packages. The robot will resume following markers when user presses the CONTINUE button on the touchscreen of the ConveyorBot. | <img src="assets/breadcrumb/stop_marker.jpg" >  |
-|  🟦 **Turn marker** is made for creating crossroads. Crossroad is a couple of markers in the same location (they must not overlap!), where each is pointing in an arbitrary/different direction. Purpose of Turn markers and crossroads is to change the driving direction of the ConveyorBot. | <img src="assets/breadcrumb/turn_marker.jpg" >  |
-|  🟪 **Bidirectional marker** is the only marker with 2 arrows in it. ConveyorBot drives allong the arrow that requires less robot rotation. Bidirectional marker is good for two-way routes where ConveyorBot requires to move in both directions for example narrow aisles where there is not enough space for both a forward and return path. | <img src="assets/breadcrumb/bidirectional_marker.jpg" >  |
+|  🟩 **Go marker** displays a single arrow, directing the ConveyorBot's path. | <img src="assets/breadcrumb/go_marker.jpg" > |
+|  🟥 **Stop marker** instructs the ConveyorBot to halt at a specific location. Once the robot stops on this marker, it rotates in the direction indicated by the arrow. Users can load or unload packages while the robot remains stationary. To resume operation, press the CONTINUE button on the ConveyorBot's touchscreen. | <img src="assets/breadcrumb/stop_marker.jpg" > |
+|  🟦 **Turn marker** should be used to create crossroads by combining multiple markers in the same area without overlap. Each marker points in a different direction, allowing the ConveyorBot to change its driving path. | <img src="assets/breadcrumb/turn_marker.jpg" > |
+|  🟪 **Bidirectional marker** is unique, featuring two arrows. The ConveyorBot follows the arrow that requires less rotation. This marker is ideal for two-way routes, such as narrow aisles where separate forward and return paths are impractical. | <img src="assets/breadcrumb/bidirectional_marker.jpg" > |
 
 <br>
 
-ConveyorBot can be used either with STag or ArUco markers (default and recommended being STag). The analogy of marker types is the same for both. Each marker has a unique numeric ID, which is written on it. This way marker types are correctly distinguished which correspond to the correct ConveyorBot manevers. 
+ConveyorBot works with both STag and ArUco markers, though STag is the default and recommended option. All marker types function the same way for both systems. Each marker has a unique numeric ID that ensures the correct ConveyorBot maneuvers are executed.
 
-ConveyorBot markers specifically, are rugged prefabricated sticky vinyl stickers that can be peeled off and placed on another floor location. However, it's not recommended to peel them off too many times as they'll stick less each time.
+Specifically designed for ConveyorBot, these markers are durable, prefabricated vinyl stickers that can be peeled off and repositioned as needed. However, their adhesive strength decreases with each reapplication. Initially, we suggest using removable tape, like masking tape, to secure the markers. Once you're satisfied with their placement, use the adhesive backing to permanently affix them to the floor.
 
-## Generating Markers
+## Obtaining Additional Markers
 
-You can also print out markers on regular paper, though this requires a few modifications on the robot side (mainly marker size). We've provided a selection of scripts that offer a simple terminal UI, which enables user to re-configure fiducials according to their need.
-
-Said scripts can be found in the ConveyorBot repository in the `breadcrumb/breadcrumb_detect/scripts` directory:
-
-- `ArUco/gen_markers.py` -> generate Aruco markers with frames
-- `STag/gen_markers_autogen.py` -> generate STag markers with frames by generating also the inner part.
-- `STag/gen_markers.py`  -> generate STag markers with frames by getting the inner part from downloaded image library. Download the required images from [here](https://drive.google.com/drive/folders/0ByNTNYCAhWbIV1RqdU9vRnd2Vnc).
-
-Script were tested using python2.7.
-
-### ArUco Dictionary ID
-
-You can generate ArUco markers from any dictionary you prefer.
-Make sure you set the corresponding `dictionary` parameter in launch file.
-We performed most of the test with dictionary with **ID 7**.
-For more information about ArUco refer to [`ArUco`](http://docs.opencv.org/trunk/d5/dae/tutorial_aruco_detection.html).
-
-### STag Library HD
-
-You can generate STag markers from any library you prefer.
-Make sure you set the corresponding `libraryHD` parameter in launch file.
-We performed most of the test with library **HD15**, which suited our needs.
-For more information about STag refer to [`STag`](https://github.com/usrl-uofsc/stag_ros).
+If you run out of the markers provided with your ConveyorBot, you can request additional ones from UbiquityRobotics. We can either print new markers for you or send a PDF for you to print independently. Please note that when printing, the markers must be the exact size specified in the PDF (the side of the inner black square containing the white shape should be 18 cm long).
 
 ### Packs
 
-Generally each pack should correspond to a standalone route, but you can generate yourself packs according to your preference.
-Take note that each marker has a unique id, while a number is unique only to the pack.
+A "pack" refers to the number on each marker, indicating the "marker setup" to which it belongs. A marker setup is a group of markers that form a complete navigation path for the robot. Robots cannot move between different marker setups by following any marker sequence. Typically, a marker setup consists of all markers that create the main circular route and its connected branches.
+
+Using pack numbers is not mandatory, but it can be a convenient way to differentiate between multiple marker setups. Each marker within a setup must have a unique ID. If you have two or more setups, you can use a marker with the same ID in each, but only once per setup. The Route Setup section will provide more details on this topic.
