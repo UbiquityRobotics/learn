@@ -28,7 +28,7 @@ ConveyorBot main package consists of:
 - `ground_fiducials` which handles type of markers
 - `breadcrumb_nav` which handles navigation maneuvers execution
 
-ConveyorBot can be connected with your workstation, which can be so that graphical tools such as RViz or plotting software can be run on the screen and many other features. For more informationrefer to [Connecting a Workstation and Starting the Robot](https://learn.ubiquityrobotics.com/connecting).
+ConveyorBot can be connected to your workstation, so that graphical tools such as RViz or plotting software can be run on the screen. For more information refer to [Connecting a Workstation and Starting the Robot](https://learn.ubiquityrobotics.com/connecting).
 
 While running the system keeps writing logs, which eventually fill up the entire file system partition if left unchecked. Cleaning log files can be done manually or with the help of a script that deletes logs automatically after a predefined number of days. See [here](https://github.com/UbiquityRobotics/ConveyorBot/blob/finalization/ConveyorBot_bringup/scripts/ros_log_clean.bash).
 
