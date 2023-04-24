@@ -15,8 +15,8 @@ Initially when robot boots up, the touchscreen display should show a **Loading**
 
 <img src="../../assets/breadcrumb/control_panel_screen.png" >
 
-From initial pose, it will wait for the user to press START and the move to towards the detected marker.
-It is important that the robot sees the first marker, otherwise it will not move and pop-up a warning on the screen.
+From the initial pose, it will wait for the user to press START and move to towards the detected marker.
+It is important that the robot sees the first marker, otherwise it will not move and a warning will appear on the screen.
 
 <video style="display: block; margin-left: auto; margin-right: auto;" width="75%" controls autoplay>
   <source src="assets/breadcrumb/Ubiquity_Turn_Cutted.mov" type="video/mp4">
@@ -27,7 +27,7 @@ It is important that the robot sees the first marker, otherwise it will not move
 
 ConveyorBot will smoothly navigate between markers, where each marker arrow should point in the direction of the next marker.
 If the robot encounters a STOP marker (<img src="assets/breadcrumb/stop_marker.jpg" alt="" width="35">), it will stop on it and turn in the direction of arrow.
-Once robot is on the STOP marker, it will wait until the **CONTINUE** button is pressed on the touchscreen and then continue driving in the direction of the arrow.
+Once the robot is on the STOP marker, it will wait until the **CONTINUE** button is pressed on the touchscreen, and then continue driving in the direction of the arrow.
 
 <video style="display: block; margin-left: auto; margin-right: auto;" width="75%" controls autoplay>
   <source src="assets/breadcrumb/Ubiquity_Start_Stop.mov" type="video/mp4">
