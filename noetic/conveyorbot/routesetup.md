@@ -13,7 +13,7 @@ To set up a route you'll first have to place [fiducial markers](noetic_conveyorb
 
 ## How to place floor markers
 
-To make sure your setup works as intended, set of rules need to be followed to prevent undesired behaviour:
+To make sure your setup works as intended, a set of rules need to be followed to prevent undesired behaviour:
 
 - Each marker should accurately point towards the next one <br>
 
