@@ -18,8 +18,8 @@ Fiducial markers, also known as augmented reality (AR) markers, function as robu
 ConveyorBot utilizes several fiducial markers:
 
 |  🟩 **Go marker** displays a single arrow, directing the ConveyorBot's path. | <img src="assets/breadcrumb/go_marker.jpg" > |
-|  🟥 **Stop marker**instructs the ConveyorBot to halt at a specific location. Once the robot stops on this marker, it rotates in the direction indicated by the arrow. Users can load or unload packages while the robot remains stationary. To resume operation, press the CONTINUE button on the ConveyorBot's touchscreen. | <img src="assets/breadcrumb/stop_marker.jpg" > |
-|  🟦 **Turn marker** creates crossroads by combining multiple markers in the same area without overlap. Each marker points in a different direction, allowing the ConveyorBot to change its driving path. | <img src="assets/breadcrumb/turn_marker.jpg" > |
+|  🟥 **Stop marker** instructs the ConveyorBot to halt at a specific location. Once the robot stops on this marker, it rotates in the direction indicated by the arrow. Users can load or unload packages while the robot remains stationary. To resume operation, press the CONTINUE button on the ConveyorBot's touchscreen. | <img src="assets/breadcrumb/stop_marker.jpg" > |
+|  🟦 **Turn marker** should be used to create crossroads by combining multiple markers in the same area without overlap. Each marker points in a different direction, allowing the ConveyorBot to change its driving path. | <img src="assets/breadcrumb/turn_marker.jpg" > |
 |  🟪 **Bidirectional marker** is unique, featuring two arrows. The ConveyorBot follows the arrow that requires less rotation. This marker is ideal for two-way routes, such as narrow aisles where separate forward and return paths are impractical. | <img src="assets/breadcrumb/bidirectional_marker.jpg" > |
 
 <br>

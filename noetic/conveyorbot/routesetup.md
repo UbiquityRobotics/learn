@@ -121,7 +121,7 @@ Route management functionality enables the ConveyorBot robot to navigate in a mo
 
 ##### Properly setting up a route
 
-Think of the route setup process as having a navigator while driving a car. The navigator only tells you where to turn at crossroads but doesn't instruct you to continue straight on a straight road or to stop where there's already a stop sign. To set up a route for the robot, you need to specify only the sequence of TURN markers at the crossroads of the route. By default, all other TURN markers not specified in the route plan are ignored. You don't have to specify GO, STOP, or BIDIR markers, except in specific cases discussed later in this section.
+Think of the route setup process as having a navigator while driving a car. The navigator only tells you where to turn at crossroads but doesn't instruct you to continue straight on a straight road or to stop where there's already a stop sign. To set up a route for the robot, you need to specify only the sequence of TURN markers at the crossroads of the route. By default, all other TURN markers not specified in the route plan are ignored. You also have to specify STOP markers on which you want the robot to stop. You don't have to specify GO or BIDIR markers, except in specific cases discussed later in this section.
 
 To specify the order of turns at crossroads, add the numbers of TURN markers indicating the appropriate turns to the left column of the route editor in the correct order. In the left column of the route editor, you must also specify all STOP markers where you want the robot to stop. If you don't do this, the robot will ignore STOP markers by default.
 
