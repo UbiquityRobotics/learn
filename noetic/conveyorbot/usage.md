@@ -9,7 +9,7 @@ nav_exclude: false
 
 # Basic Usage
 
-Before using conveyorbot, it is necessary to [set up routes](noetic_conveyorbot_setup).
+Before using Conveyorbot, it is necessary to [set up routes](noetic_conveyorbot_setup).
 
 Initially when robot boots up, the touchscreen display should show a **Loading** screen. After the system is ready you should be able to see a screen with a **START** button.
 
