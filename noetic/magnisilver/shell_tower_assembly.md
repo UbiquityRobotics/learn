@@ -41,6 +41,7 @@ Here are two videos of how assembly looks like so you know what to expect. All d
   - 1x Touchscreen
   - 1x Emergency switch custom cable (red wires)
   - 1x Power switch custom cable (black wires)
+  - 1x Battery cable (brown)
   - 1x Black Shell Power switch
   - 1x USB micro cable 1m (rolled inside the touchscreen case)
   - 2x Flat cable 1m (rolled inside the touchscreen case)
