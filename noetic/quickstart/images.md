@@ -17,6 +17,7 @@ See the [Software Images and SD Card Flashing](noetic_quick_start_microsd) guide
 | Architecture | armhf (32 bit) |
 | SHA256 Sum   | 05b7b4ee7f2331c961cde9aa892c6d34c3788db0053956da3eb1a609f75751fc |
 | Status | <b style="color: green;">Latest</b> |
+| Firmware | <b style="color: green;">V43 firmware recommended</b> |
 | Notes | With Gnome desktop. |
 | Changelog | Added support for rev 1.5 Pi 4s, removed multipath-tools for faster booting, enabled gpio kernel interfaces by default. |
 
@@ -29,6 +30,7 @@ See the [Software Images and SD Card Flashing](noetic_quick_start_microsd) guide
 | Architecture | armhf (32 bit) |
 | SHA256 Sum   | 32ac24acbbaa6ab8140b22402ec06a4a7b8cc7ec39a2d40088aa7d3507b67532 |
 | Status | <b style="color: green;">Latest</b> |
+| Firmware | <b style="color: green;">V43 firmware recommended</b> |
 | Notes | Headless (no desktop). |
 | Changelog | Added support for rev 1.5 Pi 4s, removed multipath-tools for faster booting, enabled gpio kernel interfaces by default. |
 
