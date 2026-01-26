@@ -16,6 +16,14 @@ be determined.  For a discussion of other approaches, see [Mapping & Navigation]
 This document assumes that you are running the software on a Ubiquity
 Robotics robot base, using the supplied Raspberry Pi camera.
 
+## Why Use Fiducial Localization?
+
+While Lidar-based navigation (using SLAM and AMCL) is a popular approach, fiducial-based localization offers some unique advantages:
+
+*   **Robustness to Ambiguity:** AMCL can sometimes struggle with "symmetric" environments (like long hallways or square rooms) where geometry looks the same in multiple places. Fiducials provide unique IDs, eliminating this ambiguity.
+*   **Dynamic Environments:** If furniture is rearranged, a static Lidar map might become obsolete. Fiducials placed on ceilings or walls remain constant even if the floor layout changes.
+*   **Cost:** It utilizes the existing Raspberry Pi camera, avoiding the need for additional sensors if a Lidar is not already present.
+
 ## Basic Concept
 
 If you're eager to start localizing your robot, and don't wish to read about
